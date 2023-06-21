@@ -69,9 +69,9 @@ Route::post('register/send-otp/sent_OTP', [UserController::class, 'sent_OTP']);
 // Route::post('register/send-otp/sent_OTP', [UserController::class, 'sent_OTP']);
 // Route::get('/register', [RegisterController::class, 'registerIntroduce']);
 
-Auth::routes();
+// Auth::routes();
 Route::prefix('register')->group(function () {
-    Route::get('', [RegisterController::class, 'index']);
+    Route::get('', [RegisterController::class, 'index'])->name('register');
     Route::get('tab1', [RegisterController::class, 'tab1']);
     Route::get('tab2', [RegisterController::class, 'tab2']);
     Route::get('tab3', [RegisterController::class, 'tab3']);
