@@ -79,12 +79,16 @@ class DataFinancialService extends Service
      */
     public function _updateDataFinancial($input, $id)
     {
-        if(isset($input['order']) && !empty($input['order'])){
-            $this->updateOrder($input);
-        }
         $dataFinancialSingle = $this->repository->where('id', $id)->first();
-        $dataFinancials = $this->repository->select('*')->where('code_category', $input['code_category'])->get();
-        
+        $dataFinancials = $this->repository->select('*');
+        if(empty($input['code_category'])){
+            $dataFinancials = $dataFinancials->where(function($sql){
+                $sql->where('code_category', '')->orWhereNull('code_category');
+            });
+        }else{
+            $dataFinancials = $dataFinancials->where('code_category', $input['code_category']);
+        }
+        $dataFinancials = $dataFinancials->get();
         $code_cp = isset($dataFinancialSingle->code_cp) ? $dataFinancialSingle->code_cp : '';
         $exchange = isset($dataFinancialSingle->exchange) ? $dataFinancialSingle->exchange : '';
         $code_category = isset($dataFinancialSingle->code_category) ? $dataFinancialSingle->code_category : '';

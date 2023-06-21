@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('stop_loss_price_zone')->nullable();// Vùng giá cắt lỗ
             $table->string('ratings_FA')->nullable(); // xếp hạng FA
             $table->string('url_link')->nullable(); // phân tích DN FA
+            $table->integer('order')->nullable(); // thuws tuwj
             $table->string('status')->nullable(); // trạng thái
             $table->timestamps();
         });

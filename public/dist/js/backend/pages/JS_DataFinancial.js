@@ -551,3 +551,36 @@ JS_DataFinancial.prototype.checkValidate = function(){
         return false;
     }
 }
+/**
+ * Thay đổi dòng
+ */
+JS_DataFinancial.prototype.upNdown = function(type, id, _this){
+    var row = $(_this).parents("tr:first");
+    var myClass = this;
+    var url = myClass.urlPath + '/upNdown';
+    var data = {
+        _token: $("#_token").val(),
+        id: id,
+        type: type
+    };
+    if(type == 'up'){
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (arrResult) {
+                console.log(arrResult);
+                if(arrResult['success'] == true){
+                    row.insertBefore(row.prev());
+                }
+            }, error: function(e){
+                console.log(e);
+                NclLib.successLoadding();
+            }
+        });
+        // row.insertBefore(row.prev());
+    }
+    else{
+        row.insertAfter(row.next());
+    }
+}

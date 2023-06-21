@@ -78,12 +78,32 @@ class RecommendedService extends Service
         $stop_loss = !empty($RecommendedSingle) ? $RecommendedSingle->stop_loss : '';
         $closing_percentage = !empty($RecommendedSingle) ? $RecommendedSingle->closing_percentage : '';
         $note = !empty($RecommendedSingle) ? $RecommendedSingle->note : '';
+        $arrPricerange = [];
+        $price_range = '';
+        if(!empty($RecommendedSingle->price_range)){
+            $arrPricerange = explode(',', $RecommendedSingle->price_range);
+            for($i = 0; $i <= 2; $i++){
+                if(isset($input['price_range_' . $i])){
+                    if(empty($arrPricerange[$i])){
+                        $arrPricerange[$i] .= ',' . $input['price_range_' . $i];
+                    }else{
+                        $arrPricerange[$i] = $input['price_range_' . $i];
+                    }
+                }
+            }
+        }else{
+            foreach($input as $key => $value){
+                if(strpos($key, 'price_range') !== false){
+                    $price_range .= ',' . $value;
+                }
+            }
+        }
         $param = [
             'code_cp' => isset($input['code_cp']) ? $input['code_cp'] : $code_cp,
             'code_category' => isset($input['code_category']) ? $input['code_category'] : $code_category,
             'percent_of_assets' => isset($input['percent_of_assets']) ? $input['percent_of_assets'] : $percent_of_assets,
             'price' => isset($input['price']) ? $input['price'] : $price,
-            'price_range' => isset($input['price_range']) ? $input['price_range'] : $price_range,
+            'price_range' => !empty($arrPricerange) ? trim(implode(',', $arrPricerange), ',') : (!empty($price_range) ? trim($price_range, ',') : $price_range),
             'current_price' => isset($input['current_price']) ? $input['current_price'] : $current_price,
             'profit_and_loss' => isset($input['profit_and_loss']) ? $input['profit_and_loss'] : $profit_and_loss,
             'act' => isset($input['act']) ? $input['act'] : $act,

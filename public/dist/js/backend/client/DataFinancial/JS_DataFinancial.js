@@ -109,16 +109,16 @@ JS_DataFinancial.prototype.addrow = function(arrResult) {
     html += '<td style="vertical-align: middle;" align="center"><span class="text-cursor text-warning" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> <i class="far fa-eye"></i></span></td>';
     // html += '</tr>';
     $('#code_'+arrResult.id).html(html);
-    if($("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() === undefined && $("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() !== '-' && (parseInt(arrResult.id) + 1) <= 5){
-        $('#body_data').append(
-            '<tr id="code_' + (parseInt(arrResult.id) + 1) + '">'
-            + '<td style="vertical-align: middle;color:#83beff" align="center">'
-            + '<span>' + (parseInt(arrResult.id) + 1) + '</span></td>'
-            + '<td class="td_code_cp_' + (parseInt(arrResult.id) + 1) + '" style="vertical-align: middle;" align="center" ondblclick="click2(\'' + (parseInt(arrResult.id) + 1) + '\', \'code_cp\',this)">'
-            + '<span id="span_code_cp_' + (parseInt(arrResult.id) + 1) + '" class="text-success span_code_cp_' + (parseInt(arrResult.id) + 1) + '" onclick="click2(\'' + (parseInt(arrResult.id) + 1) + '\', \'code_cp\',this)">Nhập</span>'
-            + '</tr>'
-        );
-    }
+    // if($("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() === undefined && $("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() !== '-' && (parseInt(arrResult.id) + 1) <= 5){
+    //     $('#body_data').append(
+    //         '<tr id="code_' + (parseInt(arrResult.id) + 1) + '">'
+    //         + '<td style="vertical-align: middle;color:#83beff" align="center">'
+    //         + '<span>' + (parseInt(arrResult.id) + 1) + '</span></td>'
+    //         + '<td class="td_code_cp_' + (parseInt(arrResult.id) + 1) + '" style="vertical-align: middle;" align="center" ondblclick="click2(\'' + (parseInt(arrResult.id) + 1) + '\', \'code_cp\',this)">'
+    //         + '<span id="span_code_cp_' + (parseInt(arrResult.id) + 1) + '" class="text-success span_code_cp_' + (parseInt(arrResult.id) + 1) + '" onclick="click2(\'' + (parseInt(arrResult.id) + 1) + '\', \'code_cp\',this)">Nhập</span>'
+    //         + '</tr>'
+    //     );
+    // }
     // JS_DataFinancial.loadEvent();
 }
 /**

@@ -111,6 +111,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('/edit',[DataFinancialController::class,'edit']);
             Route::post('/delete',[DataFinancialController::class,'delete']);
             Route::post('/updateDataFinancial',[DataFinancialController::class,'updateDataFinancial']);
+            Route::post('/upNdown',[DataFinancialController::class,'upNdown']);
         });
          //Quản trị quyền sủ dụng quản trị
          Route::prefix('/system/permision')->group(function () {
