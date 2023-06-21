@@ -30,12 +30,12 @@ class RegisterController extends Controller
     public function tab2(Request $request)
     {
         $arrInput = $request->all();
-        // if(!empty($arrInput['email'])){
+        if(!empty($arrInput['email'])){
             $user = $this->userService->where('email', $arrInput['email'])->first();
             if(!empty($user)){
                 return array('success' => false, 'message' => 'Email đã tồn tại!');
             }
-        // }
+        }
         return view('auth.register.tab2');
     }
     public function tab3(Request $request)
