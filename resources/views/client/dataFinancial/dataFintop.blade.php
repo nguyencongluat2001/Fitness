@@ -50,6 +50,38 @@
                             <span id="span_code_cp_1" class="span_code_cp_1 text-success" onclick="click2('1', 'code_cp',this)">Nhập</span>
                         </td>
                     </tr>
+                    <tr id="code_2">
+                        <td  style="vertical-align: middle;color:#83beff" align="center">
+                            <span >2</span>
+                        </td>
+                        <td class="td_code_cp_2" style="vertical-align: middle;" align="center" ondblclick="click2('2', 'code_cp',this)">
+                            <span id="span_code_cp_2" class="span_code_cp_2 text-success" onclick="click2('2', 'code_cp',this)">Nhập</span>
+                        </td>
+                    </tr>
+                    <tr id="code_3">
+                        <td  style="vertical-align: middle;color:#83beff" align="center">
+                            <span >3</span>
+                        </td>
+                        <td class="td_code_cp_3" style="vertical-align: middle;" align="center" ondblclick="click2('3', 'code_cp',this)">
+                            <span id="span_code_cp_3" class="span_code_cp_3 text-success" onclick="click2('3', 'code_cp',this)">Nhập</span>
+                        </td>
+                    </tr>
+                    <tr id="code_4">
+                        <td  style="vertical-align: middle;color:#83beff" align="center">
+                            <span >4</span>
+                        </td>
+                        <td class="td_code_cp_4" style="vertical-align: middle;" align="center" ondblclick="click2('4', 'code_cp',this)">
+                            <span id="span_code_cp_4" class="span_code_cp_4 text-success" onclick="click2('4', 'code_cp',this)">Nhập</span>
+                        </td>
+                    </tr>
+                    <tr id="code_5">
+                        <td  style="vertical-align: middle;color:#83beff" align="center">
+                            <span >5</span>
+                        </td>
+                        <td class="td_code_cp_5" style="vertical-align: middle;" align="center" ondblclick="click2('5', 'code_cp',this)">
+                            <span id="span_code_cp_5" class="span_code_cp_5 text-success" onclick="click2('5', 'code_cp',this)">Nhập</span>
+                        </td>
+                    </tr>
                 @else
                     <span><i class="fas fa-hand-point-right"></i> Đăng nhập để tra cứu cổ phiếu
                                 

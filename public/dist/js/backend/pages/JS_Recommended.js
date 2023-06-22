@@ -273,8 +273,14 @@ JS_Recommended.prototype.addrow = function() {
     html += '<span id="span_price_' + id + '" class="span_price_' + id + '"></span>';
     html += '</td>';
     // price_range
-    html += '<td class="td_price_range_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'price_range\')">';
-    html += '<span id="span_price_range_' + id + '" class="span_price_range_' + id + '"></span>';
+    html += '<td class="td_price_range_0_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'price_range_0\')">';
+    html += '<span id="span_price_range_0_' + id + '" class="span_price_range_0_' + id + '"></span>';
+    html += '</td>';
+    html += '<td class="td_price_range_1_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'price_range_1\')">';
+    html += '<span id="span_price_range_1_' + id + '" class="span_price_range_1_' + id + '"></span>';
+    html += '</td>';
+    html += '<td class="td_price_range_2_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'price_range_2\')">';
+    html += '<span id="span_price_range_2_' + id + '" class="span_price_range_2_' + id + '"></span>';
     html += '</td>';
     // current_price
     html += '<td class="td_current_price_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'current_price\')">';

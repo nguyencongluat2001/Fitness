@@ -57,10 +57,12 @@ class LoginController extends Controller
                 $_SESSION["sidebar"] = $sideBar;
                 Auth::login($user);
                 return redirect('system/home/index');
-            } else if ($user->role == 'USERS') {
+            } else if ($user->role == 'USERS' || $user->role == 'USER') {
                 $checkPrLogin = $this->permission_login($email);
                 Auth::login($user);
                 return redirect('client/datafinancial/index');
+            }else{
+                return redirect('/');
             }
         } else {
             $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";

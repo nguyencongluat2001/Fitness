@@ -182,7 +182,7 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    content: '\f26b'; }
+    content: '\2713'; }
 
 @media (max-width: 991px) {
   .inner {

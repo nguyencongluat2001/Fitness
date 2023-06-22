@@ -55,7 +55,6 @@ class DataFinancialController extends Controller
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'code_category,order';
-        $param['sortType'] = 1;
         $objResult = $this->DataFinancialService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;
@@ -125,5 +124,38 @@ class DataFinancialController extends Controller
         $arrInput = $request->all();
         $data = $this->DataFinancialService->_updateDataFinancial($arrInput, $arrInput['id']);
         return $data;
+    }
+    /**
+     * Thay đổi dòng
+     */
+    public function upNdown(Request $request)
+    {
+        $arrInput = $request->all();
+        $dataFinacial = $this->DataFinancialService->where('id', $arrInput['id'])->first();
+        try{
+            if($arrInput['type'] == 'up'){
+                $downOrder = $this->DataFinancialService->where('order', ((int)$dataFinacial->order + 1))->first();
+                $order = (int)$dataFinacial->order + 1;
+                $dataFinacial->order = $order;
+                $dataFinacial->save();
+                if(!empty($downOrder)){
+                    $downOrder->order = $dataFinacial->order;
+                    $downOrder->save();
+                    return array('success' => true);
+                }
+            }elseif($arrInput['type'] == 'down'){
+                $order = (int)$dataFinacial->order - 1;
+                $dataFinacial->order = $order;
+                $dataFinacial->save();
+                $downOrder = $this->DataFinancialService->where('order', $order)->first();
+                if(!empty($downOrder)){
+                    $downOrder->order = $dataFinacial->order;
+                    $downOrder->save();
+                    return 200;
+                }
+            }
+        }catch(\Exception $e){
+            dd($e->getMessage());
+        }
     }
 }
