@@ -569,7 +569,6 @@ JS_DataFinancial.prototype.upNdown = function(type, id, _this){
             data: data,
             type: "POST",
             success: function (arrResult) {
-                console.log(arrResult);
                 if(arrResult['success'] == true){
                     row.insertBefore(row.prev());
                 }
@@ -579,8 +578,20 @@ JS_DataFinancial.prototype.upNdown = function(type, id, _this){
             }
         });
         // row.insertBefore(row.prev());
-    }
-    else{
-        row.insertAfter(row.next());
+    }else{
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (arrResult) {
+                if(arrResult['success'] == true){
+                    row.insertAfter(row.next());
+                }
+            }, error: function(e){
+                console.log(e);
+                NclLib.successLoadding();
+            }
+        });
+        // row.insertAfter(row.next());
     }
 }

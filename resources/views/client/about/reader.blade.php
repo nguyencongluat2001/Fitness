@@ -1,18 +1,38 @@
-<div class="modal-dialog modal-xl">
-    <div class="modal-content">
-        <div class="modal-header" style="background:#101826eb">
-            <h5 class="modal-title" style="color:white">{{ $datas['blogDetail']->title }}</h5>
-            <button style="background:white" type="button" class="btn btn-sm" data-bs-dismiss="modal">
-                X
-            </button>
+@extends('client.layouts.index')
+@section('body-client')
+<div class="banner-wrapper">
+    <!-- tra cứu cổ phiếu -->
+    <section class="container" style="background:#ffffff8a">
+        <div class="pt-3 pb-3 d-lg-flex gx-5">
+            <div class="col-lg-12" style="background: #fff">
+                <div class="card">
+                    <div class="card-header" style="background: #ffc827;">
+                        <h1>{{ $datas['blogDetail']->title }}</h1>
+                    </div>
+                    <div class="card-body">
+                        <div style="width: 100%;">
+                            {!! $datas['blogDetail']->decision !!}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body" style="height: 70vh; overflow-y: scroll">
-            {!! $datas['blogDetail']->decision !!}
-        </div>
-        <div class="modal-footer">
-            <button style="background:white" type="button" class="btn btn-default btn-sm" data-bs-dismiss="modal">
-                Đóng
-            </button>
-        </div>
-    </div>
+    </section>
 </div>
+<script>
+    var type = '<?php echo $datas['type']; ?>';
+    if(type == 'BAO_CAO_THTT'){
+        NclLib.menuActive('.link-index');
+        NclLib.menuActive_child('.link-index');
+    }else if(type == 'BAO_CAO_TKP'){
+        NclLib.menuActive('.link-session');
+        NclLib.menuActive_child('.link-session');
+    }else if(type == 'BAO_CAO_PTN'){
+        NclLib.menuActive('.link-industry');
+        NclLib.menuActive_child('.link-industry');
+    }else if(type == 'BAO_CAO_PTCP'){
+        NclLib.menuActive('.link-stock');
+        NclLib.menuActive_child('.link-stock');
+    }
+</script>
+@endsection

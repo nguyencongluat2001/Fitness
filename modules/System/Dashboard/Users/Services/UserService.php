@@ -59,7 +59,7 @@ class UserService extends Service
                 'phone'=> $input['phone'],
                 'email'=> $input['email'],
                 'dateBirth'=> $input['dateBirth'],
-                'role'=> $input['role'],
+                'role'=> isset($input['role']) ? $input['role'] : (isset($user) ? $user->role : 'USERS'),
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'YE07',
                 "status" => isset($input['status']) ? 1 : 0,
             ];

@@ -8,6 +8,13 @@ NclLib.prototype.successLoadding = function () {
        $('#imageLoading').addClass("loader_bg_of");
     }, 100)
 }
+// loadding image index
+NclLib.prototype.loadding = function () {
+  $('#imageLoading').removeClass( "loader_bg_of" );
+  setTimeout(() => {
+      $('#imageLoading').addClass("loader_bg_of");
+  }, 100)
+}
 // alerMesage thông báo sau khi có sự kiện
 NclLib.prototype.alerMesage = function(nameMessage,icon,color){
   Swal.fire({

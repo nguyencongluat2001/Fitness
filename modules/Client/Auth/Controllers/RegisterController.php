@@ -31,9 +31,9 @@ class RegisterController extends Controller
     {
         $arrInput = $request->all();
         if(!empty($arrInput['email'])){
-            $user = $this->userService->where('email', $arrInput['email'])->first();
+            $user = $this->userService->where('email', $arrInput['email'])->orWhere('phone', $arrInput['phone'])->first();
             if(!empty($user)){
-                return array('success' => false, 'message' => 'Email đã tồn tại!');
+                return array('success' => false, 'message' => 'Email hoặc Số điện thoại đã tồn tại!');
             }
         }
         return view('auth.register.tab2');

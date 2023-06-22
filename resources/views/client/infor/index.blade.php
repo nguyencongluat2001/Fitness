@@ -33,11 +33,14 @@
                                         <button class="btn btn-primary btn-sm ms-auto">Đổi mật khẩu</button>
                                     </div> -->
                                    {{-- @if(!empty($data) && $_SESSION["email"] == $data['email']) --}}
-                                    <span id='btn_changePass'>
+                                   <span id='btn_changePass'>
                                         <button class="btn btn-primary btn-sm" type="button">
                                             Đổi mật khẩu
                                         </button>
                                     </span>
+                                    <button type="button" class="btn btn-primary btn-sm" onclick="JS_InforClient.updateCustomer()" type="button">
+                                        Cập nhật
+                                    </button>
                                     {{-- @endif --}}
                                     <div class="card-body">
                                         <p class="text-uppercase text-sm">Thông tin người dùng</p>

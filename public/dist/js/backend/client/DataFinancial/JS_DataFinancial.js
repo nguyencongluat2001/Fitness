@@ -239,6 +239,7 @@ JS_DataFinancial.prototype.updateDataFinancial = function(id, column, value = ''
     else if(column == 'ratings_FA') {data += '&ratings_FA=' + value}
     else if(column == 'url_link') {data += '&url_link=' + value}
     else if(column == 'status') {data += '&status=' + value}
+    NclLib.loadding();
     $.ajax({
         url: url,
         data: data,

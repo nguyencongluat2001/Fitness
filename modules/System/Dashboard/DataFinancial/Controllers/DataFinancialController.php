@@ -143,7 +143,7 @@ class DataFinancialController extends Controller
                     $downOrder->save();
                     return array('success' => true);
                 }
-            }elseif($arrInput['type'] == 'down'){
+            }elseif($arrInput['type'] == 'down' && (int)$dataFinacial->order > 1){
                 $order = (int)$dataFinacial->order - 1;
                 $dataFinacial->order = $order;
                 $dataFinacial->save();
@@ -151,7 +151,7 @@ class DataFinancialController extends Controller
                 if(!empty($downOrder)){
                     $downOrder->order = $dataFinacial->order;
                     $downOrder->save();
-                    return 200;
+                    return array('success' => true);
                 }
             }
         }catch(\Exception $e){

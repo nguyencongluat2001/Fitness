@@ -201,3 +201,25 @@ JS_InforClient.prototype.sendOTPMAIL = function (oFormCreate) {
         }
     });
 }
+/**
+ * Cập nhật thông tin cá nhân
+ */
+JS_InforClient.prototype.updateCustomer = function(){
+    var myClass = this;
+    var url = myClass.urlPath + '/updateCustomer';
+    var data = $("#frmLoadlist_infor").serialize();
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: data,
+        success: function(arrResult){
+            if(arrResult['success'] == true){
+                NclLib.alerMesage(arrResult['message'], 'success', '#a5dc864d');
+            }else{
+                NclLib.alerMesage(arrResult['message'], 'danger', '#bd2130');
+            }
+        }, error: function(e){
+            console.log(e);
+        }
+    });
+}
