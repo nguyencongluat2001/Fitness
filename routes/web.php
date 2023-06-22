@@ -243,19 +243,22 @@ Route::prefix('/client')->group(function () {
     });
    
     // Trang chủ client
-        Route::get('/home/index', [ClientHomeController::class, 'index']);
-        Route::get('/home/loadList',[ClientHomeController::class,'loadList']);
-        Route::get('/home/loadListBlog',[ClientHomeController::class,'loadListBlog']);
-        Route::get('/home/loadListTap1',[ClientHomeController::class,'loadListTap1']);
-        Route::get('/home/loadListTop',[ClientHomeController::class,'loadListTop']);
-        Route::get('/home/loadListChartNen',[ClientHomeController::class,'loadListChartNen']);
+    Route::get('/home/index', [ClientHomeController::class, 'index']);
+    Route::get('/home/loadList',[ClientHomeController::class,'loadList']);
+    Route::get('/home/loadListBlog',[ClientHomeController::class,'loadListBlog']);
+    Route::get('/home/loadListTap1',[ClientHomeController::class,'loadListTap1']);
+    Route::get('/home/loadListTop',[ClientHomeController::class,'loadListTop']);
+    Route::get('/home/loadListChartNen',[ClientHomeController::class,'loadListChartNen']);
     Route::middleware('permissionCheckLoginClient')->group(function () {
         Route::get('introduce/index', [IntroduceController::class, 'index']);
-        Route::get('infor/index', [InforController::class, 'index']);
-        Route::post('infor/update', [InforController::class, 'update']);
-        Route::post('infor/loadList', [InforController::class, 'loadList']);
-        Route::get('/infor/changePass', [UserController::class,'changePass']);
-        Route::post('/infor/updatePass', [UserController::class,'updatePass']);
+        Route::prefix('infor')->group(function(){
+            Route::get('/index', [InforController::class, 'index']);
+            Route::post('update', [InforController::class, 'update']);
+            Route::post('loadList', [InforController::class, 'loadList']);
+            Route::post('updateCustomer', [InforController::class, 'updateCustomer']);
+            Route::get('/changePass', [UserController::class,'changePass']);
+            Route::post('/updatePass', [UserController::class,'updatePass']);
+        });
         // Route::middleware('checkloginDatafinancial')->group(function () {
             Route::prefix('datafinancial')->group(function () {
                 // Tra cứu cổ phiếu
@@ -293,10 +296,7 @@ Route::prefix('/client')->group(function () {
                 Route::get('', [AboutController::class, 'stock']);
                 Route::get('/loadListPTCP', [AboutController::class, 'loadListPTCP']);
             });
-            Route::post('/reader', [AboutController::class, 'reader']);
-        });
-        Route::prefix('des')->group(function () {
-            Route::get('index', [DesController::class, 'index']);
+            Route::get('/reader/{id}', [AboutController::class, 'reader']);
         });
         // Thư viện đầu tư
         Route::get('/library/index', [LibraryController::class, 'index']);
@@ -311,6 +311,10 @@ Route::prefix('/client')->group(function () {
 
         // Đọc thông báo
         Route::get('readNotification', [ReadNotificationController::class, 'readNotification']);
+    });
+    
+    Route::prefix('des')->group(function () {
+        Route::get('index', [DesController::class, 'index']);
     });
 });
  

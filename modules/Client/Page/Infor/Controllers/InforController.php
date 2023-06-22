@@ -70,5 +70,14 @@ class InforController extends Controller
         $data = $this->userInfoService->_update($arrInput);
         return back();
     }
+    /**
+     * Cập nhật client
+     */
+    public function updateCustomer(Request $request)
+    {
+        $arrInput = $request->all();
+        $data = $this->userService->store($arrInput, []);
+        return $data;
+    }
     
 }

@@ -172,6 +172,7 @@ JS_Register.prototype.getUser = function (oForm) {
  */
 JS_Register.prototype.Tab1 = function(){
     var oForm = '#frmRegister';
+    NclLib.loadding();
     $(oForm).find("#tab1-register").show();
     $(oForm).find("#tab2-register").hide();
     $(oForm).find("#tab3-register").hide();
@@ -217,6 +218,7 @@ JS_Register.prototype.Tab2 = function(){
         $(oForm).find("#phone").focus();
         return false;
     }
+    NclLib.loadding();
     if($(oForm).find("#tab2-register").html() == '' || email != this.email){
         var url = myClass.baseUrl + '/register/tab2';
         $.ajax({
@@ -270,6 +272,7 @@ JS_Register.prototype.Tab3 = function(){
     }
     var url = myClass.baseUrl + '/register/tab3';
     var data = $(oForm).serialize();
+    NclLib.loadding();
     $.ajax({
         url: url,
         type: "GET",
@@ -292,6 +295,7 @@ JS_Register.prototype.Tab4 = function(){
     var myClass = this;
     var url = myClass.baseUrl + '/register/tab4';
     var data = $(oForm).serialize();
+    NclLib.loadding();
     $.ajax({
         url: url,
         type: "GET",

@@ -148,14 +148,15 @@ class AboutController extends Controller
     /**
      * Đọc bài viết
      */
-    public function reader(Request $request)
+    public function reader(Request $request, $id)
     {
-        $blog = $this->blogService->where('id', $request->id)->first();
+        $blog = $this->blogService->where('id', $id)->first();
         $blogDetail = $this->blogDetailService->where('code_blog', $blog->code_blog)->first();
         $blogImage = $this->blogImagesService->where('code_blog', $blog->code_blog)->first();
         $data['datas']['blog'] = $blog;
         $data['datas']['blogDetail'] = $blogDetail;
         $data['datas']['blogImage'] = $blogImage;
+        $data['datas']['type'] = $blog->code_category;
         return view("client.about.reader", $data)->render();
     }
     
