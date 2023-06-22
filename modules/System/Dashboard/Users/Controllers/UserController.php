@@ -10,6 +10,8 @@ use Modules\System\Helpers\PaginationHelper;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use Modules\Base\Helpers\ForgetPassWordMailHelper;
+
 
 /**
  *
@@ -220,11 +222,32 @@ class UserController extends Controller
             $passNew = [
                 'password'=> Hash::make($input['password_new']),
             ];
-            $updatePass = $this->userService->where('id',$input['user_id'])->update($passNew);
-            return array('success' => true, 'message' => 'Mật khẩu của bạn đã được thay đổi');
+            // $updatePass = $this->userService->where('id',$input['user_id'])->update($passNew);
+            // return array('success' => true, 'message' => 'Mật khẩu của bạn đã được thay đổi');
+            $this->sendMail($input,$input['password_new']);
         } else {
             return array('success' => false, 'message' => 'Mật khẩu cũ chưa chính xác!');
         }
+    }
+     /**
+     * Gửi mail đến người dùng
+     * 
+     * @param Array $input
+     */
+    public function sendMail($input,$passNew)
+    {
+        $stringHtml = file_get_contents(base_path() . '\storage\templates\forgetPassword\tem_forget.html');
+        // Lấy dữ liệu
+        $user = $this->userService->where('id',$input['user_id'])->first();
+        $data['date'] = 'Ngày ' . date('d') . ' tháng ' . date('m') . ' năm ' . date('Y');
+        $data['email'] = $input['email_acc'];
+        $data['name'] = $user->name;
+        $data['phone'] = $user->phone;
+        $data['mailto'] = $input['email_acc'];
+        $data['passwordNew'] = $passNew;
+        $data['subject'] = 'Công ty TNHH Đầu tư & Phát triển FinTop';
+        // Gửi mail
+        (new ForgetPassWordMailHelper($data['email'], $data['email'], $stringHtml, $data))->send($data);
     }
     /**
      * Cập nhật trạng thái

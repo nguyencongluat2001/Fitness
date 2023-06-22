@@ -20,4 +20,12 @@ return [
             'send-sms' => "send-sms" // lấy otp
         ],
     ],
+    'forgetPassWord' => [
+        'url' => 'http://192.168.112.200:8080/VPHC/', // develop environment
+
+        // Các api
+        'api' => [
+            'send_mail' => '/mail/send_mail',
+        ],
+    ]
 ];
