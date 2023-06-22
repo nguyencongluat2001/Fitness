@@ -9,6 +9,8 @@ use Modules\Base\Library;
 use Modules\System\Dashboard\Users\Models\AuthenticationOTPModel;
 use Modules\System\Dashboard\Users\Repositories\UserRepository;
 use Modules\System\Dashboard\Users\Services\UserInfoService;
+use Twilio\Rest\Client;
+
 use Str;
 
 class UserService extends Service
@@ -154,7 +156,7 @@ class UserService extends Service
         }
         $otp_sms = $zenData['otp'];
         $phone = $zenData['phone'];
-         $sendOtp = true;
+        //  $sendOtp = true;
         $sendOtp = $this->sendOtp($phone,$otp_sms);
         if($sendOtp){
             return array('success' => true, 'message' => 'Mã xác thực của bạn đã được gửi qua số điện thoại: '.$input['phone'].'. Vui lòng kiểm tra tin nhắn!');
@@ -172,31 +174,37 @@ class UserService extends Service
                'phoneNumber'=> $phone,
                'message'=> 'FinTop - OTP của bạn là: '.$otp_sms,
            ];
-           $dataConfig = config('apiConnect.financial');
-           $urlApi = $dataConfig['api'].$dataConfig['apiChild']['send-sms'];
-           $response = Http::withHeaders(['Authorization' => 'Bearer key0000'])->withToken($dataConfig['token'])
-                           ->withBody(json_encode($param),'application/json')
-                           ->post($urlApi);
-           $response = $response->getBody()->getContents();
-           $response = json_decode($response,true);
+        //    $dataConfig = config('apiConnect.financial');
+        //    $urlApi = $dataConfig['api'].$dataConfig['apiChild']['send-sms'];
+        //    $response = Http::withHeaders(['Authorization' => 'Bearer key0000'])->withToken($dataConfig['token'])
+        //                    ->withBody(json_encode($param),'application/json')
+        //                    ->post($urlApi);
+        //    $response = $response->getBody()->getContents();
+        //    $response = json_decode($response,true);
 
-           $data['datas'] = $response;
-           if($data['datas'] == null || $data['datas'] == ''){
-               return false;
-               // $data['datas']['message'] = [
-               //     "message" => 'Lỗi xảy ra - liên hệ đội ngũ hỗ trợ qua hotline: 0386358006'
-               // ];
-           }
+        //    $data['datas'] = $response;
+        //    if($data['datas'] == null || $data['datas'] == ''){
+        //        return false;
+        //        // $data['datas']['message'] = [
+        //        //     "message" => 'Lỗi xảy ra - liên hệ đội ngũ hỗ trợ qua hotline: 0386358006'
+        //        // ];
+        //    }
+            $account_sid = config('twilioAccount.account.account_sid');
+            $auth_token = config('twilioAccount.account.auth_token');
+            $twilio_number = config('twilioAccount.account.twilio_number');
+            $client = new Client($account_sid, $auth_token);
+            $client->messages->create($phone, [
+                'from' => $twilio_number, 
+                'body' => $param['message']]);
+            $data['datas']['message'] = [
+                "message" => 'Chúng tôi đã gửi mã OTP qua số điện thoại của bạn!'
+            ];
            return $data;
        }catch (\Exception $e) {
-        //    if($data['datas'] == null || $data['datas'] == ''){
-               return false;
-               // $data['datas']['message'] = [
-               //     "message" => 'Lỗi xảy ra - liên hệ đội ngũ hỗ trợ qua hotline: 0386358006'
-               // ];
-        //    }
-        //    return $data;
+            $data['datas']['message'] = [
+                "message" => 'Lỗi xảy ra - liên hệ đội ngũ hỗ trợ qua hotline: 0386358006'
+            ];
+           return $data;
        }
    }
-
 }
