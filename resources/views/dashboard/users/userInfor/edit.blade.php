@@ -42,6 +42,16 @@
 						</div>
 					</div>
 				</div>
+				<!-- <div class="modal-footer">
+					<span id="btn_getFormOTP">
+						<button id='btn_getFormOTP' class="btn btn-primary btn-sm" type="button">
+							Xác nhận
+						</button>
+					</span>
+					<button type="button" class="btn btn-default btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
+						Đóng
+					</button>
+				</div> -->
 				<div class="modal-footer">
 					<span id="btn_updatePass">
 						<button id='btn_updatePass' class="btn btn-primary btn-sm" type="button">

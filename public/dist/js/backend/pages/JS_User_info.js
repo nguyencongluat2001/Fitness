@@ -38,6 +38,9 @@ JS_User_info.prototype.loadevent = function (oForm) {
     $('form#frmChangePass').find('#btn_updatePass').click(function () {
         myClass.updatePass('form#frmChangePass');
     })
+    $('form#frmChangePass').find('#btn_getFormOTP').click(function () {
+        myClass.btn_getFormOTP(oForm);
+    })
 }
 /**
  * Hàm hiển thị modal
