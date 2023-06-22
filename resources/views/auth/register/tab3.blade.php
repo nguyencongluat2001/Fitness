@@ -9,8 +9,8 @@
     </div>
     <div class="card-body" align="center">
         <div class="form-group" style="display: flex;justify-content: center;width:50%">
-            <div class="col-md-6">
-                <input placeholder="Nhập mã OTP..." id="otp" type="text" class="form-control" name="otp" value="">
+            <div class="col-md-8">
+                <input placeholder="Nhập mã" id="otp" type="text" class="form-control" name="otp" value="">
             </div>
         </div>
         <br>

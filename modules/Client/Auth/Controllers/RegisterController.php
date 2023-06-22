@@ -70,7 +70,6 @@ class RegisterController extends Controller
     public function tab4(Request $request)
     {
         $arrInput = $request->all();
-        // dd($arrInput);
         $AuthenticationOTP = AuthenticationOTPModel::where('phone', $arrInput['phone'])->where('otp', $arrInput['otp'])->first();
         if(!empty($AuthenticationOTP)){
             $arrData = [
