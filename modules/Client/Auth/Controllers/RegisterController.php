@@ -65,6 +65,7 @@ class RegisterController extends Controller
             RegisterModel::insert($params);
         }
         $otp = $this->userService->sent_OTP($params);
+        //gui otp mail ca nhan
         return view('auth.register.tab3');
     }
     public function tab4(Request $request)

@@ -10,6 +10,7 @@ use Modules\System\Dashboard\Users\Models\AuthenticationOTPModel;
 use Modules\System\Dashboard\Users\Repositories\UserRepository;
 use Modules\System\Dashboard\Users\Services\UserInfoService;
 use Twilio\Rest\Client;
+use Modules\Base\Helpers\ForgetPassWordMailHelper;
 
 use Str;
 
@@ -156,8 +157,9 @@ class UserService extends Service
         }
         $otp_sms = $zenData['otp'];
         $phone = $zenData['phone'];
-        //  $sendOtp = true;
-        $sendOtp = $this->sendOtp($phone,$otp_sms);
+        // $sendOtp = $this->sendOtp($phone,$otp_sms);
+        //gui mail
+        $sendOtp = $this->sendMail_register($input,$zenData['otp']);
         if($sendOtp){
             return array('success' => true, 'message' => 'Mã xác thực của bạn đã được gửi qua số điện thoại: '.$input['phone'].'. Vui lòng kiểm tra tin nhắn!');
         }else{
@@ -207,4 +209,20 @@ class UserService extends Service
            return $data;
        }
    }
+    /**
+     * Gửi mail đến người dùng
+     * 
+     * @param Array $input
+     */
+    public function sendMail_register($input,$codeOtp)
+    {
+        $stringHtml = file_get_contents(base_path() . '\storage\templates\registerOtp\tem.html');
+        // Lấy dữ liệu
+        $data['date'] = 'Ngày ' . date('d') . ' tháng ' . date('m') . ' năm ' . date('Y');
+        $data['mailto'] = $input['email'];
+        $data['subject'] = 'Công ty TNHH Đầu tư & Phát triển FinTop';
+        $data['otp'] = $codeOtp;
+        // Gửi mail
+        (new ForgetPassWordMailHelper($data['mailto'], $data['mailto'], $stringHtml, $data))->send_otp($data);
+    }
 }

@@ -224,7 +224,7 @@ class UserController extends Controller
             ];
             // $updatePass = $this->userService->where('id',$input['user_id'])->update($passNew);
             // return array('success' => true, 'message' => 'Mật khẩu của bạn đã được thay đổi');
-            $this->sendMail($input,$input['password_new']);
+            $this->sendMail($input);
         } else {
             return array('success' => false, 'message' => 'Mật khẩu cũ chưa chính xác!');
         }
@@ -234,21 +234,22 @@ class UserController extends Controller
      * 
      * @param Array $input
      */
-    public function sendMail($input,$passNew)
+    public function sendMail($input)
     {
         $stringHtml = file_get_contents(base_path() . '\storage\templates\forgetPassword\tem_forget.html');
         // Lấy dữ liệu
         $user = $this->userService->where('id',$input['user_id'])->first();
         $data['date'] = 'Ngày ' . date('d') . ' tháng ' . date('m') . ' năm ' . date('Y');
-        $data['email'] = $input['email_acc'];
+        $data['email'] = !empty($input['email_acc'])?$input['email_acc']:null;
         $data['name'] = $user->name;
         $data['phone'] = $user->phone;
         $data['mailto'] = $input['email_acc'];
-        $data['passwordNew'] = $passNew;
+        $data['passwordNew'] = $input['password_new'];
         $data['subject'] = 'Công ty TNHH Đầu tư & Phát triển FinTop';
         // Gửi mail
         (new ForgetPassWordMailHelper($data['email'], $data['email'], $stringHtml, $data))->send($data);
     }
+    
     /**
      * Cập nhật trạng thái
      */
