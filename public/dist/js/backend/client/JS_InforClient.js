@@ -3,6 +3,7 @@ function JS_InforClient(baseUrl, module, controller) {
     this.baseUrl = baseUrl;
     this.controller = controller;
     // NclLib.menuActive('.link-privileges');
+    NclLib.loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;
 }
 /**
@@ -79,6 +80,7 @@ JS_InforClient.prototype.loadevent = function (oForm) {
  * @return void
  */
 JS_InforClient.prototype.changePass = function (oForm) {
+    NclLib.loadding();
     var url = this.urlPath + '/changePass';
     var myClass = this;
     var data = $(oForm).serialize();
@@ -107,6 +109,7 @@ JS_InforClient.prototype.changePass = function (oForm) {
  * @return void
  */
 JS_InforClient.prototype.updatePass = function (oFormCreate) {
+    NclLib.loadding();
     var url = this.urlPath + '/updatePass';
     var myClass = this;
     var data = $(oFormCreate).serialize();
@@ -138,11 +141,18 @@ JS_InforClient.prototype.updatePass = function (oFormCreate) {
         data: data,
         success: function (arrResult) {
             if (arrResult['success'] == true) {
-                  var nameMessage = arrResult['message'];
-                  var icon = 'success';
-                  var color = '#f5ae67';
-                  NclLib.alerMesage(nameMessage,icon,color);
-                  $('#editPassmodal').modal('hide');
+                var html = '<div class="col-md-6 pt-2"><div class="form-group"><p for="example-text-input" class="form-control-label">Mã OTP </p><input required class="form-control color" type="text" value="" name="otp" id="otp" /></div></div>'
+                $("#iss").html(html);
+                var nameMessage = arrResult['message'];
+                var icon = 'success';
+                var color = '#1bba00';
+                NclLib.alerMesage(nameMessage,icon,color);
+            }else if(arrResult['success'] == 3){
+                var nameMessage = arrResult['message'];
+                var icon = 'success';
+                var color = '#1bba00';
+                NclLib.alerMesage(nameMessage,icon,color);
+                $('#editPassmodal').modal('hide');
                   myClass.loadList(oFormCreate);
             } else {
                   var nameMessage = arrResult['message'];
@@ -190,8 +200,6 @@ JS_InforClient.prototype.sendOTPMAIL = function (oFormCreate) {
                   var icon = 'success';
                   var color = '#f5ae67';
                   NclLib.alerMesage(nameMessage,icon,color);
-                  $('#editPassmodal').modal('hide');
-                  myClass.loadList(oFormCreate);
             } else {
                   var nameMessage = arrResult['message'];
                   var icon = 'warning';
@@ -214,7 +222,7 @@ JS_InforClient.prototype.updateCustomer = function(){
         data: data,
         success: function(arrResult){
             if(arrResult['success'] == true){
-                NclLib.alerMesage(arrResult['message'], 'success', '#a5dc864d');
+                NclLib.alerMesage(arrResult['message'], 'success', '#1bba00');
             }else{
                 NclLib.alerMesage(arrResult['message'], 'danger', '#bd2130');
             }

@@ -369,12 +369,12 @@ JS_User.prototype.updatePass = function (oFormCreate) {
         data: data,
         success: function (arrResult) {
             if (arrResult['success'] == true) {
+                  var html = '<div  id="iss"><label for="">Mã OTP </label> <div class="col-md-6 pt-2"><input style="color:red" id="otp" name="otp"  type="text" class="form-control "  value=""></div></div>'
+                  $("#iss").html(html);
                   var nameMessage = arrResult['message'];
                   var icon = 'success';
                   var color = '#f5ae67';
                   NclLib.alerMesage(nameMessage,icon,color);
-                  $('#editPassmodal').modal('hide');
-                  myClass.loadList(oFormCreate);
             } else {
                   var nameMessage = arrResult['message'];
                   var icon = 'warning';

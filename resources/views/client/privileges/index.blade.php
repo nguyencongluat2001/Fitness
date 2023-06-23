@@ -191,5 +191,6 @@
 
 <script>
         NclLib.menuActive('.link-privileges');
+        NclLib.loadding();
 </script>
 @endsection

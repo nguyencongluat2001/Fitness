@@ -5,6 +5,7 @@ function JS_About(baseUrl, module, controller, type = '') {
     if(type != 'home'){
         NclLib.menuActive('.link-about');
     }
+    NclLib.loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;
 }
 /**

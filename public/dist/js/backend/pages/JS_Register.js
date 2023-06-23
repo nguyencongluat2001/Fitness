@@ -4,6 +4,8 @@ function JS_Register(baseUrl, module, controller) {
     this.controller = controller;
     this.urlPath = baseUrl + '/' + module + '/' + controller;
     this.email;
+    NclLib.loadding();
+
 }
 
 /**

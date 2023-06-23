@@ -13,7 +13,7 @@ NclLib.prototype.loadding = function () {
   $('#imageLoading').removeClass( "loader_bg_of" );
   setTimeout(() => {
       $('#imageLoading').addClass("loader_bg_of");
-  }, 100)
+  }, 1000)
 }
 // alerMesage thông báo sau khi có sự kiện
 NclLib.prototype.alerMesage = function(nameMessage,icon,color){
@@ -24,7 +24,7 @@ NclLib.prototype.alerMesage = function(nameMessage,icon,color){
       color: color,
       showConfirmButton: false,
       width:'30%',
-      timer: 25555500
+      timer: 2500
     })
 }
 NclLib.prototype.alertMessageBackend = function(type, label, message, s = 30000) {

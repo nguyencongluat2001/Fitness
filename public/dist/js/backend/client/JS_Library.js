@@ -3,6 +3,7 @@ function JS_Library(baseUrl, module, controller) {
     this.baseUrl = baseUrl;
     this.controller = controller;
     NclLib.menuActive('.link-library');
+    NclLib.loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;
 }
 /**

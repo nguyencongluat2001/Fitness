@@ -71,4 +71,7 @@
             </div>
         </div>
     </div>
+    <script>
+            NclLib.loadding();
+    </script>
 @endsection

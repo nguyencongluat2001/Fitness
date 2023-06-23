@@ -38,7 +38,7 @@ class UserService extends Service
     public function store($input,$file){
         $password = 'fintop123';
         //check quyền chỉnh sửa
-        if($_SESSION['role'] != 'ADMIN' && $_SESSION['role'] != 'MANAGE' && $_SESSION['role'] != 'CV_ADMIN'){
+        if(isset($input['role']) && $_SESSION['role'] != 'ADMIN' && $_SESSION['role'] != 'MANAGE' && $_SESSION['role'] != 'CV_ADMIN'){
             if($input['role'] == 'ADMIN' || $input['role'] == 'MANAGE' || $input['role'] == 'CV_ADMIN'){
                 return array('success' => false, 'message' => 'Rất tiếc! bạn ko có quyền. Vui lòng liên hệ hỗ trợ FinTop.');
             }
@@ -145,7 +145,7 @@ class UserService extends Service
         $selectOtp = AuthenticationOTPModel::where('phone',$input['phone'])->first();
         $zenData = [
             'phone'=> $input['phone'],
-            'otp'=> rand(10,100).rand(10,100),
+            'otp'=> 'FT'.rand(10,100).rand(10,100).rand(10,100),
             'created_at'=> date("Y/m/d H:i:s"),
             'updated_at'=> date("Y/m/d H:i:s"),
         ];

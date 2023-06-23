@@ -95,5 +95,7 @@
     //     $(document).ready(function($) {
     //         JS_System_Security.security();
     //     })
+    NclLib.loadding();
+
 </script>
 @endsection

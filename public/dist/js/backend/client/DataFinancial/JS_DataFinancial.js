@@ -3,6 +3,7 @@ function JS_DataFinancial(baseUrl, module, controller) {
     this.baseUrl = baseUrl;
     this.controller = controller;
     NclLib.menuActive('.link-datafinancial');
+    NclLib.loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;
 }
 /**

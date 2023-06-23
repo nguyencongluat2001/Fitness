@@ -174,5 +174,6 @@
 
 <script>
         NclLib.menuActive('.link-introduce');
+        NclLib.loadding();
 </script>
 @endsection

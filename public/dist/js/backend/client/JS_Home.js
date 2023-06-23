@@ -3,6 +3,7 @@ function JS_Home(baseUrl, module, controller) {
     this.baseUrl = baseUrl;
     this.controller = controller;
     NclLib.menuActive('.link-home');
+    NclLib.loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;//Biên public lưu tên module
 }
 JS_Home.prototype.alerMesage = function(nameMessage,icon,color){

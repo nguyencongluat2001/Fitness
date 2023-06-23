@@ -219,12 +219,37 @@ class UserController extends Controller
             if($input['password_new'] != $input['password_retype_change']){
                 return array('success' => false, 'message' => 'Nhập lại mật khẩu không khớp!');
             }
-            $passNew = [
-                'password'=> Hash::make($input['password_new']),
+            $user = $this->userService->where('email',$input['email_acc'])->first();
+            $selectOtp = AuthenticationOTPModel::where('phone',$user['phone'])->first();
+            $zenData = [
+                'phone'=> $user['phone'],
+                'otp'=> 'FT'.rand(10,100).rand(10,100).rand(10,100),
+                'created_at'=> date("Y/m/d H:i:s"),
+                'updated_at'=> date("Y/m/d H:i:s"),
             ];
-            // $updatePass = $this->userService->where('id',$input['user_id'])->update($passNew);
-            // return array('success' => true, 'message' => 'Mật khẩu của bạn đã được thay đổi');
-            $this->sendMail($input);
+            if(isset($input['otp'])){
+                $checkOtp = AuthenticationOTPModel::where('phone',$user['phone'])->where('otp',$input['otp'])->first();
+                if(empty($checkOtp)){
+                    return array('success' => false, 'message' => 'Mã otp không khớp!');
+                }else{
+                     $passNew = [
+                        'password'=> Hash::make($input['password_new']),
+                     ];
+                     $updatePass = $this->userService->where('id',$input['user_id'])->update($passNew);
+                     return array('success' => 3, 'message' => 'Mật khẩu của bạn đã được thay đổi');
+                }
+            }
+            if(isset($selectOtp)){
+                $create = AuthenticationOTPModel::where('phone',$user['phone'])->update($zenData);
+            }else{
+                $zenData['id'] = (string)\Str::uuid();
+                $create = AuthenticationOTPModel::create($zenData);
+            }
+         
+            // $this->sendMail($input);
+            $input['email'] = $input['email_acc'];
+            $sendOtp = $this->userService->sendMail_register($input,$zenData['otp']);
+            return array('success' => true, 'message' => 'Chúng tôi đã gửi mã OTP qua gmail của bạn!');
         } else {
             return array('success' => false, 'message' => 'Mật khẩu cũ chưa chính xác!');
         }
