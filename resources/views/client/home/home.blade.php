@@ -176,9 +176,9 @@
             </div>
             <div class="col-lg-8" style="padding-left:10px">
                 <!-- Start Our Work -->
-                <form action="" method="POST" id="frmLoadlist_blog" style="background:#ffffffe8;border-radius: 0.25em;">
+                <form action="" method="POST" id="frmLoadlist_blog" style="background:#070404d6;border-radius: 0.25em;">
                     <!-- Màn hình danh sách -->
-                    <h2 class="h4 py-2"><span style="padding-left:2%">Bài viết nổi bật</span> </h2>
+                    <h2 class="h4 py-2"><span style="padding-left:2%;color:#ffbc58;font-size: 22px;">Bài viết nổi bật</span> </h2>
                     <input type="hidden" id="_token" value="{{csrf_token()}}">
 
                     <div class="home_index_child py-2">

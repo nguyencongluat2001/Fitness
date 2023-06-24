@@ -1,13 +1,13 @@
 
 <div class="card h-100">
     <div class="card-header pb-0 px-3">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-6">
-            <h6 class="mb-0">Bài viết </h6>
+            <h6 class="mb-0" style="color:">Bài viết </h6>
             </div>
             <div class="col-md-6 d-flex justify-content-end align-items-center">
             </div>
-        </div>
+        </div> -->
         </div>
         <div class="scrollbar" id="style-1" style="padding-right:10px;height:900px !important">
           <div class="card-body pt-4 p-3">
@@ -21,11 +21,11 @@
                                 <div class="col-lg-1 "></div>
                                 <div class="col-lg-7">
                                     <div class="card-body">
-                                        <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                                        <div class="light-300 blogReader">
+                                        <h5 class="card-title light-600" style="color:#ffdd61">{{ $data->detailBlog->title }}</h5>
+                                        <div style="color:#e1ffed" class="light-300 blogReader">
                                             {!! $data->detailBlog->decision !!}
                                         </div>
-                                        <span class="text-decoration-none light-300">
+                                        <span style="color:#e1ffed" class="text-decoration-none light-300">
                                             Đọc thêm <i class='bx bxs-hand-right ms-1'></i>
                                         </span>
                                     </div>
