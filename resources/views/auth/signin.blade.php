@@ -39,10 +39,12 @@
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input type="checkbox"> Tôi chấp nhận Điều khoản sử dụng và Chính sách bảo mật. <span class="request_star">*</span>
+                                        <input id="acp_checkbox" name="acp_checkbox" type="checkbox"> Tôi chấp nhận Điều khoản sử dụng và Chính sách bảo mật. <span class="request_star">*</span>
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>
+                                @if(isset($data['acp_checkbox'])) <span style="color: red">{{$data['acp_checkbox']}}</span> @endif
+                                <br>
                                 @if (Route::has('password.request'))
                                         <a class="btn btn-link" href="{{ route('password.request') }}" style="color: #8b9ac5;">
                                             {{ __('Quên mật khẩu?') }}

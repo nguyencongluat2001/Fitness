@@ -29,6 +29,7 @@ class LoginController extends Controller
     }
     public function checkLogin(Request $request)
     {
+        // dd($request->all());
         $email = $request->email;
         $password = $request->password;
         if($email == '' || $email == null){
@@ -37,6 +38,10 @@ class LoginController extends Controller
         }
         if($password == '' || $password == null){
             $data['password'] = "Mật khẩu không được để trống";
+            return view('auth.signin',compact('data'));
+        }
+        if(!isset($request->acp_checkbox)){
+            $data['acp_checkbox'] = "Xác nhận đồng ý điều khoản FinTop!";
             return view('auth.signin',compact('data'));
         }
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
