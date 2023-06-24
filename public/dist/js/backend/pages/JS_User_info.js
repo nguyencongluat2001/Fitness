@@ -263,11 +263,18 @@ JS_User_info.prototype.updatePass = function (oFormCreate) {
         data: data,
         success: function (arrResult) {
             if (arrResult['success'] == true) {
-                  var nameMessage = arrResult['message'];
-                  var icon = 'success';
-                  var color = '#f5ae67';
-                  NclLib.alerMesage(nameMessage,icon,color);
-                  $('#editPassmodal').modal('hide');
+                var html = '<div class="col-md-6 pt-2"><div class="form-group"><p for="example-text-input" class="form-control-label">Mã OTP </p><input required class="form-control color" type="text" value="" name="otp" id="otp" /></div></div>'
+                $("#iss").html(html);
+                var nameMessage = arrResult['message'];
+                var icon = 'success';
+                var color = '#1bba00';
+                NclLib.alerMesage(nameMessage,icon,color);
+            }else if(arrResult['success'] == 3){
+                var nameMessage = arrResult['message'];
+                var icon = 'success';
+                var color = '#1bba00';
+                NclLib.alerMesage(nameMessage,icon,color);
+                $('#editPassmodal').modal('hide');
                   myClass.loadList(oFormCreate);
             } else {
                   var nameMessage = arrResult['message'];
