@@ -31,7 +31,7 @@ JS_Home.prototype.loadIndex = function () {
     NclLib.menuActive_child('.link-index');
     $('.chzn-select').chosen({ height: '100%', width: '100%' });
 
-    myClass.loadListChartNen();
+    // myClass.loadListChartNen();
     //lấy 4 chỉ số đứng top
     myClass.loadListTop();
     //lấy tất cả chỉ số theo tiêu thức lọc
@@ -39,7 +39,7 @@ JS_Home.prototype.loadIndex = function () {
     //lấy danh sách bà viết
     myClass.loadListBlog(oFormBlog);
     //lấy chỉ số chứng khoán ngân hàng
-    myClass.loadListTap1(oForm);
+    // myClass.loadListTap1(oForm);
 
     
     $('form#frmAdd').find('#btn_create').click(function () {

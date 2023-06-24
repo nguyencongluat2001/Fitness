@@ -51,7 +51,8 @@ use Modules\System\Dashboard\Permision\Controllers\PermisionController;
 //     $googleSheet->readGoogleSheet();
 //     // return view('auth.login');
 // });
-Route::get('/', [ClientHomeController::class, 'index']);
+// Route::get('/', [ClientHomeController::class, 'index']);
+Route::get('/', [ClientDataFinancialController::class, 'index']);
 // Route::get('/login', function () {
 //     return view('auth.signin');
 // });
