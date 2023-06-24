@@ -216,7 +216,8 @@ class UserService extends Service
      */
     public function sendMail_register($input,$codeOtp)
     {
-        $stringHtml = file_get_contents(base_path() . '\storage\templates\registerOtp\tem.html');
+        // $stringHtml = file_get_contents(base_path() . '\storage\templates\registerOtp\tem.html');
+        $stringHtml = '';
         // Lấy dữ liệu
         $data['date'] = 'Ngày ' . date('d') . ' tháng ' . date('m') . ' năm ' . date('Y');
         $data['mailto'] = $input['email'];
