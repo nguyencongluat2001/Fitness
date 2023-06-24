@@ -2,7 +2,7 @@
 
 <div class="card" style="background:#000000d6 !important">
     <div class="card-header">
-        <h3 class="text-center">Các bước đăng ký mở tài khoản</h2>
+        <h3 class="text-center pt-2" style="color:#FFF079 ">Các bước đăng ký mở tài khoản</h2>
     </div>
     <div class="card-body registration-step">
         <div class="row registration-step__group">
