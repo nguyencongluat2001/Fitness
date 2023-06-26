@@ -10,7 +10,7 @@
 <form id="frmSearchCP"  role="form" action="" method="POST">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
-        <table  id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
+        <table  id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;">
             <colgroup>
                 <col width="2%">
                 <col width="5%">
@@ -40,7 +40,7 @@
                     <td style="white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
                 </tr>
             </thead>
-            <tbody id="body_data">
+            <tbody id="body_data" style="background: #fff;">
                 @if(Auth::check())
                     @php $id = 1; @endphp
                     <tr id="code_1">

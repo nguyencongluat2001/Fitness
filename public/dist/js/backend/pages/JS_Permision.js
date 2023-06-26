@@ -104,7 +104,6 @@ JS_Permision.prototype.store = function (oFormCreate) {
         NclLib.alerMesage(nameMessage,icon,color);
         return false;
     }
-    console.log(data)
     $.ajax({
         url: url,
         type: "POST",

@@ -1,3 +1,7 @@
+
+@php
+use Carbon\Carbon;
+@endphp
 <div class="card h-100">
     <div class="card-header pb-0 px-3">
         <div class="row">
@@ -12,10 +16,11 @@
             --}}
         </div>
     </div>
-    <div class="card-body pt-4 p-3">
+    <div class="card-body">
         <div id="style-1" class="scrollbar" style="padding-right:10px;max-height:900px !important">
             <ul class="list-group">
                 @foreach ($datas as $key => $data)
+                @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
                 <a href="{{url('client/about/reader') . '/' . $data->id}}" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
                     <div class="pb-3 d-lg-flex gx-5">
                         <div class="col-lg-4 " style="display: flex;align-items: center;">
@@ -24,6 +29,7 @@
                         <div class="col-lg-7">
                             <div class="card-body">
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                                <p>{{$created_at->diffForHumans($now)}}</p>
                                 <p class="light-300">
                                 <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                                 </p>
@@ -34,6 +40,7 @@
                         </div>
                     </div>
                 </a>
+                <hr style="margin: 0;">
                 @endforeach
             </ul>
         </div>

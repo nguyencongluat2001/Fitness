@@ -103,6 +103,12 @@ class HomeController extends Controller
             unset($param['category']);
         }
         $objResult = $this->blogService->filter($param);
+        foreach($objResult as $key => $value){
+            $category = $this->categoryService->where('code_category', $value->code_category)->first();
+            if(!empty($category)){
+                $objResult[$key]->cate_name = $category->name_category;
+            }
+        }
         $data['datas']= $objResult;
         return view("client.home.loadlist-blog", $data);
     }
