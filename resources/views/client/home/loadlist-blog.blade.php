@@ -1,7 +1,7 @@
 @php
 use Carbon\Carbon;
 @endphp
-<div class="card h-100">
+<div class="card h-100" style="background: #0c1223d9 !important;">
     <div class="card-header pb-0 px-3">
         <!-- <div class="row">
             <div class="col-md-6">
