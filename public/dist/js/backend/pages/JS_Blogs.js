@@ -304,7 +304,6 @@ JS_Blogs.prototype.delete = function (oForm) {
 JS_Blogs.prototype.infoBlog = function (id) {
     var url = this.urlPath + '/infor';
     var myClass = this;
-    console.log(id)
     var data = 'id=' + id;
     var loadding = NclLib.successLoadding();
     $.ajax({

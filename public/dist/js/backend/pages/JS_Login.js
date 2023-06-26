@@ -9,7 +9,6 @@ function JS_Login(baseUrl, module, controller) {
     this.urlPath = baseUrl + '/' + module + '/' + controller;//Biên public lưu tên module
 }
 JS_Login.prototype.alerMesage = function(nameMessage,icon,color){
-    console.log(nameMessage,icon,color)
     Swal.fire({
         position: 'top-start',
         icon: icon,
@@ -28,7 +27,6 @@ JS_Login.prototype.alerMesage = function(nameMessage,icon,color){
  */
 JS_Login.prototype.loadIndex = function () {
     var myClass = this;
-    console.log(333);
     // $('.chzn-select').chosen({ height: '100%', width: '100%' });
     var oForm = 'form#frmLogin';
     var oFormCreate = 'form#frmAdd';
@@ -84,7 +82,6 @@ JS_Login.prototype.add = function (oForm) {
  */
 JS_Login.prototype.store = function (oFormCreate) {
     var url = this.urlPath + '/checkLogin';
-    console.log(url)
 
     var myClass = this;
     var data = $(oFormCreate).serialize();

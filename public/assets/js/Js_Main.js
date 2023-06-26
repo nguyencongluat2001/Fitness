@@ -201,7 +201,6 @@ Js_Main.prototype.darkMode = function (el) {
 //
 // Set Sidebar Type
 Js_Main.prototype.sidebarType = function(a) {
-  console.log(a);
   var parent = a.parentElement.children;
   var color = a.getAttribute("data-class");
   var body = document.querySelector("body");

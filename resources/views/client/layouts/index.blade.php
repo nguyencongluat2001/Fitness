@@ -366,7 +366,6 @@
         });
         var channel = pusher.subscribe('NotificationEvent');
         channel.bind('send-message', function(data) {
-            console.log(data);
             var newNotificationHtml = `<div class="card-body">
             <div class="d-flex flex-row justify-content-start mb-4 avatarMessage">
             <img src="https://vcdn.subiz-cdn.com/widget-v4/public/assets/img/default_avatar.5b74dc1.png" alt="avatar 1" style="width: 30px; height: 100%;">

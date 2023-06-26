@@ -20,7 +20,7 @@ class PermissionCheckLoginMiddleware
     {
         if(Auth::check() && (isset($_SESSION["role"]) && ($_SESSION["role"] == 'ADMIN' || $_SESSION["role"] == 'USERS'))){
             $PermissionLogin = PermissionLoginModel::where('email',$_SESSION["email"])->first();
-            if(isset($PermissionLogin) && ($_SESSION['token'] == $PermissionLogin->token)){
+            if(isset($PermissionLogin) && (isset($_SESSION['token']) && $_SESSION['token'] == $PermissionLogin->token)){
                 return $next($request);
             }
             if($_SESSION["role"] != 'ADMIN'){

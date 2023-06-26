@@ -71,8 +71,16 @@
         background: #ffffff26 !important;
     }
 
+    /* .blogReader {
+        width: 100%;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    } */
     .blogReader {
         width: 100%;
+        max-height: 100px;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
@@ -178,19 +186,21 @@
                 <!-- Start Our Work -->
                 <form action="" method="POST" id="frmLoadlist_blog" style="background:#070404d6;border-radius: 0.25em;">
                     <!-- Màn hình danh sách -->
-                    <h2 class="h4 py-2"><span style="padding-left:2%;color:#ffbc58;font-size: 22px;">Bài viết nổi bật</span> </h2>
-                    <input type="hidden" id="_token" value="{{csrf_token()}}">
-
-                    <div class="home_index_child py-2">
-                        <div class="col-md-3">
-                            <select class="form-control input-sm chzn-select" name="category" id="category">
-                                <option value=''>-- Chọn thể loại --</option>
-                                @foreach($category as $item)
-                                <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
-                                @endforeach
-                            </select>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2 class="h4 py-2"><span style="padding-left:2%;color:#ffbc58;font-size: 22px;">Bài viết nổi bật</span> </h2>
+                            <input type="hidden" id="_token" value="{{csrf_token()}}">
                         </div>
-                        <!-- <div class="col-md-3" style="padding-left:15px">
+                        <div class="col-md-4">
+                            <div class="py-2 home_index_child " style="margin: 0;padding-right: 2%;">
+                                <select class="form-control input-sm chzn-select" name="category" id="category">
+                                    <option value=''>-- Chọn thể loại --</option>
+                                    @foreach($category as $item)
+                                    <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <!-- <div class="col-md-3" style="padding-left:15px">
                                             <input class="form-control input-sm" type="date" id="fromDate" name="fromDate" 
                                                 value="<?php echo date('Y-m-d', mktime(0, 0, 0, date("m") - 1, date("d"), date("Y"))) ?>"  min="2010-01-01" max="2030-12-31">   
                                     </div> 
@@ -198,6 +208,7 @@
                                             <input class="form-control input-sm" type="date" id="toDate" name="toDate" 
                                                 value="<?php echo (new DateTime())->format('Y-m-d'); ?>"  min="2010-01-01" max="2030-12-31">  
                                     </div> -->
+                        </div>
                     </div>
                     <div id="table-blog-container"></div>
                 </form>

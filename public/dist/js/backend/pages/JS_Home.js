@@ -6,7 +6,6 @@ function JS_Home(baseUrl, module, controller) {
     this.urlPath = baseUrl + '/' + module + '/' + controller;//Biên public lưu tên module
 }
 JS_Home.prototype.alerMesage = function(nameMessage,icon,color){
-    console.log(nameMessage,icon,color)
     Swal.fire({
         position: 'top-start',
         icon: icon,
@@ -248,7 +247,7 @@ JS_Home.prototype.loadListTap1 = function (oForm, numberPage = 1, perPage = 15) 
         // cache: true,
         data: data,
         success: function (arrResult) {
-            console.log(arrResult)
+            (arrResult)
             $("#table-tap1-container").html(arrResult);
             // phan trang
             $(oForm).find('.main_paginate .pagination a').click(function () {
