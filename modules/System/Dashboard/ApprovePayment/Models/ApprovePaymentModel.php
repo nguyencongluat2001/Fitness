@@ -18,6 +18,7 @@ class ApprovePaymentModel extends Model
         'user_id',
         'user_id_introduce',
         'role_client',
+        'image',
         'order',
         'status',
         'created_at',

@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('data_financial', function (Blueprint $table) {
-            // $table->integer('order')->nullable(); // thuws tuwj
+        Schema::table('user_info', function (Blueprint $table) {
+            $table->string('wrap')->nullable(); // thuws tuwj
         });
     }
 
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('data_financial', function (Blueprint $table) {
+        Schema::table('user_info', function (Blueprint $table) {
             //
         });
     }

@@ -37,9 +37,23 @@ class ApprovePaymentController extends Controller
         // $input['sortType'] = 1;
         $objResult = $this->approvePaymentService->filter($input);
         foreach($objResult as $key => $value){
-            $users = $this->userService->where('phone', $value->user_id_introduce)
-                          ->orWhere('email', $value->user_id_introduce)->first();
+            $users = $this->userService->where('id', $value->user_id)->first();
             $objResult[$key]->user_name = isset($users->name) ? $users->name : '';
+            $role_name = 'Người dùng'; 
+            if($value->role_client == 'VIP1'){
+                $role_name = 'Vip 1';
+            }else if($value->role_client == 'VIP2'){
+                $role_name = 'Vip 2';
+            }
+            $objResult[$key]->role = $role_name;
+
+            if($value->status == '0'){
+                $status_name = 'Chờ phê duyệt';
+            }else if($value->status == '1'){
+                $status_name = 'Đã phê duyệt';
+            }
+            $objResult[$key]->status_name = $status_name;
+
         }
         $data['datas'] = $objResult;
         return view('dashboard.approvePayment.loadList', $data)->render();

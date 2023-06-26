@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('position')->nullable();
             $table->string('date_join')->nullable();
             $table->string('color_view')->nullable();
+            $table->string('wrap')->nullable(); //vip 1- 2
             $table->timestamps();
         });
     }

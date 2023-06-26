@@ -43,7 +43,7 @@ class BlogService extends Service
     public function store($input,$file){
       
         DB::beginTransaction();
-        // try{
+        try{
             //lấy mã bài viết
             $random = Library::_get_randon_number();
             $code_blog = date("Y") . '_' . date("m") . '_' . date("d") . "_" . date("H") . date("i") . date("u") . $random;
@@ -126,10 +126,10 @@ class BlogService extends Service
             }
             DB::commit();
             return true;
-        // } catch (\Exception $e) {
-        //      DB::rollBack();
-        //     return array('success' => false, 'message' => (string) $e->getMessage());
-        // }
+        } catch (\Exception $e) {
+             DB::rollBack();
+            return array('success' => false, 'message' => (string) $e->getMessage());
+        }
     }
     // /**
     //  * Tải ảnh vào thư mục
