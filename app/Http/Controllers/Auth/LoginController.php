@@ -52,6 +52,7 @@ class LoginController extends Controller
             $_SESSION["id"]   = $getUsers->id;
             $_SESSION["email"]   = $email;
             $_SESSION["name"]   = $user->name;
+            $_SESSION["account_type_vip"]   = $getUsers->account_type_vip;
             $_SESSION["color_view"] = !empty($getInfo->color_view)?$getInfo->color_view:2;
             // kiem tra quyen nguoi dung
             if ($user->role == 'ADMIN' || $user->role == 'MANAGE' || $user->role == 'CV_ADMIN'

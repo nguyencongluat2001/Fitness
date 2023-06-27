@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('approve_payment', function (Blueprint $table) {
-            $table->string('image',2000)->nullable(); // thuws tuwj
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('account_type_vip')->nullable(); // thuws tuwj
+            $table->timestamp('date_update_vip')->nullable(); // thuws tuwj
         });
     }
 
@@ -21,7 +22,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('approve_payment', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }
