@@ -14,7 +14,7 @@
             <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
             <div class="row">
                 <div class="col-md-2">
-                    <button type="button" class="btn btn-success shadow-sm" id="btn_add"><i class="fas fa-plus"></i></button>
+                    <!-- <button type="button" class="btn btn-success shadow-sm" id="btn_add"><i class="fas fa-plus"></i></button> -->
                     <button type="button" class="btn btn-danger shadow-sm" id="btn_delete"><i class="fas fa-trash-alt"></i></button>
                 </div>
                 <div class="col-md-10 row">

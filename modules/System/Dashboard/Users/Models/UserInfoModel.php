@@ -16,6 +16,7 @@ class UserInfoModel extends Model
         'color_view',
         'company', 
         'position', 
+        'wrap',
         'date_join',
         'created_at'
     ];

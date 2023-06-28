@@ -99,8 +99,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('/delete', [UserController::class,'delete']);
             // Cập nhật mật khẩu
             Route::post('/changeStatus', [UserController::class,'changeStatus']);
-            Route::get('/changePass', [UserController::class,'changePass'])->name('changePass');
-            Route::post('/updatePass', [UserController::class,'updatePass'])->name('updatePass');
+            Route::get('/changePass', [UserController::class,'changePass']);
+            Route::post('/updatePass', [UserController::class,'updatePass']);
         });
          //dữ liệu chứng khoán
         Route::prefix('/system/datafinancial')->group(function () {
@@ -129,8 +129,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         });
     });
     Route::prefix('/system')->group(function () {
-        Route::get('/userInfo/changePass', [UserController::class,'changePass'])->name('changePass');
-        Route::post('/userInfo/updatePass', [UserController::class,'updatePass'])->name('updatePass');
+        Route::get('/userInfo/changePass', [UserController::class,'changePass']);
+        Route::post('/userInfo/updatePass', [UserController::class,'updatePass']);
 
         // quản trị danh mục - thể loại
         Route::prefix('/category')->group(function () {
@@ -324,6 +324,7 @@ Route::prefix('/client')->group(function () {
         // Nâng cấp tk 
         Route::get('/upgradeAcc/index', [UpgradeAccController::class, 'index']);
         Route::get('/upgradeAcc/viewForm', [UpgradeAccController::class, 'registerVip']);
+        Route::post('/upgradeAcc/updateVip', [UpgradeAccController::class, 'updateVip']);
 
         // Đọc thông báo
         Route::get('readNotification', [ReadNotificationController::class, 'readNotification']);

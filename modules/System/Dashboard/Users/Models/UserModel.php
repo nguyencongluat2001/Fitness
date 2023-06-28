@@ -22,7 +22,11 @@ class UserModel extends Model
         'dateBirth',
         'role',
         'status',
-        'id_personnel'
+        'id_personnel',
+        'account_type_vip',
+        'date_update_vip',
+        'created_at',
+        'updated_at'
     ];
 
     public function filter($query, $param, $value)

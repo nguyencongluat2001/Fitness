@@ -297,6 +297,7 @@ JS_ApprovePayment.prototype.changeStatusApprovePayment = function(id) {
         success: function(arrResult) {
             if (arrResult['success'] == true) {
                 NclLib.alertMessageBackend('success', 'Thông báo', arrResult['message']);
+                myClass.loadList();
             } else {
                 NclLib.alertMessageBackend('danger', 'Lỗi', arrResult['message']);
             }

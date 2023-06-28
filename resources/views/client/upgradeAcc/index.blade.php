@@ -39,7 +39,6 @@
                                     </div>
                                 </div>
                             </div>
-
                             <div class="objective col-lg-4 mt-sm-0 mt-4" >
                                 <div style="background:#d4d4d4;padding:15px;width:100%;height:100%;border-radius:5px">
                                     <div class="objective-icon m-auto py-4 mb-2 mb-sm-4 shadow-lg">

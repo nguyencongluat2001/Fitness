@@ -37,9 +37,23 @@ class ApprovePaymentController extends Controller
         // $input['sortType'] = 1;
         $objResult = $this->approvePaymentService->filter($input);
         foreach($objResult as $key => $value){
-            $users = $this->userService->where('phone', $value->user_id_introduce)
-                          ->orWhere('email', $value->user_id_introduce)->first();
+            $users = $this->userService->where('id', $value->user_id)->first();
             $objResult[$key]->user_name = isset($users->name) ? $users->name : '';
+            $role_name = 'Người dùng'; 
+            if($value->role_client == 'VIP1'){
+                $role_name = 'Vip 1';
+            }else if($value->role_client == 'VIP2'){
+                $role_name = 'Vip 2';
+            }
+            $objResult[$key]->role = $role_name;
+
+            if($value->status == '0'){
+                $status_name = 'Chờ phê duyệt';
+            }else if($value->status == '1'){
+                $status_name = 'Đã phê duyệt';
+            }
+            $objResult[$key]->status_name = $status_name;
+
         }
         $data['datas'] = $objResult;
         return view('dashboard.approvePayment.loadList', $data)->render();
@@ -103,7 +117,24 @@ class ApprovePaymentController extends Controller
     {
         $input = $request->all();
         $list = $this->approvePaymentService->where('id', $input['id']);
-        if(!empty($list->first())){
+        if(!empty($list->first())){ 
+            $data = $list->first();
+            if($input['status'] == 1){
+                $arrUser = [
+                    'account_type_vip'=> $data['role_client'],
+                    'date_update_vip'=> date("Y/m/d H:i:s")
+                ];
+            }else{
+                $arrUser = [
+                    'account_type_vip'=> null,
+                ];
+            }
+            $checkUser = $this->userService->where('id',$data['user_id'])->first();
+            if(isset($checkUser)){
+                $this->userService->where('id',$data['user_id'])->update($arrUser);
+            }else{
+                return array('success' => false, 'message' => 'Không tồn tại đối tượng!');
+            }
             $list->update(['status' => $input['status']]);
             return array('success' => true, 'message' => 'Cập nhật thành công!');
         }else{

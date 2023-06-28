@@ -25,6 +25,7 @@ return new class extends Migration
             $table->tinyInteger('status')->nullable();
             $table->string('user_introduce')->nullable();
             $table->string('id_personnel')->nullable();
+            $table->string('account_type_vip')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

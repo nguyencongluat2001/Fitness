@@ -200,31 +200,33 @@ class DataFinancialController extends Controller
     public function loadList_categoryFintop_vip (Request $request)
     {
         $arrInput = $request->input();
-        $result['datas'] = $this->recommendedService->where('status','!=','')->get();
+        $result['datas'] = $this->recommendedService->where('status','!=','')->get()->toArray();
         foreach($result['datas'] as $item){
-            $ta = explode(',',$item['price_range']);
-            $data[] = [
-                "code_cp" => $item['code_cp'],
-                "code_category" => $item['code_category'],
-                "percent_of_assets" => $item['percent_of_assets'],
-                "price" => $item['price'],
+            if(isset($item['price_range'])){
+                $ta = explode(',',$item['price_range']);
+            }
+            $data['datas'][] = [
+                "code_cp" => !empty($item['code_cp'])?$item['code_cp']:'',
+                "code_category" => !empty($item['code_category'])?$item['code_category']:'',
+                "percent_of_assets" => !empty($item['percent_of_assets'])?$item['percent_of_assets']:'',
+                "price" => !empty($item['price'])?$item['price']:'',
 
                 "ta1" => !empty($ta[0])?$ta[0]:'',
                 "ta2" => !empty($ta[1])?$ta[1]:'',
                 "ta3" => !empty($ta[2])?$ta[2]:'',
 
-                "current_price" => $item['current_price'],
-                "profit_and_loss" => $item['profit_and_loss'],
-                "act" => $item['act'],
-                "stop_loss" => $item['stop_loss'],
-                "closing_percentage" => $item['closing_percentage'],
-                "note" => $item['note'],
-                "status" => $item['status'],
-                "created_at" => $item['created_at'],
-                "updated_at" => $item['updated_at'],
+                "current_price" => !empty($item['current_price'])?$item['current_price']:'',
+                "profit_and_loss" => !empty($item['profit_and_loss'])?$item['profit_and_loss']:'',
+                "act" => !empty($item['act'])?$item['act']:'',
+                "stop_loss" => !empty($item['stop_loss'])?$item['stop_loss']:'',
+                "closing_percentage" => !empty($item['closing_percentage'])?$item['closing_percentage']:'',
+                "note" => !empty($item['note'])?$item['note']:'',
+                "status" => !empty($item['status'])?$item['status']:'',
+                "created_at" => !empty($item['created_at'])?$item['created_at']:'',
+                "updated_at" => !empty($item['updated_at'])?$item['updated_at']:'',
             ];
         }
-        return view('client.dataFinancial.categoryfintop.loadlist_vip',$result);
+        return view('client.dataFinancial.categoryfintop.loadlist_vip',$data);
     }
      /**
      * list Danh mục FinTop basic

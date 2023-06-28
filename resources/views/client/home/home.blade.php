@@ -184,7 +184,7 @@
             </div>
             <div class="col-lg-8" style="padding-left:10px">
                 <!-- Start Our Work -->
-                <form action="" method="POST" id="frmLoadlist_blog" style="background:#070404d6;border-radius: 0.25em;">
+                <form action="" method="POST" id="frmLoadlist_blog" style="background:#12191a;border-radius: 0.25em;">
                     <!-- Màn hình danh sách -->
                     <div class="row">
                         <div class="col-md-8">
