@@ -18,6 +18,7 @@ use Modules\Client\Page\UpgradeAcc\Controllers\UpgradeAccController;
 
 //Dashboard
 use Modules\System\Dashboard\ApprovePayment\Controllers\ApprovePaymentController;
+use Modules\System\Dashboard\BackupData\Controllers\BackupDataController;
 use Modules\System\Dashboard\Dashboards\Controllers\DashboardController;
 use Modules\System\Dashboard\Blog\Controllers\BlogController;
 use Modules\System\Dashboard\Category\Controllers\CateController;
@@ -231,6 +232,20 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('updateApprovePayment', [ApprovePaymentController::class, 'updateApprovePayment']);
             Route::post('changeStatusApprovePayment', [ApprovePaymentController::class, 'changeStatusApprovePayment']);
             Route::get('getUserVIP', [ApprovePaymentController::class, 'getUserVIP']);
+        });
+        
+        // Backup data
+        Route::prefix('/backupdata')->group(function () {
+            //Danh mục
+            Route::get('/index', [BackupDataController::class, 'index']);
+            Route::get('/loadList',[BackupDataController::class,'loadList']);
+            Route::post('/exportSQL',[BackupDataController::class,'exportSQL']);
+            Route::post('/exportEXCEL',[BackupDataController::class,'exportEXCEL']);
+            // Route::post('/create',[BackupDataController::class,'create']);
+            // Route::post('/edit',[BackupDataController::class,'edit']);
+            // Route::post('/delete',[BackupDataController::class,'delete']);
+            // Route::post('/updateCategory',[BackupDataController::class,'updateCategory']);
+            // Route::post('/changeStatusCate',[BackupDataController::class,'changeStatusCate']);
         });
        
     });
