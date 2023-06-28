@@ -16,7 +16,7 @@ class BackupDataController extends Controller
     }
     public function index()
     {
-        return view('dashboard.backupdata.index');
+        return view('dashboard.backupData.index');
     }
     public function loadList(Request $request)
     {
@@ -24,7 +24,7 @@ class BackupDataController extends Controller
         $table_name = \DB::select("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
         WHERE TABLE_SCHEMA='".$dbName."'");
         $data['datas'] = $table_name;
-        return view('dashboard.backupdata.loadList', $data);
+        return view('dashboard.backupData.loadList', $data);
     }
     /**
      * Xuất file SQL
