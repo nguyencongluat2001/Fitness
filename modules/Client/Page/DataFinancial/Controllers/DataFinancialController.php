@@ -201,6 +201,7 @@ class DataFinancialController extends Controller
     {
         $arrInput = $request->input();
         $result['datas'] = $this->recommendedService->where('status','!=','')->get()->toArray();
+        $data['datas'] = [];
         foreach($result['datas'] as $item){
             if(isset($item['price_range'])){
                 $ta = explode(',',$item['price_range']);
