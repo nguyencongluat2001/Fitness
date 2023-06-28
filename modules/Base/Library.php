@@ -29,6 +29,9 @@ class Library
     {
         $sPath = str_replace("/", "\\", $pathLink);
         if (!file_exists($sPath . $folderYear)) {
+            if(!file_exists($sPath)) {
+                mkdir($sPath);
+            }
             mkdir($sPath . $folderYear, 0777);
             $sPath = $sPath . $folderYear;
             if (!file_exists($sPath . chr(92) . $folderMonth)) {
