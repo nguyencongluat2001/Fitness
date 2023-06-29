@@ -57,8 +57,8 @@ return [
         ],
         'real_public' => [
             'driver' => 'local',
-            'root' => storage_path('app/exports'),
-            'url' => env('APP_URL').'/storage',
+            'root' => public_path('exports'),
+            'url' => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
     ],
