@@ -231,31 +231,16 @@
     <!-- bg-white -->
     <div class="bgs">
         <nav id="main_nav" class="navbar navbar-expand-lg  shadow" style="padding:0px !important">
-            <div class="container d-flex justify-content-between align-items-center">
+            <div class="container d-flex justify-content-between align-items-center mt-3">
                 <a class="navbar-brand h1 header-logo" style="width: 7%;">
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon text-white"><i class="fa fa-bars"></i></span>
                     </button>
-                    <!-- <span class="text-dark h4">Purple</span> <span class="text-primary h4">Buzz</span> -->
-                    <!-- <img src="../" class="navbar-brand-img h-100" alt="main_logo"> -->
                     <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
                 </a>
-
-                <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex mt-3" id="navbar-toggler-success" style="color:white;margin:auto">
-                    <!-- <h1 style="font-family: auto;font-weight: 600; animation: lights 5s 750ms linear infinite;font-size: 70px;margin-left:10%">Tài Chính & Đầu Tư</h1>           -->
-                    <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 65px;margin-left:12%">Tài Chính & Đầu Tư</h1>
-
+                <div class="align-self-center title-reponsive collapse navbar-collapse flex-fill  d-lg-flex" id="navbar-toggler-success" style="color:white;margin:auto">
+                    <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 4.1em;margin-left:12%">Tài Chính & Đầu Tư</h1>
                 </div>
-                <!-- <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex mt-3" id="navbar-toggler-success" style="color:white">                 -->
-                <!-- <form action="#" method="get">
-                        <div class="input-group pt-4">
-                            <input name="email" type="text" class="form-control" placeholder="Tìm kiếm..." aria-label="Tìm kiếm" style="width:350px;border-radius:50px">
-                            <button class="btn text-white btn-lg rounded-start px-lg-4" type="submit" style="background:#22314b"><i class="fas fa-search"></i></button>
-                        </div>
-                    </form>
-                </div> -->
-
-
             </div>
         </nav>
 

@@ -88,7 +88,7 @@ JS_BackupData.prototype.exportSQL = function(table_name = ''){
         type: "POST",
         data: data,
         success: function(arrResult){
-
+            myClass.downloadFile(arrResult);
         }, error: function(e){
             console.log(e);
         }
@@ -111,6 +111,10 @@ JS_BackupData.prototype.exportEXCEL = function(table_name = ''){
             }
         }
     });
+    if(listitem == '' && table_name == ''){
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Phải chọn một đối tượng để xử lý');
+        return false;
+    }
     var data = {
         _token: $("form#frmBackupData_index #_token").val(),
         table_name: listitem != '' ? listitem : table_name,
@@ -123,10 +127,16 @@ JS_BackupData.prototype.exportEXCEL = function(table_name = ''){
             if(arrResult){
                 window.open(arrResult);
             }else{
-                NclLib.alerMesage('Xuất dữ liệu không thành công', 'warning', '#344767');
+                NclLib.alertMessageBackend('danger', 'Lỗi', 'Xuất dữ liệu không thành công');
             }
         }, error: function(e){
             console.log(e);
         }
     });
+}
+JS_BackupData.prototype.downloadFile = function(filePath){
+    var link=document.createElement('a');
+    link.href = filePath;
+    link.download = filePath.substr(filePath.lastIndexOf('/') + 1);
+    link.click();
 }

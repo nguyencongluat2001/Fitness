@@ -76,7 +76,7 @@ return [
             'href' => '/system/backupdata/index',
         ],
         'userlog' => [
-            'name' => 'Phân quyền truy cập',
+            'name' => 'Kiểm soát đăng nhập',
             'icon' => 'fas fa-user-secret',
             'a'    => 'nav-link link-userlog',
             'href' => '/system/userlog/index',

@@ -33,7 +33,7 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
                 <td style="vertical-align: middle;" align="center">{{ $key + 1 }}</td>
                 <td style="vertical-align: middle;">{{ $data->TABLE_NAME }}</td>
                 <td style="vertical-align: middle;" align="center">
-                    {{-- <button type="button" class="btn btn-primary" onclick="JS_BackupData.exportSQL('{{ $data->TABLE_NAME }}')">Xuất SQL</button> --}}
+                    <button type="button" class="btn btn-primary" onclick="JS_BackupData.exportSQL('{{ $data->TABLE_NAME }}')">Xuất SQL</button>
                     <button type="button" class="btn btn-success" onclick="JS_BackupData.exportEXCEL('{{ $data->TABLE_NAME }}')">Xuất EXCEL</button>
                 </td>
             </tr>
