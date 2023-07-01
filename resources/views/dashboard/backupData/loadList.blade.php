@@ -28,10 +28,11 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
             @if(count($datas) > 0)
             @foreach ($datas as $key => $data)
             <tr>
-                <td style="width:5% ;vertical-align: middle;" align="center"><input type="checkbox" name="chk_item_id"
-                        value="{{ $data->TABLE_NAME }}"></td>
-                <td style="vertical-align: middle;" align="center">{{ $key + 1 }}</td>
-                <td style="vertical-align: middle;">{{ $data->TABLE_NAME }}</td>
+                <td style="width:5% ;vertical-align: middle;" align="center">
+                    <input type="checkbox" name="chk_item_id" value="{{ $data->TABLE_NAME }}">
+                </td>
+                <td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ $key + 1 }}</td>
+                <td style="vertical-align: middle;" onclick="{select_row(this);}">{{ $data->TABLE_NAME }}</td>
                 <td style="vertical-align: middle;" align="center">
                     <button type="button" class="btn btn-primary" onclick="JS_BackupData.exportSQL('{{ $data->TABLE_NAME }}')">Xuất SQL</button>
                     <button type="button" class="btn btn-success" onclick="JS_BackupData.exportEXCEL('{{ $data->TABLE_NAME }}')">Xuất EXCEL</button>

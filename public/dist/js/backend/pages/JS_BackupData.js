@@ -79,6 +79,10 @@ JS_BackupData.prototype.exportSQL = function(table_name = ''){
             }
         }
     });
+    if(listitem == '' && table_name == ''){
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Phải chọn một đối tượng để xử lý');
+        return false;
+    }
     var data = {
         _token: $("form#frmBackupData_index #_token").val(),
         table_name: listitem != '' ? listitem : table_name,

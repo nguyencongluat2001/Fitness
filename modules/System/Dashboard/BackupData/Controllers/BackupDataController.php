@@ -19,7 +19,7 @@ class BackupDataController extends Controller
     }
     public function loadList(Request $request)
     {
-        $dbName = 'fitness';
+        $dbName = env('DB_DATABASE', 'fitness');
         $table_name = \DB::select("SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES
         WHERE TABLE_SCHEMA='" . $dbName . "'");
         $data['datas'] = $table_name;
