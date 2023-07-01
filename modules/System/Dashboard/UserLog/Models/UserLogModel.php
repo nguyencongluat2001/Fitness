@@ -6,13 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class UserLogModel extends Model
 {
-    protected $table = 'user_log';
+    protected $table = 'user_log'; // Kiểm soát đăng nhập
     public $incrementing = false;
 
     protected $fillable = [
         'id',
         'user_id',
-        'username',
         'email',
         'name',
         'ip',
@@ -29,7 +28,8 @@ class UserLogModel extends Model
             case 'search':
                 if(!empty($value)){
                     $query->where(function($sql) use($value){
-                        $sql->where('username', 'like', "$value")
+                        $sql->where('name', 'like', "%$value%")
+                        ->orWhere('email', 'like', "%$value%")
                         ->orWhere('ip', "$value");
                     });
                 }

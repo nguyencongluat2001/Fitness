@@ -47,5 +47,16 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
             @endforeach
             @endif
         </tbody>
+        <tfoot>
+            @if(count($datas) > 0)
+            <tr>
+                <td colspan="10">{{ $datas->links('pagination.phantrang') }}</td>
+            </tr>
+            @else
+            <tr>
+                <td colspan="10">Không tìm thấy dữ liệu</td>
+            </tr>
+            @endif
+        </tfoot>
     </table>
 </div>

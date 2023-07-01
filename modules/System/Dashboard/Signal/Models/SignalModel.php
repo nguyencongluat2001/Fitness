@@ -37,9 +37,9 @@ class SignalModel extends Model
             case 'search':
                 if(!empty($value)){
                     $query->where(function($sql) use($value){
-                        $sql->where('title', 'like', "$value")
-                        ->orWhere('target', 'like', "$value")
-                        ->orWhere('stop_loss', 'like', "$value");
+                        $sql->where('title', 'like', "%$value%")
+                        ->orWhere('target', 'like', "%$value%")
+                        ->orWhere('stop_loss', 'like', "%$value%");
                     });
                 }
                 return $query;

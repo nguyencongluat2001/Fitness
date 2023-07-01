@@ -23,6 +23,6 @@ class UserLogController extends Controller
     {
         $input = $request->all();
         $data['datas'] = $this->userLogService->filter($input);
-        return view('dashboard.userLog.loadList', $data);
+        return view('dashboard.userLog.loadList', $data)->render();
     }
 }
