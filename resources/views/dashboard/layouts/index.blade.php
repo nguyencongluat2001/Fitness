@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="apple-touch-icon" sizes="76x76" href="../clients/img/LogoFinTop_red.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_notbg.jpg">
+
     <title>
-        HỆ THỐNG DỊCH VỤ
+        FinTop Tài chính - đầu tư
     </title>
     <!--     Fonts and icons     -->
     <base href="{{ asset('') }}">
