@@ -55,12 +55,19 @@ class LoginController extends Controller
             $_SESSION["name"]   = $user->name;
             $_SESSION["account_type_vip"]   = $getUsers->account_type_vip;
             $_SESSION["color_view"] = !empty($getInfo->color_view)?$getInfo->color_view:2;
+            if(isset($_SERVER['HTTP_CLIENT_IP']) && !empty($_SERVER['HTTP_CLIENT_IP'])){
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            }elseif(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+                $ip = $_SERVER['HTTP_CLIENT_IP'];
+            }else{
+                $ip = $_SERVER['REMOTE_ADDR'];
+            }
             $userLog = [
                 'id' => (string)\Str::uuid(),
                 'user_id' => $_SESSION["id"],
                 'name' => $_SESSION["name"],
                 'email' => $_SESSION["email"],
-                'ip' => $request->ip(),
+                'ip' => $ip,
                 'created_at' => date('Y-m-d H:i:s'),
             ];
             UserLogModel::insert($userLog);

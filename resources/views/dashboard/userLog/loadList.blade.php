@@ -41,7 +41,7 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
                 <td style="vertical-align: middle;" align="center">{{ $data->ip }}</td>
                 <td style="vertical-align: middle;" align="center">{{ date('H:i:s d/m/Y', strtotime($data->created_at)) }}</td>
                 <td style="vertical-align: middle;" align="center">
-                    <button type="button" class="btn btn-primary"><i class="fas fa-eye"></i></button>
+                    <button type="button" class="btn btn-primary" onclick="JS_UserLog.view('{{ $data->user_id }}')"><i class="fas fa-eye"></i></button>
                 </td>
             </tr>
             @endforeach

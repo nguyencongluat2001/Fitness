@@ -246,7 +246,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             //Danh mục
             Route::get('/index', [UserLogController::class, 'index']);
             Route::post('/loadList',[UserLogController::class,'loadList']);
-            // Route::post('/create',[UserLogController::class,'create']);
+            Route::get('/view',[UserLogController::class,'view']);
             // Route::post('/edit',[UserLogController::class,'edit']);
             // Route::post('/delete',[UserLogController::class,'delete']);
             // Route::post('/updateCategory',[UserLogController::class,'updateCategory']);
