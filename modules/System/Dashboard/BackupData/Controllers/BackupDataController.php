@@ -72,7 +72,7 @@ class BackupDataController extends Controller
         }
         $sDir = public_path('exports/sql') . chr(92);
         $filepath = Library::_createFolder($sDir, date('Y'), date('m'), date('d'));
-        $file_name = '/database_'.implode('_', $table_name).'_' . date('Y_m_d') . '.sql';
+        $file_name = '/database_fintop_' . date('Y_m_d') . '.sql';
         $fullname = $filepath . $file_name;
         $file_handle = fopen($fullname, 'w+');
         fwrite($file_handle, $output);
