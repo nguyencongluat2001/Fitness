@@ -70,3 +70,24 @@ JS_UserLog.prototype.loadList = function (numberPage = 1, perPage = 15) {
 JS_UserLog.prototype.search = function () {
     JS_UserLog.loadList();
 }
+/**
+ * View
+ */
+JS_UserLog.prototype.view = function (user_id) {
+    var myClass = this;
+    var url = myClass.urlPath + '/view';
+    var data = 'user_id=' + user_id;
+    $.ajax({
+        url: url,
+        data: data,
+        type: 'GET',
+        success: function (arrResult) {
+            NclLib.successLoadding();
+            $("#addmodal").html(arrResult);
+            $("#addmodal").modal('show');
+        }, error: function (e) {
+            NclLib.successLoadding();
+            console.log(e);
+        }
+    });
+}
