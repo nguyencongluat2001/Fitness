@@ -55,9 +55,9 @@ return [
             'use_path_style_endpoint' => env('AWS_USE_PATH_STYLE_ENDPOINT', false),
             'throw' => false,
         ],
-        'real_public' => [
+        'backup-excel' => [
             'driver' => 'local',
-            'root' => public_path('exports'),
+            'root' => public_path('exports/excel'),
             'url' => env('APP_URL').'/public',
             'visibility' => 'public',
         ],

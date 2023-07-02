@@ -31,8 +31,7 @@ use Modules\System\Dashboard\Recommended\Controllers\RecommendedController;
 use Modules\System\Dashboard\Signal\Controllers\SignalController;
 use Modules\System\Dashboard\Users\Controllers\UserController;
 use Modules\System\Dashboard\Permision\Controllers\PermisionController;
-
-
+use Modules\System\Dashboard\UserLog\Controllers\UserLogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -241,11 +240,17 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::get('/loadList',[BackupDataController::class,'loadList']);
             Route::post('/exportSQL',[BackupDataController::class,'exportSQL']);
             Route::post('/exportEXCEL',[BackupDataController::class,'exportEXCEL']);
-            // Route::post('/create',[BackupDataController::class,'create']);
-            // Route::post('/edit',[BackupDataController::class,'edit']);
-            // Route::post('/delete',[BackupDataController::class,'delete']);
-            // Route::post('/updateCategory',[BackupDataController::class,'updateCategory']);
-            // Route::post('/changeStatusCate',[BackupDataController::class,'changeStatusCate']);
+        });
+        // Kiểm soát đăng nhập
+        Route::prefix('/userlog')->group(function () {
+            //Danh mục
+            Route::get('/index', [UserLogController::class, 'index']);
+            Route::post('/loadList',[UserLogController::class,'loadList']);
+            // Route::post('/create',[UserLogController::class,'create']);
+            // Route::post('/edit',[UserLogController::class,'edit']);
+            // Route::post('/delete',[UserLogController::class,'delete']);
+            // Route::post('/updateCategory',[UserLogController::class,'updateCategory']);
+            // Route::post('/changeStatusCate',[UserLogController::class,'changeStatusCate']);
         });
        
     });
