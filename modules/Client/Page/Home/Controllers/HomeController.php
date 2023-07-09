@@ -46,14 +46,14 @@ class HomeController extends Controller
         }
         $datas['category'] = isset($category) ? $category : [];
         $data = array();
-
-        // $param = $arrInput;
-        // if($param['category'] == '' || $param['category'] == null){
-        //     unset($param['category']);
-        // }
-        $objResult = $this->blogService->where('status',1)->get()->take(8);
+        $objResult = $this->blogService->where('status',1)->get()->take(15);
+        foreach($objResult as $key => $value){
+            $category = $this->categoryService->where('code_category', $value->code_category)->first();
+            if(!empty($category)){
+                $objResult[$key]->cate_name = $category->name_category;
+            }
+        }
         $datas['blog'] = $objResult;
-        // dd($datas['blog']);
         return view('client.home.home',$datas);
     }
     
