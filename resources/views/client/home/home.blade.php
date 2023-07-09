@@ -218,7 +218,7 @@ use Carbon\Carbon;
             </div>
             <div class="col-lg-8" style="padding-left:10px">
                 <!-- Start Our Work -->
-                <form action="" method="POST" id="frmLoadlist_blog" style="background:#f1faff75;border-radius: 0.25em;">
+                <form action="" method="POST" id="frmLoadlist_blog" style="background:#ffffffe3;border-radius: 0.25em;">
                     
                     <div class="col-lg-6 mx-auto " style="display:flex">
                         <div class="input-group pt-2 box">
