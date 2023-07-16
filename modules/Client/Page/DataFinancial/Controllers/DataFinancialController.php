@@ -75,38 +75,41 @@ class DataFinancialController extends Controller
     { 
         $arrInput = $request->input();
         $result = $this->DataFinancialService->where('code_cp',$arrInput['code_cp'])->first();
-        if(!isset($_SESSION['role'])){
-            $data=[
-                'status' => 2,
-                'message' => 'Vui lòng đăng nhập để tra cứu cổ phiếu!',
+        if($arrInput['code_cp'] != ''){
+            if(!isset($_SESSION['role'])){
+                $data=[
+                    'status' => 2,
+                    'message' => 'Vui lòng đăng nhập để tra cứu cổ phiếu!',
+                ];
+                return response()->json($data);
+            }
+            if(!isset($result)){
+                $data=[
+                    'status' => 2,
+                    'message' => 'Không tồn tại mã cổ phiếu '.$arrInput['code_cp'].'!',
+                ];
+                return response()->json($data);
+            }
+            $getCategory = $this->categoryService->where('code_category',$result->code_category)->first();
+            $data = [
+                'id'=>$arrInput['id'],
+                'code_cp'=>$result->code_cp,
+                'exchange'=>$result->exchange,
+                'code_category'=>isset($getCategory->name_category)?$getCategory->name_category:'',
+                'ratings_TA'=>$result->ratings_TA,
+                'identify_trend'=>$result->identify_trend,
+                'act'=>$result->act,
+                'trading_price_range'=>$result->trading_price_range,
+                'stop_loss_price_zone'=>$result->stop_loss_price_zone,
+                'ratings_FA'=>$result->ratings_FA,
+                'url_link'=>$result->url_link,
+                'status'=>$result->status,
+                'created_at'=>$result->created_at,
+                'updated_at'=>$result->updated_at
             ];
             return response()->json($data);
         }
-        if(!isset($result)){
-            $data=[
-                'status' => 2,
-                'message' => 'Không tồn tại mã cổ phiếu '.$arrInput['code_cp'].'!',
-            ];
-            return response()->json($data);
-        }
-        $getCategory = $this->categoryService->where('code_category',$result->code_category)->first();
-        $data = [
-            'id'=>$arrInput['id'],
-            'code_cp'=>$result->code_cp,
-            'exchange'=>$result->exchange,
-            'code_category'=>isset($getCategory->name_category)?$getCategory->name_category:'',
-            'ratings_TA'=>$result->ratings_TA,
-            'identify_trend'=>$result->identify_trend,
-            'act'=>$result->act,
-            'trading_price_range'=>$result->trading_price_range,
-            'stop_loss_price_zone'=>$result->stop_loss_price_zone,
-            'ratings_FA'=>$result->ratings_FA,
-            'url_link'=>$result->url_link,
-            'status'=>$result->status,
-            'created_at'=>$result->created_at,
-            'updated_at'=>$result->updated_at
-        ];
-        return response()->json($data);
+        
     }
     /**
      * them thông tin
