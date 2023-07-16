@@ -279,13 +279,14 @@ Route::prefix('/client')->group(function () {
             Route::get('/changePass', [UserController::class,'changePass']);
             Route::post('/updatePass', [UserController::class,'updatePass']);
         });
-        // Route::middleware('checkloginDatafinancial')->group(function () {
             Route::prefix('datafinancial')->group(function () {
                 // Tra cứu cổ phiếu
                 Route::get('/index', [ClientDataFinancialController::class, 'index']);
                 Route::post('/loadData', [ClientDataFinancialController::class, 'loadData']);
                 Route::post('/fireAntChart', [ClientDataFinancialController::class, 'fireAntChart']);
-                Route::post('/searchDataCP', [ClientDataFinancialController::class, 'searchDataCP']);
+                // Route::middleware('checkloginDatafinancial')->group(function () {
+                    Route::post('/searchDataCP', [ClientDataFinancialController::class, 'searchDataCP']);
+                // });
                 Route::get('/noteTaFa', [ClientDataFinancialController::class, 'noteTaFa']);
                 // tín hiệu mua
                 Route::get('/signalIndex', [ClientDataFinancialController::class, 'signalIndex']);
@@ -299,9 +300,9 @@ Route::prefix('/client')->group(function () {
                 Route::post('/loadList_categoryFintop_vip', [ClientDataFinancialController::class, 'loadList_categoryFintop_vip']);
                 Route::post('/loadList_categoryFintop_basic', [ClientDataFinancialController::class, 'loadList_categoryFintop_basic']);
             });
-        // });
+
         Route::prefix('about')->group(function () {
-            // Tra cứu cổ phiếu
+            // báo cáo phân tích
             Route::get('/index', [AboutController::class, 'index']);
             Route::get('/loadListTHTT', [AboutController::class, 'loadListTHTT']);
             Route::prefix('/session')->group(function(){
