@@ -207,14 +207,16 @@ function click2(id, type) {
     $(".td_"+type+"_" + id).removeAttr('ondblclick');
     var text = $("#span_" + type + "_" + id).html();
     $("#"+type+"_" + id).removeAttr('hidden');
-    $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="3"></textarea>');
+    $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
     $("#"+type+"_" + id).focus();
+    $("#span_"+type+"_" + id).removeAttr('onclick');
     $("#span_"+type+"_" + id).removeAttr('id');
     $("#"+type+"_" + id).focusout(function(){
         var nhap = $("#"+type+"_" + id).val() != '' ? $("#"+type+"_" + id).val() : text;
         $(".td_"+type+"_" + id).attr('ondblclick', "click2('"+id+"', '"+type+"')");
         $("#"+type+"_" + id).attr('hidden', true);
         $(".span_"+type+"_" + id).attr('id', 'span_'+type+'_' + id);
+        $(".span_"+type+"_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
         $(".span_"+type+"_" + id).html(nhap);
         if(text != $(".span_" + type + "_" + id).html()){
             JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
