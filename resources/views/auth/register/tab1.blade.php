@@ -33,11 +33,11 @@
         <div class="row">
             <div class="form-wrapper col-md-4">
                 <label for="">ID người giới thiệu</label>
-                <input placeholder="Nhập ID giới thiệu..." onchange="JS_Register.getPersonnel()" id="code_introduce" type="text" class="form-control" name="code_introduce" value="">
+                <input placeholder="Nhập ID giới thiệu..." onchange="JS_Register.getPersonnel()" id="code_introduce" type="text" class="form-control" name="code_introduce" @if(isset($data['user_introduce_id'])) readonly  style="color: #000;" @endif value="{{isset($data['user_introduce_id']) ? $data['user_introduce_id'] : ''}}">
             </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Tên người giới thiệu</label>
-                <input style="color:red" placeholder="Tên người giới thiệu..." readonly id="name_personnel" type="text" class="form-control" name="name_personnel" value="">
+                <input style="color:red" placeholder="Tên người giới thiệu..." readonly id="name_personnel" type="text" class="form-control" name="name_personnel" value="{{isset($data['user_introduce_name']) ? $data['user_introduce_name'] : ''}}">
             </div>
         </div>
         <!-- <div class="row">

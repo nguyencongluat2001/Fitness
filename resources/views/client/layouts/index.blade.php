@@ -88,6 +88,21 @@
             display: block;
         }
     }
+    @media (max-width: 768px){
+        .navbar-brand.header-logo{
+            width: 10% !important;
+        }
+    }
+    @media (max-width: 350px){
+        .align-self-center.title-reponsive h1{
+            font-size: 2.5rem !important;
+        }
+    }
+    @media (max-width: 350px){
+        .align-self-center.title-reponsive h1{
+            font-size: 1.5rem !important;
+        }
+    }
 
     .navbar-toggler.border-0:focus {
         outline: none;
@@ -233,14 +248,16 @@
     <div class="bgs">
         <nav id="main_nav" class="navbar navbar-expand-lg  shadow" style="padding:0px !important">
             <div class="container d-flex justify-content-between align-items-center mt-3">
-                <a class="navbar-brand h1 header-logo" style="width: 7%;" href="{{url('/system/home/index')}}">
+                <div class="navbar-brand h1 header-logo" style="width: 7%;" href="#">
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon text-white"><i class="fa fa-bars"></i></span>
                     </button>
-                    <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
-                </a>
+                    <a href="">
+                        <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
+                    </a>
+                </div>
                 <div class="align-self-center title-reponsive collapse navbar-collapse flex-fill  d-lg-flex" id="navbar-toggler-success" style="color:white;margin:auto">
-                    <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 4.1em;margin-left:12%">Tài Chính & Đầu Tư</h1>
+                    <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 4.1em;padding-left: 20%;">Tài Chính & Đầu Tư</h1>
                 </div>
             </div>
         </nav>
