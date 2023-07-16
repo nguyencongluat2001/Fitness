@@ -24,7 +24,6 @@
             </tr>
         </thead>
         <tbody>
-            @if(Auth::check())
             @foreach ($datas as $key => $data)
                 <tr >
                     <td align="center" >{{ $key + 1 }}</td>
@@ -56,14 +55,6 @@
                     </td>
                 </tr>
             @endforeach
-            @else
-                <span><i class="fas fa-hand-point-right"></i> Đăng nhập xem hiệu quả danh mục VIP FinTop
-                            
-                    <button  type="button" class="btn btn-success" href="{{ url('/login') }}"> <a href="{{ url('/login') }}" style="animation: lights 2s 750ms linear infinite;">Đăng nhập</a></button>
-                
-                </span>
-                <p></p>
-            @endif
         </tbody>
     </table>
 </div>

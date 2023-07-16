@@ -70,24 +70,16 @@
     }
 </style>
 
-<div class="card mb-4 ">
-    <div class="card-header pb-0 px-3">
-        <div class="row">
-            <div class="col-md-6">
-            <h6 class="mb-0">Chỉ số</h6>
-            </div>
-            <div class="col-md-6 d-flex justify-content-end align-items-center">
-            </div>
-        </div>
-        </div>
+<div class="mb-4 ">
+    <div class="pb-0">
         <div class="scrollbar" id="style-1" style="padding-right:10px">
-          <div class="card-body pt-4 p-3" >
+          <div class="card-body p-2" >
               <ul class="list-group">
                   @foreach ($datas as $key => $data)
                     <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg" style="background: #e7eefe3b;">
                       <div class="d-flex align-items-center">
                       <span>
-                        <i style="padding:5px;color:#ffcd19" class="fas fa-coins"></i>
+                        <i style="padding:15px;" class="fas fa-coins"></i>
                     </span>
                       <!-- <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></button> -->
                           <div class="d-flex flex-column">

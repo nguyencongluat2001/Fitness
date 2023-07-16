@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="../assets/chosen/chosen.min.css">
     <script src="https://unpkg.com/lightweight-charts@3.4.0/dist/lightweight-charts.standalone.production.js"></script>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    
 </head>
 <style>
     b,
@@ -232,7 +233,7 @@
     <div class="bgs">
         <nav id="main_nav" class="navbar navbar-expand-lg  shadow" style="padding:0px !important">
             <div class="container d-flex justify-content-between align-items-center mt-3">
-                <a class="navbar-brand h1 header-logo" style="width: 7%;">
+                <a class="navbar-brand h1 header-logo" style="width: 7%;" href="{{url('/system/home/index')}}">
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon text-white"><i class="fa fa-bars"></i></span>
                     </button>
@@ -243,8 +244,6 @@
                 </div>
             </div>
         </nav>
-
-
     </div>
     <nav id="menuClient" class=" navbar-expand-lg  shadow" style="background:#0000008a">
         <div class="container d-flex justify-content-between align-items-center">

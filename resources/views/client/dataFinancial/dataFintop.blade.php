@@ -41,7 +41,6 @@
                 </tr>
             </thead>
             <tbody id="body_data" style="background: #fff;">
-                @if(Auth::check())
                     @php $id = 1; @endphp
                     <tr id="code_1">
                         <td  style="vertical-align: middle;color:#83beff" align="center">
@@ -83,14 +82,6 @@
                             <span id="span_code_cp_5" class="span_code_cp_5 text-success" onclick="click2('5', 'code_cp',this)">Nhập</span>
                         </td>
                     </tr>
-                @else
-                    <span><i class="fas fa-hand-point-right"></i> Đăng nhập để tra cứu cổ phiếu
-                                
-                        <button  type="button" class="btn btn-success" href="{{ url('/login') }}"> <a href="{{ url('/login') }}" style="animation: lights 2s 750ms linear infinite;">Đăng nhập</a></button>
-                    
-                    </span>
-                    <p></p>
-                @endif
             </tbody>
         </table>
     <!-- </div> -->

@@ -75,6 +75,13 @@ class DataFinancialController extends Controller
     { 
         $arrInput = $request->input();
         $result = $this->DataFinancialService->where('code_cp',$arrInput['code_cp'])->first();
+        if(!isset($_SESSION['role'])){
+            $data=[
+                'status' => 2,
+                'message' => 'Vui lòng đăng nhập để tra cứu cổ phiếu!',
+            ];
+            return response()->json($data);
+        }
         if(!isset($result)){
             $data=[
                 'status' => 2,

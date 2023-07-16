@@ -33,11 +33,11 @@ JS_Home.prototype.loadIndex = function () {
 
     // myClass.loadListChartNen();
     //lấy 4 chỉ số đứng top
-    myClass.loadListTop();
+    // myClass.loadListTop();
+
     //lấy tất cả chỉ số theo tiêu thức lọc
     myClass.loadList();
-    //lấy danh sách bà viết
-    myClass.loadListBlog(oFormBlog);
+
     //lấy chỉ số chứng khoán ngân hàng
     // myClass.loadListTap1(oForm);
 

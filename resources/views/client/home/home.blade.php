@@ -1,5 +1,8 @@
 @extends('client.layouts.index')
 @section('body-client')
+@php
+use Carbon\Carbon;
+@endphp
 <style>
     header {
         font-family: 'Lobster', cursive;
@@ -18,10 +21,9 @@
         color: #074E8C;
     }
 
-    .scrollbar {
-        margin-left: 30px;
+    .scrollbar_blog {
         /* float: left; */
-        height: 400px;
+        height: 800px !important;
         /* width: 65px; */
         /* background: #F5F5F5; */
         overflow-y: scroll;
@@ -79,12 +81,45 @@
         overflow: hidden;
     } */
     .blogReader {
-        width: 100%;
         max-height: 100px;
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 3;
         overflow: hidden;
+    }
+    {
+    box-sizing: border-box;
+    }
+
+    #myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    }
+
+    #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    }
+
+    #myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+    }
+
+    #myTable tr {
+    border-bottom: 1px solid #ddd;
+    }
+
+    #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
     }
 </style>
 
@@ -97,14 +132,13 @@
 </section>
 <!-- Start Banner Hero -->
 <div class="banner-wrapper">
+     <!-- Màn hình danh sách top chỉ số tài chính
     <div class="table-responsive">
-        <!-- Màn hình danh sách top chỉ số tài chính-->
         <div id="table-container-loadListTop"></div>
-    </div>
+    </div> -->
     <!-- top cổ phiếu biến động -->
     <section class="container">
         <div class="table-responsive">
-            <!-- Màn hình danh sách top chỉ số tài chính-->
             <div id="table-container-loadListTop"></div>
         </div>
     </section>
@@ -184,33 +218,47 @@
             </div>
             <div class="col-lg-8" style="padding-left:10px">
                 <!-- Start Our Work -->
-                <form action="" method="POST" id="frmLoadlist_blog" style="background:#12191a;border-radius: 0.25em;">
-                    <!-- Màn hình danh sách -->
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h2 class="h4 py-2"><span style="padding-left:2%;color:#ffbc58;font-size: 22px;">Bài viết nổi bật</span> </h2>
-                            <input type="hidden" id="_token" value="{{csrf_token()}}">
-                        </div>
-                        <div class="col-md-4">
-                            <div class="py-2 home_index_child " style="margin: 0;padding-right: 2%;">
-                                <select class="form-control input-sm chzn-select" name="category" id="category">
-                                    <option value=''>-- Chọn thể loại --</option>
-                                    @foreach($category as $item)
-                                    <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <!-- <div class="col-md-3" style="padding-left:15px">
-                                            <input class="form-control input-sm" type="date" id="fromDate" name="fromDate" 
-                                                value="<?php echo date('Y-m-d', mktime(0, 0, 0, date("m") - 1, date("d"), date("Y"))) ?>"  min="2010-01-01" max="2030-12-31">   
-                                    </div> 
-                                    <div class="col-md-3" style=""> 
-                                            <input class="form-control input-sm" type="date" id="toDate" name="toDate" 
-                                                value="<?php echo (new DateTime())->format('Y-m-d'); ?>"  min="2010-01-01" max="2030-12-31">  
-                                    </div> -->
+                <form action="" method="POST" id="frmLoadlist_blog" style="background:#ffffffe3;border-radius: 0.25em;">
+                    
+                    <div class="col-lg-6 mx-auto " style="display:flex">
+                        <div class="input-group pt-2 box">
+                                <input id="myInput" onkeyup="myFunction()"style="background:#ffcb59bd" type="text" class="input form-control form-control-lg rounded-pill rounded" placeholder="Tìm kiếm bài viết theo từ khóa, danh mục,...">
                         </div>
                     </div>
-                    <div id="table-blog-container"></div>
+                    <div class="scrollbar_blog carousel-item active list-hispital-home">
+                            <div class=" row d-flex ">
+                                <div class="banner-content col-lg-12 col-12 m-lg-auto text-left ">
+                                        <!-- Start Our Work -->
+                                        <section class="">
+                                            <table id="myTable" class="table  table-bordered table-striped table-condensed dataTable no-footer">
+                                                <tbody>
+                                                    @foreach ($blog as $key => $data)
+                                                    @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
+                                                        <tr>
+                                                            <td style="background: #ffffffeb;width:30%;" align="center">
+                                                                <img  src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" alt="Image" style="height: 200px;width: 250px;object-fit: cover;">
+                                                            </td>
+                                                            <td style="background: #ffffffeb;width:70%;vertical-align: middle;">
+                                                                <span style="font-size: 20px;font-family: -webkit-body;color: #1d3952;">{{ $data->detailBlog->title }}</span> <br>
+                                                                <p style="color: #d25d00;font-size: 13px;">{{(isset($data['cate_name']) ? $data['cate_name'] . ' - ' : '') . $created_at->diffForHumans($now)}}</p>
+                                                                <span class="blogReader" style="font-size: 15px;font-family: -webkit-body;color: #1d3952;">
+                                                                    {!! $data->detailBlog->decision !!}
+                                                                </span><br>
+                                                                <a  href="{{url('client/about/reader') . '/' . $data->id}}">
+                                                                    <span style="background: #32870b;color: #ffffff;" class="btn btn-outline-light rounded-pill">Xem chi tiết</span>
+                                                                </a>
+                                                            </td>
+                                                            
+                                                        </tr> 
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </section>
+                                        <!-- End Our Work -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                 </form>
 
                 <!-- End Our Work -->
@@ -220,6 +268,27 @@
 </div>
 <div class="modal" id="reader" role="dialog"></div>
 <!-- End Recent Work -->
+<script>
+
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 <script type="text/javascript" src="{{ URL::asset('dist/js/backend/client/JS_About.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('dist/js/backend/client/JS_Home.js') }}"></script>
 <script src='../assets/js/jquery.js'></script>

@@ -22,6 +22,7 @@ class CheckLoginDatafinancialMiddleware
         if($status == true){
             return $next($request);
         }else{
+            // dd(2);
             return redirect()->route('login');
         }
     }
