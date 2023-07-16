@@ -174,17 +174,21 @@
             <div class="marquee-header">
                 <marquee style="color:white">
                     <span>
-                        Chúng ta có thể gặp nhiều thất bại nhưng chúng ta không được bị đánh bại – Maya Angelou.
+                    Cổ phiếu luôn là hình ảnh đại diện cho một công ty, do vậy bạn nên tìm hiểu kỹ chính sách kinh doanh của công ty trước khi quyết định đầu tư.
                     </span>
                     <span style="padding-left:200px">
-                        Chúng ta có thể gặp nhiều thất bại nhưng chúng ta không được bị đánh bại – Maya Angelou.1
+                    Cổ phiếu luôn là hình ảnh đại diện cho một công ty, do vậy bạn nên tìm hiểu kỹ chính sách kinh doanh của công ty trước khi quyết định đầu tư.
                     </span>
                     <span style="padding-left:200px">
-                        Chúng ta có thể gặp nhiều thất bại nhưng chúng ta không được bị đánh bại – Maya Angelou.2
+                    Thị trường chứng khoán thường xảy ra tình trạng lao dốc của những cổ phiếu, nhà đầu tư giỏi sẽ biết tìm kiếm cơ hội để mua cổ phiếu tiềm năng với giá rẻ.– Peter Lynch
                     </span>
                     <span style="padding-left:200px">
-                        Chúng ta có thể gặp nhiều thất bại nhưng chúng ta không được bị đánh bại – Maya Angelou.3
+                    Những cổ phiếu thành công không nói cho bạn khi nào nên bán. Khi bạn cảm thấy thích khoe khoang, có lẽ đã đến lúc để bán.– John Neff
                     </span>
+                    <span style="padding-left:200px">
+                    Nếu bạn không sẵn sàng sở hữu một cổ phiếu trong mười năm, thậm chí đừng nghĩ đến việc sở hữu nó trong mười phút.– Warren Buffett
+                    </span>
+
                 </marquee>
             </div>
             <div class="user-login-header">
