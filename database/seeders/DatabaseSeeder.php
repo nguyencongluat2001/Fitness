@@ -20,9 +20,9 @@ class DatabaseSeeder  extends Seeder
         $item = [
             'id'=> (string)\Str::uuid(),
             'name' => 'Nguyễn Công Luật',
-            'email' => 'nguyencongluat092001@gmail.com',
+            'email' => 'phanlaiquyen@gmail.com',
             'password'=> Hash::make('123'),
-            'role'=> 'ADMIN'
+            'role_admin'=> 'ADMIN'
         ];
         DB::table('users')->insert($item);
     }

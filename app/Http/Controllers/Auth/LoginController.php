@@ -50,6 +50,16 @@ class LoginController extends Controller
             $getUsers = $this->userService->where('email',$email)->first();
             $getInfo = $this->userInfoService->where('user_id',$getUsers->id)->first();
             $_SESSION["role"] = $user->role;
+
+            $_SESSION['role_admin'] = $user->role_admin;
+            $_SESSION['role_manage'] = $user->role_manage;
+            $_SESSION['role_cv_admin'] = $user->role_cv_admin;
+            $_SESSION['role_cv_pro'] = $user->role_cv_pro;
+            $_SESSION['role_cv_basic'] = $user->role_cv_basic;
+            $_SESSION['role_sale_admin'] = $user->role_sale_admin;
+            $_SESSION['role_Sale'] = $user->role_Sale;
+            $_SESSION['role_Users'] = $user->role_Users;
+
             $_SESSION["id"]   = $getUsers->id;
             $_SESSION["email"]   = $email;
             $_SESSION["name"]   = $user->name;
@@ -72,15 +82,15 @@ class LoginController extends Controller
             // ];
             // UserLogModel::insert($userLog);
             // kiem tra quyen nguoi dung
-            if ($user->role == 'ADMIN' || $user->role == 'MANAGE' || $user->role == 'CV_ADMIN'
-             || $user->role == 'CV_PRO' || $user->role == 'CV_BASIC' || $user->role == 'SALE_ADMIN' || $user->role == 'SALE_BASIC') {
+            if ($user->role_admin == 'ADMIN' || $user->role_manage == 'MANAGE' || $user->role_cv_admin == 'CV_ADMIN'
+             || $user->role_cv_pro == 'CV_PRO' || $user->role_cv_basic == 'CV_BASIC' || $user->role_sale_admin == 'SALE_ADMIN' || $user->role_Sale == 'SALE_BASIC') {
                 // menu sidebar
                 $sideBarConfig = config('SidebarSystem');
-                $sideBar = $this->checkPermision($sideBarConfig , $user->role);
+                $sideBar = $this->checkPermision($sideBarConfig , $user);
                 $_SESSION["sidebar"] = $sideBar;
                 Auth::login($user);
                 return redirect('system/home/index');
-            } else if ($user->role == 'USERS' || $user->role == 'USER') {
+            } else if ($user->role_Users == 'USERS' || $user->role_Users == 'USER') {
                 $checkPrLogin = $this->permission_login($email);
                 Auth::login($user);
                 return redirect('client/datafinancial/index');
@@ -126,12 +136,87 @@ class LoginController extends Controller
         return view('auth.signin');
     }
     // check quyền hiển thị menu
-    private function checkPermision($menu,$role){
+    private function checkPermision($menu,$user){
         foreach ($menu as $key => $value) {
-            if ($key == $role) {
+            if ($key == $user->role_admin) {
                 $menu = $value;
                 return  $menu;
             }
+            if ($user->role_manage == 'MANAGE') {
+                $menu = $value;
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                return  $menu;
+            }
+            if ($user->role_cv_admin == 'CV_ADMIN') {
+                $menu = $value;
+                unset($menu['approvepayment']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                return  $menu;
+            }
+            if ($user->role_cv_pro == 'CV_PRO') {
+                $menu = $value;
+                unset($menu['users']);
+                unset($menu['recommended']);
+                unset($menu['handbook']);
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                return  $menu;
+            }
+            if ($user->role_cv_basic == 'CV_BASIC') {
+                $menu = $value;
+                unset($menu['users']);
+                unset($menu['recommended']);
+                unset($menu['datafinancial']);
+                unset($menu['signal']);
+                unset($menu['handbook']);
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                return  $menu;
+            }
+            if ($user->role_sale_admin == 'SALE_ADMIN') {
+                $menu = $value;
+                unset($menu['recommended']);
+                unset($menu['datafinancial']);
+                unset($menu['signal']);
+                unset($menu['handbook']);
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                unset($menu['category']);
+                unset($menu['blog']);
+                return  $menu;
+            }
+            if ($user->role_Sale == 'SALE_BASIC') {
+                $menu = $value;
+                unset($menu['users']);
+                unset($menu['recommended']);
+                unset($menu['datafinancial']);
+                unset($menu['signal']);
+                unset($menu['handbook']);
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                unset($menu['category']);
+                unset($menu['blog']);
+                return  $menu;
+            }
+            
         }
    }
 }

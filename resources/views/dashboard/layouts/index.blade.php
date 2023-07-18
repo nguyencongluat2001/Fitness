@@ -48,7 +48,6 @@ $data = ApprovePaymentModel::where('status',0)->count();
 $arrdData = ApprovePaymentModel::where('status',0)->get()->toArray();
 
 @endphp
- @if ($_SESSION['role'] != 'USERS') 
     @if ($_SESSION['color_view'] == 1)
         <body class="g-sidenav-show dark-version">
     @else
@@ -300,6 +299,5 @@ $arrdData = ApprovePaymentModel::where('status',0)->get()->toArray();
         }, 2000)
     </script>
     @yield('js')
-    @endif
 </body>
 </html>

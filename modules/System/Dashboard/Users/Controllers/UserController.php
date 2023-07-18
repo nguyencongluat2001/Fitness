@@ -162,33 +162,73 @@ class UserController extends Controller
     public function loadList(Request $request)
     { 
         $paginationHelper = new PaginationHelper();
-        if($_SESSION['role'] != 'ADMIN' && $_SESSION['role'] != 'MANAGE'){
-            if($_SESSION['role'] == 'CV_ADMIN' ){
-                if($_SESSION['role'] == '' || $request['role'] == null){
-                    $request['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','USERS'];
-                }else{
-                    $request['role'] = array($request['role']);
-                }
-            }elseif($_SESSION['role'] == 'SALE_ADMIN'){
-                if($_SESSION['role'] == '' || $request['role'] == null){
-                    $request['role'] = ['SALE_ADMIN','SALE_BASIC'];
-                }else{
-                    $request['role'] = array($request['role']);
-                }
-            }
-        }else{
-            if($request['role'] == '' || $request['role'] == null){
-                unset($request['role']);
-            }else{
-                $request['role'] = array($request['role']);
-            }
-        }
+        // if($_SESSION['role_admin'] != 'ADMIN' && $_SESSION['role_admin'] != 'MANAGE'){
+        //     if($_SESSION['role_cv_admin'] == 'CV_ADMIN' ){
+        //         if($_SESSION['role'] == '' || $request['role'] == null){
+        //             $request['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','USERS'];
+        //         }else{
+        //             $request['role'] = array($request['role']);
+        //         }
+        //     }elseif($_SESSION['role_sale_admin'] == 'SALE_ADMIN'){
+        //         if($_SESSION['role'] == '' || $request['role'] == null){
+        //             $request['role'] = ['SALE_ADMIN','SALE_BASIC'];
+        //         }else{
+        //             $request['role'] = array($request['role']);
+        //         }
+        //     }
+        // }else{
+        //     if($request['role'] == '' || $request['role'] == null){
+        //         unset($request['role']);
+        //     }else{
+        //         $request['role'] = array($request['role']);
+        //     }
+        // }
+        // if($_SESSION['role_admin'] == 'ADMIN'){
+        //     $request['role_admin'] = 'ADMIN';
+        // }
+        // if($_SESSION['role_manage'] == 'MANAGE'){
+        //     $request['role_manage'] = 'MANAGE';
+        //     $request['role_admin'] = 'MANAGE';
+        // }
+        // if($_SESSION['role_cv_admin'] == 'CV_ADMIN'){
+        //     $request['role_cv_admin'] = 'CV_ADMIN';
+        // }
+        // if($_SESSION['role_cv_pro'] == 'CV_PRO'){
+        //     $request['role_cv_pro'] = 'CV_PRO';
+        // }
+        // if($_SESSION['role_cv_basic'] == 'CV_BASIC'){
+        //     $request['role_cv_basic'] = 'CV_BASIC';
+        // }
+        // if($_SESSION['role_sale_admin'] == 'SALE_ADMIN'){
+        //     $request['role_sale_admin'] = 'SALE_ADMIN';
+        // }
+        // if($_SESSION['role_Sale'] == 'SALE_BASIC'){
+        //     $request['role_Sale'] = 'SALE_BASIC';
+        // }
+        // if($_SESSION['role_Users'] == 'USERS'){
+        //     $request['role_Users'] = 'USERS';
+        // }
+
+
         $arrInput = $request->input();
         $data = array();
         $param = $arrInput;
-        $objResult = $this->userService->filter($param);
+        // $objResult = $this->userService->filter($param);
+        if($_SESSION['role_admin'] == 'ADMIN'){
+            $objResult = $this->userService->whereIn('status',[0,1])->get();
+        }
+        if($_SESSION['role_manage'] == 'MANAGE'){
+            $objResult = $this->userService->where('role_admin',null)->get();
+        }
+        if($_SESSION['role_cv_admin'] == 'CV_ADMIN'){
+            $objResult = $this->userService->where('role_admin',null)->where('role_manage',null)->get();
+        }
+        if($_SESSION['role_sale_admin'] == 'SALE_ADMIN'){
+            $objResult = $this->userService->where('role_admin',null)->orWhere('role_sale_admin','SALE_ADMIN')->orWhere('role_Sale','SALE_BASIC')->get();
+        }
+
         $data['datas'] = $objResult;
-        return view("dashboard.users.loadlist", $data)->render();
+        return view("dashboard.users.loadlist", $data);
     }
      /**
      * hiển thị modal đổi mật khẩu

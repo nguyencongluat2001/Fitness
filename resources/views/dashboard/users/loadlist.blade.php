@@ -51,12 +51,12 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
         </tbody>
     </table>
     <div style="width:100%" class="row">
-    <tfoot>
+    {{--<tfoot>
         <tr>
             <td colspan="10">
                 {{$datas->links('pagination.phantrang')}}
             </td>
         </tr>
-    </tfoot>
+    </tfoot>--}}
     </div>
 </div>

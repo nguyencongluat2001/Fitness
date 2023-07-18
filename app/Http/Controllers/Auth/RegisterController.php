@@ -99,7 +99,7 @@ class RegisterController extends Controller
                 'email' => $data['email'],
                 'user_introduce' => !empty($data['code_introduce'])?$data['code_introduce']:'',
                 'password' => Hash::make($data['password']),
-                'role' => 'USERS',
+                'role_Users' => 'USERS',
             ]);
             Auth::attempt(['email' => $data['email'], 'password' => $data['password']]);
             $user = Auth::user();

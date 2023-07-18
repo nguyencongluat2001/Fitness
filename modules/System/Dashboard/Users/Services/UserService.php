@@ -38,11 +38,11 @@ class UserService extends Service
     public function store($input,$file){
         $password = 'fintop123';
         //check quyền chỉnh sửa
-        if(isset($input['role']) && $_SESSION['role'] != 'ADMIN' && $_SESSION['role'] != 'MANAGE' && $_SESSION['role'] != 'CV_ADMIN'){
-            if($input['role'] == 'ADMIN' || $input['role'] == 'MANAGE' || $input['role'] == 'CV_ADMIN'){
-                return array('success' => false, 'message' => 'Rất tiếc! bạn ko có quyền. Vui lòng liên hệ hỗ trợ FinTop.');
-            }
-        }
+        // if(isset($input['role']) && $_SESSION['role'] != 'ADMIN' && $_SESSION['role'] != 'MANAGE' && $_SESSION['role'] != 'CV_ADMIN'){
+        //     if($input['role'] == 'ADMIN' || $input['role'] == 'MANAGE' || $input['role'] == 'CV_ADMIN'){
+        //         return array('success' => false, 'message' => 'Rất tiếc! bạn ko có quyền. Vui lòng liên hệ hỗ trợ FinTop.');
+        //     }
+        // }
         try{
             $image_old = null;
             if($input['id'] != ''){
@@ -52,7 +52,38 @@ class UserService extends Service
             if(isset($file) && $file != []){
                 $arrFile = $this->uploadFile($input,$file,$image_old);
             }
-           
+
+
+            //check quyền role user
+            if($input['role_admin'] != 'undefined' && $input['role_admin'] != ''){
+                $role_admin = $input['role_admin'];
+            }
+            if($input['role_manage'] != 'undefined' && $input['role_manage'] != ''){
+                $role_manage = $input['role_manage'];
+            }
+            if($input['role_cv_admin'] != 'undefined' && $input['role_cv_admin'] != ''){
+                $role_cv_admin = $input['role_cv_admin'];
+            }
+            if($input['role_cv_pro'] != 'undefined' && $input['role_cv_pro'] != ''){
+                $role_cv_pro = $input['role_cv_pro'];
+            }
+            if($input['role_cv_basic'] != 'undefined' && $input['role_cv_basic'] != ''){
+                $role_cv_basic = $input['role_cv_basic'];
+            }
+            if($input['role_cv_basic'] != 'undefined' && $input['role_cv_basic'] != ''){
+                $role_cv_basic = $input['role_cv_basic'];
+            }
+            if($input['role_sale_admin'] != 'undefined' && $input['role_sale_admin'] != ''){
+                $role_sale_admin = $input['role_sale_admin'];
+            }
+            if($input['role_Sale'] != 'undefined' && $input['role_Sale'] != ''){
+                $role_Sale = $input['role_Sale'];
+            }
+            if($input['role_Users'] != 'undefined' && $input['role_Users'] != ''){
+                $role_Users = $input['role_Users'];
+            }
+            
+
             // array data users
             $arrData = [
                 'name'=> $input['name'],
@@ -60,7 +91,16 @@ class UserService extends Service
                 'phone'=> $input['phone'],
                 'email'=> $input['email'],
                 'dateBirth'=> $input['dateBirth'],
-                'role'=> isset($input['role']) ? $input['role'] : (isset($user) ? $user->role : 'USERS'),
+                // 'role'=> isset($input['role']) ? $input['role'] : (isset($user) ? $user->role : 'USERS'),
+                'role_admin' =>!empty($role_admin)?$role_admin:null,
+                'role_manage' =>!empty($role_manage)?$role_manage:null,
+                'role_cv_admin' =>!empty($role_cv_admin)?$role_cv_admin:null,
+                'role_cv_pro' =>!empty($role_cv_pro)?$role_cv_pro:null,
+                'role_cv_basic' =>!empty($role_cv_basic)?$role_cv_basic:null,
+                'role_sale_admin' =>!empty($role_sale_admin)?$role_sale_admin:null,
+                'role_Sale' =>!empty($role_Sale)?$role_Sale:null,
+                'role_Users' =>!empty($role_Users)?$role_Users:null,
+
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'YE07',
                 "status" => isset($input['status']) ? 1 : 0,
             ];

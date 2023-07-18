@@ -83,29 +83,29 @@
 				<div class="row form-group" id="div_hinhthucgiai">
 					<span class="col-md-3 control-label required">Quyền truy cập</span>
 					<div class="col-md-5">
-					     @if ($_SESSION['role'] == 'ADMIN')
-						<input type="radio" value="ADMIN" name="role" id="role_admin" {{!empty($data['role']) && $data['role'] == 'ADMIN' ? 'checked' : ''}} />
+					     @if ($_SESSION['role_admin'] == 'ADMIN')
+						<input type="checkbox" value="ADMIN" name="role_admin" id="role_admin" {{!empty($data['role_admin']) && $data['role_admin'] == 'ADMIN' ? 'checked' : ''}} />
 						<label for="role_admin">Quản trị hệ thống</label> <br>
 						@endif
-						@if ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE')
-						<input type="radio" value="MANAGE" name="role" id="role_manage" {{!empty($data['role']) && $data['role'] == 'MANAGE' ? 'checked' : ''}} />
+						@if ($_SESSION['role_admin'] == 'ADMIN' || $_SESSION['role_manage'] == 'MANAGE')
+						<input type="checkbox" value="MANAGE" name="role_manage" id="role_manage" {{!empty($data['role_manage']) && $data['role_manage'] == 'MANAGE' ? 'checked' : ''}} />
 						<label for="role_manage">Trợ lý CEO</label><br>
 						@endif
-						@if ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE' || $_SESSION['role'] == 'CV_ADMIN')
-						<input type="radio" value="CV_ADMIN" name="role" id="role_cv_admin" {{!empty($data['role']) && $data['role'] == 'CV_ADMIN' ? 'checked' : ''}} />
+						@if ($_SESSION['role_admin'] == 'ADMIN' || $_SESSION['role_manage'] == 'MANAGE' || $_SESSION['role_cv_admin'] == 'CV_ADMIN')
+						<input type="checkbox" value="CV_ADMIN" name="role_cv_admin" id="role_cv_admin" {{!empty($data['role_cv_admin']) && $data['role_cv_admin'] == 'CV_ADMIN' ? 'checked' : ''}} />
 						<label for="role_cv_admin">CV - Admin</label><br>
-						<input type="radio" value="CV_PRO" name="role" id="role_cv_pro" {{!empty($data['role']) && $data['role'] == 'CV_PRO' ? 'checked' : ''}} />
+						<input type="checkbox" value="CV_PRO" name="role_cv_pro" id="role_cv_pro" {{!empty($data['role_cv_pro']) && $data['role_cv_pro'] == 'CV_PRO' ? 'checked' : ''}} />
 						<label for="role_cv_pro">CV - Pro</label><br>
-						<input type="radio" value="CV_BASIC" name="role" id="role_cv_basic" {{!empty($data['role']) && $data['role'] == 'CV_BASIC' ? 'checked' : ''}} />
+						<input type="checkbox" value="CV_BASIC" name="role_cv_basic" id="role_cv_basic" {{!empty($data['role_cv_basic']) && $data['role_cv_basic'] == 'CV_BASIC' ? 'checked' : ''}} />
 						<label for="role_cv_basic">CV - basic</label><br>
 						@endif
-						@if ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE' || $_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'SALE_ADMIN')
-						<input type="radio" value="SALE_ADMIN" name="role" id="role_sale_admin" {{!empty($data['role']) && $data['role'] == 'SALE_ADMIN' ? 'checked' : ''}} />
+						@if ($_SESSION['role_admin'] == 'ADMIN' || $_SESSION['role_manage'] == 'MANAGE' || $_SESSION['role_cv_admin'] == 'CV_ADMIN' || $_SESSION['role_sale_admin'] == 'SALE_ADMIN')
+						<input type="checkbox" value="SALE_ADMIN" name="role_sale_admin" id="role_sale_admin" {{!empty($data['role_sale_admin']) && $data['role_sale_admin'] == 'SALE_ADMIN' ? 'checked' : ''}} />
 						<label for="role_sale_admin">Sale - Admin</label><br>
-						<input type="radio" value="SALE_BASIC" name="role" id="role_Sale" {{!empty($data['role']) && $data['role'] == 'SALE_BASIC' ? 'checked' : ''}} />
+						<input type="checkbox" value="SALE_BASIC" name="role_Sale" id="role_Sale" {{!empty($data['role_Sale']) && $data['role_Sale'] == 'SALE_BASIC' ? 'checked' : ''}} />
 						<label for="role_Sale">Sale</label><br>
 						@endif
-						<input type="radio" value="USERS" name="role" id="role_Users" {{!empty($data['role']) && $data['role'] == 'USERS' ? 'checked' : ''}} />
+						<input type="checkbox" value="USERS" name="role_Users" id="role_Users" {{!empty($data['role_Users']) && $data['role_Users'] == 'USERS' ? 'checked' : ''}} />
 						<label for="role_Users">Người dùng</label><br>
 					</div>
 					<div class="col-md-4">

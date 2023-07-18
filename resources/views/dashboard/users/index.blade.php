@@ -35,7 +35,7 @@
                             data-original-title="Xóa người dùng"><i class="fas fa-user-times"></i></button>
                             </div>
                             
-                                <div class="col-md-2">
+                                <!-- <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="role"
                                         id="role">
                                         <option value=''>-- Quyền hiển thị --</option>
@@ -58,7 +58,7 @@
                                         <option value="SALE_BASIC">Sales basic</option>
                                         <option value="USERS">Người dùng</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <div class="input-group" style="width:40%;height:10%">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
                                             aria-hidden="true"></i></span> -->

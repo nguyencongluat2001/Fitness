@@ -21,6 +21,14 @@ class UserModel extends Model
         'password',
         'dateBirth',
         'role',
+        'role_admin',
+        'role_manage',
+        'role_cv_admin',
+        'role_cv_pro',
+        'role_cv_basic',
+        'role_sale_admin',
+        'role_Sale',
+        'role_Users',
         'status',
         'id_personnel',
         'account_type_vip',
@@ -41,9 +49,11 @@ class UserModel extends Model
                           ->orWhere('email', 'like', '%' . $this->value . '%');
                 });       
                 return $query;
-            case 'role':
-                $query->whereIn('role', $value);
-                return $query;
+            // case 'role':
+            //     $query->whereIn('role', $value);
+            //     return $query;
+
+
             default:
                 return $query;
         }
