@@ -22,7 +22,9 @@ class DatabaseSeeder  extends Seeder
             'name' => 'Nguyễn Công Luật',
             'email' => 'phanlaiquyen@gmail.com',
             'password'=> Hash::make('123'),
-            'role_admin'=> 'ADMIN'
+            'role_admin'=> 'ADMIN',
+            'role'=> 'ADMIN'
+
         ];
         DB::table('users')->insert($item);
     }
