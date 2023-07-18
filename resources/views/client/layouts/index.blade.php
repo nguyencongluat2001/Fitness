@@ -260,8 +260,8 @@
                         <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
                     </a>
                 </div>
-                <div class="align-self-center title-reponsive collapse navbar-collapse flex-fill  d-lg-flex" id="navbar-toggler-success" style="color:white;margin:auto">
-                    <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 4.1em;padding-left: 20%;">Tài Chính & Đầu Tư</h1>
+                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);">
+                    <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 4.1em;padding-left: 4%;">Tài Chính &amp; Đầu Tư</h1>
                 </div>
             </div>
         </nav>
