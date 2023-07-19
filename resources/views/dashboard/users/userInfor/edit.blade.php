@@ -41,9 +41,9 @@
 							<input class="form-control color" type="password" value="" name="password_retype_change" id="password_retype_change" />
 						</div>
 					</div>
-					<div id="iss">
+					<!-- <div id="iss">
 
-				    </div>
+				    </div> -->
 				</div>
 				
 				<!-- <div class="modal-footer">

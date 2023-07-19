@@ -262,14 +262,14 @@ JS_User_info.prototype.updatePass = function (oFormCreate) {
         //cache: true,
         data: data,
         success: function (arrResult) {
-            if (arrResult['success'] == true) {
+            if (arrResult.success == true) {
                 var html = '<div class="col-md-6 pt-2"><div class="form-group"><p for="example-text-input" class="form-control-label">Mã OTP </p><input required class="form-control color" type="text" value="" name="otp" id="otp" /></div></div>'
                 $("#iss").html(html);
                 var nameMessage = arrResult['message'];
                 var icon = 'success';
                 var color = '#1bba00';
                 NclLib.alerMesage(nameMessage,icon,color);
-            }else if(arrResult['success'] == 3){
+            }else if(arrResult.success == 3){
                 var nameMessage = arrResult['message'];
                 var icon = 'success';
                 var color = '#1bba00';
