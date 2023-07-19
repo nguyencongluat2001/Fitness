@@ -142,6 +142,67 @@ class LoginController extends Controller
                 $menu = $value;
                 return  $menu;
             }
+            if (($user->role_Sale == 'SALE_BASIC' || $user->role_Sale == 'SALE_ADMIN') && $user->role_cv_admin == 'CV_ADMIN') {
+                $menu = $value;
+                unset($menu['approvepayment']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                return  $menu;
+            }
+            // sale admin lên editor
+            if ($user->role_sale_admin == 'SALE_ADMIN' && $user->role_cv_pro == 'CV_PRO') {
+                $menu = $value;
+                unset($menu['recommended']);
+                unset($menu['approvepayment']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                unset($menu['handbook']);
+                return  $menu;
+            }
+            if ($user->role_sale_admin == 'SALE_ADMIN' && $user->role_cv_basic == 'CV_BASIC') {
+                $menu = $value;
+                unset($menu['recommended']);
+                unset($menu['datafinancial']);
+                unset($menu['signal']);
+                unset($menu['handbook']);
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                unset($menu['category']);                
+                unset($menu['approvepayment']);
+                return  $menu;
+            }
+            // sale lên editor
+            if ($user->role_Sale == 'SALE_BASIC' && $user->role_cv_admin == 'CV_PRO') {
+                $menu = $value;
+                unset($menu['users']);
+                unset($menu['approvepayment']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                return  $menu;
+            }
+            if ($user->role_Sale == 'SALE_BASIC' && $user->role_cv_basic == 'CV_BASIC') {
+                $menu = $value;
+                unset($menu['recommended']);
+                unset($menu['datafinancial']);
+                unset($menu['signal']);
+                unset($menu['handbook']);
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                unset($menu['category']);                
+                unset($menu['users']);
+                unset($menu['approvepayment']);
+                return  $menu;
+            }
+            //
             if ($user->role_manage == 'MANAGE') {
                 $menu = $value;
                 unset($menu['recommended']);
@@ -163,6 +224,7 @@ class LoginController extends Controller
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
+                unset($menu['report']);
                 return  $menu;
             }
             if ($user->role_cv_pro == 'CV_PRO') {
@@ -174,6 +236,8 @@ class LoginController extends Controller
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
+                unset($menu['report']);
+                unset($menu['category']);
                 return  $menu;
             }
             if ($user->role_cv_basic == 'CV_BASIC') {
@@ -188,6 +252,8 @@ class LoginController extends Controller
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
+                unset($menu['report']);
+                unset($menu['category']);
                 return  $menu;
             }
             if ($user->role_sale_admin == 'SALE_ADMIN') {

@@ -1,8 +1,8 @@
-<style>
+<!-- <style>
     .unit-edit span {
         font-size: 19px;
     }
-</style>
+</style> -->
 {{-- @php
 use Modules\System\Recordtype\Helpers\WorkflowHelper;
 @endphp --}}

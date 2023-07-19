@@ -162,54 +162,6 @@ class UserController extends Controller
     public function loadList(Request $request)
     { 
         $paginationHelper = new PaginationHelper();
-        // if($_SESSION['role_admin'] != 'ADMIN' && $_SESSION['role_admin'] != 'MANAGE'){
-        //     if($_SESSION['role_cv_admin'] == 'CV_ADMIN' ){
-        //         if($_SESSION['role'] == '' || $request['role'] == null){
-        //             $request['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','USERS'];
-        //         }else{
-        //             $request['role'] = array($request['role']);
-        //         }
-        //     }elseif($_SESSION['role_sale_admin'] == 'SALE_ADMIN'){
-        //         if($_SESSION['role'] == '' || $request['role'] == null){
-        //             $request['role'] = ['SALE_ADMIN','SALE_BASIC'];
-        //         }else{
-        //             $request['role'] = array($request['role']);
-        //         }
-        //     }
-        // }else{
-        //     if($request['role'] == '' || $request['role'] == null){
-        //         unset($request['role']);
-        //     }else{
-        //         $request['role'] = array($request['role']);
-        //     }
-        // }
-        // if($_SESSION['role_admin'] == 'ADMIN'){
-        //     $request['role_admin'] = 'ADMIN';
-        // }
-        // if($_SESSION['role_manage'] == 'MANAGE'){
-        //     $request['role_manage'] = 'MANAGE';
-        //     $request['role_admin'] = 'MANAGE';
-        // }
-        // if($_SESSION['role_cv_admin'] == 'CV_ADMIN'){
-        //     $request['role_cv_admin'] = 'CV_ADMIN';
-        // }
-        // if($_SESSION['role_cv_pro'] == 'CV_PRO'){
-        //     $request['role_cv_pro'] = 'CV_PRO';
-        // }
-        // if($_SESSION['role_cv_basic'] == 'CV_BASIC'){
-        //     $request['role_cv_basic'] = 'CV_BASIC';
-        // }
-        // if($_SESSION['role_sale_admin'] == 'SALE_ADMIN'){
-        //     $request['role_sale_admin'] = 'SALE_ADMIN';
-        // }
-        // if($_SESSION['role_Sale'] == 'SALE_BASIC'){
-        //     $request['role_Sale'] = 'SALE_BASIC';
-        // }
-        // if($_SESSION['role_Users'] == 'USERS'){
-        //     $request['role_Users'] = 'USERS';
-        // }
-
-
         $arrInput = $request->input();
         $data = array();
         $param = $arrInput;
