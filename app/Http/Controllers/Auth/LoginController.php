@@ -171,7 +171,6 @@ class LoginController extends Controller
                 unset($menu['recommended']);
                 unset($menu['handbook']);
                 unset($menu['approvepayment']);
-                unset($menu['signal']);
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);

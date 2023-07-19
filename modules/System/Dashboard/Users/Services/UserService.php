@@ -91,7 +91,7 @@ class UserService extends Service
                 'phone'=> $input['phone'],
                 'email'=> $input['email'],
                 'dateBirth'=> $input['dateBirth'],
-                // 'role'=> isset($input['role']) ? $input['role'] : (isset($user) ? $user->role : 'USERS'),
+                'role'=> 'test',
                 'role_admin' =>!empty($role_admin)?$role_admin:null,
                 'role_manage' =>!empty($role_manage)?$role_manage:null,
                 'role_cv_admin' =>!empty($role_cv_admin)?$role_cv_admin:null,

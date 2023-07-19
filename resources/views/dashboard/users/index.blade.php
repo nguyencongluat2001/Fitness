@@ -59,16 +59,14 @@
                                         <option value="USERS">Người dùng</option>
                                     </select>
                                 </div> -->
-                                <div class="input-group" style="width:40%;height:10%">
-                                    <!-- <span class="input-group-text text-body"><i class="fas fa-search"
-                                            aria-hidden="true"></i></span> -->
+                                <!-- <div class="input-group" style="width:40%;height:10%">
                                     <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm...">
                                 </div>
-                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
+                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button> -->
 
                             </div>
                             <!-- Màn hình danh sách -->
-                            <div class="row" id="table-container" style="padding-top:10px"></div>
+                            <div class="row" id="table-container"></div>
                         </div>
                     </div>
                 </section>
