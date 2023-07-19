@@ -144,11 +144,17 @@ class LoginController extends Controller
             }
             if ($user->role_manage == 'MANAGE') {
                 $menu = $value;
+                unset($menu['recommended']);
+                unset($menu['datafinancial']);
+                unset($menu['signal']);
+                unset($menu['handbook']);
                 unset($menu['approvepayment']);
                 unset($menu['signal']);
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
+                unset($menu['category']);
+                unset($menu['blog']);
                 return  $menu;
             }
             if ($user->role_cv_admin == 'CV_ADMIN') {
