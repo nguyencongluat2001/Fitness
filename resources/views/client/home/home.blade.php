@@ -222,7 +222,7 @@ use Carbon\Carbon;
                     
                     <div class="col-lg-6 mx-auto " style="display:flex">
                         <div class="input-group pt-2 box">
-                                <input id="myInput" onkeyup="myFunction()"style="background:#ffcb59bd" type="text" class="input form-control form-control-lg rounded-pill rounded" placeholder="Tìm kiếm bài viết theo từ khóa, danh mục,...">
+                                <input id="myInput" onkeyup="myFunction()"style="background:#f8fdffbd" type="text" class="input form-control form-control-lg rounded-pill rounded" placeholder="Tìm kiếm bài viết theo từ khóa, danh mục,...">
                         </div>
                     </div>
                     <div class="scrollbar_blog carousel-item active list-hispital-home">
