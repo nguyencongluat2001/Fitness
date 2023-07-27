@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Modules\Base\Helpers\ForgetPassWordMailHelper;
-
+use Modules\System\Dashboard\Category\Services\CategoryService;
 
 /**
  *
@@ -21,10 +21,12 @@ class UserController extends Controller
 {
     public function __construct(
         userInfoService $userInfoService,
-        UserService $userService
+        UserService $userService,
+        CategoryService $CategoryService
     ){
         $this->userInfoService = $userInfoService;
         $this->userService = $userService;
+        $this->CategoryService = $CategoryService;
     }
 
     /**
@@ -101,6 +103,9 @@ class UserController extends Controller
     public function createForm(Request $request)
     {
         $input = $request->all();
+        $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->get();
+        dd($cate_quyen);
+
         return view('dashboard.users.edit');
     }
     /**

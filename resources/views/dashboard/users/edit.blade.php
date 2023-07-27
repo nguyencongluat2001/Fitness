@@ -88,7 +88,7 @@
 						<label style="color:#0f0f0f" for="role_admin">Quản trị hệ thống</label> <br>
 						@endif
 						@if ($_SESSION['role_admin'] == 'ADMIN' || $_SESSION['role_manage'] == 'MANAGE')
-						<input type="checkbox" value="MANAGE" name="role_manage" id="role_manage" {{!empty($data['role_manage']) && $data['role_manage'] == 'MANAGE' ? 'checked' : ''}} />
+						<input type="checkbox" value="Quản trị hệ thống" name="role_manage" id="role_manage" {{!empty($data['role_manage']) && $data['role_manage'] == 'MANAGE' ? 'checked' : ''}} />
 						<label style="color:#0f0f0f" for="role_manage">Trợ lý CEO</label><br>
 						@endif
 						<input type="checkbox" value="USERS" name="role_Users" id="role_Users" {{!empty($data['role_Users']) && $data['role_Users'] == 'USERS' ? 'checked' : ''}} />
