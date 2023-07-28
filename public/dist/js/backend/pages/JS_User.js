@@ -105,6 +105,10 @@ JS_User.prototype.store = function (oFormCreate) {
     if(check == false){
         return false;
     }
+    var role = [];
+    $('input[name="role"]:checked').each(function() {
+        role.push(this.value); 
+    });
     formdata.append('_token', $("#_token").val());
     formdata.append('id', $("#id").val());
     formdata.append('name', $("#name").val());
@@ -116,15 +120,7 @@ JS_User.prototype.store = function (oFormCreate) {
     formdata.append('position', $("#position").val());
     formdata.append('date_join', $("#date_join").val());
     formdata.append('id_personnel', $("#id_personnel").val());
-    formdata.append('role_admin', $("input[name=role_admin]:checked").val());
-    formdata.append('role_manage', $("input[name=role_manage]:checked").val());
-    formdata.append('role_cv_admin', $("input[name=role_cv_admin]:checked").val());
-    formdata.append('role_cv_pro', $("input[name=role_cv_pro]:checked").val());
-    formdata.append('role_cv_basic', $("input[name=role_cv_basic]:checked").val());
-    formdata.append('role_sale_admin', $("input[name=role_sale_admin]:checked").val());
-    formdata.append('role_Sale', $("input[name=role_Sale]:checked").val());
-    formdata.append('role_Users', $("input[name=role_Users]:checked").val());
-
+    formdata.append('role', role);
     if($("#frmAdd #status").is(':checked')){
         formdata.append('status', 1);
     }

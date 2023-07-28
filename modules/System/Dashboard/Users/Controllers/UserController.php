@@ -103,10 +103,9 @@ class UserController extends Controller
     public function createForm(Request $request)
     {
         $input = $request->all();
-        $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->get();
-        dd($cate_quyen);
-
-        return view('dashboard.users.edit');
+        $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->orderBy('order','asc')->get();
+        $data['cate_quyen'] = $cate_quyen;
+        return view('dashboard.users.edit',compact('data'));
     }
     /**
      * Thêm thông tin người dùng
@@ -132,6 +131,23 @@ class UserController extends Controller
     {
         $input = $request->all();
         $data = $this->userService->editUser($input);
+        $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->orderBy('order','asc')->get();
+        foreach($cate_quyen as $value){
+            if(in_array($value['code_category'],$data['arrQuyen'])){
+                $arrQuyen[] = [
+                    'code_category' =>  $value['code_category'],
+                    'name_category' =>  $value['name_category'],
+                    'status' =>  1
+                ];
+            }else{
+                $arrQuyen[] = [
+                    'code_category' =>  $value['ccode_categoryode'],
+                    'name_category' =>  $value['name_category'],
+                    'status' =>  0
+                ];
+            }
+        }
+        $data['cate_quyen'] = $arrQuyen;
         return view('dashboard.users.edit',compact('data'));
     }
 

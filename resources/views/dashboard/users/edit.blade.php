@@ -37,7 +37,7 @@
 							<input class="form-control" type="text" value="{{!empty($data['phone'])?$data['phone']:''}}" name="phone" id="phone" placeholder="Nhập số điện thoại..." />
 						</div>
 					</div>
-					@if(!empty($data) && $_SESSION["email"] == $data['email'] || $_SESSION["role"] == 'ADMIN')
+					@if(!empty($data['email']) && $_SESSION["email"] == $data['email'] || $_SESSION["role"] == 'ADMIN')
 					<span id='btn_changePass'>
 						<button class="btn btn-primary btn-sm" type="button">
 							Đổi mật khẩu
@@ -81,7 +81,7 @@
 				</div>
 				{{-- Quyền truy cập --}}
 				<div class="row form-group" id="div_hinhthucgiai">
-					<span class="col-md-3 control-label required">Quyền truy cập</span>
+					<!-- <span class="col-md-3 control-label required">Quyền truy cập</span>
 					<div class="col-md-3" style="background:#49ff99">
 					     @if ($_SESSION['role_admin'] == 'ADMIN')
 						<input type="checkbox" value="ADMIN" name="role_admin" id="role_admin" {{!empty($data['role_admin']) && $data['role_admin'] == 'ADMIN' ? 'checked' : ''}} />
@@ -113,11 +113,23 @@
 						<input type="checkbox" value="SALE_BASIC" name="role_Sale" id="role_Sale" {{!empty($data['role_Sale']) && $data['role_Sale'] == 'SALE_BASIC' ? 'checked' : ''}} />
 						<label style="color:#0f0f0f" for="role_Sale">Sale</label><br>
 					</div>
-					@endif
-					<div class="col-md-4">
-						<label for="">Trạng thái</label><br>
-						<input type="checkbox" id="status" name="status" {{isset($data['status']) && $data['status'] == 1 ? 'checked' : ''}}>
-						<label for="status">Hoạt động</label>
+					@endif -->
+					{{-- Quyền truy cập --}}
+					<div class="row form-group">
+						<span class="col-md-3 control-label required" >Chuyên khoa</span>
+						<div class="col-md-8">
+							@foreach($data['cate_quyen'] as $item)
+								<input type="checkbox" value="{{$item['code_category']}}" name="role" id="role" {{($item['status'] == '1') ? 'checked' : ''}}/>
+								<span for="code">{{$item['name_category']}}</span> <br>
+							@endforeach
+						</div>
+					</div>
+					<div class="row form-group">
+						<span class="col-md-3 control-label required" >Trạng thái</span>
+						<div class="col-md-8">
+							<input type="checkbox" id="status" name="status" {{isset($data['status']) && $data['status'] == 1 ? 'checked' : ''}}>
+							<label for="status">Hoạt động</label>
+						</div>
 					</div>
 					<div class="modal-body">
 						<div>
@@ -142,6 +154,7 @@
 						</button>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</div>
