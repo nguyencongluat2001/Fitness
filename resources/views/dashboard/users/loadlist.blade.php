@@ -6,7 +6,7 @@
 {{-- @php
 use Modules\System\Recordtype\Helpers\WorkflowHelper;
 @endphp --}}
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-lg-6 mx-auto " style="display:flex">
             <div class="input-group box">
@@ -14,7 +14,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <div class="table-responsive pmd-card pmd-z-depth pt-2">
     <table  id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
         <thead>
@@ -42,21 +42,21 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                            <div>Địa chỉ Email : {{ $data['email'] }}</div>
                            <div>Địa chỉ : {{ $data['address'] }}</div>
                            <div>Ngày sinh : {{ $data['dateBirth'] }}</div>
-                           @if($data['role_admin'] == 'ADMIN')
+                           @if($data['role'] == 'ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> CEO </span></div>
-                           @elseif($data['role_manage'] == 'MANAGE')
+                           @elseif($data['role'] == 'MANAGE')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Trợ lý CEO </span></div>
-                           @elseif($data['role_cv_admin'] == 'CV_ADMIN')
+                           @elseif($data['role'] == 'CV_ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Admin </span></div>
-                           @elseif($data['role_cv_pro'] == 'CV_PRO')
+                           @elseif($data['role'] == 'CV_PRO')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Pro </span></div>
-                           @elseif($data['role_cv_basic'] == 'CV_BASIC')
+                           @elseif($data['role'] == 'CV_BASIC')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor basic </span></div>
-                           @elseif($data['role_sale_admin'] == 'SALE_ADMIN')
+                           @elseif($data['role'] == 'SALE_ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Sale Admin </span></div>
-                           @elseif($data['role_Sale'] == 'SALE_BASIC')
+                           @elseif($data['role'] == 'SALE_BASIC')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Sale </span></div>
-                           @elseif($data['role_Users'] == 'USERS')
+                           @elseif($data['role'] == 'USERS')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Khách hàng </span></div>
                            @endif
                            <!-- <div>Quyền quản trị : <span class="animate-charcter">Quản trị hệ thống</span></div> -->
@@ -77,13 +77,13 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
         </tbody>
     </table>
     <div style="width:100%" class="row">
-    {{--<tfoot>
+    <tfoot>
         <tr>
             <td colspan="10">
                 {{$datas->links('pagination.phantrang')}}
             </td>
         </tr>
-    </tfoot>--}}
+    </tfoot>
     </div>
 </div>
 

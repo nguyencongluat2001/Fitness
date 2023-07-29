@@ -41,9 +41,9 @@ class UserModel extends Model
                           ->orWhere('email', 'like', '%' . $this->value . '%');
                 });       
                 return $query;
-            // case 'role':
-            //     $query->whereIn('role', $value);
-            //     return $query;
+            case 'role':
+                $query->whereIn('role', $value);
+                return $query;
 
 
             default:

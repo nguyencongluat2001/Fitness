@@ -59,10 +59,10 @@
                                         <option value="USERS">Người dùng</option>
                                     </select>
                                 </div> -->
-                                <!-- <div class="input-group" style="width:40%;height:10%">
+                                <div class="input-group" style="width:40%;height:10%">
                                     <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm...">
                                 </div>
-                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button> -->
+                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
 
                             </div>
                             <!-- Màn hình danh sách -->

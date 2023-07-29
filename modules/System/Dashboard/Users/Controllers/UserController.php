@@ -104,7 +104,88 @@ class UserController extends Controller
     {
         $input = $request->all();
         $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->orderBy('order','asc')->get();
-        $data['cate_quyen'] = $cate_quyen;
+        foreach($cate_quyen as $value){
+            
+            if($_SESSION['role'] == 'ADMIN'){
+                $quyen[] = [
+                    'code_category' => $value['code_category'],
+                    'name_category' =>  $value['name_category'],
+                    'status' =>  0,
+                ];
+            }elseif($_SESSION['role'] == 'MANAGE'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'MANAGE',
+                        'name_category' =>  'Trợ lý CEO',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' => 'CV - Admin',
+                        'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                        'status' =>  0,
+                    ],
+                    3 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                        'status' =>  0,
+                    ],
+                    4 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                        'status' =>  0,
+                    ],
+                    5 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                        'status' =>  0,
+                    ],
+                    6 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                        'status' =>  0,
+                    ]
+                ];
+            }elseif($_SESSION['role'] == 'CV_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' =>  'CV - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                        'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                        'status' =>  0,
+                    ],
+                    
+                ];
+            }elseif($_SESSION['role'] == 'SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                        'status' =>  0,
+                    ]
+                    
+                ];
+            }
+        }
+        $data['cate_quyen'] = $quyen;
         return view('dashboard.users.edit',compact('data'));
     }
     /**
@@ -133,15 +214,84 @@ class UserController extends Controller
         $data = $this->userService->editUser($input);
         $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->orderBy('order','asc')->get();
         foreach($cate_quyen as $value){
+            
+            if($_SESSION['role'] == 'ADMIN'){
+                $quyen[] = [
+                    'code_category' => $value['code_category'],
+                    'name_category' =>  $value['name_category'],
+                ];
+            }elseif($_SESSION['role'] == 'MANAGE'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'MANAGE',
+                        'name_category' =>  'Trợ lý CEO',
+                    ],
+                    1 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' => 'CV - Admin',
+                    ],
+                    2 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                    ],
+                    3 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                    ],
+                    4 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                    ],
+                    5 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                    ],
+                    6 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                    ]
+                ];
+            }elseif($_SESSION['role'] == 'CV_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' =>  'CV - Admin',
+                    ],
+                    1 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                    ],
+                    2 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                    ],
+                    
+                ];
+            }elseif($_SESSION['role'] == 'SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                    ],
+                    1 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                    ]
+                    
+                ];
+            }
+        }
+        foreach($quyen as $value){
+            $code = $value['code_category'];
             if(in_array($value['code_category'],$data['arrQuyen'])){
                 $arrQuyen[] = [
-                    'code_category' =>  $value['code_category'],
+                    'code_category' =>  $code,
                     'name_category' =>  $value['name_category'],
                     'status' =>  1
                 ];
             }else{
                 $arrQuyen[] = [
-                    'code_category' =>  $value['ccode_categoryode'],
+                    'code_category' =>  $code,
                     'name_category' =>  $value['name_category'],
                     'status' =>  0
                 ];
@@ -186,19 +336,20 @@ class UserController extends Controller
         $arrInput = $request->input();
         $data = array();
         $param = $arrInput;
-        // $objResult = $this->userService->filter($param);
-        if($_SESSION['role_admin'] == 'ADMIN'){
-            $objResult = $this->userService->whereIn('status',[0,1])->get();
+        // dd($_SESSION['role']);
+        if($_SESSION['role'] == 'ADMIN'){
+            $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','USERS'];
         }
-        if($_SESSION['role_manage'] == 'MANAGE'){
-            $objResult = $this->userService->where('role_admin',null)->get();
+        if($_SESSION['role'] == 'MANAGE'){
+            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC'];
         }
-        if($_SESSION['role_cv_admin'] == 'CV_ADMIN'){
-            $objResult = $this->userService->where('role_admin',null)->where('role_manage',null)->get();
+        if($_SESSION['role'] == 'CV_ADMIN'){
+            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC'];
         }
-        if($_SESSION['role_sale_admin'] == 'SALE_ADMIN'){
-            $objResult = $this->userService->where('role_admin',null)->orWhere('role_sale_admin','SALE_ADMIN')->orWhere('role_Sale','SALE_BASIC')->get();
+        if($_SESSION['role'] == 'SALE_ADMIN'){
+            $param['role'] = ['SALE_ADMIN','SALE_BASIC'];
         }
+        $objResult = $this->userService->filter($param);
 
         $data['datas'] = $objResult;
         return view("dashboard.users.loadlist", $data);
