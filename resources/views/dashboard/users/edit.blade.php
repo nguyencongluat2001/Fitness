@@ -81,7 +81,7 @@
 				</div>
 				{{-- Quyền truy cập --}}
 				<div class="row form-group" id="div_hinhthucgiai">
-					<!-- <span class="col-md-3 control-label required">Quyền truy cập</span>
+					{{--<span class="col-md-3 control-label required">Quyền truy cập</span>
 					<div class="col-md-3" style="background:#49ff99">
 					     @if ($_SESSION['role_admin'] == 'ADMIN')
 						<input type="checkbox" value="ADMIN" name="role_admin" id="role_admin" {{!empty($data['role_admin']) && $data['role_admin'] == 'ADMIN' ? 'checked' : ''}} />
@@ -97,7 +97,7 @@
 
 					@if ($_SESSION['role_admin'] == 'ADMIN' || $_SESSION['role_manage'] == 'MANAGE' || $_SESSION['role_cv_admin'] == 'CV_ADMIN')
 					<div class="col-md-3" style="background: #c2fbff;">
-							<input type="checkbox" value="CV_ADMIN" name="role_cv_admin" id="role_cv_admin" {{!empty($data['role_cv_admin']) && $data['role_cv_admin'] == 'CV_ADMIN' ? 'checked' : ''}} />
+							<input type="checkbox" value="c" name="role_cv_admin" id="role_cv_admin" {{!empty($data['role_cv_admin']) && $data['role_cv_admin'] == 'CV_ADMIN' ? 'checked' : ''}} />
 							<label style="color:#0f0f0f" for="role_cv_admin">CV - Admin</label><br>
 							<input type="checkbox" value="CV_PRO" name="role_cv_pro" id="role_cv_pro" {{!empty($data['role_cv_pro']) && $data['role_cv_pro'] == 'CV_PRO' ? 'checked' : ''}} />
 							<label style="color:#0f0f0f" for="role_cv_pro">CV - Pro</label><br>
@@ -113,7 +113,7 @@
 						<input type="checkbox" value="SALE_BASIC" name="role_Sale" id="role_Sale" {{!empty($data['role_Sale']) && $data['role_Sale'] == 'SALE_BASIC' ? 'checked' : ''}} />
 						<label style="color:#0f0f0f" for="role_Sale">Sale</label><br>
 					</div>
-					@endif -->
+					@endif --}}
 					{{-- Quyền truy cập --}}
 					<div class="row form-group">
 						<span class="col-md-3 control-label required" >Chuyên khoa</span>
