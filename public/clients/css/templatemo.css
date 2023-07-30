@@ -1132,4 +1132,15 @@ screen and (max-width: 450px) {
     height: 300px;
 }
 
+@media (min-width: 426px ) {
+  .icon-menu-home{
+    display: none;
+  }
+}
+@media (max-width: 426px) {
+  .icon-menu-home{
+    color: #f2ffff;
+    background: #ffffff0a;
+  }
+}
 

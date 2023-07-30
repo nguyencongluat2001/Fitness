@@ -281,3 +281,19 @@ Js_Main.prototype.sidebarType = function(a) {
     }
   }
 }
+//
+// Set Sidebar Type
+Js_Main.prototype.addMenu = function(a) {
+  console.log(a)
+  $('#addMenu').addClass("g-sidenav-pinned");
+  $('#btn_addMenu').addClass("hidden_menu");
+  $('#btn_addMenu').removeClass("show_menu");
+}
+
+//
+// Set Sidebar Type
+Js_Main.prototype.remoteMenu = function(a) {
+  $('#addMenu').removeClass("g-sidenav-pinned");
+  $('#btn_addMenu').addClass("show_menu");
+  $('#btn_addMenu').removeClass("hidden_menu");
+}

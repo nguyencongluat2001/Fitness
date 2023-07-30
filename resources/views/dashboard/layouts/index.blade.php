@@ -49,9 +49,9 @@ $arrdData = ApprovePaymentModel::where('status',0)->get()->toArray();
 
 @endphp
     @if ($_SESSION['color_view'] == 1)
-        <body class="g-sidenav-show dark-version">
+        <body id="addMenu" class="g-sidenav-show dark-version ">
     @else
-        <body class="g-sidenav-show bg-white">
+        <body id="addMenu" class="g-sidenav-show bg-white ">
     @endif
     <div id="imageLoading">
             <div class="loader_bg">
@@ -61,6 +61,9 @@ $arrdData = ApprovePaymentModel::where('status',0)->get()->toArray();
         
     <!-- <div class="min-height-300 bg-primary position-absolute w-100"></div> -->
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 ps " id="sidenav-main" style="background:#1d2440 !important">
+    <div style="margin-left: 90%;color:white" class="btn_closeMenu" id="btn_closeMenu">
+        <span onclick="Js_Main.remoteMenu(this)" >X</span>
+    </div>
         <div class="sidenav-header">
         <i class="fas fa-times cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <!-- target="_blank" -->
@@ -109,6 +112,60 @@ $arrdData = ApprovePaymentModel::where('status',0)->get()->toArray();
             <!-- Content -->
 
             <div id="app">
+            <center>
+            <div id="btn_addMenu" class="navbar navbar-expand-md shadow-sm menu_layout">
+               <button type="button" onclick="Js_Main.addMenu(this)" class="btn btn-light icon-menu-home" >Menu</button> 
+               <ul class="navbar-nav ms-auto acc_auth">
+                    <!-- Authentication Links -->
+                    @guest
+                        @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Đăng nhập') }}</a>
+                            </li>
+                        @endif
+
+                        @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}">{{ __('Đăng ký') }}</a>
+                            </li>
+                        @endif
+                    @else
+                        <li class="nav-item dropdown">
+                            <!-- <span id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    <img  src="{{url('/file-image/avatar/')}}/{{ Auth::user()->avatar }}" alt="Image" style="border-radius:50%;height: 30px;width: 30px;object-fit: cover;">
+                                </span>    -->
+                            <span id="navbarDropdown" class="dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <span>
+                                {{ $_SESSION['name'] }}
+                                </span>
+                            </span>
+
+
+                            <div class="dropdown-menu dropdown-menu-end"  aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ URL::asset('/system/userInfo/index') }}">
+                                        <p>
+                                            {{ __('Thông tin cá nhân') }}
+                                        </p>
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                                        <p>
+                                            {{ __('Đăng xuất') }}
+                                        </p>
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                    class="d-none">
+                                    @csrf
+                                </form>
+                            </div>
+                        </li>
+                    @endguest
+                </ul>
+            </div>
+            </center>
             <!-- style="background-color: #11112c5e; border-radius: 5px;" -->
                 <nav class="navbar navbar-expand-md shadow-sm" >
                     <div class="container">
