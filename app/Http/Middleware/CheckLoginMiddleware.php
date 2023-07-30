@@ -18,8 +18,8 @@ class CheckLoginMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() && ($_SESSION["role_admin"] == 'ADMIN' || $_SESSION["role_manage"] == 'MANAGE' || 
-        $_SESSION["role_cv_admin"] == 'CV_ADMIN' || $_SESSION["role_cv_pro"] == 'CV_PRO' || $_SESSION["role_cv_basic"] == 'CV_BASIC' || $_SESSION["role_sale_admin"] == 'SALE_ADMIN')){
+        if(Auth::check() && ($_SESSION["role"] == 'ADMIN' || $_SESSION["role"] == 'MANAGE' || 
+        $_SESSION["role"] == 'CV_ADMIN' || $_SESSION["role"] == 'CV_PRO' || $_SESSION["role"] == 'CV_BASIC' || $_SESSION["role"] == 'SALE_ADMIN')){
             return $next($request);
         };
         return redirect()->route('404_notFound');
