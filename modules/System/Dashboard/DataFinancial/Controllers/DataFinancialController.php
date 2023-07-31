@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Modules\System\Dashboard\DataFinancial\Services\DataFinancialService;
 use Modules\System\Dashboard\Category\Services\CategoryService;
 use DB;
+use Modules\System\Dashboard\DataFinancial\Models\DataFinancialModel;
 
 /**
  * cẩm nang
@@ -134,22 +135,30 @@ class DataFinancialController extends Controller
         $dataFinacial = $this->DataFinancialService->where('id', $arrInput['id'])->first();
         try{
             if($arrInput['type'] == 'up'){
-                $downOrder = $this->DataFinancialService->where('order', ((int)$dataFinacial->order + 1))->first();
+                $downOrder = DataFinancialModel::where('order', '>=', ((int)$dataFinacial->order + 1))->orderBy('order')->first();
                 $order = (int)$dataFinacial->order + 1;
-                $dataFinacial->order = $order;
+                $dataFinacial->order = (int)$dataFinacial->order + 1;
                 $dataFinacial->save();
                 if(!empty($downOrder)){
-                    $downOrder->order = $dataFinacial->order;
+                    if(($order - $downOrder->order) == 1){
+                        $downOrder->order = (int)$downOrder->order - 1;
+                    }else{
+                        $downOrder->order = (int)$dataFinacial->order - 1;
+                    }
                     $downOrder->save();
                     return array('success' => true);
                 }
             }elseif($arrInput['type'] == 'down' && (int)$dataFinacial->order > 1){
-                $order = (int)$dataFinacial->order - 1;
-                $dataFinacial->order = $order;
+                $downOrder = DataFinancialModel::where('order', '<=', ((int)$dataFinacial->order - 1))->orderBy('order', 'desc')->first();
+                $order = (int)$dataFinacial->order;
+                $dataFinacial->order = (int)$dataFinacial->order - 1;
                 $dataFinacial->save();
-                $downOrder = $this->DataFinancialService->where('order', $order)->first();
                 if(!empty($downOrder)){
-                    $downOrder->order = $dataFinacial->order;
+                    if(($order - $downOrder->order) == 1){
+                        $downOrder->order = (int)$downOrder->order + 1;
+                    }else{
+                        $downOrder->order = (int)$dataFinacial->order + 1;
+                    }
                     $downOrder->save();
                     return array('success' => true);
                 }
