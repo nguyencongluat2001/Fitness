@@ -129,7 +129,7 @@ class LoginController extends Controller
     // check quyền hiển thị menu
     private function checkPermision($menu,$user){
         foreach ($menu as $key => $value) {
-            if ($key == $user->role_admin) {
+            if ($key == $user->role) {
                 $menu = $value;
                 return  $menu;
             }

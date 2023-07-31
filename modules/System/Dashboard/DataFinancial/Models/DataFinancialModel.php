@@ -28,6 +28,7 @@ class DataFinancialModel extends Model
         'ratings_FA',
         'url_link',
         'status',
+        'order',
         'created_at',
         'updated_at'
     ];

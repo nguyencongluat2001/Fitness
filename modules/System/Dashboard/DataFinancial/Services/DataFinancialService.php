@@ -24,7 +24,9 @@ class DataFinancialService extends Service
     }
 
     public function store($input){
+        $count = $this->repository->select('id')->count();
         if($input['id'] != ''){
+            $dataFinancials = $this->repository->select('*')->where('id',$input['id'])->count();
             $arrData = [
                 "user_id" => $_SESSION['id'],
                 "code_cp" => $input['code_cp'],
@@ -38,6 +40,7 @@ class DataFinancialService extends Service
                 "ratings_FA" =>$input['ratings_FA'],
                 "url_link" =>!empty($input['url_link'])?$input['url_link']:'test_link',
                 "status" =>!empty($input['status'])?$input['status']:1,
+                "status" =>isset($dataFinancials->order) ? $dataFinancials->order : ((int)$count + 1),
                 "created_at" => date("Y/m/d H:i:s"),
                 "updated_at" => date("Y/m/d H:i:s")
             ];
@@ -61,6 +64,7 @@ class DataFinancialService extends Service
                 "ratings_FA" =>$input['ratings_FA'],
                 "url_link" =>!empty($input['url_link'])?$input['url_link']:'test_link',
                 "status" =>!empty($input['status'])?$input['status']:1,
+                "order" => ((int)$count + 1),
                 "created_at" => date("Y/m/d H:i:s"),
                 "updated_at" => date("Y/m/d H:i:s")
             ];
