@@ -86,6 +86,16 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
     // $('input[name="status"]:checked').each(function() {
     //     status =  $(this).val();
     // });
+    if(this.type_bank == '' || this.type_bank == undefined){
+        Swal.fire({
+            position: 'top-start',
+            icon: 'warning',
+            title: 'Chưa chọn hình thức thanh toán!',
+            showConfirmButton: false,
+            timer: 3000
+          })
+        return false;
+    }
     formdata.append('_token', $("#_token").val());
     formdata.append('id_user', $("#id").val());
     formdata.append('wrap', $("#wrap").val());
@@ -119,7 +129,7 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
             } else {
                 Swal.fire({
                     position: 'top-start',
-                    icon: 'error',
+                    icon: 'warning',
                     title: arrResult['message'],
                     showConfirmButton: false,
                     timer: 3000
@@ -127,4 +137,26 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
             }
         }
     });
+}
+/**
+ * Hàm hiển thị phuong thuc thanh toan
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_UpgradeAcc.prototype.getTypeBank = function (type) {
+    if(type=='BANK'){
+        $('#bank').removeClass("hiddel");
+        $('#momo').removeClass("show");
+        $('#momo').addClass("hiddel");
+        $('#bank').addClass("show");
+    }
+    else{
+        $('#momo').removeClass("hiddel");
+        $('#bank').removeClass("show");
+        $('#bank').addClass("hiddel");
+        $('#momo').addClass("show");
+    }
+    this.type_bank = type;
 }

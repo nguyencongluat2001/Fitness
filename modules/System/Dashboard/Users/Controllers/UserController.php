@@ -338,7 +338,7 @@ class UserController extends Controller
         $param = $arrInput;
         // dd($_SESSION['role']);
         if($_SESSION['role'] == 'ADMIN'){
-            $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','USERS','test'];
+            $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','USERS'];
         }
         if($_SESSION['role'] == 'MANAGE'){
             $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC'];

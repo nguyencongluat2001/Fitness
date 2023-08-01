@@ -10,7 +10,9 @@ use Modules\System\Dashboard\Category\Services\CategoryService;
 use Modules\System\Dashboard\Signal\Services\SignalService;
 use Modules\System\Dashboard\Effective\Services\EffectiveService;
 use Modules\System\Dashboard\Recommended\Services\RecommendedService;
+use Illuminate\Support\Facades\Auth;
 use DB;
+
 
 /**
  * cẩm nang
@@ -76,7 +78,7 @@ class DataFinancialController extends Controller
         $arrInput = $request->input();
         $result = $this->DataFinancialService->where('code_cp',$arrInput['code_cp'])->first();
         if($arrInput['code_cp'] != ''){
-            if(!isset($_SESSION['role'])){
+            if(!Auth::check()){
                 $data=[
                     'status' => 2,
                     'message' => 'Vui lòng đăng nhập để tra cứu cổ phiếu!',
