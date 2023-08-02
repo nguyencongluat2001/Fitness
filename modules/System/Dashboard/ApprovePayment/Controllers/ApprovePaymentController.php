@@ -121,7 +121,9 @@ class ApprovePaymentController extends Controller
             $data = $list->first();
             if($input['status'] == 1){
                 $arrUser = [
-                    'account_type_vip'=> $data['role_client'],
+                    // 'account_type_vip'=> $data['role_client'],
+                    'account_type_vip'=> 'VIP1',
+
                     'date_update_vip'=> date("Y/m/d H:i:s")
                 ];
             }else{
