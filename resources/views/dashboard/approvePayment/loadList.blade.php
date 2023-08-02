@@ -36,8 +36,8 @@
                                 value="{{ $data->id }}"></td>
                         <td style="width:5% ;vertical-align: middle;" align="center" >{{($datas->currentPage() - 1)*$datas->perPage() + ($key + 1)}}</td>
                         <!-- <td onclick="{select_row(this);}">{{ isset($data->users->name) ? $data->users->name : '' }}</td> -->
-                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
                         <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->created_at) ? $data->created_at : '' }}</td>
+                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
                         <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->role) ? $data->role : '' }}</td>
                         <!-- <td style="white-space: inherit;vertical-align: middle;" align="center">{{ isset($data->money) ? $data->money : '' }}</td> -->
                         @if($data->type_payment == 'BANK')
