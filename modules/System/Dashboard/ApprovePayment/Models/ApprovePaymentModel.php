@@ -20,8 +20,6 @@ class ApprovePaymentModel extends Model
         'role_client',
         'type_payment',
         'image',
-        'account_type_vip',
-        'date_update_vip',
         'order',
         'status',
         'created_at',

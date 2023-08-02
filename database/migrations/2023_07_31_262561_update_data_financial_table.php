@@ -16,8 +16,8 @@ return new class extends Migration
             // $table->string('type_payment')->nullable();
 
             
-            $table->string('account_type_vip')->nullable();
-            $table->string('date_update_vip')->nullable();
+            // $table->string('account_type_vip')->nullable();
+            // $table->string('date_update_vip')->nullable();
         });
     }
 
