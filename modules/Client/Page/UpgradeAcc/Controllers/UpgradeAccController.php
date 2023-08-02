@@ -34,7 +34,8 @@ class UpgradeAccController extends Controller
      */
     public function index(Request $request)
     {
-        return view('client.upgradeAcc.index');
+        $data['type_vip'] = !empty(Auth::user()->account_type_vip)?Auth::user()->account_type_vip:null;
+        return view('client.upgradeAcc.index',$data);
     }
     /**
      * Hiển thị màn hình nâng cấp

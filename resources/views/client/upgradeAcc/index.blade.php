@@ -140,7 +140,7 @@
                 </div>
                 <div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
                     <div class="w-100">
-                        @if(Auth::user()->account_type_vip == 'VIP1')
+                        @if($type_vip == 'VIP1')
                             <p class="text-light">$120/Year</p>
                             <a class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đang sử dụng</a>
                         @else
@@ -172,7 +172,7 @@
                 </div>
                 <div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
                     <div class="w-100">
-                        @if(Auth::user()->account_type_vip == 'VIP2')
+                        @if($type_vip == 'VIP2')
                             <p class="text-light">$840/Year</p>
                             <a class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đang sử dụng</a>
                         @else
