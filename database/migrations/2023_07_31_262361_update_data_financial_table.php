@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('approve_payment', function (Blueprint $table) {
-            $table->string('image')->nullable();
+            // $table->string('image')->nullable();
             $table->string('type_payment')->nullable();
 
             
