@@ -126,7 +126,7 @@ class ApprovePaymentController extends Controller
                 ];
             }else{
                 $arrUser = [
-                    'account_type_vip'=> null,
+                    'account_type_vip'=> $data['role_client'],
                 ];
             }
             $checkUser = $this->userService->where('id',$data['user_id'])->first();
