@@ -9,17 +9,17 @@ return [
             'a'    => 'nav-link link-home',
             'href' => '/system/home/index',
         ],
-        'users' => [
-            'name' => 'Quản trị người dùng',
-            'icon' => 'fas fa-users',
-            'a'    => 'nav-link link-user',
-            'href' => '/system/user/index',
+        'approvepayment' => [
+            'name' => 'Phê duyệt thanh toán',
+            'icon' => 'fas fa-money-check-alt',
+            'a'    => 'nav-link link-approvepayment',
+            'href' => '/system/approvepayment/index',
         ],
-        'category' => [
-            'name' => 'Quản trị danh mục',
-            'icon' => 'far fa-calendar-alt',
-            'a'    => 'nav-link link-category',
-            'href' => '/system/category/index',
+        'datafinancial' => [
+            'name' => 'Dữ liệu chứng khoán',
+            'icon' => 'fas fa-coins',
+            'a'    => 'nav-link link-datafinancial',
+            'href' => '/system/datafinancial/index',
         ],
         'recommended' => [
             'name' => 'Danh mục khuyến nghị',
@@ -45,11 +45,17 @@ return [
             'a'    => 'nav-link link-signal',
             'href' => '/system/signal/index',
         ],
-        'approvepayment' => [
-            'name' => 'Phê duyệt thanh toán',
-            'icon' => 'fas fa-money-check-alt',
-            'a'    => 'nav-link link-approvepayment',
-            'href' => '/system/approvepayment/index',
+        'users' => [
+            'name' => 'Quản trị người dùng',
+            'icon' => 'fas fa-users',
+            'a'    => 'nav-link link-user',
+            'href' => '/system/user/index',
+        ],
+        'category' => [
+            'name' => 'Quản trị danh mục',
+            'icon' => 'far fa-calendar-alt',
+            'a'    => 'nav-link link-category',
+            'href' => '/system/category/index',
         ],
         'handbook' => [
             'name' => 'Cẩm nang cho nhà đầu tư',
