@@ -3,6 +3,7 @@ function JS_UpgradeAcc(baseUrl, module, controller) {
     this.baseUrl = baseUrl;
     this.controller = controller;
     NclLib.menuActive('.link-privileges');
+    NclLib.loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;
 }
 /**
@@ -25,26 +26,6 @@ JS_UpgradeAcc.prototype.loadevent = function (oForm) {
     });
    
 }
-// /**
-//  * Load màn hình danh sách
-//  *
-//  * @param oForm (tên form)
-//  *
-//  * @return void
-//  */
-// JS_UpgradeAcc.prototype.loadList = function (oForm) {
-//     var myClass = this;
-//     var url = this.urlPath + '/loadList';
-//     var data = $(oForm).serialize();
-//     $.ajax({
-//         url: url,
-//         type: "POST",
-//         data: data,
-//         success: function (arrResult) {
-//             $("#table-container-library").html(arrResult);
-//         }
-//     });
-// }
 /**
  * Hàm hiển thị modal
  *
@@ -52,18 +33,32 @@ JS_UpgradeAcc.prototype.loadevent = function (oForm) {
  *
  * @return void
  */
-JS_UpgradeAcc.prototype.viewForm = function (id) {
+JS_UpgradeAcc.prototype.viewForm = function (vip) {
     var url = this.urlPath + '/viewForm';
     var myClass = this;
-    var data = 'id=' + id;
+    NclLib.loadding();
+    // var data = 'id=' + id;
+    var data = 'vip=' + vip;
+    console.log(vip)
     $.ajax({
         url: url,
         type: "GET",
         //cache: true,
         data: data,
         success: function (arrResult) {
-            $('#formmodal').html(arrResult);
-            $('#formmodal').modal('show');
+            if(arrResult.status == 2){
+                Swal.fire({
+                    position: 'top-start',
+                    // icon: 'warning',
+                    title: arrResult.message,
+                    showConfirmButton: false,
+                    timer: 3000
+                  })
+                return false;
+            }else{
+                $('#formmodal').html(arrResult);
+                $('#formmodal').modal('show');
+            }
         }
     });
 }
@@ -77,15 +72,8 @@ JS_UpgradeAcc.prototype.viewForm = function (id) {
 JS_UpgradeAcc.prototype.updateVip = function (oForm) {
     var url = this.urlPath + '/updateVip';
     var myClass = this;
+    NclLib.loadding();
     var formdata = new FormData();
-    // var check = myClass.checkValidate();
-    // if(check == false){
-    //     return false;
-    // }
-    // var status = ''
-    // $('input[name="status"]:checked').each(function() {
-    //     status =  $(this).val();
-    // });
     if(this.type_bank == '' || this.type_bank == undefined){
         Swal.fire({
             position: 'top-start',
@@ -99,6 +87,7 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
     formdata.append('_token', $("#_token").val());
     formdata.append('id_user', $("#id").val());
     formdata.append('wrap', $("#wrap").val());
+    formdata.append('type_payment', this.type_bank);
     $('form#frmAdd_updateAcc input[type=file]').each(function () {
         var count = $(this)[0].files.length;
         for (var i = 0; i < count; i++) {
@@ -119,7 +108,7 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
                   Swal.fire({
                     position: 'top-start',
                     icon: 'success',
-                    title: 'Gửi yêu cầu phê duyệt thành công!, vui lòng chờ phê duyệt từ nhân viên FinTop.',
+                    title: 'Gửi yêu cầu phê duyệt thành công!, vui lòng chờ phê duyệt từ FinTop.',
                     showConfirmButton: false,
                     timer: 5000
                   })

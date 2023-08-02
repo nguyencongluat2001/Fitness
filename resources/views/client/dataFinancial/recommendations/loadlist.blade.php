@@ -10,7 +10,7 @@
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
         <div class="chat">
             <div  id="messages">
-                @if(Auth::check())
+            @if(Auth::user()->account_type_vip == 'VIP1')
                     @foreach ($datas as $key => $data)
                     <div class="d-flex flex-row justify-content-start mb-4 avatarMessage">
                         <img src="../clients/img/LogoFinTop_red.png"

@@ -25,14 +25,6 @@ JS_InforClient.prototype.loadIndex = function () {
         myClass.updatePass('form#frmChangePass');
     })
     myClass.loadList(oForm);
-    // $(oForm).find('#txt_search').click(function () {
-    //     /* ENTER PRESSED*/
-    //         var page = $(oForm).find('#limit').val();
-    //         var perPage = $(oForm).find('#cbo_nuber_record_page').val();
-    //         myClass.loadList(oForm, page, perPage);
-    //         // return false;
-        
-    // });
 }
 // /**
 //  * Load màn hình danh sách
@@ -45,7 +37,6 @@ JS_InforClient.prototype.loadList = function (oForm) {
     var myClass = this;
     var url = this.urlPath + '/loadList';
     var data = $(oForm).serialize();
-    console.log(data)
     $.ajax({
         url: url,
         type: "POST",
@@ -84,11 +75,6 @@ JS_InforClient.prototype.changePass = function (oForm) {
     var url = this.urlPath + '/changePass';
     var myClass = this;
     var data = $(oForm).serialize();
-
-    // var data = 'id=' + $("#id").val();
-    // data += '&email=' +$("#email").val();
-    console.log(data)
-    // var loadding = NclLib.successLoadding();
     $.ajax({
         url: url,
         type: "GET",
@@ -214,6 +200,7 @@ JS_InforClient.prototype.sendOTPMAIL = function (oFormCreate) {
  */
 JS_InforClient.prototype.updateCustomer = function(){
     var myClass = this;
+    NclLib.loadding();
     var url = myClass.urlPath + '/updateCustomer';
     var data = $("#frmLoadlist_infor").serialize();
     $.ajax({

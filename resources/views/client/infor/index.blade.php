@@ -8,9 +8,9 @@
         width: 100%; 
         padding-left: 0px;
     }
-    .form-control{
+    /* .form-control{
         color:#fff079;
-    }
+    } */
   button:before {
     background: none ;
    }
@@ -22,25 +22,28 @@
             <form action="" method="POST" id="frmLoadlist_infor">
                 @csrf
                 <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="role" id="role" value="{{ isset($datas->role) ? $datas->role : '' }}">
                 <input type="hidden" name="id" id="id" value="{{ isset($datas->id) ? $datas->id : '' }}">
                 <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
                     <!-- phần giới thiệu FIn top -->
-                    <div class="home_index_child" style="background:#000000d6 !important;">
+                    <div class="home_index_child" style="background:#ffffff !important">
                         <div class="col-lg-12" style="padding:10px;">
                             <div class="row">
-                                <div class="col-md-8" style="color: white;">
+                                <div class="col-md-8" style="color: black;">
                                     <!-- <div class="card-header">
                                         <button class="btn btn-primary btn-sm ms-auto">Đổi mật khẩu</button>
                                     </div> -->
                                    {{-- @if(!empty($data) && $_SESSION["email"] == $data['email']) --}}
-                                   <span id='btn_changePass'>
-                                        <button class="btn btn-primary btn-sm" type="button">
+                                    <span id='btn_changePass'>
+                                        <button class="btn rounded-pill px-4 btn-outline-warning" type="button">
                                             Đổi mật khẩu
                                         </button>
                                     </span>
-                                    <button type="button" class="btn btn-primary btn-sm" onclick="JS_InforClient.updateCustomer()" type="button">
+                                    <button type="button" class="btn rounded-pill px-4 btn-outline-primary" onclick="JS_InforClient.updateCustomer()" type="button">
                                         Cập nhật
                                     </button>
+                                    <a type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:black;" href="{{ url('client/upgradeAcc/index') }}"></i>Nâng cấp tài khoản</a>
+
                                     {{-- @endif --}}
                                     <div class="card-body">
                                         <p class="text-uppercase text-sm">Thông tin người dùng</p>
@@ -70,8 +73,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <hr class="horizontal dark pt-1">
-                                        <p class="text-uppercase text-sm">Thông tin liên lạc</p>
+                                        <!-- <hr class="horizontal dark pt-1"> -->
+                                        <!-- <p class="text-uppercase text-sm">Thông tin liên lạc</p> -->
                                         <div class="row">
                                             <div class="col-md-12 pt-2">
                                                 <div class="form-group">
@@ -160,13 +163,8 @@
                                                     {{isset($datas->name) ? $datas->name : ''}}
                                                 </h5>
                                                 <div>
-                                                    <i class="ni location_pin mr-2"></i>{{isset($datas->phone) ? $datas->phone : ''}}
-                                                </div>
-                                                <div>
-                                                    <i class="ni location_pin mr-2"></i>{{isset($datas->email) ? $datas->email : ''}}
-                                                </div>
-                                                <div class="h6 font-weight-300">
-                                                    <i class="ni location_pin mr-2"></i>{{isset($datas->address) ? $datas->address : ''}}
+                                                    <i class="ni location_pin mr-2"></i>Hội viên: {{isset($datas->account_type_vip) ? $datas->account_type_vip : ''}} <br>
+                                                    <i class="ni location_pin mr-2"></i>Ngày đăng ký: {{isset($datas->date_update_vip) ? $datas->date_update_vip : ''}}
                                                 </div>
                                             </div>
                                         </div>

@@ -7,7 +7,9 @@
             <col width="20%">
             <col width="15%">
             <col width="15%">
+            <col width="15%">
             <col width="10%">
+            <col width="5%">
         </colgroup>
         <thead>
             <tr>
@@ -16,11 +18,12 @@
                 <td align="center"><b>STT</b></td>
                 <td align="center"><b>Tên khách hàng</b></td>
                 <!-- <td align="center"><b>Người giới thiệu</b></td> -->
-                <td align="center"><b>Quyền đăng ký</b></td>
-                <!-- <td align="center"><b>Sắp xếp</b></td> -->
-                <td align="center"><b>Ảnh giao dịch</b></td>
+                <td align="center"><b>Gói nâng cấp</b></td>
+                <td align="center"><b>Loại Banking</b></td>
+                <!-- <td align="center"><b>Ảnh giao dịch</b></td> -->
                 <td align="center"><b>Trạng thái</b></td>
                 <td align="center"><b>Phê duyệt</b></td>
+                <td align="center"><b>#</b></td>
             </tr>
         </thead>
         <tbody id="body_data">
@@ -34,7 +37,13 @@
                         <!-- <td onclick="{select_row(this);}">{{ isset($data->users->name) ? $data->users->name : '' }}</td> -->
                         <td style="width:5% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
                         <td style="width:5% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->role) ? $data->role : '' }}</td>
-                        <td style="width:20%;vertical-align: middle;" align="center"><img  src="{{url('/file-payment/')}}/{{ !empty($data->image)?$data->image:'' }}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;"></td>
+                        <!-- <td style="white-space: inherit;vertical-align: middle;" align="center">{{ isset($data->money) ? $data->money : '' }}</td> -->
+                        @if($data->type_payment == 'BANK')
+                        <td style="color:#00ab5f;white-space: inherit;vertical-align: middle;" align="center">Ngân hàng</td>
+                        @else
+                        <td style="color:#ff00c5;white-space: inherit;vertical-align: middle;" align="center">MoMo</td>
+                        @endif
+                        <!-- <td style="width:20%;vertical-align: middle;" align="center"><img  src="{{url('/file-payment/')}}/{{ !empty($data->image)?$data->image:'' }}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;"></td> -->
                         <!-- <td onclick="{select_row(this);}" align="center">{{ isset($data->categorys->name_category) ? $data->categorys->name_category : '' }}</td> -->
                         @if($data->status == 1) 
                         <td style="color:#11ab00;width:5% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center"><b>{{ $data->status_name }}</b></td>
@@ -47,7 +56,7 @@
                                 <span class="custom-control-indicator p-0 m-0" onclick="JS_ApprovePayment.changeStatusApprovePayment('{{$id}}')"></span>
                             </label>
                         </td>
-                        <!-- <td style="width:5% ;vertical-align: middle;" align="center"><span class="text-cursor text-warning" onclick="JS_ApprovePayment.edit('{{$id}}')"><i class="fas fa-edit"></i></span></td> -->
+                        <td style="color: #ffb600;white-space: inherit;vertical-align: middle;" align="center" onclick="JS_ApprovePayment.edit('{{$id}}')"><i class="far fa-eye"></i></td>
                     </tr>
                 @endforeach
             @endif

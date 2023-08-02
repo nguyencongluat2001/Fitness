@@ -186,7 +186,8 @@ class DataFinancialController extends Controller
             $result['datas'] = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
             return view('client.layouts.loadListBox',$result);
         }else{
-            $result['datas'] = $this->SignalService->where('status','1')->get();
+            $result['datas'] = $this->recommendedService->where('status','1')->get();
+            // dd($result);
             return view('client.dataFinancial.recommendations.loadlist',$result);
         }
     }

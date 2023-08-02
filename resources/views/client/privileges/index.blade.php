@@ -173,10 +173,18 @@
                                             <tr>
                                                 <td style="white-space: inherit;vertical-align: middle"align="center">3</td>
                                                 <td style="white-space: inherit;vertical-align: middle">Đăng ký</td>
-                                                <td style="background:#58ff75;w#58ff75ite-space: inherit;vertical-align: middle;animation: lights 2s 750ms linear infinite"align="center">Đăng ký</td>
-                                                <td style="background:#02d200;white-space: inherit;vertical-align: middle;color:#fff935;font-weight:600;animation: lights 2s 750ms linear infinite"align="center">Đăng ký</td>
-                                                <td style="background:#a72500;color:#fff935;font-weight:600;animation: lights 4s 750ms linear infinite"align="center">Đăng ký</td>
-                                                <td style="color:red"align="center">X</td>
+                                                <td style="background:#58ff75;w#58ff75ite-space: inherit;vertical-align: middle;animation: lights 2s 750ms linear infinite"align="center">
+                                                    <a style="background:#9a0303;" type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:white;" href="{{ url('register') }}"></i>Đăng ký
+                                                    </a>
+                                                </td>
+                                                <td style="background:#02d200;white-space: inherit;vertical-align: middle;color:#fff935;font-weight:600;animation: lights 2s 750ms linear infinite"align="center">
+                                                    <a style="background:#9a0303;" type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:white;" href="{{ url('client/upgradeAcc/index') }}"></i>Đăng ký
+                                                    </a>
+                                                </td>
+                                                <td style="background:#a72500;color:#fff935;font-weight:600;animation: lights 4s 750ms linear infinite"align="center">
+                                                    <a style="background:#9a0303;" type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:white;" href="{{ url('client/upgradeAcc/index') }}"></i>Đăng ký
+                                                    </a></td>
+                                                <td style="white-space: inherit;vertical-align: middle;color:red"align="center">X</td>
                                             </tr>
                                     </tbody>
                                 </table>

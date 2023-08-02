@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Http;
 use Modules\System\Dashboard\Users\Services\UserService;
 use Modules\System\Dashboard\ApprovePayment\Services\ApprovePaymentService;
 use Modules\Base\Library;
+use Illuminate\Support\Facades\Auth;
 use DB;
 
 /**
@@ -42,10 +43,18 @@ class UpgradeAccController extends Controller
      */
     public function registerVip(Request $request)
     {
+        $input = $request->all();
+        if(!Auth::check()){
+            $data=[
+                'status' => 2,
+                'message' => 'Vui lòng đăng nhập để nâng cấp tài khoản!',
+            ];
+            return response()->json($data);
+        }
         $account = $this->userService->find($_SESSION['id']);
         $data['users'] = $account;
         $data['time_register'] = date('d-m-Y');
-        // dd( $data);
+        $data['type_vip'] = $input['vip'];
         return view('client.upgradeAcc.registerVip',compact('data'));
     }
      /**
@@ -66,6 +75,7 @@ class UpgradeAccController extends Controller
         $arr = [
             'id'=>(string)\Str::uuid(),
             'user_id'=> $account['id'],
+            'type_payment'=> $input['type_payment'],
             'role_client'=> $input['wrap'],
             'image'=> $arrFile[0],
             'status'=> 0,

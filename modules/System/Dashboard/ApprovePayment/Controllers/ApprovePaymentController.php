@@ -74,10 +74,10 @@ class ApprovePaymentController extends Controller
     {
         $input = $request->all();
         $approvePayment = $this->approvePaymentService->where('id', $input['id'])->first();
-        $data['users'] = $this->userService->where('role', $approvePayment->role_client)->get();
-        $data['datas'] = $approvePayment;
-        $data['roles'] = $this->categoryService->where('cate', 'DM_VIP')->orderBy('order')->get();
-        $data['order'] = $this->approvePaymentService->select('id')->count() + 1;
+        $input['chk_item_id'] = $approvePayment['user_id'];
+        $data['data'] = $this->userService->editUser($input);
+        $data['approvePayment'] = $approvePayment['image'];
+        $data['type_payment'] = $approvePayment['type_payment'];
         return view('dashboard.approvePayment.add', $data);
     }
     /**

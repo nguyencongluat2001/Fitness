@@ -14,6 +14,13 @@
 	.form-control:disabled{
 		background-color:#ffffff
 	}
+	.label-upload {
+		border: 1px solid #344767;
+		color: #000 !important;
+		padding: 0.5rem;
+		border-radius: 0.5em;
+		cursor: pointer;
+	}
 </style>
 <link rel="stylesheet" href="../clients/css/style.css">
 
@@ -58,7 +65,7 @@
 					<div class="col-md-5 pt-3">
 						<div class="form-group">
 							<p for="example-text-input" class="form-control-label">Gói đăng ký</p>
-							<input disabled class="form-control" type="text" id="wrap" name="wrap" value="VIP1">
+							<input disabled class="form-control" type="text" id="wrap" name="wrap" value="{{isset($data['type_vip']) ? $data['type_vip'] : ''}}">
 						</div>
 					</div>
 					<div class="col-md-3 pt-3">
@@ -110,15 +117,27 @@
 						</div>
 					</div>
                 </div>
-					<div class="col-md-6 pt-3">
+					<!-- <div class="col-md-6 pt-3">
 						<div class="form-group">
 							<p for="example-text-input" class="form-control-label">Ảnh giao dịch</p>
 							<input style="color:#ff7916" type="file" id="file" name="file" value="">
 						</div>
+					</div> -->
+					{{--  Mô tả --}}
+					<div class="row form-group pt-4" id="div_hinhthucgiai">
+						<div class="col-md-12" >
+							<label style="font-size:20px;font-family: math;" for="">Ảnh xác thực thanh toán thành công <span class="request_star">*</span></label> <br>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="upload_image" class="label-upload">Chọn ảnh</label>
+						<input type="file" hidden name="upload_image" id="upload_image" onchange="readURL(this)">
+						<br>
+						<img id="show_img" hidden alt="Image" style="width:150px">
 					</div>
 					<div class="pt-5">
 					   <h4>Quý khách hàng đăng ký nâng cấp tài khoản thực hiện theo các bước sau:</h4>
-					    <p style="background:#ffeda7;color:#000000;padding:1%;border-radius:5px" class="light-300">
+					    <p style="background:#ffda3a;color:#000000;padding:1%;border-radius:5px" class="light-300">
 							<span>Bước 1: Quét mã QR ví momo hoặc QR ngân hàng.</span> <br>
 							<span>Bước 2: Ghi rõ nội dung chuyển khoản (Tên khách hàng đăng ký - Email đăng ký - Số điện thoại đăng ký) </span> <br>
 							<span>Bước 3: Chụp thông màn hình giao dịch thành công.</span> <br>
@@ -133,13 +152,27 @@
 				<div class="modal-footer">
 					<div id="updateVip" class="pricing-table-footer pt-5 pb-2">
 						<button onclick="JS_UpgradeAcc.updateVip()" type="button" id="updateVip" class="btn rounded-pill px-4 btn-outline-light light-300" 
-						style="background:#00a313;color:#007b14;animation: lights 2s 750ms linear infinite;">Đăng ký</button>
+						style="background:#009c12;">Đăng ký</button>
 					</div>
 					<div class="rounded-pillpricing-table-footer pt-5 pb-2">
-					    <button type="button" data-bs-dismiss="modal" style="background: #7c0000;">Đóng</button>
+					    <button type="button" data-bs-dismiss="modal" style="background: #97a7a4;">Đóng</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 </form>
+<script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                $('#show_img').attr('src', e.target.result).width(150);
+            };
+            $("#show_img").removeAttr('hidden');
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>

@@ -1,69 +1,84 @@
+<style>
+    	.form-control:disabled{
+		background-color:#ffffff
+	}
+</style>
 <div class="modal-dialog modal-lg">
     <div class="modal-content card">
         <div class="modal-header">
-            <h5 class="modal-title">Cập nhật phê duyệt thanh toán</h5>
-            <button type="button" class="btn btn-sm" data-bs-dismiss="modal">
+            <h5 class="modal-title">Thông tin thanh toán</h5>
+            <button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
                 X
             </button>
         </div>
-        <div class="modal-body">
-            <form id="frmAdd">
-                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="hidden" name="_id" id="_id" value="{{!empty($datas->id) ? $datas->id : ''}}">
-                <div class="row form-group" id="div_hinhthucgiai">
-                    <span class="col-md-3 control-label required">Loại VIP</span>
-                    <div class="col-md-8">
-                        <select name="role_client" id="role_client" class="form-control chzn-select">
-                            <option value="">--Chọn loại VIP--</option>
-                            @foreach($roles as $role)
-                            <option @if(isset($datas->role_client) && $datas->role_client == $role->code_category) selected @endif value="{{$role->code_category}}">{{$role->name_category}}</option>
-                            @endforeach
-                        </select>
+        <div class="card-body">
+            <p class="text-uppercase text-sm">Thông tin cơ bản</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <p for="example-text-input" class="form-control-label">Tên</p>
+                        <input class="form-control" disabled type="text" value="{{!empty($data['name'])?$data['name']:''}}" name="name" id="name" placeholder="Nhập tên người dùng..." />
                     </div>
                 </div>
-                <div class="row form-group" id="div_hinhthucgiai">
-                    <span class="col-md-3 control-label required">Khách hàng</span>
-                    <div class="col-md-8">
-                        <select name="user_id" id="user_id" class="form-control chzn-select">
-                            <option value="">--Chọn khách hàng--</option>
-                            @if(isset($users))
-                            @foreach($users as $user)
-                            <option @if(isset($datas->user_id) && $datas->user_id == $user->id) selected @endif 
-                                    value="{{$user->id}}">{{$user->name}}</option>
-                            @endforeach
-                            @endif
-                        </select>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <p for="example-text-input" class="form-control-label">Địa chỉ Email</p>
+                        <input class="form-control" disabled type="email" value="{{!empty($data['email'])?$data['email']:''}}" name="email" id="email" placeholder="Nhập email..." />
                     </div>
                 </div>
-                <div class="row form-group" id="div_hinhthucgiai">
-                    <span class="col-md-3 control-label">Người giới thiệu</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->user_id_introduce) ? $datas->user_id_introduce : ''}}" name="user_id_introduce" id="user_id_introduce" placeholder="Email hoặc Số điện thoại" />
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <p for="example-text-input" class="form-control-label">Ngày sinh</p>
+                        <input class="form-control" disabled type="date" value="{{!empty($data['dateBirth'])?$data['dateBirth']:''}}" name="dateBirth" id="dateBirth" placeholder="Chọn ngày sinh..." />
                     </div>
                 </div>
-                <div class="row form-group" id="div_hinhthucgiai">
-                    <span class="col-md-3 control-label">Thứ tự</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->order) ? $datas->order : $order}}" name="order" id="order" placeholder="Nhập thứ tự" />
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <p for="example-text-input" class="form-control-label">Số điện thoại</p>
+                        <input class="form-control" disabled type="text" value="{{!empty($data['phone'])?$data['phone']:''}}" name="phone" id="phone" placeholder="Nhập số điện thoại..." />
                     </div>
                 </div>
-                <div class="row form-group" id="div_hinhthucgiai">
-                    <span class="col-md-3 control-label">Trạng thái</span>
-                    <div class="col-md-8">
-                        <label for="status">
-                            <input type="checkbox" name="status" id="status" {{isset($datas->status) && $datas->status == 1 ? 'checked' : ''}} /> Hoạt động
-                        </label>
+            </div>
+            <hr class="horizontal dark">
+            <p class="text-uppercase text-sm">Thông tin liên lạc</p>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <p for="example-text-input" class="form-control-label">Địa chỉ</p>
+                        <input class="form-control" disabled type="text" value="{{!empty($data['address'])?$data['address']:''}}" name="address" id="address" placeholder="Nhập địa chỉ..." />
                     </div>
                 </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <p for="example-text-input" class="form-control-label">Gia nhập ngày</p>
+                        <input class="form-control" disabled type="date" value="{{!empty($data['date_join'])?$data['date_join']:''}}" name="date_join" id="date_join">
+                    </div>
+                </div>
+            </div>
+            <hr class="horizontal dark">
+            <p class="text-uppercase text-sm">Giao dịch thành công qua 
+            @if($type_payment == 'BANK')
+               Ngân hàng
+            @else
+              Ví MoMo
+            @endif                    
+            </p>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="modal-body">
+                        <img id="show_img" src="{{url('/file-payment/')}}/{{$approvePayment}}" alt="Image" style="width:250px">
+                    </div>
+                </div>
+            </div>
+                
                 <div class="modal-footer">
-                    <button id='btn_create' class="btn btn-primary btn-sm" type="button">
-                        Cập nhật
-                    </button>
-                    <button type="button" class="btn btn-default btn-sm" data-bs-dismiss="modal">
+                    <button type="button" class="btn btn-default btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
                         Đóng
                     </button>
                 </div>
-            </form>
+            </div>
+            
         </div>
     </div>
 </div>
+                

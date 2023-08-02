@@ -20,9 +20,9 @@
                 <div class="col-md-10 row">
                     <div class="col-md-3">
                         <select name="type" id="type" class="form-control chzn-select">
-                            <option value="">--Chọn loại tín hiệu--</option>
-                            <option value="MUA">Mua</option>
-                            <option value="BAN">Bán</option>
+                            <option value="">--Chọn loại thanh toán--</option>
+                            <option value="VIP1">Vip 1</option>
+                            <option value="VIP2">Vip 2</option>
                         </select>
                     </div>
                     <div class="col-md-2">
