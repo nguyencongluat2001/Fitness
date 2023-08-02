@@ -130,7 +130,6 @@ class ApprovePaymentController extends Controller
                     'date_update_vip'=> null
                 ];
             }
-            dd($arrUser);
             $checkUser = $this->userService->where('id',$data['user_id'])->first();
             if(isset($checkUser)){
                 $this->userService->where('id',$data['user_id'])->update($arrUser);
