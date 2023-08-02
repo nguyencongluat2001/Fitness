@@ -16,6 +16,7 @@
                 <td align="center"><input type="checkbox" name="chk_all_item_id"
                         onclick="checkbox_all_item_id(document.forms[0].chk_item_id);"></td>
                 <td align="center"><b>STT</b></td>
+                <td align="center"><b>Ngày đăng ký</b></td>
                 <td align="center"><b>Tên khách hàng</b></td>
                 <!-- <td align="center"><b>Người giới thiệu</b></td> -->
                 <td align="center"><b>Gói nâng cấp</b></td>
@@ -35,8 +36,9 @@
                                 value="{{ $data->id }}"></td>
                         <td style="width:5% ;vertical-align: middle;" align="center" >{{($datas->currentPage() - 1)*$datas->perPage() + ($key + 1)}}</td>
                         <!-- <td onclick="{select_row(this);}">{{ isset($data->users->name) ? $data->users->name : '' }}</td> -->
-                        <td style="width:25% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
-                        <td style="width:25% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->role) ? $data->role : '' }}</td>
+                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
+                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->created_at) ? $data->created_at : '' }}</td>
+                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->role) ? $data->role : '' }}</td>
                         <!-- <td style="white-space: inherit;vertical-align: middle;" align="center">{{ isset($data->money) ? $data->money : '' }}</td> -->
                         @if($data->type_payment == 'BANK')
                         <td style="width:15% ;color:#00ab5f;white-space: inherit;vertical-align: middle;" align="center">Ngân hàng</td>
