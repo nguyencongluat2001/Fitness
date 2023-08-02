@@ -35,8 +35,8 @@
                                 value="{{ $data->id }}"></td>
                         <td style="width:5% ;vertical-align: middle;" align="center" >{{($datas->currentPage() - 1)*$datas->perPage() + ($key + 1)}}</td>
                         <!-- <td onclick="{select_row(this);}">{{ isset($data->users->name) ? $data->users->name : '' }}</td> -->
-                        <td style="width:15% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
-                        <td style="width:15% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->role) ? $data->role : '' }}</td>
+                        <td style="width:25% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
+                        <td style="width:25% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->role) ? $data->role : '' }}</td>
                         <!-- <td style="white-space: inherit;vertical-align: middle;" align="center">{{ isset($data->money) ? $data->money : '' }}</td> -->
                         @if($data->type_payment == 'BANK')
                         <td style="width:15% ;color:#00ab5f;white-space: inherit;vertical-align: middle;" align="center">Ngân hàng</td>
@@ -46,7 +46,7 @@
                         <!-- <td style="width:20%;vertical-align: middle;" align="center"><img  src="{{url('/file-payment/')}}/{{ !empty($data->image)?$data->image:'' }}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;"></td> -->
                         <!-- <td onclick="{select_row(this);}" align="center">{{ isset($data->categorys->name_category) ? $data->categorys->name_category : '' }}</td> -->
                         @if($data->status == 1) 
-                        <td style="color:#11ab00;width:15% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center"><b>{{ $data->status_name }}</b></td>
+                        <td style="color:#11ab00;width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center"><b>{{ $data->status_name }}</b></td>
                         @else 
                         <td style="color:red;width:15% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center"><b>{{ $data->status_name }}</b></td>
                         @endif
