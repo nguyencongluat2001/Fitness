@@ -40,7 +40,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="input-group" style="width:40%;height:10%">
+                                <div class="input-group" style="width:30%;height:10%">
                                     <!-- <span class="input-group-text text-body">
                                         <i class="fas fa-search"
                                             aria-hidden="true"></i>
