@@ -121,9 +121,7 @@ class ApprovePaymentController extends Controller
             $data = $list->first();
             if($input['status'] == 1){
                 $arrUser = [
-                    // 'account_type_vip'=> $data['role_client'],
-                    'account_type_vip'=> 'VIP1',
-
+                    'account_type_vip'=> $data['role_client'],
                     'date_update_vip'=> date("Y/m/d H:i:s")
                 ];
             }else{
@@ -132,6 +130,7 @@ class ApprovePaymentController extends Controller
                     'date_update_vip'=> null
                 ];
             }
+            dd($arrUser);
             $checkUser = $this->userService->where('id',$data['user_id'])->first();
             if(isset($checkUser)){
                 $this->userService->where('id',$data['user_id'])->update($arrUser);
