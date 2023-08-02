@@ -34,7 +34,10 @@ class UpgradeAccController extends Controller
      */
     public function index(Request $request)
     {
-        $data['type_vip'] = !empty($_SESSION['account_type_vip'])?$_SESSION['account_type_vip']:null;
+        $data['type_vip'] = null;
+        if(!empty($_SESSION['account_type_vip']) && Auth::check()){
+            $data['type_vip'] = $_SESSION['account_type_vip'];
+        }
         return view('client.upgradeAcc.index',$data);
     }
     /**

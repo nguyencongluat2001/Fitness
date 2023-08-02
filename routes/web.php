@@ -269,7 +269,7 @@ Route::prefix('/client')->group(function () {
     Route::get('/home/loadListTap1',[ClientHomeController::class,'loadListTap1']);
     Route::get('/home/loadListTop',[ClientHomeController::class,'loadListTop']);
     Route::get('/home/loadListChartNen',[ClientHomeController::class,'loadListChartNen']);
-    // Route::middleware('permissionCheckLoginClient')->group(function () {
+    Route::middleware('permissionCheckLoginClient')->group(function () {
         Route::get('introduce/index', [IntroduceController::class, 'index']);
         Route::prefix('infor')->group(function(){
             Route::get('/index', [InforController::class, 'index']);
@@ -333,7 +333,7 @@ Route::prefix('/client')->group(function () {
 
         // Đọc thông báo
         Route::get('readNotification', [ReadNotificationController::class, 'readNotification']);
-    // });
+    });
     
     Route::prefix('des')->group(function () {
         Route::get('index', [DesController::class, 'index']);

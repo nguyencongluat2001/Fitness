@@ -18,7 +18,8 @@ class PermissionCheckLoginMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        if(Auth::check() && (isset($_SESSION["role"]) && ($_SESSION["role"] == 'ADMIN' || $_SESSION["role"] == 'USERS'))){
+        // if(Auth::check() && (isset($_SESSION["role"]) && ($_SESSION["role"] == 'ADMIN' || $_SESSION["role"] == 'USERS'))){
+        if(Auth::check() && (isset($_SESSION["role"]))){
             $PermissionLogin = PermissionLoginModel::where('email',$_SESSION["email"])->first();
             if(isset($PermissionLogin) && (isset($_SESSION['token']) && $_SESSION['token'] == $PermissionLogin->token)){
                 return $next($request);
@@ -29,9 +30,13 @@ class PermissionCheckLoginMiddleware
                 $request->session()->regenerateToken();
                 return redirect()->route('login');
             }
-        }else{
-            return redirect()->route('login');
         }
+        // else{
+        //     Auth::logout();
+        //     $request->session()->invalidate();
+        //     $request->session()->regenerateToken();
+        //     // return redirect()->route('login');
+        // }
         return $next($request);
     }
 }

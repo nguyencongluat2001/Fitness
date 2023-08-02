@@ -28,7 +28,6 @@
             </tr>
         </thead>
         <tbody>
-            
             @foreach ($datas as $key => $data)
                 <tr>
                     <td align="center" >{{ $key + 1 }}</td>
@@ -112,8 +111,8 @@
                         @endif
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                       @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                       <span>{{ $data['note'] }}</span>
+                    @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                    <span>{{ $data['note'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif

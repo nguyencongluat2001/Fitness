@@ -41,7 +41,7 @@ use Carbon\Carbon;
                                                     <div  class="col-sm-6 col-lg-12 text-decoration-none">
                                                         <div class="pb-3 d-lg-flex gx-5">
                                                             <div class="col-lg-3 ">
-                                                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" style="height: 150px;width: 150px;object-fit: cover;" alt="...">
+                                                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" style="height: 200px;object-fit: cover;padding:10px" alt="...">
                                                             </div>
                                                             <div class="col-lg-8 ">
                                                                 <h5 style="padding-top:10px;color:#000951;font-size: 30px;font-family: serif;font-weight: 600;">{{ $datas['blogDetail']->title }}</h5>

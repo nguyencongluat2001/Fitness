@@ -66,12 +66,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- biểu đồ FireAnt -->
-                    <div class="home_index_child " style="background:#ffffffc7 !important">
-                        <div class="col-lg-12" style="padding:10px;">
-                           1111111111
-                        </div>
-                    </div>
                 </div>
             </form>
         </div>
