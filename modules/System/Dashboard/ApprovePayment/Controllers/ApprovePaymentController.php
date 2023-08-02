@@ -127,6 +127,7 @@ class ApprovePaymentController extends Controller
             }else{
                 $arrUser = [
                     'account_type_vip'=> null,
+                    'date_update_vip'=> null
                 ];
             }
             $checkUser = $this->userService->where('id',$data['user_id'])->first();
