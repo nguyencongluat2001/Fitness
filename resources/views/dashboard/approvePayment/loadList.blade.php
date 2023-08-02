@@ -1,6 +1,6 @@
 <div class="table-responsive pmd-card pmd-z-depth ">
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
-        <colgroup>
+        <!-- <colgroup>
             <col width="5%">
             <col width="5%">
             <col width="20%">
@@ -10,7 +10,7 @@
             <col width="15%">
             <col width="10%">
             <col width="5%">
-        </colgroup>
+        </colgroup> -->
         <thead>
             <tr>
                 <td align="center"><input type="checkbox" name="chk_all_item_id"
