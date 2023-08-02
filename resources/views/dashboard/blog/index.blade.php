@@ -31,7 +31,7 @@
                         <button class="btn btn-danger shadow-sm" id="btn_delete" type="button"data-toggle="tooltip"
                             data-original-title="Xóa bài viết"><i class="fas fa-trash-alt"></i></button>
                             </div>
-                                <div class="col-md-2">
+                                <div class="col-md-4">
                                     <select class="form-control input-sm chzn-select" name="category"
                                         id="category">
                                         <option value=''>-- Chọn thể loại --</option>
