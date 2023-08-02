@@ -143,7 +143,7 @@
                         @if($type_vip == 'VIP1')
                             <p class="text-light">$120/Year</p>
                             <a class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đang sử dụng</a>
-                        @else
+                        @elseif($type_vip != 'VIP1')
                             <p class="text-light">$120/Year</p>
                             <a onclick="JS_UpgradeAcc.viewForm('VIP1')" class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Nâng cấp</a>
                         @endif
@@ -175,7 +175,7 @@
                         @if($type_vip == 'VIP2')
                             <p class="text-light">$840/Year</p>
                             <a class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đang sử dụng</a>
-                        @else
+                        @elseif($type_vip != 'VIP2')
                             <p class="text-light">$840/Year</p>
                             <a onclick="JS_UpgradeAcc.viewForm('VIP2')" class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Nâng cấp</a>
                         @endif
