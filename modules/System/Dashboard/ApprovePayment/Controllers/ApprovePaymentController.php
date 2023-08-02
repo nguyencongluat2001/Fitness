@@ -131,6 +131,7 @@ class ApprovePaymentController extends Controller
                 ];
             }
             $checkUser = $this->userService->where('id',$data['user_id'])->first();
+            dd($checkUser);
             if(isset($checkUser)){
                 $this->userService->where('id',$data['user_id'])->update($arrUser);
             }else{
