@@ -52,7 +52,6 @@ use Modules\System\Dashboard\UserLog\Controllers\UserLogController;
 //     // return view('auth.login');
 // });
 // Route::get('/', [ClientHomeController::class, 'index']);
-Route::get('/', [ClientDataFinancialController::class, 'index']);
 // Route::get('/login', function () {
 //     return view('auth.signin');
 // });
@@ -254,6 +253,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         });
     });
 });
+
+
+Route::get('/', [ClientDataFinancialController::class, 'index']);
 // route phía người dùng
 Route::prefix('/client')->group(function () {
     $arrModules = config('menuClient');
