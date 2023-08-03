@@ -74,7 +74,11 @@ class LoginController extends Controller
             // UserLogModel::insert($userLog);
             // kiem tra quyen nguoi dung
             if ($user->role == 'ADMIN' || $user->role == 'MANAGE' || $user->role == 'CV_ADMIN'
-             || $user->role == 'CV_PRO' || $user->role == 'CV_BASIC' || $user->role == 'SALE_ADMIN' || $user->role == 'SALE_BASIC') {
+             || $user->role == 'CV_PRO' || $user->role == 'CV_BASIC' || $user->role == 'SALE_ADMIN' || $user->role == 'SALE_BASIC' 
+             || $user->role == 'CV_ADMIN,SALE_ADMIN' || $user->role == 'CV_ADMIN,SALE_BASIC' 
+             || $user->role == 'CV_PRO,SALE_ADMIN' || $user->role == 'CV_PRO,SALE_BASIC'
+             || $user->role == 'CV_BASIC,SALE_ADMIN'|| $user->role == 'CV_BASIC,SALE_BASIC'
+             ){
                 // menu sidebar
                 $sideBarConfig = config('SidebarSystem');
                 $sideBar = $this->checkPermision($sideBarConfig , $user);
