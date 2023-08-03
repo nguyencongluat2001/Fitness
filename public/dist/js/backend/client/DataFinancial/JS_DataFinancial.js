@@ -116,7 +116,7 @@ JS_DataFinancial.prototype.addrow = function(arrResult) {
     //         + '<td style="vertical-align: middle;color:#83beff" align="center">'
     //         + '<span>' + (parseInt(arrResult.id) + 1) + '</span></td>'
     //         + '<td class="td_code_cp_' + (parseInt(arrResult.id) + 1) + '" style="vertical-align: middle;" align="center" ondblclick="click2(\'' + (parseInt(arrResult.id) + 1) + '\', \'code_cp\',this)">'
-    //         + '<span id="span_code_cp_' + (parseInt(arrResult.id) + 1) + '" class="text-success span_code_cp_' + (parseInt(arrResult.id) + 1) + '" onclick="click2(\'' + (parseInt(arrResult.id) + 1) + '\', \'code_cp\',this)">Nhập</span>'
+    //         + '<span id="span_code_cp_' + (parseInt(arrResult.id) + 1) + '" class="text-success span_code_cp_' + (parseInt(arrResult.id) + 1) + '" onclick="click2(\'' + (parseInt(arrResult.id) + 1) + '\', \'code_cp\',this)">-</span>'
     //         + '</tr>'
     //     );
     // }
@@ -204,19 +204,18 @@ JS_DataFinancial.prototype.edit = function (id) {
  * Sự kiện khi nhấn 2 lần vào dòng td để sửa
  */
 function click2(id, type) {
-    $(".td_"+type+"_" + id).removeAttr('ondblclick');
     var text = $("#span_" + type + "_" + id).html();
     $("#"+type+"_" + id).removeAttr('hidden');
-    $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
+    // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
+    $("#span_"+type+"_" + id).html('<input name="'+type+'" id="'+type+'_' + id + '" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3">');
     $("#"+type+"_" + id).focus();
-    $("#span_"+type+"_" + id).removeAttr('onclick');
+    $(".td_"+type+"_" + id).removeAttr('onclick');
     $("#span_"+type+"_" + id).removeAttr('id');
     $("#"+type+"_" + id).focusout(function(){
         var nhap = $("#"+type+"_" + id).val() != '' ? $("#"+type+"_" + id).val() : text;
-        $(".td_"+type+"_" + id).attr('ondblclick', "click2('"+id+"', '"+type+"')");
         $("#"+type+"_" + id).attr('hidden', true);
         $(".span_"+type+"_" + id).attr('id', 'span_'+type+'_' + id);
-        $(".span_"+type+"_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
+        $(".td_"+type+"_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
         $(".span_"+type+"_" + id).html(nhap);
         if(text != $(".span_" + type + "_" + id).html()){
             JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
