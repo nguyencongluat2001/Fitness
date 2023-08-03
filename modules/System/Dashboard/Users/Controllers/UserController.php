@@ -311,7 +311,7 @@ class UserController extends Controller
     public function delete(Request $request)
     {
         $input = $request->all();
-        if($_SESSION['role_admin'] != 'ADMIN' && $_SESSION['role_manage'] != 'MANAGE' && $_SESSION['role_cv_admin'] != 'CV_ADMIN'&& $_SESSION['role_sale_admin'] != 'SALE_ADMIN'){
+        if($_SESSION['role'] != 'ADMIN' && $_SESSION['role'] != 'MANAGE' && $_SESSION['role'] != 'CV_ADMIN'&& $_SESSION['role'] != 'SALE_ADMIN'){
             return array('success' => false, 'message' => 'Rất tiếc! bạn ko có quyền. Vui lòng liên hệ hỗ trợ FinTop.');
         }
         $listids = trim($input['listitem'], ",");
@@ -338,16 +338,16 @@ class UserController extends Controller
         $param = $arrInput;
         // dd($_SESSION['role']);
         if($_SESSION['role'] == 'ADMIN'){
-            $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','USERS'];
+            $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_ADMIN','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC','USERS'];
         }
         if($_SESSION['role'] == 'MANAGE'){
-            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC'];
+            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC'];
         }
         if($_SESSION['role'] == 'CV_ADMIN'){
-            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC'];
+            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
         }
         if($_SESSION['role'] == 'SALE_ADMIN'){
-            $param['role'] = ['SALE_ADMIN','SALE_BASIC'];
+            $param['role'] = ['SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
         }
         $objResult = $this->userService->filter($param);
 
