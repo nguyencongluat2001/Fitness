@@ -18,6 +18,11 @@
     .modal.show .modal-dialog {
         transform: none;
     }
+    #frmAdd table input[type=number]::-webkit-inner-spin-button, 
+    #frmAdd table input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
 </style>
 
 <form id="frmAdd" role="form" action="" method="POST" enctype="multipart/form-data" >
@@ -64,6 +69,7 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá cắt lỗ</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Xếp hạng FA</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center"><b>PTDN FA</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Thứ tự</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center"><b>#</b></td>
                         </tr>
                     </thead>
@@ -91,6 +97,7 @@
                                 <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
                                 <input type="hidden" name="url_link" id="url_link">
                             </td>
+                            <td style="width:4%;vertical-align: middle;" align="center"><input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 40px; text-align:center"></td>
                             <td style="width:5%;vertical-align: middle;" align="center">
                                 <p></p>
                                 <button id="btn_create" type="button" class="btn btn-success" title="Xem trực tuyến"><i class="fas fa-thumbs-up"></i></button>
