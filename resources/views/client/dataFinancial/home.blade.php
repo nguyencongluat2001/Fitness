@@ -1,5 +1,8 @@
 @extends('client.layouts.index')
 @section('body-client')
+
+<script src="{{URL::asset('assets/js/moment.min.js')}}"></script>
+<script src="{{URL::asset('assets/js/moment-with-locales.js')}}"></script>
 <!-- tra cứu cổ phiếu -->
 <div class="banner-wrapper">
     <section class="container">

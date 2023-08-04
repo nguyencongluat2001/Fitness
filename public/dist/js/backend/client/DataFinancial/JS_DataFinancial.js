@@ -67,12 +67,13 @@ JS_DataFinancial.prototype.fireAntChart = function () {
  */
 JS_DataFinancial.prototype.addrow = function(arrResult) {
     var id = broofa();
+    var created_at = moment(arrResult.created_at).format('HH') + 'h' + moment(arrResult.created_at).format('mm DD/MM/YYYY');
     var html = '';
     // stt
     html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
      // code_cp
     html += '<td style="vertical-align: middle;" align="center" class="td_code_cp_' + arrResult.id + '" ondblclick="click2(\'' + arrResult.id + '\', \'code_cp\')">';
-    html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">'+arrResult.code_cp+'</span>';
+    html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">'+arrResult.code_cp+'</span>';
     html += '</td>';
     // exchange
     html += '<td class="td_exchange_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
@@ -84,7 +85,7 @@ JS_DataFinancial.prototype.addrow = function(arrResult) {
     html += '</td>';
     // created_at
     html += '<td class="td_created_at_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
-    html += '<span id="span_created_at_' + arrResult.id + '" class="span_created_at_' + arrResult.id + '">'+arrResult.created_at+'</span>';
+    html += '<span id="span_created_at_' + arrResult.id + '" class="span_created_at_' + arrResult.id + '">'+created_at+'</span>';
     html += '</td>';
     // ratings_TA
     html += '<td class="td_ratings_TA_' + arrResult.id + '" style="vertical-align: middle;color:#ff7c00" align="center">';
@@ -96,7 +97,7 @@ JS_DataFinancial.prototype.addrow = function(arrResult) {
     html += '</td>';
     // act
     html += '<td class="td_act_' + arrResult.id + '" style="vertical-align: middle;background:#ffb75c" align="center">';
-    html += '<span id="span_act_' + arrResult.id + '" class="span_act_' + arrResult.id + '">'+arrResult.act+'</span>';
+    html += '<span id="span_act_' + arrResult.id + '" class="span_act_' + arrResult.id + '"><b>'+arrResult.act+'</b></span>';
     html += '</td>';
     // trading_price_range
     html += '<td class="td_trading_price_range_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
@@ -207,7 +208,7 @@ function click2(id, type) {
     var text = $("#span_" + type + "_" + id).html();
     $("#"+type+"_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
-    $("#span_"+type+"_" + id).html('<input name="'+type+'" id="'+type+'_' + id + '" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3">');
+    $("#span_"+type+"_" + id).html(`<input class="text-uppercase" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
     $("#"+type+"_" + id).focus();
     $(".td_"+type+"_" + id).removeAttr('onclick');
     $("#span_"+type+"_" + id).removeAttr('id');
@@ -230,16 +231,7 @@ JS_DataFinancial.prototype.updateDataFinancial = function(id, column, value = ''
     var url = myClass.urlPath + '/searchDataCP';
     var data = 'id=' + id;
     data += '&_token=' + $('#frmSearchCP').find('#_token').val();
-    if(column == 'code_cp'){ data += '&code_cp=' + (column == 'code_cp' ? value : ""); }
-    else if(column == 'exchange') {data += '&exchange=' + value}
-    else if(column == 'code_category') {data += '&code_category=' + value}
-    else if(column == 'ratings_TA') {data += '&ratings_TA=' + value}
-    else if(column == 'identify_trend') {data += '&identify_trend=' + value}
-    else if(column == 'act') {data += '&act=' + value}
-    else if(column == 'trading_price_range') {data += '&trading_price_range=' + value}
-    else if(column == 'stop_loss_price_zone') {data += '&stop_loss_price_zone=' + value}
-    else if(column == 'ratings_FA') {data += '&ratings_FA=' + value}
-    else if(column == 'url_link') {data += '&url_link=' + value}
+    if(column == 'code_cp'){ data += '&code_cp=' + (column == 'code_cp' && $("#code_cp_" + id).val() != undefined ? $("#code_cp_" + id).val() : value); }
     else if(column == 'status') {data += '&status=' + value}
     NclLib.loadding();
     $.ajax({

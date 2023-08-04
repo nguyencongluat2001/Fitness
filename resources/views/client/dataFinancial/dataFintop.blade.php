@@ -15,16 +15,16 @@
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
         <table  id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;">
             <colgroup>
-                <col width="2%">
-                <col width="5%">
-                <col width="4%">
-                <col width="6%">
-                <col width="6%">
                 <col width="3%">
-                <col width="12%">
                 <col width="7%">
                 <col width="5%">
-                <col width="3%">
+                <col width="10%">
+                <col width="8%">
+                <col width="7%">
+                <col width="30%">
+                <col width="10%">
+                <col width="8%">
+                <col width="7%">
                 <col width="5%">
             </colgroup>
             <thead>
