@@ -231,9 +231,9 @@ JS_DataFinancial.prototype.edit = function (id) {
             $('#status').attr('checked', true);
             $('#editmodal').modal('show');
             myClass.loadevent();
-            $('form#frmAdd').find('#btn_create').click(function () {
-                myClass.store('form#frmAdd');
-            })
+            // $('form#frmAdd').find('#btn_create').click(function () {
+            //     myClass.store('form#frmAdd');
+            // })
         }
     });
 }
@@ -571,6 +571,9 @@ JS_DataFinancial.prototype.upNdown = function(type, id, _this){
             success: function (arrResult) {
                 if(arrResult['success'] == true){
                     row.insertBefore(row.prev());
+                    $.each(arrResult, function(key, value) {
+                        $("#span_order_" + key).html(value);
+                    });
                 }
             }, error: function(e){
                 console.log(e);
@@ -586,6 +589,9 @@ JS_DataFinancial.prototype.upNdown = function(type, id, _this){
             success: function (arrResult) {
                 if(arrResult['success'] == true){
                     row.insertAfter(row.next());
+                    $.each(arrResult, function(key, value) {
+                        $("span_order_" + key).html(value);
+                    });
                 }
             }, error: function(e){
                 console.log(e);

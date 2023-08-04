@@ -23,7 +23,7 @@ class DataFinancialController extends Controller
         CategoryService $categoryService
     ){
         $this->DataFinancialService = $DataFinancialService;
-        $this->categoryService = $categoryService;
+        $this->categoryService      = $categoryService;
     }
 
     /**
@@ -147,7 +147,7 @@ class DataFinancialController extends Controller
                         $downOrder->order = (int)$dataFinacial->order - 1;
                     }
                     $downOrder->save();
-                    return array('success' => true);
+                    return array('success' => true, $dataFinacial->id => $dataFinacial->order, $downOrder->id => $downOrder->order);
                 }
             }elseif($arrInput['type'] == 'down' && (int)$dataFinacial->order > 1){
                 $downOrder = DataFinancialModel::where('order', '<=', ((int)$dataFinacial->order - 1))->orderBy('order', 'desc')->first();
@@ -161,7 +161,7 @@ class DataFinancialController extends Controller
                         $downOrder->order = (int)$dataFinacial->order + 1;
                     }
                     $downOrder->save();
-                    return array('success' => true);
+                    return array('success' => true, $downOrder->id => $downOrder->order, $dataFinacial->id => $dataFinacial->order);
                 }
             }
         }catch(\Exception $e){

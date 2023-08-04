@@ -24,9 +24,9 @@ class UserController extends Controller
         UserService $userService,
         CategoryService $CategoryService
     ){
-        $this->userInfoService = $userInfoService;
-        $this->userService = $userService;
-        $this->CategoryService = $CategoryService;
+        $this->userInfoService  = $userInfoService;
+        $this->userService  = $userService;
+        $this->CategoryService  = $CategoryService;
     }
 
     /**
