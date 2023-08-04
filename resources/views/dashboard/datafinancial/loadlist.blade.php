@@ -44,7 +44,6 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thứ tự</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thứ tự</b></td>
                 <td><span onclick="JS_DataFinancial.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></td>
             </tr>
         </thead>
@@ -54,11 +53,9 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <tr>
                     <td style="vertical-align: middle;"align="center"><input type="checkbox" name="chk_item_id"
                             value="{{ $data->id }}"></td>
-                    <td style="vertical-align: middle;" align="center">
-                    {{($datas->currentPage() - 1)*$datas->perPage() + ($key + 1)}}
-                    <!-- <td style="vertical-align: middle;" align="center" ondblclick="" onclick="{select_row(this);}">
-                       {{$data->code_cp}}
-                    </td> -->
+                    <td class="text-center td_order_{{$id}}" style="vertical-align: middle;" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
+                        <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $data->order }}</span>
+                    </td>
                     <td class="td_code_cp_{{$id}}" style="vertical-align: middle;" align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'code_cp')">
                        <span id="span_code_cp_{{$id}}" class="span_code_cp_{{$id}}">{{$data->code_cp}}</span>
                     </td>
@@ -93,9 +90,6 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                     </td>
                     <td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">
                         <a href="{{$data->url_link}}" target="_blank"><i class="fas fa-link"></i></a>
-                    </td>
-                    <td class="text-center td_order_{{$id}}" style="vertical-align: middle;" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
-                        <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $data->order }}</span>
                     </td>
                     <td class="text-center" style="vertical-align: middle;" onclick="{select_row(this);}">
                         <span class="me-3" style="cursor: pointer;" onclick="JS_DataFinancial.upNdown('down','{{$id}}', this)"><i class="fas fa-long-arrow-alt-down"></i></span>
