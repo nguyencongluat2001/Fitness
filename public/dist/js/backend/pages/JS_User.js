@@ -115,6 +115,7 @@ JS_User.prototype.store = function (oFormCreate) {
     formdata.append('email', $("#email").val());
     formdata.append('dateBirth', $("#dateBirth").val());
     formdata.append('phone', $("#phone").val());
+    formdata.append('order', $("#order").val());
     formdata.append('address', $("#address").val());
     formdata.append('company', $("#company").val());
     formdata.append('position', $("#position").val());
@@ -431,12 +432,6 @@ JS_User.prototype.checkValidate = function(){
         $("#name").focus();
         return false;
     }
-    if ($("#phone").val() == '') {
-        var nameMessage = 'Số điện thoại không được để trống!';
-        NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
-        $("#phone").focus();
-        return false;
-    }
     if ($("#email").val() == '') {
         var nameMessage = 'Địa chỉ email không được để trống!';
         NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
@@ -447,6 +442,18 @@ JS_User.prototype.checkValidate = function(){
         var nameMessage = 'Ngày sinh không được để trống!';
         NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
         $("#dateBirth").focus();
+        return false;
+    }
+    if ($("#phone").val() == '') {
+        var nameMessage = 'Số điện thoại không được để trống!';
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
+        $("#phone").focus();
+        return false;
+    }
+    if ($("#order").val() == '') {
+        var nameMessage = 'Số thứ tự không được để trống!';
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
+        $("#order").focus();
         return false;
     }
     if ($("#id").val() == ''){
@@ -474,5 +481,107 @@ JS_User.prototype.checkValidate = function(){
         var nameMessage = 'Quyền truy cập không được để trống!';
         NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
         return false;
+    }
+}
+
+/**
+ * Sự kiện khi nhấn 2 lần vào dòng td để sửa
+ */
+function click2(id, type) {
+    $(".td_"+type+"_" + id).removeAttr('ondblclick');
+    var text = $("#span_"+type+"_" + id).html();
+    $("#"+type+"_" + id).removeAttr('hidden');
+    $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="3">'+text+'</textarea>');
+    $("#"+type+"_" + id).focus();
+    $("#span_"+type+"_" + id).removeAttr('id');
+    $("#"+type+"_" + id).focusout(function(){
+        $(".td_"+type+"_" + id).attr('ondblclick', "click2('"+id+"', '"+type+"')");
+        $("#"+type+"_" + id).attr('hidden', true);
+        $(".span_"+type+"_" + id).attr('id', 'span_'+type+'_' + id);
+        $(".span_"+type+"_" + id).html($("#"+type+"_" + id).val());
+        if(text != $(".span_" + type + '_' + id).html()){
+            JS_User.updateUser(id, type, $(".span_" + type + '_' + id).html());
+        }
+    })
+}
+/**
+ * Cập nhật khi ở màn hình hiển thị danh sách
+ */
+JS_User.prototype.updateUser = function(id, column, value = '') {
+    var myClass = this;
+    var url = myClass.urlPath + '/updateUser';
+    var data = 'id=' + id;
+    data += '&_token=' + $('#frmUsers_index #_token').val();
+    if(column == 'code_cp'){ data += '&code_cp=' + (column == 'code_cp' ? value : ""); }
+    else if(column == 'order') {data += '&order=' + value}
+    $.ajax({
+        url: url,
+        data: data,
+        type: "POST",
+        success: function (arrResult) {
+            if (arrResult['success'] == true) {
+                NclLib.alertMessageBackend('success', 'Thông báo', arrResult['message']);
+                if(column == 'order'){
+                    myClass.loadList('#frmUsers_index');
+                }
+            } else {
+                NclLib.alertMessageBackend('danger', 'Lỗi', arrResult['message']);
+                myClass.loadList('#frmUsers_index');
+            }
+        }, error: function(e){
+            console.log(e);
+            NclLib.successLoadding();
+        }
+    });
+    $("#" + id).prop('readonly');
+}
+/**
+ * Thay đổi dòng
+ */
+JS_User.prototype.upNdown = function(type, id, _this){
+    var row = $(_this).parents("tr:first");
+    var myClass = this;
+    var url = myClass.urlPath + '/upNdown';
+    var data = {
+        _token: $("#_token").val(),
+        id: id,
+        type: type
+    };
+    if(type == 'up'){
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (arrResult) {
+                if(arrResult['success'] == true){
+                    row.insertBefore(row.prev());
+                    $.each(arrResult, function(key, value) {
+                        $("#span_order_" + key).html(value);
+                    });
+                }
+            }, error: function(e){
+                console.log(e);
+                NclLib.successLoadding();
+            }
+        });
+        // row.insertBefore(row.prev());
+    }else{
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (arrResult) {
+                if(arrResult['success'] == true){
+                    row.insertAfter(row.next());
+                    $.each(arrResult, function(key, value) {
+                        $("#span_order_" + key).html(value);
+                    });
+                }
+            }, error: function(e){
+                console.log(e);
+                NclLib.successLoadding();
+            }
+        });
+        // row.insertAfter(row.next());
     }
 }

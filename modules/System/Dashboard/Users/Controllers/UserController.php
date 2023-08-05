@@ -336,6 +336,8 @@ class UserController extends Controller
         $arrInput = $request->input();
         $data = array();
         $param = $arrInput;
+        $param['sort'] = 'order';
+        $param['sortType'] = 1;
         // dd($_SESSION['role']);
         if($_SESSION['role'] == 'ADMIN'){
             $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_ADMIN','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC','USERS'];
@@ -514,5 +516,23 @@ class UserController extends Controller
         }else{
             return array('success' => false, 'message' => 'Mã nhân viên không chính xác , vui lòng thử lại!!!!');
         }
+    }
+    /**
+     * Cập nhật
+     */
+    public function updateUser(Request $request)
+    {
+        $arrInput = $request->all();
+        $data = $this->userService->_updateUser($arrInput, $arrInput['id']);
+        return $data;
+    }
+    /**
+     * Thay đổi dòng
+     */
+    public function upNdown(Request $request)
+    {
+        $arrInput = $request->all();
+        $data = $this->userService->upNdown($arrInput);
+        return $data;
     }
 }
