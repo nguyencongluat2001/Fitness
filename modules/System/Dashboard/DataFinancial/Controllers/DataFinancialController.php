@@ -136,7 +136,7 @@ class DataFinancialController extends Controller
         $arrInput = $request->all();
         $dataFinacial = $this->DataFinancialService->where('id', $arrInput['id'])->first();
         try{
-            if($arrInput['type'] == 'up'){
+            if($arrInput['type'] == 'down' && (int)$dataFinacial->order > 1){
                 $downOrder = DataFinancialModel::where('order', '>=', ((int)$dataFinacial->order + 1))->orderBy('order')->first();
                 $order = (int)$dataFinacial->order + 1;
                 $dataFinacial->order = (int)$dataFinacial->order + 1;
@@ -150,7 +150,7 @@ class DataFinancialController extends Controller
                     $downOrder->save();
                     return array('success' => true, $dataFinacial->id => $dataFinacial->order, $downOrder->id => $downOrder->order);
                 }
-            }elseif($arrInput['type'] == 'down' && (int)$dataFinacial->order > 1){
+            }elseif($arrInput['type'] == 'up'){
                 $downOrder = DataFinancialModel::where('order', '<=', ((int)$dataFinacial->order - 1))->orderBy('order', 'desc')->first();
                 $order = (int)$dataFinacial->order;
                 $dataFinacial->order = (int)$dataFinacial->order - 1;

@@ -37,6 +37,12 @@
 							<input class="form-control" type="text" value="{{!empty($data['phone'])?$data['phone']:''}}" name="phone" id="phone" placeholder="Nhập số điện thoại..." />
 						</div>
 					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<p for="example-text-input" class="form-control-label required">Thứ tự</p>
+							<input class="form-control" type="text" value="{{!empty($data['order'])?$data['order']:''}}" name="order" id="order" placeholder="Số thứ tự..." />
+						</div>
+					</div>
 					@if(!empty($data['email']) && $_SESSION["email"] == $data['email'] || $_SESSION["role"] == 'ADMIN')
 					<span id='btn_changePass'>
 						<button class="btn btn-primary btn-sm" type="button">

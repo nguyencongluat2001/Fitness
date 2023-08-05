@@ -11,7 +11,7 @@ use Modules\System\Dashboard\Users\Repositories\UserRepository;
 use Modules\System\Dashboard\Users\Services\UserInfoService;
 use Twilio\Rest\Client;
 use Modules\Base\Helpers\ForgetPassWordMailHelper;
-
+use Modules\System\Dashboard\Users\Models\UserModel;
 use Str;
 
 class UserService extends Service
@@ -44,6 +44,7 @@ class UserService extends Service
         //     }
         // }
         try{
+            $countUser = $this->repository->select('id')->count();
             $image_old = null;
             if($input['id'] != ''){
                 $user = $this->UserRepository->where('id',$input['id'])->first();
@@ -61,6 +62,7 @@ class UserService extends Service
                 'email'=> $input['email'],
                 'dateBirth'=> $input['dateBirth'],
                 'role'=>  $input['role'],
+                'order'=> isset($input['order']) ? $input['order'] : (int)$countUser + 1,
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'YE07',
                 "status" => isset($input['status']) ? 1 : 0,
             ];
@@ -76,6 +78,9 @@ class UserService extends Service
                 'color_view'=> 1,
                 'created_at'=> date("Y/m/d")
             ];
+            if(isset($input['order'])){
+                $this->updateOrder($input);
+            }
             if($input['id'] != ''){
                 $updateUser = $this->UserRepository->where('id',$input['id'])->update($arrData);
                 $userInfo = $this->UserInfoService->where('user_id',$input['id'])->first();
@@ -226,5 +231,87 @@ class UserService extends Service
         $data['otp'] = $codeOtp;
         // Gửi mail
         (new ForgetPassWordMailHelper($data['mailto'], $data['mailto'], $stringHtml, $data))->send_otp($data);
+    }
+    /**
+     * Cập nhật và thêm mới màn index
+     */
+    public function _updateUser($input, $id)
+    {
+        if(isset($input['order'])){
+            $this->updateOrder($input);
+        }
+        $dataUser = $this->repository->where('id', $id)->first();
+        $countUser = $this->repository->select('*')->get();
+        
+        // $code_cp = isset($dataUser->code_cp) ? $dataUser->code_cp : '';
+        $order = isset($dataUser) && !empty($dataUser->order) ? $dataUser->order : count($countUser) + 1;
+        $param = [
+            // 'code_cp' => isset($input['code_cp']) ? $input['code_cp'] : $code_cp,
+            'order' => isset($input['order']) ? $input['order'] : $order,
+        ];
+        if(isset($dataUser) && !empty($dataUser)){
+            $param['updated_at'] = date('Y-m-d H:i:s');
+            $this->repository->where('id',$id)->update($param);
+            return array('success' => true, 'message' => 'Cập nhật thành công!');
+        }
+    }
+    /**
+     * Cập nhật thứ tự
+     */
+    public function updateOrder($input)
+    {
+        $query = UserModel::select('*')->where('order', '>=', $input['order'])->orderBy('order');
+        if(isset($input['id'])){
+            $query = $query->where('id', '<>', $input['id']);
+        }
+        $order = $query->get();
+        if(!empty($order)){
+            $i = $input['order'];
+            foreach($order as $value){
+                $i++;
+                $this->repository->where('id', $value->id)->update(['order' => $i]);
+            }
+
+        }
+    }
+    /**
+     * Thay đổi dòng
+     */
+    public function upNdown($input)
+    {
+        $user = $this->repository->where('id', $input['id'])->first();
+        try{
+            if($input['type'] == 'down' && (int)$user->order > 1){
+                $downOrder = UserModel::where('order', '>=', ((int)$user->order + 1))->orderBy('order')->first();
+                $order = (int)$user->order + 1;
+                $user->order = (int)$user->order + 1;
+                $user->save();
+                if(!empty($downOrder)){
+                    if(($order - $downOrder->order) == 1){
+                        $downOrder->order = (int)$downOrder->order - 1;
+                    }else{
+                        $downOrder->order = (int)$user->order - 1;
+                    }
+                    $downOrder->save();
+                    return array('success' => true, $user->id => $user->order, $downOrder->id => $downOrder->order);
+                }
+            }elseif($input['type'] == 'up'){
+                $downOrder = UserModel::where('order', '<=', ((int)$user->order - 1))->orderBy('order', 'desc')->first();
+                $order = (int)$user->order;
+                $user->order = (int)$user->order - 1;
+                $user->save();
+                if(!empty($downOrder)){
+                    if(($order - $downOrder->order) == 1){
+                        $downOrder->order = (int)$downOrder->order + 1;
+                    }else{
+                        $downOrder->order = (int)$user->order + 1;
+                    }
+                    $downOrder->save();
+                    return array('success' => true, $downOrder->id => $downOrder->order, $user->id => $user->order);
+                }
+            }
+        }catch(\Exception $e){
+            return array('success' => true, 'message', $e->getMessage());
+        }
     }
 }

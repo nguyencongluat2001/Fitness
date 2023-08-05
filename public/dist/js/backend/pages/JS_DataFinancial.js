@@ -590,7 +590,7 @@ JS_DataFinancial.prototype.upNdown = function(type, id, _this){
                 if(arrResult['success'] == true){
                     row.insertAfter(row.next());
                     $.each(arrResult, function(key, value) {
-                        $("span_order_" + key).html(value);
+                        $("#span_order_" + key).html(value);
                     });
                 }
             }, error: function(e){

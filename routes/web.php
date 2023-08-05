@@ -95,6 +95,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('/createForm', [UserController::class,'createForm']);
             Route::post('/create', [UserController::class,'create']);
             Route::post('/delete', [UserController::class,'delete']);
+            Route::post('/updateUser', [UserController::class,'updateUser']);
+            Route::post('/upNdown', [UserController::class,'upNdown']);
             // Cập nhật mật khẩu
             Route::post('/changeStatus', [UserController::class,'changeStatus']);
             Route::get('/changePass', [UserController::class,'changePass']);
