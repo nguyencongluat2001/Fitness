@@ -97,7 +97,7 @@
                                 <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
                                 <input type="hidden" name="url_link" id="url_link">
                             </td>
-                            <td style="width:8%;vertical-align: middle;" align="center"><input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 40px; text-align:center"></td>
+                            <td style="width:8%;vertical-align: middle;" align="center"><input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 60px; text-align:center"></td>
                             <td style="width:5%;vertical-align: middle;" align="center">
                                 <p></p>
                                 <button id="btn_create" type="button" class="btn btn-success" title="Xem trực tuyến"><i class="fas fa-thumbs-up"></i></button>
