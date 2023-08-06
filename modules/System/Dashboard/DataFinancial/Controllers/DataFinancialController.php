@@ -11,7 +11,7 @@ use DB;
 use Modules\System\Dashboard\DataFinancial\Models\DataFinancialModel;
 
 /**
- * cẩm nang
+ * cẩm nangg
  *
  * @author Luatnc
  */
@@ -24,7 +24,6 @@ class DataFinancialController extends Controller
     ){
         $this->DataFinancialService = $DataFinancialService;
         $this->categoryService = $categoryService;
-        
     }
 
     /**
