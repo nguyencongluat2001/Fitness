@@ -4,10 +4,52 @@
     }
     body {margin:2rem;}
     td > p { overflow-y:scroll;overflow-x:hidden;} 
+    .scrollbar
+    {
+      margin-left: 30px;
+      /* float: left; */
+      height: 300px;
+      /* width: 65px; */
+      /* background: #F5F5F5; */
+      overflow-y: scroll;
+      margin-bottom: 25px;
+    }
+
+    .force-overflow
+    {
+      min-height: 300px;
+    }
+
+    #wrapper
+    {
+      text-align: center;
+      width: 500px;
+      margin: auto;
+    }
+    .tv-lightweight-charts{
+      width: 100%;
+      padding-right: var(--bs-gutter-x, 0.5rem) !important;
+      padding-left: var(--bs-gutter-x,0.5rem)!important;
+      margin-right: auto!important;
+      margin-left: auto!important;
+    }
+    /* .table{
+        border-color: #670000;
+    } */
+    .table-responsive.pmd-card.pmd-z-depth{
+      height: 100%;
+      max-height: 600px;
+    }
+    #style-1 #table-data thead tr td{
+      position: sticky;
+      top: 0;
+    }
 </style>
 {{-- @php
 use Modules\System\Recordtype\Helpers\WorkflowHelper;
 @endphp --}}
+<div id="style-1" style="padding-right:10px;">
+
 <div class="table-responsive pmd-card pmd-z-depth ">
     <!-- <div class="col-lg-6 mx-auto " style="display:flex">
         <div class="input-group pt-2 box">
@@ -34,23 +76,23 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
         </colgroup> -->
         <thead>
             <tr style="background:#151f38b3">
-                <td style="white-space: inherit;vertical-align: middle" align="center"><input type="checkbox" name="chk_all_item_id"
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><input type="checkbox" name="chk_all_item_id"
                         onclick="checkbox_all_item_id(document.forms[0].chk_item_id);"></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Mã CP</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Người đảm nhận</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian cập nhật</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng TA</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhận định Ta - Xu hướng CP</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá giao dịch</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá cắt lỗ</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thứ tự</b></td>
-                <td><span onclick="JS_DataFinancial.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Mã CP</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Người đảm nhận</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Thời gian cập nhật</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng TA</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Nhận định Ta - Xu hướng CP</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá giao dịch</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá cắt lỗ</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
+                <td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Thứ tự</b></td>
+                <td style="background:#151f38;"><span onclick="JS_DataFinancial.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></td>
             </tr>
         </thead>
         <tbody id="body_data">
@@ -117,7 +159,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
     </tfoot> -->
 </div>
 <!-- <div class="modal" id="videomodal" role="dialog"></div> -->
-
+</div>
 <script>
 function coppy(e) {
   navigator.clipboard.writeText(e);

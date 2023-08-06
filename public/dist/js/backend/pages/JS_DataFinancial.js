@@ -600,4 +600,17 @@ JS_DataFinancial.prototype.upNdown = function(type, id, _this){
         });
         // row.insertAfter(row.next());
     }
+    
+}
+/**
+     * Hàm xóa dữ liệu search
+     *
+     * @param oForm (tên form)
+     *
+     * @return void
+     */
+JS_DataFinancial.prototype.remoteSearch = function () {
+    $('#search').val('');
+    var myClass = this;
+    myClass.loadList();
 }
