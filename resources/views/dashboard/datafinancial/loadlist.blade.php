@@ -9,6 +9,12 @@
 use Modules\System\Recordtype\Helpers\WorkflowHelper;
 @endphp --}}
 <div class="table-responsive pmd-card pmd-z-depth ">
+    <div class="col-lg-6 mx-auto " style="display:flex">
+        <div class="input-group pt-2 box">
+                <input id="myInput" onkeyup="myFunction()"style="background:#f8fdffbd" type="text" class="input form-control form-control-lg rounded-pill rounded" placeholder="Tìm kiếm mã cổ phiếu,...">
+        </div>
+    </div>
+    <br>
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
         <!-- <colgroup>
             <col width="5%">
@@ -130,5 +136,26 @@ function coppy(e) {
     showConfirmButton: false,
     timer: 3000
     })
+}
+</script>
+<script>
+
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("body_data");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[2];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
 }
 </script>
