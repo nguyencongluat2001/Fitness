@@ -9,11 +9,11 @@
 use Modules\System\Recordtype\Helpers\WorkflowHelper;
 @endphp --}}
 <div class="table-responsive pmd-card pmd-z-depth ">
-    <div class="col-lg-6 mx-auto " style="display:flex">
+    <!-- <div class="col-lg-6 mx-auto " style="display:flex">
         <div class="input-group pt-2 box">
                 <input id="myInput" onkeyup="myFunction()"style="background:#f8fdffbd" type="text" class="input form-control form-control-lg rounded-pill rounded" placeholder="Tìm kiếm mã cổ phiếu,...">
         </div>
-    </div>
+    </div> -->
     <br>
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
         <!-- <colgroup>

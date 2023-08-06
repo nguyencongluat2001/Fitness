@@ -39,7 +39,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row form-group">
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                             <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
                             data-original-title="Thêm cổ phiếu"><i class="fas fa-plus"></i></button>
                             <!-- <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
@@ -47,7 +47,7 @@
                             <button class="btn btn-danger shadow-sm" id="btn_delete" type="button"data-toggle="tooltip"
                             data-original-title="Xóa cổ phiếu"><i class="fas fa-trash-alt"></i></button>
                             </div>
-                                <div class="col-md-6">
+                                <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="code_category"
                                         id="code_category">
                                         <option value=''>-- Chọn nhóm ngành HĐKD --</option>
@@ -56,7 +56,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="act"
                                         id="act">
                                         <option selected value=''>-- Chọn hành động --</option>
@@ -64,10 +64,12 @@
                                         <option value="CANH_MUA_DAN">Canh mua dần</option>
                                     </select>
                                 </div>
-                                <!-- <div class="input-group" style="width:30%;height:10%">
+                                <div class="input-group" style="width:30%;height:10%">
+                                    <!-- <span class="input-group-text text-body"><i class="fas fa-search"
+                                            aria-hidden="true"></i></span> -->
                                     <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm theo mã CP, người đảm nhận...">
                                 </div>
-                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button> -->
+                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
 
                             </div>
                             <!-- Màn hình danh sách -->
