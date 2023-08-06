@@ -1,5 +1,16 @@
 @extends('dashboard.layouts.index')
 @section('body')
+<style>
+    .form-group{
+        margin-bottom: 0rem;
+    }
+    .input-group{
+        border-radius: 20px 0%  0px 20px;
+    }
+    .icon-remote:hover {
+        color: red !important;
+    }
+</style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
     <div class="container-fluid">
         <div class="row">
@@ -14,8 +25,8 @@
                             <div class="row form-group">
                                 <div class="col-lg-12" style="padding:2px;">
                                     <!-- <h class="h4 py-2"><i class="far fa-chart-bar"></i>. <span style="font-family: auto;" > Biểu đồ</span> </h> <br> -->
-                                    <p>Nguồn theo: fireant</p>
-                                    <iframe style="width:100%" height="420" src="https://fireant.vn/charts" 
+                                    <!-- <p>Nguồn theo: fireant</p> -->
+                                    <iframe style="width:100%" height="520" src="https://fireant.vn/charts" 
                                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         allowfullscreen>
                                     </iframe>
@@ -67,20 +78,21 @@
                                 <!-- <div class="col-md-1 text-center" onclick="JS_DataFinancial.remoteSearch('1')">
                                    <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i>
                                 </div> -->
-                                <div class="input-group" style="width:30%;height:10%">
+                                <div class="input-group" style="width:30%;height:10%;background:#ffffff;padding-left:0px !important">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
                                             aria-hidden="true"></i></span> -->
                                     <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm theo mã CP, người đảm nhận...">
-                                    <div class="" onclick="JS_DataFinancial.remoteSearch('1')">
+                                    <div  onclick="JS_DataFinancial.remoteSearch('1')">
                                            <!-- <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i> -->
-                                           <i style="color:#ffb000"  class="fas fa-backspace fa-2x"></i>
+                                           <!-- <i style="padding:5px;color:#ffb000"  class="fas fa-backspace fa-2x"></i> -->
+                                           <span class="icon-remote" style="padding:10px;color:#1a1600;font-size: 20px;"> x </span>
                                     </div>
                                 </div>
-                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
+                                <button style="border-radius: 0px 10px  10px 0px;width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search" style="color: #ffbf00;"></i></button>
 
                             </div>
                             <!-- Màn hình danh sách -->
-                            <div class="row" id="table-container" style="padding-top:10px"></div>
+                            <div class="row" id="table-container"></div>
                         </div>
                     </div>
                 </section>
