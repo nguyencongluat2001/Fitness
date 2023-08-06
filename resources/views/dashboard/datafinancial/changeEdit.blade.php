@@ -75,7 +75,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td style="width:6%;vertical-align: middle;" align="center"><input id="code_cp" name="code_cp" type="text" value="{{isset($datas->code_cp)?$datas->code_cp:''}}" class="form-control"></td>
+                            <td style="width:8%;vertical-align: middle;" align="center"><input id="code_cp" name="code_cp" type="text" value="{{isset($datas->code_cp)?$datas->code_cp:''}}" class="form-control"></td>
                             <td style="width:10%;vertical-align: middle;" align="center"><input id="exchange" name="exchange" type="text" value="{{isset($datas->exchange)?$datas->exchange:''}}" class="form-control"></td>
                             <td style="width:12%;vertical-align: middle;">
                                 <select class="form-control input-sm chzn-select" name="code_category" id="code_category">
