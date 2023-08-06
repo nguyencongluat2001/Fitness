@@ -88,7 +88,7 @@ class DataFinancialController extends Controller
             if(!isset($result)){
                 $data=[
                     'status' => 2,
-                    'message' => 'Không tồn tại mã cổ phiếu '.$arrInput['code_cp'].'!',
+                    'message' => 'Không tồn tại mã cổ phiếu <span style="color:red;">'.$arrInput['code_cp'].'</span>!',
                 ];
                 return response()->json($data);
             }

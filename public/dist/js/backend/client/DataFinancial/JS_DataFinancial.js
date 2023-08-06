@@ -240,14 +240,15 @@ JS_DataFinancial.prototype.updateDataFinancial = function(id, column, value = ''
         type: "POST",
         success: function (arrResult) {
             if (arrResult['status'] == 2) {
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'warning',
-                    // background:'#dcffbe',
-                    title: arrResult['message'],
-                    showConfirmButton: false,
-                    timer: 3000
-                    })
+                $("#identify_trend_" + id).html(arrResult['message']);
+                // Swal.fire({
+                //     position: 'top-end',
+                //     icon: 'warning',
+                //     // background:'#dcffbe',
+                //     title: arrResult['message'],
+                //     showConfirmButton: false,
+                //     timer: 3000
+                //     })
             }else{
                 JS_DataFinancial.addrow(arrResult);
             }
