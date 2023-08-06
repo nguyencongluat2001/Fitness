@@ -42,7 +42,7 @@ class UserModel extends Model
                 });       
                 return $query;
             case 'role':
-                $query->whereIn('role', $value);
+                // $query->whereIn('role', $value);
                 return $query;
 
 
