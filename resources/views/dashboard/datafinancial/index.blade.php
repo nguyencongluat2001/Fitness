@@ -39,7 +39,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row form-group">
-                            <div class="col-md-3">
+                            <div class="col-md-2">
                             <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
                             data-original-title="Thêm cổ phiếu"><i class="fas fa-plus"></i></button>
                             <!-- <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
@@ -63,6 +63,9 @@
                                         <option value="MUA">Mua</option>
                                         <option value="CANH_MUA_DAN">Canh mua dần</option>
                                     </select>
+                                </div>
+                                <div class="col-md-1 text-center" onclick="JS_DataFinancial.remoteSearch('1')">
+                                   <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i>
                                 </div>
                                 <div class="input-group" style="width:30%;height:10%">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
@@ -94,5 +97,14 @@
         $(document).ready(function($) {
             JS_DataFinancial.loadIndex(baseUrl);
         })
+    </script>
+    <script>
+        var input = document.getElementById("search");
+        input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("txt_search").click();
+        }
+        });
     </script>
 @endsection
