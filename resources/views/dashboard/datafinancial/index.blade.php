@@ -92,7 +92,7 @@
 
                             </div>
                             <!-- Màn hình danh sách -->
-                            <div class="row" id="table-container"></div>
+                            <div class="row" id="table-container" style="margin-top: -15px;"></div>
                         </div>
                     </div>
                 </section>
