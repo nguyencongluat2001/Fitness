@@ -56,6 +56,7 @@ class DataFinancialController extends Controller
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'code_category,order';
+        $param['limit'] = '500';
         $objResult = $this->DataFinancialService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;

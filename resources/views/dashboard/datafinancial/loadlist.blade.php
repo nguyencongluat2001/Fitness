@@ -109,14 +109,13 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
             @endforeach
         </tbody>
     </table>
-
-    <tfoot>
+    <!-- <tfoot>
         <tr>
             <td colspan="10">
                 {{$datas->links('pagination.phantrang')}}
             </td>
         </tr>
-    </tfoot>
+    </tfoot> -->
 </div>
 <!-- <div class="modal" id="videomodal" role="dialog"></div> -->
 
