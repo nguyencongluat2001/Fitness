@@ -64,13 +64,17 @@
                                         <option value="CANH_MUA_DAN">Canh mua dần</option>
                                     </select>
                                 </div>
-                                <div class="col-md-1 text-center" onclick="JS_DataFinancial.remoteSearch('1')">
+                                <!-- <div class="col-md-1 text-center" onclick="JS_DataFinancial.remoteSearch('1')">
                                    <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i>
-                                </div>
+                                </div> -->
                                 <div class="input-group" style="width:30%;height:10%">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
                                             aria-hidden="true"></i></span> -->
                                     <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm theo mã CP, người đảm nhận...">
+                                    <div class="" onclick="JS_DataFinancial.remoteSearch('1')">
+                                           <!-- <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i> -->
+                                           <i style="color:#ffb000"  class="fas fa-backspace fa-2x"></i>
+                                    </div>
                                 </div>
                                 <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
 
