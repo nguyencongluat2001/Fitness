@@ -24,6 +24,7 @@ class DataFinancialController extends Controller
     ){
         $this->DataFinancialService = $DataFinancialService;
         $this->categoryService = $categoryService;
+        
     }
 
     /**
