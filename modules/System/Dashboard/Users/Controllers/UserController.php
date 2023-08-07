@@ -362,6 +362,12 @@ class UserController extends Controller
         if($_SESSION['role'] == 'SALE_ADMIN'){
             $param['role'] = ['SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
         }
+        if($_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN'){
+            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
+        }
+        if($_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'){
+            $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
+        }
         $objResult = $this->userService->filter($param);
 
         $data['datas'] = $objResult;
