@@ -66,6 +66,16 @@
 							<input class="form-control" type="text" value="{{!empty($data['id_personnel'])?$data['id_personnel']:''}}" name="id_personnel" id="id_personnel">
 						</div>
 					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<p for="example-text-input" class="form-control-label">Người quản lý</p>
+							<select class="form-control input-sm chzn-select" name="id_manage"id="id_manage">
+								@foreach($data['arr_quanly'] as $item)
+								    <option value="{{$item['id_personnel']}}">{{$item['name']}} - {{$item['id_personnel']}}</option>
+								@endforeach
+							</select>
+						</div>
+					</div>
 					<div class="col-md-4">
 						<div class="form-group">
 							<p for="example-text-input" class="form-control-label">Công ty</p>

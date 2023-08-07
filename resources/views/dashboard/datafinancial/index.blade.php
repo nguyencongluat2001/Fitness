@@ -10,6 +10,41 @@
     .icon-remote:hover {
         color: red !important;
     }
+    #Search{
+        width:480px;height:49px; border:3px solid black;
+        padding-left:48px;
+        padding-top:1px;
+        font-size:22px;color:blue;
+        /* background-image:url('images/search.jpg'); */
+        background-repeat:no-repeat;
+        background-position:center;outline:0;
+    }
+
+#Search::-webkit-search-cancel-button{
+    position:relative;
+    right:20px;  
+  
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+    background: red;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.4rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ffffff;
+    appearance: none;
+    border-radius: 0.5rem;
+    /* transition: box-shadow 0.15s ease, border-color 0.15s ease; */
+}
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
     <div class="container-fluid">
@@ -81,12 +116,12 @@
                                 <div class="input-group" style="width:30%;height:10%;background:#ffffff;padding-left:0px !important">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
                                             aria-hidden="true"></i></span> -->
-                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm theo mã CP, người đảm nhận...">
-                                    <div  onclick="JS_DataFinancial.remoteSearch('1')">
+                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm mã CP">
+                                    <span  onclick="JS_DataFinancial.remoteSearch('1')">
                                            <!-- <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i> -->
                                            <!-- <i style="padding:5px;color:#ffb000"  class="fas fa-backspace fa-2x"></i> -->
-                                           <span class="icon-remote" style="padding:10px;color:#1a1600;font-size: 20px;"> x </span>
-                                    </div>
+                                           <span class="icon-remote" style="padding-left:10px;color:#1a1600;font-size: 20px;"> x </span>
+                                    </span>
                                 </div>
                                 <button style="border-radius: 0px 10px  10px 0px;width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search" style="color: #ffbf00;"></i></button>
 

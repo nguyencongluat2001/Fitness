@@ -85,6 +85,8 @@ JS_User.prototype.add = function (oForm) {
         success: function (arrResult) {
             $('#editmodal').html(arrResult);
             $('#editmodal').modal('show');
+            $('.chzn-select').chosen({ height: '100%', width: '100%' });
+            $('.chzn-select').trigger('chosen:updated');
             myClass.loadevent(oForm);
 
         }
@@ -121,6 +123,7 @@ JS_User.prototype.store = function (oFormCreate) {
     formdata.append('position', $("#position").val());
     formdata.append('date_join', $("#date_join").val());
     formdata.append('id_personnel', $("#id_personnel").val());
+    formdata.append('id_manage', $("#id_manage").val());
     formdata.append('role', role);
     if($("#frmAdd #status").is(':checked')){
         formdata.append('status', 1);
@@ -237,8 +240,10 @@ JS_User.prototype.edit = function (oForm) {
         success: function (arrResult) {
             $('#editmodal').html(arrResult);
             $('#editmodal').modal('show');
+            $('.chzn-select').chosen({ height: '100%', width: '100%' });
+            $('.chzn-select').trigger('chosen:updated');
             myClass.loadevent(oForm);
-
+            
         }
     });
 }

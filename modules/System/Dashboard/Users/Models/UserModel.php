@@ -23,6 +23,7 @@ class UserModel extends Model
         'role',
         'status',
         'id_personnel',
+        'id_manage',
         'account_type_vip',
         'date_update_vip',
         'created_at',

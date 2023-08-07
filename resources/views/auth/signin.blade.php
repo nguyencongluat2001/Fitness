@@ -39,7 +39,7 @@
                                 </div>
                                 <div class="checkbox">
                                     <label>
-                                        <input id="acp_checkbox" name="acp_checkbox" type="checkbox"> Tôi chấp nhận Điều khoản sử dụng và Chính sách bảo mật. <span class="request_star">*</span>
+                                        <input checked id="acp_checkbox" name="acp_checkbox" type="checkbox"> Tôi chấp nhận Điều khoản sử dụng và Chính sách bảo mật. <span class="request_star">*</span>
                                         <span class="checkmark"></span>
                                     </label>
                                 </div>

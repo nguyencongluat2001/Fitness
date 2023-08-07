@@ -22,10 +22,10 @@
                       </span>
                       @endif
                       <!-- <div  > -->
-                          <h6 style="padding-left:10%" class="mb-0">Sáng/tối &nbsp;&nbsp;</h6></h6>
+                          <!-- <h6 style="padding-left:10%" class="mb-0">Sáng/tối &nbsp;&nbsp;</h6></h6>
                           <div  class="form-check form-switch" id="btn_checkbox">
                               <input class="form-check-input mt-1" type="checkbox" name="is_checkbox" id="dark-version"{{($_SESSION["color_view"] == '1') ? 'checked' : ''}}/>
-                          </div>
+                          </div> -->
                       <!-- </div> -->
                   <!-- </div> -->
                   <!-- <button class="btn btn-primary btn-sm ms-auto">Đổi mật khẩu</button> -->

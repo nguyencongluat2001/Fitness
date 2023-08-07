@@ -3,9 +3,9 @@
         font-size: 19px;
     }
 </style> -->
-{{-- @php
-use Modules\System\Recordtype\Helpers\WorkflowHelper;
-@endphp --}}
+@php
+use Modules\System\Dashboard\Users\Models\UserModel;
+@endphp
 <!-- <div class="container">
     <div class="row">
         <div class="col-lg-6 mx-auto " style="display:flex">
@@ -23,6 +23,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                         onclick="checkbox_all_item_id(document.forms[0].chk_item_id);"></td>
                 <td align="center"><b>STT</b></td>
                 <td align="center"><b>Thông tin người dùng</b></td>
+                <td align="center"><b>Người quản lý</b></td>
                 <td align="center"><b>Ảnh đại diện</b></td>
                 <td align="center"><b>Thứ tự</b></td>
                 <td align="center"><b>Trạng thái</b></td>
@@ -62,9 +63,16 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                            @elseif($data['role'] == 'USERS')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Khách hàng </span></div>
                            @endif
-                           <!-- <div>Quyền quản trị : <span class="animate-charcter">Quản trị hệ thống</span></div> -->
                        </div>
                         
+                    </td>
+                    <td style="width:20%;vertical-align: middle;" align="center" onclick="{select_row(this);}">
+                        <span>
+                            @php
+                                $user =  UserModel::where('id_personnel',$data['id_manage'])->first(); 
+                            @endphp
+                            {{!empty($user->id_personnel)?$user->id_personnel:''}} - {{!empty($user->name)?$user->name:''}}
+                        </span>
                     </td>
                     <td style="width:20%;vertical-align: middle;" align="center" onclick="{select_row(this);}">
                         <img  src="{{url('/file-image/avatar/')}}/{{$data['avatar']}}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;">

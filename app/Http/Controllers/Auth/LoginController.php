@@ -50,7 +50,7 @@ class LoginController extends Controller
             $getUsers = $this->userService->where('email',$email)->first();
             $getInfo = $this->userInfoService->where('user_id',$getUsers->id)->first();
             $_SESSION["role"] = $user->role;
-
+            $_SESSION["id_personnel"] = $getUsers->id_personnel;
             $_SESSION["id"]   = $getUsers->id;
             $_SESSION["email"]   = $email;
             $_SESSION["name"]   = $user->name;
