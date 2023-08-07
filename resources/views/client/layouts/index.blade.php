@@ -266,7 +266,7 @@
             </div>
         </nav>
     </div>
-    <nav id="menuClient" class=" navbar-expand-lg  shadow" style="background:#0000008a">
+    <nav id="menuClient" class=" navbar-expand-lg  shadow" style="background:#700e13">
         <div class="container d-flex justify-content-between align-items-center">
             <div class="align-self-center collapse navbar-collapse flex-fill text-center  d-lg-flex align-items-center" id="navbar-toggler-success">
                 @include('client.layouts.menu')
