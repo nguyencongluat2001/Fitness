@@ -141,7 +141,15 @@ class LoginController extends Controller
                 $menu = $value;
                 return  $menu;
             }
-            if (($user->role == 'SALE_BASIC' || $user->role == 'SALE_ADMIN') && $user->role == 'CV_ADMIN') {
+            if ($user->role == 'CV_ADMIN,SALE_BASIC') {
+                $menu = $value;
+                unset($menu['approvepayment']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                return  $menu;
+            }
+            if ($user->role == 'CV_ADMIN,SALE_ADMIN') {
                 $menu = $value;
                 unset($menu['approvepayment']);
                 unset($menu['permision']);
@@ -150,7 +158,7 @@ class LoginController extends Controller
                 return  $menu;
             }
             // sale admin lên editor
-            if ($user->role == 'SALE_ADMIN' && $user->role == 'CV_PRO') {
+            if ($user->role == 'CV_PRO,SALE_ADMIN') {
                 $menu = $value;
                 unset($menu['recommended']);
                 unset($menu['approvepayment']);
@@ -160,7 +168,7 @@ class LoginController extends Controller
                 unset($menu['handbook']);
                 return  $menu;
             }
-            if ($user->role == 'SALE_ADMIN' && $user->role == 'CV_BASIC') {
+            if ($user->role == 'CV_BASIC,SALE_ADMIN') {
                 $menu = $value;
                 unset($menu['recommended']);
                 unset($menu['datafinancial']);
@@ -176,7 +184,7 @@ class LoginController extends Controller
                 return  $menu;
             }
             // sale lên editor
-            if ($user->role == 'SALE_BASIC' && $user->role == 'CV_PRO') {
+            if ($user->role == 'CV_PRO,SALE_BASIC') {
                 $menu = $value;
                 unset($menu['users']);
                 unset($menu['approvepayment']);
@@ -185,7 +193,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 return  $menu;
             }
-            if ($user->role == 'SALE_BASIC' && $user->role == 'CV_BASIC') {
+            if ($user->role == 'CV_BASIC,SALE_BASIC') {
                 $menu = $value;
                 unset($menu['recommended']);
                 unset($menu['datafinancial']);
