@@ -15,16 +15,16 @@
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
         <table  id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;">
             <colgroup>
-                <col width="2%">
-                <col width="5%">
-                <col width="4%">
-                <col width="6%">
-                <col width="6%">
                 <col width="3%">
-                <col width="12%">
                 <col width="7%">
                 <col width="5%">
-                <col width="3%">
+                <col width="10%">
+                <col width="8%">
+                <col width="7%">
+                <col width="30%">
+                <col width="10%">
+                <col width="8%">
+                <col width="7%">
                 <col width="5%">
             </colgroup>
             <thead>
@@ -50,40 +50,85 @@
                             <span >1</span>
                         </td>
                         <td class="td_code_cp_1 tdfull" style="vertical-align: middle;" align="center" onclick="click2('1', 'code_cp',this)">
-                            <span id="span_code_cp_1" class="span_code_cp_1 text-success">-</span>
+                            <span id="span_code_cp_1" class="span_code_cp_1 text-success"></span>
                         </td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;" id="identify_trend_1">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
                     </tr>
                     <tr id="code_2">
                         <td  style="vertical-align: middle;color:#83beff" align="center">
                             <span >2</span>
                         </td>
                         <td class="td_code_cp_2 tdfull" style="vertical-align: middle;" align="center" onclick="click2('2', 'code_cp',this)">
-                            <span id="span_code_cp_2" class="span_code_cp_2 text-success">-</span>
+                            <span id="span_code_cp_2" class="span_code_cp_2 text-success"></span>
                         </td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;" id="identify_trend_2">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
                     </tr>
                     <tr id="code_3">
                         <td  style="vertical-align: middle;color:#83beff" align="center">
                             <span >3</span>
                         </td>
                         <td class="td_code_cp_3 tdfull" style="vertical-align: middle;" align="center" onclick="click2('3', 'code_cp',this)">
-                            <span id="span_code_cp_3" class="span_code_cp_3 text-success">-</span>
+                            <span id="span_code_cp_3" class="span_code_cp_3 text-success"></span>
                         </td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;" id="identify_trend_3">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
                     </tr>
                     <tr id="code_4">
                         <td  style="vertical-align: middle;color:#83beff" align="center">
                             <span >4</span>
                         </td>
                         <td class="td_code_cp_4 tdfull" style="vertical-align: middle;" align="center" onclick="click2('4', 'code_cp',this)">
-                            <span id="span_code_cp_4" class="span_code_cp_4 text-success">-</span>
+                            <span id="span_code_cp_4" class="span_code_cp_4 text-success"></span>
                         </td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;" id="identify_trend_4">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
                     </tr>
                     <tr id="code_5">
                         <td  style="vertical-align: middle;color:#83beff" align="center">
                             <span >5</span>
                         </td>
                         <td class="td_code_cp_5 tdfull" style="vertical-align: middle;" align="center" onclick="click2('5', 'code_cp',this)">
-                            <span id="span_code_cp_5" class="span_code_cp_5 text-success">-</span>
+                            <span id="span_code_cp_5" class="span_code_cp_5 text-success"></span>
                         </td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;" id="identify_trend_5">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
+                        <td align="center" style="vertical-align: middle;">-</td>
                     </tr>
             </tbody>
         </table>
