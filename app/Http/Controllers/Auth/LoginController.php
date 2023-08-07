@@ -48,6 +48,10 @@ class LoginController extends Controller
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             $user = Auth::user();
             $getUsers = $this->userService->where('email',$email)->first();
+            if($getUsers->status != 1){
+                $data['message'] = "Tài khoản bạn đã bị vô hiệu hóa!";
+                return view('auth.signin',compact('data'));
+            }
             $getInfo = $this->userInfoService->where('user_id',$getUsers->id)->first();
             $_SESSION["role"] = $user->role;
             $_SESSION["id_personnel"] = $getUsers->id_personnel;
