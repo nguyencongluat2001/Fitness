@@ -101,6 +101,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <tr>
                     <td style="vertical-align: middle;"align="center"><input type="checkbox" name="chk_item_id"
                             value="{{ $data->id }}"></td>
+                    @if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE' || $_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN'))
                     <td class="text-center td_order_{{$id}}" style="vertical-align: middle;" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
                         <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $data->order }}</span>
                     </td>
@@ -112,6 +113,20 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                     </td>
                     <td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">{{!empty($data->category) ? $data->category->name_category : ''}}</td>
                     <td style="vertical-align: middle;white-space: inherit;" align="center">
+                    @else
+                    <td  style="vertical-align: middle;"  align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
+                        <span>{{ $data->order }}</span>
+                    </td>
+                    <td  style="vertical-align: middle;" align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'code_cp')">
+                       <span>{{$data->code_cp}}</span>
+                    </td>
+                    <td  style="vertical-align: middle;" align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'exchange')">
+                       <span>{{$data->exchange}}</span>
+                    </td>
+                    <td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">{{!empty($data->category) ? $data->category->name_category : ''}}</td>
+                    <td align="center">
+                    @endif
+
                     @if(isset($data->Users->name))
                     {{$data->Users->name}}
                     @endif
