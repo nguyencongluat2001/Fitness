@@ -13,7 +13,7 @@
 <form id="frmSearchCP"  role="form" action="" method="POST">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
-        <table  id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;">
+        <table  id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" @if(!isset($_SESSION['id'])) onclick="JS_DataFinancial.checkLogin()" @endif>
             <colgroup>
                 <col width="3%">
                 <col width="7%">
@@ -50,7 +50,7 @@
                             <span >1</span>
                         </td>
                         <td class="td_code_cp_1 tdfull" style="vertical-align: middle;" align="center" onclick="click2('1', 'code_cp',this)">
-                            <span id="span_code_cp_1" class="span_code_cp_1 text-success"></span>
+                            <span id="span_code_cp_1" class="span_code_cp_1 text-success text-uppercase"></span>
                         </td>
                         <td align="center" style="vertical-align: middle;">-</td>
                         <td align="center" style="vertical-align: middle;">-</td>
@@ -67,7 +67,7 @@
                             <span >2</span>
                         </td>
                         <td class="td_code_cp_2 tdfull" style="vertical-align: middle;" align="center" onclick="click2('2', 'code_cp',this)">
-                            <span id="span_code_cp_2" class="span_code_cp_2 text-success"></span>
+                            <span id="span_code_cp_2" class="span_code_cp_2 text-success text-uppercase"></span>
                         </td>
                         <td align="center" style="vertical-align: middle;">-</td>
                         <td align="center" style="vertical-align: middle;">-</td>
@@ -84,7 +84,7 @@
                             <span >3</span>
                         </td>
                         <td class="td_code_cp_3 tdfull" style="vertical-align: middle;" align="center" onclick="click2('3', 'code_cp',this)">
-                            <span id="span_code_cp_3" class="span_code_cp_3 text-success"></span>
+                            <span id="span_code_cp_3" class="span_code_cp_3 text-success text-uppercase"></span>
                         </td>
                         <td align="center" style="vertical-align: middle;">-</td>
                         <td align="center" style="vertical-align: middle;">-</td>
@@ -101,7 +101,7 @@
                             <span >4</span>
                         </td>
                         <td class="td_code_cp_4 tdfull" style="vertical-align: middle;" align="center" onclick="click2('4', 'code_cp',this)">
-                            <span id="span_code_cp_4" class="span_code_cp_4 text-success"></span>
+                            <span id="span_code_cp_4" class="span_code_cp_4 text-success text-uppercase"></span>
                         </td>
                         <td align="center" style="vertical-align: middle;">-</td>
                         <td align="center" style="vertical-align: middle;">-</td>
@@ -118,7 +118,7 @@
                             <span >5</span>
                         </td>
                         <td class="td_code_cp_5 tdfull" style="vertical-align: middle;" align="center" onclick="click2('5', 'code_cp',this)">
-                            <span id="span_code_cp_5" class="span_code_cp_5 text-success"></span>
+                            <span id="span_code_cp_5" class="span_code_cp_5 text-success text-uppercase"></span>
                         </td>
                         <td align="center" style="vertical-align: middle;">-</td>
                         <td align="center" style="vertical-align: middle;">-</td>

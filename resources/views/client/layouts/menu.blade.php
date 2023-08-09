@@ -14,7 +14,8 @@
     </ul>
 
     @foreach($menuItems as $key => $value)
-    @if(!empty($value['child']) && strpos($_SERVER['REQUEST_URI'], $key))
+    @php if($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '') $_SERVER['REQUEST_URI'] = 'datafinancial'; @endphp
+    @if(!empty($value['child']) && strpos($_SERVER['REQUEST_URI'], $key) !== false)
     <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient">
         <div class="" id="navbar-toggler-success">
             <div class="" style="border-radius:50%;margin:auto">
