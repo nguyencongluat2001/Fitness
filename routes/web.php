@@ -58,6 +58,12 @@ use Modules\System\Dashboard\UserLog\Controllers\UserLogController;
 // Route::get('/register', function () {
 //     return view('auth.register');
 // });
+//Login quan tri
+Route::get('/adminFinTop/login', [LoginController::class, 'logoutAdmin']);
+Route::post('/system/homeAdmin', [LoginController::class, 'checkLoginAdmin'])->name('checkLoginAdmin');
+Route::post('/logoutAdmin', [LoginController::class, 'logoutAdmin'])->name('logoutAdmin');
+
+
 Route::get('/404_notFound', function () {
     return view('dashboard.home.404_notFound');
 })->name('404_notFound');
