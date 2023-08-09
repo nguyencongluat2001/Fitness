@@ -357,6 +357,140 @@ class UserController extends Controller
                     ]
                     
                 ];
+             }elseif($_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' =>  'CV - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                        'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                        'status' =>  0,
+                    ],
+                    
+                ];
+            }elseif($_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' =>  'CV - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                        'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                        'status' =>  0,
+                    ],
+                    
+                ];
+            }elseif($_SESSION['role'] == 'CV_PRO,SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                        'status' =>  0,
+                    ]
+                    
+                ];
+            }
+            elseif($_SESSION['role'] == 'CV_BASIC,SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                        'status' =>  0,
+                    ]
+                    
+                ];
+            }elseif($_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' =>  'CV - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                        'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                        'status' =>  0,
+                    ],
+                    
+                ];
+            }elseif($_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'CV_ADMIN',
+                        'name_category' =>  'CV - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'CV_PRO',
+                        'name_category' => 'CV - Pro',
+                        'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'CV_BASIC',
+                        'name_category' =>  'CV - basic',
+                        'status' =>  0,
+                    ],
+                    
+                ];
+            }elseif($_SESSION['role'] == 'CV_PRO,SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                        'status' =>  0,
+                    ]
+                    
+                ];
+            }
+            elseif($_SESSION['role'] == 'CV_BASIC,SALE_ADMIN'){
+                $quyen = [
+                    0 => [
+                        'code_category' => 'SALE_ADMIN',
+                        'name_category' =>  'Sale - Admin',
+                        'status' =>  0,
+                    ],
+                    1 => [
+                        'code_category' => 'SALE_BASIC',
+                        'name_category' => 'Sale',
+                        'status' =>  0,
+                    ]
+                    
+                ];
             }
         }
         foreach($quyen as $value){

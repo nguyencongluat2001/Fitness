@@ -132,7 +132,7 @@
 					@endif --}}
 					{{-- Quyền truy cập --}}
 					<div class="row form-group">
-						<span class="col-md-3 control-label required" >Chuyên khoa</span>
+						<span class="col-md-3 control-label required" >Quyền</span>
 						<div class="col-md-8">
 							@foreach($data['cate_quyen'] as $item)
 								<input type="checkbox" value="{{$item['code_category']}}" name="role" id="role" {{($item['status'] == '1') ? 'checked' : ''}}/>
