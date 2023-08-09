@@ -244,14 +244,18 @@ JS_DataFinancial.prototype.updateDataFinancial = function (id, column, value = '
                     title: arrResult['message'],
                     showCloseButton: true,
                     confirmButtonText: "Đăng nhập",
-                    confirmButtonColor: "#00ad34",
+                    confirmButtonColor: "rgb(31 140 64)",
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.replace('/login');
                     }
                 })
-                $(".swal2-modal").css('background-color', '#700e13');
+                // $(".swal2-modal").css('background-color', '#700e13');
+                // $(".swal2-modal").css('color', '#ffffff');
+                $(".swal2-modal").css('background-color', 'rgb(112 14 14 / 83%)');
                 $(".swal2-modal").css('color', '#ffffff');
+                $(".swal2-modal").css('font-size', '15px');
+                $(".swal2-modal").css('font-family', 'FontAwesome');
             }
             else if (arrResult['status'] == 2) {
                 $("#identify_trend_" + id).html(arrResult['message']);
@@ -327,12 +331,14 @@ JS_DataFinancial.prototype.checkLogin = function(){
         title: 'Vui lòng đăng nhập để tra cứu!',
         showCloseButton: true,
         confirmButtonText: "Đăng nhập",
-        confirmButtonColor: "#00ad34",
+        confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {
         if (result.isConfirmed) {
             window.location.replace('/login');
         }
     })
-    $(".swal2-modal").css('background-color', '#700e13');
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14 / 83%)');
     $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
 }
