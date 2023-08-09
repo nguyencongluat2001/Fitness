@@ -21,7 +21,7 @@ JS_DataFinancial.prototype.loadIndex = function () {
     myClass.index();
     myClass.loadData(oFormData);
     $(oForm).find('#search_code_CP').click(function () {
-            myClass.searchDataCP(oForm);        
+        myClass.searchDataCP(oForm);
     });
 }
 JS_DataFinancial.prototype.loadevent = function (oForm) {
@@ -46,7 +46,7 @@ JS_DataFinancial.prototype.fireAntChart = function () {
     var oForm = 'form#frmDataFinancial_index';
 
     var data = $(oForm).serialize();
-    data += '&_token=' +  $('#_token').val();
+    data += '&_token=' + $('#_token').val();
 
     $.ajax({
         url: url,
@@ -65,52 +65,52 @@ JS_DataFinancial.prototype.fireAntChart = function () {
 /**
  * Thêm một dòng mới trên danh sách
  */
-JS_DataFinancial.prototype.addrow = function(arrResult) {
+JS_DataFinancial.prototype.addrow = function (arrResult) {
     var id = broofa();
     var created_at = moment(arrResult.created_at).format('HH') + 'h' + moment(arrResult.created_at).format('mm DD/MM/YYYY');
     var html = '';
     // stt
     html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
-     // code_cp
+    // code_cp
     html += '<td style="vertical-align: middle;" align="center" class="td_code_cp_' + arrResult.id + '" ondblclick="click2(\'' + arrResult.id + '\', \'code_cp\')">';
-    html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">'+arrResult.code_cp+'</span>';
+    html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">' + arrResult.code_cp + '</span>';
     html += '</td>';
     // exchange
     html += '<td class="td_exchange_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
-    html += '<span id="span_exchange_' + arrResult.id + '" class="span_exchange_' + arrResult.id + '">'+arrResult.exchange+'</span>';
+    html += '<span id="span_exchange_' + arrResult.id + '" class="span_exchange_' + arrResult.id + '">' + arrResult.exchange + '</span>';
     html += '</td>';
     // code_category
     html += '<td class="td_code_category_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
-    html += '<span id="span_code_category_' + arrResult.id + '" class="span_code_category_' + arrResult.id + '">'+arrResult.code_category+'</span>';
+    html += '<span id="span_code_category_' + arrResult.id + '" class="span_code_category_' + arrResult.id + '">' + arrResult.code_category + '</span>';
     html += '</td>';
     // created_at
     html += '<td class="td_created_at_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
-    html += '<span id="span_created_at_' + arrResult.id + '" class="span_created_at_' + arrResult.id + '">'+created_at+'</span>';
+    html += '<span id="span_created_at_' + arrResult.id + '" class="span_created_at_' + arrResult.id + '">' + created_at + '</span>';
     html += '</td>';
     // ratings_TA
     html += '<td class="td_ratings_TA_' + arrResult.id + '" style="vertical-align: middle;color:#ff7c00" align="center">';
-    html += '<span id="span_ratings_TA_' + arrResult.id + '" class="span_ratings_TA_' + arrResult.id + '"><b>'+arrResult.ratings_TA+'</b></span>';
+    html += '<span id="span_ratings_TA_' + arrResult.id + '" class="span_ratings_TA_' + arrResult.id + '"><b>' + arrResult.ratings_TA + '</b></span>';
     html += '</td>';
     // identify_trend
     html += '<td class="td_identify_trend_' + arrResult.id + '" style="vertical-align: middle;background:#a3f1fe5e" align="center">';
-    html += '<span id="span_identify_trend_' + arrResult.id + '" class="span_identify_trend_' + arrResult.id + '">'+arrResult.identify_trend+'</span>';
+    html += '<span id="span_identify_trend_' + arrResult.id + '" class="span_identify_trend_' + arrResult.id + '">' + arrResult.identify_trend + '</span>';
     html += '</td>';
     // act
     html += '<td class="td_act_' + arrResult.id + '" style="vertical-align: middle;background:#ffb75c" align="center">';
-    html += '<span id="span_act_' + arrResult.id + '" class="span_act_' + arrResult.id + '"><b>'+arrResult.act+'</b></span>';
+    html += '<span id="span_act_' + arrResult.id + '" class="span_act_' + arrResult.id + '"><b>' + arrResult.act + '</b></span>';
     html += '</td>';
     // trading_price_range
     html += '<td class="td_trading_price_range_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
-    html += '<span id="span_trading_price_range_' + arrResult.id + '" class="span_trading_price_range_' + arrResult.id + '"><b>'+arrResult.trading_price_range+'</b></span>';
+    html += '<span id="span_trading_price_range_' + arrResult.id + '" class="span_trading_price_range_' + arrResult.id + '"><b>' + arrResult.trading_price_range + '</b></span>';
     html += '</td>';
     // ratings_FA
     html += '<td class="td_ratings_FA_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
-    html += '<span id="span_ratings_FA_' + arrResult.id + '" class="span_ratings_FA_' + arrResult.id + '"><b>'+arrResult.ratings_FA+'</b></span>';
+    html += '<span id="span_ratings_FA_' + arrResult.id + '" class="span_ratings_FA_' + arrResult.id + '"><b>' + arrResult.ratings_FA + '</b></span>';
     html += '</td>';
 
     html += '<td style="vertical-align: middle;" align="center"><span class="text-cursor text-warning" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> <i class="far fa-eye"></i></span></td>';
     // html += '</tr>';
-    $('#code_'+arrResult.id).html(html);
+    $('#code_' + arrResult.id).html(html);
     // if($("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() === undefined && $("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() !== '-' && (parseInt(arrResult.id) + 1) <= 5){
     //     $('#body_data').append(
     //         '<tr id="code_' + (parseInt(arrResult.id) + 1) + '">'
@@ -161,7 +161,7 @@ JS_DataFinancial.prototype.loadData = function (oForm) {
     var myClass = this;
     var url = this.urlPath + '/loadData';
     var data = $(oForm).serialize();
-    data += '&limit=' +  5;
+    data += '&limit=' + 5;
     $.ajax({
         url: url,
         type: "POST",
@@ -206,19 +206,19 @@ JS_DataFinancial.prototype.edit = function (id) {
  */
 function click2(id, type) {
     var text = $("#span_" + type + "_" + id).html();
-    $("#"+type+"_" + id).removeAttr('hidden');
+    $("#" + type + "_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
-    $("#span_"+type+"_" + id).html(`<input class="text-uppercase" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
-    $("#"+type+"_" + id).focus();
-    $(".td_"+type+"_" + id).removeAttr('onclick');
-    $("#span_"+type+"_" + id).removeAttr('id');
-    $("#"+type+"_" + id).focusout(function(){
-        var nhap = $("#"+type+"_" + id).val() != '' ? $("#"+type+"_" + id).val() : text;
-        $("#"+type+"_" + id).attr('hidden', true);
-        $(".span_"+type+"_" + id).attr('id', 'span_'+type+'_' + id);
-        $(".td_"+type+"_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
-        $(".span_"+type+"_" + id).html(nhap);
-        if(text != $(".span_" + type + "_" + id).html()){
+    $("#span_" + type + "_" + id).html(`<input class="text-uppercase" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    $("#" + type + "_" + id).focus();
+    $(".td_" + type + "_" + id).removeAttr('onclick');
+    $("#span_" + type + "_" + id).removeAttr('id');
+    $("#" + type + "_" + id).focusout(function () {
+        var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
+        $("#" + type + "_" + id).attr('hidden', true);
+        $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
+        $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
+        $(".span_" + type + "_" + id).html(nhap);
+        if (text != $(".span_" + type + "_" + id).html()) {
             JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
         }
     })
@@ -226,33 +226,39 @@ function click2(id, type) {
 /**
  * Cập nhật khi ở màn hình hiển thị danh sách
  */
-JS_DataFinancial.prototype.updateDataFinancial = function(id, column, value = '') {
+JS_DataFinancial.prototype.updateDataFinancial = function (id, column, value = '') {
     var myClass = this;
     var url = myClass.urlPath + '/searchDataCP';
     var data = 'id=' + id;
     data += '&_token=' + $('#frmSearchCP').find('#_token').val();
-    if(column == 'code_cp'){ data += '&code_cp=' + (column == 'code_cp' && $("#code_cp_" + id).val() != undefined ? $("#code_cp_" + id).val() : value); }
-    else if(column == 'status') {data += '&status=' + value}
+    if (column == 'code_cp') { data += '&code_cp=' + (column == 'code_cp' && $("#code_cp_" + id).val() != undefined ? $("#code_cp_" + id).val() : value); }
+    else if (column == 'status') { data += '&status=' + value }
     NclLib.loadding();
     $.ajax({
         url: url,
         data: data,
         type: "POST",
         success: function (arrResult) {
-            if (arrResult['status'] == 2) {
+            if (arrResult['status'] == 401) {
+                Swal.fire({
+                    title: arrResult['message'],
+                    showCloseButton: true,
+                    confirmButtonText: "Đăng nhập",
+                    confirmButtonColor: "#00ad34",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.replace('/login');
+                    }
+                })
+                $(".swal2-modal").css('background-color', '#700e13');
+                $(".swal2-modal").css('color', '#ffffff');
+            }
+            else if (arrResult['status'] == 2) {
                 $("#identify_trend_" + id).html(arrResult['message']);
-                // Swal.fire({
-                //     position: 'top-end',
-                //     icon: 'warning',
-                //     // background:'#dcffbe',
-                //     title: arrResult['message'],
-                //     showConfirmButton: false,
-                //     timer: 3000
-                //     })
-            }else{
+            } else {
                 JS_DataFinancial.addrow(arrResult);
             }
-        }, error: function(e){
+        }, error: function (e) {
             console.log(e);
             NclLib.successLoadding();
         }
@@ -261,7 +267,7 @@ JS_DataFinancial.prototype.updateDataFinancial = function(id, column, value = ''
 /**
  * Cập nhật khi ở màn hình hiển thị danh sách
  */
-JS_DataFinancial.prototype.searchDataCP = function(oFormData) {
+JS_DataFinancial.prototype.searchDataCP = function (oFormData) {
     var myClass = this;
     var url = myClass.urlPath + '/searchDataCP';
     var data = $(oFormData).serialize();
@@ -278,11 +284,11 @@ JS_DataFinancial.prototype.searchDataCP = function(oFormData) {
                     title: arrResult['message'],
                     showConfirmButton: false,
                     timer: 3000
-                    })
-            }else{
+                })
+            } else {
                 JS_DataFinancial.addrow(arrResult);
             }
-        }, error: function(e){
+        }, error: function (e) {
             console.log(e);
             NclLib.successLoadding();
         }
@@ -315,4 +321,18 @@ JS_DataFinancial.prototype.noteTaFa = function () {
 
         }
     });
+}
+JS_DataFinancial.prototype.checkLogin = function(){
+    Swal.fire({
+        title: 'Vui lòng đăng nhập để tra cứu!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng nhập",
+        confirmButtonColor: "#00ad34",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/login');
+        }
+    })
+    $(".swal2-modal").css('background-color', '#700e13');
+    $(".swal2-modal").css('color', '#ffffff');
 }

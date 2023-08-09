@@ -80,15 +80,15 @@ class DataFinancialController extends Controller
         if($arrInput['code_cp'] != ''){
             if(!Auth::check()){
                 $data=[
-                    'status' => 2,
-                    'message' => 'Vui lòng đăng nhập để tra cứu cổ phiếu!',
+                    'status' => 401,
+                    'message' => 'Vui lòng đăng nhập để tra cứu!',
                 ];
                 return response()->json($data);
             }
             if(!isset($result)){
                 $data=[
                     'status' => 2,
-                    'message' => 'Không tồn tại mã cổ phiếu <span style="color:red;">'.$arrInput['code_cp'].'</span>!',
+                    'message' => 'Chưa có dữ liệu cổ phiếu này, vui lòng tiếp tục tra cứu!',
                 ];
                 return response()->json($data);
             }
