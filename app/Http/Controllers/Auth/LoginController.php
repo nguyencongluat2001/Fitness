@@ -167,6 +167,7 @@ class LoginController extends Controller
     {
         // session_unset();
         Auth::logout();
+        session_destroy();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return view('auth.signin');
@@ -176,6 +177,7 @@ class LoginController extends Controller
     {
         // session_unset();
         Auth::logout();
+        session_destroy();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return view('auth.signinAdmin');
