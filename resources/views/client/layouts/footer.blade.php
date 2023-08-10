@@ -5,7 +5,7 @@
                 <h2 class="h4 text-light light-300" style="height: 5rem;">
                     <img src="../clients/img/LogoFinTop_red.png" alt="Card image" width="10%">
                     <span style="color:#ff0000d1">
-                        <b style="font-family: auto;color:#ff000091;font-weight: 600;animation: lights 10s 750ms linear infinite;">Công ty TNHH Đầu tư & Phát triển FinTop</b>
+                        <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;">Công ty TNHH Đầu tư & Phát triển FinTop</b>
                     </span>
                 </h2>
                 <table class="text-light">
@@ -16,19 +16,15 @@
                     <tbody>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-phone-volume"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" href="tel:086.234.8886"> 086.234.8886</a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" href="tel:086.234.8886"> Hotline: 086.234.8886</a></td>
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-envelope"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" href="mailto:FinTop.DVKH@gmail.com"> FinTop.DVKH@gmail.com</a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" href="mailto:FinTop.DVKH@gmail.com"> Email: FinTop.DVKH@gmail.com</a></td>
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-map-marker-alt"></i></td>
-                            <td><span class="text-decoration-none pt-2 text-light py-1"> Trụ sở Hà Nội: 121/26 Thái Hà, P. Trung Liệt, Q. Đống Đa, Hà Nội</span></td>
-                        </tr>
-                        <tr>
-                            <td align="center" style="vertical-align: middle;"><i class="fas fa-house-user"></i></td>
-                            <td><span class="text-decoration-none pt-2 text-light py-1"> Văn phòng HCM: 383 Võ Văn Tần, P. 5, Q. 3, TP. Hồ Chí Minh</span></td>
+                            <td><span class="text-decoration-none pt-2 text-light py-1">Địa chỉ: 76/24 Nguyễn Chí Thanh, P. Láng Thượng, Q. Đống Đa, Hà Nội</span></td>
                         </tr>
                     </tbody>
                 </table>

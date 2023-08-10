@@ -82,6 +82,7 @@ class LoginController extends Controller
                 Auth::login($user);
                 return redirect('client/datafinancial/index');
             }else{
+                Auth::logout();
                 $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
                 return view('auth.signin',compact('data'));
             }
@@ -134,6 +135,7 @@ class LoginController extends Controller
                 Auth::login($user);
                 return redirect('system/home/index');
             }else{
+                Auth::logout();
                 $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
                 return view('auth.signinAdmin',compact('data'));
             }

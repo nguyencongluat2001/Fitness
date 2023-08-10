@@ -328,7 +328,7 @@ JS_DataFinancial.prototype.noteTaFa = function () {
 }
 JS_DataFinancial.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Vui lòng đăng nhập để tra cứu!',
+        title: 'Đăng nhập để tra cứu miễn phí!',
         showCloseButton: true,
         confirmButtonText: "Đăng nhập",
         confirmButtonColor: "rgb(31 140 64)",
