@@ -208,20 +208,28 @@ function click2(id, type) {
     var text = $("#span_" + type + "_" + id).html();
     $("#" + type + "_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
-    $("#span_" + type + "_" + id).html(`<input class="text-uppercase" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
     $("#" + type + "_" + id).focus();
     $(".td_" + type + "_" + id).removeAttr('onclick');
     $("#span_" + type + "_" + id).removeAttr('id');
-    $("#" + type + "_" + id).focusout(function () {
-        var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
-        $("#" + type + "_" + id).attr('hidden', true);
-        $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
-        $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
-        $(".span_" + type + "_" + id).html(nhap);
-        if (text != $(".span_" + type + "_" + id).html()) {
+    
+    $(".code_cp").keyup(function(){
+        if($(".code_cp").val().length == 3){
             JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
         }
     })
+    if($(".code_cp").val().length !== 3 || $("#span_code_cp_" + id).val().length !== 3){
+        $("#" + type + "_" + id).focusout(function () {
+            var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
+            $("#" + type + "_" + id).attr('hidden', true);
+            $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
+            $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
+            $(".span_" + type + "_" + id).html(nhap);
+            if (text != $(".span_" + type + "_" + id).html()) {
+                JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
+            }
+        })
+    }
 }
 /**
  * Cập nhật khi ở màn hình hiển thị danh sách
