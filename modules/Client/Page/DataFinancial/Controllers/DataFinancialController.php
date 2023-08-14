@@ -106,9 +106,12 @@ class DataFinancialController extends Controller
                 'ratings_FA'=>$result->ratings_FA,
                 'url_link'=>$result->url_link,
                 'status'=>$result->status,
-                'created_at'=>$result->created_at,
+                'created_at'=> date('H:i:s', strtotime($result->created_at)),
+                'created_at_day'=> date('d/m', strtotime($result->created_at)),
+                // 'created_at'=>$result->created_at,
                 'updated_at'=>$result->updated_at
             ];
+            // dd($data);
             return response()->json($data);
         }
         

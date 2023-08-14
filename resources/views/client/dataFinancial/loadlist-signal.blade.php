@@ -85,7 +85,7 @@
                   <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
               </tr>
           </thead>
-            <tbody id="body_data">
+            <tbody id="body_data" style="background:#dbead3">
             @if(Auth::check())
             @foreach ($datas as $key => $data)
                  @php $id = $data->id; @endphp
@@ -123,7 +123,7 @@
                           <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
                         </td>
                         <td style="width: 5%;vertical-align: middle;" align="center">
-                          <a href="javascript:;">Xem chi tiết</a>
+                          <a href="javascript:;">Chi tiết</a>
                         </td>
                     </tr>
                 @endforeach
