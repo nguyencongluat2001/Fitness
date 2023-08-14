@@ -34,7 +34,7 @@
                 </tr> -->
                 <tr>
                     <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#fff5dc;color:#dd0000;" align="center" colspan="2">NHẬP MÃ CP</th>
-                    <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#ffe93b" align="center" colspan="8"> <center>TRA CỨU CHỨNG KHOÁN (TA - FA)</center></th>
+                    <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#fff079" align="center" colspan="8"> <center>TRA CỨU CHỨNG KHOÁN (TA - FA)</center></th>
                 </tr>
                 <tr style="background:#529845;color:white">
                     <!-- <td style="white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td> -->
