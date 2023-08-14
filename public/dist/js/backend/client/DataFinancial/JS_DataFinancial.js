@@ -67,10 +67,10 @@ JS_DataFinancial.prototype.fireAntChart = function () {
  */
 JS_DataFinancial.prototype.addrow = function (arrResult) {
     var id = broofa();
-    var created_at = moment(arrResult.created_at).format('DD/MM/YYYY');
+    // var created_at = moment(arrResult.created_at).format('DD/MM/YYYY');
     var html = '';
     // stt
-    html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
+    // html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
     // code_cp
     html += '<td style="vertical-align: middle;" align="center" class="tdfull td_code_cp_' + arrResult.id + '" ondblclick="click2(\'' + arrResult.id + '\', \'code_cp\')">';
     html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">' + arrResult.code_cp + '</span>';
@@ -85,7 +85,7 @@ JS_DataFinancial.prototype.addrow = function (arrResult) {
     html += '</td>';
     // created_at
     html += '<td class="td_created_at_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
-    html += '<span id="span_created_at_' + arrResult.id + '" class="span_created_at_' + arrResult.id + '">' + created_at + '</span>';
+    html += '<span id="span_created_at_' + arrResult.id + '" class="span_created_at_' + arrResult.id + '">' + arrResult.created_at + '<br>' + arrResult.created_at_day +'</span>';
     html += '</td>';
     // ratings_TA
     html += '<td class="td_ratings_TA_' + arrResult.id + '" style="vertical-align: middle;color:#ff7c00" align="center">';
@@ -108,7 +108,7 @@ JS_DataFinancial.prototype.addrow = function (arrResult) {
     html += '<span id="span_ratings_FA_' + arrResult.id + '" class="span_ratings_FA_' + arrResult.id + '"><b>' + arrResult.ratings_FA + '</b></span>';
     html += '</td>';
 
-    html += '<td style="vertical-align: middle;" align="center"><span class="text-cursor text-warning" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> <i class="far fa-eye"></i></span></td>';
+    html += '<td style="vertical-align: middle;" align="center"><span style="color:#00a0ff" class="text-cursor" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> Chi tiết</span></td>';
     // html += '</tr>';
     $('#code_' + arrResult.id).html(html);
     // if($("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() === undefined && $("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() !== '-' && (parseInt(arrResult.id) + 1) <= 5){
@@ -208,7 +208,9 @@ function click2(id, type) {
     var text = $("#span_" + type + "_" + id).html();
     $("#" + type + "_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
-    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #dbead3" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    // $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+
     $("#" + type + "_" + id).focus();
     $(".td_" + type + "_" + id).removeAttr('onclick');
     $("#span_" + type + "_" + id).removeAttr('id');
