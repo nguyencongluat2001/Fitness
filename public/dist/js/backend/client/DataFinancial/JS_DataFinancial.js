@@ -67,12 +67,12 @@ JS_DataFinancial.prototype.fireAntChart = function () {
  */
 JS_DataFinancial.prototype.addrow = function (arrResult) {
     var id = broofa();
-    var created_at = moment(arrResult.created_at).format('HH') + 'h' + moment(arrResult.created_at).format('mm DD/MM/YYYY');
+    var created_at = moment(arrResult.created_at).format('DD/MM/YYYY');
     var html = '';
     // stt
     html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
     // code_cp
-    html += '<td style="vertical-align: middle;" align="center" class="td_code_cp_' + arrResult.id + '" ondblclick="click2(\'' + arrResult.id + '\', \'code_cp\')">';
+    html += '<td style="vertical-align: middle;" align="center" class="tdfull td_code_cp_' + arrResult.id + '" ondblclick="click2(\'' + arrResult.id + '\', \'code_cp\')">';
     html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">' + arrResult.code_cp + '</span>';
     html += '</td>';
     // exchange
@@ -208,7 +208,7 @@ function click2(id, type) {
     var text = $("#span_" + type + "_" + id).html();
     $("#" + type + "_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
-    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #dbead3" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
     $("#" + type + "_" + id).focus();
     $(".td_" + type + "_" + id).removeAttr('onclick');
     $("#span_" + type + "_" + id).removeAttr('id');
