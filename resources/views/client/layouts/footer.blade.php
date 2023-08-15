@@ -119,7 +119,7 @@
                                 </table>
                             </td>
                             <td style="vertical-align: top;">
-                                <p class="text-decoration-none text-light py-1"> <img class="card-img " src="../clients/img/qrluatnc.jpg" alt="Card image" style="width:45%"> </p>
+                                <p class="text-decoration-none text-light py-1"> <img class="card-img " src="../clients/img/qrZalo.jpg" alt="Card image" style="width:45%"> </p>
                                 <p class="btn btn-light" style="cursor: pointer;" onclick="gotop()" id="goTop"><i class="fas fa-arrow-up"></i> Về đầu trang</p>
                             </td>
                         </tr>

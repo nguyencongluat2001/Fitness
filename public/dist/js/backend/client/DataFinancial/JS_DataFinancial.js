@@ -268,7 +268,15 @@ JS_DataFinancial.prototype.updateDataFinancial = function (id, column, value = '
                 $(".swal2-modal").css('font-family', 'FontAwesome');
             }
             else if (arrResult['status'] == 2) {
-                $("#identify_trend_" + id).html(arrResult['message']);
+                $(".td_exchange_" + id).html('-');
+                $(".td_code_category_" + id).html('-');
+                $(".td_created_at_" + id).html('-');
+                $(".td_ratings_TA_" + id).html('-');
+                $(".td_act_" + id).html('-');
+                $(".td_trading_price_range_" + id).html('-');
+                $(".td_ratings_FA_" + id).html('-');
+                $("#span_identify_trend_" + id).html(arrResult['message']);
+                $("#code_cp_" + id).focusout();
             } else {
                 JS_DataFinancial.addrow(arrResult);
             }
