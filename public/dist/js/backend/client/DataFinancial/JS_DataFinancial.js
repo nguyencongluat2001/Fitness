@@ -108,7 +108,7 @@ JS_DataFinancial.prototype.addrow = function (arrResult) {
     html += '<span id="span_ratings_FA_' + arrResult.id + '" class="span_ratings_FA_' + arrResult.id + '"><b>' + arrResult.ratings_FA + '</b></span>';
     html += '</td>';
 
-    html += '<td style="vertical-align: middle;" align="center"><span style="color:#00a0ff" class="text-cursor" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> Chi tiết</span></td>';
+    html += '<td class="td_view_' + arrResult.id + '" style="vertical-align: middle;" align="center"><span style="color:#00a0ff" class="text-cursor" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> Chi tiết</span></td>';
     // html += '</tr>';
     $('#code_' + arrResult.id).html(html);
     // if($("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() === undefined && $("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() !== '-' && (parseInt(arrResult.id) + 1) <= 5){
@@ -275,6 +275,9 @@ JS_DataFinancial.prototype.updateDataFinancial = function (id, column, value = '
                 $(".td_act_" + id).html('-');
                 $(".td_trading_price_range_" + id).html('-');
                 $(".td_ratings_FA_" + id).html('-');
+                $(".td_view_" + id).html('-');
+                $(".td_identify_trend_" +id).attr('style', 'vertical-align: middle;');
+                $(".td_act_" +id).attr('style', 'vertical-align: middle;');
                 $("#span_identify_trend_" + id).html(arrResult['message']);
                 $("#code_cp_" + id).focusout();
             } else {
