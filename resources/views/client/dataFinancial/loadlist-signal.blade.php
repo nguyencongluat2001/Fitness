@@ -63,26 +63,30 @@
     #style-1 #table-data thead tr td{
       position: sticky;
       top: 0;
-      background: #92241a;
+      background: #529845;
     }
 </style>
 <div id="style-1" style="padding-right:10px;">
   <div class="table-responsive pmd-card pmd-z-depth table-container">
       <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
           <thead>
-              <tr style="background:#92241a;color:white">
+                <tr>
+                  <!-- <th style="white-space: inherit;vertical-align: middle;font-size: 17px;background:#fff5dc;color:#dd0000;" align="center" colspan="3"><center>NHẬP MÃ CỔ PHIẾU</center></th> -->
+                  <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#fff49b;height: 80px;" align="center" colspan="12"> <center>FINTOP - DANH MỤC CỔ PHIẾU CHO TÍN HIỆU</center></th>
+              </tr>
+              <tr style="background:#529845;color:white">
                   <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
                   <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>Mã CP</b></td>
                   <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
                   <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
-                  <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Thời gian cập nhật</b></td>
-                  <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng TA</b></td>
+                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Thời gian cập nhật</b></td>
+                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng TA</b></td>
                   <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Nhận định Ta - Xu hướng CP</b></td>
                   <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
-                  <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá giao dịch</b></td>
-                  <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá cắt lỗ</b></td>
-                  <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
-                  <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
+                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
+                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> cắt lỗ</b></td>
+                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
+                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Phân tích/ <br> DN FA</b></td>
               </tr>
           </thead>
             <tbody id="body_data" style="background:#dbead3">
