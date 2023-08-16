@@ -70,7 +70,7 @@ JS_DataFinancial.prototype.addrow = function (arrResult) {
     // var created_at = moment(arrResult.created_at).format('DD/MM/YYYY');
     var html = '';
     // stt
-    // html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
+    html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
     // code_cp
     html += '<td style="vertical-align: middle;" align="center" class="tdfull td_code_cp_' + arrResult.id + '" ondblclick="click2(\'' + arrResult.id + '\', \'code_cp\')">';
     html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">' + arrResult.code_cp + '</span>';

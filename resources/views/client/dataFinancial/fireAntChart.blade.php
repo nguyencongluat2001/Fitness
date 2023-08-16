@@ -32,6 +32,7 @@
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
+            {{--
             <div class="modal-header" style="background:#a71712cc">
                 <h5 class="modal-title" style="color:white">CHI TIẾT CỔ PHIẾU </h5>
                 <button style="background:white" type="button" class="btn btn-sm" data-bs-dismiss="modal">
@@ -268,6 +269,7 @@
                     </div>
                 </section>
             </div>
+            --}}
             <div class="modal-footer" style="background:#a71712cc">
                     <button style="background:white" type="button" class="btn btn-default btn-sm" data-bs-dismiss="modal">
                         Đóng

@@ -14,7 +14,7 @@
                     <!-- Chú giải xếp hạng TA/FA -->
                     <div class="home_index_child" style="background:#ffffffe6 !important">
                         <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
-                        <h1 class="h5 "> TRA CỨU CỔ PHIẾU <i class="fas fa-search"></i></h1>
+                        <!-- <h1 class="h5 "> TRA CỨU CỔ PHIẾU <i class="fas fa-search"></i></h1> -->
                             <div class="table-responsive py-2">
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-data"></div>
@@ -25,7 +25,7 @@
                     <!-- biểu đồ FireAnt -->
                     <div class="home_index_child " style="background:#ffffffe6 !important">
                         <div class="col-lg-12" style="padding:10px;width: 100%;">
-                        <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1>
+                        <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
                             <p>Nguồn theo: Fireant</p>
                             <iframe style="width:100%" height="620" src="https://fireant.vn/charts" 
                                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
