@@ -3,6 +3,7 @@
         font-size: 19px;
     }
     td > p { overflow-y:scroll;overflow-x:hidden;} 
+    th > p { overflow-y:scroll;overflow-x:hidden;} 
     .table{
         border-color: #670000
     }
