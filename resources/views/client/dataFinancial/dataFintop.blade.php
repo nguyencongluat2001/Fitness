@@ -2,21 +2,15 @@
     .unit-edit span {
         font-size: 19px;
     }
-
-    td>p {
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-
-    .table {
+    td > p { overflow-y:scroll;overflow-x:hidden;} 
+    .table{
         border-color: #670000
     }
-
-    .tdfull {
+    .tdfull{
         padding: 0 !important;
     }
 </style>
-<form id="frmSearchCP" role="form" action="" method="POST">
+<form id="frmSearchCP"  role="form" action="" method="POST">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
         <table  id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" @if(!isset($_SESSION['id'])) onclick="JS_DataFinancial.checkLogin()" @endif>
@@ -148,3 +142,4 @@
         </table>
     <!-- </div> -->
 </form>
+
