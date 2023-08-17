@@ -220,18 +220,16 @@ function click2(id, type) {
             JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
         }
     })
-    if($(".code_cp").val().length !== 3 || $("#span_code_cp_" + id).val().length !== 3){
-        $("#" + type + "_" + id).focusout(function () {
-            var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
-            $("#" + type + "_" + id).attr('hidden', true);
-            $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
-            $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
-            $(".span_" + type + "_" + id).html(nhap);
-            if (text != $(".span_" + type + "_" + id).html()) {
-                JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
-            }
-        })
-    }
+    $("#" + type + "_" + id).focusout(function () {
+        var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
+        $("#" + type + "_" + id).attr('hidden', true);
+        $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
+        $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
+        $(".span_" + type + "_" + id).html(nhap);
+        if (text != $(".span_" + type + "_" + id).html()) {
+            JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
+        }
+    })
 }
 /**
  * Cập nhật khi ở màn hình hiển thị danh sách
@@ -280,6 +278,7 @@ JS_DataFinancial.prototype.updateDataFinancial = function (id, column, value = '
                 $(".td_act_" +id).attr('style', 'vertical-align: middle;');
                 $("#span_identify_trend_" + id).html(arrResult['message']);
                 $("#code_cp_" + id).focusout();
+                return false;
             } else {
                 JS_DataFinancial.addrow(arrResult);
             }
