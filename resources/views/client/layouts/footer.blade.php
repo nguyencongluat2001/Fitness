@@ -42,7 +42,7 @@
                     <tbody>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fab fa-facebook"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" href="tel:086.234.8886"> Dữ liệu chứng khoán FinTop.Data</a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" target="_blank" href="https://www.facebook.com/Fintopdata.vn"> Dữ liệu chứng khoán FinTop.Data</a></td>
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fab fa-youtube"></i></td>
@@ -119,7 +119,7 @@
                                 </table>
                             </td>
                             <td style="vertical-align: top;">
-                                <p class="text-decoration-none text-light py-1"> <img class="card-img " src="../clients/img/qrZalo.jpg" alt="Card image" style="width:45%"> </p>
+                                <p class="text-decoration-none text-light py-1"> <img class="card-img " src="{{ URL::asset('clients/img/qrZalo.png') }}" alt="Card image" style="width:45%"> </p>
                                 <p class="btn btn-light" style="cursor: pointer;" onclick="gotop()" id="goTop"><i class="fas fa-arrow-up"></i> Về đầu trang</p>
                             </td>
                         </tr>
