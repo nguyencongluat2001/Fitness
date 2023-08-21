@@ -10,7 +10,6 @@
                     <!-- Chú giải xếp hạng TA/FA -->
                     <div class="home_index_child" style="background:#ffffffe0 !important;">
                         <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
-                            <h1 class="h5 "> I. TÍN HIỆU MUA</h1>
                             <div class="py-2">
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-signal"></div>

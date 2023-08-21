@@ -40,8 +40,8 @@
         </colgroup>
         <thead>
             <tr>
-                <th style="white-space: inherit;vertical-align: middle;font-size: 20px;background:#fff5dc;color:#ff1515;height: 80px;" align="center" colspan="3">
-                    <center>NHẬP MÃ CỔ PHIẾU</center>
+                <th style="white-space: inherit;vertical-align: middle;font-size: 20px;background:#fff5dc;color:#92241a;height: 80px;" align="center" colspan="3">
+                    <center>NHẬP MÃ <br>CỔ PHIẾU</center>
                 </th>
                 <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#fff49b" align="center" colspan="8">
                     <center>TRA CỨU CHỨNG KHOÁN (TA - FA)</center>
@@ -68,7 +68,7 @@
             <tr id="code_{{$i}}">
                 <td  style="vertical-align: middle;color:#83beff" align="center">{{$i}}</td>
                 <td class="td_code_cp_{{$i}} tdfull" style="vertical-align: middle;" align="center" onclick="click2('{{$i}}', 'code_cp',this)">
-                    <span id="span_code_cp_{{$i}}" class="span_code_cp_{{$i}} text-success text-uppercase"></span>
+                    <span id="span_code_cp_{{$i}}" class="span_code_cp_{{$i}} text-success text-uppercase fw-bold"></span>
                 </td>
                 <td class="td_exchange_{{$i}}" align="center" style="vertical-align: middle;">-</td>
                 <td class="td_code_category_{{$i}}" align="center" style="vertical-align: middle;">-</td>
