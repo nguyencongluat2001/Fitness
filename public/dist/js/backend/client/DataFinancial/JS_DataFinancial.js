@@ -73,7 +73,7 @@ JS_DataFinancial.prototype.addrow = function (arrResult) {
     html += '<td style="vertical-align: middle;" align="center">' + arrResult.id + '</td>';
     // code_cp
     html += '<td style="vertical-align: middle;" align="center" class="tdfull td_code_cp_' + arrResult.id + '" ondblclick="click2(\'' + arrResult.id + '\', \'code_cp\')">';
-    html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">' + arrResult.code_cp + '</span>';
+    html += '<span id="span_code_cp_' + arrResult.id + '" class="text-success text-uppercase fw-bold span_code_cp_' + arrResult.id + '" onclick="click2(\'' + arrResult.id + '\', \'code_cp\',this)">' + arrResult.code_cp + '</span>';
     html += '</td>';
     // exchange
     html += '<td class="td_exchange_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
@@ -108,7 +108,7 @@ JS_DataFinancial.prototype.addrow = function (arrResult) {
     html += '<span id="span_ratings_FA_' + arrResult.id + '" class="span_ratings_FA_' + arrResult.id + '"><b>' + arrResult.ratings_FA + '</b></span>';
     html += '</td>';
 
-    html += '<td class="td_view_' + arrResult.id + '" style="vertical-align: middle;" align="center"><span style="color:#00a0ff" class="text-cursor" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> Chi tiết</span></td>';
+    html += '<td class="td_view_' + arrResult.id + '" style="vertical-align: middle;" align="center"><span style="color:#00a0ff; text-decoration: underline;" class="text-cursor" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> Chi tiết</span></td>';
     // html += '</tr>';
     $('#code_' + arrResult.id).html(html);
     // if($("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() === undefined && $("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() !== '-' && (parseInt(arrResult.id) + 1) <= 5){
@@ -209,7 +209,7 @@ function click2(id, type) {
     $("#" + type + "_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
     // $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
-    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp fw-bold" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
 
     $("#" + type + "_" + id).focus();
     $(".td_" + type + "_" + id).removeAttr('onclick');

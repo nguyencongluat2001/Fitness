@@ -256,7 +256,7 @@
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon text-white"><i class="fa fa-bars"></i></span>
                     </button>
-                    <a href="">
+                    <a @if(isset($_SESSION['role']) && !in_array($_SESSION['role'], ['USERS', 'USER'])) href="{{ url('') . '/system/home/index' }}" @else href="" @endif>
                         <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
                     </a>
                 </div>
