@@ -107,8 +107,8 @@ JS_DataFinancial.prototype.addrow = function (arrResult) {
     html += '<td class="td_ratings_FA_' + arrResult.id + '" style="vertical-align: middle;" align="center">';
     html += '<span id="span_ratings_FA_' + arrResult.id + '" class="span_ratings_FA_' + arrResult.id + '"><b>' + arrResult.ratings_FA + '</b></span>';
     html += '</td>';
-
-    html += '<td class="td_view_' + arrResult.id + '" style="vertical-align: middle;" align="center"><span style="color:#00a0ff; text-decoration: underline;" class="text-cursor" onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"> Chi tiết</span></td>';
+    // onclick="JS_DataFinancial.fireAntChart(\'' + id + '\')"
+    html += '<td class="td_view_' + arrResult.id + '" style="vertical-align: middle;" align="center"><a href="' + arrResult.url_link + '" target="_blank">Chi tiết</a></td>';
     // html += '</tr>';
     $('#code_' + arrResult.id).html(html);
     // if($("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() === undefined && $("#span_code_cp_" + (parseInt(arrResult.id) + 1)).html() !== '-' && (parseInt(arrResult.id) + 1) <= 5){

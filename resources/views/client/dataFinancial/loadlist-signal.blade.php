@@ -2,7 +2,7 @@
   .scrollbar {
     margin-left: 30px;
     /* float: left; */
-    height: 300px;
+    height: 1000px;
     /* width: 65px; */
     /* background: #F5F5F5; */
     overflow-y: scroll;
@@ -10,7 +10,7 @@
   }
 
   .force-overflow {
-    min-height: 300px;
+    min-height: 1000px;
   }
 
   #wrapper {
@@ -54,7 +54,7 @@
 
   .table-responsive.pmd-card.pmd-z-depth {
     height: 100%;
-    max-height: 600px;
+    max-height: 1200px;
   }
 
   #style-1 #table-data thead tr td {
@@ -132,7 +132,7 @@
             <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}">{{!empty($data->category) ? $data->category->name_category : ''}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_created_at_{{$id}}" align="center">
-            <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('d/m/Y', strtotime($data->created_at)) : ''}}</span>
+            <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i:s', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_TA_{{$id}}" align="center">
             <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}">{{$data->ratings_TA}}</span>
@@ -153,7 +153,8 @@
             <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
           </td>
           <td style="vertical-align: middle;" align="center">
-            <a target="_blank" @if(isset($data->url_link) && !empty($data->url_link))  href="{{$data->url_link}}" @else href="javascript:;" @endif>Chi tiết</a>
+            <a href="{{$data->url_link}}" target="_blank">Chi tiết</a>
+            <!-- <a target="_blank" @if(isset($data->url_link) && !empty($data->url_link))  href="{{$data->url_link}}" @else href="javascript:;" @endif>Chi tiết</a> -->
           </td>
         </tr>
         @endforeach
