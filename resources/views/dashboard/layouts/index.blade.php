@@ -149,14 +149,14 @@ $arrdData = ApprovePaymentModel::where('status',0)->get()->toArray();
                                             {{ __('Thông tin cá nhân') }}
                                         </p>
                                 </a>
-                                <a class="dropdown-item" href="{{ route('logoutAdmin') }}"
+                                <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                         document.getElementById('logout-form').submit();">
                                         <p>
                                             {{ __('Đăng xuất') }}
                                         </p>
                                 </a>
-                                <form id="logout-form" action="{{ route('logoutAdmin') }}" method="POST"
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                     class="d-none">
                                     @csrf
                                 </form>

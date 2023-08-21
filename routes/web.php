@@ -59,9 +59,9 @@ use Modules\System\Dashboard\UserLog\Controllers\UserLogController;
 //     return view('auth.register');
 // });
 //Login quan tri
-Route::get('/admin', [LoginController::class, 'logoutAdmin']);
+// Route::get('/admin', [LoginController::class, 'logoutAdmin']);
 Route::post('/system/homeAdmin', [LoginController::class, 'checkLoginAdmin'])->name('checkLoginAdmin');
-Route::post('/logoutAdmin', [LoginController::class, 'logoutAdmin'])->name('logoutAdmin');
+// Route::post('/logoutAdmin', [LoginController::class, 'logoutAdmin'])->name('logoutAdmin');
 
 
 Route::get('/404_notFound', function () {

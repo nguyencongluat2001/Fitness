@@ -28,71 +28,71 @@ class LoginController extends Controller
         $this->userService = $userService;
         // parent::__construct();
     }
+    // public function checkLogin(Request $request)
+    // {
+    //     // dd($request->all());
+    //     $email = $request->email;
+    //     $password = $request->password;
+    //     if($email == '' || $email == null){
+    //         $data['email'] = "Email không được để trống";
+    //         return view('auth.signin',compact('data'));
+    //     }
+    //     if($password == '' || $password == null){
+    //         $data['password'] = "Mật khẩu không được để trống";
+    //         return view('auth.signin',compact('data'));
+    //     }
+    //     if(!isset($request->acp_checkbox)){
+    //         $data['acp_checkbox'] = "Xác nhận đồng ý điều khoản FinTop!";
+    //         return view('auth.signin',compact('data'));
+    //     }
+    //     if (Auth::attempt(['email' => $email, 'password' => $password])) {
+    //         $user = Auth::user();
+    //         $getUsers = $this->userService->where('email',$email)->first();
+    //         if($getUsers->status != 1){
+    //             $data['message'] = "Tài khoản bạn đã bị vô hiệu hóa!";
+    //             return view('auth.signin',compact('data'));
+    //         }
+    //         $getInfo = $this->userInfoService->where('user_id',$getUsers->id)->first();
+    //         // if(isset($_SERVER['HTTP_CLIENT_IP']) && !empty($_SERVER['HTTP_CLIENT_IP'])){
+    //         //     $ip = $_SERVER['HTTP_CLIENT_IP'];
+    //         // }elseif(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+    //         //     $ip = $_SERVER['HTTP_CLIENT_IP'];
+    //         // }else{
+    //         //     $ip = $_SERVER['REMOTE_ADDR'];
+    //         // }
+    //         // $userLog = [
+    //         //     'id' => (string)\Str::uuid(),
+    //         //     'user_id' => $_SESSION["id"],
+    //         //     'name' => $_SESSION["name"],
+    //         //     'email' => $_SESSION["email"],
+    //         //     'ip' => $ip,
+    //         //     'created_at' => date('Y-m-d H:i:s'),
+    //         // ];
+    //         // UserLogModel::insert($userLog);
+    //         // kiem tra quyen nguoi dung
+    //         if ($user->role == 'USERS' || $user->role == 'USER') {
+    //             $_SESSION["role"] = $user->role;
+    //             $_SESSION["id_personnel"] = $getUsers->id_personnel;
+    //             $_SESSION["id"]   = $getUsers->id;
+    //             $_SESSION["email"]   = $email;
+    //             $_SESSION["name"]   = $user->name;
+    //             $_SESSION["account_type_vip"]   = $getUsers->account_type_vip;
+    //             $_SESSION["color_view"] = !empty($getInfo->color_view)?$getInfo->color_view:2;
+    //             $checkPrLogin = $this->permission_login($email);
+    //             Auth::login($user);
+    //             return redirect('client/datafinancial/index');
+    //         }else{
+    //             Auth::logout();
+    //             $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
+    //             return view('auth.signin',compact('data'));
+    //         }
+    //     } else {
+    //         $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
+    //         return view('auth.signin',compact('data'));
+    //     }
+    // }
     public function checkLogin(Request $request)
     {
-        // dd($request->all());
-        $email = $request->email;
-        $password = $request->password;
-        if($email == '' || $email == null){
-            $data['email'] = "Email không được để trống";
-            return view('auth.signin',compact('data'));
-        }
-        if($password == '' || $password == null){
-            $data['password'] = "Mật khẩu không được để trống";
-            return view('auth.signin',compact('data'));
-        }
-        if(!isset($request->acp_checkbox)){
-            $data['acp_checkbox'] = "Xác nhận đồng ý điều khoản FinTop!";
-            return view('auth.signin',compact('data'));
-        }
-        if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            $user = Auth::user();
-            $getUsers = $this->userService->where('email',$email)->first();
-            if($getUsers->status != 1){
-                $data['message'] = "Tài khoản bạn đã bị vô hiệu hóa!";
-                return view('auth.signin',compact('data'));
-            }
-            $getInfo = $this->userInfoService->where('user_id',$getUsers->id)->first();
-            // if(isset($_SERVER['HTTP_CLIENT_IP']) && !empty($_SERVER['HTTP_CLIENT_IP'])){
-            //     $ip = $_SERVER['HTTP_CLIENT_IP'];
-            // }elseif(isset($_SERVER['HTTP_X_FORWARDED_FOR']) && !empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-            //     $ip = $_SERVER['HTTP_CLIENT_IP'];
-            // }else{
-            //     $ip = $_SERVER['REMOTE_ADDR'];
-            // }
-            // $userLog = [
-            //     'id' => (string)\Str::uuid(),
-            //     'user_id' => $_SESSION["id"],
-            //     'name' => $_SESSION["name"],
-            //     'email' => $_SESSION["email"],
-            //     'ip' => $ip,
-            //     'created_at' => date('Y-m-d H:i:s'),
-            // ];
-            // UserLogModel::insert($userLog);
-            // kiem tra quyen nguoi dung
-            if ($user->role == 'USERS' || $user->role == 'USER') {
-                $_SESSION["role"] = $user->role;
-                $_SESSION["id_personnel"] = $getUsers->id_personnel;
-                $_SESSION["id"]   = $getUsers->id;
-                $_SESSION["email"]   = $email;
-                $_SESSION["name"]   = $user->name;
-                $_SESSION["account_type_vip"]   = $getUsers->account_type_vip;
-                $_SESSION["color_view"] = !empty($getInfo->color_view)?$getInfo->color_view:2;
-                $checkPrLogin = $this->permission_login($email);
-                Auth::login($user);
-                return redirect('client/datafinancial/index');
-            }else{
-                Auth::logout();
-                $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
-                return view('auth.signin',compact('data'));
-            }
-        } else {
-            $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
-            return view('auth.signin',compact('data'));
-        }
-    }
-    public function checkLoginAdmin(Request $request)
-    {
         $email = $request->email;
         $password = $request->password;
         if($email == '' || $email == null){
@@ -112,7 +112,7 @@ class LoginController extends Controller
             $getUsers = $this->userService->where('email',$email)->first();
             if($getUsers->status != 1){
                 $data['message'] = "Tài khoản bạn đã bị vô hiệu hóa!";
-                return view('auth.signinAdmin',compact('data'));
+                return view('auth.signin',compact('data'));
             }
             $getInfo = $this->userInfoService->where('user_id',$getUsers->id)->first();
             if ($user->role == 'ADMIN' || $user->role == 'MANAGE' || $user->role == 'CV_ADMIN'
@@ -134,14 +134,21 @@ class LoginController extends Controller
                 $_SESSION["sidebar"] = $sideBar;
                 Auth::login($user);
                 return redirect('system/home/index');
-            }else{
-                Auth::logout();
-                $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
-                return view('auth.signinAdmin',compact('data'));
+            }elseif($user->role == 'USERS' || $user->role == 'USER'){
+                $_SESSION["role"] = $user->role;
+                $_SESSION["id_personnel"] = $getUsers->id_personnel;
+                $_SESSION["id"]   = $getUsers->id;
+                $_SESSION["email"]   = $email;
+                $_SESSION["name"]   = $user->name;
+                $_SESSION["account_type_vip"]   = $getUsers->account_type_vip;
+                $_SESSION["color_view"] = !empty($getInfo->color_view)?$getInfo->color_view:2;
+                $checkPrLogin = $this->permission_login($email);
+                Auth::login($user);
+                return redirect('client/datafinancial/index');
             }
         } else {
             $data['message'] = "Sai tên đăng nhập hoặc mật khẩu!";
-            return view('auth.signinAdmin',compact('data'));
+            return view('auth.signin',compact('data'));
         }
     }
     // check đăng nhập lưu token đăng nhập 1 nơi
@@ -175,15 +182,15 @@ class LoginController extends Controller
         return view('auth.signin');
     }
 
-    public function logoutAdmin (Request $request)
-    {
-        // session_unset();
-        Auth::logout();
-        session_destroy();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return view('auth.signinAdmin');
-    }
+    // public function logoutAdmin (Request $request)
+    // {
+    //     // session_unset();
+    //     Auth::logout();
+    //     session_destroy();
+    //     $request->session()->invalidate();
+    //     $request->session()->regenerateToken();
+    //     return view('auth.signinAdmin');
+    // }
     public function showLoginForm  (Request $request)
     {
         return view('auth.signin');
