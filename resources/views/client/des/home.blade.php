@@ -22,7 +22,7 @@
         width: 100%;
     }
     .row{
-        flex-wrap: unset;
+        /* flex-wrap: unset; */
     }
     .tab2{
         padding: 10px 10px 10px 0;

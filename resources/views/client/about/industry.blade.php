@@ -72,10 +72,15 @@
   }
   .blogReader{
     width: 100%;
+    max-height: 100px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     overflow: hidden;
+  }
+  .blogReader>*{
+    font-size: 1rem;
+    font-weight: unset;
   }
 </style>
 

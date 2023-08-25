@@ -3,9 +3,22 @@ use Carbon\Carbon;
 @endphp
 @extends('client.layouts.index')
 @section('body-client')
+<style>
+    @media (max-width: 768px){
+        .content-reader img {
+            width: 100%;
+        }
+        #carouselExampleIndicators .list-hispital-home .d-lg-flex{
+            padding: 10px;
+        }
+        #carouselExampleIndicators .list-hispital-home .d-lg-flex img{
+            padding-right: 0 !important;
+        }
+    }
+</style>
 <div class="banner-wrapper">
     <!-- tra cứu cổ phiếu -->
-    <!-- <section class="container" style="background:#ffffff8a">
+    {{--<!-- <section class="container" style="background:#ffffff8a">
         <div class="pt-3 pb-3 d-lg-flex gx-5">
             <div class="col-lg-12" style="background: #fff">
                 <div class="card">
@@ -20,7 +33,7 @@ use Carbon\Carbon;
                 </div>
             </div>
         </div>
-    </section> -->
+    </section> -->--}}
     <!-- Start Banner Hero -->
     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($datas['blogDetail']->created_at) @endphp
 
@@ -32,18 +45,18 @@ use Carbon\Carbon;
                     <!-- End Contact -->
                     <div class="carousel-item active list-hispital-home" >
                         <div class=" row d-flex align-items-center">
-                            <div class="banner-content col-lg-12 col-8 m-lg-auto text-left ">
+                            <div class="banner-content col-lg-12 col-md-8 m-lg-auto text-left ">
                                 <div class="row g-lg-5 mb-4">
                                     <div class="banner-wrapper w-100" style="background: #ffffff;">
-                                        <div class="card-header pb-0 px-3">
+                                        <div class="card-header pb-0 p-0 pt-3">
                                             <div class="">
                                                 <ul class="list-group">
                                                     <div  class="col-sm-6 col-lg-12 text-decoration-none">
-                                                        <div class="pb-3 d-lg-flex gx-5">
+                                                        <div class="pb-3 d-lg-flex gx-5 col-md-10" style="margin: auto;">
                                                             <div class="col-lg-3 ">
-                                                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" style="height: 200px;object-fit: cover;padding:10px" alt="...">
+                                                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" style="height: 200px;object-fit: cover;padding-right:10px" alt="...">
                                                             </div>
-                                                            <div class="col-lg-8 ">
+                                                            <div class="col-lg-9">
                                                                 <h5 style="padding-top:10px;color:#000951;font-size: 30px;font-family: serif;font-weight: 600;">{{ $datas['blogDetail']->title }}</h5>
                                                                 <p style="color: #006849;">Đăng lúc: {{$created_at->diffForHumans($now)}}</p>
                                                             </div>
@@ -63,8 +76,8 @@ use Carbon\Carbon;
             </div>
         </div>
         <div class="banner-vertical-center-work container d-flex justify-content-center align-items-center" >
-        <div class="banner-content col-lg-10 col-10 m-lg-auto text-left">
-            <div style="color:#264451" class="light-300">
+        <div class="banner-content col-lg-10 col-10 m-lg-auto text-left content-reader">
+            <div style="color:#264451; width: 100%;" class="light-300 text-justify">
                {!! $datas['blogDetail']->decision !!}
             </div>
         </div>
