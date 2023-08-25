@@ -32,6 +32,12 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 @endphp --}}
 <div class="table-responsive pmd-card pmd-z-depth ">
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
+        <colgroup>
+            <col width="7%">
+            <col width="7%">
+            <col width="65%">
+            <col width="20%">
+        </colgroup>
         <thead>
             <tr>
                 <td align="center"><input type="checkbox" name="chk_all_item_id"
@@ -52,10 +58,13 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                        {{$data->name_handbook}}
                     </td>
                     <td style="padding-top: 15px"align="center" >
-                        <button type="button" class="btn btn-info" title="Coppy link" onclick="coppy('{{$data->url_link}}')">
+                        <a target="_blank" href="{{$data->url_link}}" class="btn btn-info" title="Xem trước"><i class="fas fa-external-link-alt"></i></a>
+                        {{--
+                        <button type="button" class="btn btn-info" title="Sao chép đường dẫn" onclick="coppy('{{$data->url_link}}')">
                             <i class="fas fa-copy"></i>
                         </button>
                         <button type="button" class="btn btn-success" title="Xem trực tuyến" onclick="JS_Handbook.seeVideo('{{$data->id}}')"><i class="fas fa-eye"></i></button>
+                        --}}
                     </td>
                 </tr>
             @endforeach

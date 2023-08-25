@@ -34,7 +34,7 @@
 
     body {
         background-image: url("../clients/img/bgctys.jpg");
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
         background-size: cover;
         position: relative;
         background-position: 40% -200px;
@@ -91,6 +91,13 @@
     @media (max-width: 768px){
         .navbar-brand.header-logo{
             width: 10% !important;
+        }
+        .navbar-toggler-success{
+            left: 30% !important;
+            transform: translateX(-40%) !important;
+        }
+        .navbar-toggler-success h1{
+            padding-left: 22% !important;
         }
     }
     @media (max-width: 350px){
@@ -260,7 +267,7 @@
                         <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
                     </a>
                 </div>
-                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);">
+                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);">
                     <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 4.1em;padding-left: 4%;">Tài Chính &amp; Đầu Tư</h1>
                 </div>
             </div>

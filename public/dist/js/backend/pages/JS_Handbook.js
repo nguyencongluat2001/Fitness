@@ -13,7 +13,7 @@ function JS_Handbook(baseUrl, module, controller) {
  */
 JS_Handbook.prototype.loadIndex = function () {
     var myClass = this;
-    // $('.chzn-select').chosen({ height: '100%', width: '100%' });
+    $('.chzn-select').chosen({ height: '100%', width: '100%' });
     var oForm = 'form#frmHandbook_index';
     var oFormCreate = 'form#frmAdd';
     myClass.loadList(oForm);

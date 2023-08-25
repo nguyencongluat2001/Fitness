@@ -14,7 +14,7 @@
                 <section class="content-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <div class="row form-group" style="text-align: center;">
+                            <div class="row form-group">
                                 <div class="col-md-3">
                                     <div class="breadcrumb-input-right">
                                         <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
@@ -30,7 +30,7 @@
                                         id="cate">
                                         <option value=''>-- Chọn loại cẩm nang --</option>
                                         @foreach($data['category'] as $item)
-                                            <option value="{{$item['code_category']}}">{{$item['decision']}}</option>
+                                            <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
                                         @endforeach
                                     </select>
                                 </div>

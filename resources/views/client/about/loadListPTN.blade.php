@@ -20,15 +20,15 @@ use Carbon\Carbon;
             <ul class="list-group">
                 @foreach ($datas as $key => $data)
                 @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                <a href="{{url('client/about/reader') . '/' . $data->id}}" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
+                <div onclick="JS_About.blogReader('{{$data->id}}')" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
                     <div class="pb-3 d-lg-flex gx-5">
-                        <div class="col-lg-4 " style="display: flex;align-items: center;">
+                        <div class="col-lg-4 " style="display: flex;align-items: center;justify-content: center;">
                             <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 150px;width: 250px;object-fit: cover;" alt="...">
                         </div>
                         <div class="col-lg-7">
                             <div class="card-body">
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                                <p>{{$created_at->diffForHumans($now)}}</p>
+                                <i>{{$created_at->diffForHumans($now)}}</i>
                                 <p class="light-300">
                                 <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                                 </p>
@@ -38,7 +38,7 @@ use Carbon\Carbon;
                             </div>
                         </div>
                     </div>
-                </a>
+                </div>
                 @endforeach
             </ul>
         </div>

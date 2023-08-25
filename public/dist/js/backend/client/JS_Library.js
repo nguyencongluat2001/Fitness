@@ -15,6 +15,7 @@ JS_Library.prototype.loadIndex = function () {
     var myClass = this;
     var oForm = 'form#frmLoadlist_library';
     myClass.loadList(oForm);
+    $('.chzn-select').chosen({ height: '100%', width: '100%' });
     $(oForm).find('#txt_search').click(function () {
         /* ENTER PRESSED*/
             var page = $(oForm).find('#limit').val();
