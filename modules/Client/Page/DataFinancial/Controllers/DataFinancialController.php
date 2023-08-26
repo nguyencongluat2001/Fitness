@@ -190,11 +190,27 @@ class DataFinancialController extends Controller
             return view('client.layouts.loadListBox',$result);
         }else{
             $result['datas'] = $this->recommendedService->where('status','1')->get();
-            // dd($result);
             return view('client.dataFinancial.recommendations.loadlist',$result);
         }
     }
-
+/**
+     * list khuyến nghị vip
+     *
+     * @param Request $request
+     *
+     * @return view
+     */
+    public function loadList_recommendations_tab (Request $request)
+    {
+        $arrInput = $request->input();
+        if(isset($arrInput['type']) && $arrInput['type'] == 'box'){
+            $result['datas'] = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
+            return view('client.layouts.loadListBox',$result);
+        }else{
+            $result['datas'] = $this->SignalService->where('status','1')->get();
+            return view('client.dataFinancial.recommendations.loadlist',$result);
+        }
+    }
       /**
      * Danh mục Fintop
      *

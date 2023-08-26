@@ -26,7 +26,7 @@
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
     <table id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" @if(!isset($_SESSION['id'])) onclick="JS_DataFinancial.checkLogin()" @endif>
         <colgroup>
-            <col width="3%">
+            <col width="6%">
             <col width="5%"> <!-- macp -->
             <col width="6%"> <!-- san -->
             <col width="10%"> <!-- nhom nganh -->
@@ -50,7 +50,7 @@
             <tr style="background:#529845;color:white">
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
                 <!-- <td style="white-space: inherit;vertical-align: middle;background: #00ad34;animation: lights 2s 750ms linear infinite;" align="center"><b> </i>Nhập mã cổ phiếu</b> <br> <i class="fas fa-angle-double-down"></td> -->
-                <td style="white-space: inherit;vertical-align: middle;background: #fff5dc;padding-top: 0px;" align="center"><b> <br><img width="40px" height="60px" src="../clients/img/arrow-red.gif" alt="Card image"></td>
+                <td style="white-space: inherit;vertical-align: middle;background: #fff5dc;padding-top: 0px;" align="center"><b> <br><img width="20px" height="40px" src="../clients/img/arrow-red.gif" alt="Card image"></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>

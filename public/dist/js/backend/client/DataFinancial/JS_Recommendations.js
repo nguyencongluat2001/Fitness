@@ -27,7 +27,7 @@ JS_Recommendations.prototype.loadIndex = function () {
  */
 JS_Recommendations.prototype.loadList = function (oForm) {
     var myClass = this;
-    var url = this.urlPath + '/loadList_recommendations';
+    var url = this.urlPath + '/loadList_recommendations_tab';
     var data = $(oForm).serialize();
     $.ajax({
         url: url,
@@ -69,4 +69,20 @@ JS_Recommendations.prototype.loadList_box = function () {
             }, 500000);
         }
     });
+}
+JS_Recommendations.prototype.checkLogin = function(){
+    Swal.fire({
+        title: 'Đăng ký để xem khuyến nghị vip!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng ký",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/client/upgradeAcc/index');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14 / 83%)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
 }

@@ -304,7 +304,9 @@ Route::prefix('/client')->group(function () {
                 // khuyến nghị vip
                 Route::get('/recommendationsIndex', [ClientDataFinancialController::class, 'recommendationsIndex']);
                 Route::post('/loadList_recommendations', [ClientDataFinancialController::class, 'loadList_recommendations']);
-            
+                Route::post('/loadList_recommendations_tab', [ClientDataFinancialController::class, 'loadList_recommendations_tab']);
+
+                
                 // Danh mục Fintop
                 Route::get('/categoryFintopIndex', [ClientDataFinancialController::class, 'categoryFintopIndex']);
                 Route::post('/loadList_categoryFintop_vip', [ClientDataFinancialController::class, 'loadList_categoryFintop_vip']);
