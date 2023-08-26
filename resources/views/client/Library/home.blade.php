@@ -10,28 +10,29 @@
              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="home_index_vnindex pt-1 pb-2" style="background:#ffffff91 !important;border-radius:0px !important">
                     <!-- Chú giải xếp hạng TA/FA -->
-                    <div class="home_index_child" style="background:#ffffffc7 !important">
+                    <div class="home_index_child row" style="background:#ffffffc7 !important">
                         <div class="col-lg-9" style="padding:10px;">
                             <h class=" py-2"><i class="fas fa-search"></i> <span style="font-size:18px;font-family: auto;">CẨM NANG CHO NHÀ ĐẦU TƯ	</span></h>
-                            <div class="row form-group pt-2" style="text-align: center;">
+                            <div class="row form-group pt-2">
                                 <div class="col-md-5">
                                     <select class="form-control input-sm chzn-select" name="cate"
                                         id="cate">
                                         <option value=''>-- Chọn loại cẩm nang --</option>
                                         @foreach($data['category'] as $item)
-                                            <option value="{{$item['code_category']}}">{{$item['decision']}}</option>
+                                            <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="input-group" style="width:30%;height:10%">
-                                    <!-- <span class="input-group-text text-body"><i class="fas fa-search"
-                                            aria-hidden="true"></i></span> -->
-                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm...">
+                                <div class="col-md-6">
+                                    <div class="input-group">
+                                        <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm...">
+                                        <span class="input-group-btn">
+                                            <button type="button" class="btn btn-dark" id="txt_search" name="txt_search"><i class="fas fa-search" aria-hidden="true"></i></button>
+                                        </span>
+                                    </div>
                                 </div>
-                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
-
                             </div>
-                            <div class="table-responsive py-2 pt-3">
+                            <div class="py-2 pt-3">
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-library"></div>
                             </div>

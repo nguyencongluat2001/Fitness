@@ -1,7 +1,7 @@
 <input type="hidden" name="_currentPage" id="_currentPage" value="{{$paginator->currentPage()}}">
 <div class="row">
     <div class="col-sm-3">
-        <div class="dataTables_info"><span class="page-link">Có tất cả {{$paginator->count()}}/{{$paginator->total()}} bài viết</span></div>
+        <div class="dataTables_info text-center"><span class="page-link">Có tất cả {{$paginator->count()}}/{{$paginator->total()}} bài viết</span></div>
     </div>
     <div class="col-sm-6">
         <div class="main_paginate">
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="col-sm-3">
-        <div class="row left_paginate">
+        <div class="row left_paginate text-center" style="justify-content: center;">
             <span class="col-md-6" style="padding:5px;">Hiển thị</span>
             <select id="cbo_nuber_record_page" class="col-sm-6 form-control input-sm" name="cbo_nuber_record_page" style="width: 80px">
                 <option id="15" name="15" value="15">15</option>

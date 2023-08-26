@@ -32,7 +32,7 @@ class HandbookController extends Controller
      */
     public function index(Request $request)
     {
-        $getCategory = $this->categoryService->where('cate','CNK_001')->get()->toArray();
+        $getCategory = $this->categoryService->where('cate','CNK_001')->orderBy('order')->get()->toArray();
         $data['category'] = $getCategory;
         return view('dashboard.handbook.index',compact('data'));
     }

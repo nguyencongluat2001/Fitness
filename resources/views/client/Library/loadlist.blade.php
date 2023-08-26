@@ -6,8 +6,13 @@
         border-color: #670000
     }
 </style>
-<div class="table-responsive pmd-card pmd-z-depth ">
-    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
+<div class="pmd-card pmd-z-depth ">
+    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer" style="background-color: #fff;">
+        <colgroup>
+            <col width="5%">
+            <col width="85%">
+            <col width="10%">
+        </colgroup>
         <thead>
             <tr style="background: #92241a;color:white;">
                 <!-- <td align="center"><input type="checkbox" name="chk_all_item_id"
@@ -23,15 +28,18 @@
                 <tr>
                     <!-- <td style="padding-top: 20px;"align="center"><input type="checkbox" name="chk_item_id"
                             value="{{ $data->id }}"></td> -->
-                    <td style="padding-top: 20px;"align="center">{{ $key + 1 }}
-                    <td style="padding-top: 20px;white-space: inherit;" ondblclick="" onclick="{select_row(this);}">
+                    <td align="center">{{ $key + 1 }}
+                    <td style="white-space: inherit;" ondblclick="" onclick="{select_row(this);}">
                        {{$data->name_handbook}}
                     </td>
-                    <td style="padding-top: 15px"align="center" >
+                    <td align="center" >
+                        <a target="_blank" href="{{$data->url_link}}">Chi tiết</a>
+                        {{--
                         <button type="button" class="btn btn-info" title="Coppy link" onclick="coppy('{{$data->url_link}}')">
                             <i class="fas fa-copy"></i>
                         </button>
                         <button type="button" class="btn btn-success" title="Xem trực tuyến" onclick="JS_Library.seeVideo('{{$data->id}}')"><i class="fas fa-eye"></i></button>
+                        --}}
                     </td>
                 </tr>
             @endforeach

@@ -6,7 +6,7 @@ https://templatemo.com/tm-561-purple-buzz
 */
 @media (max-width: 992px) {
     body{
-        font-size: 62.5%;
+        /* font-size: 62.5%; */
     }
     .date-header,
     .marquee-header
@@ -26,7 +26,7 @@ https://templatemo.com/tm-561-purple-buzz
 }
 @media (max-width: 576px) {
     body{
-        font-size: 40%;
+        /* font-size: 40%; */
     }
     .date-header,
     .marquee-header
