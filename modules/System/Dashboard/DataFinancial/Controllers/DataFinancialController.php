@@ -51,7 +51,7 @@ class DataFinancialController extends Controller
             unset($arrInput['code_category']);
         }else{
             $explode = explode(',',$arrInput['code_category']);
-            $arrInput['code_category'] = $explode;
+            $arrInput['code_category_loc'] = $explode;
         }
         if(isset($arrInput['act']) && ($arrInput['act'] == null || $arrInput['act'] == '')){
             unset($arrInput['act']);

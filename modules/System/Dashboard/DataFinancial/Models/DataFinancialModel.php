@@ -45,9 +45,14 @@ class DataFinancialModel extends Model
                           ->orwhereRelation('users','name', 'like', '%' . $this->value . '%');
                 });
                 return $query;
-            case 'code_category':
+            case 'code_category_loc':
                 if(!empty($value)){
                     $query->whereIn('code_category', $value);
+                    return $query;
+                }
+            case 'code_category':
+                if(!empty($value)){
+                    $query->where('code_category', $value);
                     return $query;
                 }
             case 'act':
