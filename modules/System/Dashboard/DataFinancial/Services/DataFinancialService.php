@@ -124,7 +124,7 @@ class DataFinancialService extends Service
             'ratings_FA' => isset($input['ratings_FA']) ? $input['ratings_FA'] : $ratings_FA,
             'url_link' => isset($input['url_link']) ? $input['url_link'] : $url_link,
             'order' => isset($input['order']) ? $input['order'] : $order,
-            // 'status' => isset($input['status']) ? $input['status'] : $status,
+            'status' => isset($input['status']) ? $input['status'] : $status,
         ];
         foreach($dataFinancials as $value){
             if(isset($input['code_cp']) && $input['code_cp'] === $value->code_cp){

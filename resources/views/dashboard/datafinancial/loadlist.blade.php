@@ -82,6 +82,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 				<col width="5%"> <!-- xep hang FA -->
 				<col width="5%"> <!-- dien tich -->
 				<col width="5%"> <!-- thu tu -->
+				<col width="5%"> <!-- thu tu -->
 				<col width="3%"> <!-- # -->
 			</colgroup>
 			<thead>
@@ -101,6 +102,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Thứ tự</b></td>
+					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu mua</b></td>
 					<td style="background:#151f38;"><span onclick="JS_DataFinancial.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></td>
 				</tr>
 			</thead>
@@ -164,6 +166,9 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					<td class="text-center" style="vertical-align: middle;" onclick="{select_row(this);}">
 						<span class="me-3" style="cursor: pointer;" onclick="JS_DataFinancial.upNdown('down','{{$id}}', this)"><i class="fas fa-long-arrow-alt-down"></i></span>
 						<span style="cursor: pointer;" onclick="JS_DataFinancial.upNdown('up', '{{$id}}', this)"><i class="fas fa-long-arrow-alt-up"></i></span>
+					</td>
+					<td class="td_status_{{$id}}" style="vertical-align: middle;" align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'status')">
+						<span id="span_status_{{$id}}" class="span_status_{{$id}}">{{$data->status}}</span>
 					</td>
 					<td class="text-center" style="vertical-align: middle;">
 						<span class="text-cursor text-warning" onclick="JS_DataFinancial.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
