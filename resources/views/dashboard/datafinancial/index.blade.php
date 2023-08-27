@@ -190,7 +190,7 @@
                                         </select>
                                         <div class="overSelect"></div>
                                         </div>
-                                        <div class="scrollbar" id="checkboxes1" style="position: absolute;z-index: 1010;width: 15%; border: 1px solid #5e72e4;border-top: 0;background: #fff;">
+                                        <div class="scrollbar" id="checkboxes1" style="position: absolute;z-index: 1010;width: 15%; border: 1px solid #5e72e4;border-top: 0;background: #fff;margin-left: 0px !important;">
                                             @foreach($data['category'] as $item)
                                             <label for="one" class="pt-1">
                                                <input type="checkbox" name="code_category" value="{{$item['code_category']}}" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> {{$item['name_category']}}</span></label>
