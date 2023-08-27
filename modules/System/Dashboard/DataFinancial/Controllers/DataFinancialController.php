@@ -33,7 +33,8 @@ class DataFinancialController extends Controller
      */
     public function index(Request $request)
     {
-        $getCategory = $this->categoryService->where('cate','DM_DATA_CK')->get()->toArray();
+        $getCategory = $this->categoryService->where('cate','DM_DATA_CK')->orderBy('LENGTH(name_category)', 'ASC')
+        ->orderBy('name_category', 'ASC')->get()->toArray();
         $data['category'] = $getCategory;
         return view('dashboard.datafinancial.index',compact('data'));
     }
