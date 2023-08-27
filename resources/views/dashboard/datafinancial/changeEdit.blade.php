@@ -67,7 +67,7 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Hành động</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá giao dịch</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá cắt lỗ</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Xếp hạng FA</b></td>
+                            <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Xếp hạng FA</b></td> -->
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center"><b>PTDN FA</b></td> -->
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Thứ tự</b></td> -->
                             <td style="white-space: inherit;vertical-align: middle" align="center"><b>#</b></td>
@@ -100,7 +100,7 @@
                             <td style="width:10%;vertical-align: middle;" align="center"><input id="act" name="act" type="text" value="{{isset($datas->act)?$datas->act:''}}" class="form-control"></td>
                             <td style="width:7%;vertical-align: middle;" align="center"><input id="trading_price_range" name="trading_price_range" type="text" value="{{isset($datas->trading_price_range)?$datas->trading_price_range:''}}" class="form-control"></td>
                             <td style="width:7%;vertical-align: middle;" align="center"><input id="stop_loss_price_zone" name="stop_loss_price_zone" type="text" value="{{isset($datas->stop_loss_price_zone)?$datas->stop_loss_price_zone:''}}" class="form-control"></td>
-                            <td style="width:4%;vertical-align: middle;" align="center"><input id="ratings_FA" name="ratings_FA" type="text" value="{{isset($datas->ratings_FA)?$datas->ratings_FA:''}}" class="form-control"></td>
+                            <!-- <td style="width:4%;vertical-align: middle;" align="center"><input id="ratings_FA" name="ratings_FA" type="text" value="{{isset($datas->ratings_FA)?$datas->ratings_FA:''}}" class="form-control"></td> -->
                             <!-- <td style="width:4%;vertical-align: middle;" align="center">
                                 <span id="add_link"><i class="fas fa-marker"></i></span><br>
                                 <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
@@ -119,33 +119,42 @@
                     @if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'))
 
                         <div class="col-md-2" style="display:flex">
-                            <div>
-                                 Thứ tự &nbsp;
+                            <div style="padding: 5px;" class="required">
+                                 STT 
                             </div>
                             <div>
                                 <input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 60px; text-align:center">
                             </div>
                         </div>
                         <div class="col-md-4" style="display:flex">
-                            <div>
-                            Người đảm nhận&nbsp;
+                            <div style="padding: 5px;" class="required">
+                            Người đảm nhận
                             </div>
                             <div>
                             <input placeholder="Người đảm nhận" id="user_take_on" name="user_take_on" type="text" value="{{isset($datas->user_take_on)?$datas->user_take_on:''}}" class="form-control">
                             </div>
                         </div>
-                    @endif
-                        <div class="col-md-3" style="display:flex">
-                            <div>
-                            Link PTDN FA&nbsp;
+                        <div class="col-md-2" style="display:flex">
+                            <div style="padding: 5px;" class="required">
+                            Xếp hạng FA
                             </div>
                             <div>
-                                <span id="add_link"><i class="fas fa-marker" style="color:#5ba2ff"></i></span><br>
-                                    <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
-                                <input type="hidden" name="url_link" id="url_link"> 
+                            <input style="width:50px" id="ratings_FA" name="ratings_FA" type="text" value="{{isset($datas->ratings_FA)?$datas->ratings_FA:''}}" class="form-control">
                             </div>
                         </div>
-                    <button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
+                        <div class="col-md-2" style="display:flex">
+                            <div style="padding: 5px;" class="required">
+                            Link FA
+                            </div>
+                            <div>
+                                <input style="width:100px" id="url_link" name="url_link" type="text" value="{{isset($datas->url_link)?$datas->url_link:''}}" class="form-control">
+                                <!-- <span id="add_link"><i class="fas fa-marker" style="color:#5ba2ff"></i></span><br>
+                                    <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
+                                <input type="hidden" name="url_link" id="url_link">  -->
+                            </div>
+                        </div>
+                     @endif
+                    <button type="button" class="btn btn-sm pt-2" data-bs-dismiss="modal" style="background: red;color:white">
                         Đóng
                     </button>
                 </div>
