@@ -40,8 +40,8 @@
         </colgroup>
         <thead>
             <tr>
-                <th style="white-space: inherit;vertical-align: middle;font-size: 20px;background:#fff5dc;color:#ef1e0b;height: 80px;" align="center" colspan="3">
-                    <center>NHẬP MÃ <br>CỔ PHIẾU</center>
+                <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#fff5dc;color:#ef1e0b;height: 80px;" align="center" colspan="3">
+                    <center>NHẬP MÃ CP</center>
                 </th>
                 <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#fff49b" align="center" colspan="8">
                     <center>TRA CỨU CHỨNG KHOÁN (TA - FA)</center>
@@ -50,7 +50,7 @@
             <tr style="background:#529845;color:white">
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
                 <!-- <td style="white-space: inherit;vertical-align: middle;background: #00ad34;animation: lights 2s 750ms linear infinite;" align="center"><b> </i>Nhập mã cổ phiếu</b> <br> <i class="fas fa-angle-double-down"></td> -->
-                <td style="white-space: inherit;vertical-align: middle;background: #fff5dc;padding-top: 0px;" align="center"><b> <br><img width="20px" height="40px" src="../clients/img/arrow-red.gif" alt="Card image"></td>
+                <td style="white-space: inherit;vertical-align: middle;background: #fff5dc;" align="center"><b><img width="30px" height="50px" src="../clients/img/arrow-red.gif" alt="Card image"></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>
