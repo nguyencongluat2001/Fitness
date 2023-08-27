@@ -94,72 +94,10 @@
 #checkboxes1 label:hover {
   background-color: #1e90ff;
 }
-
-
-
-
-
-
-/* ///scrollbar */
 .scrollbar {
-    margin-left: 30px;
-    /* float: left; */
-    height: 1000px;
-    /* width: 65px; */
-    /* background: #F5F5F5; */
-    overflow-y: scroll;
-    margin-bottom: 25px;
-  }
-
-  .force-overflow {
-    min-height: 1000px;
-  }
-
-  #wrapper {
-    text-align: center;
-    width: 500px;
-    margin: auto;
-  }
-
-  /*
-    *  STYLE 2
-    */
-
-  #style-2::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    background-color: #F5F5F5;
-  }
-
-  #style-2::-webkit-scrollbar {
-    width: 12px;
-    background-color: #F5F5F5;
-  }
-
-  #style-2::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #D62929;
-  }
-
-  .tv-lightweight-charts {
-    width: 100%;
-    padding-right: var(--bs-gutter-x, 0.5rem) !important;
-    padding-left: var(--bs-gutter-x, 0.5rem) !important;
-    margin-right: auto !important;
-    margin-left: auto !important;
-  }
-
-  .table-responsive.pmd-card.pmd-z-depth {
     height: 100%;
-    max-height: 1200px;
-  }
-
-  #checkboxes1 #table-data thead tr td {
-    position: sticky;
-    top: 0;
-    background: #529845;
-  }
+    max-height: 300px;
+}
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
     <div class="container-fluid">
@@ -223,7 +161,7 @@
                                         </select>
                                         <div class="overSelect"></div>
                                         </div>
-                                        <div id="checkboxes" style="position: absolute;z-index: 1010;width: 12%; border: 1px solid #5e72e4;border-top: 0;background: #fff;">
+                                        <div class="scrollbar" id="checkboxes" style="position: absolute;z-index: 1010;width: 12%; border: 1px solid #5e72e4;border-top: 0;background: #fff;">
                                             <label for="one" class="pt-1">
                                                 <input type="checkbox" name="code_act" value="MUA" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Mua</span></label>
                                             <label for="two">
