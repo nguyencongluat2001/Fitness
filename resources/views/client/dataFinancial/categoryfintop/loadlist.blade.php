@@ -28,30 +28,32 @@
                 <tr >
                     <td align="center" >{{ $key + 1 }}</td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red">
-                        <span>{{ $data->closing_percentage }}</span>
+                        <span>{{ $data['closing_percentage']}}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        <span>{{ $data->code_cp }}</span>
+                        <span>{{ $data['code_cp']}}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        <span>{{ $data->code_category }}</span>
+                        <span>{{ $data['name_category']}}</span>
                     </td>
-                    <td>{{ !empty($data->created_at) ? date('d/m/Y', strtotime($data->created_at)) : '' }}</td>
+                    <td>{{ !empty($data['created_at']) ? date('d/m/Y', strtotime($data['created_at'])) : '' }}</td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        <span>{{ $data->percent_of_assets }}</span>
+                        <span>{{ $data['percent_of_assets']}}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        <span>{{ $data->price }}</span>
+                        <span>{{ $data['price']}}</span>
                     </td>
-                    <td>{{ !empty($data->date_close) ? date('d/m/Y', strtotime($data->date_close)) : '' }}</td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        <span>{{ $data->price_close }}</span>
+                        {{ !empty($data['date_close']) ? date('d/m/Y', strtotime($data['date_close'])) : '' }}
+                    </td>
+                    <td align="center" style="white-space: inherit; vertical-align: middle;">
+                        <span>{{ $data['price_close']}}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;background:#27ff65">
-                        <span>{{ $data->profit_and_loss }}</span>
+                        <span>{{ $data['profit_and_loss']}}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        <span>{{ $data->note }}</span>
+                        <span>{{ $data['note']}}</span>
                     </td>
                 </tr>
             @endforeach

@@ -39,7 +39,7 @@
                         @endif
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        <span>{{ $data['code_category'] }}</span>
+                        <span>{{ $data['name_category'] }}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
                         {{ !empty($data['created_at']) ? date('d/m/Y', strtotime($data['created_at'])) : '' }}

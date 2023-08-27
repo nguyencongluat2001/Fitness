@@ -233,13 +233,16 @@ class DataFinancialController extends Controller
     {
         $arrInput = $request->input();
         $result['datas'] = $this->recommendedService->where('status','!=','')->get()->toArray();
+
         $data['datas'] = [];
         foreach($result['datas'] as $item){
             if(isset($item['price_range'])){
                 $ta = explode(',',$item['price_range']);
             }
+            $getCate = $this->categoryService->where('code_category',$item['code_category'])->first();
             $data['datas'][] = [
                 "code_cp" => !empty($item['code_cp'])?$item['code_cp']:'',
+                "name_category" => !empty($getCate->name_category)?$getCate->name_category:'',
                 "code_category" => !empty($item['code_category'])?$item['code_category']:'',
                 "percent_of_assets" => !empty($item['percent_of_assets'])?$item['percent_of_assets']:'',
                 "price" => !empty($item['price'])?$item['price']:'',
@@ -252,7 +255,7 @@ class DataFinancialController extends Controller
                 "profit_and_loss" => !empty($item['profit_and_loss'])?$item['profit_and_loss']:'',
                 "act" => !empty($item['act'])?$item['act']:'',
                 "stop_loss" => !empty($item['stop_loss'])?$item['stop_loss']:'',
-                "closing_percentage" => !empty($item['closing_percentage'])?$item['closing_percentage']:'',
+                "note" => !empty($item['closing_percentage'])?$item['closing_percentage']:'',
                 "note" => !empty($item['note'])?$item['note']:'',
                 "status" => !empty($item['status'])?$item['status']:'',
                 "created_at" => !empty($item['created_at'])?$item['created_at']:'',
@@ -272,7 +275,25 @@ class DataFinancialController extends Controller
     {
         $arrInput = $request->input();
         $result['datas'] = $this->effectiveService->where('status','!=','')->get();
-        return view('client.dataFinancial.categoryfintop.loadlist',$result);
+        foreach($result['datas'] as $item){
+            $getCate = $this->categoryService->where('code_category',$item['code_category'])->first();
+            $data['datas'][] = [
+                "closing_percentage" => !empty($item['closing_percentage'])?$item['closing_percentage']:'',
+                "name_category" => !empty($getCate->name_category)?$getCate->name_category:'',
+                "code_category" => !empty($item['code_category'])?$item['code_category']:'',
+                "percent_of_assets" => !empty($item['percent_of_assets'])?$item['percent_of_assets']:'',
+
+                "code_cp" => !empty($item['code_cp'])?$item['code_cp']:'',
+                "price" => !empty($item['price'])?$item['price']:'',
+                "price_close" => !empty($item['price_close'])?$item['price_close']:'',
+                "profit_and_loss" => !empty($item['profit_and_loss'])?$item['profit_and_loss']:'',
+                "stop_loss" => !empty($item['stop_loss'])?$item['stop_loss']:'',
+                "note" => !empty($item['note'])?$item['note']:'',
+                "date_close" => !empty($item['date_close'])?$item['date_close']:'',
+                "created_at" => !empty($item['created_at'])?$item['created_at']:'',
+            ];
+        }
+        return view('client.dataFinancial.categoryfintop.loadlist',$data);
     }
     
 }
