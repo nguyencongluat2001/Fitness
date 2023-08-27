@@ -49,6 +49,9 @@ class DataFinancialController extends Controller
         $arrInput = $request->input();
         if(isset($arrInput['code_category']) && ($arrInput['code_category'] == null || $arrInput['code_category'] == '')){
             unset($arrInput['code_category']);
+        }else{
+            $explode = explode(',',$arrInput['code_category']);
+            $arrInput['code_category'] = $explode;
         }
         if(isset($arrInput['act']) && ($arrInput['act'] == null || $arrInput['act'] == '')){
             unset($arrInput['act']);

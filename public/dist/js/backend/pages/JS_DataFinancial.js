@@ -193,6 +193,12 @@ JS_DataFinancial.prototype.loadList = function (oForm, numberPage = 1, perPage =
         code_act.push(this.value); 
     });
     data += '&code_act=' + code_act;
+
+    var code_category = [];
+    $('input[name="code_category"]:checked').each(function() {
+        code_category.push(this.value); 
+    });
+    data += '&code_category=' + code_category;
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
     $.ajax({

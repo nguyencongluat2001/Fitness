@@ -80,6 +80,20 @@
 #checkboxes label:hover {
   background-color: #1e90ff;
 }
+
+
+#checkboxes1 {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes1 label {
+  display: block;
+}
+
+#checkboxes1 label:hover {
+  background-color: #1e90ff;
+}
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
     <div class="container-fluid">
@@ -160,6 +174,22 @@
                                     </div>
                                 </div>
                                 <div class="col-md-2">
+                                    <div class="multiselect">
+                                        <div class="selectBox" onclick="showCheckboxes1()">
+                                        <select class="form-control input-sm chzn-select">
+                                            <option>Lọc nhóm ngành</option>
+                                        </select>
+                                        <div class="overSelect"></div>
+                                        </div>
+                                        <div id="checkboxes1" style="position: absolute;z-index: 1010;width: 15%; border: 1px solid #5e72e4;border-top: 0;background: #fff;">
+                                            @foreach($data['category'] as $item)
+                                            <label for="one" class="pt-3">
+                                               <input type="checkbox" name="code_category" value="{{$item['code_category']}}" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> {{$item['name_category']}}</span></label>
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="code_category"
                                         id="code_category">
                                         <option value=''>-- Nhóm ngành HĐKD --</option>
@@ -167,7 +197,7 @@
                                             <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
                                         @endforeach
                                     </select>
-                                </div>
+                                </div> -->
                                 <!-- <div class="col-md-1 text-center" onclick="JS_DataFinancial.remoteSearch('1')">
                                    <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i>
                                 </div> -->
@@ -206,6 +236,15 @@
 
         function showCheckboxes() {
         var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }}
+        function showCheckboxes1() {
+        var checkboxes = document.getElementById("checkboxes1");
         if (!expanded) {
             checkboxes.style.display = "block";
             expanded = true;

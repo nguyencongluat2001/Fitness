@@ -76,7 +76,8 @@
                     <tbody>
                         <tr>
                             
-                        	@if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'))
+                        	@if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE' ||
+                             $_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'))
                             <td style="width:8%;vertical-align: middle;" align="center"><input id="code_cp" name="code_cp" type="text" value="{{isset($datas->code_cp)?$datas->code_cp:''}}" class="form-control"></td>
                             <td style="width:10%;vertical-align: middle;" align="center"><input id="exchange" name="exchange" type="text" value="{{isset($datas->exchange)?$datas->exchange:''}}" class="form-control"></td>
                             <td style="width:12%;vertical-align: middle;">
@@ -116,7 +117,8 @@
                 </table>
                 <div class="modal-header" style="padding:0px">
                     <!-- <h5 class="modal-title">Cập nhật cổ phiếu </h5> -->
-                    @if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'))
+                     @if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE' ||
+                             $_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'))
 
                         <div class="col-md-2" style="display:flex">
                             <div style="padding: 5px;" class="required">
