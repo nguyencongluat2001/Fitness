@@ -478,6 +478,8 @@ JS_DataFinancial.prototype.updateDataFinancial = function(id, column, value = ''
     else if(column == 'url_link') {data += '&url_link=' + value}
     else if(column == 'order') {data += '&order=' + value}
     else if(column == 'status') {data += '&status=' + value}
+    else if(column == 'user_take_on') {data += '&user_take_on=' + value}
+
     $.ajax({
         url: url,
         data: data,
@@ -560,6 +562,12 @@ JS_DataFinancial.prototype.checkValidate = function(){
         var nameMessage = 'Số thứ tự không được để trống!';
         NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
         $("#frmAdd #order").focus();
+        return false;
+    }
+    if ($("#frmAdd #user_take_on").val() == '') {
+        var nameMessage = 'Người đảm nhận không được để trống!';
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
+        $("#frmAdd #user_take_on").focus();
         return false;
     }
 }

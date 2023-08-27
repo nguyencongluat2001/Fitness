@@ -111,7 +111,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 				@php $id = $data->id; @endphp
 				<tr>
 					<td style="vertical-align: middle;" align="center"><input type="checkbox" name="chk_item_id" value="{{ $data->id }}"></td>
-					@if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE' || $_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN'))
+					@if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'))
 					<td class="text-center td_order_{{$id}}" style="vertical-align: middle;" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
 						<span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $data->order }}</span>
 					</td>
@@ -136,10 +136,8 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					<td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">{{!empty($data->category) ? $data->category->name_category : ''}}</td>
 					<td align="center">
 						@endif
-
-						@if(isset($data->Users->name))
-						{{$data->Users->name}}
-						@endif
+						{{$data->user_take_on}}
+						
 					</td>
 					<td style="vertical-align: middle;white-space: inherit;" align="center" onclick="{select_row(this);}">{{!empty($data->created_at) ? date('d/m/Y', strtotime($data->created_at)) : ''}}</td>
 					<td class="td_ratings_TA_{{$id}}" style="vertical-align: middle;" align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'ratings_TA')">

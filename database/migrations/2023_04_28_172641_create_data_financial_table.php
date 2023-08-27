@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('ratings_FA')->nullable(); // xếp hạng FA
             $table->string('url_link')->nullable(); // phân tích DN FA
             $table->string('status')->nullable(); // trạng thái
+            $table->string('user_take_on')->nullable(); // NGười đảm nhận
             $table->timestamps();
         });
     }

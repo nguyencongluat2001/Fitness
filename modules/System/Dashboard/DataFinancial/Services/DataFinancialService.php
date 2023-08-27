@@ -43,6 +43,7 @@ class DataFinancialService extends Service
                 "ratings_FA" =>$input['ratings_FA'],
                 "url_link" =>!empty($input['url_link'])?$input['url_link']:'test_link',
                 "status" =>!empty($input['status'])?$input['status']:1,
+                "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']:1,
                 "order" => isset($input['order']) ? $input['order'] : (isset($dataFinancials->order) ? $dataFinancials->order : ((int)$count + 1)),
                 "created_at" => date("Y/m/d H:i:s"),
                 "updated_at" => date("Y/m/d H:i:s")
@@ -67,6 +68,7 @@ class DataFinancialService extends Service
                 "ratings_FA" =>$input['ratings_FA'],
                 "url_link" =>!empty($input['url_link'])?$input['url_link']:'test_link',
                 "status" =>!empty($input['status'])?$input['status']:1,
+                "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']:1,
                 "order" => ((int)$count + 1),
                 "created_at" => date("Y/m/d H:i:s"),
                 "updated_at" => date("Y/m/d H:i:s")
@@ -125,6 +127,8 @@ class DataFinancialService extends Service
             'url_link' => isset($input['url_link']) ? $input['url_link'] : $url_link,
             'order' => isset($input['order']) ? $input['order'] : $order,
             'status' => isset($input['status']) ? $input['status'] : $status,
+            "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']:1,
+
         ];
         foreach($dataFinancials as $value){
             if(isset($input['code_cp']) && $input['code_cp'] === $value->code_cp){

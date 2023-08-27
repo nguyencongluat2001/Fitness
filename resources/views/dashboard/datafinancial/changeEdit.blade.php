@@ -68,13 +68,15 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá giao dịch</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá cắt lỗ</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Xếp hạng FA</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center"><b>PTDN FA</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Thứ tự</b></td>
+                            <!-- <td style="white-space: inherit;vertical-align: middle" align="center"><b>PTDN FA</b></td> -->
+                            <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Thứ tự</b></td> -->
                             <td style="white-space: inherit;vertical-align: middle" align="center"><b>#</b></td>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            
+                        	@if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'))
                             <td style="width:8%;vertical-align: middle;" align="center"><input id="code_cp" name="code_cp" type="text" value="{{isset($datas->code_cp)?$datas->code_cp:''}}" class="form-control"></td>
                             <td style="width:10%;vertical-align: middle;" align="center"><input id="exchange" name="exchange" type="text" value="{{isset($datas->exchange)?$datas->exchange:''}}" class="form-control"></td>
                             <td style="width:12%;vertical-align: middle;">
@@ -86,18 +88,24 @@
                                     @endforeach
                                 </select>
                             </td>
+                            @else
+                            <td style="width:8%;vertical-align: middle;" align="center">{{isset($datas->code_cp)?$datas->code_cp:''}}</td>
+                            <td style="width:10%;vertical-align: middle;" align="center">{{isset($datas->exchange)?$datas->exchange:''}}</td>
+                            <td style="width:12%;vertical-align: middle;">
+                                <span>{{isset($datas->name_category)?$datas->name_category:''}}</span>
+                            </td>
+                            @endif
                             <td style="width:4%;vertical-align: middle;" align="center"><input id="ratings_TA" name="ratings_TA" type="text" value="{{isset($datas->ratings_TA)?$datas->ratings_TA:''}}" class="form-control"></td>
                             <td style="vertical-align: middle;"><textarea id="identify_trend" name="identify_trend" type="text" value="" class="form-control">{{isset($datas->identify_trend)?$datas->identify_trend:''}}</textarea></td>
                             <td style="width:10%;vertical-align: middle;" align="center"><input id="act" name="act" type="text" value="{{isset($datas->act)?$datas->act:''}}" class="form-control"></td>
                             <td style="width:7%;vertical-align: middle;" align="center"><input id="trading_price_range" name="trading_price_range" type="text" value="{{isset($datas->trading_price_range)?$datas->trading_price_range:''}}" class="form-control"></td>
                             <td style="width:7%;vertical-align: middle;" align="center"><input id="stop_loss_price_zone" name="stop_loss_price_zone" type="text" value="{{isset($datas->stop_loss_price_zone)?$datas->stop_loss_price_zone:''}}" class="form-control"></td>
                             <td style="width:4%;vertical-align: middle;" align="center"><input id="ratings_FA" name="ratings_FA" type="text" value="{{isset($datas->ratings_FA)?$datas->ratings_FA:''}}" class="form-control"></td>
-                            <td style="width:4%;vertical-align: middle;" align="center">
+                            <!-- <td style="width:4%;vertical-align: middle;" align="center">
                                 <span id="add_link"><i class="fas fa-marker"></i></span><br>
                                 <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
                                 <input type="hidden" name="url_link" id="url_link">
-                            </td>
-                            <td style="width:8%;vertical-align: middle;" align="center"><input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 60px; text-align:center"></td>
+                            </td> -->
                             <td style="width:5%;vertical-align: middle;" align="center">
                                 <p></p>
                                 <button id="btn_create" type="button" class="btn btn-success" title="Xem trực tuyến"><i class="fas fa-thumbs-up"></i></button>
@@ -107,7 +115,36 @@
                     </tbody>
                 </table>
                 <div class="modal-header" style="padding:0px">
-                    <h5 class="modal-title">Cập nhật cổ phiếu </h5>
+                    <!-- <h5 class="modal-title">Cập nhật cổ phiếu </h5> -->
+                    @if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'))
+
+                        <div class="col-md-2" style="display:flex">
+                            <div>
+                                 Thứ tự &nbsp;
+                            </div>
+                            <div>
+                                <input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 60px; text-align:center">
+                            </div>
+                        </div>
+                        <div class="col-md-4" style="display:flex">
+                            <div>
+                            Người đảm nhận&nbsp;
+                            </div>
+                            <div>
+                            <input placeholder="Người đảm nhận" id="user_take_on" name="user_take_on" type="text" value="{{isset($datas->user_take_on)?$datas->user_take_on:''}}" class="form-control">
+                            </div>
+                        </div>
+                    @endif
+                        <div class="col-md-3" style="display:flex">
+                            <div>
+                            Link PTDN FA&nbsp;
+                            </div>
+                            <div>
+                                <span id="add_link"><i class="fas fa-marker" style="color:#5ba2ff"></i></span><br>
+                                    <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
+                                <input type="hidden" name="url_link" id="url_link"> 
+                            </div>
+                        </div>
                     <button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
                         Đóng
                     </button>

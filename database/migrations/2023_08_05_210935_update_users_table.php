@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             // $table->tinyInteger('order')->nullable();
-            $table->string('id_manage')->nullable();
+            // $table->string('id_manage')->nullable();
 
         });
     }

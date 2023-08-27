@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('data_financial', function (Blueprint $table) {
             // $table->string('account_type_vip')->nullable(); // thuws tuwj
             // $table->timestamp('date_update_vip')->nullable(); // thuws tuwj
             // $table->string('role_admin')->nullable();
@@ -22,6 +22,8 @@ return new class extends Migration
             // $table->string('role_sale_admin')->nullable();
             // $table->string('role_Sale')->nullable();
             // $table->string('role_Users')->nullable();
+            $table->string('user_take_on')->nullable(); // NGười đảm nhận
+
         });
     }
 
@@ -30,7 +32,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('data_financial', function (Blueprint $table) {
             //
         });
     }

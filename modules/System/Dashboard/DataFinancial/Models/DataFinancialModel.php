@@ -29,6 +29,7 @@ class DataFinancialModel extends Model
         'url_link',
         'status',
         'order',
+        'user_take_on',
         'created_at',
         'updated_at'
     ];
