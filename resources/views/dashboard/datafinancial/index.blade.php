@@ -102,14 +102,14 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="col-md-2">
+                                <!-- <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="act"
                                         id="act">
                                         <option selected value=''>-- Chọn hành động --</option>
                                         <option value="MUA">Mua</option>
                                         <option value="CANH_MUA_DAN">Canh mua dần</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <!-- <div class="col-md-1 text-center" onclick="JS_DataFinancial.remoteSearch('1')">
                                    <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i>
                                 </div> -->
