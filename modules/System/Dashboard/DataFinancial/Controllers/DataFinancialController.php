@@ -47,7 +47,7 @@ class DataFinancialController extends Controller
     public function loadList(Request $request)
     { 
         $arrInput = $request->input();
-        if(isset($arrInput['code_category']) && ($arrInput['code_category'] == null || $arrInput['code_category'] == '')){
+        if($arrInput['code_category'] == null || $arrInput['code_category'] == ''){
             unset($arrInput['code_category']);
         }else{
             $explode = explode(',',$arrInput['code_category']);

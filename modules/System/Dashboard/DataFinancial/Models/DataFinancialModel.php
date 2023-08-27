@@ -47,7 +47,7 @@ class DataFinancialModel extends Model
                 return $query;
             case 'code_category':
                 if(!empty($value)){
-                    $query->where('code_category', $value);
+                    $query->whereIn('code_category', $value);
                     return $query;
                 }
             case 'act':
