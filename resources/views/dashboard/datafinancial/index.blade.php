@@ -94,9 +94,9 @@
 #checkboxes1 label:hover {
   background-color: #1e90ff;
 }
-.scrollbar {
+.table-responsive.pmd-card.pmd-z-depth {
     height: 100%;
-    max-height: 150px;
+    max-height: 300px;
 }
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
@@ -161,7 +161,7 @@
                                         </select>
                                         <div class="overSelect"></div>
                                         </div>
-                                        <div class="scrollbar" id="checkboxes" style="position: absolute;z-index: 1010;width: 12%; border: 1px solid #5e72e4;border-top: 0;background: #fff;">
+                                        <div id="checkboxes" style="position: absolute;z-index: 1010;width: 12%; border: 1px solid #5e72e4;border-top: 0;background: #fff;">
                                             <label for="one" class="pt-1">
                                                 <input type="checkbox" name="code_act" value="MUA" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Mua</span></label>
                                             <label for="two">
