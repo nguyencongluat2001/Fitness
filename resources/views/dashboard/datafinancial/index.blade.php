@@ -98,18 +98,11 @@
   width: 20px;
 }
 
-/* Track */
 .scrollbar {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
+  overflow: scroll;
+  scrollbar-color: red orange;
+  scrollbar-width: thin;
 }
- 
-/* Handle */
-.scrollbar {
-  /* background: red;  */
-  border-radius: 10px;
-}
-
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
     <div class="container-fluid">
