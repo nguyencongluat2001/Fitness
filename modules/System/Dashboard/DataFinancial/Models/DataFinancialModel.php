@@ -40,6 +40,7 @@ class DataFinancialModel extends Model
                 $this->value = $value;
                 return $query->where(function ($query) {
                     $query->where('code_cp', 'like', '%' . $this->value . '%')
+                          ->orWhere('act', 'like', '%' . $this->value . '%')
                           ->orwhereRelation('users','name', 'like', '%' . $this->value . '%');
                 });
                 return $query;
