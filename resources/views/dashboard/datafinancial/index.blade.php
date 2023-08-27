@@ -45,6 +45,41 @@
     border-radius: 0.5rem;
     /* transition: box-shadow 0.15s ease, border-color 0.15s ease; */
 }
+
+/* select checkBook */
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
     <div class="container-fluid">
@@ -85,35 +120,53 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row form-group">
-                            <div class="col-md-2">
-                            <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
-                            data-original-title="Thêm cổ phiếu"><i class="fas fa-plus"></i></button>
-                            <!-- <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
-                                data-original-title="SỬa người dùng"><i class="fas fa-user-edit"></i></button> -->
-                            <button class="btn btn-danger shadow-sm" id="btn_delete" type="button"data-toggle="tooltip"
-                            data-original-title="Xóa cổ phiếu"><i class="fas fa-trash-alt"></i></button>
-                            </div>
+                                <div class="col-md-2">
+                                    <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
+                                    data-original-title="Thêm cổ phiếu"><i class="fas fa-plus"></i></button>
+                                    <!-- <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
+                                        data-original-title="SỬa người dùng"><i class="fas fa-user-edit"></i></button> -->
+                                    <button class="btn btn-danger shadow-sm" id="btn_delete" type="button"data-toggle="tooltip"
+                                    data-original-title="Xóa cổ phiếu"><i class="fas fa-trash-alt"></i></button>
+                                </div>
+                                 <div class="col-md-2">
+                                    <select class="form-control input-sm chzn-select" name="type"
+                                        id="type">
+                                        <option value='DATA'>Dữ liệu cổ phiếu</option>
+                                        <option value='TIN_HIEU'>Tín hiệu mua</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="multiselect">
+                                        <div class="selectBox" onclick="showCheckboxes()">
+                                        <select class="form-control input-sm chzn-select">
+                                            <option>Lọc hành động</option>
+                                        </select>
+                                        <div class="overSelect"></div>
+                                        </div>
+                                        <div id="checkboxes" style="position: absolute;z-index: 1010;width: 12%; border: 1px solid #5e72e4;border-top: 0;background: #fff;">
+                                            <label for="one" class="pt-3">
+                                                <input type="checkbox" name="code_act" value="MUA" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Mua</span></label>
+                                            <label for="two">
+                                                <input type="checkbox" name="code_act" value="MUA DẦN" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Mua dần</span></label>
+                                            <label for="three">
+                                                <input type="checkbox" name="code_act" value="MUA MẠNH" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Mua mạnh</span></label>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-2">
                                     <select class="form-control input-sm chzn-select" name="code_category"
                                         id="code_category">
-                                        <option value=''>-- Chọn nhóm ngành HĐKD --</option>
+                                        <option value=''>-- Nhóm ngành HĐKD --</option>
                                         @foreach($data['category'] as $item)
                                             <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
                                         @endforeach
                                     </select>
                                 </div>
-                                <!-- <div class="col-md-2">
-                                    <select class="form-control input-sm chzn-select" name="act"
-                                        id="act">
-                                        <option selected value=''>-- Chọn hành động --</option>
-                                        <option value="MUA">Mua</option>
-                                        <option value="CANH_MUA_DAN">Canh mua dần</option>
-                                    </select>
-                                </div> -->
                                 <!-- <div class="col-md-1 text-center" onclick="JS_DataFinancial.remoteSearch('1')">
                                    <i style="color:#ffb000" class="fas fa-undo-alt fa-2x"></i>
                                 </div> -->
-                                <div class="input-group" style="width:30%;height:10%;background:#ffffff;padding-left:0px !important">
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <div class="input-group" style="width:20%;height:10%;background:#ffffff;padding-left:0px !important">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
                                             aria-hidden="true"></i></span> -->
                                     <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm mã CP">
@@ -143,6 +196,20 @@
     <div id="dialogconfirm"></div>
     <script src='../assets/js/jquery.js'></script>
     <script type="text/javascript">
+       var expanded = false;
+
+        function showCheckboxes() {
+        var checkboxes = document.getElementById("checkboxes");
+        if (!expanded) {
+            checkboxes.style.display = "block";
+            expanded = true;
+        } else {
+            checkboxes.style.display = "none";
+            expanded = false;
+        }}
+
+
+
         var baseUrl = "{{ url('') }}";
         var JS_DataFinancial = new JS_DataFinancial(baseUrl, 'system', 'datafinancial');
         $(document).ready(function($) {

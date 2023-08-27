@@ -110,7 +110,7 @@ class DataFinancialService extends Service
         $ratings_FA = isset($dataFinancialSingle->ratings_FA) ? $dataFinancialSingle->ratings_FA : '';
         $url_link = isset($dataFinancialSingle->url_link) ? $dataFinancialSingle->url_link : '';
         $order = isset($dataFinancialSingle) && !empty($dataFinancialSingle->order) ? $dataFinancialSingle->order : count($dataFinancials) + 1;
-        // $status = isset($dataFinancialSingle->status) ? $dataFinancialSingle->status : '';
+        $status = isset($dataFinancialSingle->status) ? $dataFinancialSingle->status : 0;
         $param = [
             'user_id' => $_SESSION['id'],
             'code_cp' => isset($input['code_cp']) ? $input['code_cp'] : $code_cp,

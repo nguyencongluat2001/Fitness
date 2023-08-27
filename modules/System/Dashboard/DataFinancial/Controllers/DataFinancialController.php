@@ -53,6 +53,21 @@ class DataFinancialController extends Controller
         if(isset($arrInput['act']) && ($arrInput['act'] == null || $arrInput['act'] == '')){
             unset($arrInput['act']);
         }
+        if(isset($arrInput['type']) && $arrInput['type'] == 'TIN_HIEU'){
+            $arrInput['type'] = ['MUA','MUA DẦN','MUA MẠNH'];
+        }else{
+            unset($arrInput['type']);
+        }
+        if(isset($arrInput['code_act'])){
+            $explode = explode(',',$arrInput['code_act']);
+            // foreach($explode as $val){
+            //     $arrInput['code_act'][] = $val;
+            // }
+            $arrInput['code_act'] = $explode;
+
+        }else{
+            unset($arrInput['code_act']);
+        }
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'order';

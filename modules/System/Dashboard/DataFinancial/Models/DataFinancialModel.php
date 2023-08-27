@@ -54,6 +54,16 @@ class DataFinancialModel extends Model
                     $query->where('act', $value);
                     return $query;
                 }
+            case 'type':
+                if(!empty($value)){
+                    $query->whereIn('act', $value);
+                    return $query;
+                }
+            case 'code_act':
+                if(!empty($value)){
+                    $query->whereIn('act', $value);
+                    return $query;
+                }
             default:
                 return $query;
         }

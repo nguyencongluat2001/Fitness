@@ -39,6 +39,12 @@ JS_DataFinancial.prototype.loadIndex = function () {
         myClass.loadList(oForm, page, perPage);
     });
      // form load
+     $(oForm).find('#type').change(function () {
+        var page = $(oForm).find('#limit').val();
+        var perPage = $(oForm).find('#cbo_nuber_record_page').val();
+        myClass.loadList(oForm, page, perPage);
+    });
+     // form load
      $(oForm).find('#act').change(function () {
         var page = $(oForm).find('#limit').val();
         var perPage = $(oForm).find('#cbo_nuber_record_page').val();
@@ -182,6 +188,11 @@ JS_DataFinancial.prototype.loadList = function (oForm, numberPage = 1, perPage =
     // var loadding = NclLib.loadding();
     var url = this.urlPath + '/loadList';
     var data = $(oForm).serialize();
+    var code_act = [];
+    $('input[name="code_act"]:checked').each(function() {
+        code_act.push(this.value); 
+    });
+    data += '&code_act=' + code_act;
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
     $.ajax({
