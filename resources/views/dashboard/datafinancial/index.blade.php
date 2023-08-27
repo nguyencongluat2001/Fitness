@@ -150,6 +150,12 @@
                                                 <input type="checkbox" name="code_act" value="MUA DẦN" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Mua dần</span></label>
                                             <label for="three">
                                                 <input type="checkbox" name="code_act" value="MUA MẠNH" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Mua mạnh</span></label>
+                                            <label for="three">
+                                                <input type="checkbox" name="code_act" value="BÁN DẦN" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Bán dần</span></label>
+                                            <label for="three">
+                                                <input type="checkbox" name="code_act" value="BÁN MẠNH" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Bán mạnh</span></label>
+                                            <label for="three">
+                                                <input type="checkbox" name="code_act" value="NẮM GIỮ" onclick="JS_DataFinancial.loadList('')" /><span style=";color: #252c43;font-family: serif;"> Nắm giữ</span></label>
                                         </div>
                                     </div>
                                 </div>
