@@ -94,9 +94,9 @@
 #checkboxes1 label:hover {
   background-color: #1e90ff;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 20px;
-}
+} */
 
 .scrollbar {
   overflow: scroll;
