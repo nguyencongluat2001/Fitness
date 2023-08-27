@@ -96,7 +96,7 @@
 }
 .scrollbar {
     height: 100%;
-    max-height: 300px;
+    max-height: 150px;
 }
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
