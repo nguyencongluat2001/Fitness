@@ -10,7 +10,7 @@
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer" >
         <thead>
             <tr style="background:#3a760c;color:white">
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>
+                {{--<td align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
                 <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red"><b>% Chốt</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
@@ -24,9 +24,10 @@
             </tr>
         </thead>
         <tbody>
+            @if(isset($datas) && count($datas) > 0)
             @foreach ($datas as $key => $data)
                 <tr >
-                    <td align="center" >{{ $key + 1 }}</td>
+                    {{--<td align="center" >{{ $key + 1 }}</td>--}}
                     <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red">
                         <span>{{ $data['closing_percentage']}}</span>
                     </td>
@@ -57,6 +58,7 @@
                     </td>
                 </tr>
             @endforeach
+            @endif
         </tbody>
     </table>
 </div>

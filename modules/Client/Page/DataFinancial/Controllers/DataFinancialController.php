@@ -274,6 +274,7 @@ class DataFinancialController extends Controller
     public function loadList_categoryFintop_basic (Request $request)
     {
         $arrInput = $request->input();
+        $data = [];
         $result['datas'] = $this->effectiveService->where('status','!=','')->get();
         foreach($result['datas'] as $item){
             $getCate = $this->categoryService->where('code_category',$item['code_category'])->first();

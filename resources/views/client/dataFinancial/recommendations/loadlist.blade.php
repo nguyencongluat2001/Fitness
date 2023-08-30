@@ -54,12 +54,19 @@
                     @foreach ($datas as $key => $data)
 
                     <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5" style="background:#78cc90">
-                        <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light py-4">
+                        <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light p-0">
+                            {{--
                             <i class="display-1 bx bx-package pt-4"></i>
                             @if($data->type == 'MUA')
                             <h5 class="h5 pb-4">Mua</h5>
                             @else
                             <h5 class="h5 pb-4">Bán</h5>
+                            @endif
+                            --}}
+                            @if($data->type == 'MUA')
+                            <img src="{{URL::asset('clients/img/mua.jpg')}}" alt="Mua" width="100%" height="100%">
+                            @else
+                            <img src="{{URL::asset('clients/img/ban.jpg')}}" alt="Bán" width="100%" height="100%">
                             @endif
                         </div>
                         <div class="pricing-horizontal-body col-md-6 text-light col-lg-5 d-flex align-items-center pt-4 pb-4">
