@@ -60,7 +60,7 @@
   #style-1 #table-data thead tr td {
     position: sticky;
     top: 0;
-    background: #529845;
+    background: #6add58;
   }
 </style>
 <div id="style-1" style="padding-right:10px;">
@@ -98,7 +98,7 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhận định TA - Xu hướng cổ phiếu</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
-          <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b>Vùng giá <br> cắt lỗ</b></td>
+          <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b style="color:black">Vùng giá <br> cắt lỗ</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br> FA</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thông tin/ <br>Phân tích</b></td>
         </tr>
