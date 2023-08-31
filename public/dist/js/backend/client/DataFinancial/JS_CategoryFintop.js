@@ -63,7 +63,7 @@ JS_CategoryFintop.prototype.checkLogin = function(){
     Swal.fire({
         title: 'Đăng ký để xem danh mục khuyến nghị vip!',
         showCloseButton: true,
-        confirmButtonText: "Đăng nhập",
+        confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {
         if (result.isConfirmed) {
