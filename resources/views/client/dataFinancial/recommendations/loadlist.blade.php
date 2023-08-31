@@ -69,7 +69,7 @@
                             <img src="{{URL::asset('clients/img/ban.jpg')}}" alt="Bán" width="100%" height="100%">
                             @endif
                         </div>
-                        <div class="pricing-horizontal-body col-md-6 text-light col-lg-5 d-flex align-items-center pt-4 pb-4">
+                        <div class="pricing-horizontal-body col-md-8 text-light col-lg-5 d-flex align-items-center pt-4 pb-4">
                             <ul class="text-left list-unstyled mb-0">
                                 <li style="color:#fff079"><h3>{{ $data->title }}</h3></li>
                                 <li><i class="fas fa-tags me-2"></i>Giá mua: 
@@ -102,17 +102,10 @@
                                 <li><i class="fas fa-stopwatch"></i>&nbsp; Thời gian: <span style="color: #2d7882;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data->created_at))}}</span></li>
                             </ul>
                         </div>
-                        <div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
+                        <!-- <div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
                             <div class="w-100">
-                                <!-- @if(!empty($type_vip) && $type_vip == 'VIP1')
-                                    <p class="text-light">$120/Year</p>
-                                    <a class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đang sử dụng</a>
-                                @else
-                                    <p class="text-light">$120/Year</p>
-                                    <a onclick="JS_UpgradeAcc.viewForm('VIP1')" class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Nâng cấp</a>
-                                @endif -->
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     @endforeach
             </div>
