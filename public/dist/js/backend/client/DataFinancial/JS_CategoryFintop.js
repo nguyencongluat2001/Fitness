@@ -61,13 +61,13 @@ JS_CategoryFintop.prototype.loadList_basic = function (oForm) {
 }
 JS_CategoryFintop.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Đăng nhập để xem danh mục khuyến nghị vip FINTOP!',
+        title: 'Đăng ký để xem danh mục khuyến nghị vip!',
         showCloseButton: true,
         confirmButtonText: "Đăng nhập",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.replace('/login');
+            window.location.replace('/client/upgradeAcc/index');
         }
     })
     $(".swal2-modal").css('background-color', 'rgb(112 14 14 / 83%)');
