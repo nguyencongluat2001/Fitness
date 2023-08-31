@@ -53,7 +53,7 @@
                     @endforeach -->
                     @foreach ($datas as $key => $data)
 
-                    <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5" style="background:#78cc90">
+                    <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5" style="background:#ffffff">
                         <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light p-0">
                             {{--
                             <i class="display-1 bx bx-package pt-4"></i>
@@ -70,8 +70,8 @@
                             @endif
                         </div>
                         <div class="text-light col-lg-6">
-                            <ul class="text-left list-unstyled mb-0">
-                                <li style="color:#fff079"><h3>{{ $data->title }}</h3></li>
+                            <ul class="text-left list-unstyled mb-0" style="color: #596986;font-family: ui-monospace;">
+                                <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>{{ $data->title }}</h3></li>
                                 <li><i class="fas fa-tags me-2"></i>Giá mua: 
                                 <span style="color: #2d7882;font-weight: 700;">
                                     @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
