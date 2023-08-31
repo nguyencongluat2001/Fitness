@@ -81,7 +81,7 @@
                                     @endif
                                 </span>    
                                 </li>
-                                <li><i class="far fa-lightbulb me-2"></i>&nbsp;Mục tiêu: 
+                                <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;Mục tiêu: 
                                 <span style="color: #2d7882;font-weight: 700;">
                                     @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
                                     {{ $data->target }}
@@ -90,7 +90,7 @@
                                     @endif
                                 </span>
                                 </li>
-                                <li><i class="fas fa-filter me-2"></i>Dừng lỗ: 
+                                <li><i class="fas fa-filter me-2"></i>&nbsp;Dừng lỗ: 
                                 <span style="color: #2d7882;font-weight: 700;">
                                     @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
                                     {{ $data->stop_loss }}
@@ -99,7 +99,7 @@
                                     @endif
                                 </span>
                                 </li>
-                                <li><i class="fas fa-stopwatch"></i>&nbsp; Thời gian: <span style="color: #2d7882;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data->created_at))}}</span></li>
+                                <li><i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian: <span style="color: #2d7882;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data->created_at))}}</span></li>
                             </ul>
                         </div>
                         <!-- <div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
