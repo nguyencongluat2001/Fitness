@@ -47,7 +47,7 @@
                     <center>TRA CỨU CHỨNG KHOÁN (TA - FA)</center>
                 </th>
             </tr>
-            <tr style="background:#6add58;color:white">
+            <tr style="background:#529845;color:white">
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
                 <!-- <td style="white-space: inherit;vertical-align: middle;background: #00ad34;animation: lights 2s 750ms linear infinite;" align="center"><b> </i>Nhập mã cổ phiếu</b> <br> <i class="fas fa-angle-double-down"></td> -->
                 <td style="white-space: inherit;vertical-align: middle;background: #fff5dc;" align="center"><b><img width="30px" height="50px" src="../clients/img/arrow-red.gif" alt="Card image"></td>
