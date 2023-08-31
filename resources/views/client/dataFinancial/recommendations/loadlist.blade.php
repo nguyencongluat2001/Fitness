@@ -69,7 +69,7 @@
                             <img src="{{URL::asset('clients/img/ban.jpg')}}" alt="Bán" width="100%" height="100%">
                             @endif
                         </div>
-                        <div class="pricing-horizontal-body col-md-8 text-light col-lg-5 d-flex align-items-center pt-4 pb-4">
+                        <div class="text-light col-lg-6">
                             <ul class="text-left list-unstyled mb-0">
                                 <li style="color:#fff079"><h3>{{ $data->title }}</h3></li>
                                 <li><i class="fas fa-tags me-2"></i>Giá mua: 
