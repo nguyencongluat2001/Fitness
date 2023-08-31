@@ -72,12 +72,12 @@
         <col width="6%"> <!-- san -->
         <col width="9%"> <!-- nhom nganh -->
         <col width="7%"> <!-- thoi gian -->
-        <col width="6%"> <!-- xep hang -->
+        <col width="7%"> <!-- xep hang -->
         <col width="22%"> <!-- nhan dinh TA -->
         <col width="10%"> <!-- hanh dong -->
         <col width="7%"> <!-- vung gia -->
-        <col width="7%"> <!-- xep hang FA -->
         <col width="7%"> <!-- vung gia cat lo -->
+        <col width="7%"> <!-- xep hang FA -->
         <col width="8%"> <!-- thong tin -->
       </colgroup>
       <thead>
@@ -98,22 +98,9 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhận định TA - Xu hướng cổ phiếu</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
+          <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b>Vùng giá <br> cắt lỗ</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br> FA</b></td>
-          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> cắt lỗ</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thông tin/ <br>Phân tích</b></td>
-
-          <!-- <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
-                  <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>Mã CP</b></td>
-                  <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
-                  <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
-                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Thời gian cập nhật</b></td>
-                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng TA</b></td>
-                  <td style="width: 10%;white-space: inherit;vertical-align: middle" align="center"><b>Nhận định Ta - Xu hướng CP</b></td>
-                  <td style="width: 5%;white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
-                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
-                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> cắt lỗ</b></td>
-                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
-                  <td style="width: 6%;white-space: inherit;vertical-align: middle" align="center"><b>Phân tích/ <br> DN FA</b></td> -->
         </tr>
       </thead>
       <tbody id="body_data" style="background:#dbead3">
@@ -121,9 +108,9 @@
         @foreach ($datas as $key => $data)
         @php $id = $data->id; @endphp
         <tr>
-          <td style="vertical-align: middle;" align="center">{{$key + 1}}</td>
+          <td style="vertical-align: middle;" align="center"><b>{{$key + 1}}</b></td>
           <td style="vertical-align: middle;" class="td_code_cp_{{$id}}" align="center">
-            <span id="span_code_cp_{{$id}}" value="" class="span_code_cp_{{$id}}">{{$data->code_cp}}</span>
+            <span id="span_code_cp_{{$id}}" value="" class="span_code_cp_{{$id}}"><b>{{$data->code_cp}}</b></span>
           </td>
           <td style="vertical-align: middle;" class="td_exchange_{{$id}}" align="center">
             <span id="span_exchange_{{$id}}" class="span_exchange_{{$id}}">{{$data->exchange}}</span>
@@ -132,28 +119,28 @@
             <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}">{{!empty($data->category) ? $data->category->name_category : ''}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_created_at_{{$id}}" align="center">
-            <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i:s', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
+            <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_TA_{{$id}}" align="center">
-            <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}">{{$data->ratings_TA}}</span>
+            <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}"><b>{{$data->ratings_TA}}</b></span>
           </td>
           <td style="vertical-align: middle;" class="td_identify_trend_{{$id}}" align="center">
             <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;" title="{{$data->identify_trend}}">{{$data->identify_trend}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_act_{{$id}}" align="center">
-            <span id="span_act_{{$id}}" class="span_act_{{$id}}">{{$data->act}}</span>
+            <span id="span_act_{{$id}}" class="span_act_{{$id}}"><b>{{$data->act}}</b></span>
           </td>
           <td style="vertical-align: middle;" class="td_trading_price_range_{{$id}}" align="center">
-            <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}">{{$data->trading_price_range}}</span>
+            <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}"><b>{{$data->trading_price_range}}</b></span>
           </td>
-          <td style="vertical-align: middle;" class="td_stop_loss_price_zone_{{$id}}" align="center">
-            <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}">{{$data->stop_loss_price_zone}}</span>
+          <td style="vertical-align: middle;background-color: #fce69b; color: #fa2f18;" class="td_stop_loss_price_zone_{{$id}}" align="center">
+            <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}"><b>{{$data->stop_loss_price_zone}}</b></span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_FA_{{$id}}" align="center">
-            <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
+            <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}"><b>{{$data->ratings_FA}}</b></span>
           </td>
           <td style="vertical-align: middle;" align="center">
-            <a href="{{$data->url_link}}" target="_blank">Chi tiết</a>
+            <a href="{{$data->url_link}}" target="_blank"><b>Chi tiết</b></a>
             <!-- <a target="_blank" @if(isset($data->url_link) && !empty($data->url_link))  href="{{$data->url_link}}" @else href="javascript:;" @endif>Chi tiết</a> -->
           </td>
         </tr>

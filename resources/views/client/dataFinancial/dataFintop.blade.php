@@ -26,8 +26,8 @@
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
     <table id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" @if(!isset($_SESSION['id'])) onclick="JS_DataFinancial.checkLogin()" @endif>
         <colgroup>
-            <col width="6%">
-            <col width="5%"> <!-- macp -->
+            <col width="5%">
+            <col width="6%"> <!-- macp -->
             <col width="6%"> <!-- san -->
             <col width="10%"> <!-- nhom nganh -->
             <col width="7%"> <!-- thoi gian -->

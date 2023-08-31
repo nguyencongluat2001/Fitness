@@ -10,7 +10,7 @@
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer" >
         <thead>
             <tr style="background:#3a760c;color:white">
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>
+                {{--<td align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
@@ -30,7 +30,7 @@
         <tbody>
             @foreach ($datas as $key => $data)
                 <tr>
-                    <td align="center" >{{ $key + 1 }}</td>
+                    {{--<td align="center" >{{ $key + 1 }}</td>--}}
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
                         @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
                         <span>{{ $data['code_cp'] }}</span>
@@ -86,7 +86,7 @@
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#27ff65;">
+                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#b6d3ac;">
                         @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
                         <span>{{ $data['profit_and_loss'] }}</span>
                         @else
@@ -105,7 +105,7 @@
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red">
                         @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                        <span>{{ $data['closing_percentage'] }}</span>
+                        <span>{{ $data['closing_percentage'] ?? '' }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
