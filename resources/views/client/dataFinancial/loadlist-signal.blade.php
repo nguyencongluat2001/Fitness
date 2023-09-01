@@ -65,7 +65,7 @@
 </style>
 <div id="style-1" style="padding-right:10px;">
   <div class="table-responsive pmd-card pmd-z-depth table-container">
-    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
+    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer" @if(!isset($_SESSION['id'])) onclick="JS_Signal.checkLogin()" @endif>
       <colgroup>
         <col width="3%">
         <col width="5%"> <!-- macp -->
@@ -122,22 +122,22 @@
             <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_TA_{{$id}}" align="center">
-            <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}"><b>{{$data->ratings_TA}}</b></span>
+            <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}">{{$data->ratings_TA}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_identify_trend_{{$id}}" align="center">
             <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;" title="{{$data->identify_trend}}">{{$data->identify_trend}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_act_{{$id}}" align="center">
-            <span id="span_act_{{$id}}" class="span_act_{{$id}}"><b>{{$data->act}}</b></span>
+            <span id="span_act_{{$id}}" class="span_act_{{$id}}">{{$data->act}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_trading_price_range_{{$id}}" align="center">
-            <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}"><b>{{$data->trading_price_range}}</b></span>
+            <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}">{{$data->trading_price_range}}</span>
           </td>
           <td style="vertical-align: middle;background-color: #fce69b; color: #fa2f18;" class="td_stop_loss_price_zone_{{$id}}" align="center">
-            <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}"><b>{{$data->stop_loss_price_zone}}</b></span>
+            <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}">{{$data->stop_loss_price_zone}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_FA_{{$id}}" align="center">
-            <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}"><b>{{$data->ratings_FA}}</b></span>
+            <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
           </td>
           <td style="vertical-align: middle;" align="center">
             <a href="{{$data->url_link}}" target="_blank"><b>Chi tiết</b></a>
@@ -146,12 +146,46 @@
         </tr>
         @endforeach
         @else
-        <span><i class="fas fa-hand-point-right"></i> Đăng nhập xem tín hiệu mua
-
-          <button type="button" class="btn btn-success" href="{{ url('/login') }}"> <a href="{{ url('/login') }}" style="animation: lights 2s 750ms linear infinite;">Đăng nhập</a></button>
-
-        </span>
-        <p></p>
+        @foreach ($datas as $key => $data)
+        @php $id = $data->id; @endphp
+        <tr>
+          <td style="vertical-align: middle;" align="center"><b>{{$key + 1}}</b></td>
+          <td style="vertical-align: middle;" class="td_code_cp_{{$id}}" align="center">
+            <span id="span_code_cp_{{$id}}" value="" class="span_code_cp_{{$id}}"><b>{{$data->code_cp}}</b></span>
+          </td>
+          <td style="vertical-align: middle;" class="td_exchange_{{$id}}" align="center">
+            <span id="span_exchange_{{$id}}" class="span_exchange_{{$id}}">{{$data->exchange}}</span>
+          </td>
+          <td style="vertical-align: middle;white-space: inherit;" class="td_code_category_{{$id}}" align="center">
+            <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}">{{$data->code_category}}</span>
+          </td>
+          <td style="vertical-align: middle;white-space: inherit;" class="td_created_at_{{$id}}" align="center">
+            <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
+          </td>
+          <td style="vertical-align: middle;" class="td_ratings_TA_{{$id}}" align="center">
+            <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+          </td>
+          <td style="vertical-align: middle;" class="td_identify_trend_{{$id}}" align="center">
+            <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;" title="{{$data->identify_trend}}"><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></span>
+          </td>
+          <td style="vertical-align: middle;white-space: inherit;" class="td_act_{{$id}}" align="center">
+            <span id="span_act_{{$id}}" class="span_act_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+          </td>
+          <td style="vertical-align: middle;" class="td_trading_price_range_{{$id}}" align="center">
+            <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+          </td>
+          <td style="vertical-align: middle;background-color: #fce69b; color: #fa2f18;" class="td_stop_loss_price_zone_{{$id}}" align="center">
+            <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+          </td>
+          <td style="vertical-align: middle;" class="td_ratings_FA_{{$id}}" align="center">
+            <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
+          </td>
+          <td style="vertical-align: middle;" align="center">
+            <a><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></a>
+            <!-- <a target="_blank" @if(isset($data->url_link) && !empty($data->url_link))  href="{{$data->url_link}}" @else href="javascript:;" @endif>Chi tiết</a> -->
+          </td>
+        </tr>
+        @endforeach
         @endif
 
       </tbody>
