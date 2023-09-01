@@ -99,9 +99,14 @@
 } */
 
 .scrollbar {
-  overflow: scroll;
+  /* overflow: scroll; */
   scrollbar-color: red orange;
   scrollbar-width: thin;
+    height: 100px;
+    /* width: 65px; */
+    /* background: #F5F5F5; */
+    overflow-y: scroll;
+    margin-bottom: 25px;
 }
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>

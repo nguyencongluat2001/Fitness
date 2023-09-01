@@ -49,7 +49,7 @@
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
                         <span>{{ $data['price_close']}}</span>
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#27ff65">
+                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#b6d3ac">
                         <span>{{ $data['profit_and_loss']}}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
