@@ -116,7 +116,7 @@
             <span id="span_exchange_{{$id}}" class="span_exchange_{{$id}}">{{$data->exchange}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_code_category_{{$id}}" align="center">
-            <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}">{{!empty($data->category) ? $data->category->name_category : ''}}</span>
+            <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}">{{!empty($data->category->name_category) ? $data->category->name_category : ''}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_created_at_{{$id}}" align="center">
             <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
