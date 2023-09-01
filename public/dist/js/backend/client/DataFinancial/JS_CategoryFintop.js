@@ -59,3 +59,19 @@ JS_CategoryFintop.prototype.loadList_basic = function (oForm) {
         }
     });
 }
+JS_CategoryFintop.prototype.checkLogin = function(){
+    Swal.fire({
+        title: 'Đăng ký để xem danh mục khuyến nghị vip!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng ký",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/client/upgradeAcc/index');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14 / 83%)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
+}

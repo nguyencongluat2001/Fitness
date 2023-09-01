@@ -153,9 +153,7 @@ class DataFinancialService extends Service
      */
     public function updateOrder($input)
     {
-        $dataFinancial = $this->repository->where('id', $input['id'])->first();
-        $code_category = !empty($dataFinancial) ? $dataFinancial->code_category : $input['code_category'];
-        $query = $this->repository->select('*')->where('order', '>=', $input['order'])->where('code_category', $code_category)->orderBy('order');
+        $query = $this->repository->select('*')->where('order', '>=', $input['order'])->orderBy('order');
         if(isset($input['id'])){
             $query = $query->where('id', '<>', $input['id']);
         }

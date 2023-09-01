@@ -255,7 +255,7 @@ class DataFinancialController extends Controller
                 "profit_and_loss" => !empty($item['profit_and_loss'])?$item['profit_and_loss']:'',
                 "act" => !empty($item['act'])?$item['act']:'',
                 "stop_loss" => !empty($item['stop_loss'])?$item['stop_loss']:'',
-                "note" => !empty($item['closing_percentage'])?$item['closing_percentage']:'',
+                "closing_percentage" => !empty($item['closing_percentage'])?$item['closing_percentage']:'',
                 "note" => !empty($item['note'])?$item['note']:'',
                 "status" => !empty($item['status'])?$item['status']:'',
                 "created_at" => !empty($item['created_at'])?$item['created_at']:'',
@@ -274,6 +274,7 @@ class DataFinancialController extends Controller
     public function loadList_categoryFintop_basic (Request $request)
     {
         $arrInput = $request->input();
+        $data = [];
         $result['datas'] = $this->effectiveService->where('status','!=','')->get();
         foreach($result['datas'] as $item){
             $getCate = $this->categoryService->where('code_category',$item['code_category'])->first();

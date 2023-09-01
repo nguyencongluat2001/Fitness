@@ -11,9 +11,9 @@
                         <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
                             <h class=" py-2"><i class="fas fa-chart-bar"></i> <span style="font-size:16px;font-family: auto;">DANH MỤC KHUYẾN NGHỊ VIP FINTOP</span></h>
                             <br>
-                            <span><i class="fas fa-hand-point-right"></i> Đăng ký VIP để xem danh mục khuyến nghị VIP FINTOP
+                            {{--<span><i class="fas fa-hand-point-right"></i> Đăng ký VIP để xem danh mục khuyến nghị VIP FINTOP
                                 <button  type="button" class="btn btn-success" href="{{ url('/client/upgradeAcc/index') }}"> <a href="{{ url('/client/upgradeAcc/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
-                            </span>
+                            </span>--}}
                             <div class="table-responsive py-2">
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-categoryFintop_vip"></div>
