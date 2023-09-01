@@ -69,7 +69,7 @@
                             <img src="{{URL::asset('clients/img/ban.jpg')}}" alt="Bán" width="100%" height="100%">
                             @endif
                         </div>
-                        <div class="text-light col-lg-6">
+                        <div class="text-light col-lg-9" @if($data->type == 'BAN') style="background-color: rgba(113, 14, 19, 0.20)" @else style="background-color: #0e5c3533" @endif>
                             <ul class="text-left list-unstyled mb-0" style="color: #596986;font-family: ui-monospace;">
                                 <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>{{ $data->title }}</h3></li>
                                 <li><i class="fas fa-tags me-2"></i>Giá mua: 
@@ -102,10 +102,10 @@
                                 <li><i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian: <span style="color: #2d7882;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data->created_at))}}</span></li>
                             </ul>
                         </div>
-                        <!-- <div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
+                        {{--<div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
                             <div class="w-100">
                             </div>
-                        </div> -->
+                        </div>--}}
                     </div>
                     @endforeach
             </div>
