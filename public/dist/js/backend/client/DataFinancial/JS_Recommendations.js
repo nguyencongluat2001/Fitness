@@ -36,6 +36,11 @@ JS_Recommendations.prototype.loadList = function (oForm) {
         success: function (arrResult) {
             $("#table-container-recommendations").html(arrResult);
             // $('#messages').scrollTop($('#messages')[0].scrollHeight);
+            if($("#frmLoadlist_recommendations #messages").hasClass('onload')){
+                // onload
+                JS_Recommendations.checkLogin();
+            }
+            // $('#messages').scrollTop($('#messages')[0].scrollHeight);
           
             // setTimeout(function() { 
             //     JS_Recommendations.loadList(oForm)
@@ -72,8 +77,10 @@ JS_Recommendations.prototype.loadList_box = function () {
 }
 JS_Recommendations.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Đăng ký để xem khuyến nghị vip!',
-        showCloseButton: true,
+        width: '620px',
+        title: 'Đăng ký VIP để xem khuyến nghị FinTop!',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
         confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {
