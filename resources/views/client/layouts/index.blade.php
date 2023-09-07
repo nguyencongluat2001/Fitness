@@ -180,7 +180,7 @@
             </div>
             <div class="marquee-header">
                 <marquee style="color:white">
-                    <span>
+                    <!-- <span>
                     Cổ phiếu luôn là hình ảnh đại diện cho một công ty, do vậy bạn nên tìm hiểu kỹ chính sách kinh doanh của công ty trước khi quyết định đầu tư.
                     </span>
                     <span style="padding-left:200px">
@@ -194,7 +194,8 @@
                     </span>
                     <span style="padding-left:200px">
                     Nếu bạn không sẵn sàng sở hữu một cổ phiếu trong mười năm, thậm chí đừng nghĩ đến việc sở hữu nó trong mười phút.– Warren Buffett
-                    </span>
+                    </span> -->
+                    <span>Mọi thông tin phân tích chỉ mang tính chất tham khảo, nhà đầu tư tự ra quyêt định và chịu hoàn toàn trách nhiệm trước kết quả đầu tư của mình.</span>
 
                 </marquee>
             </div>

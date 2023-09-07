@@ -113,7 +113,7 @@
                             <a class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đang sử dụng</a>
                         @else
                             <p class="text-light">$120/Year</p>
-                            <a class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đăng nhập</a>
+                            <a href="{{ url('login') }}" class="btn rounded-pill px-4 btn-outline-light mb-3" style="color: #ffba01;">Đăng nhập</a>
                         @endif
                     </div>
                     </div>
