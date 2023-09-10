@@ -98,7 +98,7 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhận định TA - Xu hướng cổ phiếu</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
-          <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b style="color:black">Vùng giá <br> cắt lỗ</b></td>
+          <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b style="color:#ff0000">Vùng giá <br> cắt lỗ</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br> FA</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thông tin/ <br>Phân tích</b></td>
         </tr>
@@ -121,19 +121,19 @@
           <td style="vertical-align: middle;white-space: inherit;" class="td_created_at_{{$id}}" align="center">
             <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
           </td>
-          <td style="vertical-align: middle;" class="td_ratings_TA_{{$id}}" align="center">
+          <td style="vertical-align: middle;font-weight: 500;" class="td_ratings_TA_{{$id}}" align="center">
             <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}">{{$data->ratings_TA}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_identify_trend_{{$id}}" align="center">
             <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;" title="{{$data->identify_trend}}">{{$data->identify_trend}}</span>
           </td>
-          <td style="vertical-align: middle;white-space: inherit;" class="td_act_{{$id}}" align="center">
+          <td style="vertical-align: middle;white-space: inherit;font-weight: 500;" class="td_act_{{$id}}" align="center">
             <span id="span_act_{{$id}}" class="span_act_{{$id}}">{{$data->act}}</span>
           </td>
-          <td style="vertical-align: middle;" class="td_trading_price_range_{{$id}}" align="center">
+          <td style="vertical-align: middle;font-weight: 500;" class="td_trading_price_range_{{$id}}" align="center">
             <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}">{{$data->trading_price_range}}</span>
           </td>
-          <td style="vertical-align: middle;background-color: #fce69b; color: #fa2f18;" class="td_stop_loss_price_zone_{{$id}}" align="center">
+          <td style="vertical-align: middle;background-color: #fce69b; color: #ff0000;" class="td_stop_loss_price_zone_{{$id}}" align="center">
             <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}">{{$data->stop_loss_price_zone}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_FA_{{$id}}" align="center">
@@ -169,13 +169,13 @@
             <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;" title="{{$data->identify_trend}}"><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_act_{{$id}}" align="center">
-            <span id="span_act_{{$id}}" class="span_act_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+            <span id="span_act_{{$id}}" class="span_act_{{$id}}"><b><span style="color:#00a25f;"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
           <td style="vertical-align: middle;" class="td_trading_price_range_{{$id}}" align="center">
-            <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+            <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}"><b><span style="color:#00a25f;"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
           <td style="vertical-align: middle;background-color: #fce69b; color: #fa2f18;" class="td_stop_loss_price_zone_{{$id}}" align="center">
-            <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+            <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}"><b><span style="color:#ff0000"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_FA_{{$id}}" align="center">
             <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
