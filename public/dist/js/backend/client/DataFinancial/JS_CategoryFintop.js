@@ -61,8 +61,10 @@ JS_CategoryFintop.prototype.loadList_basic = function (oForm) {
 }
 JS_CategoryFintop.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Đăng ký để xem danh mục khuyến nghị vip!',
-        showCloseButton: true,
+        width: '620px',
+        title: 'Đăng ký VIP để xem danh mục FinTop!',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
         confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {

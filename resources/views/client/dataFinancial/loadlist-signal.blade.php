@@ -62,10 +62,15 @@
     top: 0;
     background: #529845;
   }
+
+  #frmLoadlist_signal .blur {
+    opacity: 0.2;
+    border-color: rgba(0, 0, 0, 0.2);
+  }
 </style>
 <div id="style-1" style="padding-right:10px;">
   <div class="table-responsive pmd-card pmd-z-depth table-container">
-    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer" @if(!isset($_SESSION['id'])) onclick="JS_Signal.checkLogin()" @endif>
+    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer @if(!Auth::check()) onload @endif">
       <colgroup>
         <col width="3%">
         <col width="5%"> <!-- macp -->
@@ -103,7 +108,7 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thông tin/ <br>Phân tích</b></td>
         </tr>
       </thead>
-      <tbody id="body_data" style="background:#dbead3">
+      <tbody id="body_data" style="background:#dbead3;" @if(!Auth::check()) class="blur" @endif>
         @if(Auth::check())
         @foreach ($datas as $key => $data)
         @php $id = $data->id; @endphp
@@ -125,7 +130,7 @@
             <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}">{{$data->ratings_TA}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_identify_trend_{{$id}}" align="center">
-            <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;" title="{{$data->identify_trend}}">{{$data->identify_trend}}</span>
+            <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;">{{$data->identify_trend}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;font-weight: 500;" class="td_act_{{$id}}" align="center">
             <span id="span_act_{{$id}}" class="span_act_{{$id}}">{{$data->act}}</span>
@@ -151,22 +156,22 @@
         <tr>
           <td style="vertical-align: middle;" align="center"><b>{{$key + 1}}</b></td>
           <td style="vertical-align: middle;" class="td_code_cp_{{$id}}" align="center">
-            <span id="span_code_cp_{{$id}}" value="" class="span_code_cp_{{$id}}"><b>{{$data->code_cp}}</b></span>
+            <span id="span_code_cp_{{$id}}" value="" class="span_code_cp_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
           <td style="vertical-align: middle;" class="td_exchange_{{$id}}" align="center">
-            <span id="span_exchange_{{$id}}" class="span_exchange_{{$id}}">{{$data->exchange}}</span>
+            <span id="span_exchange_{{$id}}" class="span_exchange_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_code_category_{{$id}}" align="center">
-            <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}">{{$data->code_category}}</span>
+            <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_created_at_{{$id}}" align="center">
             <span id="span_created_at_{{$id}}" class="span_created_at_{{$id}}">{{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}} <br> {{!empty($data->created_at) ? date('d/m', strtotime($data->created_at)) : ''}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_ratings_TA_{{$id}}" align="center">
-            <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
+            <span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}">{{$data->ratings_TA}}</span>
           </td>
           <td style="vertical-align: middle;" class="td_identify_trend_{{$id}}" align="center">
-            <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;" title="{{$data->identify_trend}}"><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></span>
+            <span id="span_identify_trend_{{$id}}" class="span_identify_trend_{{$id}}" style="display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;white-space: break-spaces;overflow:hidden;">{{$data->identify_trend}}</span>
           </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_act_{{$id}}" align="center">
             <span id="span_act_{{$id}}" class="span_act_{{$id}}"><b><span style="color:#00a25f;"><i class="fas fa-eye-slash"></i></span></b></span>

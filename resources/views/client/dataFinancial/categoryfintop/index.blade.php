@@ -3,7 +3,7 @@
 <section class="container">
         <div class=" pb-3 d-lg-flex gx-5">
         <div class="col-lg-12">
-            <form action="" method="POST" id="frmLoadlist_categoryFintop">
+            <form action="" method="POST" id="frmLoadlist_categoryFintop" class="@if(!Auth::check()) onload @endif">
                <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                 <div class="home_index_vnindex pt-1 pb-2" style="background:#ffffff91 !important;border-radius:0px !important">
                     <!-- Chú giải xếp hạng TA/FA -->
@@ -40,6 +40,9 @@
         var JS_CategoryFintop = new JS_CategoryFintop(baseUrl, 'client', 'datafinancial');
         $(document).ready(function($) {
             JS_CategoryFintop.loadIndex(baseUrl);
+            if($("#frmLoadlist_categoryFintop").hasClass('onload')){
+                JS_CategoryFintop.checkLogin();
+            }
         })
     </script>
 @endsection

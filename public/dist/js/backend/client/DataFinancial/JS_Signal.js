@@ -37,6 +37,10 @@ JS_Signal.prototype.loadList = function (oForm) {
         data: data,
         success: function (arrResult) {
             $("#table-container-signal").html(arrResult);
+            if($("#frmLoadlist_signal #table-data").hasClass('onload')){
+                // onload
+                JS_Signal.checkLogin();
+            }
             setTimeout(function() { 
                 JS_Signal.loadList(oForm)
             }, 300000);
@@ -45,13 +49,15 @@ JS_Signal.prototype.loadList = function (oForm) {
 }
 JS_Signal.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Đăng nhập để xem tín hiệu mua!',
-        showCloseButton: true,
-        confirmButtonText: "Đăng nhập",
+        width: '620px',
+        title: 'Đăng ký VIP để xem danh mục Tín Hiệu Mua!',
+        allowOutsideClick: false,
+        allowEscapeKey: false,
+        confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.replace('/login');
+            window.location.replace('/client/upgradeAcc/index');
         }
     })
     $(".swal2-modal").css('background-color', 'rgb(112 14 14 / 83%)');
