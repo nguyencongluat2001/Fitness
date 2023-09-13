@@ -23,7 +23,7 @@
         <thead>
             <tr style="background:#3a760c;color:white">
                 {{--<td align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
-                <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red"><b>% Chốt</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red"><b>% Bán</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
