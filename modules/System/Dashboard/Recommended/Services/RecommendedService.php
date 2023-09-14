@@ -35,6 +35,7 @@ class RecommendedService extends Service
             'price_range' => trim($price_range, ','),
             'current_price' => isset($input['current_price']) ? $input['current_price'] : '',
             'profit_and_loss' => isset($input['profit_and_loss']) ? $input['profit_and_loss'] : '',
+            'pickcolor' => isset($input['pickcolor']) ? $input['pickcolor'] : '#218838',
             'act' => isset($input['act']) ? $input['act'] : '',
             'stop_loss' => isset($input['stop_loss']) ? $input['stop_loss'] : '',
             'closing_percentage' => isset($input['closing_percentage']) ? $input['closing_percentage'] : '',
