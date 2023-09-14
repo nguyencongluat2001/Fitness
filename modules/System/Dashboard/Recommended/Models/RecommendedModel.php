@@ -20,6 +20,7 @@ class RecommendedModel extends Model
         'price_range',
         'current_price',
         'profit_and_loss',
+        'pickcolor',
         'act',
         'stop_loss',
         'closing_percentage',
