@@ -78,7 +78,7 @@ JS_Recommendations.prototype.loadList_box = function () {
 JS_Recommendations.prototype.checkLogin = function(){
     Swal.fire({
         width: '620px',
-        title: 'Đăng ký VIP để xem khuyến nghị FinTop!',
+        title: 'Dành cho Hội viên VIP!',
         allowOutsideClick: false,
         allowEscapeKey: false,
         confirmButtonText: "Đăng ký",

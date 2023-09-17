@@ -50,9 +50,10 @@ JS_Signal.prototype.loadList = function (oForm) {
 JS_Signal.prototype.checkLogin = function(){
     Swal.fire({
         width: '620px',
-        title: 'Đăng ký VIP để xem danh mục Tín Hiệu Mua!',
+        title: 'Dành cho Hội viên VIP!',
         allowOutsideClick: false,
         allowEscapeKey: false,
+        showCloseButton: true,
         confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {

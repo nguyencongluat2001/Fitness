@@ -62,7 +62,7 @@ JS_CategoryFintop.prototype.loadList_basic = function (oForm) {
 JS_CategoryFintop.prototype.checkLogin = function(){
     Swal.fire({
         width: '620px',
-        title: 'Đăng ký VIP để xem danh mục FinTop!',
+        title: 'Dành cho Hội viên VIP!',
         allowOutsideClick: false,
         allowEscapeKey: false,
         confirmButtonText: "Đăng ký",
