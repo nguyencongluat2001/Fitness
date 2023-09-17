@@ -54,6 +54,11 @@ use Carbon\Carbon;
                                                     <div  class="col-sm-6 col-lg-12 text-decoration-none">
                                                         <div class="pb-3 d-lg-flex gx-5 col-md-10" style="margin: auto;">
                                                             <div class="col-lg-3 ">
+                                                            @if((isset($datas['type_blog']) && $datas['type_blog'] == 'VIP'))
+                                                                <h1 style="position: absolute;">
+                                                                    <img  src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 50px;width: 32px;object-fit: cover;">
+                                                                </h1>
+                                                                @endif
                                                                 <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" style="height: 200px;object-fit: cover;padding-right:10px" alt="...">
                                                             </div>
                                                             <div class="col-lg-9">

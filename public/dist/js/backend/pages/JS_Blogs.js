@@ -106,6 +106,7 @@ JS_Blogs.prototype.store = function (oFormCreate) {
     formdata.append('_token', $("#_token").val());
     formdata.append('id', $("#id").val());
     formdata.append('code_category', $("#code_category").val());
+    formdata.append('type_blog', $("#type_blog").val());
     formdata.append('title', $("#title").val());
     formdata.append('decision', CKEDITOR.instances.decision.getData());
     formdata.append('status', status);

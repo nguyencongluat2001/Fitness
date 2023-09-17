@@ -23,6 +23,11 @@ use Carbon\Carbon;
                 <div onclick="JS_About.blogReader('{{$data->id}}')" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
                     <div class="pb-3 d-lg-flex gx-5">
                         <div class="col-lg-4 " style="display: flex;align-items: center;justify-content: center;">
+                        @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                        <h1 style="position: absolute;">
+                            <img  src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 50px;width: 32px;object-fit: cover;">
+                        </h1>
+                        @endif
                             <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 150px;width: 250px;object-fit: cover;" alt="...">
                         </div>
                         <div class="col-lg-7">

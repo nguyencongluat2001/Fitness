@@ -62,6 +62,7 @@ class BlogService extends Service
                 'user_id' => $_SESSION['id'],
                 'code_blog' => $code_blog,
                 'code_category' => $input['code_category'],
+                'type_blog' => $input['type_blog'],
                 'status' => isset($input['status']) ? 1 : 0,
                 'created_at' => date("Y/m/d H:i:s"),
                 'updated_at' => date("Y/m/d H:i:s")
@@ -162,6 +163,7 @@ class BlogService extends Service
                 'id' => $getBlogInfor->id,
                 'code_blog' => $getBlogInfor->code_blog,
                 'code_category' => isset($getBlogInfor->code_category)?$getBlogInfor->code_category:null,
+                'type_blog' => isset($getBlogInfor->type_blog)?$getBlogInfor->type_blog:null,
                 'status' => $getBlogInfor->status,
                 'title' => isset($blogDetail->title)?$blogDetail->title:null,
                 'decision' => isset($blogDetail->decision)?$blogDetail->decision:null,

@@ -18,6 +18,7 @@ class BlogModel extends Model
         'code_blog',
         'user_id',
         'code_category',
+        'type_blog',
         'status',
         'created_at',
         'updated_at'

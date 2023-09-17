@@ -16,6 +16,7 @@ return new class extends Migration
             $table->uuid('user_id');
             $table->string('code_blog');
             $table->string('code_category');
+            $table->string('type_blog');
             $table->string('status',5);
             $table->timestamps();
         });

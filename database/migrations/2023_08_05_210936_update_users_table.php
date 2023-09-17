@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('blogs', function (Blueprint $table) {
             // $table->tinyInteger('order')->nullable();
-            // $table->string('id_manage')->nullable();
+            $table->string('type_blog')->nullable();
 
         });
     }
@@ -23,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('blogs', function (Blueprint $table) {
             //
         });
     }

@@ -236,6 +236,11 @@ use Carbon\Carbon;
                                                     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
                                                         <tr>
                                                             <td style="background: #ffffffeb;width:30%;" align="center">
+                                                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                                                <h1 style="position: absolute;">
+                                                                    <img  src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 50px;width: 32px;object-fit: cover;">
+                                                                </h1>
+                                                                @endif
                                                                 <img  src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" alt="Image" style="height: 200px;width: 250px;object-fit: cover;">
                                                             </td>
                                                             <td style="background: #ffffffeb;width:70%;vertical-align: middle;">

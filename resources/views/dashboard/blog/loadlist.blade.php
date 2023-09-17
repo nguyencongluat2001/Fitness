@@ -17,6 +17,7 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
                 <td align="center"><b>Ngày thêm</b></td>
                 <td align="center"><b>Tên bài viết</b></td>
                 <td align="center"><b>Ảnh</b></td>
+                <td align="center"><b>Loại</b></td>
                 <td align="center"><b>Trạng thái</b></td>
                 <td align="center"><b>#</b></td>
             </tr>
@@ -30,6 +31,7 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
                     <td style="width:5% ;vertical-align: middle;" align="center">{{ $data['created_at']}}</td>
                     <td style="width:20% ;white-space: inherit;vertical-align: middle;">{{ $data->detailBlog->title }}</td>
                     <td style="width:20%;vertical-align: middle;" align="center"><img  src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;"></td>
+                    <td style="width:5% ;vertical-align: middle;" align="center">{{($data['type_blog'])}}</td>
                     <td style="width:5% ;vertical-align: middle;" align="center">{{($data['status'] == '1') ? 'Hoạt động' : 'Không hoạt động'}}</td>
                     <td style="width:5% ;vertical-align: middle;" align="center">
                          <button onclick="JS_Blogs.infoBlog('{{ $data['id'] }}')" class="btn btn-light" type="button">

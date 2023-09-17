@@ -17,16 +17,25 @@
                             <select class="form-control input-sm chzn-select" name="code_category" id="code_category">
                                 <option value=''>-- Chọn thể loại --</option>
                                 @foreach($data['category'] as $item)
-
                                 <option @if((isset($data['code']) && $data['code'] == $item['code_category']) || 
                                         (isset($data['code_category']) && $data['code_category'] == $item['code_category'])) selected @endif 
                                         value="{{$item['code_category']}}">{{$item['name_category']}}</option>
-                                
                                 @endforeach
                             </select>
                         </div>
                     </div>
+                   
                     <div class="col-md-6">
+                        <div class="form-group">
+                            <p for="example-text-input" class="form-control-label required">Loại bài viết</p>
+                            <select class="form-control input-sm chzn-select" name="type_blog" id="type_blog">
+                                <option value=''>-- Chọn loại --</option>
+                                <option @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP')) selected @endif  value='VIP'>Vip</option>
+                                <option @if((isset($data['type_blog']) && $data['type_blog'] == 'BASIC')) selected @endif value='BASIC'>Basic</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
                         <div class="form-group">
                             <p for="example-text-input" class="form-control-label required">Tiêu đề</p>
                             <input class="form-control" type="text" value="{{!empty($data['title'])?$data['title']:''}}" name="title" id="title" placeholder="Nhập tiêu đề..." />
