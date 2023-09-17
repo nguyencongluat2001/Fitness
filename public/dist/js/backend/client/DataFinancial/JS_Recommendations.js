@@ -36,10 +36,10 @@ JS_Recommendations.prototype.loadList = function (oForm) {
         success: function (arrResult) {
             $("#table-container-recommendations").html(arrResult);
             // $('#messages').scrollTop($('#messages')[0].scrollHeight);
-            if($("#frmLoadlist_recommendations #messages").hasClass('onload')){
-                // onload
-                JS_Recommendations.checkLogin();
-            }
+            // if($("#frmLoadlist_recommendations #messages").hasClass('onload')){
+            //     // onload
+            //     JS_Recommendations.checkLogin();
+            // }
             // $('#messages').scrollTop($('#messages')[0].scrollHeight);
           
             // setTimeout(function() { 
@@ -80,6 +80,7 @@ JS_Recommendations.prototype.checkLogin = function(){
         width: '620px',
         title: 'Dành cho Hội viên VIP!',
         allowOutsideClick: false,
+        showCloseButton: true,
         allowEscapeKey: false,
         confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",

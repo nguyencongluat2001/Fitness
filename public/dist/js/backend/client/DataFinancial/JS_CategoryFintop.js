@@ -65,6 +65,7 @@ JS_CategoryFintop.prototype.checkLogin = function(){
         title: 'Dành cho Hội viên VIP!',
         allowOutsideClick: false,
         allowEscapeKey: false,
+        showCloseButton: true,
         confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {

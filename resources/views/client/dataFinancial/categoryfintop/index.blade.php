@@ -40,9 +40,9 @@
         var JS_CategoryFintop = new JS_CategoryFintop(baseUrl, 'client', 'datafinancial');
         $(document).ready(function($) {
             JS_CategoryFintop.loadIndex(baseUrl);
-            if($("#frmLoadlist_categoryFintop").hasClass('onload')){
-                JS_CategoryFintop.checkLogin();
-            }
+            // if($("#frmLoadlist_categoryFintop").hasClass('onload')){
+            //     JS_CategoryFintop.checkLogin();
+            // }
         })
     </script>
 @endsection
