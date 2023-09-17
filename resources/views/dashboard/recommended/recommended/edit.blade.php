@@ -16,6 +16,27 @@
     .modal.show .modal-dialog {
         transform: none;
     }
+
+    .dropdown-options {
+        display: none;
+        position: absolute;
+        overflow: auto;
+    }
+
+    .dropdown:hover .dropdown-options {
+        display: block;
+    }
+    #dropdownColor .dropdown-menu .dropdown-item:hover{
+        background-color: #fff !important;
+        text-decoration: underline;
+    }
+    #dropdownColor .dropdown-menu{
+        margin-top: 25px !important;
+        left: -22px !important;
+    }
+    #dropdownColor .dropdown-menu:before{
+        color: #fff;
+    }
 </style>
 <form id="frmAdd" role="form" action="" method="POST" enctype="multipart/form-data">
     @csrf
@@ -55,7 +76,25 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Giá mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" colspan="3"><b>Vùng giá mục tiêu</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Giá hiện tại</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Lãi/Lỗ</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2">
+                                <b>Lãi/Lỗ <strong style="color: red">*</strong></b>
+                                <div>
+                                    <span style="display: inline-flex;">
+                                        <div class="dropdown" id="dropdownColor">
+                                            <span  class="btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 40px; height: 20px; border: 1px solid #fff"></span>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="background-color: #fff;">
+                                                <li style="background-color: #C82333; color: #fff;" onclick="clickColor('#c82333')"><span>Đỏ</span></li>
+                                                <li style="background-color: #E0A800; color: #000;" onclick="clickColor('#E0A800')"><span>Vàng</span></li>
+                                                <li style="background-color: #218838; color: #fff;" onclick="clickColor('#218838')"><span>Xanh lục</span></li>
+                                                <li style="background-color: #0069D9; color: #fff;" onclick="clickColor('#0069D9')"><span>Xanh dương</span></li>
+                                                <li style="background-color: #FFFFFF; color: #000;" onclick="clickColor('#FFFFFF')"><span>Trắng</span></li>
+                                                <li style="background-color: #000000; color: #fff;" onclick="clickColor('#000000')"><span>Đen</span></li>
+                                            </ul>
+                                        </div>
+                                        <input type="color" id="pickcolor" name="pickcolor" value="{{isset($datas->pickcolor)?$datas->pickcolor:'#218838'}}" style="width:40px; height: 21px;">
+                                    </span>
+                                </div>
+                            </td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Khuyến nghị hành động</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Dừng lỗ</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Chốt</b></td>
@@ -70,7 +109,7 @@
                     </thead>
                     <tbody>
                         @php
-                            $price_range = isset($datas) ? explode(',', trim($datas->price_range, ',')) : '';
+                        $price_range = isset($datas) ? explode(',', trim($datas->price_range, ',')) : '';
                         @endphp
                         <tr>
                             <td style="vertical-align: middle;" align="center"><input id="code_cp" name="code_cp" type="text" value="{{isset($datas->code_cp)?$datas->code_cp:''}}" class="form-control"></td>
@@ -85,19 +124,20 @@
                             </td>
                             <td style="vertical-align: middle;" align="center"><input id="percent_of_assets" name="percent_of_assets" type="text" value="{{isset($datas->percent_of_assets)?$datas->percent_of_assets:''}}" class="form-control"></td>
                             <td style="vertical-align: middle;" align="center"><input id="price" name="price" type="text" value="{{isset($datas->price)?$datas->price:''}}" class="form-control"></td>
-                            @for($i = 0; $i < 3; $i++)
-                            <td style="vertical-align: middle;" align="center"><input id="price_range_{{$i}}" name="price_range_{{$i}}" type="text" value="{{ isset($price_range[$i]) ? $price_range[$i] : '' }}" class="form-control"></td>
-                            @endfor
-                            <td style="vertical-align: middle;" align="center"><input id="current_price" name="current_price" type="text" value="{{isset($datas->current_price)?$datas->current_price:''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center"><input id="profit_and_loss" name="profit_and_loss" type="text" value="{{isset($datas->profit_and_loss)?$datas->profit_and_loss:''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center"><input id="act" name="act" type="text" value="{{isset($datas->act)?$datas->act:''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center"><input id="stop_loss" name="stop_loss" type="text" value="{{isset($datas->stop_loss)?$datas->stop_loss:''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center"><input id="closing_percentage" name="closing_percentage" type="text" value="{{isset($datas->closing_percentage)?$datas->closing_percentage:''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center"><input id="note" name="note" type="text" value="{{isset($datas->note)?$datas->note:''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center">
-                                <p></p>
-                                <button id="btn_create" type="button" class="btn btn-success" title="Xem trực tuyến"><i class="fas fa-thumbs-up"></i></button>
-                            </td>
+                            @for($i = 0; $i < 3; $i++) <td style="vertical-align: middle;" align="center"><input id="price_range_{{$i}}" name="price_range_{{$i}}" type="text" value="{{ isset($price_range[$i]) ? $price_range[$i] : '' }}" class="form-control"></td>
+                                @endfor
+                                <td style="vertical-align: middle;" align="center"><input id="current_price" name="current_price" type="text" value="{{isset($datas->current_price)?$datas->current_price:''}}" class="form-control"></td>
+                                <td style="vertical-align: middle;" align="center">
+                                    <input id="profit_and_loss" name="profit_and_loss" type="text" value="{{isset($datas->profit_and_loss)?$datas->profit_and_loss:''}}" class="form-control">
+                                </td>
+                                <td style="vertical-align: middle;" align="center"><input id="act" name="act" type="text" value="{{isset($datas->act)?$datas->act:''}}" class="form-control"></td>
+                                <td style="vertical-align: middle;" align="center"><input id="stop_loss" name="stop_loss" type="text" value="{{isset($datas->stop_loss)?$datas->stop_loss:''}}" class="form-control"></td>
+                                <td style="vertical-align: middle;" align="center"><input id="closing_percentage" name="closing_percentage" type="text" value="{{isset($datas->closing_percentage)?$datas->closing_percentage:''}}" class="form-control"></td>
+                                <td style="vertical-align: middle;" align="center"><input id="note" name="note" type="text" value="{{isset($datas->note)?$datas->note:''}}" class="form-control"></td>
+                                <td style="vertical-align: middle;" align="center">
+                                    <p></p>
+                                    <button id="btn_create" type="button" class="btn btn-success" title="Xem trực tuyến"><i class="fas fa-thumbs-up"></i></button>
+                                </td>
                         </tr>
                     </tbody>
                 </table>

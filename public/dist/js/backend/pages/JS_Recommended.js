@@ -467,3 +467,7 @@ JS_Recommended.prototype.checkValidate = function(){
         return false;
     }
 }
+
+function clickColor(color){
+    $("#pickcolor").val(color);
+}

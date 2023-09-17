@@ -93,14 +93,16 @@
                         <span>{{ $data['current_price'] }}</span>
 
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#b6d3ac;font-weight:bold;">
+                    <td align="center" 
+                    @if(isset($data['pickcolor'])) style="white-space: inherit; vertical-align: middle;background:{{$data['pickcolor']}};font-weight:bold;"
+                    @else style="white-space: inherit; vertical-align: middle;background:#218838;font-weight:bold;"
+                    @endif>
                         {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
                         <span>{{ $data['profit_and_loss'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif--}}
                         <span>{{ $data['profit_and_loss'] }}</span>
-
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
                         <span>{{ $data['act'] }}</span>

@@ -253,6 +253,7 @@ class DataFinancialController extends Controller
 
                 "current_price" => !empty($item['current_price'])?$item['current_price']:'',
                 "profit_and_loss" => !empty($item['profit_and_loss'])?$item['profit_and_loss']:'',
+                "pickcolor" => !empty($item['pickcolor'])?$item['pickcolor']:'#218838',
                 "act" => !empty($item['act'])?$item['act']:'',
                 "stop_loss" => !empty($item['stop_loss'])?$item['stop_loss']:'',
                 "closing_percentage" => !empty($item['closing_percentage'])?$item['closing_percentage']:'',
