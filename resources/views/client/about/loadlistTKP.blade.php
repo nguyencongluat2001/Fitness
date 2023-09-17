@@ -25,10 +25,10 @@ use Carbon\Carbon;
                         <div class="col-lg-4" style="display: flex;align-items: center;justify-content: center;">
                         @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
                         <h1 style="position: absolute;">
-                            <img  src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 50px;width: 32px;object-fit: cover;">
+                            <img  src="{{url('/clients/img/vip.png')}}" alt="Image" style="">
                         </h1>
                         @endif
-                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 150px;width: 250px;object-fit: cover;" alt="...">
+                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 150px;width: 250px;object-fit: cover;display: flex;align-items: center;justify-content: center;" alt="...">
                         </div>
                         <div class="col-lg-7">
                             <div class="card-body">
