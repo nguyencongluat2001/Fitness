@@ -24,7 +24,8 @@
                             </select>
                         </div>
                     </div>
-                   
+                    @if(isset($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE' ||
+                             $_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'))
                     <div class="col-md-6">
                         <div class="form-group">
                             <p for="example-text-input" class="form-control-label required">Loại bài viết</p>
@@ -35,6 +36,7 @@
                             </select>
                         </div>
                     </div>
+                    @endif
                     <div class="col-md-12">
                         <div class="form-group">
                             <p for="example-text-input" class="form-control-label required">Tiêu đề</p>
