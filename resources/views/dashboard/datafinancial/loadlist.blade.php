@@ -82,7 +82,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 				<col width="5%"> <!-- xep hang FA -->
 				<col width="5%"> <!-- dien tich -->
 				<col width="5%"> <!-- thu tu -->
-				<col width="5%"> <!-- thu tu -->
+				<col width="5%"> <!-- tin hieu mua -->
 				<col width="3%"> <!-- # -->
 			</colgroup>
 			<thead>
@@ -136,11 +136,11 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					</td>
 					<td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">{{!empty($data->category) ? $data->category->name_category : ''}}</td>
 					<td align="center">
-						@endif
 						{{$data->user_take_on}}
 						
 					</td>
-					<td style="vertical-align: middle;white-space: inherit;" align="center" onclick="{select_row(this);}">{{!empty($data->created_at) ? date('d/m/Y', strtotime($data->created_at)) : ''}}</td>
+					@endif
+					<td style="vertical-align: middle;white-space: inherit;" align="center" onclick="{select_row(this);}">{{!empty($data->created_at) ? date('H', strtotime($data->created_at)). 'h' . date('i', strtotime($data->created_at)). ' ' .date('d/m', strtotime($data->created_at)) : ''}}</td>
 					<td class="td_ratings_TA_{{$id}}" style="vertical-align: middle;" align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'ratings_TA')">
 						<span id="span_ratings_TA_{{$id}}" class="span_ratings_TA_{{$id}}">{{$data->ratings_TA}}</span>
 					</td>
