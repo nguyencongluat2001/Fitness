@@ -38,7 +38,6 @@ class DataFinancialService extends Service
                 "trading_price_range" =>$input['trading_price_range'],
                 "stop_loss_price_zone" =>$input['stop_loss_price_zone'],
                 "status" =>!empty($input['status'])?$input['status']:1,
-                "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']:1,
                 "created_at" => date("Y/m/d H:i:s"),
                 "updated_at" => date("Y/m/d H:i:s")
             ];
@@ -59,6 +58,9 @@ class DataFinancialService extends Service
             }
              if(!empty($input['ratings_FA'])){
                 $arrData['ratings_FA'] =  $input['ratings_FA'];
+            }
+            if(!empty($input['user_take_on'])){
+                $arrData['user_take_on'] =  $input['user_take_on'];
             }
             $create = $this->DataFinancialRepository->where('id',$input['id'])->update($arrData);
         }else{
