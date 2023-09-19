@@ -108,6 +108,12 @@
     overflow-y: scroll;
     margin-bottom: 25px;
 }
+.hiddel{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_DataFinancial.js') }}"></script>
     <div class="container-fluid">
@@ -117,17 +123,20 @@
                     <button class="btn btn-success btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
                     data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Cẩm nang</button>
                 </div> -->
+                <input checked type="checkbox" id="view_chart" name="view_chart" onclick="JS_DataFinancial.view_chart(this)" /><span style=";color: #ff9f00;font-family: serif;"> Ẩn hiện biểu đồ</span></label>
                 <section class="content-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row form-group">
-                                <div class="col-lg-12" style="padding:2px;">
-                                    <!-- <h class="h4 py-2"><i class="far fa-chart-bar"></i>. <span style="font-family: auto;" > Biểu đồ</span> </h> <br> -->
-                                    <!-- <p>Nguồn theo: fireant</p> -->
-                                    <iframe style="width:100%" height="550" src="https://fireant.vn/charts" 
-                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                    </iframe>
+                                <div id="bank" class="show">
+                                    <div class="col-lg-12" style="padding:2px;">
+                                        <!-- <h class="h4 py-2"><i class="far fa-chart-bar"></i>. <span style="font-family: auto;" > Biểu đồ</span> </h> <br> -->
+                                        <!-- <p>Nguồn theo: fireant</p> -->
+                                        <iframe style="width:100%" height="550" src="https://fireant.vn/charts" 
+                                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
                                 </div>
                             </div>
                         </div>

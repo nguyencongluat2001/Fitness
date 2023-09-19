@@ -634,3 +634,25 @@ JS_DataFinancial.prototype.remoteSearch = function () {
     var myClass = this;
     myClass.loadList();
 }
+/**
+ * Hàm hiển thị modal thanh toán 
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_DataFinancial.prototype.view_chart = function () {
+    var status = ''
+    $('input[name="view_chart"]:checked').each(function() {
+        status =  $(this).val();
+    });
+
+    if(status=='on'){
+        $('#bank').removeClass("hiddel");
+        $('#bank').addClass("show");
+    }
+    else{
+        $('#bank').removeClass("show");
+        $('#bank').addClass("hiddel");
+    }
+}
