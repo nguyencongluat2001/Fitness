@@ -124,6 +124,8 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					</td>
 					<td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">{{!empty($data->category) ? $data->category->name_category : ''}}</td>
 					<td style="vertical-align: middle;white-space: inherit;" align="center">
+						{{$data->user_take_on}}
+					</td>
 						@else
 					<td style="vertical-align: middle;" align="center" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
 						<span>{{ $data->order }}</span>
@@ -137,7 +139,6 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					<td style="vertical-align: middle;" align="center" onclick="{select_row(this);}">{{!empty($data->category) ? $data->category->name_category : ''}}</td>
 					<td align="center">
 						{{$data->user_take_on}}
-						
 					</td>
 					@endif
 					<td style="vertical-align: middle;white-space: inherit;" align="center" onclick="{select_row(this);}">{{!empty($data->created_at) ? date('H', strtotime($data->created_at)). 'h' . date('i', strtotime($data->created_at)). ' ' .date('d/m', strtotime($data->created_at)) : ''}}</td>

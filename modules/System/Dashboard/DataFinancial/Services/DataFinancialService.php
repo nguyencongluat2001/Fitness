@@ -106,6 +106,7 @@ class DataFinancialService extends Service
             $this->updateOrder($input);
         }
         $dataFinancialSingle = $this->repository->where('id', $id)->first();
+        // dd($dataFinancialSingle);
         $dataFinancials = $this->repository->select('*');
         if(empty($input['code_category'])){
             $dataFinancials = $dataFinancials->where(function($sql){
@@ -129,9 +130,9 @@ class DataFinancialService extends Service
         $status = isset($dataFinancialSingle->status) ? $dataFinancialSingle->status : 0;
         $param = [
             'user_id' => $_SESSION['id'],
-            'code_cp' => isset($input['code_cp']) ? $input['code_cp'] : $code_cp,
+            // 'code_cp' => isset($input['code_cp']) ? $input['code_cp'] : $code_cp,
             'exchange' => isset($input['exchange']) ? $input['exchange'] : $exchange,
-            'code_category' => isset($input['code_category']) ? $input['code_category'] : $code_category,
+            // 'code_category' => isset($input['code_category']) ? $input['code_category'] : $code_category,
             'ratings_TA' => isset($input['ratings_TA']) ? $input['ratings_TA'] : $ratings_TA,
             'identify_trend' => isset($input['identify_trend']) ? $input['identify_trend'] : $identify_trend,
             'act' => isset($input['act']) ? $input['act'] : $act,
@@ -139,16 +140,16 @@ class DataFinancialService extends Service
             'stop_loss_price_zone' => isset($input['stop_loss_price_zone']) ? $input['stop_loss_price_zone'] : $stop_loss_price_zone,
             'ratings_FA' => isset($input['ratings_FA']) ? $input['ratings_FA'] : $ratings_FA,
             'url_link' => isset($input['url_link']) ? $input['url_link'] : $url_link,
-            'order' => isset($input['order']) ? $input['order'] : $order,
+            // 'order' => isset($input['order']) ? $input['order'] : $order,
             'status' => isset($input['status']) ? $input['status'] : $status,
-            "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']: ($dataFinancialSingle->user_take_on ?? 1),
+            // "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']: ($dataFinancialSingle->user_take_on ?? 1),
 
         ];
-        foreach($dataFinancials as $value){
-            if(isset($input['code_cp']) && $input['code_cp'] === $value->code_cp){
-                return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
-            }
-        }
+        // foreach($dataFinancials as $value){
+        //     if(isset($input['code_cp']) && $input['code_cp'] === $value->code_cp){
+        //         return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
+        //     }
+        // }
         if(isset($dataFinancialSingle) && !empty($dataFinancialSingle)){
             $param['updated_at'] = date('Y-m-d H:i:s');
             $this->repository->where('id',$id)->update($param);
