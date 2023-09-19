@@ -552,12 +552,6 @@ JS_DataFinancial.prototype.checkValidate = function(){
         $("#frmAdd #trading_price_range").focus();
         return false;
     }
-    if ($("#frmAdd #stop_loss_price_zone").val() == '') {
-        var nameMessage = 'Vùng giá cắt lỗ không được để trống!';
-        NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
-        $("#frmAdd #stop_loss_price_zone").focus();
-        return false;
-    }
     if ($("#frmAdd #ratings_FA").val() == '') {
         var nameMessage = 'Xếp hạng không được để trống!';
         NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);

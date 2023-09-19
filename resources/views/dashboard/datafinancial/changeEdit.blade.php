@@ -66,7 +66,7 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Nhận định Ta - Xu hướng CP</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Hành động</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá giao dịch</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá cắt lỗ</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá cắt lỗ</b></td>
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Xếp hạng FA</b></td> -->
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center"><b>PTDN FA</b></td> -->
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Thứ tự</b></td> -->
@@ -125,7 +125,7 @@
                                  STT 
                             </div>
                             <div>
-                                <input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 60px; text-align:center">
+                                <input id="order" name="order" type="number" value="{{isset($datas->order)?$datas->order:''}}" class="form-control" style="width: 100px;">
                             </div>
                         </div>
                         <div class="col-md-4" style="display:flex">

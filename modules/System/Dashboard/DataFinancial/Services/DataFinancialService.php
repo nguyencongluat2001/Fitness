@@ -103,7 +103,7 @@ class DataFinancialService extends Service
         $dataFinancials = $dataFinancials->get();
         $code_cp = isset($dataFinancialSingle->code_cp) ? $dataFinancialSingle->code_cp : '';
         $exchange = isset($dataFinancialSingle->exchange) ? $dataFinancialSingle->exchange : '';
-        $code_category = isset($dataFinancialSingle->code_category) ? $dataFinancialSingle->code_category : '';
+        $code_category = isset($dataFinancialSingle->code_category) ? $dataFinancialSingle->code_category : ($dataFinancialSingle->code_category ?? '');
         $ratings_TA = isset($dataFinancialSingle->ratings_TA) ? $dataFinancialSingle->ratings_TA : '';
         $identify_trend = isset($dataFinancialSingle->identify_trend) ? $dataFinancialSingle->identify_trend : '';
         $act = isset($dataFinancialSingle->act) ? $dataFinancialSingle->act : '';
@@ -127,7 +127,7 @@ class DataFinancialService extends Service
             'url_link' => isset($input['url_link']) ? $input['url_link'] : $url_link,
             'order' => isset($input['order']) ? $input['order'] : $order,
             'status' => isset($input['status']) ? $input['status'] : $status,
-            "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']:1,
+            "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']: ($dataFinancialSingle->user_take_on ?? 1),
 
         ];
         foreach($dataFinancials as $value){
