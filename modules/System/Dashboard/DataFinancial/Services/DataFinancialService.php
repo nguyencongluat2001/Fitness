@@ -32,7 +32,6 @@ class DataFinancialService extends Service
             $dataFinancials = $this->repository->select('*')->where('id',$input['id'])->count();
             $arrData = [
                 "user_id" => $_SESSION['id'],
-                "exchange" => $input['exchange'],
                 "ratings_TA" => $input['ratings_TA'],
                 "identify_trend" =>$input['identify_trend'],
                 "act" =>!empty($input['act'])?$input['act']:'',
@@ -55,6 +54,9 @@ class DataFinancialService extends Service
             }
             if(!empty($input['url_link'])){
                 $arrData['url_link'] =  $input['url_link'];
+            }
+            if(!empty($input['exchange'])){
+                $arrData['exchange'] =  $input['exchange'];
             }
             $create = $this->DataFinancialRepository->where('id',$input['id'])->update($arrData);
         }else{
