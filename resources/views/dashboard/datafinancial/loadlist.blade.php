@@ -45,7 +45,7 @@
     } */
 	.table-responsive.pmd-card.pmd-z-depth {
 		height: 100%;
-		max-height: 600px;
+		max-height: 800px;
 	}
 
 	#style-1 #table-data thead tr td {
