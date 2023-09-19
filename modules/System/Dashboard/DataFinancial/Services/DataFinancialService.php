@@ -32,22 +32,30 @@ class DataFinancialService extends Service
             $dataFinancials = $this->repository->select('*')->where('id',$input['id'])->count();
             $arrData = [
                 "user_id" => $_SESSION['id'],
-                "code_cp" => $input['code_cp'],
                 "exchange" => $input['exchange'],
-                "code_category" => !empty($input['code_category'])?$input['code_category']:'',
                 "ratings_TA" => $input['ratings_TA'],
                 "identify_trend" =>$input['identify_trend'],
                 "act" =>!empty($input['act'])?$input['act']:'',
                 "trading_price_range" =>$input['trading_price_range'],
                 "stop_loss_price_zone" =>$input['stop_loss_price_zone'],
                 "ratings_FA" =>$input['ratings_FA'],
-                "url_link" =>!empty($input['url_link'])?$input['url_link']:'test_link',
                 "status" =>!empty($input['status'])?$input['status']:1,
                 "user_take_on" =>!empty($input['user_take_on'])?$input['user_take_on']:1,
-                "order" => isset($input['order']) ? $input['order'] : (isset($dataFinancials->order) ? $dataFinancials->order : ((int)$count + 1)),
                 "created_at" => date("Y/m/d H:i:s"),
                 "updated_at" => date("Y/m/d H:i:s")
             ];
+            if(!empty($input['code_cp'])){
+                $arrData['code_cp'] =  $input['code_cp'];
+            }
+            if(!empty($input['code_category'])){
+                $arrData['code_category'] =  $input['code_category'];
+            }
+            if(!empty($input['order'])){
+                $arrData['order'] =  isset($input['order']) ? $input['order'] : (isset($dataFinancials->order) ? $dataFinancials->order : ((int)$count + 1));
+            }
+            if(!empty($input['url_link'])){
+                $arrData['url_link'] =  $input['url_link'];
+            }
             $create = $this->DataFinancialRepository->where('id',$input['id'])->update($arrData);
         }else{
             $dataFinancials = $this->repository->select('*')->where('code_cp', $input['code_cp'])->count();
