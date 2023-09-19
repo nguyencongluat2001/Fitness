@@ -123,7 +123,7 @@
                     <button class="btn btn-success btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
                     data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Cẩm nang</button>
                 </div> -->
-                <input checked type="checkbox" id="view_chart" name="view_chart" onclick="JS_DataFinancial.view_chart(this)" /><span style=";color: #ff9f00;font-family: serif;"> Ẩn hiện biểu đồ</span></label>
+                <input checked type="checkbox" id="view_chart" name="view_chart" onclick="JS_DataFinancial.view_chart()" /><span style=";color: #ff9f00;font-family: serif;"> Ẩn hiện biểu đồ</span></label>
                 <section class="content-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-body">
