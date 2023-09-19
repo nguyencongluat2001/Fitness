@@ -89,7 +89,7 @@
         <tr>
           <!-- <th style="white-space: inherit;vertical-align: middle;font-size: 17px;background:#fff5dc;color:#dd0000;" align="center" colspan="3"><center>NHẬP MÃ CỔ PHIẾU</center></th> -->
           <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#fff49b;height: 80px;" align="center" colspan="12">
-            <center>FINTOP - DANH MỤC CỔ PHIẾU CHO TÍN HIỆU</center>
+            <center>FINTOP - DANH MỤC CỔ PHIẾU CHO TÍN HIỆU MUA</center>
           </th>
         </tr>
         <tr style="background:#529845;color:white">
@@ -138,10 +138,10 @@
           <td style="vertical-align: middle;font-weight: 500;" class="td_trading_price_range_{{$id}}" align="center">
             <span id="span_trading_price_range_{{$id}}" class="span_trading_price_range_{{$id}}">{{$data->trading_price_range}}</span>
           </td>
-          <td style="vertical-align: middle;background-color: #fce69b; color: #ff0000;" class="td_stop_loss_price_zone_{{$id}}" align="center">
+          <td style="vertical-align: middle;background-color: #fce69b; color: #ff0000;font-weight: 500;" class="td_stop_loss_price_zone_{{$id}}" align="center">
             <span id="span_stop_loss_price_zone_{{$id}}" class="span_stop_loss_price_zone_{{$id}}">{{$data->stop_loss_price_zone}}</span>
           </td>
-          <td style="vertical-align: middle;" class="td_ratings_FA_{{$id}}" align="center">
+          <td style="vertical-align: middle;font-weight: 500;" class="td_ratings_FA_{{$id}}" align="center">
             <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
           </td>
           <td style="vertical-align: middle;" align="center">
