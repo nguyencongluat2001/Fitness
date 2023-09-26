@@ -33,6 +33,12 @@
                     </div>
                 </div>
                 <div class="row form-group">
+                    <span class="col-md-3 control-label required">Mã cổ phiếu</span>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" value="{{isset($datas->code) ? $datas->code : ''}}" name="code" id="code" placeholder="Nhập mã cổ phiếu..." />
+                    </div>
+                </div>
+                <div class="row form-group">
                     <span class="col-md-3 control-label required">Dừng lỗ</span>
                     <div class="col-md-8">
                         <input class="form-control" type="text" value="{{isset($datas->stop_loss) ? $datas->stop_loss : ''}}" name="stop_loss" id="stop_loss" placeholder="Nhập dùng lỗ..." />

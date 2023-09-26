@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('recommendations', function (Blueprint $table) {
-            $table->string('pickcolor')->nullable();
+        Schema::table('buy_signal', function (Blueprint $table) {
+            $table->string('code')->nullable();
         });
     }
 
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('recommendations', function (Blueprint $table) {
+        Schema::table('buy_signal', function (Blueprint $table) {
             //
         });
     }

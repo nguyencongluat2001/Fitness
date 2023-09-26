@@ -19,9 +19,11 @@ class SignalModel extends Model
         'id',
         'user_id',
         'title',
+        'code',
         'type',
         'target',
         'stop_loss',
+        'price_buy',
         'order',
         'status',
         'created_at',
@@ -39,7 +41,8 @@ class SignalModel extends Model
                     $query->where(function($sql) use($value){
                         $sql->where('title', 'like', "%$value%")
                         ->orWhere('target', 'like', "%$value%")
-                        ->orWhere('stop_loss', 'like', "%$value%");
+                        ->orWhere('stop_loss', 'like', "%$value%")
+                        ->orWhere('code', 'like', "%$value%");
                     });
                 }
                 return $query;

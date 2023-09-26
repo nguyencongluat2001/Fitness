@@ -8,11 +8,11 @@
                 <div style="padding-left:5px">
                 <div class="p-3 ms-3" style="border-radius: 15px; background-color: #edffff;width:100%">
                 <p style="font-size:14px;font-family:auto" class="small mb-0">
-                    <h5>{{ $data->title }}</h5>
-                    <span>Giá mua: {{ $data->price_buy }}</span> 
-                    <span>Mục tiêu: {{ $data->target }}</span> 
-                    <span>Dừng lỗ:  {{ $data->stop_loss }}</span> <br>
-                    <span>Thời gian: {{date('H:i:s d-m-Y', strtotime($data->created_at))}}</span> <br>
+                    <h5>{{ $data['title'] }}</h5>
+                    <span>Giá mua: {{ $data['price_buy'] }}</span> 
+                    <span>Mục tiêu: {{ $data['target'] }}</span> 
+                    <span>Dừng lỗ:  {{ $data['stop_loss'] }}</span> <br>
+                    <span>Thời gian: {{date('H:i:s d-m-Y', strtotime($data['created_at']))}}</span> <br>
                 </p>
             </div>
         

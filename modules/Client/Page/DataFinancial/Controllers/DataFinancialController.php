@@ -186,10 +186,30 @@ class DataFinancialController extends Controller
     {
         $arrInput = $request->input();
         if(isset($arrInput['type']) && $arrInput['type'] == 'box'){
-            $result['datas'] = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
+            $arrData = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
+            foreach($arrData as $val){
+                if(!Auth::check()){
+                    $title = $val['title'];
+                }else{
+                    $val['title'] = str_replace('xxx',$val['code'],$val['title']);
+                }
+                $result['datas'][] = [
+                    'user_id' => $val['user_id'],
+                    'title' => $val['title'],
+                    'code' => $val['code'],
+                    'type' => $val['type'],
+                    'target' => $val['target'],
+                    'stop_loss' => $val['stop_loss'],
+                    'price_buy' => $val['price_buy'],
+                    'order' => $val['order'],
+                    'status' => $val['status'],
+                    'created_at' => date('Y-m-d H:i:s', strtotime($val['created_at'])),
+                    'updated_at' => date('Y-m-d H:i:s', strtotime($val['updated_at']))
+                ];
+            }
             return view('client.layouts.loadListBox',$result);
         }else{
-            $result['datas'] = $this->recommendedService->where('status','1')->get();
+            $result['datas'] = $this->recommendedService->where('status','1')->get()->toArray();
             return view('client.dataFinancial.recommendations.loadlist',$result);
         }
     }
@@ -207,7 +227,28 @@ class DataFinancialController extends Controller
             $result['datas'] = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
             return view('client.layouts.loadListBox',$result);
         }else{
-            $result['datas'] = $this->SignalService->where('status','1')->get();
+            $arrData = $this->SignalService->where('status','1')->get();
+            // $arrData = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
+            foreach($arrData as $val){
+                if(!Auth::check()){
+                    $title = $val['title'];
+                }else{
+                    $val['title'] = str_replace('xxx',$val['code'],$val['title']);
+                }
+                $result['datas'][] = [
+                    'user_id' => $val['user_id'],
+                    'title' => $val['title'],
+                    'code' => $val['code'],
+                    'type' => $val['type'],
+                    'target' => $val['target'],
+                    'stop_loss' => $val['stop_loss'],
+                    'price_buy' => $val['price_buy'],
+                    'order' => $val['order'],
+                    'status' => $val['status'],
+                    'created_at' => date('Y-m-d H:i:s', strtotime($val['created_at'])),
+                    'updated_at' => date('Y-m-d H:i:s', strtotime($val['updated_at']))
+                ];
+            }
             return view('client.dataFinancial.recommendations.loadlist',$result);
         }
     }

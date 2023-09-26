@@ -20,6 +20,7 @@
                 <td align="center"><b>STT</b></td>
                 <td align="center"><b>Người thêm</b></td>
                 <td align="center"><b>Tiêu đề</b></td>
+                <td align="center"><b>Mã cổ phiếu</b></td>
                 <td align="center"><b>Loại</b></td>
                 <td align="center"><b>Mục tiêu</b></td>
                 <td align="center"><b>Dừng lỗ</b></td>
@@ -40,6 +41,9 @@
                         <td onclick="{select_row(this);}">{{ isset($data->users->name) ? $data->users->name : '' }}</td>
                         <td class="td_title_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'title')">
                             <span id="span_title_{{$id}}" class="span_title_{{$id}}">{{ $data->title }}</span>
+                        </td>
+                        <td class="td_code_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'code')">
+                            <span id="span_code_{{$id}}" class="span_code_{{$id}}">{{ $data->code }}</span>
                         </td>
                         <td class="td_type_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'type')" align="center">
                             <span id="span_type_{{$id}}" class="span_type_{{$id}}">{{ $data->type }}</span>

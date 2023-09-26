@@ -14,7 +14,7 @@
                     <div class="d-flex flex-row justify-content-start mb-4 avatarMessage">
                         <img src="../clients/img/LogoFinTop_red.png"
                             alt="avatar 1" style="width: 30px; height: 100%;">
-                        @if($data->type == 'MUA')
+                        @if($data['type'] == 'MUA')
                         <div class=" d-flex p-3 ms-3" style="border-radius: 15px; background-color: #2a3546;color:#ffd743;width:100%;font-family:auto">
                         @else
                         <div class=" d-flex p-3 ms-3" style="border-radius: 15px; background-color: #861515;color:white;width:100%;font-family:auto">
@@ -24,29 +24,29 @@
                                 alt="avatar 1" width="100%" style="object-fit: cover; max-width: 250px;">
                         </div>
                         <div style="padding-left:30px">
-                            <h4>{{ $data->title }}</h4>
+                            <h4>{{ $data['title'] }}</h4>
                             <span>Giá mua: 
                             @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                                {{ $data->price_buy }}
+                                {{ $data['price_buy'] }}
                             @else
                                 xxx
                             @endif
                             </span> <br>
                             <span>Mục tiêu: 
                             @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                               {{ $data->target }}
+                               {{ $data['target'] }}
                             @else
                                 xxx
                             @endif
                             </span> <br>
                             <span>Dừng lỗ:  
                             @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                            {{ $data->stop_loss }}
+                            {{ $data['stop_loss'] }}
                             @else
                                 xxx
                             @endif
                             </span> <br>
-                            <span>Thời gian: {{date('H:i:s d-m-Y', strtotime($data->created_at))}}</span>
+                            <span>Thời gian: {{date('H:i:s d-m-Y', strtotime($data['created_at']))}}</span>
                         </div>
                                                     </div>
                     </div>
@@ -57,28 +57,28 @@
                         <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light p-0">
                             {{--
                             <i class="display-1 bx bx-package pt-4"></i>
-                            @if($data->type == 'MUA')
+                            @if($data['type'] == 'MUA')
                             <h5 class="h5 pb-4">Mua</h5>
                             @else
                             <h5 class="h5 pb-4">Bán</h5>
                             @endif
                             --}}
-                            @if($data->type == 'MUA')
+                            @if($data['type'] == 'MUA')
                             <img src="{{URL::asset('clients/img/mua.jpg')}}" alt="Mua" width="100%" height="100%">
                             @else
                             <img src="{{URL::asset('clients/img/ban.jpg')}}" alt="Bán" width="100%" height="100%">
                             @endif
                         </div>
                         <div class="text-light col-lg-9" 
-                            @if($data->type == 'BAN') style="background-color: rgba(113, 14, 19, 0.20);display: flex;align-items: center;" 
+                            @if($data['type'] == 'BAN') style="background-color: rgba(113, 14, 19, 0.20);display: flex;align-items: center;" 
                             @else style="background-color: #0e5c3533;display: flex;align-items: center;" 
                             @endif>
                             <ul class="text-left list-unstyled mb-0" style="color: #596986;font-family: ui-monospace;">
-                                <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>{{ $data->title }}</h3></li>
+                                <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>{{ $data['title'] }}</h3></li>
                                 <li><i class="fas fa-tags me-2"></i>Giá mua: 
                                 <span style="color: #2c4143;font-weight: 700;">
                                     {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
-                                        {{ $data->price_buy }}
+                                        {{ $data['price_buy'] }}
                                     {{-- @else
                                         xxx
                                     @endif --}}
@@ -87,7 +87,7 @@
                                 <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;Mục tiêu: 
                                 <span style="color: #2c4143;font-weight: 700;">
                                     {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
-                                    {{ $data->target }}
+                                    {{ $data['target'] }}
                                     {{-- @else
                                         xxx
                                     @endif --}}
@@ -96,13 +96,13 @@
                                 <li><i class="fas fa-filter me-2"></i>&nbsp;Dừng lỗ: 
                                 <span style="color: #2c4143;font-weight: 700;">
                                     {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
-                                    {{ $data->stop_loss }}
+                                    {{ $data['stop_loss'] }}
                                     {{-- @else
                                         xxx
                                     @endif --}}
                                 </span>
                                 </li>
-                                <li><i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian: <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data->created_at))}}</span></li>
+                                <li><i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian: <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data['created_at']))}}</span></li>
                             </ul>
                         </div>
                         {{--<div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">

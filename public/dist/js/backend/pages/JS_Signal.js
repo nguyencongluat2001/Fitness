@@ -263,6 +263,10 @@ JS_Signal.prototype.addrow = function() {
         html += '<td class="td_title_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'title\')">';
         html += '<span id="span_title_' + id + '" class="span_title_' + id + '"></span>';
         html += '</td>';
+        // title
+        html += '<td class="td_code_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'code\')">';
+        html += '<span id="span_code_' + id + '" class="span_code_' + id + '"></span>';
+        html += '</td>';
         // type
         html += '<td class="td_type_' + id + '" onclick="{select_row(this);}" ondblclick="click2(\'' + id + '\', \'type\')">';
         html += '<span id="span_type_' + id + '" class="span_type_' + id + '"></span>';

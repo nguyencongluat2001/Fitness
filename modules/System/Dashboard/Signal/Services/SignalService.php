@@ -31,6 +31,7 @@ class SignalService extends Service
         $params = [
             "user_id" => $_SESSION['id'],
             "title" => isset($input['title']) ? $input['title'] : '',
+            "code" => isset($input['code']) ? $input['code'] : '',
             "type" => isset($input['type']) ? $input['type'] : '',
             "target" => isset($input['target']) ? $input['target'] : '',
             "stop_loss" => isset($input['stop_loss']) ? $input['stop_loss'] : '',
@@ -82,6 +83,7 @@ class SignalService extends Service
         $signalSingle = $this->repository->where('id', $id)->first();
         $signals = $this->repository->select('*')->get();
         $title = !empty($signalSingle) ? $signalSingle->title : '';
+        $code = !empty($signalSingle) ? $signalSingle->code : '';
         $type = !empty($signalSingle) ? $signalSingle->type : '';
         $target = !empty($signalSingle) ? $signalSingle->target : '';
         $stop_loss = !empty($signalSingle) ? $signalSingle->stop_loss : '';
@@ -91,6 +93,7 @@ class SignalService extends Service
         $param = [
             'user_id' => $_SESSION['id'],
             'title' => isset($input['title']) ? $input['title'] : $title,
+            'code' => isset($input['code']) ? $input['code'] : $code,
             'type' => isset($input['type']) ? $input['type'] : $type,
             'target' => isset($input['target']) ? $input['target'] : $target,
             'stop_loss' => isset($input['stop_loss']) ? $input['stop_loss'] : $stop_loss,
