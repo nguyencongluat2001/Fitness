@@ -14,7 +14,7 @@
     <div class="container mt-2 mb-2">
         <div class="row justify-content-center">
             <div class="col-md-7">
-                <div class="card" style="background:#000000d6;">
+                <div class="card" style="background:#000000f5;">
                     <div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg'); display: flex; justify-content: center;">
                         <!-- <div class="inner"> -->
                             <form method="POST" action="{{ route('checkLogin') }}" autocomplete="off">
@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="form-wrapper row {{!isset($data['password']) ? 'mb-3' : ''}}">
                                     <label for="">Mật khẩu <span class="request_star">*</span></label>
-                                    <input id="password" type="password"
+                                    <input id="password" type="text"
                                         class="form-control" name="password" placeholder="Mật khẩu">
                                     @if(isset($data['password'])) <span style="color: red">{{$data['password']}}</span> @endif
                                 </div>
@@ -65,6 +65,8 @@
                                 {{--<div class="col-md-12">
                                     <span class="text-white">Bạn chưa có tài khoản? <i><a href="{{route('register')}}" style="color:#8b9ac5">Đăng ký ngay</a></i></span>
                                 </div>--}}
+
+
                             </div>
                             </form>
                         <!-- </div> -->
@@ -75,5 +77,8 @@
     </div>
     <script>
             NclLib.loadding();
+    </script>
+    <script type="text/javascript">
+        document.getElementById('password').type = 'password';
     </script>
 @endsection

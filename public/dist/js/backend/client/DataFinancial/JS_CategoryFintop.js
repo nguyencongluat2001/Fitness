@@ -73,7 +73,7 @@ JS_CategoryFintop.prototype.checkLogin = function(){
             window.location.replace('/client/upgradeAcc/index');
         }
     })
-    $(".swal2-modal").css('background-color', 'rgb(112 14 14 / 83%)');
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
     $(".swal2-modal").css('color', '#ffffff');
     $(".swal2-modal").css('font-size', '15px');
     $(".swal2-modal").css('font-family', 'FontAwesome');

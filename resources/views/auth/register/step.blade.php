@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../clients/css/style.css">
 
-<div class="card" style="background:#000000d6 !important">
+<div class="card" style="background:#000000f5 !important">
     <div class="card-header" style="#700e13 !important">
         <h3 class="text-center pt-2" style="color:#FFF079 ">Các bước đăng ký mở tài khoản</h2>
     </div>
