@@ -97,15 +97,15 @@ class LoginController extends Controller
         $password = $request->password;
         if($email == '' || $email == null){
             $data['email'] = "Email không được để trống";
-            return view('auth.signinAdmin',compact('data'));
+            return view('auth.signin',compact('data'));
         }
         if($password == '' || $password == null){
             $data['password'] = "Mật khẩu không được để trống";
-            return view('auth.signinAdmin',compact('data'));
+            return view('auth.signin',compact('data'));
         }
         if(!isset($request->acp_checkbox)){
             $data['acp_checkbox'] = "Xác nhận đồng ý điều khoản FinTop!";
-            return view('auth.signinAdmin',compact('data'));
+            return view('auth.signin',compact('data'));
         }
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
             $user = Auth::user();
