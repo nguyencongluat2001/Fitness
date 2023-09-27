@@ -14,6 +14,17 @@ use Carbon\Carbon;
         #carouselExampleIndicators .list-hispital-home .d-lg-flex img{
             padding-right: 0 !important;
         }
+        .list-group .col-sm-6{
+            width: 100%;
+        }
+    }
+    @media (max-width: 991px){
+        .list-group .col-sm-6{
+            width: 100%;
+        }
+        #carouselExampleIndicators .banner-content.col-md-8{
+            width: 100% !important;
+        }
     }
 </style>
 <div class="banner-wrapper">
@@ -105,5 +116,6 @@ use Carbon\Carbon;
         NclLib.menuActive('.link-stock');
         NclLib.menuActive_child('.link-stock');
     }
+    NclLib.menuActive('.link-about');
 </script>
 @endsection
