@@ -36,7 +36,7 @@ class SignalService extends Service
             "target" => isset($input['target']) ? $input['target'] : '',
             "stop_loss" => isset($input['stop_loss']) ? $input['stop_loss'] : '',
             "price_buy" => isset($input['price_buy']) ? $input['price_buy'] : '',
-            "order" => isset($input['order']) ? $input['order'] : count($signals) + 1,
+            // "order" => isset($input['order']) ? $input['order'] : count($signals) + 1,
             "status" => isset($input['status']) ? 1 : 0,
         ];
         if(isset($input['_id']) && !empty($input['_id'])){

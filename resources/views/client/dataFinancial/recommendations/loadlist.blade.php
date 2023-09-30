@@ -55,14 +55,6 @@
 
                     <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5" style="background:#ffffff">
                         <div class="pricing-horizontal-icon col-md-3 text-center bg-secondary text-light p-0">
-                            {{--
-                            <i class="display-1 bx bx-package pt-4"></i>
-                            @if($data['type'] == 'MUA')
-                            <h5 class="h5 pb-4">Mua</h5>
-                            @else
-                            <h5 class="h5 pb-4">Bán</h5>
-                            @endif
-                            --}}
                             @if($data['type'] == 'MUA')
                             <img src="{{URL::asset('clients/img/mua.jpg')}}" alt="Mua" width="100%" height="100%">
                             @else
@@ -74,7 +66,22 @@
                             @else style="background-color: #0e5c3533;display: flex;align-items: center;" 
                             @endif>
                             <ul class="text-left list-unstyled mb-0" style="color: #596986;font-family: ui-monospace;">
-                                <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>{{ $data['title'] }}</h3></li>
+                                <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>
+                                    @if($data['type'] == 'MUA')
+                                        @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                                            Mua {{ $data['code'] }} tài sản ( NVX )
+                                        @else
+                                            Mua <span style="color:#39af71;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> tài sản ( NVX )
+                                        @endif
+                                    @else
+                                        @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                                            Bán {{ $data['code'] }} tài sản ( NVX )
+                                        @else
+                                            Bán <span style="color:#c11a1a;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> tài sản ( NVX )
+                                        @endif
+                                    @endif
+                                <!-- {{ $data['title'] }} -->
+                                </h3></li>
                                 <li><i class="fas fa-tags me-2"></i>Giá mua: 
                                 <span style="color: #2c4143;font-weight: 700;">
                                     {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}

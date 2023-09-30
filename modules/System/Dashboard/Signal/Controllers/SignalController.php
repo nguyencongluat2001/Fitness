@@ -39,7 +39,12 @@ class SignalController extends Controller
     public function create(Request $request)
     {
         $input = $request->all();
-        $data['order'] = $this->signalService->select('id')->count() + 1;
+        $data['datas']['type'] = $input['type'];
+        if($input['type'] == 'MUA'){
+            $data['datas']['title'] = 'Mua xxx tài sản ( NVX )';
+        }else{
+            $data['datas']['title'] = 'Bán xxx tài sản ( NVX )';
+        }
         return view('dashboard.signal.add', $data);
     }
     /**

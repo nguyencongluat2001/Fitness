@@ -13,29 +13,25 @@
                 <div class="row form-group">
                     <span class="col-md-3 control-label required">Tiêu đề</span>
                     <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->title) ? $datas->title : ''}}" name="title" id="title" placeholder="Nhập tiêu đề..." />
+                        <input class="form-control" type="text" value="{{isset($datas['title']) ? $datas['title'] : ''}}" name="title" id="title" placeholder="Nhập tiêu đề..." />
                     </div>
                 </div>
                 <div class="row form-group">
-                    <span class="col-md-3 control-label required">Loại tín hiệu</span>
+                    <span class="col-md-3 control-label required">Loại</span>
                     <div class="col-md-8">
-                        <select name="type" id="type" class="form-control chzn-select">
-                            <option value="">--Chọn loại--</option>
-                            <option @if(isset($datas->type) && $datas->type == 'MUA') selected @endif value="MUA">Mua</option>
-                            <option @if(isset($datas->type) && $datas->type == 'BAN') selected @endif value="BAN">Bán</option>
-                        </select>
+                        <input class="form-control" type="text" value="{{isset($datas['type']) ? $datas['type'] : ''}}" name="type" id="type" placeholder="Nhập tiêu đề..." />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <span class="col-md-3 control-label required">Mã cổ phiếu & %</span>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" value="{{isset($datas->code) ? $datas->code : ''}}" name="code" id="code" placeholder="Nhập mã cổ phiếu..." />
                     </div>
                 </div>
                 <div class="row form-group">
                     <span class="col-md-3 control-label required">Mục tiêu</span>
                     <div class="col-md-8">
                         <input class="form-control" type="text" value="{{isset($datas->target) ? $datas->target : ''}}" name="target" id="target" placeholder="Nhập mục tiêu..." />
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <span class="col-md-3 control-label required">Mã cổ phiếu</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->code) ? $datas->code : ''}}" name="code" id="code" placeholder="Nhập mã cổ phiếu..." />
                     </div>
                 </div>
                 <div class="row form-group">
@@ -48,12 +44,6 @@
                     <span class="col-md-3 control-label required">Giá mua</span>
                     <div class="col-md-8">
                         <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá mua..." />
-                    </div>
-                </div>
-                <div class="row form-group">
-                    <span class="col-md-3 control-label">Thứ tự</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->order) ? $datas->order : $order}}" name="order" id="order" placeholder="Nhập thứ tự..." />
                     </div>
                 </div>
                 <div class="row form-group">

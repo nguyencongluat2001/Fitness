@@ -13,9 +13,10 @@
         <form id="frmSignal_index">
             <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
             <div class="row">
-                <div class="col-md-2">
-                    <button type="button" class="btn btn-success shadow-sm" id="btn_add"><i class="fas fa-plus"></i></button>
-                    <button type="button" class="btn btn-danger shadow-sm" id="btn_delete"><i class="fas fa-trash-alt"></i></button>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-success shadow-sm" id="btn_buy"><i class="fas fa-money-check-alt"></i> Mua</button>
+                    <button type="button" class="btn btn-danger shadow-sm" id="btn_sell"><i class="fas fa-magic"></i> Bán</button>
+                    <button type="button" class="btn btn-danger shadow-sm" id="btn_delete"><i class="fas fa-trash-alt"></i> Xóa</button>
                 </div>
                 <div class="col-md-10 row">
                     <div class="col-md-3">
@@ -32,7 +33,7 @@
                         <input type="text" class="form-control datepicker" name="todate" id="todate" placeholder="Đến ngày">
                     </div>
                     <br>
-                    <div class="col-md-5 row">
+                    <div class="col-md-4 row">
                         <div class="form-search form-group input-group">
                             <input type="text" class="form-control" name="search" id="search" style="height:40px" placeholder="Từ khóa tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_Signal.search();return false;}">
                             <span class="input-group-btn">

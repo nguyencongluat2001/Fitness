@@ -18,8 +18,11 @@ JS_Signal.prototype.loadIndex = function() {
     var oFormCreate = 'form#frmAdd';
     myClass.loadList(oForm);
 
-    $(oForm).find('#btn_add').click(function() {
-        myClass.add(oForm);
+    $(oForm).find('#btn_buy').click(function() {
+        myClass.add(oForm,'MUA');
+    });
+    $(oForm).find('#btn_sell').click(function() {
+        myClass.add(oForm,'BAN');
     });
     $('form#frmAdd').find('#btn_create').click(function() {
         myClass.store('form#frmAdd');
@@ -71,11 +74,13 @@ JS_Signal.prototype.loadevent = function(oForm) {
  *
  * @return void
  */
-JS_Signal.prototype.add = function(oForm) {
+JS_Signal.prototype.add = function(oForm,type) {
         var url = this.urlPath + '/create';
         var myClass = this;
+        var data = 'type=' + type;
         $.ajax({
             url: url,
+            data: data,
             type: "GET",
             success: function(arrResult) {
                 $('#addmodal').html(arrResult);
