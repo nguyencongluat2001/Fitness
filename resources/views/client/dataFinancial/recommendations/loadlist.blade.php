@@ -69,15 +69,15 @@
                                 <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>
                                     @if($data['type'] == 'MUA')
                                         @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                                            Mua {{ $data['code'] }} tài sản ( NVX )
+                                            MUA {{ $data['code'] }} TÀI KHOẢN ( NVX )
                                         @else
-                                            Mua <span style="color:#39af71;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> tài sản ( NVX )
+                                            MUA <span style="color:#39af71;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN ( NVX )
                                         @endif
                                     @else
                                         @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                                            Bán {{ $data['code'] }} tài sản ( NVX )
+                                            BÁN {{ $data['code'] }} TÀI KHOẢN ( NVX )
                                         @else
-                                            Bán <span style="color:#c11a1a;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> tài sản ( NVX )
+                                            BÁN <span style="color:#c11a1a;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN ( NVX )
                                         @endif
                                     @endif
                                 <!-- {{ $data['title'] }} -->

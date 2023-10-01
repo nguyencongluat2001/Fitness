@@ -35,15 +35,15 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <span class="col-md-3 control-label required">Dừng lỗ</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->stop_loss) ? $datas->stop_loss : ''}}" name="stop_loss" id="stop_loss" placeholder="Nhập dùng lỗ..." />
-                    </div>
-                </div>
-                <div class="row form-group">
                     <span class="col-md-3 control-label required">Giá mua</span>
                     <div class="col-md-8">
                         <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá mua..." />
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <span class="col-md-3 control-label required">Dừng lỗ</span>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" value="{{isset($datas->stop_loss) ? $datas->stop_loss : ''}}" name="stop_loss" id="stop_loss" placeholder="Nhập dùng lỗ..." />
                     </div>
                 </div>
                 <div class="row form-group">
