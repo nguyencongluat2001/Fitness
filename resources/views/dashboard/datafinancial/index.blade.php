@@ -48,7 +48,7 @@
 
 /* select checkBook */
 .multiselect {
-  width: 200px;
+  /* width: 200px; */
 }
 
 .selectBox {
