@@ -41,9 +41,9 @@ class SignalController extends Controller
         $input = $request->all();
         $data['datas']['type'] = $input['type'];
         if($input['type'] == 'MUA'){
-            $data['datas']['title'] = 'Mua xxx tài sản ( NVX )';
+            $data['datas']['title'] = 'MUA XXX TÀI KHOẢN (NAV)';
         }else{
-            $data['datas']['title'] = 'Bán xxx tài sản ( NVX )';
+            $data['datas']['title'] = 'BÁN XXX TÀI KHOẢN (NAV)';
         }
         return view('dashboard.signal.add', $data);
     }
