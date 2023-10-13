@@ -69,15 +69,15 @@
                                 <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>
                                     @if($data['type'] == 'MUA')
                                         @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                                            MUA {{ $data['code'] }} TÀI KHOẢN ( NVX )
+                                            MUA {{ $data['code'] }} TÀI KHOẢN (NAV)
                                         @else
-                                            MUA <span style="color:#39af71;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN ( NVX )
+                                            MUA <span style="color:#39af71;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN (NAV)
                                         @endif
                                     @else
                                         @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                                            BÁN {{ $data['code'] }} TÀI KHOẢN ( NVX )
+                                            BÁN {{ $data['code'] }} TÀI KHOẢN (NAV)
                                         @else
-                                            BÁN <span style="color:#c11a1a;font-size:20px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN ( NVX )
+                                            BÁN <span style="color:#c11a1a;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN (NAV)
                                         @endif
                                     @endif
                                 <!-- {{ $data['title'] }} -->
