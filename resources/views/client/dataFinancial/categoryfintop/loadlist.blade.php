@@ -29,8 +29,8 @@
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>% Tài sản</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày chốt</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá chốt</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày bán</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá bán</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ghi chú</b></td>
             </tr>

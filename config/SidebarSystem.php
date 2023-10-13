@@ -15,6 +15,12 @@ return [
             'a'    => 'nav-link link-approvepayment',
             'href' => '/system/approvepayment/index',
         ],
+        'signal' => [
+            'name' => 'Khuyến nghị VIP',
+            'icon' => 'fas fa-signal',
+            'a'    => 'nav-link link-signal',
+            'href' => '/system/signal/index',
+        ],
         'datafinancial' => [
             'name' => 'Dữ liệu chứng khoán',
             'icon' => 'fas fa-coins',
@@ -39,12 +45,7 @@ return [
             'a'    => 'nav-link link-blog',
             'href' => '/system/blog/index',
         ],
-        'signal' => [
-            'name' => 'Khuyến nghị VIP',
-            'icon' => 'fas fa-signal',
-            'a'    => 'nav-link link-signal',
-            'href' => '/system/signal/index',
-        ],
+       
         'users' => [
             'name' => 'Quản trị người dùng',
             'icon' => 'fas fa-users',
