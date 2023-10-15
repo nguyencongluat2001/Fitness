@@ -44,17 +44,17 @@ class RegisterController extends Controller
         // dd($arrInput);
         $params = [
             'id' => (string)\Str::uuid(),
-            'name' => $arrInput['name'],
-            'address' => $arrInput['address'],
-            'phone' => $arrInput['phone'],
-            'dateBirth' => $arrInput['dateBirth'],
-            'company' => '',
+            'name' => $arrInput['name'] ?? '',
+            'address' => $arrInput['address'] ?? '',
+            'phone' => $arrInput['phone'] ?? '',
+            'dateBirth' => $arrInput['dateBirth'] ?? '',
+            'company' => $arrInput['investment_company'] ?? '',
             'position' => '',
             'date_join' => '',
-            'email' => $arrInput['email'],
+            'email' => $arrInput['email'] ?? '',
             'password' => Hash::make($arrInput['repass']),
-            'user_introduce' => $arrInput['name'],
-            'id_personnel' => $arrInput['code_introduce'],
+            'user_introduce' => $arrInput['name'] ?? '',
+            'id_personnel' => $arrInput['code_introduce'] ?? '',
         ];
         $register = RegisterModel::where('email', $params['email'])->first();
         if(!empty($register)){
@@ -81,8 +81,8 @@ class RegisterController extends Controller
                 'password'=> Hash::make($arrInput['repass']),
                 'dateBirth'=> $arrInput['dateBirth'],
                 'id_personnel'=> isset($arrInput['id_personnel'])?$arrInput['id_personnel']:'YE07',
-                'user_introduce'=> $arrInput['name_personnel'],
-                "status" => isset($arrInput['status']) ? 1 : 0,
+                'user_introduce'=> $arrInput['name_personnel'] ?? '',
+                "status" => 1,
                 "role" => 'USERS',
             ];
             $arrInfo = [
