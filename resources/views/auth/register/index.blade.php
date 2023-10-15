@@ -32,7 +32,7 @@
                 <form id="frmRegister">
                     <input type="hidden" name="_token" id="_token" value="{{csrf_token()}}">
                     <div id="tab1-register">@include('auth.register.tab1')</div>
-                    <div id="tab2-register">@include('auth.register.tab2')</div>
+                    <div id="tab2-register"></div>
                     <div id="tab3-register"></div>
                     <div id="tab4-register"></div>
                 </form>
