@@ -3,6 +3,14 @@
 <link rel="stylesheet" href="../dist/css/backend/user.min.css">
 @endsection
 @section('body')
+<style>
+    .formSearch{
+        position: sticky;
+        top: 0;
+        background-color: #29314f;
+        padding-top: 1rem;
+    }
+</style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_User.js') }}"></script>
 
     <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
@@ -11,7 +19,7 @@
         <div class="row">
             <form action="" method="POST" id="frmUsers_index">
                 <input style="display:none" type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
-                <div class="breadcrumb-input-fix d-sm-flex align-items-center justify-content-between" style="padding-top:20px">
+                <div class="breadcrumb-input-fix d-sm-flex align-items-center justify-content-between">
                         <!-- <span><H5>DANH SÁCH TÀI KHOẢN</H5></span> -->
                     <!-- <div class="breadcrumb-input-right">
                         <button class="btn btn-success btn-sm shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
@@ -25,7 +33,7 @@
                 <section class="content-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <div class="row form-group">
+                            <div class="row form-group formSearch">
                             <div class="col-md-3">
                             <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
                             data-original-title="Thêm người dùng"><i class="fas fa-user-plus"></i></button>
@@ -80,7 +88,7 @@
     <div id="dialogconfirm"></div>
     <script src='../assets/js/jquery.js'></script>
     <script type="text/javascript">
-        var baseUrl = '{{ url('') }}';
+        var baseUrl = "{{ url('') }}";
         var JS_User = new JS_User(baseUrl, 'system', 'user');
         $(document).ready(function($) {
             JS_User.loadIndex(baseUrl);

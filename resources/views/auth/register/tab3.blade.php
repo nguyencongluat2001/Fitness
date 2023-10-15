@@ -15,7 +15,7 @@
         </div>
         <br>
         <div class="form-group" style="display: flex;justify-content: center;">
-            <button type="button" class="btn-primary me-0 ms-0" style="background-color: slategrey" onclick="JS_Register.Tab4()">Xác nhận</button>
+            <button type="button" class="btn-primary me-0 ms-0" style="background-color: #529845" onclick="JS_Register.Tab4()">Xác nhận</button>
             <button type="button" class="btn-primary me-0 ms-0" style="background-color: red" onclick="JS_Register.Tab2()">Quay lại</button>
         </div>
     </div>

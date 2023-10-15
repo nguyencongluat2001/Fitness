@@ -41,7 +41,7 @@
                         <div class="row">
                             <div class="form-wrapper col-md-6">
                                 <label for="">Họ và tên <span class="request_star">*</span></label>
-                                <input placeholder="Nhập tên..." id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
+                                <input placeholder="Nhập họ và tên..." id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" autofocus>
                                 @error('name') <span style="color: red">{{$message}}</span> @enderror
                             </div>
                             <div class="form-wrapper col-md-6">

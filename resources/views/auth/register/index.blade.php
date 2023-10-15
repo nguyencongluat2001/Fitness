@@ -1,6 +1,7 @@
 @extends('client.layouts.index')
 
 @section('body-client')
+<link rel="stylesheet" href="{{URL::asset('assets/datepicker/bootstrap-datepicker.min.css')}}">
 <link rel="stylesheet" href="../clients/css/style.css">
 
 <style>
