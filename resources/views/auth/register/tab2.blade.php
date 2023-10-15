@@ -1,3 +1,21 @@
+<style>
+    .table>:not(caption)>*>*{
+        border-bottom-width: 0;
+    }
+    #tableData{
+        color: #fff;
+    }
+    .passShowHide, .repassShowHide {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        color: black;
+        cursor: pointer;
+    }
+    .repassShowHide{
+        color: #fff;
+    }
+</style>
 <div class="card" style="background:#000000f5;">
     <div class="form-group" align="center">
         <div class="col-md-12 mt-4 mb-3">
@@ -5,7 +23,7 @@
         </div>
     </div>
     <div class="card-body">
-        <div class="row">
+        {{--<div class="row">
             <div class="form-wrapper col-md-4">
                 <label for="">Thời gian đầu tư <span class="request_star">*</span></label>
                 <select name="investment_time" id="investment_time" class="form-control chzn-select">
@@ -16,7 +34,6 @@
                 </select>
             </div>
             <div class="form-wrapper col-md-4">
-                <label for="">Khẩu vị đầu tư</label>
                 <select name="investment_taste" id="investment_taste" class="form-control chzn-select">
                     <option value="nganhan">Lướt sóng ngắn hạn</option>
                     <option value="daihan">Trung và dài hạn</option>
@@ -25,7 +42,7 @@
             </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Công ty chứng khoán <span class="request_star">*</span></label>
-                <select name="investment_taste" id="investment_taste" class="form-control chzn-select">
+                <select name="investment_company" id="investment_company" class="form-control chzn-select">
                     <option value="TKCK">Chưa TKCK</option>
                     <option value="vps">VPS</option>
                     <option value="ssi">SSI</option>
@@ -33,20 +50,92 @@
                     <option value="khac">Công ty khác</option>
                 </select>
             </div>
-        </div>
+        </div>--}}
+        <table class="table" id="tableData">
+            <colgroup>
+                <col width="18%">
+                <col width="17%">
+                <col width="16%">
+                <col width="16%">
+                <col width="16%">
+                <col width="17%">
+            </colgroup>
+            <tbody>
+                <tr>
+                    <td><label for="">Thời gian đầu tư <span class="request_star">*</span></label></td>
+                    <td><label><input type="radio" name="investment_time" value="0-3"> 0 - 3 tháng</label></td>
+                    <td><label><input type="radio" name="investment_time" value="3-6"> 3 - 6 tháng</label></td>
+                    <td><label><input type="radio" name="investment_time" value="6-12"> 6 - 12 tháng</label></td>
+                    <td><label><input type="radio" name="investment_time" value="1nam"> Trên 1 năm</label></td>
+                </tr>
+                <tr>
+                    <td><label for="">Khẩu vị đầu tư</label></td>
+                    <td><label><input type="radio" name="investment_taste" value="nganhan"> Lướt sóng ngắn hạn</label></td>
+                    <td><label><input type="radio" name="investment_taste" value="daihan"> Trung và dài hạn</label></td>
+                    <td><label><input type="radio" name="investment_taste" value="linhhoat"> Linh hoạt kết hợp</label></td>
+                </tr>
+                <tr>
+                    <td><label for="">Công ty chứng khoán <span class="request_star">*</span></label></td>
+                    <td><label><input type="radio" name="investment_company" value="TKCK"> Chưa TKCK</label></td>
+                    <td><label><input type="radio" name="investment_company" value="vps"> VPS</label></td>
+                    <td><label><input type="radio" name="investment_company" value="ssi"> SSI</label></td>
+                    <td><label><input type="radio" name="investment_company" value="vnd"> VND</label></td>
+                    <td><label><input type="radio" class="company-other" name="investment_company" value="khac"> Công ty khác</label>
+                        <label><input type="text" style="display: none;" id="company-other" name="company-other"></label></td>
+                </tr>
+            </tbody>
+        </table>
         <div class="row">
             <div class="form-wrapper col-md-4">
                 <label for="">Đặt mật khẩu <span class="request_star">*</span></label>
-                <input placeholder="Nhập mật khẩu..." id="password" type="password" class="form-control" name="password" value="">
+                <div style="position: relative;">
+                    <input placeholder="Nhập mật khẩu..." id="password" type="password" class="form-control" name="password" value="">
+                    <span><i class="passShowHide fas fa-eye"></i></span>
+                </div>
             </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Nhập lại mật khẩu <span class="request_star">*</span></label>
-                <input placeholder="Nhập lại mật khẩu" id="repass" type="password" class="form-control" name="repass" value="">
+                <div style="position: relative;">
+                    <input placeholder="Nhập lại mật khẩu" id="repass" type="password" class="form-control" name="repass" value="">
+                    <span><i class="repassShowHide fas fa-eye"></i></span>
+                </div>
             </div>
         </div>
         <div class="form-group" style="display: flex;justify-content: center;">
-            <button type="button" class="btn-primary me-0 ms-0" style="background-color: slategrey" onclick="JS_Register.Tab3()">Tiếp tục</button>
+            <button type="button" class="btn-primary me-0 ms-0" style="background-color: #529845" onclick="JS_Register.Tab3()">Tiếp tục</button>
             <button type="button" class="btn-primary me-0 ms-0" style="background-color: slategrey" onclick="JS_Register.Tab1()">Quay lại</button>
         </div>
     </div>
 </div>
+<script>
+    $("input[name='investment_company']").click(function(){
+        if($(this).hasClass('company-other')){
+            $("#company-other").show();
+            $("#company-other").focus();
+        }else{
+            $("#company-other").hide();
+        }
+    });
+    $(".passShowHide").click(function() {
+        $(this).toggleClass('fa-eye-slash', 'fa-eye');
+        if ($(".passShowHide").hasClass('fa-eye-slash')) {
+            $("#password").attr('type', 'text');
+        } else {
+            $("#password").attr('type', 'password');
+        }
+    });
+    $(".repassShowHide").click(function() {
+        $(this).toggleClass('fa-eye-slash', 'fa-eye');
+        if ($(".repassShowHide").hasClass('fa-eye-slash')) {
+            $("#repass").attr('type', 'text');
+        } else {
+            $("#repass").attr('type', 'password');
+        }
+    });
+    $("#repass").focus(function(){
+        $(".repassShowHide").attr("style", "color: #000");
+    })
+    $("#repass").focusout(function(){
+        $(".repassShowHide").attr("style", "color: #fff");
+    })
+</script>

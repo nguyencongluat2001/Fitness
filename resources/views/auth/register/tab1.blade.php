@@ -8,7 +8,7 @@
         <div class="row">
             <div class="form-wrapper col-md-4">
                 <label for="">Họ và tên <span class="request_star">*</span></label>
-                <input placeholder="Nhập tên..." id="name" type="text" class="form-control" name="name" value="">
+                <input placeholder="Nhập họ và tên..." id="name" type="text" class="form-control" name="name" value="">
             </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Email <span class="request_star">*</span></label>
@@ -16,18 +16,18 @@
             </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Số điện thoại <span class="request_star">*</span></label>
-                <input placeholder="Nhập số..." id="phone" type="phone" class="form-control" name="phone" value="">
+                <input placeholder="Nhập số điện thoại/Zalo..." id="phone" type="phone" class="form-control" name="phone" value="">
             </div>
             
         </div>
         <div class="row">
             <div class="form-wrapper col-md-4">
-                <label for="">Ngày sinh <span class="request_star">*</span></label>
+                <label for="">Sinh nhật <span class="request_star">*</span></label>
                 <input id="dateBirth" type="date" class="form-control datepicker" name="dateBirth" value="">
             </div>
             <div class="form-wrapper col-md-8">
                 <label for="">Địa chỉ</label>
-                <input placeholder="Nhập địa chỉ..." id="address" type="text" class="form-control" name="address" value="">
+                <input placeholder="Nhập Tỉnh/TP hiện tại..." id="address" type="text" class="form-control" name="address" value="">
             </div>
         </div>
         <div class="row">
@@ -37,7 +37,7 @@
             </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Tên người giới thiệu</label>
-                <input style="color:red" placeholder="Tên người giới thiệu..." readonly id="name_personnel" type="text" class="form-control" name="name_personnel" value="{{isset($data['user_introduce_name']) ? $data['user_introduce_name'] : ''}}">
+                <input style="color:#fff49b; background-color:unset; cursor: unset;text-align: left;" placeholder="" readonly id="name_personnel" type="button" class="form-control" name="name_personnel" value="{{isset($data['user_introduce_name']) ? $data['user_introduce_name'] : ''}}">
             </div>
         </div>
         <!-- <div class="row">
@@ -51,7 +51,7 @@
             </div>
         </div> -->
         <div class="form-group">
-            <button type="button" class="btn-primary" style="background-color: slategrey" onclick="JS_Register.Tab2()">Tiếp tục</button>
+            <button type="button" class="btn-primary" style="background-color: #529845;" onclick="JS_Register.Tab2()">Tiếp tục</button>
         </div>
     </div>
 </div>
