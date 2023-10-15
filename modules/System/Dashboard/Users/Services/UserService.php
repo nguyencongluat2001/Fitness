@@ -63,6 +63,7 @@ class UserService extends Service
                 'dateBirth'=> $input['dateBirth'],
                 'role'=>  $input['role'],
                 'order'=> isset($input['order']) ? $input['order'] : (int)$countUser + 1,
+                'account_tkck_vps'=> isset($input['account_tkck_vps'])?$input['account_tkck_vps']:'',
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
                 'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'YE07',
                 "status" => isset($input['status']) ? 1 : 0,

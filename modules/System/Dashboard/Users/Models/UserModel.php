@@ -22,6 +22,7 @@ class UserModel extends Model
         'dateBirth',
         'role',
         'status',
+        'account_tkck_vps',
         'id_personnel',
         'id_manage',
         'account_type_vip',

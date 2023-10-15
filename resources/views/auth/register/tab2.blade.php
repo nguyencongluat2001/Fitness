@@ -69,7 +69,7 @@
                     <td><label><input type="radio" name="investment_time" value="1nam"> Trên 1 năm</label></td>
                 </tr>
                 <tr>
-                    <td><label for="">Khẩu vị đầu tư</label></td>
+                    <td><label for="">Khẩu vị đầu tư <span class="request_star">*</span></label></td>
                     <td><label><input type="radio" name="investment_taste" value="nganhan"> Lướt sóng ngắn hạn</label></td>
                     <td><label><input type="radio" name="investment_taste" value="daihan"> Trung và dài hạn</label></td>
                     <td><label><input type="radio" name="investment_taste" value="linhhoat"> Linh hoạt kết hợp</label></td>
@@ -86,6 +86,13 @@
             </tbody>
         </table>
         <div class="row">
+            <div class="form-wrapper col-md-4">
+                <label for="">Nhập số TKCK VPS (nếu có)</label>
+                <div style="position: relative;">
+                    <input placeholder="Nhập số TKCK VPS (nếu có)" id="account_tkck_vps" type="text" class="form-control" name="account_tkck_vps" value="">
+                    <!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+                </div>
+            </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Đặt mật khẩu <span class="request_star">*</span></label>
                 <div style="position: relative;">

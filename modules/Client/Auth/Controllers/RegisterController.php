@@ -41,7 +41,6 @@ class RegisterController extends Controller
     public function tab3(Request $request)
     {
         $arrInput = $request->all();
-        // dd($arrInput);
         $params = [
             'id' => (string)\Str::uuid(),
             'name' => $arrInput['name'] ?? '',
@@ -54,6 +53,7 @@ class RegisterController extends Controller
             'email' => $arrInput['email'] ?? '',
             'password' => Hash::make($arrInput['repass']),
             'user_introduce' => $arrInput['name'] ?? '',
+            'account_tkck_vps'=> isset($arrInput['account_tkck_vps'])?$arrInput['account_tkck_vps']:'',
             'id_personnel' => $arrInput['code_introduce'] ?? '',
         ];
         $register = RegisterModel::where('email', $params['email'])->first();
@@ -82,6 +82,7 @@ class RegisterController extends Controller
                 'dateBirth'=> $arrInput['dateBirth'],
                 'id_personnel'=> isset($arrInput['id_personnel'])?$arrInput['id_personnel']:'YE07',
                 'user_introduce'=> $arrInput['name_personnel'] ?? '',
+                'account_tkck_vps'=> isset($arrInput['account_tkck_vps'])?$arrInput['account_tkck_vps']:'',
                 "status" => 1,
                 "role" => 'USERS',
             ];

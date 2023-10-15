@@ -21,6 +21,7 @@ class RegisterModel extends Model
         'date_join',
         'email',
         'password',
+        'account_tkck_vps',
         'user_introduce',
         'id_personnel',
         'created_at',

@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('blogs', function (Blueprint $table) {
+        Schema::table('register', function (Blueprint $table) {
             // $table->tinyInteger('order')->nullable();
-            $table->string('type_blog')->nullable();
+            $table->string('account_tkck_vps')->nullable();
 
         });
     }
@@ -23,7 +23,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('blogs', function (Blueprint $table) {
+        Schema::table('register', function (Blueprint $table) {
             //
         });
     }
