@@ -47,10 +47,16 @@ return [
         ],
        
         'users' => [
-            'name' => 'Quản trị người dùng',
+            'name' => 'Quản trị nhân sự',
             'icon' => 'fas fa-users',
             'a'    => 'nav-link link-user',
             'href' => '/system/user/index',
+        ],
+        'client' => [
+            'name' => 'Quản trị khách hàng',
+            'icon' => 'fas fa-users',
+            'a'    => 'nav-link link-client',
+            'href' => '/system/client/index',
         ],
         'category' => [
             'name' => 'Quản trị danh mục',

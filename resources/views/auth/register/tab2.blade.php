@@ -30,7 +30,7 @@
                     <option value="0-3">0 - 3 tháng</option>
                     <option value="3-6">3 - 6 tháng</option>
                     <option value="6-12">6 - 12 tháng</option>
-                    <option value="1nam">> 1 năm</option>
+                    <option value="1nam"> 1 năm</option>
                 </select>
             </div>
             <div class="form-wrapper col-md-4">

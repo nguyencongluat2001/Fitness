@@ -1,9 +1,8 @@
 <?php
 
-namespace Modules\System\Dashboard\Users\Models;
+namespace Modules\System\Dashboard\Client\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Modules\System\Dashboard\Users\Models\UserInfoModel;
 
 class UserModel extends Model
 {
@@ -47,9 +46,11 @@ class UserModel extends Model
                 });       
                 return $query;
             case 'role':
-                $query->whereIn('role', $value);
+                $query->where('role', $value);
                 return $query;
-
+            case 'id_manage':
+                $query->whereIn('id_manage', $value);
+                return $query;
 
             default:
                 return $query;

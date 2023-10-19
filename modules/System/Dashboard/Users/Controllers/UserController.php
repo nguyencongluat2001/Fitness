@@ -552,7 +552,7 @@ class UserController extends Controller
         $param['sortType'] = 1;
         // dd($_SESSION['role']);
         if($_SESSION['role'] == 'ADMIN'){
-            $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_ADMIN','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC','USERS'];
+            $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_ADMIN','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC'];
         }
         if($_SESSION['role'] == 'MANAGE'){
             $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC'];

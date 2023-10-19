@@ -75,14 +75,19 @@
                                         @endif
                                     @else
                                         @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
-                                            BÁN {{ $data['code'] }} TÀI KHOẢN (NAV)
+                                            BÁN {{ $data['code'] }} TỶ TRỌNG (MÃ CP)
                                         @else
-                                            BÁN <span style="color:#c11a1a;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN (NAV)
+                                            BÁN <span style="color:#c11a1a;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TỶ TRỌNG (MÃ CP)
                                         @endif
                                     @endif
                                 <!-- {{ $data['title'] }} -->
                                 </h3></li>
-                                <li><i class="fas fa-tags me-2"></i>Giá mua: 
+                                <li><i class="fas fa-tags me-2"></i>
+                                @if($data['type'] == 'MUA')
+                                       Giá mua: 
+                                    @else
+                                       Giá bán: 
+                                    @endif
                                 <span style="color: #2c4143;font-weight: 700;">
                                     {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
                                         {{ $data['price_buy'] }}
@@ -91,7 +96,12 @@
                                     @endif --}}
                                 </span>    
                                 </li>
-                                <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;Mục tiêu: 
+                                <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;
+                                @if($data['type'] == 'MUA')
+                                      Mục tiêu:
+                                    @else
+                                      Lãi / lỗ: 
+                                    @endif
                                 <span style="color: #2c4143;font-weight: 700;">
                                     {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
                                     {{ $data['target'] }}
@@ -100,7 +110,13 @@
                                     @endif --}}
                                 </span>
                                 </li>
-                                <li><i class="fas fa-filter me-2"></i>&nbsp;Dừng lỗ: 
+                                <li><i class="fas fa-filter me-2"></i>&nbsp;
+                                @if($data['type'] == 'MUA')
+                                      Dừng lỗ:
+                                    @else
+                                      % Còn lại:
+                                    @endif
+                                 
                                 <span style="color: #2c4143;font-weight: 700;">
                                     {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
                                     {{ $data['stop_loss'] }}

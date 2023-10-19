@@ -20,11 +20,11 @@
                 <td align="center"><b>STT</b></td>
                 <td align="center"><b>Người thêm</b></td>
                 <!-- <td align="center"><b>Tiêu đề</b></td> -->
-                <td align="center"><b>Mã cổ phiếu</b></td>
+                <td align="center"><b>Mã cổ phiếu & %</b></td>
                 <td align="center"><b>Loại</b></td>
-                <td align="center"><b>Mục tiêu</b></td>
-                <td align="center"><b>Giá mua</b></td>
-                <td align="center"><b>Dừng lỗ</b></td>
+                <td align="center"><b>Giá mua / bán</b></td>
+                <td align="center"><b>Lợi nhuận / lãi lỗ</b></td>
+                <td align="center"><b>Dừng lỗ / % Còn lại</b></td>
                 <!-- <td align="center"><b>Sắp xếp</b></td> -->
                 <td align="center"><b>Trạng thái</b></td>
                 <td align="center"><b><span onclick="JS_Signal.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></b></td>
@@ -34,7 +34,11 @@
             @if(count($datas) > 0)
                 @foreach ($datas as $key => $data)
                 @php $id = $data->id; $i = 1; @endphp
-                    <tr>
+                    @if($data->type == 'MUA')
+                        <tr style="background:#18c524" >
+                    @else
+                        <tr style="background:#ff000096" >
+                    @endif
                         <td align="center"><input type="checkbox" name="chk_item_id"
                                 value="{{ $data->id }}"></td>
                         <td align="center">{{($datas->currentPage() - 1)*$datas->perPage() + ($key + 1)}}</td>

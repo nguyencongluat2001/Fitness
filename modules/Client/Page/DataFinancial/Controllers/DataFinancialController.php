@@ -185,6 +185,7 @@ class DataFinancialController extends Controller
     public function loadList_recommendations (Request $request)
     {
         $arrInput = $request->input();
+        $result['datas']= [];
         if(isset($arrInput['type']) && $arrInput['type'] == 'box'){
             $arrData = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
             foreach($arrData as $val){
@@ -223,6 +224,7 @@ class DataFinancialController extends Controller
     public function loadList_recommendations_tab (Request $request)
     {
         $arrInput = $request->input();
+        $result['datas'] = [];
         if(isset($arrInput['type']) && $arrInput['type'] == 'box'){
             $result['datas'] = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
             return view('client.layouts.loadListBox',$result);

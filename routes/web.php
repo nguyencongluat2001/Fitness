@@ -30,6 +30,7 @@ use Modules\System\Dashboard\Home\Controllers\HomeController;
 use Modules\System\Dashboard\Recommended\Controllers\RecommendedController;
 use Modules\System\Dashboard\Signal\Controllers\SignalController;
 use Modules\System\Dashboard\Users\Controllers\UserController;
+use Modules\System\Dashboard\Client\Controllers\ClientController;
 use Modules\System\Dashboard\Permision\Controllers\PermisionController;
 use Modules\System\Dashboard\UserLog\Controllers\UserLogController;
 
@@ -107,6 +108,21 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('/changeStatus', [UserController::class,'changeStatus']);
             Route::get('/changePass', [UserController::class,'changePass']);
             Route::post('/updatePass', [UserController::class,'updatePass']);
+        });
+        // quản trị người dùng
+        Route::prefix('/system/client')->group(function () {
+            Route::get('/index', [ClientController::class, 'index']);
+            Route::get('/loadList',[ClientController::class,'loadList']);
+            Route::post('/edit', [ClientController::class,'edit']);
+            Route::post('/createForm', [ClientController::class,'createForm']);
+            Route::post('/create', [ClientController::class,'create']);
+            Route::post('/delete', [ClientController::class,'delete']);
+            Route::post('/updateUser', [ClientController::class,'updateUser']);
+            Route::post('/upNdown', [ClientController::class,'upNdown']);
+            // Cập nhật mật khẩu
+            Route::post('/changeStatus', [ClientController::class,'changeStatus']);
+            Route::get('/changePass', [ClientController::class,'changePass']);
+            Route::post('/updatePass', [ClientController::class,'updatePass']);
         });
          //dữ liệu chứng khoán
         Route::prefix('/system/datafinancial')->group(function () {

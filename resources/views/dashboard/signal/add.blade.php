@@ -28,24 +28,56 @@
                         <input class="form-control" type="text" value="{{isset($datas->code) ? $datas->code : ''}}" name="code" id="code" placeholder="Nhập mã cổ phiếu..." />
                     </div>
                 </div>
-                <div class="row form-group">
-                    <span class="col-md-3 control-label required">Giá mua</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá mua..." />
+                @if($datas['type'] == 'MUA')
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">Giá mua</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá mua..." />
+                        </div>
                     </div>
-                </div>
-                <div class="row form-group">
-                    <span class="col-md-3 control-label required">Mục tiêu</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->target) ? $datas->target : ''}}" name="target" id="target" placeholder="Nhập mục tiêu..." />
+                @else
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">Giá bán</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá bán..." />
+                        </div>
                     </div>
-                </div>
-                <div class="row form-group">
-                    <span class="col-md-3 control-label required">Dừng lỗ</span>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="{{isset($datas->stop_loss) ? $datas->stop_loss : ''}}" name="stop_loss" id="stop_loss" placeholder="Nhập dùng lỗ..." />
+                @endif
+
+
+                @if($datas['type'] == 'MUA')
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">Mục tiêu</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->target) ? $datas->target : ''}}" name="target" id="target" placeholder="Nhập mục tiêu..." />
+                        </div>
                     </div>
-                </div>
+                @else
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">Lãi / lỗ</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->target) ? $datas->target : ''}}" name="target" id="target" placeholder="Nhập lãi / lỗ..." />
+                        </div>
+                    </div>
+                @endif
+
+                @if($datas['type'] == 'MUA')
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">Dừng lỗ</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->stop_loss) ? $datas->stop_loss : ''}}" name="stop_loss" id="stop_loss" placeholder="Nhập dùng lỗ..." />
+                        </div>
+                    </div>
+                @else
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">% Còn lại</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->stop_loss) ? $datas->stop_loss : ''}}" name="stop_loss" id="stop_loss" placeholder="Nhập  % Còn lại..." />
+                        </div>
+                    </div>
+                @endif
+                
+                
                 <div class="row form-group">
                     <span class="col-md-3 control-label">Trạng thái</span>
                     <div class="col-md-8">

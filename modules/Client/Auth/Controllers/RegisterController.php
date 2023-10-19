@@ -54,7 +54,8 @@ class RegisterController extends Controller
             'password' => Hash::make($arrInput['repass']),
             'user_introduce' => $arrInput['name'] ?? '',
             'account_tkck_vps'=> isset($arrInput['account_tkck_vps'])?$arrInput['account_tkck_vps']:'',
-            'id_personnel' => $arrInput['code_introduce'] ?? '',
+            // 'id_personnel' => $arrInput['code_introduce'] ?? '',
+            'id_manage' => $arrInput['code_introduce'] ?? 'YE07',
         ];
         $register = RegisterModel::where('email', $params['email'])->first();
         if(!empty($register)){
@@ -80,8 +81,13 @@ class RegisterController extends Controller
                 'email'=> $arrInput['email'],
                 'password'=> Hash::make($arrInput['repass']),
                 'dateBirth'=> $arrInput['dateBirth'],
-                'id_personnel'=> isset($arrInput['id_personnel'])?$arrInput['id_personnel']:'YE07',
-                'user_introduce'=> $arrInput['name_personnel'] ?? '',
+                'id_personnel'=> isset($arrInput['id_personnel'])?$arrInput['id_personnel']:'',
+                // 'id_personnel'=> isset($arrInput['id_personnel'])?$arrInput['id_personnel']:'',
+                'id_manage'=> isset($arrInput['code_introduce'])?$arrInput['code_introduce']:'YE07',
+                'user_introduce'=> $arrInput['name_personnel'] ?? 'FinTop.BA@gmail.com',
+                'investment_time'=> isset($arrInput['investment_time'])?$arrInput['investment_time']:'',
+                'investment_taste'=> isset($arrInput['investment_taste'])?$arrInput['investment_taste']:'',
+                'investment_company'=> isset($arrInput['investment_company'])?$arrInput['investment_company']:'',
                 'account_tkck_vps'=> isset($arrInput['account_tkck_vps'])?$arrInput['account_tkck_vps']:'',
                 "status" => 1,
                 "role" => 'USERS',
