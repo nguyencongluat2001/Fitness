@@ -81,7 +81,7 @@
                     <td><label><input type="radio" name="investment_company" value="ssi"> SSI</label></td>
                     <td><label><input type="radio" name="investment_company" value="vnd"> VND</label></td>
                     <td><label><input type="radio" class="company-other" name="investment_company" value="khac"> Công ty khác</label>
-                        <label><input type="text" style="display: none;" id="company-other" name="company-other"></label></td>
+                        <!-- <label><input type="text" style="display: none;" id="company-other" name="company-other"></label></td> -->
                 </tr>
             </tbody>
         </table>
