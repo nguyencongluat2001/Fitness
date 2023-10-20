@@ -49,7 +49,9 @@ class UserModel extends Model
             case 'role':
                 $query->whereIn('role', $value);
                 return $query;
-
+            case 'id_manage':
+                $query->whereIn('id_manage', $value);
+                return $query;
 
             default:
                 return $query;
