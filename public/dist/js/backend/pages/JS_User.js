@@ -304,7 +304,7 @@ JS_User.prototype.delete = function (oForm) {
                             Swal.fire({
                                 position: 'top-start',
                                 icon: 'error',
-                                title: 'Quá trình xóa đã xảy ra lỗi',
+                                title: arrResult['message'],
                                 showConfirmButton: false,
                                 timer: 3000
                               })
