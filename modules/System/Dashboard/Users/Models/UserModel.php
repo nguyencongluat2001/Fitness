@@ -47,7 +47,7 @@ class UserModel extends Model
                 });       
                 return $query;
             case 'role':
-                $query->whereIn('role', $value);
+                $query->whereNotIn('role',$value);
                 return $query;
             case 'id_manage':
                 $query->whereIn('id_manage', $value);

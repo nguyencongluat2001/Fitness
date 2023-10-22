@@ -542,58 +542,26 @@ class UserController extends Controller
     { 
         $paginationHelper = new PaginationHelper();
         $arrInput = $request->input();
+        if($arrInput['role'] == '' || $arrInput['role'] == 'undefined'){
+            unset($arrInput['role']);
+        }
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'order';
         $param['sortType'] = 1;
-        // dd($_SESSION['role']);
-        // if($_SESSION['role'] == 'ADMIN'){
-        //     $param['role'] = ['ADMIN','CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_ADMIN','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC'];
-        // }
-        // if($_SESSION['role'] == 'MANAGE'){
-            // $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC'];
+        $param['role'] = ['USERS'];
+        if($_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_BASIC' 
+        || $_SESSION['role'] == 'SALE_ADMIN' || $_SESSION['role'] == 'SALE_ADMIN,SALE'){
             $getUser_child_goc = [$_SESSION['id_personnel']];
             $getUser_child = $this->userService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
             $id_manage = array_merge($getUser_child_goc,$getUser_child);
             $param['id_manage'] = $id_manage;
-        // }
-        // if($_SESSION['role'] == 'CV_ADMIN'){
-        //     // $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
-        //     $getUser_child_goc = [$_SESSION['id_personnel']];
-        //     $getUser_child = $this->userService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
-        //     $id_manage = array_merge($getUser_child_goc,$getUser_child);
-        //     $param['id_manage'] = $id_manage;
-        // }
-        // if($_SESSION['role'] == 'SALE_ADMIN'){
-        //     // $param['role'] = ['SALE_ADMIN','SALE_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
-        //     $getUser_child_goc = [$_SESSION['id_personnel']];
-        //     $getUser_child = $this->userService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
-        //     $id_manage = array_merge($getUser_child_goc,$getUser_child);
-        //     $param['id_manage'] = $id_manage;
-        // }
-        // if($_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN'){
-        //     // $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
-        //     $getUser_child_goc = [$_SESSION['id_personnel']];
-        //     $getUser_child = $this->userService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
-        //     $id_manage = array_merge($getUser_child_goc,$getUser_child);
-        //     $param['id_manage'] = $id_manage;
-        // }
-        // if($_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'){
-        //     // $param['role'] = ['CV_ADMIN','CV_PRO','CV_BASIC','CV_ADMIN,SALE_BASIC','CV_PRO,SALE_ADMIN','CV_PRO,SALE_BASIC','CV_BASIC,SALE_ADMIN','CV_BASIC,SALE_BASIC',];
-        //     $getUser_child_goc = [$_SESSION['id_personnel']];
-        //     $getUser_child = $this->userService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
-        //     $id_manage = array_merge($getUser_child_goc,$getUser_child);
-        //     $param['id_manage'] = $id_manage;
-        // }
-        // if($_SESSION['role'] == 'SALE_ADMIN' || $_SESSION['role'] == 'SALE_ADMIN,SALE'){
-        //     $getUser_child_goc = [$_SESSION['id_personnel']];
-        //     $getUser_child = $this->userService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
-        //     $id_manage = array_merge($getUser_child_goc,$getUser_child);
-        //     $param['id_manage'] = $id_manage;
-        // }
+        }elseif($_SESSION['role'] == 'MANAGE'){
+            $param['role'] = ['ADMIN','USERS'];
+        }
+        
         // dd($param);
-        $objResult = $this->ClientService->filter($param);
-
+        $objResult = $this->userService->filter($param);
         $data['datas'] = $objResult;
         return view("dashboard.users.loadlist", $data);
     }

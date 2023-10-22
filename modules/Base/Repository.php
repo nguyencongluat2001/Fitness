@@ -252,6 +252,10 @@ abstract class Repository
     {
         return $this->model->whereIn($column, $values);
     }
+    public function whereNotIn($column, $values = [])
+    {
+        return $this->model->whereNotIn($column, $values);
+    }
 
     /**
      * where by condition .

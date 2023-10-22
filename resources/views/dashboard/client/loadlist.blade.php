@@ -36,7 +36,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                     <td style="width:5%;vertical-align: middle;" align="center"><input type="checkbox" name="chk_item_id"
                             value="{{ $data['id'] }}"></td>
                     <td class="text-center td_order_{{$id}}" style="vertical-align: middle;" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
-                        <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $data->order }}</span>
+                        <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $key + 1 }}</span>
                     </td>
                     <td style="width:65%;height:150px;padding-left:30px;vertical-align: middle;" onclick="{select_row(this);}">
                        <div>
@@ -70,7 +70,9 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                            </div>
                            <div>Công ty chứng khoán  : {{ $data['investment_company'] }}</div>
                            <div>Số TKCK VPS (nếu có) : {{ $data['account_tkck_vps'] }}</div>
-                           <div>Loại tài khoản : @if( $data['account_type_vip'] == '') Thường @else {{ $data['account_type_vip'] }}@endif</div>
+                           <div>Loại tài khoản : @if( $data['account_type_vip'] == '') Thường @else 
+                            <span style="color:#7dff00">{{ $data['account_type_vip'] }}</span>
+                            @endif</div>
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Khách hàng </span></div>
                        </div>
                         

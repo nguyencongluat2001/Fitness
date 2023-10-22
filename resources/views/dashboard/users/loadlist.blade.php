@@ -25,7 +25,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                 <td align="center"><b>Thông tin người dùng</b></td>
                 <td align="center"><b>Người quản lý</b></td>
                 <td align="center"><b>Ảnh đại diện</b></td>
-                <td align="center"><b>Thứ tự</b></td>
+                <!-- <td align="center"><b>Thứ tự</b></td> -->
                 <td align="center"><b>Trạng thái</b></td>
             </tr>
         </thead>
@@ -36,7 +36,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                     <td style="width:5%;vertical-align: middle;" align="center"><input type="checkbox" name="chk_item_id"
                             value="{{ $data['id'] }}"></td>
                     <td class="text-center td_order_{{$id}}" style="vertical-align: middle;" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
-                        <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $data->order }}</span>
+                        <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $key + 1 }}</span>
                     </td>
                     <td style="width:65%;height:150px;padding-left:30px;vertical-align: middle;" onclick="{select_row(this);}">
                        <div>
@@ -77,10 +77,10 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                     <td style="width:20%;vertical-align: middle;" align="center" onclick="{select_row(this);}">
                         <img  src="{{url('/file-image/avatar/')}}/{{$data['avatar']}}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;">
                     </td>
-                    <td class="text-center" style="vertical-align: middle;" onclick="{select_row(this);}">
+                    <!-- <td class="text-center" style="vertical-align: middle;" onclick="{select_row(this);}">
                         <span class="me-3" style="cursor: pointer;" onclick="JS_User.upNdown('down','{{$id}}', this)"><i class="fas fa-long-arrow-alt-down"></i></span>
                         <span style="cursor: pointer;" onclick="JS_User.upNdown('up', '{{$id}}', this)"><i class="fas fa-long-arrow-alt-up"></i></span>
-                    </td>
+                    </td> -->
                     <td onclick="{select_row(this);}" align="center" style="vertical-align: middle;">
                         <label class="custom-control custom-checkbox p-0 m-0 pointer " style="cursor: pointer;">
                             <input type="checkbox" hidden class="custom-control-input toggle-status" id="status_{{$id}}" data-id="{{$id}}" {{ $data->status == 1 ? 'checked' : '' }}>

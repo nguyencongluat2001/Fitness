@@ -202,6 +202,21 @@ class LoginController extends Controller
                 $menu = $value;
                 return  $menu;
             }
+            if ($user->role == 'MANAGE') {
+                $menu = $value;
+                unset($menu['recommended']);
+                unset($menu['datafinancial']);
+                unset($menu['signal']);
+                unset($menu['handbook']);
+                unset($menu['approvepayment']);
+                unset($menu['signal']);
+                unset($menu['permision']);
+                unset($menu['backupdata']);
+                unset($menu['userlog']);
+                unset($menu['category']);
+                unset($menu['blog']);
+                return  $menu;
+            }
             if ($user->role == 'CV_ADMIN,SALE_BASIC') {
                 $menu = $value;
                 unset($menu['approvepayment']);
@@ -271,21 +286,7 @@ class LoginController extends Controller
                 return  $menu;
             }
             //
-            if ($user->role == 'MANAGE') {
-                $menu = $value;
-                unset($menu['recommended']);
-                unset($menu['datafinancial']);
-                unset($menu['signal']);
-                unset($menu['handbook']);
-                unset($menu['approvepayment']);
-                unset($menu['signal']);
-                unset($menu['permision']);
-                unset($menu['backupdata']);
-                unset($menu['userlog']);
-                unset($menu['category']);
-                unset($menu['blog']);
-                return  $menu;
-            }
+            
             if ($user->role == 'CV_ADMIN') {
                 $menu = $value;
                 unset($menu['approvepayment']);
@@ -298,6 +299,7 @@ class LoginController extends Controller
             if ($user->role == 'CV_PRO') {
                 $menu = $value;
                 unset($menu['users']);
+                unset($menu['client']);
                 unset($menu['recommended']);
                 unset($menu['handbook']);
                 unset($menu['approvepayment']);
@@ -311,6 +313,7 @@ class LoginController extends Controller
             if ($user->role == 'CV_BASIC') {
                 $menu = $value;
                 unset($menu['users']);
+                unset($menu['client']);
                 unset($menu['recommended']);
                 unset($menu['datafinancial']);
                 unset($menu['signal']);

@@ -186,6 +186,11 @@ abstract class Service
     {
         return $this->repository->whereIn($column, $values);
     }
+    
+    public function whereNotIn($column, $values = [])
+    {
+        return $this->repository->whereNotIn($column, $values);
+    }
 
     /**
      * truy vấn dữ liệu .

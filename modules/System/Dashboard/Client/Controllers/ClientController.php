@@ -179,13 +179,13 @@ class ClientController extends Controller
         $param['sortType'] = 1;
         $param['role'] = ['USERS'];
         // dd($_SESSION['role']);
-        if($_SESSION['role'] == 'SALE_ADMIN' || $_SESSION['role'] == 'SALE_ADMIN,SALE'){
+        if($_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_BASIC' 
+        || $_SESSION['role'] == 'SALE_ADMIN' || $_SESSION['role'] == 'SALE_ADMIN,SALE'){
             $getUser_child_goc = [$_SESSION['id_personnel']];
             $getUser_child = $this->ClientService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
             $id_manage = array_merge($getUser_child_goc,$getUser_child);
             $param['id_manage'] = $id_manage;
         }
-
         $objResult = $this->ClientService->filter($param);
 
         $data['datas'] = $objResult;
