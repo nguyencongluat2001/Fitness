@@ -195,11 +195,6 @@ JS_Register.prototype.Tab2 = function(){
         $(oForm).find("#name").focus();
         return false;
     }
-    if($(oForm).find("#dateBirth").val() == ''){
-        NclLib.alerMesage('Ngày sinh không được để trống!', 'warning', '#f5ae67');
-        $(oForm).find("#dateBirth").focus();
-        return false;
-    }
     if(email == ''){
         NclLib.alerMesage('Email không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#email").focus();
@@ -218,6 +213,16 @@ JS_Register.prototype.Tab2 = function(){
     if(!$(oForm).find("#phone").val().match(regexPhone)){
         NclLib.alerMesage('Số điện thoại không đúng định dạng!', 'warning', '#f5ae67');
         $(oForm).find("#phone").focus();
+        return false;
+    }
+    if($(oForm).find("#dateBirth").val() == ''){
+        NclLib.alerMesage('Ngày sinh không được để trống!', 'warning', '#f5ae67');
+        $(oForm).find("#dateBirth").focus();
+        return false;
+    }
+    if($(oForm).find("#address").val() == ''){
+        NclLib.alerMesage('Địa chỉ không được để trống!', 'warning', '#f5ae67');
+        $(oForm).find("#address").focus();
         return false;
     }
     NclLib.loadding();

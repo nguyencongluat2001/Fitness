@@ -26,7 +26,7 @@
                 <input id="dateBirth" type="text" class="form-control datepicker" name="dateBirth" value="" placeholder="dd/mm/yyyy">
             </div>
             <div class="form-wrapper col-md-8">
-                <label for="">Địa chỉ</label>
+                <label for="">Địa chỉ <span class="request_star">*</span></label>
                 <input placeholder="Nhập Tỉnh/TP hiện tại..." id="address" type="text" class="form-control" name="address" value="">
             </div>
         </div>

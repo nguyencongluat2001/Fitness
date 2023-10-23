@@ -52,12 +52,12 @@ return [
         'role' => false,
         'child' => [
             'index' => [
-                'name' => 'Tổng hợp thị trường',
+                'name' => 'Thị trường tổng hợp',
                 'icon' => 'fas fa-search-dollar',
                 'role' => false,
             ],
             'session' => [
-                'name' => 'Tổng kết phiên',
+                'name' => 'Phân tích đầu tư VIP',
                 'icon' => 'fas fa-calendar-alt',
                 'role' => false,
             ],
@@ -67,7 +67,7 @@ return [
                 'role' => false,
             ],
             'stock' => [
-                'name' => 'Phân tích cổ phiếu',
+                'name' => 'Phân tích doanh nghiệp',
                 'icon' => 'fas fa-chart-line',
                 'role' => false,
             ],
