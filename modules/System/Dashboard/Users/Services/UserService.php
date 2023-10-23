@@ -65,7 +65,7 @@ class UserService extends Service
                 'order'=> isset($input['order']) ? $input['order'] : (int)$countUser + 1,
                 'account_tkck_vps'=> isset($input['account_tkck_vps'])?$input['account_tkck_vps']:'',
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
-                'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'YE07',
+                'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'F889',
                 "status" => isset($input['status']) ? 1 : 0,
             ];
              // nếu có ảnh mới thì cập nhật

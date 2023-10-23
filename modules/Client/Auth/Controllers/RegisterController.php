@@ -55,7 +55,7 @@ class RegisterController extends Controller
             'user_introduce' => $arrInput['name'] ?? '',
             'account_tkck_vps'=> isset($arrInput['account_tkck_vps'])?$arrInput['account_tkck_vps']:'',
             // 'id_personnel' => $arrInput['code_introduce'] ?? '',
-            'id_manage' => $arrInput['code_introduce'] ?? 'YE07',
+            'id_manage' => $arrInput['code_introduce'] ?? 'F889',
         ];
         $register = RegisterModel::where('email', $params['email'])->first();
         if(!empty($register)){
@@ -83,7 +83,7 @@ class RegisterController extends Controller
                 'dateBirth'=> $arrInput['dateBirth'],
                 'id_personnel'=> isset($arrInput['id_personnel'])?$arrInput['id_personnel']:'',
                 // 'id_personnel'=> isset($arrInput['id_personnel'])?$arrInput['id_personnel']:'',
-                'id_manage'=> isset($arrInput['code_introduce'])?$arrInput['code_introduce']:'YE07',
+                'id_manage'=> isset($arrInput['code_introduce'])?$arrInput['code_introduce']:'F889',
                 'user_introduce'=> $arrInput['name_personnel'] ?? 'FinTop.BA@gmail.com',
                 'investment_time'=> isset($arrInput['investment_time'])?$arrInput['investment_time']:'',
                 'investment_taste'=> isset($arrInput['investment_taste'])?$arrInput['investment_taste']:'',
