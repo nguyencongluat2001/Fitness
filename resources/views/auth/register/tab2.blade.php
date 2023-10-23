@@ -11,8 +11,11 @@
         right: 20px;
         cursor: pointer;
     }
+    .passShowHide{
+        color: #000;
+    }
     .repassShowHide{
-        color: #fff;
+        color: #000;
     }
 </style>
 <div class="card" style="background:#000000f5;">
@@ -141,13 +144,13 @@
     $("#password").focus(function(){
         $(".passShowHide").attr("style", "color: #000");
     })
-    $("#password").focusout(function(){
-        $(".passShowHide").attr("style", "color: #fff");
-    })
+    // $("#password").focusout(function(){
+    //     $(".passShowHide").attr("style", "color: #fff");
+    // })
     $("#repass").focus(function(){
         $(".repassShowHide").attr("style", "color: #000");
     })
-    $("#repass").focusout(function(){
-        $(".repassShowHide").attr("style", "color: #fff");
-    })
+    // $("#repass").focusout(function(){
+    //     $(".repassShowHide").attr("style", "color: #fff");
+    // })
 </script>

@@ -21,8 +21,11 @@
     .form-wrapper ,.checkbox{
         color:#ffffff;
     }
-    .form-control{
+    /* .form-control{
         color:#fff079;
+    } */
+    #frmRegister input{
+        background-color: #e8f0fe;
     }
 </style>
 <div class="container mt-2 mb-2">
