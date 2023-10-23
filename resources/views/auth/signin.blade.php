@@ -41,7 +41,7 @@
                         </div>
                         <div class="form-wrapper row {{!isset($data['password']) ? 'mb-3' : ''}}">
                             <label for="">Mật khẩu <span class="request_star">*</span></label>
-                            <div style="position: relative;">
+                            <div style="position: relative;" class="pe-0 ps-0">
                                 <input id="password" type="text" class="form-control" name="password" placeholder="Mật khẩu">
                                 <span class="eye"><i class="showHidePass fas fa-eye"></i></span>
                             </div>

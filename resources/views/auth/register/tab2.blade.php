@@ -9,7 +9,6 @@
         position: absolute;
         top: 13px;
         right: 20px;
-        color: black;
         cursor: pointer;
     }
     .repassShowHide{
@@ -109,8 +108,8 @@
             </div>
         </div>
         <div class="form-group" style="display: flex;justify-content: center;">
+            <button type="button" class="btn-primary me-3 ms-0" style="background-color: slategrey" onclick="JS_Register.Tab1()">Quay lại</button>
             <button type="button" class="btn-primary me-0 ms-0" style="background-color: #529845" onclick="JS_Register.Tab3()">Tiếp tục</button>
-            <button type="button" class="btn-primary me-0 ms-0" style="background-color: slategrey" onclick="JS_Register.Tab1()">Quay lại</button>
         </div>
     </div>
 </div>
@@ -139,6 +138,12 @@
             $("#repass").attr('type', 'password');
         }
     });
+    $("#password").focus(function(){
+        $(".passShowHide").attr("style", "color: #000");
+    })
+    $("#password").focusout(function(){
+        $(".passShowHide").attr("style", "color: #fff");
+    })
     $("#repass").focus(function(){
         $(".repassShowHide").attr("style", "color: #000");
     })
