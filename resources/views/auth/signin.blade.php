@@ -103,5 +103,12 @@
             $("#password").attr('type', 'password');
         }
     });
+    
+    $("#password").focus(function(){
+        $(".showHidePass").attr("style", "color: #000");
+    })
+    $("#password").focusout(function(){
+        if($("#password").val() == '') $(".showHidePass").attr("style", "color: #fff");
+    })
 </script>
 @endsection
