@@ -94,6 +94,12 @@ return [
             'a'    => 'nav-link link-userlog',
             'href' => '/system/userlog/index',
         ],
+        'sql' => [
+            'name' => 'Quản trị DATA',
+            'icon' => 'fas fa-hand-holding-usd',
+            'a'    => 'nav-link link-sql',
+            'href' => '/system/sql/index',
+        ],
     ],
     //role 3
     // "MANAGE" => [

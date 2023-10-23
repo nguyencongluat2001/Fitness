@@ -33,6 +33,7 @@ use Modules\System\Dashboard\Users\Controllers\UserController;
 use Modules\System\Dashboard\Client\Controllers\ClientController;
 use Modules\System\Dashboard\Permision\Controllers\PermisionController;
 use Modules\System\Dashboard\UserLog\Controllers\UserLogController;
+use Modules\System\Dashboard\Sql\Controllers\SqlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -273,6 +274,15 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 // Route::post('/delete',[UserLogController::class,'delete']);
                 // Route::post('/updateCategory',[UserLogController::class,'updateCategory']);
                 // Route::post('/changeStatusCate',[UserLogController::class,'changeStatusCate']);
+            });
+             //quản trị data
+             Route::prefix('/sql')->group(function () {
+                //Hospital
+                Route::get('/index', [SqlController::class, 'index']);
+                Route::get('/loadList',[SqlController::class,'loadList']);
+                Route::get('/create',[SqlController::class,'add']);
+                Route::post('/update',[SqlController::class,'update']);
+                Route::post('/delete',[SqlController::class,'delete']);
             });
         });
     });
