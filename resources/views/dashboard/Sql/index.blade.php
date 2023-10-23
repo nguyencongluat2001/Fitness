@@ -13,10 +13,10 @@
                                 <button class="btn btn-success shadow-sm" id="btn_add" type="button" data-toggle="tooltip" data-original-title="Thêm"><i class="fas fa-plus"></i></button>
                                 <button class="btn btn-danger shadow-sm" id="btn_delete" type="button" data-toggle="tooltip" data-original-title="Xóa"><i class="fas fa-trash-alt"></i></button>
                             </div> -->
-                            <div class="input-group" style="width:90%;height:10%">
+                            <div class="input-group" style="width:90%;height:10%;background: #0c2532;color: #87ffad;">
                                 <input id="search" name="search" type="text" class="form-control" placeholder="Câu lệnh sql...">
                             </div>
-                            <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
+                            <button style="width:5%;" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
 
                         </div>
                         <div id="table-container" style="padding-top:10px"></div>
