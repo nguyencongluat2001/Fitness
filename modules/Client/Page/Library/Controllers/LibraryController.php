@@ -50,12 +50,18 @@ class LibraryController extends Controller
     public function loadList(Request $request)
     { 
         $arrInput = $request->input();
-        if($arrInput['cate'] == null || $arrInput['cate'] == ''){
-            unset($arrInput['cate']);
-        }
+        // dd($arrInput);
+        // if(!empty($arrInput['cate']) && $arrInput['cate'] == null || $arrInput['cate'] == ''){
+        //     unset($arrInput['cate']);
+        // }
         $data = array();
         $param = $arrInput;
-        $objResult = $this->handbookService->filter($param);
+        if(!empty($arrInput['cate'])){
+            $objResult = $this->handbookService->where('category_handbook',$arrInput['cate'])->get();
+        }else{
+            $objResult = $this->handbookService->where('current_status',1)->get();
+
+        }
         $data['datas'] = $objResult;
         $data['param'] = $param;
         return view("client.Library.loadlist",  $data)->render();

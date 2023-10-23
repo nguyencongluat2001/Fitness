@@ -14,16 +14,8 @@ function JS_Library(baseUrl, module, controller) {
 JS_Library.prototype.loadIndex = function () {
     var myClass = this;
     var oForm = 'form#frmLoadlist_library';
-    myClass.loadList(oForm);
+    myClass.loadLists('');
     $('.chzn-select').chosen({ height: '100%', width: '100%' });
-    $(oForm).find('#txt_search').click(function () {
-        /* ENTER PRESSED*/
-            var page = $(oForm).find('#limit').val();
-            var perPage = $(oForm).find('#cbo_nuber_record_page').val();
-            myClass.loadList(oForm, page, perPage);
-            // return false;
-        
-    });
 }
 /**
  * Load màn hình danh sách
@@ -32,13 +24,28 @@ JS_Library.prototype.loadIndex = function () {
  *
  * @return void
  */
-JS_Library.prototype.loadList = function (oForm) {
+
+// JS_Library.prototype.loadList = function (oForm) {
+//     var myClass = this;
+//     var url = this.urlPath + '/loadList';
+//     var data = $(oForm).serialize();
+//     $.ajax({
+//         url: url,
+//         type: "GET",
+//         data: data,
+//         success: function (arrResult) {
+//             $("#table-container-library").html(arrResult);
+//         }
+//     });
+// }
+JS_Library.prototype.loadLists = function (cate) {
     var myClass = this;
     var url = this.urlPath + '/loadList';
-    var data = $(oForm).serialize();
+    var data = 'cate=' + cate;
+    data += '&_token=' + $('#frmLoadlist_library #_token').val();
     $.ajax({
         url: url,
-        type: "POST",
+        type: "GET",
         data: data,
         success: function (arrResult) {
             $("#table-container-library").html(arrResult);

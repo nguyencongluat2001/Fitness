@@ -349,7 +349,7 @@ Route::prefix('/client')->group(function () {
         });
         // Thư viện đầu tư
         Route::get('/library/index', [LibraryController::class, 'index']);
-        Route::post('/library/loadList',[LibraryController::class,'loadList']);
+        Route::get('/library/loadList',[LibraryController::class,'loadList']);
         Route::get('/library/seeVideo',[LibraryController::class,'seeVideo']);
         // Đặc quyền hội viên
         Route::get('/privileges/index', [PrivilegesController::class, 'index']);

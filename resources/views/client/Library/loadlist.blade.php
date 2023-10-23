@@ -18,8 +18,8 @@
                 <!-- <td align="center"><input type="checkbox" name="chk_all_item_id"
                         onclick="checkbox_all_item_id(document.forms[0].chk_item_id);"></td> -->
                 <td align="center"><b class="title_table">STT</b></td>
-                <td align="center"><b class="title_table">Tên cẩm nang</b></td>
-                <td align="center"><b class="title_table">#</b></td>
+                <td align="center"><b class="title_table">Nội dung</b></td>
+                <td align="center"><b class="title_table">Link</b></b></td>
             </tr>
         </thead>
         <tbody>
@@ -45,11 +45,6 @@
             @endforeach
         </tbody>
     </table>
-    <div class="paginate">
-        @if(count($datas) > 0)
-        {{$datas->links('pagination.blog')}}
-        @endif
-    </div>
 </div>
 <!-- <div class="modal" id="videomodal" role="dialog"></div> -->
 

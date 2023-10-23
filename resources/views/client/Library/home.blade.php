@@ -13,7 +13,7 @@
                     <div class="home_index_child row" style="background:#ffffffc7 !important">
                         <div class="col-lg-9" style="padding:10px;">
                             <h class=" py-2"><i class="fas fa-search"></i> <span style="font-size:18px;font-family: auto;">CẨM NANG CHO NHÀ ĐẦU TƯ	</span></h>
-                            <div class="row form-group pt-2">
+                            <!-- <div class="row form-group pt-2">
                                 <div class="col-md-5">
                                     <select class="form-control input-sm chzn-select" name="cate"
                                         id="cate">
@@ -31,7 +31,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="py-2 pt-3">
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-library"></div>
@@ -41,26 +41,38 @@
                             <h class=" py-2"> <span style="font-size:18px;font-family: auto;">	</span></h>
                             <div class="row form-group pt-2" style="text-align: center;">
                                 <div class="col-md-12">
-                                    <div style="padding:2%;">
+                                    <!-- <div style="padding:2%;">
                                          <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Cẩm nang cho nhà đầu tư</button>
+                                    </div> -->
+                                    <div style="padding:2%;">
+                                         <button onclick="JS_Library.loadLists('TU_SACH_DAU_TU')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Tủ sách đầu tư</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fas fa-chart-line"></i> Chứng khoán thế giới</button>
+                                         <button onclick="JS_Library.loadLists('KT_KT_TA')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Kiến thức phân tích kỹ thuật (TA)</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fas fa-globe-europe"></i> Chỉ số hàng hóa</button>
+                                         <button onclick="JS_Library.loadLists('KT_PT_BASIC')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Kiến thức phân tích cơ bản (FA)</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fas fa-coins"></i> Coins</button>
+                                         <button onclick="JS_Library.loadLists('KT_PS_CQ_MARGIN')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Kiến thức chứng khoán, TTCK</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fab fa-viacoin"></i> Forex</button>
+                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-chart-line"></i> Chứng khoán thế giới</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fas fa-money-check"></i> Tin kinh tế</button>
+                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-globe-europe"></i> Chỉ số hàng hóa</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fas fa-globe-asia"></i> Tin thế giới</button>
+                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-coins"></i> Coins</button>
+                                    </div>
+                                    <div style="padding:2%;">
+                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fab fa-viacoin"></i> Forex</button>
+                                    </div>
+                                    <div style="padding:2%;">
+                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-money-check"></i> Tin kinh tế</button>
+                                    </div>
+                                    <div style="padding:2%;">
+                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-globe-asia"></i> Tin thế giới</button>
                                     </div>
                                 </div>
 
