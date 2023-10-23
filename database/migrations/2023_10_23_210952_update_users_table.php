@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('register', function (Blueprint $table) {
             // $table->tinyInteger('order')->nullable();
-            $table->string('account_tkck_vps')->nullable();
+            $table->string('id_manage')->nullable();
             //  $table->string('investment_time')->nullable();
             //  $table->string('investment_taste')->nullable();
             //  $table->string('investment_company')->nullable();
