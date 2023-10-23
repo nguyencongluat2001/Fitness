@@ -220,7 +220,7 @@ JS_Register.prototype.Tab2 = function(){
         $(oForm).find("#dateBirth").focus();
         return false;
     }
-    if(address == ''){
+    if($(oForm).find("#address").val() == ''){
         NclLib.alerMesage('Địa chỉ không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#address").focus();
         return false;
