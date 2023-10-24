@@ -49,7 +49,7 @@
                         <input type="file" hidden name="upload_image" id="upload_image" onchange="readURL(this)">
                         <br>
                         @if(!empty($data['image']))
-                        <img id="show_img" src="{{url('/file-image-client/blogs/')}}/{{$data['image'][0]->name_image}}" alt="Image" style="width:150px">
+                        <img id="show_img" src="{{url('/file-image-client/blogs/')}}/{{$data['image'][0]->name_image ?? ''}}" alt="Image" style="width:150px">
                         @else
                         <img id="show_img" hidden alt="Image" style="width:150px">
                         @endif
