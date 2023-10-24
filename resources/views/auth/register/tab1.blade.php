@@ -37,7 +37,7 @@
             </div>
             <div class="form-wrapper col-md-4">
                 <label for="">Tên người giới thiệu</label>
-                <input style="color:#fff49b; background-color:unset; cursor: unset;text-align: left;" placeholder="" readonly id="name_personnel" type="button" class="form-control" name="name_personnel" value="{{isset($data['user_introduce_name']) ? $data['user_introduce_name'] : ''}}">
+                <input style="cursor: unset;text-align: left;" placeholder="" readonly id="name_personnel" type="button" class="form-control" name="name_personnel" value="{{isset($data['user_introduce_name']) ? $data['user_introduce_name'] : ''}}">
             </div>
         </div>
         <!-- <div class="row">

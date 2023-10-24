@@ -375,6 +375,7 @@ Route::prefix('/client')->group(function () {
     
     Route::prefix('des')->group(function () {
         Route::get('index', [DesController::class, 'index']);
+        Route::get('reader', [DesController::class, 'reader']);
     });
 });
  

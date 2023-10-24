@@ -21,15 +21,79 @@
     .tab1 iframe {
         width: 100%;
     }
-    .row{
+
+    .row {
         /* flex-wrap: unset; */
     }
-    .tab2{
+
+    .tab2 {
         padding: 10px 10px 10px 0;
         text-align: justify;
     }
-    .tab2 h5{
+
+    .tab2 h5 {
         text-transform: uppercase;
+    }
+
+    .service-tag {
+        font-size: 20px;
+    }
+
+    .treeview-animated ul li {
+        list-style: none;
+    }
+
+    .showHideAll {
+        padding: 2rem;
+    }
+
+    .showHideAll .showAll,
+    .showHideAll .hideAll {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #49bce2;
+        padding: 5px 1rem;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    .treeview-animated-items #title {
+        color: #000 !important;
+        text-decoration: none;
+    }
+
+    @media (max-width: 450px) {
+        .service-wrapper {
+            padding-top: 1rem !important;
+        }
+
+        h2 {
+            font-size: 30px;
+        }
+
+        .treeview-animated {
+            margin-top: 0 !important;
+            margin-right: 0 !important;
+            margin-left: 0 !important;
+        }
+
+        .showHideAll {
+            padding: 1rem;
+        }
+
+        .showHideAll .showAll,
+        .showHideAll .hideAll {
+            width: 100%;
+            display: block;
+        }
+
+        .treeview-animated ul {
+            padding-left: 1rem;
+        }
     }
 </style>
 <div class="banner-wrapper">
@@ -37,74 +101,27 @@
         <div class="card">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="tab1">
-                    <iframe width="900" height="506" src="https://www.youtube.com/embed/_vburVnQm0Q" title="Nhạc Trẻ 8x 9x Hay Nhất Đời Đầu... Những Bản Nhạc Xưa Chill Nhẹ Nhàng - Nhạc Lofi 8x 9x Bất Hủ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <span>What is Lorem Ipsum?
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-                        Why do we use it?
-                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-
-                        Where does it come from?
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-
-                        Where can I get some?
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-                    </span>
-                </div></div>
+                    <div class="tab1"></div>
+                </div>
                 <div class="col-md-4">
-                    <!-- <div class="tab2">
-                    <div>
-                        <h5>Việc đầu tư cần thiết và quan trọng như thế nào</h5>
-                        <p> - Quản trị tài chính, làm chủ cuộc sống</p>
-                        <p> - Đầu tư để đạt mục tiêu tự do tài chính</p>
-                    </div>
-                    <div>
-                        <h5>Trang bị đầu tư</h5>
-                        <p> - Chuẩn bị vốn</p>
-                        <p> - Mở tải khoản chứng khoán và bắt đầu phân bổ tài khoản đầu tư</p>
-                        <p> - Công cụ và nền tảng để đầu tư</p>
-                        <p> - Chuẩn bị về kiến thức trong đầu tư</p>
-                        <p> - Chuẩn bị về tâm lý và xây dựng chiến lược đầu tư</p>
-                    </div>
-                    <div>
-                        <h5>Phân tích ký thuật trong đầu tư - Phương pháp giao dịch</h5>
-                        <p> - MA</p>
-                        <p> - BB</p>
-                        <p> - RSI</p>
-                    </div>
-                    <div>
-                        <h5>Phân tích cơ bản trong đầu tư - Hoạch định chiến lược trung - dài hạn</h5>
-                        <p> - Vĩ mô</p>
-                        <p> - Ngành</p>
-                        <p> - Cổ phiếu</p>
-                        <p> - Định giá</p>
-                    </div></div> -->
                     <div class="container pt-3">
                         <div class="treeview-animated w-20 border mx-4 my-4">
-                        <div class="showHideAll">
-                            <span class="showAll">Hiển thị tất cả</span>
-                            <span class="hideAll">Thu nhỏ tất cả</span>
-                        </div>
+                            <div class="showHideAll">
+                                <span class="showAll">Hiển thị tất cả</span>
+                                <span class="hideAll">Thu nhỏ tất cả</span>
+                            </div>
                             <ul class="treeview-animated-list mb-3">
                                 @if(isset($datas) && count($datas) > 0)
                                 @foreach($datas as $key => $data)
                                 <li class="treeview-animated-items">
-                                    <a class="closed">
-                                        <span>{{ $key }}</span>
+                                    <a class="closed" id="title">
+                                        <span>{{ $data['name_category'] }}</span>
                                     </a>
-                                    <span>{{ $data['name_category'] }}</span>
-
                                     <ul class="nested">
                                         @foreach($data['listItem'] as $k => $v)
+                                        @php $id = $v['id']; @endphp
                                         <li class="treeview-animated-items">
-                                            <a class="closed"><span>{{ $v['title'] }}</span></a>
-                                            {{-- <ul class="nested">
-                                                <li>{{ $v['answer'] }}</li>
-                                            </ul> --}}
+                                            <a class="closed" onclick="reader('{{$id}}')"><i class="far fa-hand-point-right"></i> <span>{{ $v['title'] }}</span></a>
                                         </li>
                                         @endforeach
                                     </ul>
@@ -120,7 +137,7 @@
     </section>
 </div>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_System_Security.js') }}"></script>
-<script src="{{ URL::asset('clients/js/treelist.js') }}"></script>
+<script src="{{ URL::asset('assets/js/treelist.js') }}"></script>
 <script>
     $(".showAll").click(function() {
         $(".nested").css('display', 'block');
@@ -132,6 +149,23 @@
         $(".toogle .fa-minus-circle").css('display', 'none');
         $(".toogle .fa-plus-circle").removeAttr('style');
     })
+    
+    var baseUrl = "{{url('')}}";
+    console.log(baseUrl);
+    function reader(id) {
+        $.ajax({
+            url: baseUrl + '/client/des/reader',
+            type: "GET",
+            data: {
+                id: id
+            },
+            dataType: 'JSON',
+            success: function(arrResult) {
+                $(".tab1").html(arrResult['content']);
+
+            }
+        });
+    }
 </script>
 <script type="text/javascript">
     NclLib.menuActive('.link-des');
@@ -140,6 +174,5 @@
     //         JS_System_Security.security();
     //     })
     NclLib.loadding();
-
 </script>
 @endsection

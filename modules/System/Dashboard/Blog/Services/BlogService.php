@@ -128,6 +128,7 @@ class BlogService extends Service
             DB::commit();
             return true;
         } catch (\Exception $e) {
+            dd($e);
              DB::rollBack();
             return array('success' => false, 'message' => (string) $e->getMessage());
         }
