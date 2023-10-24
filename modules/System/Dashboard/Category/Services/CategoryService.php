@@ -36,6 +36,7 @@ class CategoryService extends Service
                 'decision'=> $input['decision'] ,
                 'order' => isset($input['order']) && !empty($input['order']) ? trim($input['order']) : count($categories) + 1,
                 'status' => isset($input['status']) && !empty($input['status']) ? 1 : 0,
+                'instruct' => isset($input['instruct']) && !empty($input['instruct']) ? 1 : 0,
             ];
             $create = $this->CategoryRepository->where('id',$input['id'])->update($arrData);
         }else{
@@ -51,6 +52,7 @@ class CategoryService extends Service
                 'decision'=> $input['decision'] ,
                 'order' => isset($input['order']) && !empty($input['order']) ? trim($input['order']) : count($categories) + 1,
                 'status' => isset($input['status']) && !empty($input['status']) ? 1 : 0,
+                'instruct' => isset($input['instruct']) && !empty($input['instruct']) ? 1 : 0,
             ];
             $create = $this->CategoryRepository->create($arrData);
         }

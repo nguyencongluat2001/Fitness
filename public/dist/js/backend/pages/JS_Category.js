@@ -317,6 +317,8 @@ JS_Category.prototype.updateCategory = function(id, column, value = '') {
     else if(column == 'name'){ data += '&name=' + value; }
     else if(column == 'decision'){ data += '&decision=' + value; }
     else if(column == 'order'){ data += '&order=' + value; }
+    else if(column == 'instruct'){ data += '&instruct=' + value; }
+
     $.ajax({
         url: url,
         data: data,

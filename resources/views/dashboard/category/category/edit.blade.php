@@ -59,6 +59,13 @@
                             placeholder="Nhập mô tả..." />
                     </div>
                 </div>
+                <div class="row form-group" id="div_hinhthucgiai">
+                    <span class="col-md-3 control-label required">Hướng dẫn đầu tư</span>
+                    <div class="col-md-8">
+                        <input type="checkbox" name="instruct" id="instruct" {{isset($datas->instruct) && $datas->instruct == 1 ? 'checked' : ''}}/>
+                        <span for="is_checkbox_Instruct">Hướng dẫn</span> <br>
+                    </div>
+                </div>
                 {{-- trạng thái --}}
                 <div class="row form-group" id="div_hinhthucgiai">
                     <span class="col-md-3 control-label">Trạng thái</span>

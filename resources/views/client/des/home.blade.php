@@ -56,7 +56,7 @@
                     </span>
                 </div></div>
                 <div class="col-md-4">
-                    <div class="tab2">
+                    <!-- <div class="tab2">
                     <div>
                         <h5>Việc đầu tư cần thiết và quan trọng như thế nào</h5>
                         <p> - Quản trị tài chính, làm chủ cuộc sống</p>
@@ -82,13 +82,57 @@
                         <p> - Ngành</p>
                         <p> - Cổ phiếu</p>
                         <p> - Định giá</p>
-                    </div></div>
+                    </div></div> -->
+                    <div class="container pt-3">
+                        <div class="treeview-animated w-20 border mx-4 my-4">
+                        <div class="showHideAll">
+                            <span class="showAll">Hiển thị tất cả</span>
+                            <span class="hideAll">Thu nhỏ tất cả</span>
+                        </div>
+                            <ul class="treeview-animated-list mb-3">
+                                @if(isset($datas) && count($datas) > 0)
+                                @foreach($datas as $key => $data)
+                                <li class="treeview-animated-items">
+                                    <a class="closed">
+                                        <span>{{ $key }}</span>
+                                    </a>
+                                    <span>{{ $data['name_category'] }}</span>
+
+                                    <ul class="nested">
+                                        @foreach($data['listItem'] as $k => $v)
+                                        <li class="treeview-animated-items">
+                                            <a class="closed"><span>{{ $v['title'] }}</span></a>
+                                            {{-- <ul class="nested">
+                                                <li>{{ $v['answer'] }}</li>
+                                            </ul> --}}
+                                        </li>
+                                        @endforeach
+                                    </ul>
+                                </li>
+                                @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 </div>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_System_Security.js') }}"></script>
+<script src="{{ URL::asset('clients/js/treelist.js') }}"></script>
+<script>
+    $(".showAll").click(function() {
+        $(".nested").css('display', 'block');
+        $(".toogle .fa-plus-circle").css('display', 'none');
+        $(".toogle .fa-minus-circle").removeAttr('style');
+    })
+    $(".hideAll").click(function() {
+        $(".nested").css('display', 'none');
+        $(".toogle .fa-minus-circle").css('display', 'none');
+        $(".toogle .fa-plus-circle").removeAttr('style');
+    })
+</script>
 <script type="text/javascript">
     NclLib.menuActive('.link-des');
     // var JS_System_Security = new JS_System_Security();

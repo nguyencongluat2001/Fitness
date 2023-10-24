@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('register', function (Blueprint $table) {
+        Schema::table('categorys', function (Blueprint $table) {
             // $table->tinyInteger('order')->nullable();
-            $table->string('id_manage')->nullable();
+            $table->string('instruct')->nullable();
             //  $table->string('investment_time')->nullable();
             //  $table->string('investment_taste')->nullable();
             //  $table->string('investment_company')->nullable();
@@ -26,7 +26,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('register', function (Blueprint $table) {
+        Schema::table('categorys', function (Blueprint $table) {
             //
         });
     }

@@ -20,6 +20,7 @@ class CategoryModel extends Model
         'decision',
         'order',
         'status',
+        'instruct',
         'created_at',
         'updated_at'
     ];
