@@ -42,7 +42,7 @@ class DesController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = $this->CategoryService->where('cate','DM_BLOG')->where('instruct',1)->get();
+        $categories = $this->CategoryService->where('cate','DM_BLOG')->where('instruct',1)->orderBy('order','desc')->get();
         $arrData = [];
         foreach($categories as $key => $category){
             $arrSelect = ['blogs.id', 'blogs.code_blog', 'blogs.code_category', 'blogs_details.title', 'blogs_image.name_image'];
