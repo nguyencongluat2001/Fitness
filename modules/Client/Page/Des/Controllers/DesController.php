@@ -42,8 +42,9 @@ class DesController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = $this->CategoryService->where('cate','DM_BLOG')->where('instruct',1)->orderBy('order','asc')->get();
+        $categories = $this->CategoryService->where('cate','DM_BLOG')->where('instruct',1)->orderBy('created_at')->get();
         $arrData = [];
+        $readerFirst = '';
         foreach($categories as $key => $category){
             $arrSelect = ['blogs.id', 'blogs.code_blog', 'blogs.code_category', 'blogs_details.title', 'blogs_image.name_image'];
             $data = $this->BlogService->select($arrSelect)
@@ -52,6 +53,14 @@ class DesController extends Controller
                     ->where('blogs.code_category', $category->code_category)
                     ->orderBy('blogs.created_at')
                     ->get();
+            if($readerFirst == ''){
+                foreach($data as $v){
+                    if($readerFirst == ''){
+                        $detail = $this->BlogDetailService->where('code_blog', $v->code_blog)->first();
+                        $readerFirst = $detail->decision ?? '';
+                    }
+                }
+            }
             $arrData[$key] = [
                 'id' => $category->id,
                 'name_category' => $category->name_category,
@@ -60,6 +69,7 @@ class DesController extends Controller
             ];
         }
         $data['datas'] =  $arrData;
+        $data['readerFirst'] = $readerFirst;
         return view('client.des.home',$data);
     }
     public function reader(Request $request)
