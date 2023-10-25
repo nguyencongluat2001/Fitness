@@ -130,11 +130,11 @@
                                         type="button"
                                         data-toggle="collapse" 
                                         aria-expanded="false" 
-                                        class="dropdown-toggle btn btn-light mb-2 text-start"
-                                        style="width: 100%;outline: none;box-shadow: none;"
+                                        class="dropdown-toggle btn btn-light mb-2"
+                                        style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;"
                                         onclick="toggleIcon(this)"
                                         >
-                                        <i class="fas fa-book"></i> {{ $data['name_category'] }}</a>
+                                        <i class="fas fa-book"></i> <span>{{ $data['name_category'] }}</span></a>
                                     <ul class="collapse list-unstyled" id="{{ $data['code_category'] }}_{{ $data['id'] }}">
                                         @if(isset($data['listItem']))
                                         @foreach($data['listItem'] as $k => $v)
@@ -149,37 +149,6 @@
                             </ul>
                         </div>
                     </div>
-                    {{--<div class="container pt-3">
-                        <div class="treeview-animated w-20 border mx-4 my-4">
-                            <div class="showHideAll">
-                                <span class="showAll">Hiển thị tất cả</span>
-                                <span class="hideAll">Thu nhỏ tất cả</span>
-                            </div>
-                            <ul class="treeview-animated-list mb-3">
-                                @if(isset($datas) && count($datas) > 0)
-                                @foreach($datas as $key => $data)
-                                <br>
-                                <button  style="width:100%;text-align: left;background:#ffffff;margin-top:5px;" type="button" class="btn btn-light">
-                                    <li class="treeview-animated-items">
-                                        <a class="closed" id="title">
-                                            <span>{{ $data['name_category'] }}</span>
-                                        </a>
-                                        <ul class="nested">
-                                            @foreach($data['listItem'] as $k => $v)
-                                            @php $id = $v['id']; @endphp
-                                            <li class="treeview-animated-items">
-                                                <a class="closed" onclick="reader('{{$id}}')"><i class="far fa-hand-point-right"></i> <span>{{ $v['title'] }}</span></a>
-                                            </li>
-                                            @endforeach
-                                        </ul>
-                                    </li>
-                                </button>
-                                
-                                @endforeach
-                                @endif
-                            </ul>
-                        </div>
-                    </div>--}}
                 </div>
             </div>
         </div>
