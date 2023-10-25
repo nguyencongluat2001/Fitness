@@ -44,14 +44,14 @@
     }
 
     .showHideAll {
-        padding: 2rem;
+        padding: 0.5rem;
     }
 
     .showHideAll .showAll,
     .showHideAll .hideAll {
         border: 1px solid #ccc;
         border-radius: 5px;
-        background-color: #49bce2;
+        background-color: #77837a;
         padding: 5px 1rem;
         color: #fff;
         cursor: pointer;
@@ -98,12 +98,12 @@
 </style>
 <div class="banner-wrapper">
     <section class="container">
-        <div class="card">
+        <div class="card" style="background-color: #ffffffd6;">
             <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <div class="tab1"></div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                     <div class="container pt-3">
                         <div class="treeview-animated w-20 border mx-4 my-4">
                             <div class="showHideAll">
@@ -113,19 +113,23 @@
                             <ul class="treeview-animated-list mb-3">
                                 @if(isset($datas) && count($datas) > 0)
                                 @foreach($datas as $key => $data)
-                                <li class="treeview-animated-items">
-                                    <a class="closed" id="title">
-                                        <span>{{ $data['name_category'] }}</span>
-                                    </a>
-                                    <ul class="nested">
-                                        @foreach($data['listItem'] as $k => $v)
-                                        @php $id = $v['id']; @endphp
-                                        <li class="treeview-animated-items">
-                                            <a class="closed" onclick="reader('{{$id}}')"><i class="far fa-hand-point-right"></i> <span>{{ $v['title'] }}</span></a>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </li>
+                                <br>
+                                <button  style="width:100%;text-align: left;background:#ffffff;margin-top:5px;" type="button" class="btn btn-light">
+                                    <li class="treeview-animated-items">
+                                        <a class="closed" id="title">
+                                            <span>{{ $data['name_category'] }}</span>
+                                        </a>
+                                        <ul class="nested">
+                                            @foreach($data['listItem'] as $k => $v)
+                                            @php $id = $v['id']; @endphp
+                                            <li class="treeview-animated-items">
+                                                <a class="closed" onclick="reader('{{$id}}')"><i class="far fa-hand-point-right"></i> <span>{{ $v['title'] }}</span></a>
+                                            </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                </button>
+                                
                                 @endforeach
                                 @endif
                             </ul>
