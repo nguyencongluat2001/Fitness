@@ -39,12 +39,8 @@
         font-size: 20px;
     }
 
-    .treeview-animated ul li {
-        list-style: none;
-    }
-
     .showHideAll {
-        padding: 0.5rem;
+        padding: 1rem;
     }
 
     .showHideAll .showAll,
@@ -90,21 +86,70 @@
             width: 100%;
             display: block;
         }
+    }
 
-        .treeview-animated ul {
-            padding-left: 1rem;
-        }
+
+
+    .list-unstyled {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    ul.components {
+        padding: 0;
+    }
+
+    .collapse:not(.show) {
+        display: none;
+    }
+
+    .list-unstyled .dropdown-toggle::after {
+        display: none;
     }
 </style>
 <div class="banner-wrapper">
     <section class="container">
         <div class="card" style="background-color: #ffffffd6;">
             <div class="row">
-                <div class="col-md-7">
-                    <div class="tab1"></div>
+                <div class="col-md-8">
+                    <div class="tab1">{!! $readerFirst ?? '' !!}</div>
                 </div>
-                <div class="col-md-5">
-                    <div class="container pt-3">
+                <div class="col-md-4">
+                    <div class="container pt-3 ps-0">
+                        <div class="treeview-animated w-20 border">
+                            <div class="showHideAll">
+                                <span class="showAll">Hiển thị tất cả</span>
+                                <span class="hideAll">Thu nhỏ tất cả</span>
+                            </div>
+                            <ul class="list-unstyled components m-3">
+                                @if(isset($datas) && count($datas) > 0)
+                                @foreach($datas as $key => $data)
+                                <li class="active">
+                                    <a href="{{ !empty($data['listItem']) ? ('#' . $data['code_category'] . '_' . $data['id']) : 'javascript:;' }}"
+                                        <?php echo empty($data['listItem']) ? 'onclick="reader(\'' . $data['id'] . '\')"' : '' ?>
+                                        type="button"
+                                        data-toggle="collapse" 
+                                        aria-expanded="false" 
+                                        class="dropdown-toggle btn btn-light mb-2 text-start"
+                                        style="width: 100%;outline: none;box-shadow: none;"
+                                        onclick="toggleIcon(this)"
+                                        >
+                                        <i class="fas fa-book"></i> {{ $data['name_category'] }}</a>
+                                    <ul class="collapse list-unstyled" id="{{ $data['code_category'] }}_{{ $data['id'] }}">
+                                        @if(isset($data['listItem']))
+                                        @foreach($data['listItem'] as $k => $v)
+                                        @php $id = $v['id']; @endphp
+                                        <li><a class="closed ms-3" onclick="reader('{{$id}}')"><i class="far fa-hand-point-right"></i> <span>{{ $v['title'] }}</span></a></li>
+                                        @endforeach
+                                        @endif
+                                    </ul>
+                                </li>
+                                @endforeach
+                                @endif
+                            </ul>
+                        </div>
+                    </div>
+                    {{--<div class="container pt-3">
                         <div class="treeview-animated w-20 border mx-4 my-4">
                             <div class="showHideAll">
                                 <span class="showAll">Hiển thị tất cả</span>
@@ -134,28 +179,27 @@
                                 @endif
                             </ul>
                         </div>
-                    </div>
+                    </div>--}}
                 </div>
             </div>
         </div>
     </section>
 </div>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_System_Security.js') }}"></script>
-<script src="{{ URL::asset('assets/js/treelist.js') }}"></script>
+<!-- <script src="{{ URL::asset('assets/js/treelist.js') }}"></script> -->
+<script src="{{ URL::asset('assets/js/popper.js') }}"></script>
+<script src="{{ URL::asset('clients/js/bootstrap.min.js') }}"></script>
 <script>
     $(".showAll").click(function() {
-        $(".nested").css('display', 'block');
-        $(".toogle .fa-plus-circle").css('display', 'none');
-        $(".toogle .fa-minus-circle").removeAttr('style');
+        $(".list-unstyled").addClass('show');
+        $(".fas.fa-book").addClass('fa-book-open');
     })
     $(".hideAll").click(function() {
-        $(".nested").css('display', 'none');
-        $(".toogle .fa-minus-circle").css('display', 'none');
-        $(".toogle .fa-plus-circle").removeAttr('style');
+        $(".list-unstyled").removeClass('show');
+        $(".fas.fa-book").removeClass('fa-book-open');
     })
-    
+
     var baseUrl = "{{url('')}}";
-    console.log(baseUrl);
     function reader(id) {
         $.ajax({
             url: baseUrl + '/client/des/reader',
@@ -178,5 +222,10 @@
     //         JS_System_Security.security();
     //     })
     NclLib.loadding();
+</script>
+<script>
+    function toggleIcon(_this){
+        $(_this).find('i').toggleClass('fa-book-open', 'fa-book')
+    }
 </script>
 @endsection
