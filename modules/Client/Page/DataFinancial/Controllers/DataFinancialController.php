@@ -226,10 +226,10 @@ class DataFinancialController extends Controller
         $arrInput = $request->input();
         $result['datas'] = [];
         if(isset($arrInput['type']) && $arrInput['type'] == 'box'){
-            $result['datas'] = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
+            $result['datas'] = $this->SignalService->where('status','1')->orderBy('created_at','desc')->get()->get();
             return view('client.layouts.loadListBox',$result);
         }else{
-            $arrData = $this->SignalService->where('status','1')->get();
+            $arrData = $this->SignalService->where('status','1')->orderBy('created_at','desc')->get();
             // $arrData = $this->SignalService->where('status','1')->orderBy('created_at','desc')->take(3)->get();
             foreach($arrData as $val){
                 if(!Auth::check()){

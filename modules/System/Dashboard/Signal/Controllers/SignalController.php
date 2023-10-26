@@ -28,7 +28,9 @@ class SignalController extends Controller
         $input = $request->input();
         $data = array();
         $input['sort'] = 'order';
-        $input['sortType'] = 1;
+        // $input['sortType'] = 1;
+        $input['type_order'] = 'created_at';
+
         $objResult = $this->signalService->filter($input);
         $data['datas'] = $objResult;
         return view('dashboard.signal.loadList', $data)->render();

@@ -61,6 +61,9 @@ class SignalModel extends Model
                     $query->where('created_at', '<=', date('Y-m-d H:i:s', strtotime(NclLibraryHelper::_ddmmyyyyToyyyymmdd($value, 2))));
                     return $query;
                 }
+            case 'type_order':
+                $query->orderBy('created_at','DESC');
+                return $query;
             default: 
                 return $query;
         }
