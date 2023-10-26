@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="../assets/chosen/chosen.min.css">
     <script src="https://unpkg.com/lightweight-charts@3.4.0/dist/lightweight-charts.standalone.production.js"></script>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    
+
 </head>
 <style>
     b,
@@ -71,14 +71,28 @@
         z-index: 1000;
     }
 
-    .menuClient {
+    #navbar-toggler-success {
+        text-align: center;
+    }
+    #menuClient{
+        background-color: #700e13;
+    }
+
+    /* #menuClient .align-items-center{
+        background:#700e13
+    } */
+    #menu-content {
+        border-radius: 50%;
+        margin: auto;
+    }
+    .btn_close{
         display: none;
     }
 
     @media (min-width: 992px) {
-        #menuClient {
+        /* #menuClient {
             display: block;
-        }
+        } */
 
         .header-logo {
             margin-left: 10%;
@@ -87,26 +101,91 @@
         #navbar-toggler-success {
             display: block;
         }
+
+        .logo-title {
+            font-size: 3rem;
+        }
+
+        .title-reponsive {
+            width: 80%;
+        }
     }
-    @media (max-width: 768px){
-        .navbar-brand.header-logo{
+
+    @media (max-width: 768px) {
+        .navbar-brand.header-logo {
             width: 10% !important;
         }
-        .navbar-toggler-success{
+
+        .navbar-toggler-success {
             left: 30% !important;
             transform: translateX(-40%) !important;
         }
-        .navbar-toggler-success h1{
+
+        .navbar-toggler-success h1 {
             padding-left: 22% !important;
         }
-    }
-    @media (max-width: 350px){
-        .align-self-center.title-reponsive h1{
-            font-size: 2.5rem !important;
+
+        .logo-title {
+            font-size: 2.5rem;
         }
     }
-    @media (max-width: 350px){
-        .align-self-center.title-reponsive h1{
+
+    @media (max-width: 540px) {
+        .logo-title {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 450px) {
+        .logo-title {
+            font-size: calc(1.375rem + 1.5vw);
+        }
+        .btn_close {
+            display: block;
+        }
+
+        #menuClient #navbar-toggler-success {
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+        }
+        #menuClient #navbar-toggler-success #menu-content{
+            border-radius: unset;
+            margin: 0;
+            background-color: #700e13;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            animation: menu-show .5s;
+        }
+        @keyframes menu-show {
+            0% {
+                left: -200px;
+            }
+
+            100% {
+                left: 0;
+            }
+        }
+        #menu-content{
+            width: 70%;
+        }
+
+        .align-self-center.title-reponsive h1 {
+            font-size: 2rem !important;
+        }
+        #navbar-toggler-success {
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 350px) {
+        .align-self-center.title-reponsive h1 {
             font-size: 1.5rem !important;
         }
     }
@@ -141,6 +220,10 @@
 
     .loader_bg_of {
         display: none;
+    }
+
+    .logo-title {
+        font-size: 4.1em;
     }
 </style>
 <script src="../clients/js/jquery.min.js"></script>
@@ -264,19 +347,19 @@
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon text-white"><i class="fa fa-bars"></i></span>
                     </button>
-                    <a @if(isset($_SESSION['role']) && !in_array($_SESSION['role'], ['USERS', 'USER'])) href="{{ url('') . '/system/home/index' }}" @else href="" @endif>
+                    <a @if(isset($_SESSION['role']) && !in_array($_SESSION['role'], ['USERS', 'USER' ])) href="{{ url('') . '/system/home/index' }}" @else href="" @endif>
                         <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
                     </a>
                 </div>
-                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);">
-                    <h1 style="font-family: auto;font-weight: 500;color:#fff079;font-size: 4.1em;padding-left: 4%;">Tài Chính &amp; Đầu Tư</h1>
+                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);display:block">
+                    <h1 class="logo-title" style="font-family: auto;font-weight: 500;color:#fff079;padding-left: 4%;">Tài Chính &amp; Đầu Tư</h1>
                 </div>
             </div>
         </nav>
     </div>
-    <nav id="menuClient" class=" navbar-expand-lg  shadow" style="background:#700e13">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="align-self-center collapse navbar-collapse flex-fill text-center  d-lg-flex align-items-center" id="navbar-toggler-success">
+    <nav id="menuClient" class=" navbar-expand-lg  shadow">
+        <div class="container d-flex justify-content-between align-items-center fixed-menu">
+            <div class="align-self-center collapse navbar-collapse flex-fill d-lg-flex align-items-center" id="navbar-toggler-success">
                 @include('client.layouts.menu')
             </div>
         </div>
@@ -431,6 +514,17 @@
                     $("#icon-bell").removeClass('animate');
                 }
             });
+        }
+    </script>
+    <script>
+        $(".menu-close").click(function() {
+            $("#navbar-toggler-success.navbar-collapse").removeClass('show');
+        })
+        
+        document.addEventListener('click', closeOnClickOutside);
+
+        function closeOnClickOutside(e) {
+            $("#navbar-toggler-success.navbar-collapse").removeClass('show');
         }
     </script>
 </body>
