@@ -139,7 +139,7 @@
                                         @if(isset($data['listItem']))
                                         @foreach($data['listItem'] as $k => $v)
                                         @php $id = $v['id']; @endphp
-                                        <li><a class="closed ms-3" onclick="reader('{{$id}}')"><i class="far fa-hand-point-right"></i> <span>{{ $v['title'] }}</span></a></li>
+                                        <li><span><i class="far fa-hand-point-right ms-3"></i> <a class="closed" onclick="reader('{{$id}}')"><span>{{ $v['title'] }}</span></a></span></li>
                                         @endforeach
                                         @endif
                                     </ul>
