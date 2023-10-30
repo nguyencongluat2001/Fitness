@@ -100,5 +100,5 @@ JS_Recommendations.prototype.openMessage = function(){
 }
 JS_Recommendations.prototype.openPhone = function(){
     var phone = 'tel:0862348886';
-     window.open(phone);
+     window.open(phone,'_blank');
 }
