@@ -94,3 +94,11 @@ JS_Recommendations.prototype.checkLogin = function(){
     $(".swal2-modal").css('font-size', '15px');
     $(".swal2-modal").css('font-family', 'FontAwesome');
 }
+JS_Recommendations.prototype.openMessage = function(){
+    var url = 'https://www.facebook.com/Fintopdata.vn?mibextid=LQQJ4dx';
+     window.open(url, '_blank');
+}
+JS_Recommendations.prototype.openPhone = function(){
+    var phone = 'tel:0862348886';
+     window.open(phone);
+}

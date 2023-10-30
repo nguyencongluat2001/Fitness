@@ -71,6 +71,30 @@ if(isset($_SESSION['id'])){
 <form action="" method="POST" id="frmLoadlist_box">
     <div id="form_chat">
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
+        <span>
+            <div class="input-group-btn" onclick="JS_Recommendations.openPhone()">
+                    <img width="" height="60px" style="background-color: none;"
+                    src="../clients/img/phone.png" alt="">
+                </label>
+            </div>
+        </span>
+        <br>
+        <span>
+            <div class="input-group-btn">
+                    <img width="" height="60px" style="background-color: none"
+                    src="../clients/img/zalo.png" alt="">
+                </label>
+            </div>
+        </span>
+        <br>
+        <span>
+            <div class="input-group-btn" onclick="JS_Recommendations.openMessage()">
+                    <img width="" height="60px" style="background-color: none;"
+                    src="../clients/img/icon_messager.jpg" alt="">
+                </label>
+            </div>
+        </span>
+        <br>
         <span class="form-group input-group" style="align-items: center;">
             @if(isset($notification))
             <div id="alertNotifi" class="form-control alertNotifi" @if(count($notification) <= 0) hidden @endif>

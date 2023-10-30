@@ -367,9 +367,10 @@
     @yield('body-client')
 
     {{-- chat --}}
-    @if(!empty(Auth::user()))
+    {{-- @if(!empty(Auth::user()))
     @include('client.layouts.chat')
-    @endif
+    @endif--}}
+    @include('client.layouts.chat')
     {{-- end-chat --}}
     <!-- Start Footer -->
     @include('client.layouts.footer')
