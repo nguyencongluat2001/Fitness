@@ -21,6 +21,9 @@
 		border-radius: 0.5em;
 		cursor: pointer;
 	}
+	.bg-white{
+		background:#009825de !important;
+	}
 </style>
 <link rel="stylesheet" href="../clients/css/style.css">
 
@@ -41,7 +44,7 @@
 			</div>
 			@if($data['type_vip'] == 'TIEU_CHUAN')
 			<div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
-                <div class="pricing-horizontal-icon col-md-4 text-center bg-secondary text-info py-4">
+                <div class="pricing-horizontal-icon col-md-4 text-center  text-info py-4">
                     <i class="display-1 bx bx-package pt-4"></i>
                     <h5 class="h5 pb-4">Hội viên tiêu chuẩn</h5>
                 </div>
@@ -72,7 +75,7 @@
 								</div>
 								<div class="pricing-list-footer  text-center m-auto align-items-center">
 									<br>
-									<a href="register" class="btn rounded-pill px-4 btn-primary light-300" style="background:#387a00">ĐĂNG KÝ</a>
+									<a href="register" class="btn rounded-pill px-4 btn-primary light-300" style="background:#ffbf52">ĐĂNG KÝ</a>
 								</div>
 							</div>
 						</div>
@@ -104,7 +107,7 @@
 				@endif
 				@if($data['type_vip'] == 'VIP1')
 				<div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
-					<div class="pricing-horizontal-icon col-md-4 text-center bg-secondary text-light py-4">
+					<div class="pricing-horizontal-icon col-md-4 text-center  text-light py-4">
 						<i class="display-1 bx bx-package pt-4"></i>
 						<h5 class="h5 pb-4">Hội viên VIP 1 (Bạc)</h5>
 					</div>
@@ -114,9 +117,9 @@
 							<li><i class="bx bxs-circle me-2"></i>Phân tích đầu tư cơ bản</li>
 							<li><i class="bx bxs-circle me-2"></i>Tham gia Cộng đồng chia sẻ đầu tư FinTop</li>
 							<li><i class="bx bxs-circle me-2"></i>Tài liệu, cẩm nang hướng dẫn đầu tư</li>
-							<li><i class="bx bxs-circle me-2"></i>Tín hiệu mua FinTop</li>
-							<li><i class="bx bxs-circle me-2"></i>Phân tích đầu tư V.I.P</li>
-							<li><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
+							<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Tín hiệu mua FinTop</li>
+							<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Phân tích đầu tư V.I.P</li>
+							<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
 						</ul>
 					</div>
 				</div>
@@ -170,7 +173,7 @@
 					@endif
 					@if($data['type_vip'] == 'VIP2')
 					<div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
-						<div class="pricing-horizontal-icon col-md-4 text-center bg-secondary text-warning py-4">
+						<div class="pricing-horizontal-icon col-md-4 text-center  text-warning py-4">
 							<i class="display-1 bx bx-package pt-4"></i>
 							<h5 class="h5 pb-4">Hội viên VIP 2 (Vàng)</h5>
 						</div>
@@ -180,10 +183,10 @@
 								<li><i class="bx bxs-circle me-2"></i>Phân tích đầu tư cơ bản</li>
 								<li><i class="bx bxs-circle me-2"></i>Tham gia Cộng đồng chia sẻ đầu tư FinTop</li>
 								<li><i class="bx bxs-circle me-2"></i>Tài liệu, cẩm nang hướng dẫn đầu tư</li>
-								<li><i class="bx bxs-circle me-2"></i>Tín hiệu mua FinTop</li>
-								<li><i class="bx bxs-circle me-2"></i>Phân tích đầu tư V.I.P</li>
-								<li><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
-								<li><i class="bx bxs-circle me-2"></i>Khuyến nghị đầu tư V.I.P FinTop</li>
+								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Tín hiệu mua FinTop</li>
+								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Phân tích đầu tư V.I.P</li>
+								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
+								<li style="font-weight: 700;;color:#fff36b"><i class="bx bxs-circle me-2"></i>Khuyến nghị đầu tư V.I.P FinTop</li>
 							</ul>
 						</div>
 					</div>
@@ -237,7 +240,7 @@
 						@endif
 						@if($data['type_vip'] == 'KIM_CUONG')
 					<div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
-						<div class="pricing-horizontal-icon col-md-12 text-center bg-secondary text-warning py-4">
+						<div class="pricing-horizontal-icon col-md-12 text-center  text-warning py-4">
 							<!-- <i class="display-1 bx bx-package pt-4"></i> -->
 							<div class="py-3">
 							    <img   src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 95px;width: 95px;">
@@ -262,7 +265,7 @@
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
 											<br>
-											<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#387a00">LIÊN HỆ</a>
+											<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#ffb638">LIÊN HỆ</a>
 										</div>
 									</div>
 								</div>

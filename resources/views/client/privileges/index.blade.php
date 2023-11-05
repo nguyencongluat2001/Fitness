@@ -34,19 +34,19 @@
 
 
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
-                                    <i class="pricing-table-icon display-3 bx bx-package text-info py-3"></i>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên tiêu chuẩn</h2>
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
+                                    <i style="color:#a7f7ff" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN TIÊU CHUẨN</h2>
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-5 pb-2">
-                                        <a onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -54,19 +54,19 @@
 
 
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
-                                    <i class="pricing-table-icon display-3 bx bx-package text-light py-3"></i>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên VIP 1(Bạc)</h2>
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
+                                    <i style="color:#e1e1e1 !important"  class="pricing-table-icon display-3 bx bx-package py-3"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN BẠC</h2>
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-5 pb-2">
-                                        <a onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -74,42 +74,42 @@
 
 
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
-                                    <i class="pricing-table-icon display-3 bx bx-package text-warning py-3"></i>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên VIP 2 (Vàng)</h2>
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
+                                    <i style="color:#fff079 !important" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN VÀNG</h2>
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-5 pb-2">
-                                        <a onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
-                                    <!-- <i class="pricing-table-icon display-3 bx bx-package text-white py-3"></i> -->
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
+                                    <!-- <i class="pricing-table-icon display-3 bx bx-package  py-3"></i> -->
                                     <div class="py-3">
                                     <img   src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 65px;width: 65px;">
 
                                     </div>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên kim cương</h2>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN KIM CƯƠNG</h2>
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-5 pb-2">
-                                        <a onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -140,11 +140,11 @@
                                     <thead>
                                         <tr>
                                             <td align="center"><b>STT</b></td>
-                                            <td align="center"><b>Đặc quyền hội viên</b></td>
-                                            <td style="background:#1fff00" align="center"><b>Tiêu chuẩn</b></td>
-                                            <td style="background:#d1d1d1" align="center"><b>Bạc</b></td>
-                                            <td style="background:#ffd404" align="center"><b>Vàng</b></td>
-                                            <td style="background:black;color:white" align="center"><b>Kim cương</b></td>
+                                            <td align="center"><b>ĐẶC QUYỀN HỘI VIÊN</b></td>
+                                            <td style="background:#1fff00" align="center"><b>TIÊU CHUẨN</b></td>
+                                            <td style="background:#d1d1d1" align="center"><b>BẠC</b></td>
+                                            <td style="background:#ffd404" align="center"><b>VÀNG</b></td>
+                                            <td style="background:black;color:white" align="center"><b>KIM CƯƠNG</b></td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -183,43 +183,43 @@
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">5</td>
-                                                <td style="background:#5bc74d">Tín hiệu mua FinTop</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;">Tín hiệu mua FinTop</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">6</td>
-                                                <td style="background:#5bc74d">Phân tích đầu tư V.I.P</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;">Phân tích đầu tư V.I.P</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">7</td>
-                                                <td style="background:#5bc74d">Danh mục đầu tư V.I.P FinTop</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
-                                                <td style="background:#5bc74d"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;">Danh mục đầu tư V.I.P FinTop</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">8</td>
-                                                <td style="background:#39962e">Khuyến nghị đầu tư V.I.P FinTop</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="background:#39962e;color:#fffe0f"align="center">V</td>
-                                                <td style="background:#39962e;color:#fffe0f"align="center">V</td>
+                                                <td style="background:#39962e;color:#ffde3a;font-weight: 700;">Khuyến nghị đầu tư V.I.P FinTop</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center">V</td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">9</td>
-                                                <td style="background:#0c7600">Cố vấn 1-1 từ chuyên gia FinTop</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="color:red"align="center">X</td>
-                                                <td style="background:#0c7600;color:#fffe0f"align="center">V</td>
+                                                <td style="background:#0c7600;color:#ffde3a;font-weight: 700;">Cố vấn 1-1 từ chuyên gia FinTop</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <td style="background:#0c7600;color:#fffe0f;font-weight: 700;"align="center">V</td>
                                             </tr>
                                     </tbody>
                                 </table>

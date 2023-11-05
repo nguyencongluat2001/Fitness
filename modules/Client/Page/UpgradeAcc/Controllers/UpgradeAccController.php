@@ -122,13 +122,13 @@ class UpgradeAccController extends Controller
     public function viewInfo(Request $request)
     {
         $input = $request->all();
-        if(!Auth::check() && $input['vip'] != 'TIEU_CHUAN'){
-            $data=[
-                'status' => 2,
-                'message' => 'Vui lòng đăng nhập để nâng cấp tài khoản!',
-            ];
-            return response()->json($data);
-        }
+        // if(!Auth::check() && $input['vip'] != 'TIEU_CHUAN'){
+        //     $data=[
+        //         'status' => 2,
+        //         'message' => 'Vui lòng đăng nhập để nâng cấp tài khoản!',
+        //     ];
+        //     return response()->json($data);
+        // }
         if(!empty($_SESSION['id'])){
             $account = $this->userService->find($_SESSION['id']);
             $data['users'] = $account;
