@@ -367,6 +367,8 @@ Route::prefix('/client')->group(function () {
         // Nâng cấp tk 
         Route::get('/upgradeAcc/index', [UpgradeAccController::class, 'index']);
         Route::get('/upgradeAcc/viewForm', [UpgradeAccController::class, 'registerVip']);
+        Route::get('/upgradeAcc/viewInfo', [UpgradeAccController::class, 'viewInfo']);
+        Route::get('/upgradeAcc/viewFormContact', [UpgradeAccController::class, 'viewFormContact']);
         Route::post('/upgradeAcc/updateVip', [UpgradeAccController::class, 'updateVip']);
 
         // Đọc thông báo

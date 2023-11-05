@@ -39,7 +39,75 @@ JS_UpgradeAcc.prototype.viewForm = function (vip) {
     NclLib.loadding();
     // var data = 'id=' + id;
     var data = 'vip=' + vip;
-    console.log(vip)
+    $.ajax({
+        url: url,
+        type: "GET",
+        //cache: true,
+        data: data,
+        success: function (arrResult) {
+            if(arrResult.status == 2){
+                Swal.fire({
+                    position: 'top-start',
+                    // icon: 'warning',
+                    title: arrResult.message,
+                    showConfirmButton: false,
+                    timer: 3000
+                  })
+                return false;
+            }else{
+                $('#formmodal').html(arrResult);
+                $('#formmodal').modal('show');
+            }
+        }
+    });
+}
+/**
+ * Hàm hiển thị modal
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_UpgradeAcc.prototype.viewInfo = function (vip) {
+    var url = this.urlPath + '/viewInfo';
+    var myClass = this;
+    NclLib.loadding();
+    // var data = 'id=' + id;
+    var data = 'vip=' + vip;
+    $.ajax({
+        url: url,
+        type: "GET",
+        //cache: true,
+        data: data,
+        success: function (arrResult) {
+            if(arrResult.status == 2){
+                Swal.fire({
+                    position: 'top-start',
+                    // icon: 'warning',
+                    title: arrResult.message,
+                    showConfirmButton: false,
+                    timer: 3000
+                  })
+                return false;
+            }else{
+                $('#formmodal').html(arrResult);
+                $('#formmodal').modal('show');
+            }
+        }
+    });
+}
+/**
+ * Hàm hiển thị modal
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_UpgradeAcc.prototype.viewFormContact = function () {
+    var url = this.urlPath + '/viewFormContact';
+    var myClass = this;
+    NclLib.loadding();
+    var data = '';
     $.ajax({
         url: url,
         type: "GET",

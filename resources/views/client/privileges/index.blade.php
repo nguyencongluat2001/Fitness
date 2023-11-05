@@ -19,12 +19,113 @@
         <form action="" method="GET" id="frmLoadlist_signal">
             <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
             <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
+            <!-- Start pricing -->
+            <div class="home_index_child" style="background:#fffffff2  !important;">
+                <div class="container-lg py-5">
+                    <div class="col-md-12 m-auto text-center py-2">
+                        <h1 class="h5" style="color:#dc0000">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
+                        <p class="pricing-footer">
+                            Mang đến giá trị dịch vụ hoàn hảo nhất cho nhà đầu tư.
+                        </p>
+                    </div>
+
+
+                    <div class="row px-lg-3">
+
+
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
+                                    <i class="pricing-table-icon display-3 bx bx-package text-info py-3"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên tiêu chuẩn</h2>
+                                    <!-- <p>$120/Year</p>
+                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                    </ul> -->
+                                    <div class="pricing-table-footer pt-5 pb-2">
+                                        <a onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
+                                    <i class="pricing-table-icon display-3 bx bx-package text-light py-3"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên VIP 1(Bạc)</h2>
+                                    <!-- <p>$120/Year</p>
+                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                    </ul> -->
+                                    <div class="pricing-table-footer pt-5 pb-2">
+                                        <a onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
+                                    <i class="pricing-table-icon display-3 bx bx-package text-warning py-3"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên VIP 2 (Vàng)</h2>
+                                    <!-- <p>$120/Year</p>
+                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                    </ul> -->
+                                    <div class="pricing-table-footer pt-5 pb-2">
+                                        <a onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                            <div class="pricing-table card bg-secondary h-100 card-rounded shadow-sm border-0 py-5">
+                                <div class="pricing-table-body card-body text-center text-white align-self-center p-md-0">
+                                    <!-- <i class="pricing-table-icon display-3 bx bx-package text-white py-3"></i> -->
+                                    <div class="py-3">
+                                    <img   src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 65px;width: 65px;">
+
+                                    </div>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600">Hội viên kim cương</h2>
+                                    <!-- <p>$120/Year</p>
+                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>10 TB space</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Source Files</li>
+                                        <li class="text-white"><i class="bx bxs-circle me-2"></i>Live Chat</li>
+                                    </ul> -->
+                                    <div class="pricing-table-footer pt-5 pb-2">
+                                        <a onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Đăng ký</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- End Content -->
                 <!-- phần giới thiệu FIn top -->
                 <div class="home_index_child" style="background:#fffffff2  !important;">
                     <div class="col-lg-12" style="padding:10px;">
                         <div class="row d-flex align-items-center">
-                            <div class="col-lg-12 text-start">
-                                <h1 class="h5">I. ĐẶC QUYỀN</h1>
+                            <div class="col-lg-12 text-center">
+                                <h1 class="h5" style="color:#dc0000">ĐẶC QUYỀN</h1>
                             </div>
                             <div class="table-responsive pmd-card pmd-z-depth ">
                                 <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
@@ -127,7 +228,7 @@
                     </div>
                 </div>
                  <!-- team tư vấn đầu tư  -->
-                <div class="home_index_child" style="background:#fffffff2  !important;">
+                <!-- <div class="home_index_child" style="background:#fffffff2  !important;">
                     <div class="col-lg-12" style="padding:10px;">
                             <div class="col-lg-12 text-start">
                                 <h1 class="h5 ">II. CHÍNH SÁCH</h1>
@@ -190,12 +291,21 @@
                                 </table>
                             </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </form>
     </div>
 </section>
 <script src="../clients/js/jquery.min.js"></script>
+<div class="modal" id="formmodal" role="dialog"></div>
+<script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_UpgradeAcc.js') }}"></script>
+<script type="text/javascript">
+    var baseUrl = '{{ url('') }}';
+    var JS_UpgradeAcc = new JS_UpgradeAcc(baseUrl, 'client', 'upgradeAcc');
+    $(document).ready(function($) {
+        JS_UpgradeAcc.loadIndex(baseUrl);
+    })
+</script>
 
 <script>
         NclLib.menuActive('.link-privileges');

@@ -108,5 +108,44 @@ class UpgradeAccController extends Controller
         // dd($arrImage);
         return $arrImage;
     }
+
+
+
+
+
+    // 
+    /**
+     * Hiển thị màn hình nâng cấp
+     *
+     * @return view
+     */
+    public function viewInfo(Request $request)
+    {
+        $input = $request->all();
+        if(!Auth::check() && $input['vip'] != 'TIEU_CHUAN'){
+            $data=[
+                'status' => 2,
+                'message' => 'Vui lòng đăng nhập để nâng cấp tài khoản!',
+            ];
+            return response()->json($data);
+        }
+        if(!empty($_SESSION['id'])){
+            $account = $this->userService->find($_SESSION['id']);
+            $data['users'] = $account;
+        }
+        $data['time_register'] = date('d-m-Y');
+        $data['type_vip'] = $input['vip'];
+        return view('client.upgradeAcc.viewInfo',compact('data'));
+    }
+     // 
+    /**
+     * Hiển thị màn liên hệ
+     *
+     * @return view
+     */
+    public function viewFormContact(Request $request)
+    {
+        return view('client.upgradeAcc.viewFormContact');
+    }
    
 }
