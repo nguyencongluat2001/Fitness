@@ -67,10 +67,11 @@
 									<i class="display-3 bx bx-package"></i>
 								</div> -->
 								<div class="pricing-list-body col-md-12 align-items-center pl-3">
-									<ul class="list-unstyled text-center light-300">
+									<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+									    <br>
 										<li class="h5 semi-bold-600 mb-0">Bước 1</li>
 										<br>
-										<li>Đăng ký tài khoản hội viên FinTop.</li>
+										<li style="font-family: math;">Đăng ký tài khoản hội viên FinTop.</li>
 									</ul>
 								</div>
 								<div class="pricing-list-footer  text-center m-auto align-items-center">
@@ -89,10 +90,11 @@
 									<i class="display-3 bx bx-package"></i>
 								</div> -->
 								<div class="pricing-list-body col-md-12 align-items-center pl-3">
-									<ul class="list-unstyled text-center light-300">
+									<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+									    <br>
 										<li class="h5 semi-bold-600 mb-0">Bước 2</li>
 										<br>
-										<li>Đăng nhập và truy cập miễn phí</li>
+										<li style="font-family: math;">Đăng nhập và truy cập miễn phí</li>
 									</ul>
 								</div>
 								<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -133,13 +135,14 @@
 										<i class="display-3 bx bx-package"></i>
 									</div> -->
 									<div class="pricing-list-body col-md-12 align-items-center pl-3">
-										<ul class="list-unstyled text-center light-300">
+										<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+										    <br>
 											<li class="h5 semi-bold-600 mb-0">Phương thức 1</li>
 											<br>
-											<li>Đăng ký tham gia gói thành viên VIP1 sử dụng cho Hội viên Bạc FinTop.</li>
+											<li style="font-family: math;">Đăng ký tham gia gói thành viên VIP1 sử dụng cho Hội viên Bạc FinTop.</li>
 										</ul>
 									</div>
-									<div class="pricing-list-footer text-center m-auto align-items-center">
+									<div class="pricing-list-footer text-center m-auto align-items-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
 										<br>
 										<a onclick="JS_UpgradeAcc.viewForm('VIP1')" class="btn rounded-pill px-4 btn-primary light-300" style="background:#387a00">ĐĂNG KÝ</a>
 									</div>
@@ -155,10 +158,11 @@
 										<i class="display-3 bx bx-package"></i>
 									</div> -->
 									<div class="pricing-list-body col-md-12 align-items-center pl-3">
-										<ul class="list-unstyled text-center light-300">
-											<li class="h5 semi-bold-600 mb-0">Phương thức 2</li>
+										<ul class="list-unstyled text-center light-300" style="background: #fcff69;border-radius: 0.5em;">
+										    <br>
+										    <li class="h5 semi-bold-600 mb-0">Phương thức 2</li>
 											<br>
-											<li>Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
+											<li style="font-family: math;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
 										</ul>
 									</div>
 									<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -200,10 +204,11 @@
 											<i class="display-3 bx bx-package"></i>
 										</div> -->
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
-											<ul class="list-unstyled text-center light-300">
+											<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+											    <br>
 												<li class="h5 semi-bold-600 mb-0">Phương thức 1</li>
 												<br>
-												<li>Đăng ký tham gia gói thành viên VIP2 sử dụng cho Hội viên Vàng FinTop.</li>
+												<li style="font-family: math;">Đăng ký tham gia gói thành viên VIP2 sử dụng cho Hội viên Vàng FinTop.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -222,10 +227,11 @@
 											<i class="display-3 bx bx-package"></i>
 										</div> -->
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
-											<ul class="list-unstyled text-center light-300">
+											<ul class="list-unstyled text-center light-300" style="background: #fcff69;border-radius: 0.5em;">
+											    <br>
 												<li class="h5 semi-bold-600 mb-0">Phương thức 2</li>
 												<br>
-												<li>Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
+												<li style="font-family: math;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -260,7 +266,7 @@
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
 											<ul class="list-unstyled text-center light-300">
 												<br>
-												<li>Gói hỗ trợ VIP PRO đặc biệt dành riêng cho khách hàng đối tác FinTop.Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
+												<li style="font-family: math;">Gói hỗ trợ VIP PRO đặc biệt dành riêng cho khách hàng đối tác FinTop.Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">

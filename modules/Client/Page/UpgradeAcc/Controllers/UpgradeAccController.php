@@ -53,7 +53,11 @@ class UpgradeAccController extends Controller
                 'status' => 2,
                 'message' => 'Vui lòng đăng nhập để nâng cấp tài khoản!',
             ];
-            return response()->json($data);
+            // return response()->json($data);
+        }
+         if(!empty($_SESSION['id'])){
+            $account = $this->userService->find($_SESSION['id']);
+            $data['users'] = $account;
         }
         $account = $this->userService->find($_SESSION['id']);
         $data['users'] = $account;

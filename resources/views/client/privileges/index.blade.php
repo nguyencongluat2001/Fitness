@@ -20,11 +20,11 @@
             <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
             <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
             <!-- Start pricing -->
-            <div class="home_index_child" style="background:#fffffff2  !important;">
+            <div class="home_index_child" style="background:#700e13  !important;">
                 <div class="container-lg py-5">
                     <div class="col-md-12 m-auto text-center py-2">
-                        <h1 class="h5" style="color:#dc0000">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
-                        <p class="pricing-footer">
+                        <h1 class="h5" style="color:#fff079">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
+                        <p class="pricing-footer" style="color:#ffffff">
                             Mang đến giá trị dịch vụ hoàn hảo nhất cho nhà đầu tư.
                         </p>
                     </div>
@@ -34,10 +34,13 @@
 
 
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
-                                    <i style="color:#a7f7ff" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN TIÊU CHUẨN</h2>
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                                <div class="pricing-table-body card-body text-center">
+                                    <div class="bg-secondary" style="border-radius: 0.5em;">
+                                        <i style="color:#7ff3ff" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> TIÊU CHUẨN</h2>
+                                        <br>
+                                    </div>
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
                                         <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
@@ -45,19 +48,21 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
-                                    <div class="pricing-table-footer pt-5 pb-2">
-                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                    <div class="pricing-table-footer pt-2">
+                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
-                                    <i style="color:#e1e1e1 !important"  class="pricing-table-icon display-3 bx bx-package py-3"></i>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN BẠC</h2>
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                                <div class="pricing-table-body card-body text-center">
+                                    <div class="bg-secondary" style="border-radius: 0.5em;">
+                                        <i style="color:#f2f2f2 !important"  class="pricing-table-icon display-3 bx bx-package py-3"></i>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> BẠC</h2>
+                                        <br>
+                                    </div>
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
                                         <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
@@ -65,8 +70,8 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
-                                    <div class="pricing-table-footer pt-5 pb-2">
-                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                    <div class="pricing-table-footer pt-2">
+                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -74,10 +79,13 @@
 
 
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
-                                    <i style="color:#fff079 !important" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN VÀNG</h2>
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                                <div class="pricing-table-body card-body text-center">
+                                     <div class="bg-secondary" style="border-radius: 0.5em;">
+                                        <i style="color:#ffbb2e !important" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> VÀNG</h2>
+                                        <br>
+                                    </div>
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
                                         <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
@@ -85,22 +93,26 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
-                                    <div class="pricing-table-footer pt-5 pb-2">
-                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                    <div class="pricing-table-footer pt-2">
+                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
-                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0 py-5">
-                                <div class="pricing-table-body card-body text-center  align-self-center p-md-0">
+                            <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                                <div class="pricing-table-body card-body text-center">
                                     <!-- <i class="pricing-table-icon display-3 bx bx-package  py-3"></i> -->
-                                    <div class="py-3">
-                                    <img   src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 65px;width: 65px;">
+                                    <div class="bg-secondary" style="border-radius: 0.5em;">
+                                        <div class="py-3">
+                                        <img   src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 65px;width: 65px;">
 
+                                        </div>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> KIM CƯƠNG</h2>
+                                        <br>
                                     </div>
-                                    <h2 class="pricing-table-heading h5 semi-bold-600">HỘI VIÊN KIM CƯƠNG</h2>
+                                    
                                     <!-- <p>$120/Year</p>
                                     <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
                                         <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
@@ -108,8 +120,8 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
-                                    <div class="pricing-table-footer pt-5 pb-2">
-                                        <a style="background: #009e0b;" onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                    <div class="pricing-table-footer pt-2">
+                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -121,13 +133,14 @@
             </div>
             <!-- End Content -->
                 <!-- phần giới thiệu FIn top -->
-                <div class="home_index_child" style="background:#fffffff2  !important;">
+                <div class="home_index_child" style="background:#700e13 !important;">
                     <div class="col-lg-12" style="padding:10px;">
                         <div class="row d-flex align-items-center">
                             <div class="col-lg-12 text-center">
-                                <h1 class="h5" style="color:#dc0000">ĐẶC QUYỀN</h1>
+                                <h1 class="h5" style="color:#fff079">ĐẶC QUYỀN HỘI VIÊN</h1>
                             </div>
-                            <div class="table-responsive pmd-card pmd-z-depth ">
+                          
+                            <div class="table-responsive pmd-card pmd-z-depth " >
                                 <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
                                 <colgroup>
                                     <col width="5%">
@@ -138,7 +151,7 @@
                                     <col width="15%">
                                 </colgroup>
                                     <thead>
-                                        <tr>
+                                        <tr style="background: white;">
                                             <td align="center"><b>STT</b></td>
                                             <td align="center"><b>ĐẶC QUYỀN HỘI VIÊN</b></td>
                                             <td style="background:#1fff00" align="center"><b>TIÊU CHUẨN</b></td>
@@ -147,7 +160,7 @@
                                             <td style="background:black;color:white" align="center"><b>KIM CƯƠNG</b></td>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody style="background:#ffffff !important;">
                                         
                                             <tr>
                                                 <td style=""align="center">1</td>

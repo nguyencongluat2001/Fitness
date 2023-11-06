@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Muli-Regular";
   src: url("../fonts/muli/Muli-Regular.ttf"); }
 @font-face {
@@ -6,7 +6,7 @@
   src: url("../fonts/muli/Muli-SemiBold.ttf"); }
 @font-face {
   font-family: "Muli-Bold";
-  src: url("../fonts/muli/Muli-Bold.ttf"); }
+  src: url("../fonts/muli/Muli-Bold.ttf"); } */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

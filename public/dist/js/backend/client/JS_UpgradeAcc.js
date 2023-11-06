@@ -46,14 +46,16 @@ JS_UpgradeAcc.prototype.viewForm = function (vip) {
         data: data,
         success: function (arrResult) {
             if(arrResult.status == 2){
-                Swal.fire({
-                    position: 'top-start',
-                    // icon: 'warning',
-                    title: arrResult.message,
-                    showConfirmButton: false,
-                    timer: 3000
-                  })
-                return false;
+                // Swal.fire({
+                //     position: 'top-start',
+                //     // icon: 'warning',
+                //     title: arrResult.message,
+                //     showConfirmButton: false,
+                //     timer: 3000
+                //   })
+                // return false;
+                $('#formmodal').html(arrResult);
+                $('#formmodal').modal('show');
             }else{
                 $('#formmodal').html(arrResult);
                 $('#formmodal').modal('show');
@@ -216,4 +218,20 @@ JS_UpgradeAcc.prototype.getTypeBank = function (type) {
         $('#momo').addClass("show");
     }
     this.type_bank = type;
+}
+JS_UpgradeAcc.prototype.checkLogin = function(){
+    Swal.fire({
+        title: 'Đăng nhập để tra cứu miễn phí!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng nhập",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/login');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
 }
