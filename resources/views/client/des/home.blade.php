@@ -112,7 +112,7 @@
         <div class="card" style="background-color: #b56c6cb5;">
             <div class="row">
                 <div class="col-md-8">
-                    <div class="tab1">{!! $readerFirst ?? '' !!}</div>
+                    <div class="tab1" style="background: white">{!! $readerFirst ?? '' !!}</div>
                 </div>
                 <div class="col-md-4">
                     <div class="container pt-3 ps-0">
