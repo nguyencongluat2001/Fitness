@@ -15,18 +15,55 @@ if(isset($_SESSION['id'])){
         -moz-transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
         animation: road-animates 1s linear infinite;
-        -webkit-animation: swing 1s linear infinite;
+        -webkit-animation: swing 0.2s linear infinite;
         -moz-animation: swing 1s linear infinite;
         -o-animation: swing 1s linear infinite;
         transform-origin: center top;
         -moz-transform-origin: center top;
         -webkit-transform-origin: center top;
     }
-    #alertNotifi{
+    #notification{
         position: fixed;
-        bottom: 30px;
-        right: 80px;
-        width: 190px;
+        bottom: 50px;
+        right: 90px;
+        /* width: 190px; */
+    }
+    .bubble {
+        color: #fff;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        line-height: 1.4em;
+        /* margin: 40px auto; */
+        background-color: #b5ad3c;
+        border: 1px solid #b5ad3c;
+        border-radius: 30px 30px 0;
+        font-family: sans-serif;
+        padding: 5px 10px;
+        font-size: large;
+    }
+    .bubble:before,
+    .bubble:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+    }
+    .speech:before {
+        right: -7px;
+        bottom: -25px;
+        border: 16px solid #b5ad3c;
+        /* border-color: #333 transparent transparent #333; */
+        border-left: 30px solid transparent;
+        border-right: 0px solid transparent;
+        border-bottom: 10px solid transparent;
+        transform: skew(25deg);
+    }
+    .speech:after {
+        /* left: 38px;
+        bottom: -30px;
+        border: 15px solid;
+        border-color: #fff transparent transparent #fff; */
     }
 
     @-webkit-keyframes swing {
@@ -78,14 +115,6 @@ if(isset($_SESSION['id'])){
     <div id="form_chat">
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
         <span align="right">
-            <div class="input-group-btn" onclick="JS_Recommendations.openPhone()">
-                    <img width="" height="60px" style="background-color: none;"
-                    src="../clients/img/phone.png" alt="">
-                </label>
-            </div>
-        </span>
-        <br>
-        <span align="right">
             <div class="input-group-btn">
                     <img width="" height="60px" style="background-color: none"
                     src="../clients/img/zalo.png" alt="">
@@ -101,6 +130,14 @@ if(isset($_SESSION['id'])){
             </div>
         </span>
         <br>
+        <span align="right">
+            <div class="input-group-btn" onclick="JS_Recommendations.openPhone()">
+                    <img width="" height="60px" style="background-color: none;"
+                    src="../clients/img/phone.png" alt="">
+                </label>
+            </div>
+        </span>
+        <br>
         <span align="right" class="form-group input-group" style="align-items: center;">
             <div class="input-group-btn" onclick="readNotification()">
                 <label class="icon" for="checkbox1" style="border-radius:50px;background:#25aa33e8;">
@@ -112,7 +149,7 @@ if(isset($_SESSION['id'])){
             </div> -->
         </span>
         
-        <section class="avenue-messenger " id="pDetails">
+        <section class="avenue-messenger " id="pDetails" hidden>
             <div class="menu">
                 <div class="button" style="padding-right: 15px;padding-top: 5px;">
                     <div>
@@ -146,8 +183,10 @@ if(isset($_SESSION['id'])){
     </div>
         
         @if(isset($notification))
-        <div id="alertNotifi" class="form-control alertNotifi" @if(count($notification) <= 0) hidden @endif>
-            <span>Bạn có {{count($notification)}} thông báo mới</span>
+        <div id="notification" class="notification" @if(count($notification) <= 0) hidden @endif>
+            <div class="bubble speech">
+                <span><strong><i>Bạn có {{count($notification)}} thông báo mới</i></strong></span>
+            </div>
         </div>
         @endif
 </form>
