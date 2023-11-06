@@ -115,14 +115,6 @@ if(isset($_SESSION['id'])){
     <div id="form_chat">
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
         <span align="right">
-            <div class="input-group-btn" onclick="JS_Recommendations.openPhone()">
-                    <img width="" height="60px" style="background-color: none;"
-                    src="../clients/img/phone.png" alt="">
-                </label>
-            </div>
-        </span>
-        <br>
-        <span align="right">
             <div class="input-group-btn">
                     <img width="" height="60px" style="background-color: none"
                     src="../clients/img/zalo.png" alt="">
@@ -134,6 +126,14 @@ if(isset($_SESSION['id'])){
             <div class="input-group-btn" onclick="JS_Recommendations.openMessage()">
                     <img width="" height="60px" style="background-color: none;"
                     src="../clients/img/icon_messager.jpg" alt="">
+                </label>
+            </div>
+        </span>
+        <br>
+        <span align="right">
+            <div class="input-group-btn" onclick="JS_Recommendations.openPhone()">
+                    <img width="" height="60px" style="background-color: none;"
+                    src="../clients/img/phone.png" alt="">
                 </label>
             </div>
         </span>
