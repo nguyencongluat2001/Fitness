@@ -513,6 +513,7 @@
                     $("#alertNotifi").html('');
                     $("#alertNotifi").removeAttr('class');
                     $("#icon-bell").removeClass('animate');
+                    window.location.href = baseUrl + '/client/datafinancial/recommendationsIndex';
                 }
             });
         }
