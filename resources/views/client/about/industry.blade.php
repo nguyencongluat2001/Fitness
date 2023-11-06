@@ -105,7 +105,7 @@
     </div>
   </section>
   <!-- tra cứu cổ phiếu -->
-  <section class="container" style="background:#ffffff8a">
+  <section class="container" style="background:#b56c6cb5">
     <div class="pt-3 pb-3 d-lg-flex gx-5">
       <!-- <div class="col-lg-4">
 

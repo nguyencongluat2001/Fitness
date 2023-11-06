@@ -22,7 +22,8 @@
 		cursor: pointer;
 	}
 	.bg-white{
-		background:#009825de !important;
+		width: 94%;
+		background:#001f39 !important;
 	}
 </style>
 <link rel="stylesheet" href="../clients/css/style.css">
@@ -31,34 +32,36 @@
 	@csrf
 	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 	<input type="hidden" name="id" id="id" value="{{!empty($data['users']->id)?$data['users']->id:''}}">
-	<div class="modal-dialog modal-lg">
-		<div class="modal-content card">
-			<div class="modal-header">
-					<h5  style="width: 90%;" class="modal-title">Nâng cấp tài khoản</h5>
+	<div class="modal-dialog modal-lg" >
+		<div class="modal-content card" style="background:#5b1313db">
+			<div class="modal-header" style="background:#680000">
+					<!-- <h5  style="width: 90%;" class="modal-title"></h5> -->
+					<div class="col-md-11 m-auto text-center py-2">
+						<h1 class="h4" style="color:#ffc314">ĐẶC QUYỀN HỘI VIÊN</h1>
+					</div>
 				<button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;width: 5%;">
-					X
+				   <i class="fas fa-undo-alt"></i>
 				</button>
 			</div>
-			<div class="col-md-12 m-auto text-center py-2">
-			    <h1 class="h5" style="color:#dc0000">ĐẶC QUYỀN HỘI VIÊN</h1>
-			</div>
+			<br>
 			@if($data['type_vip'] == 'TIEU_CHUAN')
-			<div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
-                <div class="pricing-horizontal-icon col-md-4 text-center  text-info py-4">
-                    <i class="display-1 bx bx-package pt-4"></i>
-                    <h5 class="h5 pb-4">Hội viên tiêu chuẩn</h5>
-                </div>
-                <div class="pricing-horizontal-body col-md-8 text-light col-lg-7 d-flex align-items-center pt-4 pb-4">
-                    <ul class="text-left list-unstyled mb-0">
-						<li><i class="bx bxs-circle me-2"></i>Tra cứu cổ phiếu</li>
-						<li><i class="bx bxs-circle me-2"></i>Phân tích đầu tư cơ bản</li>
-						<li><i class="bx bxs-circle me-2"></i>Tham gia Cộng đồng chia sẻ đầu tư FinTop</li>
-						<li><i class="bx bxs-circle me-2"></i>Tài liệu, cẩm nang hướng dẫn đầu tư</li>
-                    </ul>
-                </div>
-            </div>
+			
 			<div class="card-body">
 				<div class="row">
+					<div class="pricing-horizontal row col-12 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+						<div class="pricing-horizontal-icon col-md-4 text-center  text-info py-4">
+							<i class="display-1 bx bx-package pt-4"></i>
+							<h5 class="h5 pb-4">Hội viên tiêu chuẩn</h5>
+						</div>
+						<div class="pricing-horizontal-body col-md-8 text-light col-lg-7 d-flex align-items-center pt-4 pb-4">
+							<ul class="text-left list-unstyled mb-0">
+								<li><i class="bx bxs-circle me-2"></i>Tra cứu cổ phiếu</li>
+								<li><i class="bx bxs-circle me-2"></i>Phân tích đầu tư cơ bản</li>
+								<li><i class="bx bxs-circle me-2"></i>Tham gia Cộng đồng chia sẻ đầu tư FinTop</li>
+								<li><i class="bx bxs-circle me-2"></i>Tài liệu, cẩm nang hướng dẫn đầu tư</li>
+							</ul>
+						</div>
+					</div>
 				    <div class="col-md-6">
 						<!-- Start Pricing List -->
 						<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
@@ -67,16 +70,16 @@
 									<i class="display-3 bx bx-package"></i>
 								</div> -->
 								<div class="pricing-list-body col-md-12 align-items-center pl-3">
-									<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+									<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 									    <br>
 										<li class="h5 semi-bold-600 mb-0">Bước 1</li>
 										<br>
-										<li style="font-family: math;">Đăng ký tài khoản hội viên FinTop.</li>
+										<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng ký tài khoản hội viên FinTop.</li>
 									</ul>
 								</div>
 								<div class="pricing-list-footer  text-center m-auto align-items-center">
 									<br>
-									<a href="register" class="btn rounded-pill px-4 btn-primary light-300" style="background:#ffbf52">ĐĂNG KÝ</a>
+									<a href="register" class="btn rounded-pill px-4 btn-primary light-300" style="background:#165c38">ĐĂNG KÝ</a>
 								</div>
 							</div>
 						</div>
@@ -90,16 +93,16 @@
 									<i class="display-3 bx bx-package"></i>
 								</div> -->
 								<div class="pricing-list-body col-md-12 align-items-center pl-3">
-									<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+									<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 									    <br>
 										<li class="h5 semi-bold-600 mb-0">Bước 2</li>
 										<br>
-										<li style="font-family: math;">Đăng nhập và truy cập miễn phí</li>
+										<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng nhập và truy cập miễn phí</li>
 									</ul>
 								</div>
 								<div class="pricing-list-footer text-center m-auto align-items-center">
 									<br>
-									<a href="login" class="btn rounded-pill px-4 btn-primary light-300" style="background:#387a00">ĐĂNG NHẬP</a>
+									<a href="login" class="btn rounded-pill px-4 btn-primary light-300" style="background:#165c38">ĐĂNG NHẬP</a>
 								</div>
 							</div>
 						</div>
@@ -108,7 +111,7 @@
                 </div>
 				@endif
 				@if($data['type_vip'] == 'VIP1')
-				<div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden bg-white">
+				<div class="pricing-horizontal row col-12 m-auto d-flex shadow-sm rounded overflow-hidden bg-white" style="backgrouind:#001f39!important">
 					<div class="pricing-horizontal-icon col-md-4 text-center  text-light py-4">
 						<i class="display-1 bx bx-package pt-4"></i>
 						<h5 class="h5 pb-4">Hội viên VIP 1 (Bạc)</h5>
@@ -135,16 +138,16 @@
 										<i class="display-3 bx bx-package"></i>
 									</div> -->
 									<div class="pricing-list-body col-md-12 align-items-center pl-3">
-										<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+										<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 										    <br>
 											<li class="h5 semi-bold-600 mb-0">Phương thức 1</li>
 											<br>
-											<li style="font-family: math;">Đăng ký tham gia gói thành viên VIP1 sử dụng cho Hội viên Bạc FinTop.</li>
+											<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng ký tham gia gói thành viên VIP1 sử dụng cho Hội viên Bạc FinTop.</li>
 										</ul>
 									</div>
 									<div class="pricing-list-footer text-center m-auto align-items-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
 										<br>
-										<a onclick="JS_UpgradeAcc.viewForm('VIP1')" class="btn rounded-pill px-4 btn-primary light-300" style="background:#387a00">ĐĂNG KÝ</a>
+										<a onclick="JS_UpgradeAcc.viewForm('VIP1')" class="btn rounded-pill px-4 btn-primary light-300" style="background:#165c38">ĐĂNG KÝ</a>
 									</div>
 								</div>
 							</div>
@@ -158,16 +161,16 @@
 										<i class="display-3 bx bx-package"></i>
 									</div> -->
 									<div class="pricing-list-body col-md-12 align-items-center pl-3">
-										<ul class="list-unstyled text-center light-300" style="background: #fcff69;border-radius: 0.5em;">
+										<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 										    <br>
 										    <li class="h5 semi-bold-600 mb-0">Phương thức 2</li>
 											<br>
-											<li style="font-family: math;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
+											<li style="font-family: math;    padding: 0 25px 25px 25px;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
 										</ul>
 									</div>
 									<div class="pricing-list-footer text-center m-auto align-items-center">
 										<br>
-										<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#ffb638">LIÊN HỆ</a>
+										<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#dc3545">LIÊN HỆ</a>
 									</div>
 								</div>
 							</div>
@@ -204,16 +207,16 @@
 											<i class="display-3 bx bx-package"></i>
 										</div> -->
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
-											<ul class="list-unstyled text-center light-300" style="background: #41ff78;border-radius: 0.5em;">
+											<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 											    <br>
 												<li class="h5 semi-bold-600 mb-0">Phương thức 1</li>
 												<br>
-												<li style="font-family: math;">Đăng ký tham gia gói thành viên VIP2 sử dụng cho Hội viên Vàng FinTop.</li>
+												<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng ký tham gia gói thành viên VIP2 sử dụng cho Hội viên Vàng FinTop.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
 											<br>
-											<a  onclick="JS_UpgradeAcc.viewForm('VIP2')" class="btn rounded-pill px-4 btn-primary light-300" style="background:#387a00">ĐĂNG KÝ</a>
+											<a  onclick="JS_UpgradeAcc.viewForm('VIP2')" class="btn rounded-pill px-4 btn-primary light-300" style="background:#165c38">ĐĂNG KÝ</a>
 										</div>
 									</div>
 								</div>
@@ -227,16 +230,16 @@
 											<i class="display-3 bx bx-package"></i>
 										</div> -->
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
-											<ul class="list-unstyled text-center light-300" style="background: #fcff69;border-radius: 0.5em;">
+											<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 											    <br>
 												<li class="h5 semi-bold-600 mb-0">Phương thức 2</li>
 												<br>
-												<li style="font-family: math;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
+												<li style="font-family: math;    padding: 0 25px 25px 25px;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
 											<br>
-											<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#ffb638">LIÊN HỆ</a>
+											<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#dc3545">LIÊN HỆ</a>
 										</div>
 									</div>
 								</div>
@@ -264,14 +267,14 @@
 											<i class="display-3 bx bx-package"></i>
 										</div> -->
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
-											<ul class="list-unstyled text-center light-300">
+											<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 												<br>
-												<li style="font-family: math;">Gói hỗ trợ VIP PRO đặc biệt dành riêng cho khách hàng đối tác FinTop.Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
+												<li style="font-family: math;    padding: 0 25px 25px 25px;">Gói hỗ trợ VIP PRO đặc biệt dành riêng cho khách hàng đối tác FinTop.Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
 											<br>
-											<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#ffb638">LIÊN HỆ</a>
+											<a onclick="JS_UpgradeAcc.viewFormContact()" class="btn rounded-pill px-4 btn-primary light-300" style="background:#dc3545">LIÊN HỆ</a>
 										</div>
 									</div>
 								</div>
@@ -282,7 +285,7 @@
 			    </div>
 			<div class="modal-footer">
 				<div class="rounded-pillpricing-table-footer pt-5 pb-2">
-					<button type="button" data-bs-dismiss="modal" style="background: #97a7a4;">Đóng</button>
+					<button type="button" data-bs-dismiss="modal" style="background: aliceblue; color: #b20000;">Đóng</button>
 				</div>
 			</div>
 		</div>

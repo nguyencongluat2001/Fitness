@@ -7,7 +7,7 @@
     <div class="col-lg-12">
         <form action="" method="GET" id="frmLoadlist_recommendations">
             <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
-            <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
+            <div class="home_index_vnindex pt-1 pb-3" style="background:#b56c6cb5 !important;border-radius:0px !important">
                 <!-- Chú giải xếp hạng TA/FA -->
                 <div class="home_index_child" style="background:#ffffffe6 !important;display:block;">
                     <div class="col-lg-12" style="padding:10px;">

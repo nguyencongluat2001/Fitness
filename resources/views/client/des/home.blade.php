@@ -109,7 +109,7 @@
 </style>
 <div class="banner-wrapper">
     <section class="container">
-        <div class="card" style="background-color: #ffffffd6;">
+        <div class="card" style="background-color: #b56c6cb5;">
             <div class="row">
                 <div class="col-md-8">
                     <div class="tab1">{!! $readerFirst ?? '' !!}</div>

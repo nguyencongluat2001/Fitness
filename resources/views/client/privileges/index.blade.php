@@ -25,7 +25,7 @@
                     <div class="col-md-12 m-auto text-center py-2">
                         <h1 class="h5" style="color:#fff079">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
                         <p class="pricing-footer" style="color:#ffffff">
-                            Mang đến giá trị dịch vụ hoàn hảo nhất cho nhà đầu tư.
+                        "FinTop, kiến tạo danh mục đầu tư bền vững".
                         </p>
                     </div>
 
@@ -49,7 +49,7 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-2">
-                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                        <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -71,7 +71,7 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-2">
-                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                        <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-2">
-                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                        <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -121,7 +121,7 @@
                                         <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
                                     </ul> -->
                                     <div class="pricing-table-footer pt-2">
-                                        <a style="background: #165c38;color: #f9ec81;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                        <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@
                                         <tr style="background: white;">
                                             <td align="center"><b>STT</b></td>
                                             <td align="center"><b>ĐẶC QUYỀN HỘI VIÊN</b></td>
-                                            <td style="background:#1fff00" align="center"><b>TIÊU CHUẨN</b></td>
+                                            <td style="background:#44c333" align="center"><b>TIÊU CHUẨN</b></td>
                                             <td style="background:#d1d1d1" align="center"><b>BẠC</b></td>
                                             <td style="background:#ffd404" align="center"><b>VÀNG</b></td>
                                             <td style="background:black;color:white" align="center"><b>KIM CƯƠNG</b></td>
@@ -165,74 +165,74 @@
                                             <tr>
                                                 <td style=""align="center">1</td>
                                                 <td style="">Tra cứu cổ phiếu</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">2</td>
                                                 <td style="">Phân tích đầu tư cơ bản</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">3</td>
                                                 <td style="">Tham gia Cộng đồng chia sẻ đầu tư FinTop</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">4</td>
                                                 <td style="">Tài liệu, cẩm nang hướng dẫn đầu tư</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
-                                                <td style="background:#bbf4b3"align="center">V</td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">5</td>
-                                                <td style="background:#5bc74d;font-weight: 700;">Tín hiệu mua FinTop</td>
+                                                <td style="font-weight: 700;">Tín hiệu mua FinTop</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">6</td>
-                                                <td style="background:#5bc74d;font-weight: 700;">Phân tích đầu tư V.I.P</td>
+                                                <td style="font-weight: 700;">Phân tích đầu tư V.I.P</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">7</td>
-                                                <td style="background:#5bc74d;font-weight: 700;">Danh mục đầu tư V.I.P FinTop</td>
+                                                <td style="font-weight: 700;">Danh mục đầu tư V.I.P FinTop</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">8</td>
-                                                <td style="background:#39962e;color:#ffde3a;font-weight: 700;">Khuyến nghị đầu tư V.I.P FinTop</td>
+                                                <td style="color:#ffde3a;font-weight: 700;">Khuyến nghị đầu tư V.I.P FinTop</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
-                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center">V</td>
-                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">9</td>
-                                                <td style="background:#0c7600;color:#ffde3a;font-weight: 700;">Cố vấn 1-1 từ chuyên gia FinTop</td>
+                                                <td style="color:#ffde3a;font-weight: 700;">Cố vấn 1-1 từ chuyên gia FinTop</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
-                                                <td style="background:#0c7600;color:#fffe0f;font-weight: 700;"align="center">V</td>
+                                                <td style="background:#0c7600;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                     </tbody>
                                 </table>
