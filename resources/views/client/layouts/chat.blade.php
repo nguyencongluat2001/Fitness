@@ -22,6 +22,12 @@ if(isset($_SESSION['id'])){
         -moz-transform-origin: center top;
         -webkit-transform-origin: center top;
     }
+    #alertNotifi{
+        position: fixed;
+        bottom: 30px;
+        right: 80px;
+        width: 190px;
+    }
 
     @-webkit-keyframes swing {
         0% {
@@ -71,7 +77,7 @@ if(isset($_SESSION['id'])){
 <form action="" method="POST" id="frmLoadlist_box">
     <div id="form_chat">
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
-        <span>
+        <span align="right">
             <div class="input-group-btn" onclick="JS_Recommendations.openPhone()">
                     <img width="" height="60px" style="background-color: none;"
                     src="../clients/img/phone.png" alt="">
@@ -79,7 +85,7 @@ if(isset($_SESSION['id'])){
             </div>
         </span>
         <br>
-        <span>
+        <span align="right">
             <div class="input-group-btn">
                     <img width="" height="60px" style="background-color: none"
                     src="../clients/img/zalo.png" alt="">
@@ -87,7 +93,7 @@ if(isset($_SESSION['id'])){
             </div>
         </span>
         <br>
-        <span>
+        <span align="right">
             <div class="input-group-btn" onclick="JS_Recommendations.openMessage()">
                     <img width="" height="60px" style="background-color: none;"
                     src="../clients/img/icon_messager.jpg" alt="">
@@ -95,12 +101,7 @@ if(isset($_SESSION['id'])){
             </div>
         </span>
         <br>
-        <span class="form-group input-group" style="align-items: center;">
-            @if(isset($notification))
-            <div id="alertNotifi" class="form-control alertNotifi" @if(count($notification) <= 0) hidden @endif>
-                <span>Bạn có {{count($notification)}} thông báo mới</span>
-            </div>
-            @endif
+        <span align="right" class="form-group input-group" style="align-items: center;">
             <div class="input-group-btn" onclick="readNotification()">
                 <label class="icon" for="checkbox1" style="border-radius:50px;background:#25aa33e8;">
                     <i style="color:#ffd00f;padding:13px" id="icon-bell" class="far fa-bell fa-3x py-2 @if(isset($notification) && count($notification) > 0) animate @endif "></i>
@@ -143,6 +144,12 @@ if(isset($_SESSION['id'])){
             </div>
         </section>
     </div>
+        
+        @if(isset($notification))
+        <div id="alertNotifi" class="form-control alertNotifi" @if(count($notification) <= 0) hidden @endif>
+            <span>Bạn có {{count($notification)}} thông báo mới</span>
+        </div>
+        @endif
 </form>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\DataFinancial\JS_Recommendations.js') }}"></script>
 <script>
