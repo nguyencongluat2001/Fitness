@@ -712,8 +712,8 @@ a{
     -moz-border-radius: 20px;
     border-radius: 20px;
     height: calc(100% - 60px) !important;
-    max-height: 200px !important;
-    min-height: 120px !important;
+    max-height: 70px !important;
+    min-height: 60px !important;
     width: 320px;
     /*  transform: translateY(0);
       -webkit-transform: translateY(0);
@@ -1016,7 +1016,7 @@ screen and (max-width: 450px) {
 
 .testsss {
     height: 100%;
-    background: whitesmoke;
+    /* background: whitesmoke; */
     overflow: scroll;
     width: 100%;
     max-width: 600px;
@@ -1026,7 +1026,7 @@ screen and (max-width: 450px) {
 
 .container-message {
     border: 2px solid #dedede;
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     color: #4A90E2;
     border-radius: 5px;
     padding: 2px;

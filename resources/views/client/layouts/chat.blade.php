@@ -134,9 +134,9 @@ if(isset($_SESSION['id'])){
                 </div> -->
             </div>
             <div class="chat">
-                <div class="chat-title">
+                <!-- <div class="chat-title">
                     <span style="color: #ffd2c4;font-size: 17px;letter-spacing: 1px;font-family: Trocchi, serif;">Khuyến nghị VIP</span>
-                </div>
+                </div> -->
                 <!-- Màn hình danh sách -->
                 <div class="table-responsive">
                     <div id="table-container-box"></div>
