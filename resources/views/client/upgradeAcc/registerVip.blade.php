@@ -38,6 +38,48 @@
 			</div>
 			<div class="card-body">
 				<div class="row">
+                    <label style="font-size:20px;font-family: math;padding: 10px;" for="">Chọn gói đăng ký <span class="request_star">*</span></label> <br>
+					<div style="display: flex;background: #ffdd84;border-radius: 1em;height: 55px;">
+						@if($data['type_vip'] == 'VIP1')
+							<div class="col-md-4 pt-3">
+								<div class="form-group">
+									<input type="radio" name="pack_vip" value="3_VIP1"> 3 tháng/1.5 triệu
+								</div>
+							</div>
+							<div class="col-md-4 pt-3">
+								<div class="form-group">
+									<input type="radio" name="pack_vip" value="6_VIP1"> 6 tháng/2.5 triệu 
+								</div>
+							</div>
+							<div class="col-md-4 pt-3">
+								<div class="form-group">
+									<input type="radio" name="pack_vip" value="12_VIP1"> 12 tháng 4.5 triệu
+								</div>
+							</div>
+						@endif
+						@if($data['type_vip'] == 'VIP2')
+							<div class="col-md-3 pt-3">
+								<div class="form-group">
+									<input type="radio" name="pack_vip" value="1_VIP2"> 1 tháng/1.5 triệu
+								</div>
+							</div>
+							<div class="col-md-3 pt-3">
+								<div class="form-group">
+									<input type="radio" name="pack_vip" value="3_VIP2"> 3 tháng/2.5 triệu
+								</div>
+							</div>
+							<div class="col-md-3 pt-3">
+								<div class="form-group">
+									<input type="radio" name="pack_vip" value="6_VIP2"> 6 tháng/4.5 triệu
+								</div>
+							</div>
+							<div class="col-md-3 pt-3">
+								<div class="form-group">
+									<input type="radio" name="pack_vip" value="12_VIP2"> 12 tháng/8 triệu
+								</div>
+							</div>
+						@endif
+					</div>
 				    <div class="col-md-4">
 						<div class="form-group">
 							<p for="example-text-input" class="form-control-label">Tên</p>
@@ -74,24 +116,6 @@
 							<input disabled class="form-control"  name="time_register" value="{{isset($data['time_register']) ? $data['time_register'] : ''}}">
 						</div>
 					</div>
-					<br>
-					@if($data['type_vip'] == 'VIP1')
-					<tr>
-						<label style="font-size:20px;font-family: math;padding: 10px;" for="">Chọn gói đăng ký <span class="request_star">*</span></label> <br>
-						<td><label><input type="radio" name="pack_vip" value="3_VIP1"> 3 tháng 1.500.000 ( Một triệu năm trăm nghìn đồng chẵn)</label></td>
-						<td><label><input type="radio" name="pack_vip" value="6_VIP1"> 6 tháng 2.500.000 ( Hai triệu năm trăm nghìn đồng chẵn)</label></td>
-						<td><label><input type="radio" name="pack_vip" value="12_VIP1"> 12 tháng 4.500.000 ( Bốn triệu năm trăm nghìn đồng chẵn)</label></td>
-					</tr>
-					@endif
-					@if($data['type_vip'] == 'VIP2')
-					<tr>
-						<label style="font-size:20px;font-family: math;padding: 10px;" for="">Chọn gói đăng ký <span class="request_star">*</span></label> <br>
-						<td><label><input type="radio" name="pack_vip" value="1_VIP2"> 1 tháng 1.500.000 ( Một triệu năm trăm nghìn đồng chẵn)</label></td>
-						<td><label><input type="radio" name="pack_vip" value="3_VIP2"> 3 tháng 2.500.000 ( Hai triệu năm trăm nghìn đồng chẵn)</label></td>
-						<td><label><input type="radio" name="pack_vip" value="6_VIP2"> 6 tháng 4.500.000 ( Bốn triệu năm trăm nghìn đồng chẵn)</label></td>
-						<td><label><input type="radio" name="pack_vip" value="12_VIP2"> 12 tháng 8.000.000 ( Tám triệu đồng chẵn)</label></td></td>
-					</tr>
-					@endif
 					<div class="row form-group pt-4" id="div_hinhthucgiai">
                     <div class="col-md-12" >
                         <label style="font-size:20px;font-family: math;" for="">Chọn hình thức thanh toán <span class="request_star">*</span></label> <br>
