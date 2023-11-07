@@ -308,7 +308,7 @@
 									<div class="" style="background:">
 										<div class="pricing-table-body card-body text-center">
 											<div class="bg-secondary" style="border-radius: 0.5em;">
-												<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+												<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
 												<br>
 											</div>
@@ -320,7 +320,7 @@
 									<div class="" style="background:">
 										<div class="pricing-table-body card-body text-center">
 											<div class="bg-secondary" style="border-radius: 0.5em;">
-											<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+											<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
 												<br>
 											</div>
@@ -333,7 +333,7 @@
 									<div class="" style="background:">
 										<div class="pricing-table-body card-body text-center">
 											<div class="bg-secondary" style="border-radius: 0.5em;">
-											<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+											<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">8.000.000 VND</span></h2>
 												<br>
 											</div>
