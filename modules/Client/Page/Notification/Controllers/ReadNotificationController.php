@@ -10,16 +10,18 @@ class ReadNotificationController extends Controller
 {
     public function readNotification()
     {
-        $idRead = ReadNotificationModel::select('notification_id')->where('user_id', $_SESSION['id'])->get()->toArray();
-        $notification = NotificationModel::select('*')->whereNotIn('id', $idRead)->get();
-        foreach($notification as $key => $value){
-            $params = [
-                'id' => (string)\Str::uuid(),
-                'notification_id' => $value->id,
-                'user_id' => $_SESSION['id'],
-                'created_at' => date('Y-m-d H:i:s')
-            ];
-            ReadNotificationModel::insert($params);
+        if(!empty($_SESSION['id'])){
+            $idRead = ReadNotificationModel::select('notification_id')->where('user_id', $_SESSION['id'])->get()->toArray();
+            $notification = NotificationModel::select('*')->whereNotIn('id', $idRead)->get();
+            foreach($notification as $key => $value){
+                $params = [
+                    'id' => (string)\Str::uuid(),
+                    'notification_id' => $value->id,
+                    'user_id' => $_SESSION['id'],
+                    'created_at' => date('Y-m-d H:i:s')
+                ];
+                ReadNotificationModel::insert($params);
+            }
         }
     }
 }
