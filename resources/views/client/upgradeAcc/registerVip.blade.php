@@ -77,7 +77,7 @@
 			</div>
 			<div class="card-body">
 				<div class="row px-5">
-					<div class="col-md-6">
+					<div class="col-md-6 mt-sm-3">
 						<div class="form-group">
 							<div for="example-text-input" class="form-control-label">Tên</div>
 							<input disabled class="form-control" type="text" name="name" value="{{isset($data['users']->name) ? $data['users']->name : ''}}">
@@ -114,7 +114,71 @@
 						</div>
 					</div>
 				</div>
+				@if($data['type_vip'] == 'VIP1')
+				<div class="row px-4 mx-2">
+					<!-- <div class="container-lg"> -->
+					<!-- <div class="col-md-12 m-auto text-center py-2">
+						<h1 class="h5" style="color:#fff079">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
+					</div> -->
+					<!-- <div class="row px-lg-3"> -->
+					<div class="text-center mt-3">
+						<h1 class="h5 text-uppercase py-1 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;">Chọn gói đăng ký</h1>
+					</div>
+					<div class="col-md-4 px-0">
+						<div class="" style="background:">
+							<div class="pricing-table-body card-body text-center">
+								<div class="bg-secondary" style="border-radius: 0.5em;">
+									<label>
+										<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">1.500.000 VND</span></h2>
+										<br>
+										<div class="pricing-table-footer py-2">
+											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
 
+					<div class="col-md-4 px-0">
+						<div class="" style="background:">
+							<div class="pricing-table-body card-body text-center">
+								<div class="bg-secondary" style="border-radius: 0.5em;">
+									<label>
+										<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
+										<br>
+										<div class="pricing-table-footer py-2">
+											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="col-md-4 px-0">
+						<div class="" style="background:">
+							<div class="pricing-table-body card-body text-center">
+								<div class="bg-secondary" style="border-radius: 0.5em;">
+									<label>
+										<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
+										<br>
+										<div class="pricing-table-footer py-2">
+											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										</div>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- </div>
+					</div> -->
+				</div>
+				@elseif($data['type_vip'] == 'VIP2')
 				<div class="row px-4 mx-2">
 					<!-- <div class="container-lg"> -->
 					<!-- <div class="col-md-12 m-auto text-center py-2">
@@ -178,6 +242,7 @@
 					<!-- </div>
 					</div> -->
 				</div>
+				@endif
 				<div class="row px-5">
 					<div class="form-group pt-4" id="div_hinhthucgiai">
 						<div class="col-md-12">
