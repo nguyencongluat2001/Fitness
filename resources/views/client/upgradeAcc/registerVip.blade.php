@@ -32,8 +32,8 @@
 		<div class="modal-content card">
 			<div class="modal-header">
 				<h5  style="width: 90%;" class="modal-title">Nâng cấp tài khoản</h5>
-				<button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;width: 5%;">
-					X
+				<button type="button" class="btn btn-sm btn-close-res" style="background: #f1f2f2;width: 5%;">
+				<i class="fas fa-undo-alt"></i>
 				</button>
 			</div>
 			<div class="card-body">
@@ -197,7 +197,7 @@
 						style="background:#009c12;">Đăng ký</button>
 					</div>
 					<div class="rounded-pillpricing-table-footer pt-5 pb-2">
-					    <button type="button" data-bs-dismiss="modal" style="background: #97a7a4;">Đóng</button>
+					    <button type="button" class="btn-close-res" style="background: #97a7a4;">Đóng</button>
 					</div>
 				</div>
 			</div>

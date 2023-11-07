@@ -250,7 +250,7 @@
     });
 </script>
 
-<body style="position: relative;">
+<body style="position: relative;" onload="loadBell()">
     <div id="imageLoading" class="loader_bg_of">
         <div class="loader_bg">
             <div class="loader"><img src="../assets/images/loading.gif" alt="#" /></div>
@@ -406,6 +406,17 @@
         setTimeout(() => {
             $('#imageLoading').addClass("loader_bg_of");
         }, 2000)
+
+        function loadBell(){
+            if($("#icon-bell").hasClass('animate-slow')){
+                $("#icon-bell").removeClass('animate-slow'); 
+            }else{
+                $("#icon-bell").addClass('animate-slow');
+            }
+            setTimeout(() => {
+                loadBell();
+            }, 2000);
+        }
     </script>
     <script type="text/javascript" charset="utf-8">
         let a;

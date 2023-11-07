@@ -15,12 +15,15 @@ if(isset($_SESSION['id'])){
         -moz-transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
         animation: road-animates 1s linear infinite;
-        -webkit-animation: swing 0.2s linear infinite;
+        -webkit-animation: swing 0.05s linear infinite;
         -moz-animation: swing 1s linear infinite;
         -o-animation: swing 1s linear infinite;
         transform-origin: center top;
         -moz-transform-origin: center top;
         -webkit-transform-origin: center top;
+    }
+    .animate-slow{
+        -webkit-animation: swing 0.2s linear infinite !important;
     }
     #notification{
         position: fixed;
@@ -29,14 +32,14 @@ if(isset($_SESSION['id'])){
         /* width: 190px; */
     }
     .bubble {
-        color: #fff;
+        color: #fb0000;
         position: relative;
         width: 100%;
         text-align: center;
         line-height: 1.4em;
         /* margin: 40px auto; */
-        background-color: #b5ad3c;
-        border: 1px solid #b5ad3c;
+        background-color: #dbd62b;
+        border: 1px solid #dbd62b;
         border-radius: 30px 30px 0;
         font-family: sans-serif;
         padding: 5px 10px;
@@ -52,7 +55,7 @@ if(isset($_SESSION['id'])){
     .speech:before {
         right: -7px;
         bottom: -25px;
-        border: 16px solid #b5ad3c;
+        border: 16px solid #dbd62b;
         /* border-color: #333 transparent transparent #333; */
         border-left: 30px solid transparent;
         border-right: 0px solid transparent;
@@ -138,7 +141,7 @@ if(isset($_SESSION['id'])){
             </div>
         </span>
         <br>
-        <span align="right" class="form-group input-group" style="align-items: center;">
+        <span align="right" class="form-group input-group" style="align-items: center;"  onload="loadBell()">
             <div class="input-group-btn" onclick="readNotification()">
                 <label class="icon" for="checkbox1" style="border-radius:50px;background:#25aa33e8;">
                     <i style="color:#ffd00f;padding:13px" id="icon-bell" class="far fa-bell fa-3x py-2 @if(isset($notification) && count($notification) > 0) animate @endif "></i>
@@ -185,7 +188,7 @@ if(isset($_SESSION['id'])){
         @if(isset($notification))
         <div id="notification" class="notification" @if(count($notification) <= 0) hidden @endif>
             <div class="bubble speech">
-                <span><strong><i>Bạn có {{count($notification)}} thông báo mới</i></strong></span>
+                <span><strong><i>Bạn có {{count($notification)}} khuyến nghị mới</i></strong></span>
             </div>
         </div>
         @endif
