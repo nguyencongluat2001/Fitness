@@ -102,16 +102,3 @@ JS_Recommendations.prototype.openPhone = function(){
     var phone = 'tel:0862348886';
      window.open(phone,'_blank');
 }
-
-
-function loadBell(){
-    // if($("#icon-bell").hasClass('animate-slow')){
-    //     $("#icon-bell").removeClass('animate-slow'); 
-    // }else{
-    //     $("#icon-bell").addClass('animate-slow');
-    // }
-    console.log(1);
-    setTimeout(() => {
-        loadBell();
-    }, 2000);
-}

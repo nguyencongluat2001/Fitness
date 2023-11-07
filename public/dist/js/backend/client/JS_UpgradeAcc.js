@@ -134,8 +134,16 @@ JS_UpgradeAcc.prototype.viewFormContact = function () {
                   })
                 return false;
             }else{
-                $('#formmodal').html(arrResult);
-                $('#formmodal').modal('show');
+                $('#formmodal_res').html(arrResult);
+                $('#formmodal_res').modal('show');
+                $('#formmodal').modal('hide');
+                $('.modal').css('overflow-y', 'auto');
+                $('.btn-close-res').click(function(){
+                    $('#formmodal_res').html('');
+                    $('#formmodal_res').modal('hide');
+                    $('#formmodal').modal('show');
+                    $('.modal').css('overflow-y', 'auto');
+                });
             }
         }
     });

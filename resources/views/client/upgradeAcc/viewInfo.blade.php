@@ -39,13 +39,13 @@
 					<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
 						<center>
 						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:20px;padding-botton:10px">
-						    <div class="col-md-10">
-						       <h1 style="font-size:28px;padding-left:20%;color:#ffffff;">ĐẶC QUYỀN HỘI VIÊN</h1>
+						    <div class="col-md-10 text-center">
+						       <h2 style="font-size:28px;color:#ffffff;">ĐẶC QUYỀN HỘI VIÊN</h2>
 							</div>
 							<div class="col-md-2">
 								<!-- <button style="background:#34a233" type="button" data-bs-dismiss="modal"> -->
 									<!-- <i class="fas fa-undo-alt"></i> -->
-									<i style="font-size:25px;color:#ffffff;" data-bs-dismiss="modal" class="fas fa-arrow-alt-circle-left"></i>
+									<i style="font-size:25px;color:#ffffff;" data-bs-dismiss="modal" class="fas fa-reply"></i>
 								<!-- </button> -->
 							</div>
 						</div>
@@ -74,7 +74,7 @@
 					</div>
 				    <div class="col-md-6">
 						<!-- Start Pricing List -->
-						<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+						<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0">
 							<div class="row p-2">
 								<!-- <div class="pricing-list-icon col-3 text-center m-auto text-secondary ml-5 py-2">
 									<i class="display-3 bx bx-package"></i>
@@ -97,7 +97,7 @@
 					</div>
 					<div class="col-md-6">
 						<!-- Start Pricing List -->
-						<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+						<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0">
 							<div class="row p-2">
 								<!-- <div class="pricing-list-icon col-3 text-center m-auto text-secondary ml-5 py-2">
 									<i class="display-3 bx bx-package"></i>
@@ -142,7 +142,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<!-- Start Pricing List -->
-							<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+							<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0">
 								<div class="row p-2">
 									<!-- <div class="pricing-list-icon col-3 text-center m-auto text-secondary ml-5 py-2">
 										<i class="display-3 bx bx-package"></i>
@@ -165,7 +165,7 @@
 						</div>
 						<div class="col-md-6">
 							<!-- Start Pricing List -->
-							<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+							<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0">
 								<div class="row p-2">
 									<!-- <div class="pricing-list-icon col-3 text-center m-auto text-secondary ml-5 py-2">
 										<i class="display-3 bx bx-package"></i>
@@ -254,7 +254,7 @@
 						<div class="row">
 							<div class="col-md-6">
 								<!-- Start Pricing List -->
-								<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+								<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0">
 									<div class="row p-2">
 										<!-- <div class="pricing-list-icon col-3 text-center m-auto text-secondary ml-5 py-2">
 											<i class="display-3 bx bx-package"></i>
@@ -277,7 +277,7 @@
 							</div>
 							<div class="col-md-6">
 								<!-- Start Pricing List -->
-								<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+								<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0">
 									<div class="row p-2">
 										<!-- <div class="pricing-list-icon col-3 text-center m-auto text-secondary ml-5 py-2">
 											<i class="display-3 bx bx-package"></i>
@@ -357,7 +357,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<!-- Start Pricing List -->
-								<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
+								<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0">
 									<div class="row p-2">
 										<!-- <div class="pricing-list-icon col-3 text-center m-auto text-secondary ml-5 py-2">
 											<i class="display-3 bx bx-package"></i>
