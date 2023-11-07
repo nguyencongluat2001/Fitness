@@ -137,7 +137,9 @@
                     <div class="col-lg-12" style="padding:10px;">
                         <div class="row d-flex align-items-center">
                             <div class="col-lg-12 text-center">
+                                <br>
                                 <h1 class="h5" style="color:#fff079">ĐẶC QUYỀN HỘI VIÊN</h1>
+                                <br>
                             </div>
                           
                             <div class="table-responsive pmd-card pmd-z-depth " >
@@ -165,34 +167,34 @@
                                             <tr>
                                                 <td style=""align="center">1</td>
                                                 <td style="">Tra cứu cổ phiếu</td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">2</td>
                                                 <td style="">Phân tích đầu tư cơ bản</td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">3</td>
                                                 <td style="">Tham gia Cộng đồng chia sẻ đầu tư FinTop</td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">4</td>
                                                 <td style="">Tài liệu, cẩm nang hướng dẫn đầu tư</td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#bbf4b3"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">5</td>
@@ -220,15 +222,15 @@
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">8</td>
-                                                <td style="color:#ffde3a;font-weight: 700;">Khuyến nghị đầu tư V.I.P FinTop</td>
+                                                <td style="font-weight: 700;">Khuyến nghị đầu tư V.I.P FinTop</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
-                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#39962e;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#0c7600;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#0c7600;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">9</td>
-                                                <td style="color:#ffde3a;font-weight: 700;">Cố vấn 1-1 từ chuyên gia FinTop</td>
+                                                <td style="font-weight: 700;">Cố vấn 1-1 từ chuyên gia FinTop</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>

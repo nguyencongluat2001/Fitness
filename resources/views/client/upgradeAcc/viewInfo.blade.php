@@ -36,12 +36,22 @@
 		<div class="modal-content card" style="background:#5b1313db">
 			<div class="modal-header" style="background:#680000">
 					<!-- <h5  style="width: 90%;" class="modal-title"></h5> -->
-					<div class="col-md-11 m-auto text-center py-2">
-						<h1 class="h4" style="color:#ffc314">ĐẶC QUYỀN HỘI VIÊN</h1>
+					<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
+						<center>
+						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:20px;padding-botton:10px">
+						    <div class="col-md-10">
+						       <h1 style="font-size:28px;padding-left:20%;color:#ffffff;">ĐẶC QUYỀN HỘI VIÊN</h1>
+							</div>
+							<div class="col-md-2">
+								<!-- <button style="background:#34a233" type="button" data-bs-dismiss="modal"> -->
+									<!-- <i class="fas fa-undo-alt"></i> -->
+									<i style="font-size:25px;color:#ffffff;" data-bs-dismiss="modal" class="fas fa-arrow-alt-circle-left"></i>
+								<!-- </button> -->
+							</div>
+						</div>
+						</center>
 					</div>
-				<button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;width: 5%;">
-				   <i class="fas fa-undo-alt"></i>
-				</button>
+				
 			</div>
 			<br>
 			@if($data['type_vip'] == 'TIEU_CHUAN')
@@ -140,9 +150,9 @@
 									<div class="pricing-list-body col-md-12 align-items-center pl-3">
 										<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 										    <br>
-											<li class="h5 semi-bold-600 mb-0">Phương thức 1</li>
+											<li class="h5 semi-bold-600 mb-0">Phương thức 1:</li>
 											<br>
-											<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng ký tham gia gói thành viên VIP1 sử dụng cho Hội viên Bạc FinTop.</li>
+											<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng ký tham gia gói thành viên <span style="color: #ffd400;font-weight: 600;">VIP1</span> sử dụng cho Hội viên Bạc FinTop.</li>
 										</ul>
 									</div>
 									<div class="pricing-list-footer text-center m-auto align-items-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
@@ -163,9 +173,9 @@
 									<div class="pricing-list-body col-md-12 align-items-center pl-3">
 										<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 										    <br>
-										    <li class="h5 semi-bold-600 mb-0">Phương thức 2</li>
+										    <li class="h5 semi-bold-600 mb-0">Phương thức 2:</li>
 											<br>
-											<li style="font-family: math;    padding: 0 25px 25px 25px;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
+											<li style="font-family: math;    padding: 0 25px 25px 25px;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý.</li>
 										</ul>
 									</div>
 									<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -175,6 +185,49 @@
 								</div>
 							</div>
 							<!-- End Pricing List -->
+						</div>
+					</div>
+					<div class="container-lg">
+						<!-- <div class="col-md-12 m-auto text-center py-2">
+							<h1 class="h5" style="color:#fff079">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
+						</div> -->
+						<div class="row px-lg-3">
+							<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
+								<div class="" style="background:">
+									<div class="pricing-table-body card-body text-center">
+										<div class="bg-secondary" style="border-radius: 0.5em;">
+											<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+											<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">1.500.000 VND</span></h2>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
+								<div class="" style="background:">
+									<div class="pricing-table-body card-body text-center">
+										<div class="bg-secondary" style="border-radius: 0.5em;">
+										<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+											<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
+								<div class="" style="background:">
+									<div class="pricing-table-body card-body text-center">
+										<div class="bg-secondary" style="border-radius: 0.5em;">
+										<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+											<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
+											<br>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 					@endif
@@ -209,9 +262,9 @@
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
 											<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 											    <br>
-												<li class="h5 semi-bold-600 mb-0">Phương thức 1</li>
+												<li class="h5 semi-bold-600 mb-0">Phương thức 1:</li>
 												<br>
-												<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng ký tham gia gói thành viên VIP2 sử dụng cho Hội viên Vàng FinTop.</li>
+												<li style="font-family: math;    padding: 0 25px 25px 25px;">Đăng ký tham gia gói thành viên <span style="color: #ffd400;font-weight: 600;">VIP2</span> sử dụng cho Hội viên Vàng FinTop.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -232,9 +285,9 @@
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
 											<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 											    <br>
-												<li class="h5 semi-bold-600 mb-0">Phương thức 2</li>
+												<li class="h5 semi-bold-600 mb-0">Phương thức 2:</li>
 												<br>
-												<li style="font-family: math;    padding: 0 25px 25px 25px;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý</li>
+												<li style="font-family: math;    padding: 0 25px 25px 25px;">Trở thành khách hàng dối tác, chuyển/mở TKCK gắn ID FinTop Team quản lý.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -244,6 +297,49 @@
 									</div>
 								</div>
 								<!-- End Pricing List -->
+							</div>
+						</div>
+						<div class="container-lg">
+						<!-- <div class="col-md-12 m-auto text-center py-2">
+							<h1 class="h5" style="color:#fff079">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
+						</div> -->
+							<div class="row px-lg-3">
+								<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
+									<div class="" style="background:">
+										<div class="pricing-table-body card-body text-center">
+											<div class="bg-secondary" style="border-radius: 0.5em;">
+												<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
+												<br>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
+									<div class="" style="background:">
+										<div class="pricing-table-body card-body text-center">
+											<div class="bg-secondary" style="border-radius: 0.5em;">
+											<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
+												<br>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
+									<div class="" style="background:">
+										<div class="pricing-table-body card-body text-center">
+											<div class="bg-secondary" style="border-radius: 0.5em;">
+											<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">8.000.000 VND</span></h2>
+												<br>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 						@endif
@@ -269,7 +365,7 @@
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
 											<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 												<br>
-												<li style="font-family: math;    padding: 0 25px 25px 25px;">Gói hỗ trợ VIP PRO đặc biệt dành riêng cho khách hàng đối tác FinTop.Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
+												<li style="font-family: math;    padding: 0 25px 25px 25px;">Gói hỗ trợ <span style="color: #ffd400;font-weight: 600;">VIP PRO</span> đặc biệt dành riêng cho khách hàng đối tác FinTop.Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">
@@ -284,7 +380,7 @@
 						@endif
 			    </div>
 			<div class="modal-footer">
-				<div class="rounded-pillpricing-table-footer pt-5 pb-2">
+				<div class="rounded-pillpricing-table-footer">
 					<button type="button" data-bs-dismiss="modal" style="background: aliceblue; color: #b20000;">Đóng</button>
 				</div>
 			</div>
