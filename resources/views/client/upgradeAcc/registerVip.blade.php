@@ -62,7 +62,9 @@
 				<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
 					<center>
 						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:20px;padding-botton:10px">
-							<div class="col-md-10 text-center">
+						    <div class="col-md-2">
+							</div>
+							<div class="col-md-8 text-center">
 								<h2 style="color:#ffffff;">NÂNG CẤP TÀI KHOẢN</h2>
 							</div>
 							<div class="col-md-2">
