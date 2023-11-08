@@ -265,8 +265,13 @@
 									    	<span>Ngân hàng thụ hưởng: MBBank (Ngân hàng TMCP Quân đội)</span><br>
 											<span>Số tài khoản thụ hưởng: <span style="color:#fff079">86 286 243 8886</span></span><br>
 											<span>Tên thụ hưởng: <span style="color:#fff079">CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN FINTOP</span></span> <br>
+											@if($data['type_vip'] == 'VIP1')
 											<span>Nội dung: [HỌ TÊN]_[SỐ ĐIỆN THOẠI]_[GÓI VIP1 - THỜI GIAN]</span><br>
 											<span>Ví dụ:<b style="color:#fff079"> NGUYỄN VĂN A 0862348886 VIP1 3 THÁNG</b></span>
+											@elseif($data['type_vip'] == 'VIP2')
+											<span>Nội dung: [HỌ TÊN]_[SỐ ĐIỆN THOẠI]_[GÓI VIP2 - THỜI GIAN]</span><br>
+											<span>Ví dụ:<b style="color:#fff079"> NGUYỄN VĂN A 0862348886 VIP2 3 THÁNG</b></span>
+											@endif
 									   </div>
 									</div>
 								</div>
