@@ -33,10 +33,10 @@
 	@csrf
 	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 	<div class="modal-dialog modal-lg">
-		<div class="modal-content card">
+		<div class="modal-content card" style="background:#5b1313db">
 			<div class="modal-header">
 				<div class="d-flex">
-					<h5  style="width: 90%;" class="modal-title">Liên hệ</h5>
+					<h5  style="width: 90%;color:#ffffff" class="modal-title">Liên hệ</h5>
 					<button type="button" class="btn btn-sm btn-close-res" style="background: #f1f2f2;width: 5%;">
 						<i class="fas fa-reply"></i>
 					</button>
@@ -53,10 +53,10 @@
 								</div> -->
 								<div class="pricing-list-body col-md-12 align-items-center pl-3">
 									<ul class="list-unstyled text-center light-300">
-										<li class="h5 mb-0">
-											<span style="font-size: 1.25rem;">Liên hệ</span>
-											<span style="font-size: 1.25rem;" class="text-danger"><b style="font-size: 1.25rem;">Hotline</b></span> 086.234.8886
-											<span style="font-size: 1.25rem;"> hoặc <a class="text-success" style="font-size: 1.25rem;">Zalo Chat FinTop</a> để được hỗ trợ</span>
+										<li class="h5 mb-0" style="color:#ffffff">
+											<span style="font-size: 1.25rem;">Liên hệ</span> Hotline
+											<span style="font-size: 1.25rem;"><b style="font-size: 1.25rem;color:#6ee0ff">086.234.8886</b></span> 
+											<span style="font-size: 1.25rem;"> hoặc Zalo Chat <a style="font-size: 1.25rem;color:#fff079">FinTop</a> để được hỗ trợ tư vấn.</span>
 										</li>
 										<br>
 										<li class="d-flex">

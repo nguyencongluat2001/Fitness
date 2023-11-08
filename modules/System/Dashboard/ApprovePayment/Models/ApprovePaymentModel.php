@@ -21,6 +21,7 @@ class ApprovePaymentModel extends Model
         'type_payment',
         'image',
         'order',
+        'package',
         'status',
         'created_at',
         'updated_at',

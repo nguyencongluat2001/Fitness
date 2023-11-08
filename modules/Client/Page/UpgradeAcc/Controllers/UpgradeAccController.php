@@ -72,19 +72,25 @@ class UpgradeAccController extends Controller
      */
     public function updateVip(Request $request)
     {
-        if($_FILES == '' || $_FILES == []){
+        $input = $request->input();
+        if($input['package'] == '' || $input['package'] == 'undefined'){
             $data['success'] = false;
-            $data['message'] = 'Vui lòng tải ảnh giao dịch thanh toán!';
+            $data['message'] = 'Chưa chọn gói nâng cấp!';
             return $data;
         }
-        $input = $request->input();
+        if($_FILES == '' || $_FILES == []){
+            $data['success'] = false;
+            $data['message'] = 'Chưa tải ảnh xác thực giao dịch!';
+            return $data;
+        }
         $arrFile = $this->uploadFile($_FILES);
         $account = $this->userService->find($_SESSION['id']);
         $arr = [
             'id'=>(string)\Str::uuid(),
             'user_id'=> $account['id'],
-            'type_payment'=> $input['type_payment'],
+            'type_payment'=> 'BANK',
             'role_client'=> $input['wrap'],
+            'package'=> $input['package'],
             'image'=> $arrFile[0],
             'status'=> 0,
             'created_at'=> date('Y-m-d H:i:s'),
@@ -92,7 +98,7 @@ class UpgradeAccController extends Controller
         ];
         $create = $this->approvePaymentService->create($arr);
         $data['success'] = true;
-        return $data;
+        return array('html'=>view('client.upgradeAcc.viewSuccess')->render(),'data'=>$data);
     }
      // /**
     //  * Tải ảnh vào thư mục

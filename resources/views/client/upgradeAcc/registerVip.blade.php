@@ -39,6 +39,7 @@
 
 	.form-control-label {
 		color: #ffffff;
+		padding-left: 20px;
 	}
 	@media (max-width: 450px){
 		.mt-sm-3 {
@@ -61,18 +62,17 @@
 				</button> -->
 				<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
 					<center>
-						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:20px;padding-botton:10px">
-						    <div class="col-md-2">
+						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:15px;padding-botton:10px">
+						    <div class="col-md-1">
 							</div>
-							<div class="col-md-8 text-center">
+							<div class="col-md-10 text-center">
 								<h2 style="color:#ffffff;">NÂNG CẤP TÀI KHOẢN</h2>
 							</div>
-							<div class="col-md-2">
-								<!-- <button style="background:#34a233" type="button" data-bs-dismiss="modal"> -->
-								<!-- <i class="fas fa-undo-alt"></i> -->
-								<i style="font-size:25px;color:#ffffff;" data-bs-dismiss="modal" class="fas fa-reply btn-close-res"></i>
-								<!-- </button> -->
-							</div>
+							<div class="col-md-1">
+									<!-- <i style="font-size:20px;color:#ffffff;" data-bs-dismiss="modal" class="fas fa-reply"></i> -->
+									<button type="button" data-bs-dismiss="modal" class="btn btn-sm btn-close-res" style="background: #f1f2f2;height:35px">
+								    <i class="fas fa-reply"></i>
+							</button>
 						</div>
 					</center>
 				</div>
@@ -124,7 +124,7 @@
 					</div> -->
 					<!-- <div class="row px-lg-3"> -->
 					<div class="text-center mt-3">
-						<h1 class="h5 text-uppercase py-1 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;">Chọn gói đăng ký</h1>
+						<h1 class="h5 text-uppercase pt-3 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;height:60px">Chọn gói đăng ký</h1>
 					</div>
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
@@ -134,8 +134,8 @@
 									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">1.500.000 VND</span></h2>
 									<br>
 									<div class="pricing-table-footer py-2">
-										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										<input type="hidden" name="package" value='{"name": "VIP1 (3 tháng)", "money": "1500000"}'>
+										<input type="radio" onchange="JS_UpgradeAcc.getTypeBank(this.value)" value='{"name": "VIP1 (3 tháng)", "money": "1500000","code": "VIP1_3"}' name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP1 (3 tháng)", "money": "1500000","code": "VIP1_3"}'>
 									</div>
 								</label>
 							</div>
@@ -150,8 +150,8 @@
 									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
 									<br>
 									<div class="pricing-table-footer py-2">
-										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										<input type="hidden" name="package" value='{"name": "VIP1 (6 tháng)", "money": "2500000"}'>
+										<input type="radio" onchange="JS_UpgradeAcc.getTypeBank(this.value)" value='{"name": "VIP1 (6 tháng)", "money": "2500000","code": "VIP1_6"}'  name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP1 (6 tháng)", "money": "2500000","code": "VIP1_6"}'>
 									</div>
 								</label>
 							</div>
@@ -167,8 +167,8 @@
 									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
 									<br>
 									<div class="pricing-table-footer py-2">
-										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										<input type="hidden" name="package" value='{"name": "VIP1 (12 tháng)", "money": "4500000"}'>
+										<input type="radio" onchange="JS_UpgradeAcc.getTypeBank(this.value)" value='{"name": "VIP1 (12 tháng)", "money": "4500000","code": "VIP1_12"}' name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP1 (12 tháng)", "money": "4500000","code": "VIP1_12"}'>
 									</div>
 								</label>
 							</div>
@@ -185,7 +185,7 @@
 					</div> -->
 					<!-- <div class="row px-lg-3"> -->
 					<div class="text-center mt-3">
-						<h1 class="h5 text-uppercase py-1 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;">Chọn gói đăng ký</h1>
+						<h1 class="h5 text-uppercase pt-3 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;height:60px">Chọn gói đăng ký</h1>
 					</div>
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
@@ -195,8 +195,8 @@
 									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
 									<br>
 									<div class="pricing-table-footer py-2">
-										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										<input type="hidden" name="package" value='{"name": "VIP2 (3 tháng)", "money": "2500000"}'>
+										<input type="radio" onchange="JS_UpgradeAcc.getTypeBank(this.value)"  value='{"name": "VIP2 (3 tháng)", "money": "2500000","code": "VIP2_3"}' name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP2 (3 tháng)", "money": "2500000","code": "VIP2_3"}'>
 									</div>
 								</label>
 							</div>
@@ -211,8 +211,8 @@
 									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
 									<br>
 									<div class="pricing-table-footer py-2">
-										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										<input type="hidden" name="package" value='{"name": "VIP2 (6 tháng)", "money": "4500000"}'>
+										<input type="radio" onchange="JS_UpgradeAcc.getTypeBank(this.value)" value='{"name": "VIP2 (6 tháng)", "money": "4500000","code": "VIP2_6"}' name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP2 (6 tháng)", "money": "4500000","code": "VIP2_6"}'>
 									</div>
 								</label>
 							</div>
@@ -228,8 +228,8 @@
 									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">8.000.000 VND</span></h2>
 									<br>
 									<div class="pricing-table-footer py-2">
-										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										<input type="hidden" name="package" value='{"name": "VIP2 (12 tháng)", "money": "8000000"}'>
+										<input type="radio" onchange="JS_UpgradeAcc.getTypeBank(this.value)" value='{"name": "VIP2 (12 tháng)", "money": "8000000","code": "VIP2_12"}' name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP2 (12 tháng)", "money": "8000000","code": "VIP2_12"}'>
 									</div>
 								</label>
 							</div>
@@ -242,17 +242,20 @@
 				<div class="row px-5 mx-1" id="view_package"></div>
 				<div class="row px-5">
 					<div class="form-group pt-4" id="div_hinhthucgiai">
-						<div class="col-md-12">
+						<!-- <div class="col-md-12">
 							<label style="color:#ffffff;font-size:20px;font-family: math;" for="">Chọn hình thức thanh toán <span class="request_star">*</span></label> <br>
-						</div>
+						</div> -->
+						<!-- <div class="text-center mt-3">
+							<h1 class="h5 text-uppercase pt-3 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;height:60px">THANH TOÁN</h1>
+						</div> -->
 						<!-- ngan hang -->
-						<div>
+						<!-- <div>
 							<input type="radio" onchange="JS_UpgradeAcc.getTypeBank(this.value)" value="BANK" name="type_bank" id="type_bank" /><span style="padding-left:5px;color:#ffffff;">Chuyển khoản ngân hàng</span><br>
-						</div>
-						<div id="bank" class="hiddel">
+						</div> -->
+						<!-- <div id="bank" class="hiddel"> -->
 							<div class="row">
 								<div class="objective col-lg-12">
-									<div style="background: #0a6a00;color: #ffaf00;font-weight: 500;padding:15px;width:100%;height:100%;border-radius:5px">
+									<div style="background-color: #031f38;color: #ffaf00;font-weight: 500;padding:15px;width:100%;height:100%;border-radius:5px">
 										<div class="objective-icon m-auto py-4 mb-2 mb-sm-4 shadow-lg">
 											<img class="card-img " src="../clients/img/qrluatnc.jpg" alt="Card image" style="width:100%">
 										</div>
@@ -264,12 +267,12 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						<!-- </div> -->
 					</div>
 					{{-- Mô tả --}}
 					<div class="form-group pt-4" id="div_hinhthucgiai">
 						<div class="col-md-12">
-							<label style="font-size:20px;font-family: math;color:#ffffff;" for="">Ảnh xác thực thanh toán thành công <span class="request_star">*</span></label> <br>
+							<label style="font-size:20px;font-family: math;color:#ffffff;" for="">Tải ảnh xác thực thanh toán thành công <span class="request_star">*</span></label> <br>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -311,22 +314,24 @@
 				var jsonData = JSON.parse(data);
 				var vat = parseInt(jsonData.money) + (parseInt(jsonData.money) * 10 / 100);
 				var html = '';
-				html += `<div class="text-center mt-3 mb-2 px-0"><h1 class="h5 text-uppercase py-1 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;">Hóa đơn chi tiết</h1></div>
+				html += `<div class="text-center mt-3 mb-2 px-0"><h1 class="h5 text-uppercase pt-3 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;height:60px">Hóa đơn chi tiết</h1></div>
 						<table class="table table-bordered table-striped bg-light">
 							<colgroup><col width="5%"><col width="25%"><col width="10%"><col width="20%"><col width="20%"><col width="20%"></colgroup>
 							<thead>
-								<th style="text-align:center;vertical-align: middle;">STT</th>
-								<th style="text-align:center;vertical-align: middle;">Tên sản phẩm<br>Dịch vụ</th>
+								// <th style="text-align:center;vertical-align: middle;">STT</th>
+								<th style="text-align:center;vertical-align: middle;">Tên hàng hóa<br>Dịch vụ</th>
 								<th style="text-align:center;vertical-align: middle;">Số lượng</th>
+								<th style="text-align:center;vertical-align: middle;">Đơn giá</th>
 								<th style="text-align:center;vertical-align: middle;">Thành tiền</th>
-								<th style="text-align:center;vertical-align: middle;">Thuế GTGT (VAT) 10%</th>
-								<th style="text-align:center;vertical-align: middle;">Tổng thanh toán</th>
+								<th style="text-align:center;vertical-align: middle;">Thuế giá trị gia tăng (VAT 10%)</th>
+								<th style="text-align:center;vertical-align: middle;">Tổng tiền thanh toán</th>
 							</thead>
 							<tbody>
 								<tr>
-									<td align="center">1</td>
+									// <td align="center">1</td>
 									<td align="center">${jsonData.name}</td>
 									<td align="center">1</td>
+									<td align="center">${parseInt(jsonData.money).toLocaleString()} VND</td>
 									<td align="center">${parseInt(jsonData.money).toLocaleString()} VND</td>
 									<td align="center">10%</td>
 									<td align="center">${vat.toLocaleString()} VND</td>

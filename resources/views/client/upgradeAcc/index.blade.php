@@ -188,6 +188,8 @@
 </section>
 <script src="../clients/js/jquery.min.js"></script>
 <div class="modal" id="formmodal" role="dialog"></div>
+<div class="modal" id="formmodal_res" role="dialog"></div>
+
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_UpgradeAcc.js') }}"></script>
 <script type="text/javascript">
     var baseUrl = '{{ url('') }}';

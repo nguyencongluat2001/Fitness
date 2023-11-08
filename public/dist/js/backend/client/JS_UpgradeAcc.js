@@ -160,20 +160,14 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
     var myClass = this;
     NclLib.loadding();
     var formdata = new FormData();
-    if(this.type_bank == '' || this.type_bank == undefined){
-        Swal.fire({
-            position: 'top-start',
-            icon: 'warning',
-            title: 'Chưa chọn hình thức thanh toán!',
-            showConfirmButton: false,
-            timer: 3000
-          })
-        return false;
+    if($("input[type='radio'].radioBtnClass:checked").val()){
+        console.log($(this).val());
+
     }
     formdata.append('_token', $("#_token").val());
     formdata.append('id_user', $("#id").val());
     formdata.append('wrap', $("#wrap").val());
-    formdata.append('type_payment', this.type_bank);
+    formdata.append('package', this.package);
     $('form#frmAdd_updateAcc input[type=file]').each(function () {
         var count = $(this)[0].files.length;
         for (var i = 0; i < count; i++) {
@@ -190,15 +184,22 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
         contentType: false,
         processData: false,
         success: function (arrResult) {
-            if (arrResult['success'] == true) {
-                  Swal.fire({
-                    position: 'top-start',
-                    icon: 'success',
-                    title: 'Gửi yêu cầu phê duyệt thành công!, vui lòng chờ phê duyệt từ FinTop.',
-                    showConfirmButton: false,
-                    timer: 5000
-                  })
+            if (arrResult['data']['success'] == true) {
+                //   Swal.fire({
+                //     position: 'top-start',
+                //     icon: 'success',
+                //     title: 'Gửi yêu cầu phê duyệt thành công!, vui lòng chờ phê duyệt từ FinTop.',
+                //     showConfirmButton: false,
+                //     timer: 5000
+                //   })
+                //   $('#formmodal').modal('hide');
                   $('#formmodal').modal('hide');
+                  $('#formmodal_res').html(arrResult['html']);
+                  $('#formmodal_res').modal('show');
+                  
+                  $('.btn-close-res').click(function(){
+                    $('#formmodal_res').modal('hide');
+                  });
                 //   myClass.loadList(oForm);
 
             } else {
@@ -220,24 +221,12 @@ JS_UpgradeAcc.prototype.updateVip = function (oForm) {
  *
  * @return void
  */
-JS_UpgradeAcc.prototype.getTypeBank = function (type) {
-    if(type=='BANK'){
-        $('#bank').removeClass("hiddel");
-        $('#momo').removeClass("show");
-        $('#momo').addClass("hiddel");
-        $('#bank').addClass("show");
-    }
-    else{
-        $('#momo').removeClass("hiddel");
-        $('#bank').removeClass("show");
-        $('#bank').addClass("hiddel");
-        $('#momo').addClass("show");
-    }
-    this.type_bank = type;
+JS_UpgradeAcc.prototype.getTypeBank = function (package) {
+    this.package = package;
 }
 JS_UpgradeAcc.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Đăng nhập để tra cứu miễn phí!',
+        title: 'Đăng nhập để nâng cấp tài khoản!',
         showCloseButton: true,
         confirmButtonText: "Đăng nhập",
         confirmButtonColor: "rgb(31 140 64)",

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('role_client')->nullable(); // ví dụ VIP,VIP1 ,VIP2,
             $table->string('image',2000)->nullable(); // anh
             $table->string('type_payment')->nullable(); // loai banking
+            $table->string('package')->nullable(); // loai gói
             $table->integer('order')->nullable(); // thu tu
             $table->string('status')->nullable(); // trạng thai (on , off)
             $table->timestamps();
