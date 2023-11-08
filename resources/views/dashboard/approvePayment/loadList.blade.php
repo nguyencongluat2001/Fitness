@@ -40,6 +40,7 @@
                             <span>Số điện thoại: {{ isset($data->phone) ? $data->phone : '' }}</span><br>
                             <span>Email: {{ isset($data->email) ? $data->email : '' }}</span><br>
                             <span>Địa chỉ: {{ isset($data->address) ? $data->address : '' }}</span><br>
+                            <span>Tham gia ngày: {{ isset($data->created_at) ? $data->created_at : '' }}</span><br>
                         </td>
                         <?php $dataJson = json_decode($data->package);
                          ?>
@@ -47,8 +48,8 @@
                             <span>Gói nâng cấp: {{ isset($dataJson->name) ? $dataJson->name : '' }}</span> <br>
                             <span>Giá giói: <span style="color:#ffcd6a;font-weight">{{ isset($dataJson->money) ? number_format($dataJson->money,0, '', ',') : '' }}</span>  đ</span><br>
                             <span>Thành tiền (+10% VAT): <span style="color:#ffcd6a;font-weight">{{ isset($data->money_vat) ? number_format($data->money_vat,0, '', ',') : '' }}</span> đ</span><br>
+                            <span>Ngày đăng ký: {{ isset($data->created_at) ? $data->created_at : '' }}</span><br>
                             <span>Trạng thái: {{ isset($data->status_name) ? $data->status_name : '' }}</span><br>
-
                         </td>
                         <td style="width:5% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center">
                             <label class="custom-control custom-checkbox p-0 m-0 pointer " style="cursor: pointer;">

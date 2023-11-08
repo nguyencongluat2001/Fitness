@@ -197,7 +197,7 @@
 							<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
 								<div class="" style="background:">
 									<div class="pricing-table-body card-body text-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
-										<div class="bg-secondary" style="border-radius: 0.5em;">
+										<div onclick="JS_UpgradeAcc.viewForm('VIP1')" class="bg-secondary" style="border-radius: 0.5em;">
 											<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 											<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">1.500.000 VND</span></h2>
 											<br>
@@ -209,7 +209,7 @@
 							<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
 								<div class="" style="background:">
 									<div class="pricing-table-body card-body text-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
-										<div class="bg-secondary" style="border-radius: 0.5em;">
+										<div onclick="JS_UpgradeAcc.viewForm('VIP1')" class="bg-secondary" style="border-radius: 0.5em;">
 										<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 											<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
 											<br>
@@ -222,7 +222,7 @@
 							<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
 								<div class="" style="background:">
 									<div class="pricing-table-body card-body text-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
-										<div class="bg-secondary" style="border-radius: 0.5em;">
+										<div onclick="JS_UpgradeAcc.viewForm('VIP1')" class="bg-secondary" style="border-radius: 0.5em;">
 										<i style="color:#f2f2f2;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 											<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
 											<br>
@@ -308,8 +308,8 @@
 							<div class="row px-lg-3">
 								<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
 									<div class="" style="background:">
-										<div class="pricing-table-body card-body text-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
-											<div class="bg-secondary" style="border-radius: 0.5em;">
+										<div  class="pricing-table-body card-body text-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
+											<div onclick="JS_UpgradeAcc.viewForm('VIP2')" class="bg-secondary" style="border-radius: 0.5em;">
 												<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
 												<br>
@@ -321,7 +321,7 @@
 								<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
 									<div class="" style="background:">
 										<div class="pricing-table-body card-body text-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
-											<div class="bg-secondary" style="border-radius: 0.5em;">
+											<div onclick="JS_UpgradeAcc.viewForm('VIP2')" class="bg-secondary" style="border-radius: 0.5em;">
 											<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
 												<br>
@@ -334,7 +334,7 @@
 								<div class="col-md-4 pt-sm-0 pt-3 px-xl-3">
 									<div class="" style="background:">
 										<div class="pricing-table-body card-body text-center" @if(!isset($_SESSION['id'])) onclick="JS_UpgradeAcc.checkLogin()" @endif>
-											<div class="bg-secondary" style="border-radius: 0.5em;">
+											<div onclick="JS_UpgradeAcc.viewForm('VIP2')" class="bg-secondary" style="border-radius: 0.5em;">
 											<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
 												<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">8.000.000 VND</span></h2>
 												<br>
@@ -361,7 +361,7 @@
 							</div>							
 							<h5 class="h5 pb-4">Hội viên Kim cương</h5>
 						</div>
-						<div class="pricing-horizontal-body col-md-8 text-light col-lg-7 d-flex align-items-center pt-4 pb-4">
+						<div class="pricing-horizontal-body col-md-8 text-light col-lg-8 d-flex align-items-center pt-4 pb-4">
 							<ul class="text-left list-unstyled mb-0">
 								<li><i class="bx bxs-circle me-2"></i>Tra cứu cổ phiếu</li>
 								<li><i class="bx bxs-circle me-2"></i>Phân tích đầu tư cơ bản</li>
@@ -371,7 +371,7 @@
 								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Phân tích đầu tư V.I.P</li>
 								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
 								<li style="font-weight: 700;;color:#fff36b"><i class="bx bxs-circle me-2"></i>Khuyến nghị đầu tư V.I.P FinTop</li>
-								<li style="font-weight: 700;;color:#fff36b"><i class="bx bxs-circle me-2"></i>Cố vấn chiến lược đầu tư 1-1 cùng Chuyên gia FinTop</li>
+								<li style="font-weight: 700;color:#fff36b"><i class="bx bxs-circle me-2"></i>Cố vấn chiến lược đầu tư 1-1 cùng Chuyên gia FinTop</li>
 							</ul>
 						</div>
 					</div>

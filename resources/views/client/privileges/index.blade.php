@@ -41,13 +41,6 @@
                                         <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> TIÊU CHUẨN</h2>
                                         <br>
                                     </div>
-                                    <!-- <p>$120/Year</p>
-                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
-                                    </ul> -->
                                     <div class="pricing-table-footer pt-2">
                                         <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
@@ -63,13 +56,6 @@
                                         <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> BẠC</h2>
                                         <br>
                                     </div>
-                                    <!-- <p>$120/Year</p>
-                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
-                                    </ul> -->
                                     <div class="pricing-table-footer pt-2">
                                         <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
@@ -86,13 +72,6 @@
                                         <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> VÀNG</h2>
                                         <br>
                                     </div>
-                                    <!-- <p>$120/Year</p>
-                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
-                                    </ul> -->
                                     <div class="pricing-table-footer pt-2">
                                         <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
@@ -112,14 +91,6 @@
                                         <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> KIM CƯƠNG</h2>
                                         <br>
                                     </div>
-                                    
-                                    <!-- <p>$120/Year</p>
-                                    <ul class="pricing-table-list text-start text-dark px-4 list-unstyled light-300">
-                                        <li class=""><i class="bx bxs-circle me-2"></i>25 to 99 Users</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>10 TB space</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Source Files</li>
-                                        <li class=""><i class="bx bxs-circle me-2"></i>Live Chat</li>
-                                    </ul> -->
                                     <div class="pricing-table-footer pt-2">
                                         <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
                                     </div>
@@ -242,71 +213,6 @@
                         </div>
                     </div>
                 </div>
-                 <!-- team tư vấn đầu tư  -->
-                <!-- <div class="home_index_child" style="background:#fffffff2  !important;">
-                    <div class="col-lg-12" style="padding:10px;">
-                            <div class="col-lg-12 text-start">
-                                <h1 class="h5 ">II. CHÍNH SÁCH</h1>
-                            </div>
-                            <div class="table-responsive pmd-card pmd-z-depth ">
-                                <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
-                                <colgroup>
-                                    <col width="5%">
-                                    <col width="35%">
-                                    <col width="15%">
-                                    <col width="15%">
-                                    <col width="15%">
-                                    <col width="15%">
-                                </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <td align="center"><b>STT</b></td>
-                                            <td align="center"><b>Chính sach hội viên</b></td>
-                                            <td style="background:#1fff00" align="center"><b>Tiêu chuẩn</b></td>
-                                            <td style="background:#d1d1d1" align="center"><b>Bạc</b></td>
-                                            <td style="background:#ffd404" align="center"><b>Vàng</b></td>
-                                            <td style="background:black;color:white" align="center"><b>Kim cương</b></td>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        
-                                            <tr>
-                                                <td style="white-space: inherit;vertical-align: middle"align="center">1</td>
-                                                <td style="white-space: inherit;vertical-align: middle">Có tài khoản chứng khoán thuộc các công ty chứng khoán đối tác do Đội ngũ FinTop quản lý.</td>
-                                                <td style="color:red;white-space: inherit;vertical-align: middle"align="center">X</td>
-                                                <td style="white-space: inherit;vertical-align: middle"align="center">Dưới 100tr <br> (NAV đầu tư)</td>
-                                                <td style="white-space: inherit;vertical-align: middle"align="center">100 - 499tr <br> (NAV đầu tư)</td>
-                                                <td style="white-space: inherit;vertical-align: middle"align="center">Từ 500tr <br> (NAV đầu tư)</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="white-space: inherit;vertical-align: middle"align="center">2</td>
-                                                <td style="white-space: inherit;vertical-align: middle">Nộp phí tham gia Hội viên</td>
-                                                <td style=""align="center">Đăng ký tài khoản FinTop 0 VND</td>
-                                                <td style="background:#b4b4b4;white-space: inherit;vertical-align: middle"align="center">VIP1</td>
-                                                <td style="background:#ffd041;white-space: inherit;vertical-align: middle"align="center">VIP2</td>
-                                                <td style="color:red;white-space: inherit;vertical-align: middle"align="center">X</td>
-                                            </tr>
-                                            <tr>
-                                                <td style="white-space: inherit;vertical-align: middle"align="center">3</td>
-                                                <td style="white-space: inherit;vertical-align: middle">Đăng ký</td>
-                                                <td style="background:#58ff75;w#58ff75ite-space: inherit;vertical-align: middle;animation: lights 2s 750ms linear infinite"align="center">
-                                                    <a style="background:#9a0303;" type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:white;" href="{{ url('register') }}"></i>Đăng ký
-                                                    </a>
-                                                </td>
-                                                <td style="background:#02d200;white-space: inherit;vertical-align: middle;color:#fff935;font-weight:600;animation: lights 2s 750ms linear infinite"align="center">
-                                                    <a style="background:#9a0303;" type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:white;" href="{{ url('client/upgradeAcc/index') }}"></i>Đăng ký
-                                                    </a>
-                                                </td>
-                                                <td style="background:#a72500;color:#fff935;font-weight:600;animation: lights 4s 750ms linear infinite"align="center">
-                                                    <a style="background:#9a0303;" type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:white;" href="{{ url('client/upgradeAcc/index') }}"></i>Đăng ký
-                                                    </a></td>
-                                                <td style="white-space: inherit;vertical-align: middle;color:red"align="center">X</td>
-                                            </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                    </div>
-                </div> -->
             </div>
         </form>
     </div>

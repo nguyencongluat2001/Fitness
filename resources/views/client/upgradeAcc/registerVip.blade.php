@@ -66,7 +66,7 @@
 						    <div class="col-md-1">
 							</div>
 							<div class="col-md-10 text-center">
-								<h2 style="color:#ffffff;">NÂNG CẤP TÀI KHOẢN</h2>
+								<h2 style="font-size:28px;color:#ffffff;">ĐẶC QUYỀN HỘI VIÊN</h2>
 							</div>
 							<div class="col-md-1">
 									<!-- <i style="font-size:20px;color:#ffffff;" data-bs-dismiss="modal" class="fas fa-reply"></i> -->
@@ -81,7 +81,7 @@
 				<div class="row px-5">
 					<div class="col-md-6 mt-sm-3">
 						<div class="form-group">
-							<div for="example-text-input" class="form-control-label">Tên</div>
+							<div for="example-text-input" class="form-control-label">Họ và tên</div>
 							<input disabled class="form-control" type="text" name="name" value="{{isset($data['users']->name) ? $data['users']->name : ''}}">
 						</div>
 					</div>
@@ -255,15 +255,19 @@
 						<!-- <div id="bank" class="hiddel"> -->
 							<div class="row">
 								<div class="objective col-lg-12">
-									<div style="background-color: #031f38;color: #ffaf00;font-weight: 500;padding:15px;width:100%;height:100%;border-radius:5px">
+									<div style="background-color: #031f38;color: #ffffff;font-weight: 500;padding:15px;width:100%;height:100%;border-radius:5px;display:flex">
+									   <div class="col-md-4 px-0">
 										<div class="objective-icon m-auto mb-2 mb-sm-4 shadow-lg">
-											<img class="card-img " src="../clients/img/qrluatnc.jpg" alt="Card image" style="width:100%">
-										</div>
-										<span>Số TKNH thụ hưởng: 86 286 234 8886</span><br>
-										<span>Ngân Hàng: MBBank - Ngân hàng Thương mại cổ phần Quân đội.</span><br>
-										<span>Tên: Nguyễn Công Luật</span> <br>
-										<span>Nội dung: [HỌ TÊN]_[SỐ ĐIỆN THOẠI]_[GÓI VIP1 - THỜI GIAN]</span><br>
-										<span><b>Ví dụ: NGUYỄN VĂN A 0862348886 VIP1 3 THÁNG</b></span>
+												<img class="card-img " src="../clients/img/qrMbFintop.jpg" alt="Card image" style="width:100%">
+											</div>
+									   </div>
+									   <div class="col-md-8 px-0">
+									    	<span>Ngân hàng thụ hưởng: MBBank (Ngân hàng TMCP Quân đội)</span><br>
+											<span>Số tài khoản thụ hưởng: <span style="color:#fff079">86 286 243 8886</span></span><br>
+											<span>Tên thụ hưởng: <span style="color:#fff079">CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN FINTOP</span></span> <br>
+											<span>Nội dung: [HỌ TÊN]_[SỐ ĐIỆN THOẠI]_[GÓI VIP1 - THỜI GIAN]</span><br>
+											<span style="color:#fff079"><b>Ví dụ: NGUYỄN VĂN A 0862348886 VIP1 3 THÁNG</b></span>
+									   </div>
 									</div>
 								</div>
 							</div>
@@ -272,7 +276,7 @@
 					{{-- Mô tả --}}
 					<div class="form-group pt-4" id="div_hinhthucgiai">
 						<div class="col-md-12">
-							<label style="font-size:20px;font-family: math;color:#ffffff;" for="">Tải ảnh xác thực thanh toán thành công <span class="request_star">*</span></label> <br>
+							<label style="font-size:20px;font-family: math;color:#ffffff;" for="">Tải ảnh đã thanh toán để xác thực.<span class="request_star">*</span></label> <br>
 						</div>
 					</div>
 					<div class="col-md-6">
