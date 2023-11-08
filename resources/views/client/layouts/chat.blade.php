@@ -119,21 +119,21 @@ if(isset($_SESSION['id'])){
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
         <span align="right">
             <div class="input-group-btn mb-2">
-                    <img width="" height="40px" style="background-color: none"
+                    <img width="" height="50px" style="background-color: none"
                     src="../clients/img/zalo.png" alt="">
                 </label>
             </div>
         </span>
         <span align="right">
             <div class="input-group-btn mb-2" onclick="JS_Recommendations.openMessage()">
-                    <img width="" height="40px" style="background-color: none;"
+                    <img width="" height="50px" style="background-color: none;"
                     src="../clients/img/icon_messager.jpg" alt="">
                 </label>
             </div>
         </span>
         <span align="right">
             <div class="input-group-btn mb-2" onclick="JS_Recommendations.openPhone()">
-                    <img width="" height="40px" style="background-color: none;"
+                    <img width="" height="50px" style="background-color: none;"
                     src="../clients/img/phone.png" alt="">
                 </label>
             </div>
@@ -141,7 +141,7 @@ if(isset($_SESSION['id'])){
         <span align="right" class="form-group input-group" style="align-items: center;"  onload="loadBell()">
             <div class="input-group-btn" onclick="readNotification()">
                 <label class="icon" for="checkbox1" style="border-radius:50px;background:#25aa33e8;">
-                    <i style="color:#ffd00f;padding:8px" id="icon-bell" class="far fa-bell fa-2x py-2 @if(isset($notification) && count($notification) > 0) animate @endif "></i>
+                    <i style="color:#ffd00f;padding:12px" id="icon-bell" class="far fa-bell fa-2x py-2 @if(isset($notification) && count($notification) > 0) animate @endif "></i>
                 </label>
             </div>
             <!-- <div>
