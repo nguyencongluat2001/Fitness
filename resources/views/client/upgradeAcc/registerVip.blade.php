@@ -266,7 +266,7 @@
 											<span>Số tài khoản thụ hưởng: <span style="color:#fff079">86 286 243 8886</span></span><br>
 											<span>Tên thụ hưởng: <span style="color:#fff079">CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN FINTOP</span></span> <br>
 											<span>Nội dung: [HỌ TÊN]_[SỐ ĐIỆN THOẠI]_[GÓI VIP1 - THỜI GIAN]</span><br>
-											<span style="color:#fff079"><b>Ví dụ: NGUYỄN VĂN A 0862348886 VIP1 3 THÁNG</b></span>
+											<span>Ví dụ:<b style="color:#fff079"> NGUYỄN VĂN A 0862348886 VIP1 3 THÁNG</b></span>
 									   </div>
 									</div>
 								</div>
