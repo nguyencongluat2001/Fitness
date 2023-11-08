@@ -314,31 +314,48 @@
 				var jsonData = JSON.parse(data);
 				var vat = parseInt(jsonData.money) + (parseInt(jsonData.money) * 10 / 100);
 				var html = '';
-				html += `<div class="text-center mt-3 mb-2 px-0"><h1 class="h5 text-uppercase pt-3 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;height:60px">Hóa đơn chi tiết</h1></div>
-						<table class="table table-bordered table-striped bg-light">
-							<colgroup><col width="5%"><col width="25%"><col width="10%"><col width="20%"><col width="20%"><col width="20%"></colgroup>
-							<thead>
-								// <th style="text-align:center;vertical-align: middle;">STT</th>
-								<th style="text-align:center;vertical-align: middle;">Tên hàng hóa<br>Dịch vụ</th>
-								<th style="text-align:center;vertical-align: middle;">Số lượng</th>
-								<th style="text-align:center;vertical-align: middle;">Đơn giá</th>
-								<th style="text-align:center;vertical-align: middle;">Thành tiền</th>
-								<th style="text-align:center;vertical-align: middle;">Thuế giá trị gia tăng (VAT 10%)</th>
-								<th style="text-align:center;vertical-align: middle;">Tổng tiền thanh toán</th>
-							</thead>
-							<tbody>
-								<tr>
-									// <td align="center">1</td>
-									<td align="center">${jsonData.name}</td>
-									<td align="center">1</td>
-									<td align="center">${parseInt(jsonData.money).toLocaleString()} VND</td>
-									<td align="center">${parseInt(jsonData.money).toLocaleString()} VND</td>
-									<td align="center">10%</td>
-									<td align="center">${vat.toLocaleString()} VND</td>
-								</tr>
-							</tbody>
-							<tfoot><tr><td colspan="10"><a target="_blank" href="">Hướng dẫn thanh toán</a></td></tr></tfoot>
-						</table>`;
+				// html += `<div class="text-center mt-3 mb-2 px-0"><h1 class="h5 text-uppercase pt-3 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;height:60px">Hóa đơn chi tiết</h1></div>
+				// 		<table class="table table-bordered table-striped bg-light">
+				// 			<colgroup><col width="5%"><col width="25%"><col width="10%"><col width="20%"><col width="20%"><col width="20%"></colgroup>
+				// 			<thead>
+				// 				// <th style="text-align:center;vertical-align: middle;">STT</th>
+				// 				<th style="text-align:center;vertical-align: middle;">Tên hàng hóa<br>Dịch vụ</th>
+				// 				<th style="text-align:center;vertical-align: middle;">Số lượng</th>
+				// 				<th style="text-align:center;vertical-align: middle;">Đơn giá</th>
+				// 				<th style="text-align:center;vertical-align: middle;">Thành tiền</th>
+				// 				<th style="text-align:center;vertical-align: middle;">Thuế giá trị gia tăng (VAT 10%)</th>
+				// 				<th style="text-align:center;vertical-align: middle;">Tổng tiền thanh toán</th>
+				// 			</thead>
+				// 			<tbody>
+				// 				<tr>
+				// 					// <td align="center">1</td>
+				// 					<td align="center">${jsonData.name}</td>
+				// 					<td align="center">1</td>
+				// 					<td align="center">${parseInt(jsonData.money).toLocaleString()} VND</td>
+				// 					<td align="center">${parseInt(jsonData.money).toLocaleString()} VND</td>
+				// 					<td align="center">10%</td>
+				// 					<td align="center">${vat.toLocaleString()} VND</td>
+				// 				</tr>
+				// 			</tbody>
+				// 			<tfoot><tr><td colspan="10"><a target="_blank" href="">Hướng dẫn thanh toán</a></td></tr></tfoot>
+				// 		</table>`;
+				if(jsonData.code == 'VIP1_3'){
+					html += `<div class="m-auto py-4 mb-2 mb-sm-4 shadow-lg">
+							<img class="card-img " src="../clients/img/vip1_3.PNG" alt="Card image" style="width:100%">
+						</div>`;
+				}
+				if(jsonData.code == 'VIP1_6'){
+					html += `<div class="m-auto py-4 mb-2 mb-sm-4 shadow-lg">
+							<img class="card-img " src="../clients/img/vip1_6.PNG" alt="Card image" style="width:100%">
+						</div>`;
+				}
+				if(jsonData.code == 'VIP1_12'){
+					html += `<div class="m-auto py-4 mb-2 mb-sm-4 shadow-lg">
+							<img class="card-img " src="../clients/img/vip1_12.PNG" alt="Card image" style="width:100%">
+						</div>`;
+				}
+						
+						
 			$("#view_package").html(html);
 			}
 		})
