@@ -58,8 +58,8 @@ class ApprovePaymentController extends Controller
             $objResult[$key]->email = $users->email;
             $dataJson = json_decode($value['package']);
             $vat = 0;
-            if($dataJson->money > 0){
-                $vat = $dataJson->money/10;
+            if(!empty($dataJson->money) && $dataJson->money > 0){
+                $vat = $dataJson->money/10; 
             }
             $money_vat = $dataJson->money+$vat;
             $objResult[$key]->money_vat = $money_vat;
