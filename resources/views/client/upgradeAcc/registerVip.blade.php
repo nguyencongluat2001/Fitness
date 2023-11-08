@@ -129,16 +129,15 @@
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
 							<div class="pricing-table-body card-body text-center">
-								<div class="bg-secondary" style="border-radius: 0.5em;">
-									<label>
-										<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">1.500.000 VND</span></h2>
-										<br>
-										<div class="pricing-table-footer py-2">
-											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										</div>
-									</label>
-								</div>
+								<label class="bg-secondary vip_package" style="width:100%; border-radius: 0.5em;">
+									<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">1.500.000 VND</span></h2>
+									<br>
+									<div class="pricing-table-footer py-2">
+										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP1 (3 tháng)", "money": "1500000"}'>
+									</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -146,16 +145,15 @@
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
 							<div class="pricing-table-body card-body text-center">
-								<div class="bg-secondary" style="border-radius: 0.5em;">
-									<label>
-										<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
-										<br>
-										<div class="pricing-table-footer py-2">
-											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										</div>
-									</label>
-								</div>
+								<label class="bg-secondary vip_package" style="width:100%; border-radius: 0.5em;">
+									<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
+									<br>
+									<div class="pricing-table-footer py-2">
+										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP1 (6 tháng)", "money": "2500000"}'>
+									</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -164,16 +162,15 @@
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
 							<div class="pricing-table-body card-body text-center">
-								<div class="bg-secondary" style="border-radius: 0.5em;">
-									<label>
-										<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
-										<br>
-										<div class="pricing-table-footer py-2">
-											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										</div>
-									</label>
-								</div>
+								<label class="bg-secondary vip_package" style="width:100%; border-radius: 0.5em;">
+									<i style="color:#ffffff;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP1 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
+									<br>
+									<div class="pricing-table-footer py-2">
+										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP1 (12 tháng)", "money": "4500000"}'>
+									</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -193,16 +190,15 @@
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
 							<div class="pricing-table-body card-body text-center">
-								<div class="bg-secondary" style="border-radius: 0.5em;">
-									<label>
-										<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
-										<br>
-										<div class="pricing-table-footer py-2">
-											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										</div>
-									</label>
-								</div>
+								<label class="bg-secondary vip_package" style="width:100%; border-radius: 0.5em;">
+									<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (3 tháng) <br><span style="color:#ffce2b;font-size: 18px;">2.500.000 VND</span></h2>
+									<br>
+									<div class="pricing-table-footer py-2">
+										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP2 (3 tháng)", "money": "2500000"}'>
+									</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -210,16 +206,15 @@
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
 							<div class="pricing-table-body card-body text-center">
-								<div class="bg-secondary" style="border-radius: 0.5em;">
-									<label>
-										<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
-										<br>
-										<div class="pricing-table-footer py-2">
-											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										</div>
-									</label>
-								</div>
+								<label class="bg-secondary vip_package" style="width:100%; border-radius: 0.5em;">
+									<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (6 tháng) <br><span style="color:#ffce2b;font-size: 18px;">4.500.000 VND</span></h2>
+									<br>
+									<div class="pricing-table-footer py-2">
+										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP2 (6 tháng)", "money": "4500000"}'>
+									</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -228,16 +223,15 @@
 					<div class="col-md-4 px-0">
 						<div class="" style="background:">
 							<div class="pricing-table-body card-body text-center">
-								<div class="bg-secondary" style="border-radius: 0.5em;">
-									<label>
-										<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-										<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">8.000.000 VND</span></h2>
-										<br>
-										<div class="pricing-table-footer py-2">
-											<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
-										</div>
-									</label>
-								</div>
+								<label class="bg-secondary vip_package" style="width:100%; border-radius: 0.5em;">
+									<i style="color:#ffde45;font-size: 50px;" class="pricing-table-icon display-3 bx bx-package py-3"></i>
+									<h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">VIP2 (12 tháng) <br><span style="color:#ffce2b;font-size: 18px;">8.000.000 VND</span></h2>
+									<br>
+									<div class="pricing-table-footer py-2">
+										<input type="radio" name="pack_vip" style="transform: scale(2);accent-color: #25aa33e8;">
+										<input type="hidden" name="package" value='{"name": "VIP2 (12 tháng)", "money": "8000000"}'>
+									</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -245,6 +239,7 @@
 					</div> -->
 				</div>
 				@endif
+				<div class="row px-5 mx-1" id="view_package"></div>
 				<div class="row px-5">
 					<div class="form-group pt-4" id="div_hinhthucgiai">
 						<div class="col-md-12">
@@ -309,4 +304,38 @@
 			reader.readAsDataURL(input.files[0]);
 		}
 	}
+	jQuery(document).ready(function(){
+		$(".vip_package").click(function(){
+			var data = $(this).find("input[name='package']").val();
+			if(data != undefined){
+				var jsonData = JSON.parse(data);
+				var vat = parseInt(jsonData.money) + (parseInt(jsonData.money) * 10 / 100);
+				var html = '';
+				html += `<div class="text-center mt-3 mb-2 px-0"><h1 class="h5 text-uppercase py-1 my-0" style="background-color: #031f38;border-radius: 1rem;color:#fff;">Hóa đơn chi tiết</h1></div>
+						<table class="table table-bordered table-striped bg-light">
+							<colgroup><col width="5%"><col width="25%"><col width="10%"><col width="20%"><col width="20%"><col width="20%"></colgroup>
+							<thead>
+								<th style="text-align:center;vertical-align: middle;">STT</th>
+								<th style="text-align:center;vertical-align: middle;">Tên sản phẩm<br>Dịch vụ</th>
+								<th style="text-align:center;vertical-align: middle;">Số lượng</th>
+								<th style="text-align:center;vertical-align: middle;">Thành tiền</th>
+								<th style="text-align:center;vertical-align: middle;">Thuế GTGT (VAT) 10%</th>
+								<th style="text-align:center;vertical-align: middle;">Tổng thanh toán</th>
+							</thead>
+							<tbody>
+								<tr>
+									<td align="center">1</td>
+									<td align="center">${jsonData.name}</td>
+									<td align="center">1</td>
+									<td align="center">${parseInt(jsonData.money).toLocaleString()} VND</td>
+									<td align="center">10%</td>
+									<td align="center">${vat.toLocaleString()} VND</td>
+								</tr>
+							</tbody>
+							<tfoot><tr><td colspan="10"><a target="_blank" href="">Hướng dẫn thanh toán</a></td></tr></tfoot>
+						</table>`;
+			$("#view_package").html(html);
+			}
+		})
+	})
 </script>
