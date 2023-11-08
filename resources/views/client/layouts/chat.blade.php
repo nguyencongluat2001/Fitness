@@ -15,7 +15,7 @@ if(isset($_SESSION['id'])){
         -moz-transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
         animation: road-animates 1s linear infinite;
-        -webkit-animation: swing 0.05s linear infinite;
+        -webkit-animation: swing 0.09s linear infinite;
         -moz-animation: swing 1s linear infinite;
         -o-animation: swing 1s linear infinite;
         transform-origin: center top;
