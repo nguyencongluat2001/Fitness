@@ -18,7 +18,7 @@
     min-width: 0px;
 }
 
-#main-root::after{
+#main-root::after {
     content: '';
     width: calc(100% - 10rem);
     border-top: 2px solid red;
@@ -28,7 +28,6 @@
     margin-top: 1px;
 }
 
-/*right tree*/
 .branch {
     position: relative;
     margin-left: 250px;
@@ -203,8 +202,81 @@
     color: #fff079;
 }
 
-/* Khách hàng nói gì về fintop */
-.customer_reviews{
+/* II.  */
+.center {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --menu-rotation: 0deg;
+    transform: rotate(var(--menu-rotation));
+}
+
+.menu .center {
+    transform: rotate(calc(-1 * var(--menu-rotation)));
+}
+
+.menu .axis {
+    position: absolute;
+    width: 100px;
+    left: 100px;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform-origin: 0 0;
+    transform: rotate(var(--axis-rotation));
+}
+
+.axis>* {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    transform: rotate(calc(calc(-1 * var(--axis-rotation)) - var(--menu-rotation)));
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.axis .active {
+    background-color: #212121;
+    color: white;
+}
+
+.menu,
+.menu .center,
+.menu .axis,
+.menu .axis>* {
+    transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+}
+
+.controls {
+    z-index: 1;
+    position: relative;
+}
+
+.controls button {
+    cursor: pointer;
+}
+
+/* III. Khách hàng nói gì về fintop */
+.customer_reviews {
     position: relative;
     border-width: 1px 3px 1px 3px;
     border-style: solid;
@@ -212,22 +284,27 @@
     border-radius: 10px;
     background-color: #ff767d;
 }
-.customer_reviews .text-review{
+
+.customer_reviews .text-review {
     min-height: 200px;
 }
+
 .customer_reviews img {
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
 }
-.customer_reviews ul{
+
+.customer_reviews ul {
     padding-left: 0 !important;
     margin-bottom: 0 !important;
 }
-.customer_reviews ul li{
+
+.customer_reviews ul li {
     list-style: none;
 }
-.customer_reviews .icon{
+
+.customer_reviews .icon {
     position: absolute;
     top: -1.5rem;
     left: 3rem;
@@ -240,21 +317,25 @@
     justify-content: center;
     color: #fff;
 }
+
 @media (max-width:768px) {
-    .customer_reviews{
+    .customer_reviews {
         margin-bottom: 2rem;
     }
 }
+
 @media (max-width:576px) {
-    .customer_reviews{
+    .customer_reviews {
         margin-bottom: 2rem;
     }
 }
+
 @media (max-width:450px) {
-    .customer_reviews{
+    .customer_reviews {
         margin-bottom: 2rem;
     }
-    .customer_reviews img{
+
+    .customer_reviews img {
         width: 4rem;
         height: 4rem;
     }

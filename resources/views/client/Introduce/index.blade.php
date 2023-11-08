@@ -11,6 +11,17 @@
         font-weight: 600;
         font-size: 16px;
     }
+    .home_index_child .first,.home_index_child .three{
+        margin-top: 5rem;
+    }
+    @media (max-width: 450px) {
+        .home_index_child .offset-2{
+            margin-left: 0;
+        }
+        .home_index_child .first,.home_index_child .three{
+            margin-top: 0;
+        }
+    }
 </style>
 <section class="container">
     <div class=" pb-3 d-lg-flex gx-5">
@@ -61,7 +72,6 @@
                             <div class="col-lg-6 text-start">
                                 <h1 class="h5 pb-5">II. ĐỘI NGŨ CHUYÊN GIA FINTOP</h1>
                             </div>
-
                             <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:10%">
                                 <!-- <div class="col-lg-3">
                                 <h2 class="h2 py-5 typo-space-line">Cố vấn đầu tư</h2>
@@ -71,7 +81,7 @@
                                 </p>
                             </div> -->
                                 <div class="col-lg-12 row align-items-center">
-                                    <div class="team-member col-md-4">
+                                    <div class="team-member col-md-4 first">
                                         <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/team-03.jpg" alt="Card image">
                                         <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
                                             <li class="name_cg"> (Ông) Lê Văn Long</li>
@@ -87,7 +97,7 @@
                                             <li>Dữ liệu chứng khoán FinTop.data</li>
                                         </ul>
                                     </div>
-                                    <div class="team-member col-md-4">
+                                    <div class="team-member col-md-4 three">
                                         <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/team-03.jpg" alt="Card image">
                                         <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
                                             <li class="name_cg">(Ông) Nguyễn Mạnh Tuấn</li>
@@ -95,29 +105,26 @@
                                             <li>Dữ liệu chứng khoán FinTop.data</li>
                                         </ul>
                                     </div>
-                                    <div class="team-member col-md-4">
-                                        <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/team-03.jpg" alt="Card image">
-                                        <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                                            <li class="name_cg">(Ông) Trần Khánh Linh</li>
-                                            <li>Chuyên gia phân tích</li>
-                                            <li>Cán bộ đào tạo & phát triển</li>
-                                            <li>Năng lực tư vấn đầu tư FinTop</li>
-                                        </ul>
-                                    </div>
-                                    <div class="team-member col-md-4">
-                                        <!-- <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/team-02.jpg" alt="Card image"> -->
-                                        <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                                            <!-- <li>(Đội ngũ Chuyên gia FinTop)</li> -->
-                                        </ul>
-                                    </div>
-                                    <div class="team-member col-md-4">
-                                        <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/team-02.jpg" alt="Card image">
-                                        <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
-                                            <li class="name_cg">(Bà) Nguyễn Minh Hạnh</li>
-                                            <li>Master of Science Economics and Strategy</li>
-                                            <li>(FSU JENA ,Germany)</li>
-                                            <li>Chuyên gia phân tích & cố vấn đầu tư FinTop</li>
-                                        </ul>
+                                    <div class="col-md-8 offset-2 row px-0">
+                                        <div class="team-member col-md-6">
+                                            <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/team-03.jpg" alt="Card image">
+                                            <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                                                <li class="name_cg">(Ông) Trần Khánh Linh</li>
+                                                <li>Chuyên gia phân tích</li>
+                                                <li>Cán bộ đào tạo & phát triển</li>
+                                                <li>Năng lực tư vấn đầu tư FinTop</li>
+                                            </ul>
+                                        </div>
+                                        <div class="team-member col-md-6">
+                                            <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/team-03.jpg" alt="Card image">
+                                            <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                                                <li class="name_cg">(Bà) Nguyễn Minh Hạnh</li>
+                                                <li>Master of Science Economics and Strategy</li>
+                                                <li>(FSU JENA ,Germany)</li>
+                                                <li>Chuyên gia phân tích & cố vấn đầu tư FinTop</li>
+                                            </ul>
+                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -249,5 +256,60 @@
 <script>
     NclLib.menuActive('.link-introduce');
     NclLib.loadding();
+    jQuery(document).ready(function() {
+        const axes = [...document.querySelectorAll('.axis')];
+        axes.forEach((axis, i) => {
+            const angle = 360 * i / axes.length;
+            axis.style.setProperty('--axis-rotation', `${angle}deg`);
+            axis.querySelector('div').addEventListener('click', rotateToTop);
+        })
+        let rotation = -90; // change it to adjust the initial position of buttons
+        updateMenuRotation(rotation);
+
+        function updateMenuRotation(deg) {
+            document.querySelector('.menu').style
+                .setProperty('--menu-rotation', `${deg}deg`);
+        }
+
+        function rotateToTop(e) {
+            const button = e.target;
+            if (button) {
+                [...document.querySelectorAll('.axis > div.active')]
+                .forEach(el => el.classList.remove('active'));
+                button.classList.add('active');
+                rotateMenu(
+                    minStepsToTop(
+                        getRotation('axis', button),
+                        getRotation('menu', button),
+                        axes.length
+                    )
+                );
+            }
+        }
+
+        function minStepsToTop(aR, mR, aL) {
+            // aR => axisRotatin
+            // mR => menuRotation
+            // aL => axis.length
+            // angle => 360 / aL
+            // stepsFromMenu => (((mR + 360) % 360) + 90) / angle;
+            // stepsFromAxis => Math.round(aR / angle);
+            // totalSteps => Math.round((((mR + 360) % 360) + 90) + aR) / angle);
+            const totalSteps = Math.round(((((mR + 360) % 360) + 90) + aR) * aL / 360);
+            // console.log(totalSteps);
+            // totalSteps as closest number to 0 (positive or negative)
+            const maxAbsoluteSteps = Math.floor(aL / 2); // 5 => 2; 6 => 3; 7 => 3, etc...
+            return -(((totalSteps + maxAbsoluteSteps + aL) % aL) - maxAbsoluteSteps);
+        }
+
+        function getRotation(type, target) {
+            return +(getComputedStyle(target).getPropertyValue(`--${type}-rotation`).replace('deg', ''));
+        }
+
+        function rotateMenu(steps) {
+            rotation += 360 * steps / axes.length;
+            updateMenuRotation(rotation);
+        }
+    })
 </script>
 @endsection
