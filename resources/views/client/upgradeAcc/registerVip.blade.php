@@ -41,9 +41,20 @@
 		color: #ffffff;
 		padding-left: 20px;
 	}
+	.objective .objective-box{
+		display: flex;
+	}
+	@media (max-width: 576px){
+		.objective .objective-box{
+			display: block;
+		}
+	}
 	@media (max-width: 450px){
 		.mt-sm-3 {
 			margin-top: 1rem!important;
+		}
+		.objective .objective-box{
+			display: block;
 		}
 	}
 </style>
@@ -255,7 +266,7 @@
 						<!-- <div id="bank" class="hiddel"> -->
 							<div class="row">
 								<div class="objective col-lg-12">
-									<div style="background-color: #031f38;color: #ffffff;font-weight: 500;padding:15px;width:100%;height:100%;border-radius:5px;display:flex">
+									<div class="objective-box" style="background-color: #031f38;color: #ffffff;font-weight: 500;padding:15px;width:100%;height:100%;border-radius:5px">
 									   <div class="col-md-4 px-0">
 										<div class="objective-icon m-auto mb-2 mb-sm-4 shadow-lg">
 												<img class="card-img " src="../clients/img/qrMbFintop.jpg" alt="Card image" style="width:100%">

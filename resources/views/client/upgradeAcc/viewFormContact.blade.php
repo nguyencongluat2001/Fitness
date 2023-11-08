@@ -26,7 +26,15 @@
 		border-radius: 0.5em;
 		cursor: pointer;
 	}
-</style>
+	@media (max-width: 450px) {	
+		#frmAdd_updateAcc .offset-3{
+			margin-left: 0;
+		}
+		.list-unstyled .icon{
+			/* justify-content: center; */
+		}
+	}
+	</style>
 <link rel="stylesheet" href="../clients/css/style.css">
 
 <form id="frmAdd_updateAcc" role="form" enctype="multipart/form-data">
@@ -59,7 +67,7 @@
 											<span style="font-size: 1.25rem;"> hoặc Zalo Chat <a style="font-size: 1.25rem;color:#fff079">FinTop</a> để được hỗ trợ tư vấn.</span>
 										</li>
 										<br>
-										<li class="d-flex">
+										<li class="d-flex icon">
 											<div class="py-3 col-md-6">
 												<img src="{{url('/clients/img/zalo.png')}}" alt="Image" width="100px" height="100px">
 											</div>
