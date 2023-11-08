@@ -44,7 +44,7 @@ class ApprovePaymentModel extends Model
                 return $query;
             case 'type':
                 if(!empty($value)){
-                    $query->where('type', $value);
+                    $query->where('role_client', $value);
                 }
                 return $query;
             case 'fromdate':

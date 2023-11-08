@@ -53,7 +53,13 @@ class ApprovePaymentController extends Controller
                 $status_name = 'Đã phê duyệt';
             }
             $objResult[$key]->status_name = $status_name;
-
+            $objResult[$key]->phone = $users->phone;
+            $objResult[$key]->address = $users->address;
+            $objResult[$key]->email = $users->email;
+            $dataJson = json_decode($value['package']);
+            $vat = $dataJson->money/10;
+            $money_vat = $dataJson->money+$vat;
+            $objResult[$key]->money_vat = $money_vat;
         }
         $data['datas'] = $objResult;
         return view('dashboard.approvePayment.loadList', $data)->render();

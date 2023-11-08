@@ -16,13 +16,8 @@
                 <td align="center"><input type="checkbox" name="chk_all_item_id"
                         onclick="checkbox_all_item_id(document.forms[0].chk_item_id);"></td>
                 <td align="center"><b>STT</b></td>
-                <td align="center"><b>Ngày đăng ký</b></td>
-                <td align="center"><b>Tên khách hàng</b></td>
-                <!-- <td align="center"><b>Người giới thiệu</b></td> -->
+                <td align="center"><b>Thông tin</b></td>
                 <td align="center"><b>Gói nâng cấp</b></td>
-                <td align="center"><b>Loại Banking</b></td>
-                <!-- <td align="center"><b>Ảnh giao dịch</b></td> -->
-                <td align="center"><b>Trạng thái</b></td>
                 <td align="center"><b>Phê duyệt</b></td>
                 <td align="center"><b>#</b></td>
             </tr>
@@ -31,27 +26,30 @@
             @if(count($datas) > 0)
                 @foreach ($datas as $key => $data)
                 @php $id = $data->id; $i = 1; @endphp
+                    @if($data->status_name == 'Đã phê duyệt')
+                    <tr style="background:#04ff0033">
+                    @else
                     <tr>
+                    @endif
                         <td style="width:5% ;vertical-align: middle;" align="center" ><input type="checkbox" name="chk_item_id"
                                 value="{{ $data->id }}"></td>
                         <td style="width:5% ;vertical-align: middle;" align="center" >{{($datas->currentPage() - 1)*$datas->perPage() + ($key + 1)}}</td>
-                        <!-- <td onclick="{select_row(this);}">{{ isset($data->users->name) ? $data->users->name : '' }}</td> -->
-                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->created_at) ? $data->created_at : '' }}</td>
-                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->user_name) ? $data->user_name : '' }}</td>
-                        <td style="width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}">{{ isset($data->role) ? $data->role : '' }}</td>
                         <!-- <td style="white-space: inherit;vertical-align: middle;" align="center">{{ isset($data->money) ? $data->money : '' }}</td> -->
-                        @if($data->type_payment == 'BANK')
-                        <td style="width:15% ;color:#00ab5f;white-space: inherit;vertical-align: middle;" align="center">Ngân hàng</td>
-                        @else
-                        <td style="width:15% ;color:#ff00c5;white-space: inherit;vertical-align: middle;" align="center">MoMo</td>
-                        @endif
-                        <!-- <td style="width:20%;vertical-align: middle;" align="center"><img  src="{{url('/file-payment/')}}/{{ !empty($data->image)?$data->image:'' }}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;"></td> -->
-                        <!-- <td onclick="{select_row(this);}" align="center">{{ isset($data->categorys->name_category) ? $data->categorys->name_category : '' }}</td> -->
-                        @if($data->status == 1) 
-                        <td style="color:#11ab00;width:20% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center"><b>{{ $data->status_name }}</b></td>
-                        @else 
-                        <td style="color:red;width:15% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center"><b>{{ $data->status_name }}</b></td>
-                        @endif
+                        <td style="width:35% ;color:#00ab5f;white-space: inherit;vertical-align: middle;">
+                            <span>Tên khách hàng: {{ isset($data->user_name) ? $data->user_name : '' }}</span> <br>
+                            <span>Số điện thoại: {{ isset($data->phone) ? $data->phone : '' }}</span><br>
+                            <span>Email: {{ isset($data->email) ? $data->email : '' }}</span><br>
+                            <span>Địa chỉ: {{ isset($data->address) ? $data->address : '' }}</span><br>
+                        </td>
+                        <?php $dataJson = json_decode($data->package);
+                         ?>
+                        <td style="width:35% ;color:#00ab5f;white-space: inherit;vertical-align: middle;">
+                            <span>Gói nâng cấp: {{ isset($dataJson->name) ? $dataJson->name : '' }}</span> <br>
+                            <span>Giá giói: <span style="color:#ffcd6a;font-weight">{{ isset($dataJson->money) ? number_format($dataJson->money,0, '', ',') : '' }}</span>  đ</span><br>
+                            <span>Thành tiền (+10% VAT): <span style="color:#ffcd6a;font-weight">{{ isset($data->money_vat) ? number_format($data->money_vat,0, '', ',') : '' }}</span> đ</span><br>
+                            <span>Trạng thái: {{ isset($data->status_name) ? $data->status_name : '' }}</span><br>
+
+                        </td>
                         <td style="width:5% ;vertical-align: middle;" align="center" onclick="{select_row(this);}" align="center">
                             <label class="custom-control custom-checkbox p-0 m-0 pointer " style="cursor: pointer;">
                                 <input type="checkbox" hidden class="custom-control-input toggle-status" id="status_{{$id}}" data-id="{{$id}}" {{ $data->status == 1 ? 'checked' : '' }}>

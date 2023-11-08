@@ -49,7 +49,7 @@
 </style>
 <link rel="stylesheet" href="../clients/css/style.css">
 
-<form id="frmAdd_updateAcc" role="form" action="" method="POST" enctype="multipart/form-data">
+<form id="frmAdd_updateAcc" role="form" action="" method="POST" enctype="multipart/form-data" >
 	@csrf
 	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 	<input type="hidden" name="id" id="id" value="{{!empty($data['users']->id)?$data['users']->id:''}}">
@@ -239,9 +239,9 @@
 					</div> -->
 				</div>
 				@endif
-				<div class="row px-5 mx-1" id="view_package"></div>
-				<div class="row px-5">
-					<div class="form-group pt-4" id="div_hinhthucgiai">
+				<div class="px-5 mx-1" id="view_package"></div>
+				<div class=" px-5 mx-1">
+					<div class="form-group" id="div_hinhthucgiai">
 						<!-- <div class="col-md-12">
 							<label style="color:#ffffff;font-size:20px;font-family: math;" for="">Chọn hình thức thanh toán <span class="request_star">*</span></label> <br>
 						</div> -->
@@ -256,14 +256,14 @@
 							<div class="row">
 								<div class="objective col-lg-12">
 									<div style="background-color: #031f38;color: #ffaf00;font-weight: 500;padding:15px;width:100%;height:100%;border-radius:5px">
-										<div class="objective-icon m-auto py-4 mb-2 mb-sm-4 shadow-lg">
+										<div class="objective-icon m-auto mb-2 mb-sm-4 shadow-lg">
 											<img class="card-img " src="../clients/img/qrluatnc.jpg" alt="Card image" style="width:100%">
 										</div>
-										<span>Số Tài khoản: 09787127981299</span><br>
-										<span>Ngân Hàng: Ngân hàng Thương mại cổ phần kỹ Thương Việt Nam (techcombank)</span><br>
+										<span>Số TKNH thụ hưởng: 86 286 234 8886</span><br>
+										<span>Ngân Hàng: MBBank - Ngân hàng Thương mại cổ phần Quân đội.</span><br>
 										<span>Tên: Nguyễn Công Luật</span> <br>
-										<span>Nội dung thanh toán:Tên khách hàng - số điện thoại</span><br>
-
+										<span>Nội dung: [HỌ TÊN]_[SỐ ĐIỆN THOẠI]_[GÓI VIP1 - THỜI GIAN]</span><br>
+										<span><b>Ví dụ: NGUYỄN VĂN A 0862348886 VIP1 3 THÁNG</b></span>
 									</div>
 								</div>
 							</div>
@@ -352,6 +352,21 @@
 				if(jsonData.code == 'VIP1_12'){
 					html += `<div class="m-auto py-4 mb-2 mb-sm-4 shadow-lg">
 							<img class="card-img " src="../clients/img/vip1_12.PNG" alt="Card image" style="width:100%">
+						</div>`;
+				}
+				if(jsonData.code == 'VIP2_3'){
+					html += `<div class="m-auto py-4 mb-2 mb-sm-4 shadow-lg">
+							<img class="card-img " src="../clients/img/vip2_3.PNG" alt="Card image" style="width:100%">
+						</div>`;
+				}
+				if(jsonData.code == 'VIP2_6'){
+					html += `<div class="m-auto py-4 mb-2 mb-sm-4 shadow-lg">
+							<img class="card-img " src="../clients/img/vip2_6.PNG" alt="Card image" style="width:100%">
+						</div>`;
+				}
+				if(jsonData.code == 'VIP2_12'){
+					html += `<div class="m-auto py-4 mb-2 mb-sm-4 shadow-lg">
+							<img class="card-img " src="../clients/img/vip2_12.PNG" alt="Card image" style="width:100%">
 						</div>`;
 				}
 						

@@ -17,7 +17,7 @@ class ApprovePaymentService extends Service
         return ApprovePaymentRepository::class;
     }
     /**
-     * Cập nhật tín hiệu mua
+     *nâng cấp tài khoản
      */
     public function store($input)
     {

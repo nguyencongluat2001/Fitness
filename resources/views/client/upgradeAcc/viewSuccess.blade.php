@@ -29,10 +29,10 @@
 </style>
 <link rel="stylesheet" href="../clients/css/style.css">
 
-<form id="frmAdd_updateAcc" role="form" enctype="multipart/form-data">
+<form id="frmAdd_updateAcc" role="form" enctype="multipart/form-data" style="padding-top: 10%;">
 	@csrf
 	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
-	<div class="modal-dialog modal-lg">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
 		<div class="modal-content card" style="background:rgb(112, 14, 14)">
 			<!-- <div class="modal-header">
 				<div class="d-flex">
