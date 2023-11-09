@@ -68,7 +68,7 @@
                                     </p>
                                     <br>
 
-                                    <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:10%">
+                                    <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
                                         <div class="col-lg-12 row align-items-center" style="background:#740000;color:#fff079;border-radius:15px">
                                         <h1 class="h5 pb-2 text-center pt-5" style="color:#fff079">ĐỘI NGŨ CHUYÊN GIA FINTOP</h1>
 
@@ -76,24 +76,24 @@
                                                 <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
-                                                    <li>Chuyên gia Phân tích đầu tư FinTop</li>
-                                                    <li>Cán bộ Đào tạo & Phát triển Năng lực TVĐT</li>
+                                                    <li style="font-size: 14px">Chuyên gia Phân tích đầu tư FinTop</li>
+                                                    <li style="font-size: 14px">Cán bộ Đào tạo & Phát triển Năng lực TVĐT</li>
                                                 </ul>
                                             </div>
-                                            <div style="padding-bottom: 10%;" class="team-member col-md-4">
+                                            <div style="padding-bottom: 20%;" class="team-member col-md-4">
                                                 <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
-                                                    <li>Founder & CEO FinTop Ltd.</li>
-                                                    <li>Chuyên gia Phân tích Chiến lược & QTRR</li>
+                                                    <li style="font-size: 14px">Founder & CEO FinTop Ltd.</li>
+                                                    <li style="font-size: 14px">Chuyên gia Phân tích Chiến lược & QTRR</li>
                                                 </ul>
                                             </div>
                                             <div class="team-member col-md-4 three">
                                                 <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
-                                                    <li>Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
-                                                    <li>Thạc sĩ Kinh tế chiến lược tại Đức (FSU JENA)</li>
+                                                    <li style="font-size: 14px">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
+                                                    <li style="font-size: 14px">Thạc sĩ Kinh tế chiến lược tại Đức (FSU JENA)</li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
@@ -101,16 +101,16 @@
                                                     <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Quang Huy</li>
-                                                        <li>Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li>Phân tích Tài chính & Định giá Doanh nghiệp.</li>
+                                                        <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
+                                                        <li style="font-size: 14px">Phân tích Tài chính & Định giá Doanh nghiệp.</li>
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6">
                                                     <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
-                                                        <li>Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li>Thạc sĩ ... - CFA Level ...</li>
+                                                        <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
+                                                        <li style="font-size: 14px">Thạc sĩ ... - CFA Level ...</li>
                                                     </ul>
                                                 </div>
                                                 
