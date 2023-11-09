@@ -45,7 +45,10 @@
                                         <p class="light-300">&nbsp;&nbsp;&nbsp;<span class="name_cg"></span> FinTop - đội ngũ khát vọng, không ngừng học hỏi vươn lên, không ngừng sáng tạo, nghiên cứu, nâng cao năng lực để tạo nên giá trị, mang đến sản phẩm chuyên môn và chia sẻ cơ hội cùng khách hàng đối tác.</p>
                                         <div class="mkkmkmkmmkmkmkmmkk"> <!-- menu  -->
                                             <div id="wrapper" align="center">
-                                                <div id="root-left">
+                                            <div class="col-lg-6">
+                                                <h1 class="h5 text-center " style="background: #700e13;height: 70px;color: #fff079;border-radius: 15px;    padding-top: 20px;">FINTOP.DATA DỮ LIỆU CHO NHÀ ĐẦU TƯ</h1>
+                                            </div>
+                                                <!-- <div id="root-left"> -->
                                                     <div class="branch-inverse l1">
                                                         <div class="entry-inverse"><a href="{{ url('client/datafinancial/index') }}"><span class="label-inverse text-start">TRA CỨU XU HƯỚNG CỔ PHIẾU</span></a></div>
                                                         <div class="entry-inverse"><a href="{{ url('client/datafinancial/signalIndex') }}"><span class="label-inverse text-start">TÍN HIỆU MUA FINTOP</span></a></div>
@@ -53,8 +56,8 @@
                                                         <div class="entry-inverse"><a href="{{ url('client/about/index') }}"><span class="label-inverse text-start">BÁO CÁO PHÂN TÍCH FINTOP</span></a></div>
                                                         <div class="entry-inverse"><a href="{{ url('') }}"><span class="label-inverse text-start">CỐ VẤN 1 - 1 TỪ CHUYÊN GIA FINTOP</span></a></div>
                                                     </div>
-                                                </div>
-                                                <div id="main-root"><span class="label">FINTOP.DATA - DỮ LIỆU CHO NHÀ ĐẦU TƯ</span></div>
+                                                <!-- </div> -->
+                                                <!-- <div id="main-root"><span class="label">FINTOP.DATA - DỮ LIỆU CHO NHÀ ĐẦU TƯ</span></div> -->
                                             </div>
                                         </div>
                                         <p class="light-300">&nbsp;&nbsp;&nbsp;Với sự hỗ trợ tư vấn tận tâm 1-1, Đội ngũ FinTop sẽ đồng hành với nhà đầu tư từng bước đi trên con đường chinh phục sự thịnh vượng về tài chính. Chúng tôi tin rằng với sự nỗ lực không ngừng nghỉ, đam mê, nhiệt huyệt, đặc biệt sự đồng hành, tin tưởng và ủng hộ của Quý KH đối tác sẽ giúp Đội ngũ tiếp tục phát triển mạnh mẽ, tạo ra nhiều giá trị hơn nữa cho cộng đồng.</p>
