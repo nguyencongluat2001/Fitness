@@ -166,7 +166,7 @@
                                         </div>
                                     </div>
                                     <div class="pt-5">
-                                        <p style="background:#165c38;color:white;padding:5%;border-radius:5px" class="light-300 pt-5">
+                                        <p style="background:#001f39;color:white;padding:5%;border-radius:5px" class="light-300 pt-5">
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sau nhiều năm nghiên cứu và phát triển, 18 tháng 01 năm 2022, FinTop chính thức được thành lập.
                                             Đội ngũ Chuyên gia FinTop đã không
                                             ngừng nỗ lực trong việc nghiên cứu thị trường, phân tích dữ liệu Tài chính - Kinh tế và thấu
