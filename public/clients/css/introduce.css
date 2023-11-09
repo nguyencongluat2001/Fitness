@@ -1,0 +1,342 @@
+#root-left {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    right: 0;
+}
+
+#root-right {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#main-root {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 0px;
+}
+
+#main-root::after {
+    content: '';
+    width: calc(100% - 10rem);
+    border-top: 2px solid red;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: 1px;
+}
+
+.branch {
+    position: relative;
+    margin-left: 250px;
+}
+
+
+.branch:before {
+    content: "";
+    width: 50px;
+    border-top: 2px solid magenta;
+    position: absolute;
+    left: -100px;
+    top: 50%;
+    margin-top: 1px;
+}
+
+.entry {
+    position: relative;
+    min-height: 60px;
+    min-width: 150px;
+}
+
+.entry:before {
+    content: "";
+    height: 100%;
+    position: absolute;
+    border-left: 2px solid black;
+    left: -50px;
+}
+
+.entry:after {
+    content: "";
+    width: 50px;
+    border-top: 2px solid aqua;
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    margin-top: 1px;
+}
+
+.entry:first-child:before {
+    width: 10px;
+    height: 50%;
+    top: 50%;
+    margin-top: 2px;
+    border-radius: 10px 0 0 0;
+}
+
+
+.entry:first-child:after {
+    height: 10px;
+    border-radius: 10px 0 0 0;
+}
+
+.entry:last-child:before {
+    width: 10px;
+    height: 50%;
+    border-radius: 0 0 0 10px;
+}
+
+.entry:last-child:after {
+    height: 10px;
+    border-top: none;
+    border-bottom: 2px solid aqua;
+    border-radius: 0 0 0 10px;
+    margin-top: -10px;
+}
+
+.entry.sole:after {
+    width: 50px;
+    height: 0px;
+    margin-top: 1px;
+    border-radius: 0px
+}
+
+.entry.sole:before {
+    display: none;
+}
+
+
+.label {
+    display: block;
+    min-width: 20rem;
+    padding: 20px 10px;
+    line-height: 20px;
+    text-align: center;
+    border: 2px solid #700e13;
+    border-radius: 5px;
+    position: absolute;
+    right: -10rem;
+    top: 45%;
+    margin-top: -15px;
+    overflow-wrap: break-word;
+    background-color: #700e13;
+    color: #fff079;
+    z-index: 1;
+}
+
+/* left tree  */
+.branch-inverse {
+    position: relative;
+    margin-right: 18rem;
+}
+
+.branch-inverse:before {
+    content: "";
+    width: 80px;
+    border: 10px solid #700e13;
+    position: absolute;
+    right: -130px;
+    top: 48%;
+}
+
+.entry-inverse {
+    position: relative;
+    min-height: 60px;
+    min-width: 150px;
+}
+
+.entry-inverse:after {
+    content: "";
+    width: 100px;
+    border: 10px solid #700e13;
+    position: absolute;
+    right: -50px;
+    top: 40%;
+}
+
+.entry-inverse:before {
+    content: "";
+    height: 100%;
+    border: 10px solid #700e13;
+    position: absolute;
+    right: -50px;
+}
+
+.entry-inverse:first-child:before {
+    width: 10px;
+    height: 50%;
+    top: 50%;
+    margin-top: 2px;
+}
+
+.entry-inverse:first-child:after {
+    height: 10px;
+}
+
+.entry-inverse:last-child:before {
+    width: 10px;
+    height: 50%;
+}
+
+.entry-inverse:last-child:after {
+    height: 19px;
+    border: 10px solid #700e13;
+}
+
+.label-inverse {
+    display: block;
+    min-width: 20rem;
+    padding: 5px 10px;
+    line-height: 20px;
+    text-align: center;
+    border: 2px solid #700e13;
+    border-radius: 5px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    margin-top: -15px;
+    overflow-wrap: break-word;
+    background-color: #700e13;
+    color: #fff079;
+}
+
+/* II.  */
+.center {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --menu-rotation: 0deg;
+    transform: rotate(var(--menu-rotation));
+}
+
+.menu .center {
+    transform: rotate(calc(-1 * var(--menu-rotation)));
+}
+
+.menu .axis {
+    position: absolute;
+    width: 100px;
+    left: 100px;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transform-origin: 0 0;
+    transform: rotate(var(--axis-rotation));
+}
+
+.axis>* {
+    width: 20rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    transform: rotate(calc(calc(-1 * var(--axis-rotation)) - var(--menu-rotation)));
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+}
+
+.axis .active {
+    background-color: #212121;
+    color: white;
+}
+
+.menu,
+.menu .center,
+.menu .axis,
+.menu .axis>* {
+    transition: transform .35s cubic-bezier(.4, 0, .2, 1);
+}
+
+.controls {
+    z-index: 1;
+    position: relative;
+}
+
+.controls button {
+    cursor: pointer;
+}
+
+/* III. Khách hàng nói gì về fintop */
+.customer_reviews {
+    position: relative;
+    border-width: 1px 3px 1px 3px;
+    border-style: solid;
+    border-color: #700e13;
+    border-radius: 10px;
+    background-color: #ff767d;
+}
+
+.customer_reviews .text-review {
+    min-height: 200px;
+}
+
+.customer_reviews img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.customer_reviews ul {
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.customer_reviews ul li {
+    list-style: none;
+}
+
+.customer_reviews .icon {
+    position: absolute;
+    top: -1.5rem;
+    left: 3rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: #2c4077;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+@media (max-width:768px) {
+    .customer_reviews {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width:576px) {
+    .customer_reviews {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width:450px) {
+    .customer_reviews {
+        margin-bottom: 2rem;
+    }
+
+    .customer_reviews img {
+        width: 4rem;
+        height: 4rem;
+    }
+}
