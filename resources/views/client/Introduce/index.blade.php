@@ -190,13 +190,13 @@
                                 <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div class="text-review pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                                        <div style="color:#ffffff"class="pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
                                             <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="">
-                                            <span class="ms-3 d-flex align-items-center" style="min-height: 80px;">
+                                            <span style="color:#700E13" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
-                                                    <li><b>(Ông) Lê Văn Long</b></li>
+                                                    <li style="color:#700E13"><b>(Ông) Lê Văn Long</b></li>
                                                     <li>Chuyên gia phân tích - Giám đốc tư vấn đầu tư</li>
                                                     <li>Công ty cổ phần chứng khoán VPS</li>
                                                 </ul>
@@ -207,13 +207,13 @@
                                 <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div class="text-review pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                                        <div style="color:#ffffff"class="pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
                                             <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="">
-                                            <span class="ms-3 d-flex align-items-center" style="min-height: 80px;">
+                                            <span style="color:#700E13" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
-                                                    <li><b>(Ông) Lê Văn Long</b></li>
+                                                    <li style="color:#700E13"><b>(Ông) Lê Văn Long</b></li>
                                                     <li>Chuyên gia phân tích - Giám đốc tư vấn đầu tư</li>
                                                     <li>Công ty cổ phần chứng khoán VPS</li>
                                                 </ul>
@@ -224,13 +224,13 @@
                                 <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div class="text-review pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        <div style="color:#ffffff"class="pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
                                             <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="">
-                                            <span class="ms-3 d-flex align-items-center" style="min-height: 80px;">
+                                            <span style="color:#700E13" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
-                                                    <li><b>(Ông) Lê Văn Long</b></li>
+                                                    <li style="color:#700E13"><b>(Ông) Lê Văn Long</b></li>
                                                     <li>Chuyên gia phân tích - Giám đốc tư vấn đầu tư</li>
                                                     <li>Công ty cổ phần chứng khoán VPS</li>
                                                 </ul>
