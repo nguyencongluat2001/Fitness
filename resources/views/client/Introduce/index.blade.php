@@ -70,11 +70,13 @@
                                             FinTop, đầu tư mãi đỉnh.”</i>
                                     </p>
                                     <br>
-
+                                    <center>
+                                    <div class="col-lg-6">
+                                        <h1 class="h5 text-center " style="background: #740000;height: 70px;color: #fff079;border-radius: 15px;    padding-top: 20px;">ĐỘI NGŨ CHUYÊN GIA FINTOP</h1>
+                                    </div>
+                                    </center>
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
                                         <div class="col-lg-12 row align-items-center" style="background:#740000;color:#fff079;border-radius:15px">
-                                        <h1 class="h5 pb-2 text-center pt-5" style="color:#fff079">ĐỘI NGŨ CHUYÊN GIA FINTOP</h1>
-
                                             <div class="team-member col-md-4 first">
                                                 <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
