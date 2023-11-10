@@ -207,7 +207,7 @@ use Carbon\Carbon;
                             <div class="home_index_child " style="background:#ffffffe6 !important;margin: 10px;!important">
                                 <div class="col-lg-12" style="width: 100%;">
                                 <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
-                                    <iframe style="width:100%" height="750" src="https://fireant.vn/top-symbols" 
+                                    <iframe style="width:100%" height="770" src="https://fireant.vn/top-symbols" 
                                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                                         allowfullscreen>
                                     </iframe>
