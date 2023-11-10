@@ -167,8 +167,8 @@ use Carbon\Carbon;
                 <div class="col-lg-4">
                     <form action="" method="POST" id="frmLoadlist_list">
                         <div class="home_index_vnindex">
-                            <h2 class="h4 py-2"> <span style="padding-left:5%">Chỉ số thị trường</span> </h2>
-                            <div class="home_index_child py-2">
+                            <h2 class="h4 py-2"> <span style="padding-left:5%"></span> </h2>
+                            <!-- <div class="home_index_child py-2">
                                 <div class="col-md-6">
                                     <select class="form-control input-sm chzn-select" name="type_code" id="type_code">
                                         <option value="VNINDEX">VNINDEX</option>
@@ -200,12 +200,23 @@ use Carbon\Carbon;
                                 <button id="txt_search" name="txt_search" style="background:#2e4970;color:white" type="button" class="btn"><i class="fas fa-search"></i></button>
                             </div>
                             <div class="table-responsive">
-                                <!-- Màn hình danh sách -->
                                 <div id="table-container"></div>
+
+                            </div> -->
+                             <!-- biểu đồ FireAnt -->
+                            <div class="home_index_child " style="background:#ffffffe6 !important">
+                                <div class="col-lg-12" style="padding:10px;width: 100%;">
+                                <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
+                                    <iframe style="width:100%" height="620" src="https://fireant.vn/dashboard" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                    </iframe>
+                                    <p>Nguồn theo: Fireant</p>
+                                </div>
                             </div>
                         </div>
                     </form>
-                    <div class="card mb-4 pt-3">
+                    <!-- <div class="card mb-4 pt-3">
                         <form action="" method="POST" id="frmLoadlist_Bank">
                             <div class="home_index_vnindex">
                                 <h2 class="h4 py-2 "><span style="padding-left:5%">Chứng khoán ngân hàng</span> </h2>
@@ -228,12 +239,11 @@ use Carbon\Carbon;
                                     </div>
                                 </div>
                                 <div class="table-responsive">
-                                    <!-- Màn hình danh sách cổ phiếu ngân hàng -->
                                     <div id="table-container-bank"></div>
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-8" style="padding-left:10px">
                     <!-- Start Our Work -->
@@ -248,6 +258,13 @@ use Carbon\Carbon;
                             <div class=" row d-flex ">
                                 <div class="banner-content col-lg-12 col-12 m-lg-auto text-left ">
                                     <!-- Start Our Work -->
+                                    <!-- <div class="col-lg-12" style="padding:10px;width: 100%;">
+                                        <iframe style="width:100%" height="320" src="https://fireant.vn/dashboard" 
+                                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                        </iframe>
+                                        <p>Nguồn theo: Fireant</p>
+                                    </div> -->
                                     <section class="">
                                         <table id="myTable" class="table  table-bordered table-striped table-condensed dataTable no-footer">
                                             <tbody>
