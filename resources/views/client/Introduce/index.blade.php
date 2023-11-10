@@ -76,6 +76,7 @@
                                     <div class="col-lg-6">
                                         <h1 class="h5 text-center " style="background: #740000;height: 70px;color: #fff079;border-radius: 15px;    padding-top: 20px;">ĐỘI NGŨ CHUYÊN GIA FINTOP</h1>
                                     </div>
+                                    <br>
                                     </center>
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
                                         <div class="col-lg-12 row align-items-center" style="color:#700E13;border-radius:15px">
@@ -118,16 +119,18 @@
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6">
-                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image">
+                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image" style="max-width: 67% !important">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li style="font-size: 14px;font-weight:500">TThạc sĩ Tài chính số - FinTech (Loughborough University, London, Anh).</li>
+                                                        <li style="font-size: 14px;font-weight:500">Thạc sĩ Tài chính số - FinTech</li>
+                                                        <li style="font-size: 14px;font-weight:500">(Loughborough University, London, Anh).</li>
                                                         <li style="width:90%;height:1px;background:#700E13;margin-left:5%"></li>
                                                     </ul>
                                                 </div>
                                                 
                                             </div>
+                                            <br>
                                         </div>
                                     </div>
                                 </div>
@@ -194,7 +197,7 @@
                         </div>
                     </div>
                     <div class="home_index_child" style="background:#ffffff  !important">
-                        <div class="col-lg-12" style="  padding: 20px 50px 0px 50px;">
+                        <div class="col-lg-12" style="  padding: 20px 50px 20px 50px;">
                             <div class="col-lg-6 text-start">
                                 <h1 class="h5 pb-3 text-uppercase">III. Khách hàng nói gì về fintop</h1>
                             </div>
