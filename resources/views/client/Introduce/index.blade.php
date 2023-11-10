@@ -93,7 +93,7 @@
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
                                                     <li style="font-size: 14px;font-weight:500">Founder & CEO FinTop Ltd.</li>
-                                                    <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Chiến lược & QTRR</li>
+                                                    <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Chiến lược & QTRR.</li>
                                                     <li style="width:90%;height:1px;background:#700E13;margin-left:5%"></li>
                                                 </ul>
                                             </div>
@@ -112,7 +112,7 @@
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Quang Huy</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li style="font-size: 14px;font-weight:500">Phân tích Tài chính & Định giá cổ phiếu.</li>
+                                                        <li style="font-size: 14px;font-weight:500">Phân tích Tài chính & Định giá cổ phiếu</li>
                                                         <li style="font-size: 14px;font-weight:500">Phân tích cơ bản, tiềm năng doanh nghiệp.</li>
                                                         <li style="width:90%;height:1px;background:#700E13;margin-left:5%"></li>
                                                     </ul>
