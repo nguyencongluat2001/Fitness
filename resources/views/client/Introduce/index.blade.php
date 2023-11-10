@@ -5,6 +5,7 @@
     .img-fluid {
         max-width: 70%;
         margin-left: 15%;
+        border: 5px solid #740000;;
     }
 
     .name_cg {
@@ -79,44 +80,49 @@
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
                                         <div class="col-lg-12 row align-items-center" style="color:#700E13;border-radius:15px">
                                             <div class="team-member col-md-4 first">
-                                                <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
                                                     <li style="font-size: 14px">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
                                                     <li style="font-size: 14px">Cố vấn đầu tư - Chuyên gia Phân tích TTCK.</li>
+                                                    <li style="width:100%;height:1px;background:#700E13"></li>
                                                 </ul>
                                             </div>
                                             <div style="padding-bottom: 20%;" class="team-member col-md-4">
-                                                <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
                                                     <li style="font-size: 14px">Founder & CEO FinTop Ltd.</li>
                                                     <li style="font-size: 14px">Chuyên gia Phân tích Chiến lược & QTRR</li>
+                                                    <li style="width:100%;height:1px;background:#700E13"></li>
                                                 </ul>
                                             </div>
                                             <div class="team-member col-md-4 three">
-                                                <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
                                                     <li style="font-size: 14px">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
                                                     <li style="font-size: 14px">Thạc sĩ Kinh tế chiến lược (FSU JENA, Đức).</li>
+                                                    <li style="width:100%;height:1px;background:#700E13"></li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
                                                 <div class="team-member col-md-6">
-                                                    <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                    <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Quang Huy</li>
                                                         <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
                                                         <li style="font-size: 14px">Phân tích Tài chính & Định giá doanh nghiệp.</li>
+                                                        <li style="width:100%;height:1px;background:#700E13"></li>
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6">
-                                                    <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                    <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
                                                         <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
                                                         <li style="font-size: 14px">Thạc sĩ Tài chính số - FinTech (Loughborough University, London).</li>
+                                                        <li style="width:100%;height:1px;background:#700E13"></li>
                                                     </ul>
                                                 </div>
                                                 
