@@ -118,7 +118,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6">
-                                                    <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
@@ -149,7 +149,7 @@
                                             </div>
                                             <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">Tầm nhìn</h2>
                                             <p class="light-300">
-                                                &nbsp;&nbsp;&nbsp; FinTop trở thành trung tâm Nghiên cứu -Phân Tích - Phát triển Dữ liệu đầu tư .Đội ngũ FinTop sẽ trở thành đối tác tin cậy,cố vấn đầu tư cho các Nhà Đầu Tư cá nhân và Tổ chức.
+                                                &nbsp;&nbsp;&nbsp; FinTop trở thành trung tâm Nghiên cứu - Phân Tích - Phát triển Dữ liệu đầu tư .Đội ngũ FinTop sẽ trở thành đối tác tin cậy, cố vấn đầu tư cho các Nhà Đầu Tư cá nhân và Tổ chức.
                                             </p>
                                         </div>
                                     </div>
@@ -162,7 +162,7 @@
                                             </div>
                                             <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">Sứ mệnh</h2>
                                             <p class="light-300">
-                                                &nbsp;&nbsp;&nbsp; đến nguồn thông tin, dữ liệu đầu tư hữu ích, tinh gọn, hiệu quả,cùng Nhà Đầu Tư xây dựng lộ trình,chiến lược đầu tư hướng đến mục tiêu tự do và thịnh vượng về tài chính.
+                                                &nbsp;&nbsp;&nbsp; đến nguồn thông tin, dữ liệu đầu tư hữu ích, tinh gọn, hiệu quả, cùng Nhà Đầu Tư xây dựng lộ trình, chiến lược đầu tư hướng đến mục tiêu tự do và thịnh vượng về tài chính.
                                             </p>
                                         </div>
                                     </div>
@@ -205,10 +205,11 @@
                                         <div style="color:#ffffff"class="pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="">
+                                             <img class="img-fluid rounded-circle" src="../clients/img/le_van_long.jpg" alt="Card image">
+                                            <!-- <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt=""> -->
                                             <span style="color:#700E13" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
-                                                    <li style="color:#700E13"><b>(Ông) Lê Văn Long</b></li>
+                                                    <li style="color:#700E13"><b>(Anh) Lê Văn Long</b></li>
                                                     <li>Chuyên gia phân tích - Giám đốc tư vấn đầu tư</li>
                                                     <li>Công ty cổ phần chứng khoán VPS</li>
                                                 </ul>
