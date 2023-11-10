@@ -3,8 +3,8 @@
 <link rel="stylesheet" href="{{ asset('clients/css/introduce.css') }}">
 <style>
     .img-fluid {
-        max-width: 70%;
-        margin-left: 15%;
+        max-width: 60%;
+        margin-left: 20%;
         border: 5px solid #740000;;
     }
 
@@ -89,7 +89,7 @@
                                                     <li style="width:90%;height:1px;background:#700E13;margin-left:5%"></li>
                                                 </ul>
                                             </div>
-                                            <div style="padding-bottom: 20%;" class="team-member col-md-4">
+                                            <div style="padding-bottom: 10%;" class="team-member col-md-4">
                                                 <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
@@ -119,7 +119,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6">
-                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image" style="max-width: 67% !important">
+                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image" style="max-width: 56% !important">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
