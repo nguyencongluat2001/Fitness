@@ -34,7 +34,7 @@
                 <div class="home_index_vnindex pt-1 pb-3" style="background:#b56c6cb5 !important;border-radius:0px !important">
                     <!-- phần giới thiệu FIn top -->
                     <div class="home_index_child" style="background:#ffffff  !important;">
-                        <div class="col-lg-12" style="  padding: 20px 50px 0px 50px;">
+                        <div class="col-lg-12" style="  padding: 40px 100px 0px 100px;">
                             <h1 class="h5">I. GIỚI THIỆU CHUNG</h1>
                             <div class="row d-flex">
                                 <div class="col-lg-12 text-start">
@@ -45,25 +45,26 @@
                                         <p class="light-300">&nbsp;&nbsp;&nbsp;<span class="name_cg"></span> FinTop - đội ngũ khát vọng, không ngừng học hỏi vươn lên, không ngừng sáng tạo, nghiên cứu, nâng cao năng lực để tạo nên giá trị, mang đến sản phẩm chuyên môn và chia sẻ cơ hội cùng khách hàng đối tác.</p>
                                         <div class="mkkmkmkmmkmkmkmmkk"> <!-- menu  -->
                                             <div id="wrapper" align="center">
-                                            <div class="col-lg-6">
+                                            <!-- <div class="col-lg-6">
                                                 <h1 class="h5 text-center " style="background: #700e13;height: 70px;color: #fff079;border-radius: 15px;    padding-top: 20px;">FINTOP.DATA DỮ LIỆU CHO NHÀ ĐẦU TƯ</h1>
-                                            </div>
-                                                <!-- <div id="root-left"> -->
+                                            </div> -->
+                                                <div id="root-left">
                                                     <div class="branch-inverse l1">
                                                         <div class="entry-inverse"><a href="{{ url('client/datafinancial/index') }}"><span class="label-inverse text-start">TRA CỨU XU HƯỚNG CỔ PHIẾU</span></a></div>
                                                         <div class="entry-inverse"><a href="{{ url('client/datafinancial/signalIndex') }}"><span class="label-inverse text-start">TÍN HIỆU MUA FINTOP</span></a></div>
-                                                        <div class="entry-inverse"><a href="{{ url('client/datafinancial/recommendationsIndex') }}"><span class="label-inverse text-start">KHUYẾN NGHỊ ĐẦU TU V.I.P</span></a></div>
+                                                        <div class="entry-inverse"><a href="{{ url('client/datafinancial/recommendationsIndex') }}"><span class="label-inverse text-start">KHUYẾN NGHỊ ĐẦU TƯ V.I.P</span></a></div>
                                                         <div class="entry-inverse"><a href="{{ url('client/about/index') }}"><span class="label-inverse text-start">BÁO CÁO PHÂN TÍCH FINTOP</span></a></div>
                                                         <div class="entry-inverse"><a href="{{ url('') }}"><span class="label-inverse text-start">CỐ VẤN 1 - 1 TỪ CHUYÊN GIA FINTOP</span></a></div>
                                                     </div>
-                                                <!-- </div> -->
-                                                <!-- <div id="main-root"><span class="label">FINTOP.DATA - DỮ LIỆU CHO NHÀ ĐẦU TƯ</span></div> -->
+                                                </div>
+                                                <div id="main-root"><span class="label">FINTOP.DATA - DỮ LIỆU CHO NHÀ ĐẦU TƯ</span></div>
                                             </div>
                                         </div>
+                                        <br>
                                         <p class="light-300">&nbsp;&nbsp;&nbsp;Với sự hỗ trợ tư vấn tận tâm 1-1, Đội ngũ FinTop sẽ đồng hành với nhà đầu tư từng bước đi trên con đường chinh phục sự thịnh vượng về tài chính. Chúng tôi tin rằng với sự nỗ lực không ngừng nghỉ, đam mê, nhiệt huyệt, đặc biệt sự đồng hành, tin tưởng và ủng hộ của Quý KH đối tác sẽ giúp Đội ngũ tiếp tục phát triển mạnh mẽ, tạo ra nhiều giá trị hơn nữa cho cộng đồng.</p>
                                     </div>
                                     <center>
-                                         <iframe allowfullscreen width="716" height="403" src="https://www.youtube.com/embed/V4PdhYmfQ_8" title="ĐỘI NGŨ FINTOP - CỐ VẤN ĐẦU TƯ  &amp; QUẢN LÝ TÀI SẢN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                         <iframe allowfullscreen width="916" height="403" src="https://www.youtube.com/embed/V4PdhYmfQ_8" title="ĐỘI NGŨ FINTOP - CỐ VẤN ĐẦU TƯ  &amp; QUẢN LÝ TÀI SẢN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </center>
                                      <br>
                                     <p class="text-center"><i>“FinTop, kiến tạo danh mục đầu tư bền vững. <br>
@@ -76,13 +77,13 @@
                                     </div>
                                     </center>
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
-                                        <div class="col-lg-12 row align-items-center" style="background:#740000;color:#fff079;border-radius:15px">
+                                        <div class="col-lg-12 row align-items-center" style="color:#700E13;border-radius:15px">
                                             <div class="team-member col-md-4 first">
                                                 <img class="team-member-img img-fluid rounded-circle p-4" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
-                                                    <li style="font-size: 14px">Chuyên gia Phân tích đầu tư FinTop</li>
-                                                    <li style="font-size: 14px">Cán bộ Đào tạo & Phát triển Năng lực TVĐT</li>
+                                                    <li style="font-size: 14px">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
+                                                    <li style="font-size: 14px">Cố vấn đầu tư - Chuyên gia Phân tích TTCK.</li>
                                                 </ul>
                                             </div>
                                             <div style="padding-bottom: 20%;" class="team-member col-md-4">
@@ -98,7 +99,7 @@
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
                                                     <li style="font-size: 14px">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
-                                                    <li style="font-size: 14px">Thạc sĩ Kinh tế chiến lược tại Đức (FSU JENA)</li>
+                                                    <li style="font-size: 14px">Thạc sĩ Kinh tế chiến lược (FSU JENA, Đức).</li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
@@ -107,7 +108,7 @@
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Quang Huy</li>
                                                         <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li style="font-size: 14px">Phân tích Tài chính & Định giá Doanh nghiệp.</li>
+                                                        <li style="font-size: 14px">Phân tích Tài chính & Định giá doanh nghiệp.</li>
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6">
@@ -115,7 +116,7 @@
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
                                                         <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li style="font-size: 14px">Thạc sĩ ... - CFA Level ...</li>
+                                                        <li style="font-size: 14px">Thạc sĩ Tài chính số - FinTech (Loughborough University, London).</li>
                                                     </ul>
                                                 </div>
                                                 
@@ -134,7 +135,6 @@
                             </div>
                             <div class="container my-4">
                                 <div class="row text-center" style="color:#ffffff">
-
                                     <div class="objective col-lg-4">
                                         <div style="background:#001f39;padding:15px;width:100%;height:100%;border-radius:5px">
                                             <div class="objective-icon m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg" style="background:#700e13 !important">

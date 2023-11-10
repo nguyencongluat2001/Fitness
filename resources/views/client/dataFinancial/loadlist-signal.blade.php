@@ -88,7 +88,7 @@
       <thead>
         <tr>
           <!-- <th style="white-space: inherit;vertical-align: middle;font-size: 17px;background:#fff5dc;color:#dd0000;" align="center" colspan="3"><center>NHẬP MÃ CỔ PHIẾU</center></th> -->
-          <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#fff49b;height: 80px;" align="center" colspan="12">
+          <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#700e13;color:#fff49b;height: 80px;" align="center" colspan="12">
             <center>FINTOP - DANH MỤC CỔ PHIẾU CHO TÍN HIỆU MUA</center>
           </th>
         </tr>

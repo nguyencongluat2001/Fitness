@@ -112,13 +112,13 @@
     display: block;
     min-width: 20rem;
     padding: 20px 10px;
-    line-height: 20px;
+    line-height: 60px;
     text-align: center;
     border: 2px solid #700e13;
     border-radius: 5px;
     position: absolute;
     right: -10rem;
-    top: 45%;
+    top: 40%;
     margin-top: -15px;
     overflow-wrap: break-word;
     background-color: #700e13;
@@ -132,14 +132,14 @@
     margin-right: 18rem;
 }
 
-/* .branch-inverse:before {
+.branch-inverse:before {
     content: "";
     width: 80px;
     border: 10px solid #700e13;
     position: absolute;
     right: -130px;
     top: 48%;
-} */
+}
 
 .entry-inverse {
     position: relative;
@@ -147,22 +147,22 @@
     min-width: 150px;
 }
 
-/* .entry-inverse:after {
+.entry-inverse:after {
     content: "";
     width: 100px;
     border: 10px solid #700e13;
     position: absolute;
     right: -50px;
-    top: 40%;
-} */
+    top: 50%;
+}
 
-/* .entry-inverse:before {
+.entry-inverse:before {
     content: "";
     height: 100%;
     border: 10px solid #700e13;
     position: absolute;
     right: -50px;
-} */
+}
 
 .entry-inverse:first-child:before {
     width: 10px;
@@ -189,7 +189,7 @@
     display: block;
     min-width: 20rem;
     padding: 5px 10px;
-    line-height: 20px;
+    line-height: 40px;
     text-align: center;
     border: 2px solid #700e13;
     border-radius: 5px;

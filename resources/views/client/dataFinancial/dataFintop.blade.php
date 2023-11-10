@@ -40,10 +40,10 @@
         </colgroup>
         <thead>
             <tr>
-                <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#fff5a6;color:#ef1e0b;height: 80px;" align="center" colspan="3">
+                <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#700e13;color:#fff49b;height: 80px;" align="center" colspan="3">
                     <center>NHẬP MÃ CP</center>
                 </th>
-                <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#92241a;color:#fff49b" align="center" colspan="8">
+                <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#700e13;color:#fff49b" align="center" colspan="8">
                     <center>TRA CỨU CHỨNG KHOÁN (TA - FA)</center>
                 </th>
             </tr>
