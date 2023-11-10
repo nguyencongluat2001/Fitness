@@ -83,8 +83,8 @@
                                                 <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
-                                                    <li style="font-size: 14px">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
-                                                    <li style="font-size: 14px">Cố vấn đầu tư - Chuyên gia Phân tích TTCK.</li>
+                                                    <li style="font-size: 14px;font-weight:500">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
+                                                    <li style="font-size: 14px;font-weight:500">Cố vấn đầu tư - Chuyên gia Phân tích TTCK.</li>
                                                     <li style="width:100%;height:1px;background:#700E13"></li>
                                                 </ul>
                                             </div>
@@ -92,8 +92,8 @@
                                                 <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
-                                                    <li style="font-size: 14px">Founder & CEO FinTop Ltd.</li>
-                                                    <li style="font-size: 14px">Chuyên gia Phân tích Chiến lược & QTRR</li>
+                                                    <li style="font-size: 14px;font-weight:500">Founder & CEO FinTop Ltd.</li>
+                                                    <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Chiến lược & QTRR</li>
                                                     <li style="width:100%;height:1px;background:#700E13"></li>
                                                 </ul>
                                             </div>
@@ -101,8 +101,8 @@
                                                 <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
-                                                    <li style="font-size: 14px">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
-                                                    <li style="font-size: 14px">Thạc sĩ Kinh tế chiến lược (FSU JENA, Đức).</li>
+                                                    <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
+                                                    <li style="font-size: 14px;font-weight:500">Thạc sĩ Kinh tế chiến lược (FSU JENA, Đức).</li>
                                                     <li style="width:100%;height:1px;background:#700E13"></li>
                                                 </ul>
                                             </div>
@@ -111,8 +111,8 @@
                                                     <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Quang Huy</li>
-                                                        <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li style="font-size: 14px">Phân tích Tài chính & Định giá doanh nghiệp.</li>
+                                                        <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
+                                                        <li style="font-size: 14px;font-weight:500">Phân tích Tài chính & Định giá doanh nghiệp.</li>
                                                         <li style="width:100%;height:1px;background:#700E13"></li>
                                                     </ul>
                                                 </div>
@@ -120,8 +120,8 @@
                                                     <img class="team-member-img img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
-                                                        <li style="font-size: 14px">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li style="font-size: 14px">Thạc sĩ Tài chính số - FinTech (Loughborough University, London).</li>
+                                                        <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
+                                                        <li style="font-size: 14px;font-weight:500">Thạc sĩ Tài chính số - FinTech (Loughborough University, London).</li>
                                                         <li style="width:100%;height:1px;background:#700E13"></li>
                                                     </ul>
                                                 </div>
