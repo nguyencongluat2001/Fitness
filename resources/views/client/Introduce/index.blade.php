@@ -3,9 +3,10 @@
 <link rel="stylesheet" href="{{ asset('clients/css/introduce.css') }}">
 <style>
     .img-fluid {
+        width: 12rem;
         max-width: 60%;
         /* margin-left: 20%; */
-        border: 5px solid #740000;;
+        border: 5px solid #740000;
     }
 
     .name_cg {
@@ -80,7 +81,7 @@
                                     </center>
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
                                         <div class="col-lg-12 row align-items-center" style="color:#700E13;border-radius:15px">
-                                            <div class="team-member col-md-4 first">
+                                            <div class="team-member col-md-4 first text-center">
                                                 <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
@@ -89,7 +90,7 @@
                                                     <li style="width:90%;height:1px;background:#700E13;margin-left:5%"></li>
                                                 </ul>
                                             </div>
-                                            <div style="padding-bottom: 10%;" class="team-member col-md-4">
+                                            <div style="padding-bottom: 10%;" class="team-member col-md-4 text-center">
                                                 <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
@@ -98,7 +99,7 @@
                                                     <li style="width:90%;height:1px;background:#700E13;margin-left:5%"></li>
                                                 </ul>
                                             </div>
-                                            <div class="team-member col-md-4 three">
+                                            <div class="team-member col-md-4 three text-center">
                                                 <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
@@ -108,7 +109,7 @@
                                                 </ul>
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
-                                                <div class="team-member col-md-6">
+                                                <div class="team-member col-md-6 text-center">
                                                     <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Quang Huy</li>
@@ -118,8 +119,8 @@
                                                         <li style="width:90%;height:1px;background:#700E13;margin-left:5%"></li>
                                                     </ul>
                                                 </div>
-                                                <div class="team-member col-md-6">
-                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image" style="max-width: 56% !important">
+                                                <div class="team-member col-md-6 text-center">
+                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
