@@ -4,7 +4,7 @@
 <style>
     .img-fluid {
         max-width: 60%;
-        margin-left: 20%;
+        /* margin-left: 20%; */
         border: 5px solid #740000;;
     }
 
@@ -35,7 +35,7 @@
                 <div class="home_index_vnindex pt-1 pb-3" style="background:#b56c6cb5 !important;border-radius:0px !important">
                     <!-- phần giới thiệu FIn top -->
                     <div class="home_index_child" style="background:#ffffff  !important;">
-                        <div class="col-lg-12" style="  padding: 40px 100px 0px 100px;">
+                        <div class="col-lg-12 body-introduce" style="  padding: 40px 100px 0px 100px;">
                             <h1 class="h5">I. GIỚI THIỆU CHUNG</h1>
                             <div class="row d-flex">
                                 <div class="col-lg-12 text-start">
@@ -65,7 +65,7 @@
                                         <p class="light-300">&nbsp;&nbsp;&nbsp;Với sự hỗ trợ tư vấn tận tâm 1-1, Đội ngũ FinTop sẽ đồng hành với nhà đầu tư từng bước đi trên con đường chinh phục sự thịnh vượng về tài chính. Chúng tôi tin rằng với sự nỗ lực không ngừng nghỉ, đam mê, nhiệt huyệt, đặc biệt sự đồng hành, tin tưởng và ủng hộ của Quý KH đối tác sẽ giúp Đội ngũ tiếp tục phát triển mạnh mẽ, tạo ra nhiều giá trị hơn nữa cho cộng đồng.</p>
                                     </div>
                                     <center>
-                                         <iframe allowfullscreen width="916" height="403" src="https://www.youtube.com/embed/V4PdhYmfQ_8" title="ĐỘI NGŨ FINTOP - CỐ VẤN ĐẦU TƯ  &amp; QUẢN LÝ TÀI SẢN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                         <iframe class="video-fintop" allowfullscreen width="916" height="403" src="https://www.youtube.com/embed/V4PdhYmfQ_8" title="ĐỘI NGŨ FINTOP - CỐ VẤN ĐẦU TƯ  &amp; QUẢN LÝ TÀI SẢN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </center>
                                      <br>
                                     <p class="text-center"><i>“FinTop, kiến tạo danh mục đầu tư bền vững. <br>
@@ -205,7 +205,7 @@
                                 <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div style="color:#ffffff"class="pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                                        <div style="color:#ffffff; text-align: justify;"class="pt-4 pb-3 text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
                                              <img class="img-fluid rounded-circle" src="../clients/img/le_van_long.jpg" alt="Card image">
@@ -223,7 +223,7 @@
                                 <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div style="color:#ffffff"class="pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                                        <div style="text-align: justify;color:#ffffff" class="pt-4 pb-3 text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
                                             <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="">
@@ -240,7 +240,7 @@
                                 <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div style="color:#ffffff"class="pt-4 pb-3" style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                                        <div style="text-align: justify;color:#ffffff" class="pt-4 pb-3 text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
                                             <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt="">
