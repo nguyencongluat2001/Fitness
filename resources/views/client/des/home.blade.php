@@ -106,6 +106,11 @@
     .list-unstyled .dropdown-toggle::after {
         display: none;
     }
+    .submenu-child{
+        background-color: #fff;
+        margin-bottom: 1rem;
+        padding-bottom: 5px;
+    }
 </style>
 <div class="banner-wrapper">
     <section class="container">
@@ -135,7 +140,7 @@
                                         onclick="toggleIcon(this)"
                                         >
                                         <i class="fas fa-book"></i> <span>{{ $data['name_category'] }}</span></a>
-                                    <ul class="collapse list-unstyled" id="{{ $data['code_category'] }}_{{ $data['id'] }}">
+                                    <ul class="collapse list-unstyled submenu-child" id="{{ $data['code_category'] }}_{{ $data['id'] }}">
                                         @if(isset($data['listItem']))
                                         @foreach($data['listItem'] as $k => $v)
                                         @php $id = $v['id']; @endphp

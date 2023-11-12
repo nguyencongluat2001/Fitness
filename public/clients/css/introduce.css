@@ -114,14 +114,14 @@
     padding: 20px 10px;
     line-height: 60px;
     text-align: center;
-    border: 2px solid #700e13;
+    border: 2px solid #850007;
     border-radius: 5px;
     position: absolute;
     right: -15rem;
     top: 40%;
     margin-top: -15px;
     overflow-wrap: break-word;
-    background-color: #700e13;
+    background-color: #850007;
     color: #fff079;
     z-index: 1;
 }
@@ -135,7 +135,7 @@
 .branch-inverse:before {
     content: "";
     width: 170px;
-    border: 10px solid #700e13;
+    border: 10px solid #850007;
     position: absolute;
     right: -220px;
     top: 50%;
@@ -150,7 +150,7 @@
 .entry-inverse:after {
     content: "";
     width: 112px;
-    border: 10px solid #700e13;
+    border: 10px solid #850007;
     position: absolute;
     right: -62px;
     top: 50%;
@@ -159,7 +159,7 @@
 .entry-inverse:before {
     content: "";
     height: 100%;
-    border: 10px solid #700e13;
+    border: 10px solid #850007;
     position: absolute;
     right: -62px;
 }
@@ -182,7 +182,7 @@
 
 .entry-inverse:last-child:after {
     height: 19px;
-    border: 10px solid #700e13;
+    border: 10px solid #850007;
 }
 
 .label-inverse {
@@ -191,14 +191,14 @@
     padding: 5px 10px;
     line-height: 40px;
     text-align: center;
-    border: 2px solid #700e13;
+    border: 2px solid #850007;
     border-radius: 5px;
     position: absolute;
     right: 50px;
     top: 50%;
     margin-top: -15px;
     overflow-wrap: break-word;
-    background-color: #700e13;
+    background-color: #850007;
     color: #fff079;
 }
 
@@ -280,7 +280,7 @@
     position: relative;
     border-width: 1px 3px 1px 3px;
     border-style: solid;
-    border-color: #700e13;
+    border-color: #850007;
     border-radius: 10px;
     background-color: #001f3980;
 }
@@ -311,7 +311,7 @@
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: #700e13;
+    background-color: #850007;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -328,6 +328,9 @@
 }
 .video-fintop{
     width: 100%;
+}
+.team-member-caption{
+    color: #c3000a;
 }
 
 @media (max-width:991px) {
