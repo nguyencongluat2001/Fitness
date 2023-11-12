@@ -26,33 +26,46 @@
 		border-radius: 0.5em;
 		cursor: pointer;
 	}
-	@media (max-width: 450px) {	
-		#frmAdd_updateAcc .offset-3{
+
+	@media (max-width: 450px) {
+		#frmAdd_updateAcc .offset-3 {
 			margin-left: 0;
 		}
-		.list-unstyled .icon{
+
+		.list-unstyled .icon {
 			/* justify-content: center; */
 		}
 	}
-	</style>
+</style>
 <link rel="stylesheet" href="../clients/css/style.css">
 
 <form id="frmAdd_updateAcc" role="form" enctype="multipart/form-data">
 	@csrf
 	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
-	<div class="modal-dialog modal-lg">
+	<!-- <div class="modal-dialog modal-lg"> -->
+	<div class="modal-dialog modal-dialog-centered">
 		<div class="modal-content card" style="background:#5b1313db">
 			<div class="modal-header">
-				<div class="d-flex">
-					<h5  style="width: 90%;color:#ffffff" class="modal-title">Liên hệ</h5>
-					<button type="button" class="btn btn-sm btn-close-res" style="background: #f1f2f2;width: 5%;">
-						<i class="fas fa-reply"></i>
-					</button>
+				<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
+					<center>
+						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:15px;padding-botton:10px">
+							<div class="col-md-1">
+							</div>
+							<div class="col-md-9 text-center">
+								<h2 style="font-size:28px;color:#ffffff;">LIÊN HỆ</h2>
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-sm btn-close-res" style="background: #f1f2f2;height:35px">
+									<i class="fas fa-reply"></i>
+								</button>
+							</div>
+						</div>
+					</center>
 				</div>
 			</div>
 			<div class="card-body">
-				<div class="row">
-					<div class="col-md-6 offset-3">
+				<div class="row" style="">
+					<div class="col-md-12">
 						<!-- Start Pricing List -->
 						<div class="pricing-list shadow-sm rounded-top rounded-3 py-sm-0 py-5">
 							<div class="row p-2">
@@ -61,12 +74,12 @@
 								</div> -->
 								<div class="pricing-list-body col-md-12 align-items-center pl-3">
 									<ul class="list-unstyled text-center light-300">
-										<li class="h5 mb-0" style="color:#ffffff">
+										<li class="h5 mb-0" style="color:#ffffff;background: #001f39; border-radius: 15px;padding: 15px;">
 											<span style="font-size: 1.25rem;">Liên hệ</span> Hotline
-											<span style="font-size: 1.25rem;"><b style="font-size: 1.25rem;color:#6ee0ff">086.234.8886</b></span> 
+											<span style="font-size: 1.25rem;"><b style="font-size: 1.25rem;color:#6ee0ff">086.234.8886</b></span>
 											<span style="font-size: 1.25rem;"> hoặc Zalo Chat <a style="font-size: 1.25rem;color:#fff079">FinTop</a> để được hỗ trợ tư vấn.</span>
 										</li>
-										<br>
+										<!-- <br>
 										<li class="d-flex icon">
 											<div class="py-3 col-md-6">
 												<img src="{{url('/clients/img/zalo.png')}}" alt="Image" width="100px" height="100px">
@@ -74,7 +87,7 @@
 											<div class="py-3 col-md-6">
 												<img src="{{url('/clients/img/phone.png')}}" alt="Image" width="110px" height="110px">
 											</div>
-										</li>
+										</li> -->
 									</ul>
 								</div>
 							</div>
@@ -108,6 +121,15 @@
 				</div>
 			</div>
 			<div class="modal-footer">
+				<div class="col-md-4">
+					<img src="{{url('/clients/img/zalo.png')}}" alt="Image" width="50px" height="50px">
+				</div>
+				<div class="col-md-3">
+					<img src="{{url('/clients/img/phone.png')}}" alt="Image" width="50px" height="50px">
+				</div>
+				<!-- <div class=" col-md-3">
+					<img src="http://127.0.0.1:8000/clients/img/zalo.png" alt="Image" width="50px" height="50px">
+				</div> -->
 				<div class="rounded-pillpricing-table-footer">
 					<button type="button" class="btn-close-res" style="background: aliceblue; color: #b20000;">Đóng</button>
 				</div>
