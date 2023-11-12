@@ -80,14 +80,14 @@
                                     <br>
                                     </center>
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
-                                        <div class="col-lg-12 row align-items-center" style="color:#700E13;border-radius:15px">
+                                        <div class="col-lg-12 row align-items-center" style="color:#c3000a;border-radius:15px">
                                             <div class="team-member col-md-4 first text-center">
                                                 <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
                                                     <li style="font-size: 14px;font-weight:500">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
                                                     <li style="font-size: 14px;font-weight:500">Cố vấn đầu tư - Chuyên gia Phân tích TTCK.</li>
-                                                    <li style="width:90%;height:2px;background:#700E13;margin-left:5%"></li>
+                                                    <li style="width:90%;height:2px;background:#c3000a;margin-left:5%"></li>
                                                 </ul>
                                             </div>
                                             <div style="padding-bottom: 10%;" class="team-member col-md-4 text-center">
@@ -96,7 +96,7 @@
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
                                                     <li style="font-size: 14px;font-weight:500">Founder & CEO FinTop Ltd.</li>
                                                     <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Chiến lược & QTRR.</li>
-                                                    <li style="width:90%;height:2.2px;background:#700E13;margin-left:5%"></li>
+                                                    <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                 </ul>
                                             </div>
                                             <div class="team-member col-md-4 three text-center">
@@ -105,7 +105,7 @@
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
                                                     <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
                                                     <li style="font-size: 14px;font-weight:500">Thạc sĩ Kinh tế chiến lược (FSU JENA, Đức).</li>
-                                                    <li style="width:90%;height:2px;background:#700E13;margin-left:5%"></li>
+                                                    <li style="width:90%;height:2px;background:#c3000a;margin-left:5%"></li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
@@ -116,17 +116,17 @@
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
                                                         <li style="font-size: 14px;font-weight:500">Phân tích Tài chính & Định giá cổ phiếu</li>
                                                         <li style="font-size: 14px;font-weight:500">Phân tích cơ bản, tiềm năng doanh nghiệp.</li>
-                                                        <li style="width:90%;height:2px;background:#700E13;margin-left:5%"></li>
+                                                        <li style="width:90%;height:2px;background:#c3000a;margin-left:5%"></li>
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6 text-center">
-                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" alt="Card image">
+                                                    <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" style="width:58%" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
                                                         <li style="font-size: 14px;font-weight:500">Thạc sĩ Tài chính số - FinTech</li>
                                                         <li style="font-size: 14px;font-weight:500">(Loughborough University, London, Anh).</li>
-                                                        <li style="width:90%;height:2.2px;background:#700E13;margin-left:5%"></li>
+                                                        <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                     </ul>
                                                 </div>
                                                 
@@ -206,7 +206,7 @@
                                 <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div style="color:#ffffff; text-align: justify;"class="pt-4 pb-3 text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+                                        <div style="color:#ffffff; text-align: justify;"class="pt-4 pb-3 text-content">FinTop là đơn vị uy tín chuyên cung cấp dữ liệu, kiến thức thực tế, chiến lược đầu tư và các báo cáo phân tích kịp thời, vô cùng hữu dụng cho nhà đầu tư và cả các chuyên gia về chứng khoán. Với chiến lược và cách làm chuyên nghiệp, đặc biệt Đội ngũ FinTop với nhiều năm kinh nghiệm trên thị trường sẽ giúp nhà đầu tư tối ưu hiệu quả và đạt được lợi nhuận tốt nhất trong quá trình giao dịch. Với sự hỗ trợ từ FinTop nhà đầu tư sẽ thông thái, chủ động với việc đầu tư và kỷ luật với chiến lược giao dịch đã đề ra.</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3">
                                              <img class="img-fluid rounded-circle" src="../clients/img/le_van_long.jpg" alt="Card image">
@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <!-- <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
                                         <div style="text-align: justify;color:#ffffff" class="pt-4 pb-3 text-content">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
@@ -254,7 +254,7 @@
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
