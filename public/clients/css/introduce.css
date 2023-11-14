@@ -124,6 +124,8 @@
     background-color: #850007;
     color: #fff079;
     z-index: 1;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 /* left tree  */
@@ -319,10 +321,10 @@
 }
 .customer_reviews .text-content {
     display: block;
-    height: 15rem;
+    /* height: 15rem; */
     min-height: 15rem;
     display: -webkit-box;
-    -webkit-line-clamp: 9;
+    /* -webkit-line-clamp: 9; */
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

@@ -82,7 +82,7 @@
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
                                         <div class="col-lg-12 row align-items-center" style="color:#c3000a;border-radius:15px">
                                             <div class="team-member col-md-4 first text-center">
-                                                <img class="img-fluid rounded-circle" src="../clients/img/tran_khanh_linh.jpg" alt="Card image">
+                                                <img class="img-fluid rounded-circle" src="../clients/img/tran_khanh_linh.jpg" style="width:58%" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
                                                     <li style="font-size: 14px;font-weight:500">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
@@ -91,7 +91,7 @@
                                                 </ul>
                                             </div>
                                             <div style="padding-bottom: 10%;" class="team-member col-md-4 text-center">
-                                                <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" style="width:58%" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Anh) Nguyễn Đình Hải</li>
                                                     <li style="font-size: 14px;font-weight:500">Founder & CEO FinTop Ltd.</li>
@@ -100,7 +100,7 @@
                                                 </ul>
                                             </div>
                                             <div class="team-member col-md-4 three text-center">
-                                                <img class="img-fluid rounded-circle" src="../clients/img/nguyen_minh_hanh.jpg" alt="Card image">
+                                                <img class="img-fluid rounded-circle" src="../clients/img/nguyen_minh_hanh.jpg" style="width:58%" alt="Card image">
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
                                                     <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
@@ -110,13 +110,13 @@
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
                                                 <div class="team-member col-md-6 text-center">
-                                                    <img class="img-fluid rounded-circle" src="../clients/img/nguyen_dinh_hai.jpg" alt="Card image">
+                                                    <img class="img-fluid rounded-circle" src="../clients/img/tran_quang_huy.jpg" style="width:58%" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Quang Huy</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
                                                         <li style="font-size: 14px;font-weight:500">Phân tích Tài chính & Định giá cổ phiếu</li>
                                                         <li style="font-size: 14px;font-weight:500">Phân tích cơ bản, tiềm năng doanh nghiệp.</li>
-                                                        <li style="width:90%;height:2px;background:#c3000a;margin-left:5%"></li>
+                                                        <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                     </ul>
                                                 </div>
                                                 <div class="team-member col-md-6 text-center">
@@ -214,8 +214,8 @@
                                             <span style="color:#fff" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
                                                     <li style="color:#ffe673"><b>(Anh) Lê Văn Long</b></li>
-                                                    <li>Chuyên gia phân tích - Giám đốc tư vấn đầu tư</li>
-                                                    <li>Công ty cổ phần chứng khoán VPS</li>
+                                                    <li>Giám đốc Tư vấn đầu tư</li>
+                                                    <li>Công ty Cổ phần Chứng khoán VPS.</li>
                                                 </ul>
                                             </span>
                                         </div>

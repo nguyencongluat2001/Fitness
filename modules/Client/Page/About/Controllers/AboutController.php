@@ -157,7 +157,6 @@ class AboutController extends Controller
         $data['datas']['blogDetail'] = $blogDetail;
         $data['datas']['blogImage'] = $blogImage;
         $data['datas']['type'] = $blog->code_category;
-        // dd( $data);
         return view("client.about.reader", $data)->render();
     }
     

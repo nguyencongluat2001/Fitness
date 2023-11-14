@@ -59,6 +59,25 @@ use Carbon\Carbon;
                             <div class="banner-content col-lg-12 col-md-8 m-lg-auto text-left ">
                                 <div class="row g-lg-5 mb-4">
                                     <div class="banner-wrapper w-100" style="background: #ffffff;">
+                                    <div align="right">
+                                        @if($datas['type'] == 'BAO_CAO_THTT')
+                                        <a href="{{url('/client/about/index')}}">
+                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                        </a>
+                                        @elseif($datas['type'] == 'BAO_CAO_TKP')
+                                        <a href="{{url('/client/about/session')}}">
+                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                        </a>
+                                        @elseif($datas['type'] == 'BAO_CAO_PTN')
+                                        <a href="{{url('/client/about/industry')}}">
+                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                        </a>
+                                        @elseif($datas['type'] == 'BAO_CAO_PTCP')
+                                        <a href="{{url('/client/about/stock')}}">
+                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                        </a>
+                                        @endif
+                                    </div>
                                         <div class="card-header pb-0 p-0 pt-3">
                                             <div class="">
                                                 <ul class="list-group">
@@ -74,7 +93,7 @@ use Carbon\Carbon;
                                                             </div>
                                                             <div class="col-lg-9">
                                                                 <h5 style="padding-top:10px;color:#000951;font-size: 30px;font-family: serif;font-weight: 600;">{{ $datas['blogDetail']->title }}</h5>
-                                                                <p style="color: #006849;">Đăng lúc: {{$created_at->diffForHumans($now)}}</p>
+                                                                <p style="color: #006849;">Thời gian: {{$created_at->diffForHumans($now)}}</p>
                                                             </div>
                                                         </div>
                                                     </div>
