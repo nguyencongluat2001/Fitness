@@ -87,7 +87,7 @@
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
                                                     <li style="font-size: 14px;font-weight:500">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
                                                     <li style="font-size: 14px;font-weight:500">Cố vấn đầu tư - Chuyên gia Phân tích TTCK.</li>
-                                                    <li style="width:90%;height:2px;background:#c3000a;margin-left:5%"></li>
+                                                    <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                 </ul>
                                             </div>
                                             <div style="padding-bottom: 10%;" class="team-member col-md-4 text-center">
@@ -105,7 +105,7 @@
                                                     <li class="name_cg">(Chị) Nguyễn Minh Hạnh</li>
                                                     <li style="font-size: 14px;font-weight:500">Chuyên gia Phân tích Ngành - Vĩ mô FinTop</li>
                                                     <li style="font-size: 14px;font-weight:500">Thạc sĩ Kinh tế chiến lược (FSU JENA, Đức).</li>
-                                                    <li style="width:90%;height:2px;background:#c3000a;margin-left:5%"></li>
+                                                    <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
@@ -151,9 +151,9 @@
                                             <div class="objective-icon m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg" style="background:#700e13 !important">
                                                 <i class="fab fa-wpexplorer text-light fa-3x"></i>
                                             </div>
-                                            <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">Tầm nhìn</h2>
+                                            <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">TẦM NHÌN</h2>
                                             <p class="light-300">
-                                                &nbsp;&nbsp;&nbsp; FinTop trở thành trung tâm Nghiên cứu - Phân Tích - Phát triển Dữ liệu đầu tư .Đội ngũ FinTop sẽ trở thành đối tác tin cậy, cố vấn đầu tư cho các Nhà Đầu Tư cá nhân và Tổ chức.
+                                                &nbsp;&nbsp;&nbsp; FinTop trở thành Trung tâm Nghiên cứu - Phân Tích - Phát triển Dữ liệu đầu tư. Đội ngũ FinTop sẽ trở thành đối tác tin cậy, cố vấn đầu tư cho các Nhà Đầu Tư cá nhân và tổ chức.
                                             </p>
                                         </div>
                                     </div>
@@ -164,9 +164,9 @@
                                                 <!-- <i class='display-4 bx bx-revision text-light'></i> -->
                                                 <i class="fas fa-hand-holding-usd text-light fa-3x"></i>
                                             </div>
-                                            <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">Sứ mệnh</h2>
+                                            <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">SỨ MỆNH</h2>
                                             <p class="light-300">
-                                                &nbsp;&nbsp;&nbsp; đến nguồn thông tin, dữ liệu đầu tư hữu ích, tinh gọn, hiệu quả, cùng Nhà Đầu Tư xây dựng lộ trình, chiến lược đầu tư hướng đến mục tiêu tự do và thịnh vượng về tài chính.
+                                                &nbsp;&nbsp;&nbsp;Mang đến nguồn thông tin, dữ liệu đầu tư hữu ích, tinh gọn, hiệu quả, cùng Nhà Đầu Tư xây dựng lộ trình, chiến lược đầu tư hướng đến mục tiêu tự do và thịnh vượng về tài chính.
                                             </p>
                                         </div>
                                     </div>
@@ -175,9 +175,9 @@
                                             <div class="objective-icon m-auto py-4 mb-2 mb-sm-4 bg-secondary shadow-lg" style="background:#700e13 !important">
                                                 <i class="fas fa-database text-light fa-3x"></i>
                                             </div>
-                                            <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">Giá trị cốt lõi</h2>
+                                            <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">GIÁ TRỊ CỐT LỖI</h2>
                                             <p class="light-300">
-                                                Tận tâm - Chuyên Nghiệp Chủ động - Sáng Tạo Tinh gọn - Hiệu quả
+                                                Tận Tâm - Chuyên Nghiệp Chủ động - Sáng Tạo Tinh gọn - Hiệu quả
                                             </p>
                                         </div>
                                     </div>
