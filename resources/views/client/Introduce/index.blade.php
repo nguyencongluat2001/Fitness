@@ -177,7 +177,7 @@
                                             </div>
                                             <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">GIÁ TRỊ CỐT LỖI</h2>
                                             <p class="light-300">
-                                                Tận Tâm - Chuyên Nghiệp <br> Chủ động - Sáng Tạo <br> Tinh gọn - Hiệu quả
+                                                Tận Tâm - Chuyên Nghiệp <br> Chủ động - Sáng Tạo <br> Tinh gọn - Hiệu quả.
                                             </p>
                                         </div>
                                     </div>
