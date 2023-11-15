@@ -153,7 +153,7 @@
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">3</td>
-                                                <td style="">Nhóm Zalo phân tích chiến lược đầu tư FinTop</td>
+                                                <td style="">Nhóm Zalo phân tích chiến lược đầu tư</td>
                                                 <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
                                                 <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>
                                                 <td style="background:#bbf4b3;"align="center"><i class="fas fa-check"></i></td>

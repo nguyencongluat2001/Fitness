@@ -48,11 +48,11 @@
 			<div class="modal-header">
 				<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
 					<center>
-						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:15px;padding-botton:10px">
+						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:15px;padding-botton:10px;">
 							<div class="col-md-1">
 							</div>
 							<div class="col-md-9 text-center">
-								<h2 style="font-size:28px;color:#ffffff;">LIÊN HỆ</h2>
+								<h2 style="font-size:28px;color:#ffffff;">LIÊN HỆ FINTOP</h2>
 							</div>
 							<div class="col-md-2">
 								<button type="button" class="btn btn-sm btn-close-res" style="background: #f1f2f2;height:35px">
@@ -74,9 +74,10 @@
 								</div> -->
 								<div class="pricing-list-body col-md-12 align-items-center pl-3">
 									<ul class="list-unstyled text-center light-300">
-										<li class="h5 mb-0" style="color:#ffffff;background: #001f39; border-radius: 15px;padding: 15px;">
+										<li class="h5 mb-0" style="color:#ffffff;background: #001f39; border-radius: 15px;padding: 15px;height: 130px;">
+										<br>
 											<span style="font-size: 1.25rem;">Liên hệ</span> Hotline
-											<span style="font-size: 1.25rem;"><b style="font-size: 1.25rem;color:#6ee0ff">086.234.8886</b></span>
+											<span style="font-size: 1.25rem;"><b style="font-size: 1.25rem;color:#fff079">086.234.8886</b></span>
 											<span style="font-size: 1.25rem;"> hoặc Zalo Chat <a style="font-size: 1.25rem;color:#fff079">FinTop</a> để được hỗ trợ tư vấn.</span>
 										</li>
 										<!-- <br>

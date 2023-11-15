@@ -153,7 +153,7 @@
                                             </div>
                                             <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">TẦM NHÌN</h2>
                                             <p class="light-300">
-                                                &nbsp;&nbsp;&nbsp; FinTop trở thành Trung tâm Nghiên cứu - Phân Tích - Phát triển Dữ liệu đầu tư. Đội ngũ FinTop sẽ trở thành đối tác tin cậy, cố vấn đầu tư cho các Nhà Đầu Tư cá nhân và tổ chức.
+                                                &nbsp;&nbsp;&nbsp; FinTop trở thành Trung tâm <br> Nghiên cứu - Phân Tích - Phát triển Dữ liệu đầu tư. Đội ngũ FinTop sẽ trở thành đối tác tin cậy, cố vấn đầu tư cho các Nhà Đầu Tư cá nhân và tổ chức.
                                             </p>
                                         </div>
                                     </div>
@@ -177,7 +177,7 @@
                                             </div>
                                             <h2 class="objective-heading h3 mb-2 mb-sm-4 light-300" style="color:#fff079;font-weight: 500;">GIÁ TRỊ CỐT LỖI</h2>
                                             <p class="light-300">
-                                                Tận Tâm - Chuyên Nghiệp Chủ động - Sáng Tạo Tinh gọn - Hiệu quả
+                                                Tận Tâm - Chuyên Nghiệp <br> Chủ động - Sáng Tạo <br> Tinh gọn - Hiệu quả
                                             </p>
                                         </div>
                                     </div>
@@ -188,7 +188,7 @@
                                             ngừng nỗ lực trong việc nghiên cứu thị trường, phân tích dữ liệu Tài chính - Kinh tế và thấu
                                             hiểu Nhà Đầu Tư để mang lại những thông tin hữu ích, tinh gọn, chiến lược đầu tư hiệu quả, phù hợp nhất.
                                             Minh chứng cho thấy tỷ lệ chính xác cao thông qua "Tra cứu xu hướng cổ phiếu", danh mục "Tín Hiệu Mua"
-                                            và "Khuyến Nghị V.I.P" mang lại hiệu quả trong đầu tư. Thành công của Nhà Đầu tư, sự tin cậy của đối tác
+                                            và "Khuyến Nghị V.I.P" mang lại hiệu quả trong đầu tư. Thành công của Nhà Đầu Tư, sự tin cậy của đối tác
                                             đã mang lại cảm hứng và nguồn động lực lớn cho Đội ngũ FinTop chúng tôi tiếp tục nỗ lực, phát triển hơn nữa
                                             để mang đến những sản phẩm tốt nhất.
                                         </p>

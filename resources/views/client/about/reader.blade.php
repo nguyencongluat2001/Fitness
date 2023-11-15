@@ -62,19 +62,19 @@ use Carbon\Carbon;
                                     <div align="right">
                                         @if($datas['type'] == 'BAO_CAO_THTT')
                                         <a href="{{url('/client/about/index')}}">
-                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                             <i style="font-size: 30px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
                                         @elseif($datas['type'] == 'BAO_CAO_TKP')
                                         <a href="{{url('/client/about/session')}}">
-                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                             <i style="font-size: 30px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
                                         @elseif($datas['type'] == 'BAO_CAO_PTN')
                                         <a href="{{url('/client/about/industry')}}">
-                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                             <i style="font-size: 30px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
                                         @elseif($datas['type'] == 'BAO_CAO_PTCP')
                                         <a href="{{url('/client/about/stock')}}">
-                                             <i style="font-size: 30px;padding: 10px;" class="fas fa-reply"></i>
+                                             <i style="font-size: 30px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
                                         @endif
                                     </div>
