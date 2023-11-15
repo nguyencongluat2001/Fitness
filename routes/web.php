@@ -369,6 +369,7 @@ Route::prefix('/client')->group(function () {
         Route::get('/upgradeAcc/viewForm', [UpgradeAccController::class, 'registerVip']);
         Route::get('/upgradeAcc/viewInfo', [UpgradeAccController::class, 'viewInfo']);
         Route::get('/upgradeAcc/viewFormContact', [UpgradeAccController::class, 'viewFormContact']);
+        Route::get('/upgradeAcc/viewFormContact_zalo', [UpgradeAccController::class, 'viewFormContact_zalo']);
         Route::post('/upgradeAcc/updateVip', [UpgradeAccController::class, 'updateVip']);
 
         // Đọc thông báo

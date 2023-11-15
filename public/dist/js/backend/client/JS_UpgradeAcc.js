@@ -149,6 +149,40 @@ JS_UpgradeAcc.prototype.viewFormContact = function () {
     });
 }
 /**
+ * Hàm hiển thị modal
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_UpgradeAcc.prototype.viewFormContact_zalo = function () {
+    var url = this.urlPath + '/viewFormContact_zalo';
+    var myClass = this;
+    NclLib.loadding();
+    var data = '';
+    $.ajax({
+        url: url,
+        type: "GET",
+        //cache: true,
+        data: data,
+        success: function (arrResult) {
+            if(arrResult.status == 2){
+                Swal.fire({
+                    position: 'top-start',
+                    // icon: 'warning',
+                    title: arrResult.message,
+                    showConfirmButton: false,
+                    timer: 3000
+                  })
+                return false;
+            }else{
+                $('#formmodal').html(arrResult);
+                $('#formmodal').modal('show');
+            }
+        }
+    });
+}
+/**
  * Hàm hiển thêm mới
  *
  * @param oForm (tên form)

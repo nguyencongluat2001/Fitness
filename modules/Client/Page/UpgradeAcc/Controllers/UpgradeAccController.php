@@ -156,6 +156,15 @@ class UpgradeAccController extends Controller
     public function viewFormContact(Request $request)
     {
         return view('client.upgradeAcc.viewFormContact');
+    } 
+    /**
+     * Hiển thị màn liên hệ
+     *
+     * @return view
+     */
+    public function viewFormContact_zalo(Request $request)
+    {
+        return view('client.upgradeAcc.viewFormContact_zalo');
     }
    
 }

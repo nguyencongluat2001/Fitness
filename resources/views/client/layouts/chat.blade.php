@@ -118,7 +118,7 @@ if(isset($_SESSION['id'])){
     <div id="form_chat">
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
         <span align="right">
-            <div class="input-group-btn mb-2">
+            <div onclick="JS_UpgradeAcc.viewFormContact_zalo()" class="input-group-btn mb-2">
                     <img width="" height="50px" style="background-color: none"
                     src="../clients/img/zalo.png" alt="">
                 </label>
@@ -190,11 +190,17 @@ if(isset($_SESSION['id'])){
         </div>
         @endif
 </form>
+<div class="modal" id="formmodal" role="dialog"></div>
+<script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_UpgradeAcc.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\DataFinancial\JS_Recommendations.js') }}"></script>
 <script>
       var baseUrl = '{{ url('') }}';
         var JS_Recommendations = new JS_Recommendations(baseUrl, 'client', 'datafinancial');
         $(document).ready(function($) {
             JS_Recommendations.loadList_box(baseUrl);
+        })
+        var JS_UpgradeAcc = new JS_UpgradeAcc(baseUrl, 'client', 'upgradeAcc');
+            $(document).ready(function($) {
+            JS_UpgradeAcc.loadIndex(baseUrl);
         })
 </script>
