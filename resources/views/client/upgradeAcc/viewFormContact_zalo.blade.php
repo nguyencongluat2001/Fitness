@@ -11,12 +11,9 @@
 				<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
 					<center>
 						<div class="row" style="background: #031f38;font-size: 1.5rem;height: 70px;border-radius: 10px;padding-top:15px;padding-botton:10px;">
-							<div class="col-md-2">
-							</div>
-							<div class="col-md-8 text-center">
-								<h2 style="font-size:23px;color:#ffffff;padding-top: 10px;">ZALO FINTOP CHATBOX</h2>
-							</div>
-							<div class="col-md-2">
+
+							<div class="col-md-12 text-center">
+								<h2 style="font-size:23px;color:#ffffff;padding-top: 10px;">QUÉT QR LIÊN HỆ ZALO</h2>
 							</div>
 							<!-- <div class="col-md-2">
 								<button type="button" data-bs-dismiss="modal" class="btn btn-sm" style="background: #f1f2f2;height:35px">
