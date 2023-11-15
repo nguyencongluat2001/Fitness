@@ -113,13 +113,13 @@
                                         </tr>
                                         <tr>
                                             <td align="center" style="vertical-align: middle;"><i class="fas fa-qrcode"></i></td>
-                                            <td><a class="text-decoration-none text-light py-1" href="mailto:info@company.com"> QR ngân hàng</a></td>
+                                            <td><a class="text-decoration-none text-light py-1" href="mailto:info@company.com"> QR zalo</a></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </td>
                             <td style="vertical-align: top;">
-                                <p class="text-decoration-none text-light py-1"> <img class="card-img " src="{{ URL::asset('clients/img/qrMbFintop.jpg') }}" alt="Card image" style="width:45%"> </p>
+                                <p class="text-decoration-none text-light py-1"> <img class="card-img " src="{{ URL::asset('clients/img/qrZalo.png') }}" alt="Card image" style="width:45%"> </p>
                                 <p class="btn btn-light" style="cursor: pointer;" onclick="gotop()" id="goTop"><i class="fas fa-arrow-up"></i> Về đầu trang</p>
                             </td>
                         </tr>
