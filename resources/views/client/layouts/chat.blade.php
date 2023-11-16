@@ -118,7 +118,7 @@ if(isset($_SESSION['id'])){
     <div id="form_chat">
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
         <span align="right">
-            <div onclick="JS_UpgradeAcc.viewFormContact_zalo()" class="input-group-btn mb-2">
+            <div onclick="viewFormContact_zalo()" class="input-group-btn mb-2">
                     <img width="" height="50px" style="background-color: none"
                     src="../clients/img/zalo.png" alt="">
                 </label>
@@ -199,7 +199,43 @@ if(isset($_SESSION['id'])){
         $(document).ready(function($) {
             JS_Recommendations.loadList_box(baseUrl);
         })
-        var JS_UpgradeAcc = new JS_UpgradeAcc(baseUrl, 'client', 'upgradeAcc');
-            $(document).ready(function($) {
-        })
+        // var JS_UpgradeAcc = new JS_UpgradeAcc(baseUrl, 'client', 'upgradeAcc');
+        //     $(document).ready(function($) {
+        // })
+        /**
+         * Hàm hiển thị modal
+         *
+         * @param oForm (tên form)
+         *
+         * @return void
+         */
+        function viewFormContact_zalo () {
+            var url = this.urlPath + 'client/datafinancial/viewFormContact_zalo';
+            var myClass = this;
+            NclLib.loadding();
+            var data = '';
+            $.ajax({
+                url: url,
+                type: "GET",
+                //cache: true,
+                data: data,
+                success: function (arrResult) {
+                    if(arrResult.status == 2){
+                        Swal.fire({
+                            position: 'top-start',
+                            // icon: 'warning',
+                            title: arrResult.message,
+                            showConfirmButton: false,
+                            timer: 3000
+                        })
+                        return false;
+                    }else{
+                        $('#formmodal').html(arrResult);
+                        $('#formmodal').modal('show');
+                    }
+                }
+            });
+        }
 </script>
+
+
