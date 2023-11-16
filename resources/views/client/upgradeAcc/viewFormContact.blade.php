@@ -122,7 +122,7 @@
 				</div>
 			</div>
 			<div class="modal-footer">
-				<div class="col-md-4">
+				<div class="col-md-4"  onclick="viewFormContact_zalo()">
 					<img src="{{url('/clients/img/zalo.png')}}" alt="Image" width="50px" height="50px">
 				</div>
 				<div class="col-md-3">
@@ -151,4 +151,41 @@
 			reader.readAsDataURL(input.files[0]);
 		}
 	}
+	 /**
+         * Hàm hiển thị modal
+         *
+         * @param oForm (tên form)
+         *
+         * @return void
+         */
+        function viewFormContact_zalo () {
+            var url = this.baseUrl + '/client/upgradeAcc/viewFormContact_zalo';
+            console.log(222,url)
+            var myClass = this;
+            NclLib.loadding();
+            var data = '';
+            $.ajax({
+                url: url,
+                type: "GET",
+                //cache: true,
+                data: data,
+                success: function (arrResult) {
+                    if(arrResult.status == 2){
+                        Swal.fire({
+                            position: 'top-start',
+                            // icon: 'warning',
+                            title: arrResult.message,
+                            showConfirmButton: false,
+                            timer: 3000
+                        })
+                        return false;
+                    }else{
+                        $('#formmodal').html(arrResult);
+                        $('#formmodal').modal('show');
+						$('#formmodal_res').modal('hide');
+
+                    }
+                }
+            });
+        }
 </script>
