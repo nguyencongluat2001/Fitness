@@ -191,7 +191,6 @@ if(isset($_SESSION['id'])){
         @endif
 </form>
 <div class="modal" id="formmodal" role="dialog"></div>
-<script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_UpgradeAcc.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\DataFinancial\JS_Recommendations.js') }}"></script>
 <script>
       var baseUrl = '{{ url('') }}';
@@ -199,9 +198,6 @@ if(isset($_SESSION['id'])){
         $(document).ready(function($) {
             JS_Recommendations.loadList_box(baseUrl);
         })
-        // var JS_UpgradeAcc = new JS_UpgradeAcc(baseUrl, 'client', 'upgradeAcc');
-        //     $(document).ready(function($) {
-        // })
         /**
          * Hàm hiển thị modal
          *
@@ -210,7 +206,8 @@ if(isset($_SESSION['id'])){
          * @return void
          */
         function viewFormContact_zalo () {
-            var url = this.urlPath + 'client/datafinancial/viewFormContact_zalo';
+            var url = this.baseUrl + '/client/upgradeAcc/viewFormContact_zalo';
+            console.log(222,url)
             var myClass = this;
             NclLib.loadding();
             var data = '';

@@ -6,7 +6,7 @@
 	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 	<!-- <div class="modal-dialog modal-lg"> -->
 	<div class="modal-dialog modal-dialog-centered">
-		<div class="modal-content card" style="background:#5b1313db">
+		<div class="modal-content card" style="background:#5b1313db !important">
 			<div class="modal-header">
 				<div class="col-md-11 m-auto text-center py-2" style="width: 95%;">
 					<center>

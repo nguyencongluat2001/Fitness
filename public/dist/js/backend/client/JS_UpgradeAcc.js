@@ -158,6 +158,7 @@ JS_UpgradeAcc.prototype.viewFormContact = function () {
 JS_UpgradeAcc.prototype.viewFormContact_zalo = function () {
     var url = this.urlPath + '/viewFormContact_zalo';
     var myClass = this;
+    console.log(url)
     NclLib.loadding();
     var data = '';
     $.ajax({
