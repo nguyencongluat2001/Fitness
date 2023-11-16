@@ -86,7 +86,7 @@ JS_Recommendations.prototype.checkLogin = function(){
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.replace('/client/upgradeAcc/index');
+            window.location.replace('/client/privileges/index');
         }
     })
     $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
