@@ -201,6 +201,5 @@ if(isset($_SESSION['id'])){
         })
         var JS_UpgradeAcc = new JS_UpgradeAcc(baseUrl, 'client', 'upgradeAcc');
             $(document).ready(function($) {
-            JS_UpgradeAcc.loadIndex(baseUrl);
         })
 </script>
