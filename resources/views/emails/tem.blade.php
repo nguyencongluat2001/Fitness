@@ -80,7 +80,7 @@
                                             style="width: 400px; padding: 12px 24px; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px;
                                             background: #ffe782;font-family: auto;color: #000000;font-size: 20px;">
                                                 Mã OTP của bạn là: <span style="color:red;font-weight: 600;">{{ @$data['otp'] }}</span> <br>
-                                                Có hiệu lực trong vòng 30 phút ,vui lòng không chia sẻ mã cho bất kỳ ai.<br>
+                                                Có hiệu lực trong vòng 30 phút, vui lòng không chia sẻ mã cho bất kỳ ai.<br>
                                                 Chúc nhà đầu tư có một trải nghiệm thú vị!
                                         </td>
                                     </tr>
