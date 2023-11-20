@@ -25,6 +25,6 @@ class CheckLoginMiddleware
              || $_SESSION['role'] == 'CV_BASIC,SALE_ADMIN'|| $_SESSION['role'] == 'CV_BASIC,SALE_BASIC')){
             return $next($request);
         };
-        return redirect()->route('404_notFound');
+        return redirect()->route('login');
     }
 }
