@@ -4,6 +4,7 @@
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
 use Modules\Client\Auth\Controllers\RegisterController;
+
 use Modules\Client\Page\About\Controllers\AboutController;
 use Modules\Client\Page\DataFinancial\Controllers\DataFinancialController as ClientDataFinancialController;
 use Modules\Client\Page\Des\Controllers\DesController;
