@@ -113,6 +113,20 @@ if(isset($_SESSION['id'])){
             transform: rotate(-5deg);
         }
     }
+    .numberPhone{
+        display: none;
+        position: absolute;
+        right: 3.5rem;
+        top: 5px;
+        background-color: #fff079;
+        color: #700e13;
+        padding: 10px;
+        width: 9.5rem;
+        border-radius: 2rem;
+    }
+    .contactPhone:hover .numberPhone{
+        display: block;
+    }
 </style>
 <form action="" method="POST" id="frmLoadlist_box">
     <div id="form_chat">
@@ -132,9 +146,10 @@ if(isset($_SESSION['id'])){
             </div>
         </span>
         <span align="right">
-            <div class="input-group-btn mb-2" onclick="JS_Recommendations.openPhone()">
+            <div class="input-group-btn mb-2 contactPhone" style="position: relative;" onclick="JS_Recommendations.openPhone()">
                     <img width="" height="50px" style="background-color: none;"
                     src="../clients/img/phone.png" alt="">
+                    <span class="numberPhone">Hotline 086.234.8886</span>
                 </label>
             </div>
         </span>
