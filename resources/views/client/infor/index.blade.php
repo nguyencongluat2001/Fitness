@@ -11,8 +11,15 @@
     /* .form-control{
         color:#fff079;
     } */
-  button:before {
-    background: none ;
+   button:before {
+      background: none ;
+   }
+   .form-control{
+      background: #ffffff ;
+   }
+   .form-control-label{
+      color: #ffffff;
+      padding-left: 20px;
    }
 
 </style>
@@ -26,27 +33,19 @@
                 <input type="hidden" name="id" id="id" value="{{ isset($datas->id) ? $datas->id : '' }}">
                 <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
                     <!-- phần giới thiệu FIn top -->
-                    <div class="home_index_child" style="background:#ffffff !important">
+                    <div class="home_index_child" style="background:#700e13 !important">
                         <div class="col-lg-12" style="padding:10px;">
                             <div class="row">
                                 <div class="col-md-8" style="color: black;">
-                                    <!-- <div class="card-header">
-                                        <button class="btn btn-primary btn-sm ms-auto">Đổi mật khẩu</button>
-                                    </div> -->
                                    {{-- @if(!empty($data) && $_SESSION["email"] == $data['email']) --}}
                                     <span id='btn_changePass'>
                                         <button class="btn rounded-pill px-4 btn-outline-warning" type="button">
                                             Đổi mật khẩu
                                         </button>
                                     </span>
-                                    <button type="button" class="btn rounded-pill px-4 btn-outline-primary" onclick="JS_InforClient.updateCustomer()" type="button">
-                                        Cập nhật
-                                    </button>
-                                    <a type="button" class="btn rounded-pill px-4 btn-outline-warning" style="color:black;" href="{{ url('client/upgradeAcc/index') }}"></i>Nâng cấp tài khoản</a>
 
                                     {{-- @endif --}}
                                     <div class="card-body">
-                                        <p class="text-uppercase text-sm">Thông tin người dùng</p>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -73,8 +72,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <hr class="horizontal dark pt-1"> -->
-                                        <!-- <p class="text-uppercase text-sm">Thông tin liên lạc</p> -->
                                         <div class="row">
                                             <div class="col-md-12 pt-2">
                                                 <div class="form-group">
@@ -101,21 +98,16 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <hr class="horizontal dark">
-                                        <p class="text-uppercase text-sm">About me</p>
-                                        <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                            <label for="example-text-input" class="form-control-label">About me</label>
-                                            <input class="form-control" type="text" value="A beautiful Dashboard for Bootstrap 5. It is Free and Open Source.">
-                                            </div>
-                                        </div>
-                                        </div> -->
+                                        <br>
+                                        <center>
+                                            <button style="background: #165c38;color: white;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-primary" onclick="JS_InforClient.updateCustomer()" type="button">
+                                                Cập nhật
+                                            </button>
+                                        </center>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="card card-profile">
-                                        <!-- <img src="../assets/img/bg-profile.jpg" alt="Image placeholder" class="card-img-top"> -->
                                         <div class=" justify-content-center" style="--bs-gutter-x: 1.5rem;
                                                                                     --bs-gutter-y: 0;
                                                                                     display: flex;
@@ -131,33 +123,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <!-- <div class="card-header text-center border-0 pt-0 pt-lg-2 pb-4 pb-lg-3">
-                                            <div class="d-flex justify-content-between">
-                                                <a href="javascript:;" class="btn btn-sm btn-info mb-0 d-none d-lg-block">Connect</a>
-                                                <a href="javascript:;" class="btn btn-sm btn-info mb-0 d-block d-lg-none"><i class="ni ni-collection"></i></a>
-                                                <a href="javascript:;" class="btn btn-sm btn-dark float-right mb-0 d-none d-lg-block">Message</a>
-                                                <a href="javascript:;" class="btn btn-sm btn-dark float-right mb-0 d-block d-lg-none"><i class="ni ni-email-83"></i></a>
-                                            </div>
-                                        </div> -->
                                         <div class="card-body pt-0">
-                                            <!-- <div class="row">
-                                                <div class="col">
-                                                    <div class="d-flex justify-content-center">
-                                                        <div class="d-grid text-center">
-                                                            <span class="text-lg font-weight-bolder">22</span>
-                                                            <span class="text-sm opacity-8">Friends</span>
-                                                        </div>
-                                                        <div class="d-grid text-center mx-4">
-                                                            <span class="text-lg font-weight-bolder">10</span>
-                                                            <span class="text-sm opacity-8">Photos</span>
-                                                        </div>
-                                                        <div class="d-grid text-center">
-                                                            <span class="text-lg font-weight-bolder">89</span>
-                                                            <span class="text-sm opacity-8">Comments</span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                             <div class="text-center mt-4">
                                                 <h5>
                                                     {{isset($datas->name) ? $datas->name : ''}}
@@ -166,6 +132,8 @@
                                                     <i class="ni location_pin mr-2"></i>Hội viên: {{isset($datas->account_type_vip) ? $datas->account_type_vip : ''}} <br>
                                                     <i class="ni location_pin mr-2"></i>Ngày đăng ký: {{isset($datas->date_update_vip) ? $datas->date_update_vip : ''}}
                                                 </div>
+                                                <br>
+                                                <a type="button" class="btn rounded-pill px-4 btn-outline-warning" href="{{ url('client/privileges/index') }}"></i>Nâng cấp tài khoản</a>
                                             </div>
                                         </div>
                                     </div>
@@ -175,6 +143,71 @@
                     </div>
                 </div>
             </form>
+        </div>
+    </div>
+    <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
+        <!-- phần giới thiệu FIn top -->
+        <div class="home_index_child" >
+            <div class="col-lg-12" style="padding:10px;">
+                <div class="row">
+                <table id="table-data" style="background:#700e13 !important;color: white;" class="table  table-bordered table-striped table-condensed dataTable no-footer">
+                    <colgroup>
+                        <col width="30%">
+                        <!-- <col width="10%"> -->
+                        <col width="70%">
+                    </colgroup>    
+                    <thead>
+                        <tr>
+                            <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thông tin</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center"><b>Hóa đơn</b></td>
+                        </tr>
+                    </thead>
+                    <tbody id="body_data">
+                        @if(count($vip) > 0)
+                            @foreach ($vip as $key => $data)
+                            @php $id = $data->id; $i = 1; @endphp
+                            <tr style="color:#ffffff">
+                                <td style="white-space: inherit;    font-size: 20px;" >
+                                    <span>
+                                        <?php $convert = json_decode($data->package);
+                                         ?>
+                                            <span>Ngày thanh toán: {{!empty($data->created_at)?$data->created_at:''}}</span><br>
+                                            <span>Loại gói: {{!empty($convert->name)?$convert->name:''}}</span><br>
+                                            <span>Trạng thái phê duyệt: @if($data->status == 0)
+                                                Chưa phê duyệt
+                                                @else
+                                                Đã phê duyệt
+                                                @endif
+                                            </span><br>
+
+                                    </span>
+                                </td>
+                                <td style="white-space: inherit;vertical-align: middle" >
+                                    <span>
+                                        <div class="m-auto py-2">
+                                            @if($convert->code == 'VIP1_3')
+                                            <img class="card-img " src="../clients/img/vip1_3.PNG" alt="Card image" style="width:100%">
+                                            @elseif($convert->code == 'VIP1_6')
+                                            <img class="card-img " src="../clients/img/vip1_6.PNG" alt="Card image" style="width:100%">
+                                            @elseif($convert->code == 'VIP1_12')
+                                            <img class="card-img " src="../clients/img/vip1_12.PNG" alt="Card image" style="width:100%">
+                                            @elseif($convert->code == 'VIP2_3')
+                                            <img class="card-img " src="../clients/img/vip2_3.PNG" alt="Card image" style="width:100%">
+                                            @elseif($convert->code == 'VIP2_6')
+                                            <img class="card-img " src="../clients/img/vip2_6.PNG" alt="Card image" style="width:100%">
+                                            @elseif($convert->code == 'VIP2_12')
+                                            <img class="card-img " src="../clients/img/vip2_12.PNG" alt="Card image" style="width:100%">
+                                            @endif
+                                        </div>
+                                    </span>
+                                </td>
+                            </tr>
+                            @endforeach
+                        @endif
+                    </tbody>
+                </table>
+                </div>
+            </div>
         </div>
     </div>
 </section>

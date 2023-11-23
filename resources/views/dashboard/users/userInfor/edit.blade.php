@@ -2,6 +2,10 @@
 	    .color{
         color:black;
     }
+	.form-control-label{ style="color:black;padding-left:20px;"
+		color:black;
+		padding-left:20px;
+	}
 </style>
 
 <div class="modal-dialog modal-lg">
@@ -19,25 +23,25 @@
 				<div class="row mb-3">
 					<div class="col-md-6">
 						<div class="form-group">
-							<p for="example-text-input" class="form-control-label">Email</p>
+							<p for="example-text-input" class="form-control-label" style="color:black;padding-left:20px;">Email</p>
 							<input class="form-control color" type="text" value="{{!empty($data['email_acc'])?$data['email_acc']:''}}" name="email_acc" id="email_acc" />
 						</div>
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<p for="example-text-input" class="form-control-label">Mật khẩu cũ</p>
+							<p for="example-text-input" class="form-control-label" style="color:black;padding-left:20px;">Mật khẩu cũ</p>
 							<input class="form-control color" type="password" value="" name="password_old" id="password_old" />
 						</div>
 					</div>
 					<div class="col-md-6 pt-2">
 						<div class="form-group">
-							<p for="example-text-input" class="form-control-label">Mật khẩu mới</p>
+							<p for="example-text-input" class="form-control-label" style="color:black;padding-left:20px;">Mật khẩu mới</p>
 							<input class="form-control color" type="password" value="" name="password_new" id="password_new" />
 						</div>
 					</div>
 					<div class="col-md-6 pt-2">
 						<div class="form-group">
-							<p for="example-text-input" class="form-control-label">Nhập lại mật khẩu</p>
+							<p for="example-text-input" class="form-control-label" style="color:black;padding-left:20px;">Nhập lại mật khẩu</p>
 							<input class="form-control color" type="password" value="" name="password_retype_change" id="password_retype_change" />
 						</div>
 					</div>
@@ -58,7 +62,7 @@
 				</div> -->
 				<div class="modal-footer">
 					<span id="btn_updatePass">
-						<button id='btn_updatePass' class="btn btn-primary btn-sm" type="button">
+						<button style="background: #165c38;color: white" id='btn_updatePass' class="btn btn-primary btn-sm" type="button">
 							Cập nhật
 						</button>
 					</span>

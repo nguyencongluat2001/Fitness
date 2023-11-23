@@ -10,6 +10,7 @@ use DB;
 use Modules\System\Dashboard\Users\Services\UserInfoService;
 use Modules\System\Dashboard\Users\Services\UserService;
 use Illuminate\Support\Facades\Auth;
+use Modules\System\Dashboard\ApprovePayment\Services\ApprovePaymentService;
 
 /**
  * thông tinnguowif dùng
@@ -21,10 +22,12 @@ class InforController extends Controller
 
     public function __construct(
         UserService $userService,
-        UserInfoService $userInfoService
+        UserInfoService $userInfoService,
+        ApprovePaymentService $ApprovePaymentService
     ){
         $this->userService = $userService;
         $this->userInfoService = $userInfoService;
+        $this->ApprovePaymentService = $ApprovePaymentService;
     }
 
     /**
@@ -38,6 +41,7 @@ class InforController extends Controller
         $user_infor = $this->userInfoService->where('user_id', $_SESSION['id'])->first();
         $users['user_infor'] = $user_infor;
         $data['datas'] = $users;
+        $data['vip'] = $this->ApprovePaymentService->select()->where('user_id', $_SESSION['id'])->get()->unique('role_client');
         return view('client.infor.index', $data);
     }
 
