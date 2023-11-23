@@ -40,10 +40,7 @@ class ClientService extends Service
     }
     public function editUser($arrInput){
         $getUserInfor = $this->repository->where('id',$arrInput['chk_item_id'])->first()->toArray();
-        $userInfo = $this->UserInfoService->where('user_id',$arrInput['chk_item_id'])->first();
-        $getUserInfor['company'] = !empty($userInfo->company)?$userInfo->company:null;
-        $getUserInfor['position'] = !empty($userInfo->position)?$userInfo->position:null;
-        $getUserInfor['date_join'] = !empty($userInfo->date_join)?$userInfo->date_join:null;
+        // $userInfo = $this->UserInfoService->where('user_id',$arrInput['chk_item_id'])->first();
         $getUserInfor['arrQuyen'] = explode(',',$getUserInfor['role']);
         return $getUserInfor;
     }

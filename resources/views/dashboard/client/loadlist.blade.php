@@ -27,6 +27,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                 <!-- <td align="center"><b>Ảnh đại diện</b></td> -->
                 <!-- <td align="center"><b>Thứ tự</b></td> -->
                 <td align="center"><b>Trạng thái</b></td>
+                <td align="center"><b>Nâng cấp CTV</b></td>
             </tr>
         </thead>
         <tbody>
@@ -97,6 +98,9 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                             <input type="checkbox" hidden class="custom-control-input toggle-status" id="status_{{$id}}" data-id="{{$id}}" {{ $data->status == 1 ? 'checked' : '' }}>
                             <span class="custom-control-indicator p-0 m-0" onclick="JS_User.changeStatus('{{$id}}')"></span>
                         </label>
+                    </td>
+                    <td onclick="{select_row(this);}" align="center" style="vertical-align: middle;">
+                        <span class="text-cursor text-warning" onclick="JS_Client.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
                     </td>
                 </tr>
             @endforeach
