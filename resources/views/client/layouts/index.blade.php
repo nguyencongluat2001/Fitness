@@ -286,7 +286,7 @@
                 <!-- <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex" id="navbar-toggler-success"> -->
                 <ul class="navbar-nav">
                     <!-- Authentication Links -->
-                    @guest
+                     @guest
                     <div style="display:flex;">
                         <div>
                             @if (Route::has('login'))
@@ -329,7 +329,7 @@
                         </div>
                     </li>
                     @endguest
-                    {{--@if (!empty($_SESSION['id']))
+                   {{-- @if (!empty($_SESSION['id']))
                         <span id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <img src="{{url('/file-image/avatar/')}}/{{ !empty(Auth::user()->avatar)?Auth::user()->avatar:'' }}" alt="Image" style="border-radius:50%;height: 30px;width: 30px;object-fit: cover;">
                             <span style="color:white">
@@ -353,22 +353,22 @@
                             </form>
                         </div>
                     @else
-                        <div style="display:flex;">
-                            <div>
-                                @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}" style="color:white;padding:0px"><span>{{ __('Đăng nhập') }}</span> </a>
-                                </li>
-                                @endif
-                            </div>
-                            <div style="padding-left:10px">
-                                @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}" style="color:white;padding:0px"><span>{{ __('Đăng ký') }}</span> </a>
-                                </li>
-                                @endif
-                            </div>
+                    <div style="display:flex;">
+                        <div>
+                            @if (Route::has('login'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}" style="color:white;padding:0px"><span>{{ __('Đăng nhập') }}</span> </a>
+                            </li>
+                            @endif
                         </div>
+                        <div style="padding-left:10px">
+                            @if (Route::has('register'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('register') }}" style="color:white;padding:0px"><span>{{ __('Đăng ký') }}</span> </a>
+                            </li>
+                            @endif
+                        </div>
+                    </div>
                     @endif--}}
                 </ul>
                 <!-- Right Side Of Navbar -->

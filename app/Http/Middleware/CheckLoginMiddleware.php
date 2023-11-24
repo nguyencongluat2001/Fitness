@@ -25,12 +25,12 @@ class CheckLoginMiddleware
              || $_SESSION['role'] == 'CV_BASIC,SALE_ADMIN'|| $_SESSION['role'] == 'CV_BASIC,SALE_BASIC')){
             return $next($request);
         };
-        // Auth::logout();
-        // if (!empty($_SESSION['id'])) {
-        //     session_destroy();
-        // }
-        // $request->session()->invalidate();
-        // $request->session()->regenerateToken();
+        Auth::logout();
+        if (!empty($_SESSION['id'])) {
+            session_destroy();
+        }
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return redirect()->route('login');
     }
 }
