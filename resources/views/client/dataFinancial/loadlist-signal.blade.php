@@ -70,7 +70,7 @@
 </style>
 <div id="style-1" style="padding-right:10px;">
   <div class="table-responsive pmd-card pmd-z-depth table-container">
-    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer @if(!Auth::check()) onload @endif" @if(!isset($_SESSION['id'])) onclick="JS_Signal.checkLogin()" @endif>
+    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer @if(!Auth::check()) onload @endif" @if(!isset($_SESSION['id']) || $_SESSION['account_type_vip'] != 'VIP1') onclick="JS_Signal.checkLogin()" @endif>
       <colgroup>
         <col width="3%">
         <col width="5%"> <!-- macp -->

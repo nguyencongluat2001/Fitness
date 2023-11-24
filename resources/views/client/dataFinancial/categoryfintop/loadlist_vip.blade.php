@@ -7,7 +7,7 @@
     }
 </style>
 <div class="table-responsive pmd-card pmd-z-depth pt-2">
-    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if(!isset($_SESSION['id'])) onclick="JS_CategoryFintop.checkLogin()" @endif>
+    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if(!isset($_SESSION['id']) || $_SESSION['account_type_vip'] != 'VIP1') onclick="JS_CategoryFintop.checkLogin()" @endif>
         <colgroup>
             <col width="10%"> <!-- ma cp -->
             <col width="9%"> <!-- nhom nganh --> 
