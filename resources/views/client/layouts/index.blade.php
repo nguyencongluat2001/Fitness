@@ -286,7 +286,7 @@
                 <!-- <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex" id="navbar-toggler-success"> -->
                 <ul class="navbar-nav">
                     <!-- Authentication Links -->
-                    <!-- @guest
+                    @guest
                     <div style="display:flex;">
                         <div>
                             @if (Route::has('login'))
@@ -328,8 +328,8 @@
                             </form>
                         </div>
                     </li>
-                    @endguest -->
-                    @if (!empty($_SESSION['id']))
+                    @endguest
+                    {{--@if (!empty($_SESSION['id']))
                         <span id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <img src="{{url('/file-image/avatar/')}}/{{ !empty(Auth::user()->avatar)?Auth::user()->avatar:'' }}" alt="Image" style="border-radius:50%;height: 30px;width: 30px;object-fit: cover;">
                             <span style="color:white">
@@ -369,7 +369,7 @@
                                 @endif
                             </div>
                         </div>
-                    @endif
+                    @endif--}}
                 </ul>
                 <!-- Right Side Of Navbar -->
             </div>
