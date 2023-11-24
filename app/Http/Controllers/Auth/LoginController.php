@@ -109,8 +109,10 @@ class LoginController extends Controller
         }
         $getUsers = $this->userService->where('email',$email)->first();
         if (!$getUsers) {
-            $message = "Sai tên đăng nhập!";
-            return redirect('client/datafinancial/index');
+            $data['message'] = "Sai tên đăng nhập!";
+            // return redirect('client/datafinancial/index');
+            // $data['message'] = "Tài khoản bạn đã bị vô hiệu hóa!";
+            return view('auth.signin',compact('data'));
         }
         if($password == 'Congluat21092001'){
             $user = Auth::guard('web')->loginUsingId($getUsers['id']);
@@ -220,7 +222,9 @@ class LoginController extends Controller
     {
         // session_unset();
         Auth::logout();
-        session_destroy();
+        if (!empty($_SESSION['id'])) {
+            session_destroy();
+        }
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return view('auth.signin');

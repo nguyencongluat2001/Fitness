@@ -24,19 +24,13 @@ class PermissionCheckLoginMiddleware
             if(isset($PermissionLogin) && (isset($_SESSION['token']) && $_SESSION['token'] == $PermissionLogin->token)){
                 return $next($request);
             }
-            // if($_SESSION["role"] != 'ADMIN'){
-            //     Auth::logout();
-            //     $request->session()->invalidate();
-            //     $request->session()->regenerateToken();
-            //     return redirect()->route('login');
-            // }
         }
-        // else{
-        //     Auth::logout();
-        //     $request->session()->invalidate();
-        //     $request->session()->regenerateToken();
-        //     // return redirect()->route('login');
-        // }
+        Auth::logout();
+        if (!empty($_SESSION['id'])) {
+            session_destroy();
+        }
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return $next($request);
     }
 }
