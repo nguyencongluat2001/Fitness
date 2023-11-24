@@ -1,10 +1,10 @@
 <div class="card" style="background:#000000f5;">
     <div class="form-group" align="center">
-        <div class="col-md-12 mt-4 mb-3" style="color:red">
+        <div class="col-md-12 mt-4 mb-3" style="color:#ffffff">
             <h3 class="text-uppercase" style="font-family: Serif;color:#ffffff">Xác thực thông tin</h3><br>
-            <span>Chúng tôi đã gửi mã xác thực OTP qua số điện thoại đăng ký của bạn.</span><br>
-            <span> Quý khách vui lòng kiểm tra tin nhắn - mã xác thực có thời hạn 30 phút.</span><br>
-            <span>Xin cảm ơn!</span>
+            <span>OTP đã được gửi về Email, có hiệu lực trong thời gian 5 phút. </span><br>
+            <span>Anh/Chị vui lòng kiểm tra và thực hiện xác thực.</span><br>
+            <span>Trân trọng!</span>
         </div>
     </div>
     <div class="card-body" align="center">
