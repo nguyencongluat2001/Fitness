@@ -202,40 +202,14 @@ JS_Client.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) {
  *
  * @return void
  */
-JS_Client.prototype.edit = function (oForm) {
+JS_Client.prototype.edit = function (id) {
     var url = this.urlPath + '/edit';
     var myClass = this;
-    var data = $(oForm).serialize();
-    var listitem = '';
-    var i = 0;
-    var p_chk_obj = $('#table-data').find('input[name="chk_item_id"]');
-    $(p_chk_obj).each(function () {
-        if ($(this).is(':checked')) {
-            if (listitem !== '') {
-                listitem += ',' + $(this).val();
-            } else {
-                listitem = $(this).val();
-            }
-            i++;
-        }
-    });
-    if (listitem == '') {
-          var nameMessage = 'Bạn chưa chọn đối tượng!';
-          var icon = 'warning';
-          var color = '#f5ae67';
-          NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
-    if (i > 1) {
-          var nameMessage = 'Bạn chỉ được chọn một đối tượng!';
-          var icon = 'warning';
-          var color = '#f5ae67';
-          NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
+    var data = 'chk_item_id=' + id;
+    
     $.ajax({
         url: url,
-        type: "POST",
+        type: "GET",
         data: data,
         success: function (arrResult) {
             $('#editmodal').html(arrResult);
