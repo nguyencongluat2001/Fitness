@@ -39,7 +39,7 @@
                                 <div class="col-md-8" style="color: black;">
                                    {{-- @if(!empty($data) && $_SESSION["email"] == $data['email']) --}}
                                     <span id='btn_changePass'>
-                                        <button class="btn rounded-pill px-4 btn-outline-warning" type="button">
+                                        <button class="btn rounded-pill px-4 btn-outline-warning" style="background: #165c38;color: #fff079;font-weight: 600;" type="button">
                                             Đổi mật khẩu
                                         </button>
                                     </span>
@@ -100,7 +100,7 @@
                                         </div>
                                         <br>
                                         <center>
-                                            <button style="background: #165c38;color: white;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.updateCustomer()" type="button">
+                                            <button style="background: #165c38;color: #fff079;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.updateCustomer()" type="button">
                                                 Cập nhật
                                             </button>
                                         </center>
@@ -141,7 +141,7 @@
                                                     <i class="ni location_pin mr-2"></i>Ngày đăng ký: {{isset($datas->date_update_vip) ? $datas->date_update_vip : ''}}
                                                 </div>
                                                 <br>
-                                                <a type="button" class="btn rounded-pill px-4 btn-outline-warning" style="background: #165c38;" href="{{ url('client/privileges/index') }}"></i>Nâng cấp tài khoản</a>
+                                                <a type="button" class="btn rounded-pill px-4 btn-outline-warning" style="background: #165c38;color:#fff079;font-weight: 600;" href="{{ url('client/privileges/index') }}"></i>Nâng cấp tài khoản</a>
                                             </div>
                                         </div>
                                     </div>
@@ -153,6 +153,7 @@
             </form>
         </div>
     </div>
+    @if(count($vip) > 0)
     <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
         <!-- phần giới thiệu FIn top -->
         <div class="home_index_child" >
@@ -218,6 +219,7 @@
             </div>
         </div>
     </div>
+    @endif
 </section>
 <script src="../clients/js/jquery.min.js"></script>
 <div class="modal fade" id="editmodal" role="dialog"></div>
