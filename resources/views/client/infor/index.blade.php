@@ -100,7 +100,7 @@
                                         </div>
                                         <br>
                                         <center>
-                                            <button style="background: #165c38;color: white;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-primary" onclick="JS_InforClient.updateCustomer()" type="button">
+                                            <button style="background: #165c38;color: white;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.updateCustomer()" type="button">
                                                 Cập nhật
                                             </button>
                                         </center>
@@ -129,11 +129,19 @@
                                                     {{isset($datas->name) ? $datas->name : ''}}
                                                 </h5>
                                                 <div>
-                                                    <i class="ni location_pin mr-2"></i>Hội viên: {{isset($datas->account_type_vip) ? $datas->account_type_vip : ''}} <br>
+                                                    <i class="ni location_pin mr-2"></i>Hội viên: 
+                                                    @if(isset($datas->account_type_vip) && $datas->account_type_vip == 'VIP1')
+                                                       Bạc
+                                                    @elseif(isset($datas->account_type_vip) && $datas->account_type_vip == 'VIP2')
+                                                       Vàng
+                                                    @else
+                                                       Tiêu Chuẩn
+                                                    @endif
+                                                    <br>
                                                     <i class="ni location_pin mr-2"></i>Ngày đăng ký: {{isset($datas->date_update_vip) ? $datas->date_update_vip : ''}}
                                                 </div>
                                                 <br>
-                                                <a type="button" class="btn rounded-pill px-4 btn-outline-warning" href="{{ url('client/privileges/index') }}"></i>Nâng cấp tài khoản</a>
+                                                <a type="button" class="btn rounded-pill px-4 btn-outline-warning" style="background: #165c38;" href="{{ url('client/privileges/index') }}"></i>Nâng cấp tài khoản</a>
                                             </div>
                                         </div>
                                     </div>
