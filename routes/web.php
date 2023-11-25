@@ -315,6 +315,7 @@ Route::prefix('/client')->group(function () {
             Route::post('updateCustomer', [InforController::class, 'updateCustomer']);
             Route::get('/changePass', [UserController::class,'changePass']);
             Route::post('/updatePass', [UserController::class,'updatePass']);
+            Route::post('/uploadAvatar', [InforController::class,'uploadAvatar']);
         });
             Route::prefix('datafinancial')->group(function () {
                 // Tra cứu cổ phiếu

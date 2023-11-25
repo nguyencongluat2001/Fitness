@@ -25,6 +25,9 @@ JS_InforClient.prototype.loadIndex = function () {
         myClass.updatePass('form#frmChangePass');
     })
     myClass.loadList(oForm);
+    $("#upload-avatar").change(function(){
+        myClass.uploadAvatar();
+    });
 }
 // /**
 //  * Load màn hình danh sách
@@ -215,6 +218,34 @@ JS_InforClient.prototype.updateCustomer = function(){
             }
         }, error: function(e){
             console.log(e);
+        }
+    });
+}
+JS_InforClient.prototype.uploadAvatar = function(){
+    var myClass = this;
+    var url = myClass.urlPath + '/uploadAvatar';
+    var data = new FormData;
+    data.append('_token', $("#_token").val());
+    data.append('id', $("#id").val());
+    data.append('upload', $("#upload-avatar")[0].files[0]);
+    $.ajax({
+        url: url,
+        data: data,
+        type: 'POST',
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function(arrResult){
+            $("#upload-avatar").val('');
+            if(arrResult['success']){
+                $("#avatar").attr('src', arrResult['data']['url']);
+                NclLib.alerMesage(arrResult['message'], 'success', '#1bba00');
+            }else{
+                var nameMessage = arrResult['message'];
+                var icon = 'warning';
+                var color = '#f5ae67';
+                NclLib.alerMesage(nameMessage,icon,color);
+            }
         }
     });
 }
