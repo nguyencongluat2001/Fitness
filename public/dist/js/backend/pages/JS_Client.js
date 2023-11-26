@@ -107,34 +107,10 @@ JS_Client.prototype.store = function (oFormCreate) {
     if(check == false){
         return false;
     }
-    var role = [];
-    $('input[name="role"]:checked').each(function() {
-        role.push(this.value); 
-    });
     formdata.append('_token', $("#_token").val());
     formdata.append('id', $("#id").val());
-    formdata.append('name', $("#name").val());
-    formdata.append('email', $("#email").val());
-    formdata.append('dateBirth', $("#dateBirth").val());
-    formdata.append('phone', $("#phone").val());
-    formdata.append('order', $("#order").val());
-    formdata.append('address', $("#address").val());
-    formdata.append('company', $("#company").val());
-    formdata.append('position', $("#position").val());
-    formdata.append('date_join', $("#date_join").val());
     formdata.append('id_personnel', $("#id_personnel").val());
     formdata.append('id_manage', $("#id_manage").val());
-    formdata.append('role', role);
-    if($("#frmAdd #status").is(':checked')){
-        formdata.append('status', 1);
-    }
-    $('form#frmAdd input[type=file]').each(function () {
-        var count = $(this)[0].files.length;
-        for (var i = 0; i < count; i++) {
-            formdata.append('file-attack-' + i, $(this)[0].files[i]);
-        }
-    });
-
     $.ajax({
         url: url,
         type: "POST",
@@ -151,7 +127,7 @@ JS_Client.prototype.store = function (oFormCreate) {
 
             } else {
                 NclLib.successLoadding();
-                NclLib.alerMesage('danger', 'Lỗi', 'Cập nhật thất bại');
+                NclLib.alerMesage('danger', 'Lỗi', 'Nâng cấp thất bại');
             }
         }
     });
@@ -216,7 +192,7 @@ JS_Client.prototype.edit = function (id) {
             $('#editmodal').modal('show');
             $('.chzn-select').chosen({ height: '100%', width: '100%' });
             $('.chzn-select').trigger('chosen:updated');
-            myClass.loadevent(oForm);
+            // myClass.loadevent(oForm);
             
         }
     });

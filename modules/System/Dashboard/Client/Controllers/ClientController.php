@@ -117,7 +117,7 @@ class ClientController extends Controller
     public function create (Request $request)
     {
         $input = $request->input();
-        $create = $this->ClientService->store($input,$_FILES); 
+        $create = $this->ClientService->store($input); 
         return $create;
     }
     /**
