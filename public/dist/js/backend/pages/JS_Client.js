@@ -127,7 +127,9 @@ JS_Client.prototype.store = function (oFormCreate) {
 
             } else {
                 NclLib.successLoadding();
-                NclLib.alerMesage('danger', 'Lỗi', 'Nâng cấp thất bại');
+                NclLib.alertMessageBackend('danger', 'Thông báo', arrResult['message']);
+
+                // NclLib.alerMesage('danger', 'Lỗi', arrResult['message']);
             }
         }
     });

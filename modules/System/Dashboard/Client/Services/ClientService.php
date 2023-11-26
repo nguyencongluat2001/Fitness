@@ -132,8 +132,15 @@ class ClientService extends Service
      * cập nhật người dùng
      */
     public function store($input){
-        // dd($input);
         //check quyền chỉnh sửa
+        if($input['id_personnel'] == ''){
+            return array('success' => false, 'message' => 'Mã cộng tác viên không được để trống!');
+        }
+        $check = $this->ClientRepository->where('id_personnel',$input['id_personnel'])->first();
+
+        if(!empty($check)){
+            return array('success' => false, 'message' => 'Mã cộng tác viên đã tồn tại!');
+        }
         try{
             // array data users
             $arrData = [
