@@ -158,4 +158,25 @@ class ClientService extends Service
             return array('success' => false, 'message' => (string) $e->getMessage());
         }
     }
+    
+     /**
+     * cập nhật người dùng
+     */
+    public function store_upgradeAcc($input){
+        //check quyền chỉnh sửa
+        try{
+            // array data users
+            $arrData = [
+                'account_type_vip'=> isset($input['account_type_vip'])?$input['account_type_vip']:'',
+            ];
+            if($input['id'] != ''){
+                $updateUser = $this->ClientRepository->where('id',$input['id'])->update($arrData);
+                return array('success' => true, 'message' => 'Nâng cấp cộng tác viên thành công');
+            }
+            
+            return true;
+        } catch (\Exception $e) {
+            return array('success' => false, 'message' => (string) $e->getMessage());
+        }
+    }
 }
