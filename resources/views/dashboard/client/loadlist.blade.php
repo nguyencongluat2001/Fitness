@@ -47,7 +47,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                            <div>Địa chỉ Email : {{ $data['email'] }}</div>
                            <div>Địa chỉ : {{ $data['address'] }}</div>
                            <div>Ngày sinh : {{ $data['dateBirth'] }}</div>
-
+                           <div>Ngày gia nhập : {{ $data['created_at'] }}</div>
                            <div>Thời gian đầu tư: 
                            @if($data['investment_time'] == '0-3')
                              0 - 3 tháng
