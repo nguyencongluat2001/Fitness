@@ -21,6 +21,22 @@
       color: #ffffff;
       padding-left: 20px;
    }
+   .infor-avatar{
+    position: relative;
+   }
+   .infor-avatar .upload-avatar{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
 
 </style>
 <section class="container">
@@ -116,10 +132,12 @@
                                                                                     margin-right: none !important;
                                                                                     margin-left: calc(var(--bs-gutter-x)/ -2);">
                                             <div class="col-4 col-lg-4 order-lg-2">
-                                                <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0">
+                                                <div class="mt-n4 mt-lg-n6 mb-4 mb-lg-0 infor-avatar">
                                                     <a href="javascript:;">
-                                                        <img src="{{url('file-image/avatar')}}/{{$datas->avatar}}" style="height: 140px;width: 150px;object-fit: cover;border-radius:50%">
+                                                        <img id="avatar" src="{{url('file-image/avatar')}}/{{$datas->avatar}}" style="height: 140px;width: 150px;object-fit: cover;border-radius:50%">
                                                     </a>
+                                                    <label for="upload-avatar" class="upload-avatar" type="button"><i class="fas fa-camera"></i></label>
+                                                    <input type="file" hidden name="upload-avatar" id="upload-avatar">
                                                 </div>
                                             </div>
                                         </div>

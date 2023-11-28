@@ -128,4 +128,34 @@ class ClientService extends Service
             return array('success' => true, 'message', $e->getMessage());
         }
     }
+    /**
+     * cập nhật người dùng
+     */
+    public function store($input){
+        //check quyền chỉnh sửa
+        if($input['id_personnel'] == ''){
+            return array('success' => false, 'message' => 'Mã cộng tác viên không được để trống!');
+        }
+        $check = $this->ClientRepository->where('id_personnel',$input['id_personnel'])->first();
+
+        if(!empty($check)){
+            return array('success' => false, 'message' => 'Mã cộng tác viên đã tồn tại!');
+        }
+        try{
+            // array data users
+            $arrData = [
+                'role'=>  'SALE_BASIC',
+                'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
+                'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'F889',
+            ];
+            if($input['id'] != ''){
+                $updateUser = $this->ClientRepository->where('id',$input['id'])->update($arrData);
+                return array('success' => true, 'message' => 'Nâng cấp cộng tác viên thành công');
+            }
+            
+            return true;
+        } catch (\Exception $e) {
+            return array('success' => false, 'message' => (string) $e->getMessage());
+        }
+    }
 }

@@ -5,7 +5,7 @@
 	<div class="modal-dialog modal-lg">
 		<div class="modal-content card">
 			<div class="modal-header">
-				<h5 class="modal-title">Nâng cấp coogj tác viên</h5>
+				<h5 class="modal-title">Nâng cấp cộng tác viên</h5>
 				<button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
 					X
 				</button>
@@ -32,11 +32,11 @@
 				{{-- Quyền truy cập --}}
 				<div class="row form-group" id="div_hinhthucgiai">
 					<div class="modal-footer">
-						<span id="btupdate">
-							<button id='btn_create' class="btn btn-primary btn-sm" type="button">
+						<!-- <span id="btn_create"> -->
+							<button onclick="JS_Client.store()" class="btn btn-primary btn-sm" type="button">
 								Cập nhật
 							</button>
-						</span>
+						<!-- </span> -->
 						<button type="button" class="btn btn-default btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
 							Đóng
 						</button>

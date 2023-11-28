@@ -28,6 +28,7 @@ class InforController extends Controller
         $this->userService = $userService;
         $this->userInfoService = $userInfoService;
         $this->ApprovePaymentService = $ApprovePaymentService;
+        $this->baseDis = public_path("file-image/avatar") . "/";
     }
 
     /**
@@ -83,5 +84,34 @@ class InforController extends Controller
         $data = $this->userService->store($arrInput, []);
         return $data;
     }
-    
+    /**
+     * Cập nhật ảnh đại diện
+     */
+    public function uploadAvatar(Request $request)
+    {
+        $arrInput = $request->all();
+        $path = $this->baseDis;
+        $users = $this->userService->where('id', $arrInput['id'])->first();
+        if(isset($users->avatar) && file_exists($path . $users->avatar)){
+            unlink($path . $users->avatar);
+        }
+        $result = [];
+        if($_FILES != [] && isset($_FILES['upload'])){
+            $fileName = $_FILES['upload']['name'];
+            $random = Library::_get_randon_number();
+            $fileName = Library::_replaceBadChar($fileName);
+            $fileName = Library::_convertVNtoEN($fileName);
+            $sFullFileName = date("Y") . '_' . date("m") . '_' . date("d") . "_" . date("H") . date("i") . date("u") . $random . "!~!" . $fileName;
+            move_uploaded_file($_FILES['upload']['tmp_name'], $path . $sFullFileName);
+            $this->userService->where('id', $arrInput['id'])->update(['avatar' => $sFullFileName]);
+            $result = [
+                'url' => url('file-image/avatar') . '/' . $sFullFileName,
+            ];
+        }
+        if($result != []){
+            return array('success' => true, 'message' => 'Cập nhật thành công.', 'data' => $result);
+        }else{
+            return array('success' => false, 'message' => 'Cập nhật thất bại!');
+        }
+    }
 }
