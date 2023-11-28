@@ -65,7 +65,7 @@ return [
             'href' => '/system/category/index',
         ],
         'handbook' => [
-            'name' => 'Cẩm nang cho nhà đầu tư',
+            'name' => 'Cẩm nang nhà đầu tư',
             'icon' => 'fas fa-medkit',
             'a'    => 'nav-link link-handbook',
             'href' => '/system/handbook/index',

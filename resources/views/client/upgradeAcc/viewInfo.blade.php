@@ -387,7 +387,7 @@
 										<div class="pricing-list-body col-md-12 align-items-center pl-3">
 											<ul class="list-unstyled text-center light-300" style="background: #001f39;border-radius: 0.5em;color:#ffffff">
 												<br>
-												<li style="font-family: math;    padding: 0 25px 25px 25px;">Gói hỗ trợ <span style="color: #ffd400;font-weight: 600;">VIP PRO</span> đặc biệt dành riêng cho khách hàng đối tác FinTop.Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
+												<li style="font-family: math;    padding: 0 25px 25px 25px;">Gói hỗ trợ <span style="color: #ffd400;font-weight: 600;">VIP PRO</span> đặc biệt dành riêng cho khách hàng đối tác FinTop. Hội viên Kim Cương với NAV đầu tư từ 1 tỷ VND, cố vấn chiến lược 1-1 cùng Chuyên gia FinTop, tư vấn danh mục cổ phiếu, nắm bắt cơ hội đầu tư, quản trị rủi ro.</li>
 											</ul>
 										</div>
 										<div class="pricing-list-footer text-center m-auto align-items-center">

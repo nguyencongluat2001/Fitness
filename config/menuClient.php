@@ -74,7 +74,7 @@ return [
         ],
     ],
     'library' => [
-        'name' => 'THƯ VIỆN ĐẦU TƯ',
+        'name' => 'CẨM NANG ĐẦU TƯ',
         'icon' => 'fas fa-book-medical',
         'role' => false,
         'child' => false,

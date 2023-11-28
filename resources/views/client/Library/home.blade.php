@@ -57,22 +57,47 @@
                                          <button onclick="JS_Library.loadLists('KT_PS_CQ_MARGIN')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Kiến thức chứng khoán, TTCK</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-chart-line"></i> Chứng khoán thế giới</button>
+                                         <button target="_blank" href="https://vn.investing.com/indices/major-indices" style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-chart-line"></i> Chứng khoán thế giới</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-globe-europe"></i> Chỉ số hàng hóa</button>
+                                         <span style="width:100%;text-align: left" class="btn btn-light">
+                                            <i class="fas fa-globe-europe"></i>
+                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/indices/global-indices?commodities=on&r_id=">
+                                            Chỉ số hàng hóa
+                                            </a>
+                                        </span>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-coins"></i> Coins</button>
+                                         <span style="width:100%;text-align: left" class="btn btn-light">
+                                            <i class="fas fa-coins"></i>
+                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/crypto/">
+                                                Coins
+                                            </a>
+                                        </span>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fab fa-viacoin"></i> Forex</button>
+                                         <span style="width:100%;text-align: left" class="btn btn-light">
+                                            <i class="fab fa-viacoin"></i>
+                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/currencies/">
+                                            Forex
+                                            </a>
+                                        </span>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-money-check"></i> Tin kinh tế</button>
+                                         <span style="width:100%;text-align: left" class="btn btn-light">
+                                            <i class="fas fa-money-check"></i>
+                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/news/economy">
+                                            Tin kinh tế
+                                            </a>
+                                        </span>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-globe-asia"></i> Tin thế giới</button>
+                                         <span style="width:100%;text-align: left" class="btn btn-light">
+                                            <i class="fas fa-globe-asia"></i>
+                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/news/world-news">
+                                            Tin thế giới
+                                            </a>
+                                        </span>
                                     </div>
                                 </div>
 
