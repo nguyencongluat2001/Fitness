@@ -50,11 +50,11 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                            <div>Quyền truy cập : <span style="color:#ff7c00"> CEO </span></div>
                            @elseif($data['role'] == 'MANAGE')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Trợ lý CEO </span></div>
-                           @elseif($data['role'] == 'CV_ADMIN')
+                           @elseif($data['role'] == 'EDIT_ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Admin </span></div>
-                           @elseif($data['role'] == 'CV_PRO')
+                           @elseif($data['role'] == 'EDIT_PRO')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Pro </span></div>
-                           @elseif($data['role'] == 'CV_BASIC')
+                           @elseif($data['role'] == 'EDIT_BASIC')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor basic </span></div>
                            @elseif($data['role'] == 'SALE_ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Sale Admin </span></div>
@@ -62,17 +62,17 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Sale </span></div>
                            @elseif($data['role'] == 'USERS')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Khách hàng </span></div>
-                           @elseif($data['role'] == 'CV_ADMIN,SALE_ADMIN')
+                           @elseif($data['role'] == 'EDIT_ADMIN,SALE_ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Admin + Sale Admin</span></div>
-                           @elseif($data['role'] == 'CV_ADMIN,SALE_BASIC')
+                           @elseif($data['role'] == 'EDIT_ADMIN,SALE_BASIC')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Admin + Sale</span></div>
-                           @elseif($data['role'] == 'CV_PRO,SALE_ADMIN')
+                           @elseif($data['role'] == 'EDIT_PRO,SALE_ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Pro + Sale Admin</span></div>
-                           @elseif($data['role'] == 'CV_PRO,SALE_BASIC')
+                           @elseif($data['role'] == 'EDIT_PRO,SALE_BASIC')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor Pro + Sale</span></div>
-                           @elseif($data['role'] == 'CV_BASIC,SALE_ADMIN')
+                           @elseif($data['role'] == 'EDIT_BASIC,SALE_ADMIN')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor basic + Sale Admin</span></div>
-                           @elseif($data['role'] == 'CV_BASIC,SALE_BASIC')
+                           @elseif($data['role'] == 'EDIT_BASIC,SALE_BASIC')
                            <div>Quyền truy cập : <span style="color:#ff7c00"> Editor basic + Sale</span></div>
                            @endif
                        </div>
