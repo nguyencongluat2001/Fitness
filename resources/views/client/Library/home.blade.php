@@ -45,40 +45,40 @@
                                          <button style="width:100%;text-align: left" id="txt_search" name="txt_search" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Cẩm nang cho nhà đầu tư</button>
                                     </div> -->
                                     <div style="padding:2%;">
-                                         <button onclick="JS_Library.loadLists('TU_SACH_DAU_TU')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Tủ sách đầu tư</button>
+                                         <button onclick="JS_Library.loadLists('TU_SACH_DAU_TU')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Tủ sách đầu tư</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button onclick="JS_Library.loadLists('KT_KT_TA')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Kiến thức phân tích kỹ thuật (TA)</button>
+                                         <button onclick="JS_Library.loadLists('KT_KT_TA')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức phân tích kỹ thuật (TA)</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button onclick="JS_Library.loadLists('KT_PT_BASIC')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Kiến thức phân tích cơ bản (FA)</button>
+                                         <button onclick="JS_Library.loadLists('KT_PT_BASIC')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức phân tích cơ bản (FA)</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button onclick="JS_Library.loadLists('KT_PS_CQ_MARGIN')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i> Kiến thức chứng khoán, TTCK</button>
+                                         <button onclick="JS_Library.loadLists('KT_PS_CQ_MARGIN')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức chứng khoán, TTCK</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button target="_blank" href="https://vn.investing.com/indices/major-indices" style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-chart-line"></i> Chứng khoán thế giới</button>
+                                         <button target="_blank" href="https://vn.investing.com/indices/major-indices" style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-chart-line"></i>&nbsp; Chứng khoán thế giới</button>
                                     </div>
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
-                                            <i class="fas fa-globe-europe"></i>
-                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/indices/global-indices?commodities=on&r_id=">
+                                            <i class="fas fa-globe-europe"></i>&nbsp;
+                                            <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/indices/global-indices?commodities=on&r_id=">
                                             Chỉ số hàng hóa
                                             </a>
                                         </span>
                                     </div>
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
-                                            <i class="fas fa-coins"></i>
-                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/crypto/">
+                                            <i class="fas fa-coins"></i>&nbsp;
+                                            <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/crypto/">
                                                 Coins
                                             </a>
                                         </span>
                                     </div>
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
-                                            <i class="fab fa-viacoin"></i>
-                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/currencies/">
+                                            <i class="fab fa-viacoin"></i>&ensp;
+                                            <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/currencies/">
                                             Forex
                                             </a>
                                         </span>
@@ -86,15 +86,15 @@
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
                                             <i class="fas fa-money-check"></i>
-                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/news/economy">
+                                            <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/news/economy">
                                             Tin kinh tế
                                             </a>
                                         </span>
                                     </div>
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
-                                            <i class="fas fa-globe-asia"></i>
-                                            <a style="color:#000" target="_blank" href="https://vn.investing.com/news/world-news">
+                                            <i class="fas fa-globe-asia"></i>&nbsp;
+                                            <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/news/world-news">
                                             Tin thế giới
                                             </a>
                                         </span>
