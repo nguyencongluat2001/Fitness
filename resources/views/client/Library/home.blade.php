@@ -69,6 +69,14 @@
                                     </div>
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
+                                            <i class="fas fa-globe-asia"></i>&nbsp;
+                                            <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/indices/major-indices">
+                                            Chứng khoán thế giới
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div style="padding:2%;">
+                                         <span style="width:100%;text-align: left" class="btn btn-light">
                                             <i class="fas fa-coins"></i>&nbsp;
                                             <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/crypto/">
                                                 Coins
