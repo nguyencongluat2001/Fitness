@@ -52,7 +52,7 @@ JS_About.prototype.loadListTHTT = function (oFormBlog,numberPage = 1, perPage = 
     var data = $(oFormBlog).serialize();
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
-    data += '&category=BAO_CAO_THTT';
+    data += '&category=BAO_CAO_TTTH';
     $.ajax({
         url: url,
         type: "GET",
