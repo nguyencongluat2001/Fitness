@@ -51,8 +51,8 @@ class HandbookController extends Controller
         }
         $data = array();
         $param = $arrInput;
-        $param['sort'] = 'order';
-        // $param['sortType'] = 1;
+        // $param['sort'] = 'order';
+        $param['sortType'] = 1;
         $objResult = $this->handbookService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;
