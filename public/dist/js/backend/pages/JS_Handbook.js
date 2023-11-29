@@ -132,6 +132,7 @@ JS_Handbook.prototype.store = function (oFormCreate) {
                     timer: 3000
                   })
                $('#editmodal').modal('hide');
+               myClass.loadList('form#frmHandbook_index');
                var loadding = NclLib.successLoadding();
             } else {
                 Swal.fire({

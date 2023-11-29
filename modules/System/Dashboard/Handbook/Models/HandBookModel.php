@@ -10,6 +10,8 @@ class HandBookModel extends Model
     public $incrementing = false;
     public $timestamps = false;
 
+    public $sortable = ['order'];
+
     protected $fillable = [
         'id',
         'name_handbook',
@@ -17,7 +19,8 @@ class HandBookModel extends Model
         'type_handbook',
         'url_link',
         'decision',
-        'current_status'
+        'current_status',
+        'order'
     ];
 
     public function filter($query, $param, $value)
