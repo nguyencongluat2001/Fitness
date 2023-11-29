@@ -1,7 +1,7 @@
 <style>
 
 </style>
-<div class="modal-dialog modal-fullscreen-xxl-down" style="height: 600px;">
+<div class="modal-dialog modal-fullscreen" style="height: 600px;">
     <div class="modal-content card">
         <div class="modal-header">
             <h5 class="modal-title">Cập nhật bài viết</h5>
