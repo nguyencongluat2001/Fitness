@@ -43,32 +43,30 @@ class DesController extends Controller
     public function index(Request $request)
     {
         $categories = $this->CategoryService->where('cate','DM_BLOG')->where('instruct',1)->orderBy('created_at')->get();
+        $arrCategory = [];
+        foreach($categories as $key => $category){
+            $arrCategory[$key] = $category->code_category;
+        }
+        // dd($arrCategory);
         $arrData = [];
         $readerFirst = '';
-        foreach($categories as $key => $category){
-            $arrSelect = ['blogs.id', 'blogs.code_blog', 'blogs.code_category', 'blogs_details.title', 'blogs_image.name_image'];
-            $data = $this->BlogService->select($arrSelect)
-                    ->join('blogs_details', 'blogs.code_blog', '=', 'blogs_details.code_blog')
-                    ->join('blogs_image', 'blogs.code_blog', '=', 'blogs_image.code_blog')
-                    ->where('blogs.code_category', $category->code_category)
-                    ->orderBy('blogs.created_at')
-                    ->get();
-            if($readerFirst == ''){
-                foreach($data as $v){
-                    if($readerFirst == ''){
-                        $detail = $this->BlogDetailService->where('code_blog', $v->code_blog)->first();
-                        $readerFirst = $detail->decision ?? '';
-                    }
+        $arrSelect = ['blogs.id', 'blogs.code_blog', 'blogs.code_category', 'blogs_details.title', 'blogs_image.name_image'];
+        $query = $this->BlogService->select($arrSelect)
+                ->join('blogs_details', 'blogs.code_blog', '=', 'blogs_details.code_blog')
+                ->join('blogs_image', 'blogs.code_blog', '=', 'blogs_image.code_blog')
+                ->whereIn('blogs.code_category', $arrCategory)
+                ->orderBy('blogs.created_at')
+                ->get();
+        // dd($query);
+        if($readerFirst == ''){
+            foreach($query as $v){
+                if($readerFirst == ''){
+                    $detail = $this->BlogDetailService->where('code_blog', $v->code_blog)->first();
+                    $readerFirst = $detail->decision ?? '';
                 }
             }
-            $arrData[$key] = [
-                'id' => $category->id,
-                'name_category' => $category->name_category,
-                'code_category' => $category->code_category,
-                'listItem' => $data->toArray(),
-            ];
         }
-        $data['datas'] =  $arrData;
+        $data['datas'] =  $query;
         $data['readerFirst'] = $readerFirst;
         return view('client.des.home',$data);
     }

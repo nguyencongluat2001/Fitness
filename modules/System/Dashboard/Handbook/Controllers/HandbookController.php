@@ -51,6 +51,8 @@ class HandbookController extends Controller
         }
         $data = array();
         $param = $arrInput;
+        $param['sort'] = 'order';
+        // $param['sortType'] = 1;
         $objResult = $this->handbookService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;
@@ -69,6 +71,7 @@ class HandbookController extends Controller
         $input = $request->all();
         $getCategory = $this->categoryService->where('cate','CNK_001')->get()->toArray();
         $data['category'] = $getCategory;
+        $data['order'] = $this->handbookService->select('id')->count() + 1;
         return view('dashboard.handbook.edit',compact('data'));
     }
     /**

@@ -115,39 +115,31 @@
 <div class="banner-wrapper">
     <section class="container">
         <div class="card" style="background-color: #b56c6cb5;">
-            <div class="row">
+            <div class="row home_index_child">
                 <div class="col-md-8">
                     <div class="tab1" style="background: white">{!! $readerFirst ?? '' !!}</div>
                 </div>
                 <div class="col-md-4">
-                    <div class="container pt-3 ps-0">
+                    <div class="container ps-0 pe-0">
                         <div class="treeview-animated w-20 border">
-                            <div class="showHideAll">
+                            {{--<div class="showHideAll">
                                 <span class="showAll">Hiển thị tất cả</span>
                                 <span class="hideAll">Thu nhỏ tất cả</span>
-                            </div>
+                            </div>--}}
                             <ul class="list-unstyled components m-3">
                                 @if(isset($datas) && count($datas) > 0)
                                 @foreach($datas as $key => $data)
+                                @php $id = $data['id']; @endphp
                                 <li class="active">
-                                    <a href="{{ !empty($data['listItem']) ? ('#' . $data['code_category'] . '_' . $data['id']) : 'javascript:;' }}"
-                                        <?php echo empty($data['listItem']) ? 'onclick="reader(\'' . $data['id'] . '\')"' : '' ?>
+                                    <a href="javascript:;"
                                         type="button"
                                         data-toggle="collapse" 
                                         aria-expanded="false" 
                                         class="dropdown-toggle btn btn-light mb-2"
                                         style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;"
-                                        onclick="toggleIcon(this)"
+                                        onclick="reader('{{$id}}')"
                                         >
-                                        <i class="fas fa-book"></i> <span>{{ $data['name_category'] }}</span></a>
-                                    <ul class="collapse list-unstyled submenu-child" id="{{ $data['code_category'] }}_{{ $data['id'] }}">
-                                        @if(isset($data['listItem']))
-                                        @foreach($data['listItem'] as $k => $v)
-                                        @php $id = $v['id']; @endphp
-                                        <li><span><i class="far fa-hand-point-right ms-3"></i> <a class="closed" onclick="reader('{{$id}}')"><span>{{ $v['title'] }}</span></a></span></li>
-                                        @endforeach
-                                        @endif
-                                    </ul>
+                                        <i class="fas fa-book"></i> <span>{{ $data['title'] }}</span></a>
                                 </li>
                                 @endforeach
                                 @endif

@@ -24,6 +24,9 @@ class HandbookService extends Service
     }
 
     public function store($input){
+        if(isset($input['order'])){
+            $this->updateOrder($input);
+        }
         if($input['id'] != ''){
             $arrData = [
                 'name_handbook'=>$input['name_handbook'],
@@ -32,6 +35,8 @@ class HandbookService extends Service
                 'url_link'=>$input['url_link'],
                 'decision'=>$input['decision'],
                 'current_status'=> !empty($input['is_checkbox_status'])?$input['is_checkbox_status']:0,
+                'order' => $input['order'] ?? $this->repository->select('id')->count() + 1,
+                'updated_at' => date('Y-m-d H:i:s'),
             ];
             $create = $this->HandbookRepository->where('id',$input['id'])->update($arrData);
         }else{
@@ -43,6 +48,8 @@ class HandbookService extends Service
                 'url_link'=>$input['url_link'],
                 'decision'=>$input['decision'],
                 'current_status'=> !empty($input['is_checkbox_status'])?$input['is_checkbox_status']:0,
+                'order' => $input['order'] ?? $this->repository->select('id')->count() + 1,
+                'created_at' => date('Y-m-d H:i:s'),
             ];
             $create = $this->HandbookRepository->create($arrData);
         }
@@ -52,6 +59,25 @@ class HandbookService extends Service
     public function edit($arrInput){
         $getUserInfor = $this->repository->where('id',$arrInput['chk_item_id'])->first()->toArray();
         return $getUserInfor;
+    }
+    /**
+     * Cập nhật thứ tự
+     */
+    public function updateOrder($input)
+    {
+        $query = $this->repository->select('*')->where('order', '>=', $input['order'])->orderBy('order');
+        if(isset($input['id'])){
+            $query = $query->where('id', '<>', $input['id']);
+        }
+        $order = $query->get();
+        if(!empty($order)){
+            $i = $input['order'];
+            foreach($order as $value){
+                $i++;
+                $this->repository->where('id', $value->id)->update(['order' => $i]);
+            }
+
+        }
     }
 
 }

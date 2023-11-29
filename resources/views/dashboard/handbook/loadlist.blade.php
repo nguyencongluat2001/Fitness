@@ -53,7 +53,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <tr>
                     <td style="padding-top: 20px;"align="center"><input type="checkbox" name="chk_item_id"
                             value="{{ $data->id }}"></td>
-                    <td style="padding-top: 20px;"align="center">{{ $key + 1 }}
+                    <td style="padding-top: 20px;"align="center">{{ $data->order }}
                     <td style="padding-top: 20px;white-space: inherit;" ondblclick="" onclick="{select_row(this);}">
                        {{$data->name_handbook}}
                     </td>
