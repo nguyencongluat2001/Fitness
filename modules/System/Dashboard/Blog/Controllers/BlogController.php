@@ -42,7 +42,7 @@ class BlogController extends Controller
     {
         $cate = $this->cateService->where('code_cate','DM_BLOG')->first();
         if(!empty($cate)){
-            $category = $this->categoryService->select('code_category','name_category')->where('cate',$cate->code_cate)->get()->toArray();
+            $category = $this->categoryService->select('code_category','name_category')->where('cate',$cate->code_cate)->orderBy('created_at','ASC')->get()->toArray();
         }
         $data['category'] = isset($category) ? $category : [];
         return view('dashboard.blog.index',compact('data'));
