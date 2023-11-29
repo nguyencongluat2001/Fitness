@@ -24,7 +24,7 @@
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-map-marker-alt"></i></td>
-                            <td><span class="text-decoration-none pt-2 text-light py-1">Số 65 Ô Chợ Dừa, P. Ô Chợ Dừa, Q. Đống Đa, Hà Nội, Việt Nam.</span></td>
+                            <td><span class="text-decoration-none pt-2 text-light py-1">Địa chỉ: 65 Ô Chợ Dừa, P. Ô Chợ Dừa, Q. Đống Đa, Hà Nội, Việt Nam.</span></td>
                         </tr>
                     </tbody>
                 </table>
