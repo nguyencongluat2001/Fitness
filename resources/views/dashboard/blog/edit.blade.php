@@ -1,7 +1,9 @@
 <style>
-
+    .cke_reset{
+        height:700px !important;
+    }
 </style>
-<div class="modal-dialog modal-fullscreen" style="height: 600px;">
+<div class="modal-dialog modal-fullscreen" style="height: 1100px;">
     <div class="modal-content card">
         <div class="modal-header">
             <h5 class="modal-title">Cập nhật bài viết</h5>
@@ -17,13 +19,13 @@
                    <div class="col-md-8">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <!-- <p for="example-text-input" class="form-control-label required">Tiêu đề</p> -->
+                                <p for="example-text-input" class="form-control-label required">Tiêu đề</p>
                                 <input class="form-control" type="text" value="{{!empty($data['title'])?$data['title']:''}}" name="title" id="title" placeholder="Nhập tiêu đề..." />
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <!-- <p for="example-text-input" class="form-control-label">Nội dung</p> -->
+                                <p for="example-text-input" class="form-control-label">Nội dung</p>
                                 <textarea class="form-control" type="text" name="decision" id="decision" placeholder="Nhập nội dung...">{{!empty($data['decision'])?$data['decision']:''}}</textarea>
                             </div>
                         </div>
@@ -31,7 +33,7 @@
                     <div class="col-md-4">
                         <div class="col-md-12">
                             <div class="form-group">
-                                <!-- <p for="example-text-input" class="form-control-label required">Thể loại</p> -->
+                                <p for="example-text-input" class="form-control-label required">Thể loại</p>
                                 <select class="form-control input-sm chzn-select" name="code_category" id="code_category">
                                     <option value=''>-- Chọn thể loại --</option>
                                     @foreach($data['category'] as $item)
@@ -45,7 +47,7 @@
                              $_SESSION['role'] == 'CV_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'))
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <!-- <p for="example-text-input" class="form-control-label required">Loại bài viết</p> -->
+                                    <p for="example-text-input" class="form-control-label required">Loại bài viết</p>
                                     <select class="form-control input-sm chzn-select" name="type_blog" id="type_blog">
                                         <option value=''>-- Chọn loại --</option>
                                         <option @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP')) selected @endif  value='VIP'>Vip</option>
