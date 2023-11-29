@@ -121,6 +121,19 @@ class ClientController extends Controller
         return $create;
     }
     /**
+     * Thêm thông tin người dùng
+     *
+     * @param Request $request
+     *
+     * @return view
+     */
+    public function create_upgradeAcc (Request $request)
+    {
+        $input = $request->input();
+        $create = $this->ClientService->store_upgradeAcc($input); 
+        return $create;
+    }
+    /**
      * Load màn hình chỉnh sửa thông tin người dùng
      *
      * @param Request $request
@@ -138,6 +151,38 @@ class ClientController extends Controller
             $data['arr_quanly'] = $this->ClientService->where('id_personnel',$_SESSION['id_personnel'])->get();
         }
         return view('dashboard.client.edit',compact('data'));
+    }
+    /**
+     * Load màn hình chỉnh sửa thông tin người dùng
+     *
+     * @param Request $request
+     *
+     * @return view
+     */
+    public function edit_upgradeAcc(Request $request)
+    {
+        $input = $request->all();
+        $data = $this->ClientService->editUser($input);
+        $data['type_vip'] = [
+            [
+                'code'=> '',
+                'name' => 'Tiêu chuẩn'
+            ],
+            [
+                'code'=> 'VIP1',
+                'name' => 'Bạc'
+            ],
+            [
+                'code'=> 'VIP2',
+                'name' => 'Vàng'
+            ],
+            [
+                'code'=> 'KIM_CUONG',
+                'name' => 'Kim cương'
+            ]
+        ];
+        // dd($data);
+        return view('dashboard.client.upgradeAcc',compact('data'));
     }
 
      /**

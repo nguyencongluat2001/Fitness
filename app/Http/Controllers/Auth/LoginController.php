@@ -271,6 +271,7 @@ class LoginController extends Controller
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
+                unset($menu['category']);
                 return  $menu;
             }
             if ($user->role == 'CV_ADMIN,SALE_ADMIN') {
@@ -279,6 +280,7 @@ class LoginController extends Controller
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
+                unset($menu['category']);
                 return  $menu;
             }
             // sale admin lên editor
@@ -290,6 +292,7 @@ class LoginController extends Controller
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
                 unset($menu['handbook']);
+                unset($menu['category']);
                 return  $menu;
             }
             if ($user->role == 'CV_BASIC,SALE_ADMIN') {
@@ -315,6 +318,7 @@ class LoginController extends Controller
                 unset($menu['permision']);
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
+                unset($menu['category']);
                 return  $menu;
             }
             if ($user->role == 'CV_BASIC,SALE_BASIC') {
@@ -342,6 +346,7 @@ class LoginController extends Controller
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
                 unset($menu['report']);
+                unset($menu['category']);
                 return  $menu;
             }
             if ($user->role == 'CV_PRO') {

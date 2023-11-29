@@ -135,6 +135,47 @@ JS_Client.prototype.store = function (oFormCreate) {
     });
 }
 /**
+ * Hàm hiển thêm mới
+ *
+ * @param oFormCreate (tên form)
+ *
+ * @return void
+ */
+JS_Client.prototype.upgradeAcc = function (oFormCreate) {
+    var url = this.urlPath + '/create_upgradeAcc';
+    var myClass = this;
+    var formdata = new FormData();
+    var check = myClass.checkValidate();
+    if(check == false){
+        return false;
+    }
+    formdata.append('_token', $("#_token").val());
+    formdata.append('id', $("#id").val());
+    formdata.append('account_type_vip', $("#account_type_vip").val());
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: formdata,
+        dataType: 'json',
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (arrResult) {
+            if (arrResult['success'] == true) {
+                  NclLib.alertMessageBackend('success', 'Thông báo', arrResult['message']);
+                  $('#editmodal').modal('hide');
+                  myClass.loadList(oFormCreate);
+
+            } else {
+                NclLib.successLoadding();
+                NclLib.alertMessageBackend('danger', 'Thông báo', arrResult['message']);
+
+                // NclLib.alerMesage('danger', 'Lỗi', arrResult['message']);
+            }
+        }
+    });
+}
+/**
  * Load màn hình danh sách
  *
  * @param oForm (tên form)
@@ -182,6 +223,32 @@ JS_Client.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) {
  */
 JS_Client.prototype.edit = function (id) {
     var url = this.urlPath + '/edit';
+    var myClass = this;
+    var data = 'chk_item_id=' + id;
+    
+    $.ajax({
+        url: url,
+        type: "GET",
+        data: data,
+        success: function (arrResult) {
+            $('#editmodal').html(arrResult);
+            $('#editmodal').modal('show');
+            $('.chzn-select').chosen({ height: '100%', width: '100%' });
+            $('.chzn-select').trigger('chosen:updated');
+            // myClass.loadevent(oForm);
+            
+        }
+    });
+}
+/**
+ * Hàm hiển thị modal edit
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_Client.prototype.edit_upgradeAcc = function (id) {
+    var url = this.urlPath + '/edit_upgradeAcc';
     var myClass = this;
     var data = 'chk_item_id=' + id;
     

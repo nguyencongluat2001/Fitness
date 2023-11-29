@@ -27,7 +27,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                 <!-- <td align="center"><b>Ảnh đại diện</b></td> -->
                 <!-- <td align="center"><b>Thứ tự</b></td> -->
                 <td align="center"><b>Trạng thái</b></td>
-                <td align="center"><b>Nâng cấp CTV</b></td>
+                <td align="center"><b>Nâng cấp</b></td>
             </tr>
         </thead>
         <tbody>
@@ -39,7 +39,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                     <td class="text-center td_order_{{$id}}" style="vertical-align: middle;" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
                         <span id="span_order_{{$id}}" class="span_order_{{$id}}">{{ $key + 1 }}</span>
                     </td>
-                    <td style="width:65%;height:150px;padding-left:30px;vertical-align: middle;" onclick="{select_row(this);}">
+                    <td style="width:50%;height:150px;padding-left:30px;vertical-align: middle;" onclick="{select_row(this);}">
                        <div>
                            <div>Tên khách hàng: {{ $data['name'] }}</div>
                            <!-- <div>ID nhân sự : <span style="color:#ffb200">{{ $data['id_personnel'] }}</span> </div> -->
@@ -47,7 +47,7 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                            <div>Địa chỉ Email : {{ $data['email'] }}</div>
                            <div>Địa chỉ : {{ $data['address'] }}</div>
                            <div>Ngày sinh : {{ $data['dateBirth'] }}</div>
-
+                           <div>Ngày gia nhập : {{ $data['created_at'] }}</div>
                            <div>Thời gian đầu tư: 
                            @if($data['investment_time'] == '0-3')
                              0 - 3 tháng
@@ -100,7 +100,8 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                         </label>
                     </td>
                     <td onclick="{select_row(this);}" align="center" style="vertical-align: middle;">
-                        <span class="text-cursor text-warning" onclick="JS_Client.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
+                        <span class="text-cursor text-warning" onclick="JS_Client.edit('{{$id}}')"><i style="font-size: 30px;" class="fas fa-edit"></i></span>
+                        <span class="text-cursor text-warning" onclick="JS_Client.edit_upgradeAcc('{{$id}}')"><i style="font-size: 30px;color:#00ff10" class="fas fa-users-cog"></i></span>
                     </td>
                 </tr>
             @endforeach
