@@ -37,6 +37,8 @@ class HandBookModel extends Model
             case 'cate':
                 $query->where('category_handbook', $value);
                 return $query;
+            case 'sortType':
+                $query->orderBy('order', 'ASC');
             default:
                 return $query;
         }
