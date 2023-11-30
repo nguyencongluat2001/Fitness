@@ -40,6 +40,11 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
 </head>
+<style>
+    .cke_dialog_container label{
+        color: #000;
+    }
+</style>
 @php
 use Modules\System\Dashboard\ApprovePayment\Models\ApprovePaymentModel;
 use Modules\System\Dashboard\Users\Models\UserModel;

@@ -221,4 +221,35 @@ class BlogService extends Service
             }
         }
     }
+    /**
+     * Upload file nội dung bài viết
+     */
+    public function uploadFileCK($input)
+    {
+        $folder = $this->baseDis;
+        $result = [];
+        $random = Library::_get_randon_number();
+        if($_FILES != []){
+            $filename = $_FILES['upload']['name'];
+            $filename = Library::_replaceBadChar($filename);
+            $filename = Library::_convertVNtoEN($filename);
+            $filename = date('Y_m_d_Hiu') . $random .'!~!' . $filename;
+            $fullname = $folder . $filename;
+            copy($_FILES['upload']['tmp_name'], $fullname);
+            $result = [
+                'name' => $_FILES['upload']['name'],
+                'url' => url('file-image-client/blogs') . '/' . $filename,
+                'base_path' => $fullname,
+                'size' => $_FILES['upload']['size'],
+            ];
+        }
+        $response = '';
+        if($_FILES != [] && isset($input['upload'])){
+            $CKEditorFuncNum = $input['CKEditorFuncNum'];
+            $url = $result['url'] ?? '';
+            $msg = 'Tải ảnh lên thành công.';
+            $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
+        }
+        echo $response;
+    }
 }

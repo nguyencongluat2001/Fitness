@@ -166,4 +166,13 @@ class BlogController extends Controller
         $data['datas']= $objResult;
         return view("dashboard.blog.loadlist", $data)->render();
     }
+    
+    /**
+     * Upload file nội dung bài viết
+     */
+    public function uploadFileCK(Request $request)
+    {
+        $data = $this->blogService->uploadFileCK($request->all());
+        return $data;
+    }
 }
