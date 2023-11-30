@@ -57,7 +57,7 @@
             </form>
         </div>
     </div>
-    <div class="modal fade" id="editmodal" role="dialog"></div>
+    <div class="modal fade" id="editmodal" data-bs-focus="false" role="dialog"></div>
     <div class="modal " id="editPassmodal" role="dialog" style=" width: 100%;height: 100%;background: #0000007d; background-repeat:no-repeat;background-size: cover;"></div>
     <div class="modal " id="addfile" role="dialog"></div>
 
