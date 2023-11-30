@@ -103,9 +103,12 @@
             reader.readAsDataURL(input.files[0]);
         }
     }
+    <?php
+        $url = url('system/blog/uploadFileCK?_token=') . csrf_token();
+    ?>
+    var url = '{{ $url }}';
     CKEDITOR.replace('decision', {
-        filebrowserBrowseUrl: 'filemanager/dialog.php?type=2&editor=ckeditor&fldr=',
-        filebrowserUploadUrl: 'filemanager/dialog.php?type=2&editor=ckeditor&fldr=',
-        filebrowserImageBrowseUrl: 'filemanager/dialog.php?type=1&editor=ckeditor&fldr=',
+        filebrowserUploadUrl: url,
+        filebrowserUploadMethod: 'form',
     });
 </script>
