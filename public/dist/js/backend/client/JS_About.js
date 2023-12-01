@@ -81,11 +81,11 @@ JS_About.prototype.loadListTHTT = function (oFormBlog,numberPage = 1, perPage = 
  */
 JS_About.prototype.loadListTKP = function (oFormBlog,numberPage = 1, perPage = 15) {
     var myClass = this;
-    var url = myClass.urlPath + '/BAO_CAO_PTDTVIP';
+    var url = myClass.urlPath + '/loadListPTCP';
     var data = $(oFormBlog).serialize();
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
-    data += '&category=BAO_CAO_TKP';
+    data += '&category=BAO_CAO_PTDTVIP';
     $.ajax({
         url: url,
         type: "GET",
@@ -147,7 +147,7 @@ JS_About.prototype.loadListPTN = function (oFormBlog,numberPage = 1, perPage = 1
  */
 JS_About.prototype.loadListPTCP = function (oFormBlog,numberPage = 1, perPage = 15) {
     var myClass = this;
-    var url = myClass.urlPath + '/BAO_CAO_PTDN';
+    var url = myClass.urlPath + '/loadListPTCP';
     var data = $(oFormBlog).serialize();
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
