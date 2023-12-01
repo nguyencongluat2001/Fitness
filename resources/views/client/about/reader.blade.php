@@ -60,7 +60,7 @@ use Carbon\Carbon;
                                 <div class="row g-lg-5 mb-4">
                                     <div class="banner-wrapper w-100" style="background: #ffffff;">
                                     <div align="right">
-                                        @if($datas['type'] == 'BAO_CAO_THTT')
+                                        @if($datas['type'] == 'BAO_CAO_TTTH')
                                         <a href="{{url('/client/about/index')}}">
                                              <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
