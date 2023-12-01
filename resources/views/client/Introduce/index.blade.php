@@ -221,6 +221,24 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-4">
+                                    <div class="customer_reviews px-3">
+                                        <div class="icon"><i class="fas fa-quote-right"></i></div>
+                                        <div style="color:#ffffff; text-align: justify;"class="pt-4 pb-3 text-content">FinTop là một đội ngũ chuyên nghiệp, không ngừng nghiên cứu, học hỏi, cầu thị và luôn luôn lắng nghe khách hàng, đối tác. Những báo cáo phân tích, đánh giá của Team mang lại nhiều hữu ích cho mình là một người công tác trong lĩnh vực Tài chính với các báo cáo phân tích ngành, dữ liệu kinh tế vĩ mô, phân tích đánh giá doanh nghiệp. Đặc biệt có phần tra cứu xu hướng cổ phiếu rất hay bên cạnh chia sẻ cẩm nang, phương pháp đầu tư để mọi ngươi cùng tìm hiểu. Chúc FinTop Team sẽ tiếp tục phát huy và luôn có những báo cáo phân tích chất lượng nhất đến khách hàng.</div>
+                                        <hr>
+                                        <div class="d-flex align-items-center mb-3">
+                                             <img class="img-fluid rounded-circle" src="../clients/img/tran_thi_hong_lich.jpg" alt="Card image">
+                                            <!-- <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt=""> -->
+                                            <span style="color:#fff" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
+                                                <ul>
+                                                    <li style="color:#ffe673"><b>(Chị) Trần Thị Hồng Lịch</b></li>
+                                                    <li>Nhà Đầu Tư - Khách Hàng Đối Tác</li>
+                                                    <li>Ngân hàng TMCP Công Thương Việt Nam (ViettinBank).</li>
+                                                </ul>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
                                 <!-- <div class="col-md-4">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
