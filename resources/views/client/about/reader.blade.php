@@ -68,7 +68,7 @@ use Carbon\Carbon;
                                         <a href="{{url('/client/about/session')}}">
                                              <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
-                                        @elseif($datas['type'] == 'BAO_CAO_PTN')
+                                        @elseif($datas['type'] == 'BAO_CAO_PTDN')
                                         <a href="{{url('/client/about/industry')}}">
                                              <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
@@ -128,7 +128,7 @@ use Carbon\Carbon;
     }else if(type == 'BAO_CAO_TKP'){
         NclLib.menuActive('.link-session');
         NclLib.menuActive_child('.link-session');
-    }else if(type == 'BAO_CAO_PTN'){
+    }else if(type == 'BAO_CAO_PTDN'){
         NclLib.menuActive('.link-industry');
         NclLib.menuActive_child('.link-industry');
     }else if(type == 'BAO_CAO_PTCP'){

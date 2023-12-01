@@ -47,7 +47,7 @@ class CategoryBlog extends Seeder
                 'id' => (string)\Str::uuid(),
                 'cate' => 'DM_BLOG',
                 'name_category' => 'Phân tích ngành',
-                'code_category' => 'BAO_CAO_PTN',
+                'code_category' => 'BAO_CAO_PTDN',
                 'order' => CategoryModel::select('id')->count() + 3,
                 'status' => 1,
                 'created_at' => date('Y-m-d H:i:s'),
