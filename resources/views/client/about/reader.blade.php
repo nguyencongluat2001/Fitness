@@ -5,7 +5,7 @@ use Carbon\Carbon;
 @section('body-client')
 <style>
     #content-reader img{
-        width:100%;
+        width:100% !important;
     }
     @media (max-width: 768px){
         .content-reader img {
