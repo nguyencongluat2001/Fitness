@@ -4,6 +4,9 @@ use Carbon\Carbon;
 @extends('client.layouts.index')
 @section('body-client')
 <style>
+    #content-reader img{
+        width:100%;
+    }
     @media (max-width: 768px){
         .content-reader img {
             width: 100%;
@@ -111,7 +114,7 @@ use Carbon\Carbon;
             </div>
         </div>
         <div class="banner-vertical-center-work container d-flex justify-content-center align-items-center" >
-        <div class="banner-content col-lg-10 col-10 m-lg-auto text-left content-reader">
+        <div class="banner-content col-lg-10 col-10 m-lg-auto text-left content-reader" id="content-reader">
             <div style="color:#264451; width: 100%;" class="light-300 text-justify">
                {!! $datas['blogDetail']->decision !!}
             </div>
