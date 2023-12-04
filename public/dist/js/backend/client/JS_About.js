@@ -139,7 +139,7 @@ JS_About.prototype.loadListPTN = function (oFormBlog,numberPage = 1, perPage = 1
     });
 }
 /**
- * Danh sách Phân tích doanh nghiep
+ * Danh sách Phân tích cổ phiếu
  *
  * @param oForm (tên form)
  *
@@ -147,7 +147,7 @@ JS_About.prototype.loadListPTN = function (oFormBlog,numberPage = 1, perPage = 1
  */
 JS_About.prototype.loadListPTCP = function (oFormBlog,numberPage = 1, perPage = 15) {
     var myClass = this;
-    var url = myClass.urlPath + '/BAO_CAO_PTDN';
+    var url = myClass.urlPath + '/loadListPTDN';
     var data = $(oFormBlog).serialize();
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
