@@ -202,8 +202,8 @@
                             <div class="col-lg-6 text-start">
                                 <h1 class="h5 pb-3 text-uppercase">III. Khách hàng nói gì về fintop</h1>
                             </div>
-                            <div class="py-2 px-3 row">
-                                <div class="col-md-4">
+                            <div class="py-2 row">
+                                <div class="col-md-4" style="padding-right:0px">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
                                         <div style="color:#ffffff; text-align: justify;height: 550px;"class="pt-4 pb-3 text-content">"FinTop là đơn vị uy tín chuyên cung cấp dữ liệu, kiến thức thực tế, chiến lược đầu tư và các báo cáo phân tích kịp thời, vô cùng hữu dụng cho nhà đầu tư và cả các chuyên gia về chứng khoán. Với chiến lược và cách làm chuyên nghiệp, đặc biệt Đội ngũ FinTop với nhiều năm kinh nghiệm trên thị trường sẽ giúp nhà đầu tư tối ưu hiệu quả và đạt được lợi nhuận tốt nhất trong quá trình giao dịch. Với sự hỗ trợ từ FinTop nhà đầu tư sẽ thông thái, chủ động với việc đầu tư và kỷ luật với chiến lược giao dịch đã đề ra."</div>
@@ -221,7 +221,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4" style="padding-right:0px">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
                                         <div style="color:#ffffff; text-align: justify;height: 550px;"class="pt-4 pb-3 text-content">"FinTop là một đội ngũ chuyên nghiệp, không ngừng nghiên cứu, học hỏi, cầu thị và luôn luôn lắng nghe khách hàng, đối tác. Những báo cáo phân tích, đánh giá của Team mang lại nhiều hữu ích cho mình là một người công tác trong lĩnh vực Tài chính với các báo cáo phân tích ngành, dữ liệu kinh tế vĩ mô, phân tích đánh giá doanh nghiệp. Đặc biệt có phần tra cứu xu hướng cổ phiếu rất hay bên cạnh chia sẻ cẩm nang, phương pháp đầu tư để mọi ngươi cùng tìm hiểu. Chúc FinTop Team sẽ tiếp tục phát huy và luôn có những báo cáo phân tích chất lượng nhất đến khách hàng."</div>
@@ -240,7 +240,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-4" style="padding-right:0px">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
                                         <div style="color:#ffffff; text-align: justify;height: 550px;"class="pt-4 pb-3 text-content">“FINTOP là nơi tập hợp tinh hoa của đội ngũ chuyên gia trẻ, năng động, có kinh nghiệm thực chiến trên thị trường chứng khoán, vừa có kiến thức chuyên sâu về phân tích cơ bản và vừa có độ nhạy bén trong phân tích kỹ thuật.
