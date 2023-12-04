@@ -422,7 +422,7 @@
 @media (max-width:450px) {
     .customer_reviews {
         margin-bottom: 2rem;
-        height: 23rem;
+        /* height: 23rem; */
     }
     .customer_reviews .text-content{
         display: block;

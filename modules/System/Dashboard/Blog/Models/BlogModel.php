@@ -38,7 +38,8 @@ class BlogModel extends Model
                 $query->where('code_category', $value);
                 return $query;
             default:
-                return $query->where('status', 1);
+                // return $query->where('status', 1);
+                return $query;
         }
     }
     public function detailBlog()
