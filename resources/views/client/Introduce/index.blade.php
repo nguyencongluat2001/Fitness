@@ -255,7 +255,6 @@
                                                     <li style="color:#ffe673"><b>(Chị) Helena Hạnh Đặng</b></li>
                                                     <li>Khách Hàng Đối Tác</li>
                                                     <li>Chuyên gia Đào tạo Tài chính cá nhân.</li>
-                                                    <br>
                                                 </ul>
                                             </span>
                                         </div>
