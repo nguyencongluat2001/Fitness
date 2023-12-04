@@ -253,8 +253,8 @@
                                             <span style="color:#fff" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
                                                     <li style="color:#ffe673"><b>(Chị) Helena Hạnh Đặng</b></li>
-                                                    <li>Nhà Đầu Tư</li>
-                                                    <li>Khách Hàng Đối Tác FinTop.</li>
+                                                    <li>Khách Hàng Đối Tác</li>
+                                                    <li>Chuyên gia Đào tạo Tài chính cá nhân.</li>
                                                     <br>
                                                 </ul>
                                             </span>
