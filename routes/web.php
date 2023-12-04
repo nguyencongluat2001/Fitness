@@ -212,7 +212,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 Route::post('/delete', [BlogController::class,'delete']);
                 Route::get('/infor',[BlogController::class,'infor']);
                 Route::post('/uploadFileCK',[BlogController::class,'uploadFileCK']);
-    
+                Route::post('/changeStatus',[BlogController::class,'changeStatus']);
             });
             // 
             Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');

@@ -175,4 +175,18 @@ class BlogController extends Controller
         $data = $this->blogService->uploadFileCK($request->all());
         return $data;
     }
+    /**
+     * Cập nhật trạng thái
+     */
+    public function changeStatus(Request $request)
+    {
+        $arrInput = $request->all();
+        $cate = $this->blogService->where('id', $arrInput['id']);
+        if(!empty($cate->first())){
+            $cate->update(['status' => $arrInput['status']]);
+            return array('success' => true, 'message' => 'Cập nhật thành công!');
+        }else{
+            return array('success' => false, 'message' => 'Không tìm thấy dữ liệu!');
+        }
+    }
 }
