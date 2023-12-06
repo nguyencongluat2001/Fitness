@@ -26,9 +26,9 @@ JS_User.prototype.loadIndex = function () {
     $('form#frmAdd').find('#btn_create').click(function () {
         myClass.store('form#frmAdd');
     })
-    $(oForm).find('#btn_edit').click(function () {
-        myClass.edit(oForm);
-    });
+    // $(oForm).find('#btn_edit').click(function () {
+    //     myClass.edit(oForm);
+    // });
     $('form#frmChangePass').find('#btn_changePass').click(function () {
         myClass.changePass(oForm);
     })
@@ -202,37 +202,11 @@ JS_User.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) {
  *
  * @return void
  */
-JS_User.prototype.edit = function (oForm) {
+JS_User.prototype.edit = function (id) {
     var url = this.urlPath + '/edit';
     var myClass = this;
-    var data = $(oForm).serialize();
-    var listitem = '';
-    var i = 0;
-    var p_chk_obj = $('#table-data').find('input[name="chk_item_id"]');
-    $(p_chk_obj).each(function () {
-        if ($(this).is(':checked')) {
-            if (listitem !== '') {
-                listitem += ',' + $(this).val();
-            } else {
-                listitem = $(this).val();
-            }
-            i++;
-        }
-    });
-    if (listitem == '') {
-          var nameMessage = 'Bạn chưa chọn đối tượng!';
-          var icon = 'warning';
-          var color = '#f5ae67';
-          NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
-    if (i > 1) {
-          var nameMessage = 'Bạn chỉ được chọn một đối tượng!';
-          var icon = 'warning';
-          var color = '#f5ae67';
-          NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
+    var data = '_token=' + $("#_token").val();
+    data += '&id=' + id;
     $.ajax({
         url: url,
         type: "POST",
@@ -242,7 +216,7 @@ JS_User.prototype.edit = function (oForm) {
             $('#editmodal').modal('show');
             $('.chzn-select').chosen({ height: '100%', width: '100%' });
             $('.chzn-select').trigger('chosen:updated');
-            myClass.loadevent(oForm);
+            myClass.loadevent();
             
         }
     });
@@ -589,4 +563,10 @@ JS_User.prototype.upNdown = function(type, id, _this){
         });
         // row.insertAfter(row.next());
     }
+}
+/**
+ * Tìm kiếm
+ */
+JS_User.prototype.search = function(){
+    JS_User.loadList();
 }

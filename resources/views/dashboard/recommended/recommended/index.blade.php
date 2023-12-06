@@ -40,7 +40,7 @@
                                 <div class="input-group" style="width:40%;height:10%">
                                     <!-- <span class="input-group-text text-body"><i class="fas fa-search"
                                             aria-hidden="true"></i></span> -->
-                                    <input id="search" name="search" type="text" class="form-control" placeholder="Từ khóa tìm kiếm...">
+                                    <input id="search" name="search" type="text" class="form-control" placeholder="Từ khóa tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_Recommended.search();return false;}">
                                 </div>
                                 <button style="width:8%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
                             </div>

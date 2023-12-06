@@ -366,3 +366,9 @@ JS_Category.prototype.changeStatusCate = function(id){
         }
     });
 }
+/**
+ * Tìm kiếm
+ */
+JS_Category.prototype.search = function(){
+    JS_Category.loadList();
+}

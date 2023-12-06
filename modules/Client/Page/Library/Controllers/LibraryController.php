@@ -59,7 +59,7 @@ class LibraryController extends Controller
         if(!empty($arrInput['cate'])){
             $objResult = $this->handbookService->where('category_handbook',$arrInput['cate'])->get();
         }else{
-            $objResult = $this->handbookService->where('current_status',1)->get();
+            $objResult = $this->handbookService->where('category_handbook', 'TU_SACH_DAU_TU')->where('current_status',1)->get();
 
         }
         $data['datas'] = $objResult;
