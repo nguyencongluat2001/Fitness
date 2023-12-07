@@ -196,6 +196,7 @@ JS_Handbook.prototype.edit = function (id) {
     var url = this.urlPath + '/edit';
     var myClass = this;
     var data = '_token=' + $("#_token").val();
+    var oForm = 'form#frmHandbook_index';
     data += '&id=' + id;
     $.ajax({
         url: url,
