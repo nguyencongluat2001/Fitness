@@ -56,9 +56,9 @@
                                     <div style="padding:2%;">
                                          <button onclick="JS_Library.loadLists('KT_PS_CQ_MARGIN')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức chứng khoán, TTCK</button>
                                     </div>
-                                    <div style="padding:2%;">
+                                    <!-- <div style="padding:2%;">
                                          <button target="_blank" href="https://vn.investing.com/indices/major-indices" style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-chart-line"></i>&nbsp; Chứng khoán thế giới</button>
-                                    </div>
+                                    </div> -->
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
                                             <i class="fas fa-globe-europe"></i>&nbsp;
@@ -69,7 +69,7 @@
                                     </div>
                                     <div style="padding:2%;">
                                          <span style="width:100%;text-align: left" class="btn btn-light">
-                                            <i class="fas fa-globe-asia"></i>&nbsp;
+                                            <i class="fas fa-chart-line"></i>&nbsp;
                                             <a style="color:#000;font-size:16px" target="_blank" href="https://vn.investing.com/indices/major-indices">
                                             Chứng khoán thế giới
                                             </a>
