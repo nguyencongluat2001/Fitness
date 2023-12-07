@@ -37,8 +37,8 @@
                             <div class="col-md-3">
                             <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
                             data-original-title="Thêm người dùng"><i class="fas fa-user-plus"></i></button>
-                            <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
-                                data-original-title="SỬa người dùng"><i class="fas fa-user-edit"></i></button>
+                            <!-- <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
+                                data-original-title="SỬa người dùng"><i class="fas fa-user-edit"></i></button> -->
                             <button class="btn btn-danger shadow-sm" id="btn_delete" type="button"data-toggle="tooltip"
                             data-original-title="Xóa người dùng"><i class="fas fa-user-times"></i></button>
                             </div>
@@ -68,7 +68,7 @@
                                     </select>
                                 </div> -->
                                 <div class="input-group" style="width:40%;height:10%">
-                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm...">
+                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_User.search();return false;}">
                                 </div>
                                 <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
 

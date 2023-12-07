@@ -133,7 +133,7 @@ class AboutController extends Controller
      *
      * @return json $return
      */
-    public function loadListPTCP(Request $request)
+    public function loadListPTDN(Request $request)
     { 
         $arrInput = $request->input();
         $data = array();

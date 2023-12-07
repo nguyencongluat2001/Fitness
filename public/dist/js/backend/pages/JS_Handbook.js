@@ -24,9 +24,9 @@ JS_Handbook.prototype.loadIndex = function () {
     $('form#frmAdd').find('#btn_create').click(function () {
         myClass.store('form#frmAdd');
     })
-    $(oForm).find('#btn_edit').click(function () {
-        myClass.edit(oForm);
-    });
+    // $(oForm).find('#btn_edit').click(function () {
+    //     myClass.edit(oForm);
+    // });
      // form load
      $(oForm).find('#cate').change(function () {
         var page = $(oForm).find('#limit').val();
@@ -74,6 +74,7 @@ JS_Handbook.prototype.add = function (oForm) {
         success: function (arrResult) {
             $('#editmodal').html(arrResult);
             $('#editmodal').modal('show');
+            $("#is_checkbox_status").attr('checked', true);
             myClass.loadevent(oForm);
 
         }
@@ -191,37 +192,11 @@ JS_Handbook.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) 
  *
  * @return void
  */
-JS_Handbook.prototype.edit = function (oForm) {
+JS_Handbook.prototype.edit = function (id) {
     var url = this.urlPath + '/edit';
     var myClass = this;
-    var data = $(oForm).serialize();
-    var listitem = '';
-    var i = 0;
-    var p_chk_obj = $('#table-data').find('input[name="chk_item_id"]');
-    $(p_chk_obj).each(function () {
-        if ($(this).is(':checked')) {
-            if (listitem !== '') {
-                listitem += ',' + $(this).val();
-            } else {
-                listitem = $(this).val();
-            }
-            i++;
-        }
-    });
-    if (listitem == '') {
-        var nameMessage = 'Bạn chưa chọn thể loại!';
-        var icon = 'warning';
-        var color = '#f5ae67';
-        NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
-    if (i > 1) {
-        var nameMessage = 'Bạn chỉ được chọn một thể loại!';
-        var icon = 'warning';
-        var color = '#f5ae67';
-        NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
+    var data = '_token=' + $("#_token").val();
+    data += '&id=' + id;
     $.ajax({
         url: url,
         type: "POST",
@@ -329,4 +304,10 @@ JS_Handbook.prototype.seeVideo = function (id) {
             $('#videomodal').modal('show');
         }
     });
+}
+/**
+ * Tìm kiếm
+ */
+JS_Handbook.prototype.search = function(){
+    JS_Handbook.loadList('form#frmHandbook_index');
 }

@@ -524,3 +524,9 @@ JS_Client.prototype.upNdown = function(type, id, _this){
         // row.insertAfter(row.next());
     }
 }
+/**
+ * Tìm kiếm
+ */
+JS_Client.prototype.search = function(){
+    JS_Client.loadList();
+}

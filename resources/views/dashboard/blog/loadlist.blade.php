@@ -32,11 +32,17 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
                     <td style="width:20% ;white-space: inherit;vertical-align: middle;">{{ $data->detailBlog->title }}</td>
                     <td style="width:20%;vertical-align: middle;" align="center"><img  src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" alt="Image" style="height: 150px;width: 150px;object-fit: cover;"></td>
                     <td style="width:5% ;vertical-align: middle;" align="center">{{($data['type_blog'])}}</td>
-                    <td style="width:5% ;vertical-align: middle;" align="center">{{($data['status'] == '1') ? 'Hoạt động' : 'Không hoạt động'}}</td>
+                    <td style="width:5% ;vertical-align: middle;" align="center">
+                        <label class="custom-control custom-checkbox p-0 m-0 pointer " style="cursor: pointer;">
+                            <input type="checkbox" hidden class="custom-control-input toggle-status" id="status_{{ $data['id'] }}" {{ $data->status == 1 ? 'checked' : '' }}>
+                            <span class="custom-control-indicator p-0 m-0" onclick="JS_Blogs.changeStatus('{{ $data['id'] }}')"></span>
+                        </label>    
+                    </td>
                     <td style="width:5% ;vertical-align: middle;" align="center">
                          <button onclick="JS_Blogs.infoBlog('{{ $data['id'] }}')" class="btn btn-light" type="button">
                               <i style="color:#00740a" class="far fa-eye"></i>
                         </button>
+                        <span class="btn btn-warning text-cursor" onclick="JS_Blogs.edit('{{$data['id']}}')"><i class="fas fa-edit"></i></span>
                     </td>
                 </tr>
             @endforeach

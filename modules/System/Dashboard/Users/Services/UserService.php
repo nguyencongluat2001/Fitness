@@ -139,8 +139,8 @@ class UserService extends Service
         return $create;
     }
     public function editUser($arrInput){
-        $getUserInfor = $this->repository->where('id',$arrInput['chk_item_id'])->first()->toArray();
-        $userInfo = $this->UserInfoService->where('user_id',$arrInput['chk_item_id'])->first();
+        $getUserInfor = $this->repository->where('id',$arrInput['id'])->first()->toArray();
+        $userInfo = $this->UserInfoService->where('user_id',$arrInput['id'])->first();
         $getUserInfor['company'] = !empty($userInfo->company)?$userInfo->company:null;
         $getUserInfor['position'] = !empty($userInfo->position)?$userInfo->position:null;
         $getUserInfor['date_join'] = !empty($userInfo->date_join)?$userInfo->date_join:null;

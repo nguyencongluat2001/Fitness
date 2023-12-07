@@ -26,8 +26,8 @@
                             <div class="col-md-3">
                             <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
                             data-original-title="Thêm bài viết"><i class="fas fa-plus"></i></button>
-                        <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
-                            data-original-title="SỬa bài viết"><i class="far fa-edit"></i></button>
+                        <!-- <button class="btn btn-warning shadow-sm" id="btn_edit" type="button"data-toggle="tooltip"
+                            data-original-title="SỬa bài viết"><i class="far fa-edit"></i></button> -->
                         <button class="btn btn-danger shadow-sm" id="btn_delete" type="button"data-toggle="tooltip"
                             data-original-title="Xóa bài viết"><i class="fas fa-trash-alt"></i></button>
                             </div>
@@ -45,7 +45,7 @@
                                         <i class="fas fa-search"
                                             aria-hidden="true"></i>
                                         </span> -->
-                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm...">
+                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_Blogs.search();return false;}">
                                 </div>
                                 <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
                             </div>

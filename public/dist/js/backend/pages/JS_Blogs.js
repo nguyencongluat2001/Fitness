@@ -24,9 +24,9 @@ JS_Blogs.prototype.loadIndex = function () {
     $('form#frmAdd').find('#btn_create').click(function () {
         myClass.store('form#frmAdd');
     })
-    $(oForm).find('#btn_edit').click(function () {
-        myClass.edit(oForm);
-    });
+    // $(oForm).find('#btn_edit').click(function () {
+    //     myClass.edit(oForm);
+    // });
      // form load
      $(oForm).find('#category').change(function () {
         var page = $(oForm).find('#limit').val();
@@ -183,37 +183,11 @@ JS_Blogs.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) {
  *
  * @return void
  */
-JS_Blogs.prototype.edit = function (oForm) {
+JS_Blogs.prototype.edit = function (id) {
     var url = this.urlPath + '/edit';
     var myClass = this;
-    var data = $(oForm).serialize();
-    var listitem = '';
-    var i = 0;
-    var p_chk_obj = $('#table-data').find('input[name="chk_item_id"]');
-    $(p_chk_obj).each(function () {
-        if ($(this).is(':checked')) {
-            if (listitem !== '') {
-                listitem += ',' + $(this).val();
-            } else {
-                listitem = $(this).val();
-            }
-            i++;
-        }
-    });
-    if (listitem == '') {
-          var nameMessage = 'Bạn chưa chọn đối tượng!';
-          var icon = 'warning';
-          var color = '#344767';
-          NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
-    if (i > 1) {
-          var nameMessage = 'Bạn chỉ được chọn một đối tượng!';
-          var icon = 'warning';
-          var color = '#344767';
-          NclLib.alerMesage(nameMessage,icon,color);
-        return false;
-    }
+    var data = '_token=' + $("#_token").val();
+    data += '&id=' + id;
     $.ajax({
         url: url,
         type: "POST",
@@ -418,4 +392,36 @@ JS_Blogs.prototype.checkValidate = function(){
         $("#decision").focus();
         return false;
     }
+}
+/**
+ * Thay đổi trạng thái
+ */
+JS_Blogs.prototype.changeStatus = function(id){
+    var myClass = this;
+    var url = myClass.urlPath + '/changeStatus';
+    var data = '_token=' + $("#_token").val();
+    data += '&status=' + ($("#status_" + id).is(":checked") == true ? 0 : 1);
+    data += '&id=' + id;
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: data,
+        success: function(arrResult){
+            if(arrResult['success'] == true){
+                NclLib.alertMessageBackend('success', 'Thông báo', arrResult['message']);
+            }else{
+                NclLib.alertMessageBackend('danger', 'Lỗi', arrResult['message']);
+            }
+            NclLib.successLoadding();
+        }, error: function(e){
+            console.log(e);
+            NclLib.successLoadding();
+        }
+    });
+}
+/**
+ * Tìm kiếm
+ */
+JS_Blogs.prototype.search = function(){
+    JS_Blogs.loadList();
 }

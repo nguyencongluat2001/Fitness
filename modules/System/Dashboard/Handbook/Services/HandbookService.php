@@ -57,7 +57,7 @@ class HandbookService extends Service
         return $create;
     }
     public function edit($arrInput){
-        $getUserInfor = $this->repository->where('id',$arrInput['chk_item_id'])->first()->toArray();
+        $getUserInfor = $this->repository->where('id',$arrInput['id'])->first()->toArray();
         return $getUserInfor;
     }
     /**

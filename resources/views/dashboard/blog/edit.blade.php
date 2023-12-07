@@ -49,9 +49,8 @@
                                 <div class="form-group">
                                     <p for="example-text-input" class="form-control-label required">Loại bài viết</p>
                                     <select class="form-control input-sm chzn-select" name="type_blog" id="type_blog">
-                                        <option value=''>-- Chọn loại --</option>
-                                        <option @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP')) selected @endif  value='VIP'>Vip</option>
                                         <option @if((isset($data['type_blog']) && $data['type_blog'] == 'BASIC')) selected @endif value='BASIC'>Basic</option>
+                                        <option @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP')) selected @endif  value='VIP'>Vip</option>
                                     </select>
                                 </div>
                             </div>

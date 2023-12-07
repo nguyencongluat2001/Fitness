@@ -155,7 +155,7 @@ class BlogService extends Service
             return $arrImage;
     }
     public function editBlog($arrInput){
-        $getBlogInfor = $this->repository->where('id',$arrInput['chk_item_id'])->first();
+        $getBlogInfor = $this->repository->where('id',$arrInput['id'])->first();
         $arrBlog = '';
         if(isset($getBlogInfor)){
             $blogDetail = $this->blogDetailService->where('code_blog',$getBlogInfor['code_blog'])->first();
