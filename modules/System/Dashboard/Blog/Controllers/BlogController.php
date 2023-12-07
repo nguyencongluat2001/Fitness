@@ -112,7 +112,7 @@ class BlogController extends Controller
      */
     public function edit(Request $request)
     {
-        $input = $request->all();        
+        $input = $request->all();
         $category = $this->categoryService->where('cate','DM_BLOG')->get()->toArray();
         $data = $this->blogService->editBlog($input);
         $data['category'] = $category;

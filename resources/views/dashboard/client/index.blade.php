@@ -68,7 +68,7 @@
                                     </select>
                                 </div> -->
                                 <div class="input-group" style="width:40%;height:10%">
-                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm...">
+                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_Client.search();return false;}">
                                 </div>
                                 <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
 

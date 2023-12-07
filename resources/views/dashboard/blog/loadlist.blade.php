@@ -42,6 +42,7 @@ use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
                          <button onclick="JS_Blogs.infoBlog('{{ $data['id'] }}')" class="btn btn-light" type="button">
                               <i style="color:#00740a" class="far fa-eye"></i>
                         </button>
+                        <span class="btn btn-warning text-cursor" onclick="JS_Blogs.edit('{{$data['id']}}')"><i class="fas fa-edit"></i></span>
                     </td>
                 </tr>
             @endforeach

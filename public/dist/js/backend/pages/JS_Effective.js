@@ -441,3 +441,9 @@ JS_Effective.prototype.checkValidate = function(){
         return false;
     }
 }
+/**
+ * Tìm kiếm
+ */
+JS_Effective.prototype.search = function(){
+    JS_Effective.loadList();
+}

@@ -72,6 +72,7 @@ class HandbookController extends Controller
         $getCategory = $this->categoryService->where('cate','CNK_001')->get()->toArray();
         $data['category'] = $getCategory;
         $data['order'] = $this->handbookService->select('id')->count() + 1;
+        $data['detail']['category_handbook'] = $input['cate'];
         return view('dashboard.handbook.edit',compact('data'));
     }
     /**

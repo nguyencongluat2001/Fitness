@@ -471,3 +471,9 @@ JS_Recommended.prototype.checkValidate = function(){
 function clickColor(color){
     $("#pickcolor").val(color);
 }
+/**
+ * Tìm kiếm
+ */
+JS_Recommended.prototype.search = function(){
+    JS_Recommended.loadList();
+}
