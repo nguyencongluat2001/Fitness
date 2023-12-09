@@ -52,9 +52,10 @@ class DesController extends Controller
         $readerFirst = '';
         $arrSelect = ['blogs.id', 'blogs.code_blog', 'blogs.code_category', 'blogs_details.title', 'blogs_image.name_image'];
         $query = $this->BlogService->select($arrSelect)
-                ->join('blogs_details', 'blogs.code_blog', '=', 'blogs_details.code_blog')
-                ->join('blogs_image', 'blogs.code_blog', '=', 'blogs_image.code_blog')
+                ->leftJoin('blogs_details', 'blogs.code_blog', '=', 'blogs_details.code_blog')
+                ->leftJoin('blogs_image', 'blogs.code_blog', '=', 'blogs_image.code_blog')
                 ->whereIn('blogs.code_category', $arrCategory)
+                ->where('status', 1)
                 ->orderBy('blogs.created_at')
                 ->get();
         // dd($query);
