@@ -35,7 +35,7 @@ class LibraryController extends Controller
      */
     public function index(Request $request)
     {
-        $getCategory = $this->categoryService->where('cate','CNK_001')->get()->toArray();
+        $getCategory = $this->categoryService->where('cate','CNK_001')->orderBy('order')->get()->toArray();
         $data['category'] = $getCategory;
         return view('client.Library.home',compact('data'));
     }
@@ -55,6 +55,7 @@ class LibraryController extends Controller
         //     unset($arrInput['cate']);
         // }
         $data = array();
+        $param['sortType'] = 1;
         $param = $arrInput;
         if(!empty($arrInput['cate'])){
             $objResult = $this->handbookService->where('category_handbook',$arrInput['cate'])->get();
