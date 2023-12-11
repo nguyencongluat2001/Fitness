@@ -1,5 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
+<title>PHÂN TÍCH ĐẦU TƯ VIP</title>
 <style>
   header {
     font-family: 'Lobster', cursive;

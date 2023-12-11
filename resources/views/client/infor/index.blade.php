@@ -2,7 +2,7 @@
 @section('body-client')
 <link rel="stylesheet" href="../clients/css/style.css">
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_InforClient.js') }}"></script>
-
+<title>TÀI CHÍNH & ĐẦU TƯ</title>
 <style>
     form{
         width: 100%; 

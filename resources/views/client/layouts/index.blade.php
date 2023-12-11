@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
     <meta charset="utf-8">
     <base href="{{ asset('') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">

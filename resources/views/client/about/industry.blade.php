@@ -1,5 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
+<title>PHÂN TÍCH NGÀNH</title>
 <style>
   header {
     font-family: 'Lobster', cursive;

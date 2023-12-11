@@ -1,6 +1,7 @@
 @extends('client.layouts.index')
 @section('body-client')
 <link rel="stylesheet" href="{{ asset('clients/css/introduce.css') }}">
+<title>TÀI CHÍNH & ĐẦU TƯ</title>
 <style>
     .img-fluid {
         width: 12rem;

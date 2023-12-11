@@ -1,6 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
-
+<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <script src="{{URL::asset('assets/js/moment.min.js')}}"></script>
 <script src="{{URL::asset('assets/js/moment-with-locales.js')}}"></script>
 <!-- tra cứu cổ phiếu -->

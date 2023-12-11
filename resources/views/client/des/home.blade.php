@@ -1,5 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
+<title>HƯỚNG DẪN ĐẦU TƯ A-Z</title>
 <!-- tra cứu cổ phiếu -->
 <style>
     .tab1 {

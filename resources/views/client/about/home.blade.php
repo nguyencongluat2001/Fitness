@@ -1,5 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
+<title>THỊ TRƯỜNG TỔNG HỢP</title>
 <style>
   header {
     font-family: 'Lobster', cursive;

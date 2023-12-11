@@ -1,5 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
+<title>ĐẶC QUYỀN HỘI VIÊN</title>
 <style>
     .img-fluid{
         max-width: 70%;
