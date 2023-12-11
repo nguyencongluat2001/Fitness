@@ -3,6 +3,7 @@
 @php
 use Carbon\Carbon;
 @endphp
+<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <style>
     header {
         font-family: 'Lobster', cursive;

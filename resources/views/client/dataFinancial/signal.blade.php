@@ -1,5 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
+<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <!-- tra cứu cổ phiếu -->
 <section class="container">
     <div class=" pb-3 d-lg-flex gx-5">

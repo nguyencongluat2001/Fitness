@@ -3,6 +3,7 @@
 namespace Modules\Client\Page\Des\Controllers;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Modules\System\Dashboard\Category\Services\CategoryService;
 use Modules\System\Dashboard\Category\Services\CateService;
@@ -43,42 +44,51 @@ class DesController extends Controller
     public function index(Request $request)
     {
         $categories = $this->CategoryService->where('cate','DM_BLOG')->where('instruct',1)->orderBy('order','ASC')->get();
-        $arrCategory = [];
-        foreach($categories as $key => $category){
-            $arrCategory[$key] = $category->code_category;
+        if(isset($categories[0]->id)){
+            $blogs = $this->BlogService->where('code_category', $categories[0]->code_category)->where('status', 1)->orderBy('created_at', 'desc')->get();
         }
-        // dd($arrCategory);
-        $arrData = [];
-        $readerFirst = '';
-        $arrSelect = ['blogs.id', 'blogs.code_blog', 'blogs.code_category', 'blogs_details.title', 'blogs_image.name_image'];
-        $query = $this->BlogService->select($arrSelect)
-                ->leftJoin('blogs_details', 'blogs.code_blog', '=', 'blogs_details.code_blog')
-                ->leftJoin('blogs_image', 'blogs.code_blog', '=', 'blogs_image.code_blog')
-                ->whereIn('blogs.code_category', $arrCategory)
-                ->where('status', 1)
-                ->orderBy('blogs.created_at')
-                ->get();
-        // dd($query);
-        if($readerFirst == ''){
-            foreach($query as $v){
-                if($readerFirst == ''){
-                    $detail = $this->BlogDetailService->where('code_blog', $v->code_blog)->first();
-                    $readerFirst = $detail->decision ?? '';
-                }
-            }
-        }
-        $data['datas'] =  $query;
-        $data['readerFirst'] = $readerFirst;
+        $data['datas'] =  $categories;
+        $data['blogs'] = $blogs ?? [];
         return view('client.des.home',$data);
     }
     public function reader(Request $request)
     {
         $id = $request->id;
-        $data = $this->BlogService->select('blogs_details.decision')
-                ->join('blogs_details', 'blogs_details.code_blog', '=', 'blogs.code_blog')
-                ->where('blogs.id', $id)->first();
-        $content = $data->decision ?? '';
-        return response()->json(['content' => $content]);
+        $categories = $this->CategoryService->where('id', $id)->first();
+        $blogs = $this->BlogService->where('code_category', $categories->code_category)->where('status', 1)->orderBy('created_at', 'desc')->get();
+        $htmls = '';
+        foreach($blogs as $blog){
+            Carbon::setLocale('vi');
+            $now = Carbon::now();
+            $created_at = Carbon::create($blog->created_at);
+            $htmls .= '<div class="col-sm-6 col-lg-12 text-decoration-none ' . $blog->code_category .'">';
+            $htmls .= '<div class="pb-3 d-lg-flex gx-5">';
+            $htmls .= '<div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">';
+            $htmls .= '<a href="' . url('/client/about/reader/') . '/' . $blog->id .'">';
+            if((isset($blog['type_blog']) && $blog['type_blog'] == 'VIP')){
+                $htmls .= '<h1 style="position: absolute;right:0">';
+                $htmls .= '<img src="'. url('/clients/img/vip.png') .'" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">';
+                $htmls .= '</h1>';
+            }
+            $htmls .= '<img class="card-img-top" src="'. url('/file-image-client/blogs/') . '/' .(!empty($blog->imageBlog[0]->name_image)?$blog->imageBlog[0]->name_image:'') . '" style="height: 170px;width: 100%;object-fit: cover;" alt="...">';
+            $htmls .= '</a></div>';
+            $htmls .= '<div style="width:20px"></div>';
+            $htmls .= '<div class="col-lg-7">';
+            $htmls .= '<a href="' . url('/client/about/reader/') . '/' . $blog->id . '">';
+            $htmls .= '<h5 class="card-title light-600 text-dark">' . $blog->detailBlog->title . '</h5>';
+            $htmls .= '</a>';
+            $htmls .= '<i>'.$created_at->diffForHumans($now).'</i>';
+            $htmls .= '<p class="light-300">';
+            $htmls .= '<div class="blogReader">'. $blog->detailBlog->decision .'</div>';
+            $htmls .= '</p>';
+            $htmls .= '<a href="' . url('/client/about/reader/') . '/' . $blog->id . '">';
+            $htmls .= '<span class="text-decoration-none light-300">';
+            $htmls .= 'Đọc thêm <i class="bx bxs-hand-right ms-1"></i>';
+            $htmls .= '</span></a></div></div></div>';
+            $htmls .= '<hr style="margin-bottom: 1rem;">';
+        }
+        // dd($htmls);
+        return response()->json(['content' => $htmls]);
     }
     
 }

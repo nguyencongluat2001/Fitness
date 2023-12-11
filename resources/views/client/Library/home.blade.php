@@ -1,5 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
+<title>CẨM NANG ĐẦU TƯ</title>
 <style>
 </style>
 <div class="banner-wrapper">

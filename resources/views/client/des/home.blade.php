@@ -1,5 +1,10 @@
+@php
+use Carbon\Carbon;
+@endphp
+
 @extends('client.layouts.index')
 @section('body-client')
+<title>HƯỚNG DẪN ĐẦU TƯ A-Z</title>
 <!-- tra cứu cổ phiếu -->
 <style>
     .tab1 {
@@ -62,6 +67,14 @@
         text-decoration: none;
     }
 
+    .blogReader {
+        max-height: 100px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+
     @media (max-width: 450px) {
         .service-wrapper {
             padding-top: 1rem !important;
@@ -106,7 +119,8 @@
     .list-unstyled .dropdown-toggle::after {
         display: none;
     }
-    .submenu-child{
+
+    .submenu-child {
         background-color: #fff;
         margin-bottom: 1rem;
         padding-bottom: 5px;
@@ -117,29 +131,59 @@
         <div class="card" style="background-color: #b56c6cb5;">
             <div class="row home_index_child">
                 <div class="col-md-8">
-                    <div class="tab1" style="background: white">{!! $readerFirst ?? '' !!}</div>
+                    <div class="tab1" style="background: white">
+                        @if(isset($blogs))
+                        @foreach($blogs as $blog)
+                        @php
+                        Carbon::setLocale('vi');$now = Carbon::now();
+                        $created_at = Carbon::create($blog->created_at);
+                        @endphp
+                        <div class="col-sm-6 col-lg-12 text-decoration-none {{ $blog->code_category }}">
+                            <div class="pb-3 d-lg-flex gx-5">
+                                <!-- display: flex;align-items: center;justify-content: center; -->
+                                <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                    <a href="{{url('/client/about/reader/') . '/' . $blog->id}}">
+                                        @if((isset($blog['type_blog']) && $blog['type_blog'] == 'VIP'))
+                                        <h1 style="position: absolute;right:0">
+                                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                        </h1>
+                                        @endif
+                                        <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($blog->imageBlog[0]->name_image)?$blog->imageBlog[0]->name_image:'' }}" style="height: 170px;width: 100%;object-fit: cover;" alt="...">
+                                    </a>
+                                </div>
+                                <div style="width:20px"></div>
+                                <div class="col-lg-7">
+                                    <!-- <div class="card-body"> -->
+                                    <a href="{{url('/client/about/reader/') . '/' . $blog->id}}">
+                                        <h5 class="card-title light-600 text-dark">{{ $blog->detailBlog->title }}</h5>
+                                    </a>
+                                    <i>{{$created_at->diffForHumans($now)}}</i>
+                                    <p class="light-300">
+                                    <div class="blogReader">{!! $blog->detailBlog->decision !!}</div>
+                                    </p>
+                                    <a href="{{url('/client/about/reader/') . '/' . $blog->id}}">
+                                        <span class="text-decoration-none light-300">
+                                            Đọc thêm <i class='bx bxs-hand-right ms-1'></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr style="margin-bottom: 1rem;">
+                        @endforeach
+                        @endif
+                    </div>
                 </div>
                 <div class="col-md-4">
                     <div class="container ps-0 pe-0">
                         <div class="treeview-animated w-20 border">
-                            {{--<div class="showHideAll">
-                                <span class="showAll">Hiển thị tất cả</span>
-                                <span class="hideAll">Thu nhỏ tất cả</span>
-                            </div>--}}
                             <ul class="list-unstyled components m-3">
                                 @if(isset($datas) && count($datas) > 0)
                                 @foreach($datas as $key => $data)
                                 @php $id = $data['id']; @endphp
                                 <li class="active">
-                                    <a href="javascript:;"
-                                        type="button"
-                                        data-toggle="collapse" 
-                                        aria-expanded="false" 
-                                        class="dropdown-toggle btn btn-light mb-2"
-                                        style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;"
-                                        onclick="reader('{{$id}}')"
-                                        >
-                                        <i class="fas fa-book"></i> <span>{{ $data['title'] }}</span></a>
+                                    <a href="javascript:;" type="button" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-light mb-2" style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;" onclick="reader('{{$id}}')">
+                                        <i class="fas fa-book"></i> <span>{{ $data->name_category }}</span></a>
                                 </li>
                                 @endforeach
                                 @endif
@@ -166,6 +210,7 @@
     })
 
     var baseUrl = "{{url('')}}";
+
     function reader(id) {
         $.ajax({
             url: baseUrl + '/client/des/reader',
@@ -190,7 +235,7 @@
     NclLib.loadding();
 </script>
 <script>
-    function toggleIcon(_this){
+    function toggleIcon(_this) {
         $(_this).find('i').toggleClass('fa-book-open', 'fa-book')
     }
 </script>

@@ -1,6 +1,6 @@
 @extends('client.layouts.index')
-
 @section('body-client')
+<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <link rel="stylesheet" href="../clients/css/style.css">
 
 <style>

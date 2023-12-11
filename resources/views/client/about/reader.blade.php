@@ -3,6 +3,8 @@ use Carbon\Carbon;
 @endphp
 @extends('client.layouts.index')
 @section('body-client')
+<title>{{ $datas['blogDetail']->title }}</title>
+
 <style>
     #content-reader img{
         width:100% !important;

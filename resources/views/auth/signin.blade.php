@@ -1,5 +1,5 @@
 @extends('client.layouts.index')
-
+<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 @section('body-client')
 <style>
     .form-wrapper,
