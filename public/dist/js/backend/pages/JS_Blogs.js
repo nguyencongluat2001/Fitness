@@ -195,7 +195,7 @@ JS_Blogs.prototype.edit = function (id) {
         success: function (arrResult) {
             $('#editmodal').html(arrResult);
             $('#editmodal').modal('show');
-            myClass.loadevent(oForm);
+            myClass.loadevent();
 
         }
     });
