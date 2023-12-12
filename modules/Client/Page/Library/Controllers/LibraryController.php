@@ -58,9 +58,9 @@ class LibraryController extends Controller
         $param['sortType'] = 1;
         $param = $arrInput;
         if(!empty($arrInput['cate'])){
-            $objResult = $this->handbookService->where('category_handbook',$arrInput['cate'])->get();
+            $objResult = $this->handbookService->where('category_handbook',$arrInput['cate'])->orderBy('order')->get();
         }else{
-            $objResult = $this->handbookService->where('category_handbook', 'TU_SACH_DAU_TU')->where('current_status',1)->get();
+            $objResult = $this->handbookService->where('category_handbook', 'TU_SACH_DAU_TU')->where('current_status',1)->orderBy('order')->get();
 
         }
         $data['datas'] = $objResult;
