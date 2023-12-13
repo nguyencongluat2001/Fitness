@@ -48,7 +48,7 @@ use Carbon\Carbon;
                             <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                             </p>
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                <span class="text-decoration-none light-300">
+                                <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">
                                     Đọc thêm <i class='bx bxs-hand-right ms-1'></i>
                                 </span>
                             </a>
