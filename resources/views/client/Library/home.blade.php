@@ -13,7 +13,6 @@
                     <!-- Chú giải xếp hạng TA/FA -->
                     <div class="home_index_child row" style="background:#ffffffc7 !important">
                         <div class="col-lg-9" style="padding:10px;">
-                            <h class=" py-2"><i class="fas fa-search"></i> <span style="font-size:18px;font-family: auto;">CẨM NANG CHO NHÀ ĐẦU TƯ	</span></h>
                             <!-- <div class="row form-group pt-2">
                                 <div class="col-md-5">
                                     <select class="form-control input-sm chzn-select" name="cate"
@@ -49,13 +48,13 @@
                                          <button onclick="JS_Library.loadLists('TU_SACH_DAU_TU')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Tủ sách đầu tư</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button onclick="JS_Library.loadLists('KT_KT_TA')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức phân tích kỹ thuật (TA)</button>
+                                         <button onclick="JS_Library.loadLists('KT_TA')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức phân tích kỹ thuật (TA)</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button onclick="JS_Library.loadLists('KT_PT_BASIC')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức phân tích cơ bản (FA)</button>
+                                         <button onclick="JS_Library.loadLists('KT_FA')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức phân tích cơ bản (FA)</button>
                                     </div>
                                     <div style="padding:2%;">
-                                         <button onclick="JS_Library.loadLists('KT_PS_CQ_MARGIN')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức chứng khoán, TTCK</button>
+                                         <button onclick="JS_Library.loadLists('KT_TTCK')" style="width:100%;text-align: left" type="button" class="btn btn-light"><i class="fas fa-book-open"></i>&nbsp; Kiến thức chứng khoán, TTCK</button>
                                     </div>
                                     <!-- <div style="padding:2%;">
                                          <button target="_blank" href="https://vn.investing.com/indices/major-indices" style="width:100%;text-align: left" class="btn btn-light"><i class="fas fa-chart-line"></i>&nbsp; Chứng khoán thế giới</button>

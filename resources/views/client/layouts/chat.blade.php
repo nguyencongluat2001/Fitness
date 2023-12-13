@@ -119,7 +119,8 @@ if(isset($_SESSION['id'])){
         right: 3.5rem;
         top: 5px;
         background-color: #fff079;
-        color: #700e13;
+        font-weight: 700;
+        color: #b90811;
         padding: 10px;
         width: 9.5rem;
         border-radius: 2rem;
