@@ -1,5 +1,11 @@
 @extends('dashboard.layouts.index')
 @section('body')
+<style>
+    .cate-btn.active{
+        background-color: #2dce89 !important;
+        color: #fff;
+    }
+</style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_Handbook.js') }}"></script>
     {{-- <link  href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" /> --}}
     <div class="container-fluid">
@@ -15,7 +21,7 @@
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row form-group">
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <div class="breadcrumb-input-right">
                                         <button class="btn btn-success shadow-sm" id="btn_add" type="button"data-toggle="tooltip"
                                             data-original-title="Thêm cẩm nang"><i class="fas fa-plus"></i></button>
@@ -25,21 +31,24 @@
                                             data-original-title="Xóa cẩm nang"><i class="fas fa-trash-alt"></i></button>
                                     </div>
                                 </div>
-                                <div class="col-md-3">
-                                    <select class="form-control input-sm chzn-select" name="cate"
-                                        id="cate">
-                                        <option value=''>-- Chọn loại cẩm nang --</option>
-                                        @foreach($data['category'] as $item)
-                                            <option value="{{$item['code_category']}}">{{$item['name_category']}}</option>
-                                        @endforeach
-                                    </select>
+                                <div class="col-md-10 ps-2">
+                                    <button type="button" class="btn btn-light cate-btn active" onclick="JS_Handbook.changeCate('TU_SACH_DAU_TU', this)">Tủ sách đầu tư</button>
+                                    <button type="button" class="btn btn-light cate-btn" onclick="JS_Handbook.changeCate('KT_KT_TA', this)">Kiến thức phân tích kỹ thuật (TA)</button>
+                                    <button type="button" class="btn btn-light cate-btn" onclick="JS_Handbook.changeCate('KT_PT_BASIC', this)">Kiến thức phân tích cơ bản (FA)</button>
+                                    <button type="button" class="btn btn-light cate-btn" onclick="JS_Handbook.changeCate('KT_PS_CQ_MARGIN', this)">Kiến thức chứng khoán, TTCK</button>
                                 </div>
-                                <div class="input-group" style="width:30%;height:10%">
-                                    <!-- <span class="input-group-text text-body"><i class="fas fa-search"
-                                            aria-hidden="true"></i></span> -->
-                                    <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_Handbook.search();return false;}">
+                                <div class="col-md-12" align="right">
+                                    <div class="col-md-10">
+                                    <div class="input-group">
+                                        <!-- <span class="input-group-text text-body"><i class="fas fa-search"
+                                        aria-hidden="true"></i></span> -->
+                                        <input id="search" name="search" type="text" class="form-control" placeholder="Tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_Handbook.search();return false;}">
+                                        <span class="input-group-btn">
+                                            <button id="txt_search" name="txt_search" type="button" class="btn btn-dark mb-0"><i class="fas fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                    </div>
                                 </div>
-                                <button style="width:5%" id="txt_search" name="txt_search" type="button" class="btn btn-dark"><i class="fas fa-search"></i></button>
 
                             </div>
                             <!-- Màn hình danh sách -->

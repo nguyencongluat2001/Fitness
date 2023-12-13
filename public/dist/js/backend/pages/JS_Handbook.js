@@ -4,6 +4,7 @@ function JS_Handbook(baseUrl, module, controller) {
     this.controller = controller;
     NclLib.active('.link-handbook');
     this.urlPath = baseUrl + '/' + module + '/' + controller;
+    this.cate = '';
 }
 
 /**
@@ -27,19 +28,19 @@ JS_Handbook.prototype.loadIndex = function () {
     // $(oForm).find('#btn_edit').click(function () {
     //     myClass.edit(oForm);
     // });
-     // form load
-     $(oForm).find('#cate').change(function () {
+    // form load
+    $(oForm).find('#cate').change(function () {
         var page = $(oForm).find('#limit').val();
         var perPage = $(oForm).find('#cbo_nuber_record_page').val();
         myClass.loadList(oForm, page, perPage);
     });
     $(oForm).find('#txt_search').click(function () {
         /* ENTER PRESSED*/
-            var page = $(oForm).find('#limit').val();
-            var perPage = $(oForm).find('#cbo_nuber_record_page').val();
-            myClass.loadList(oForm, page, perPage);
-            // return false;
-        
+        var page = $(oForm).find('#limit').val();
+        var perPage = $(oForm).find('#cbo_nuber_record_page').val();
+        myClass.loadList(oForm, page, perPage);
+        // return false;
+
     });
     // Xoa doi tuong
     $(oForm).find('#btn_delete').click(function () {
@@ -95,28 +96,28 @@ JS_Handbook.prototype.store = function (oFormCreate) {
         var nameMessage = 'Loại cẩm nang không được để trống!';
         var icon = 'warning';
         var color = '#f5ae67';
-        NclLib.alerMesage(nameMessage,icon,color);
+        NclLib.alerMesage(nameMessage, icon, color);
         return false;
     }
     if ($("#name_handbook").val() == '') {
         var nameMessage = 'Tên cẩm nang không được để trống!';
         var icon = 'warning';
         var color = '#f5ae67';
-        NclLib.alerMesage(nameMessage,icon,color);
+        NclLib.alerMesage(nameMessage, icon, color);
         return false;
     }
     if ($("#url_link").val() == '') {
         var nameMessage = 'Đường dẫn không được để trống!';
         var icon = 'warning';
         var color = '#f5ae67';
-        NclLib.alerMesage(nameMessage,icon,color);
+        NclLib.alerMesage(nameMessage, icon, color);
         return false;
     }
     if ($("#type_handbook").val() == '') {
         var nameMessage = 'Loại đường dẫn không được để trống!';
         var icon = 'warning';
         var color = '#f5ae67';
-        NclLib.alerMesage(nameMessage,icon,color);
+        NclLib.alerMesage(nameMessage, icon, color);
         return false;
     }
     $.ajax({
@@ -131,10 +132,10 @@ JS_Handbook.prototype.store = function (oFormCreate) {
                     title: 'Cập nhật thành công',
                     showConfirmButton: false,
                     timer: 3000
-                  })
-               $('#editmodal').modal('hide');
-               myClass.loadList('form#frmHandbook_index');
-               var loadding = NclLib.successLoadding();
+                })
+                $('#editmodal').modal('hide');
+                myClass.loadList('form#frmHandbook_index');
+                var loadding = NclLib.successLoadding();
             } else {
                 Swal.fire({
                     position: 'top-start',
@@ -142,7 +143,7 @@ JS_Handbook.prototype.store = function (oFormCreate) {
                     title: 'Cập nhật thất bại',
                     showConfirmButton: false,
                     timer: 3000
-                  })
+                })
             }
         }
     });
@@ -159,6 +160,7 @@ JS_Handbook.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) 
     // var loadding = NclLib.loadding();
     var url = this.urlPath + '/loadList';
     var data = $(oForm).serialize();
+    data += '&cate=' + myClass.cate;
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
     $.ajax({
@@ -232,9 +234,9 @@ JS_Handbook.prototype.delete = function (oForm) {
             title: 'Bạn chưa chọn đối tượng để xóa!',
             color: '#f5ae67',
             showConfirmButton: false,
-            width:'30%',
+            width: '30%',
             timer: 2500
-          })
+        })
         return false;
     }
     var data = $(oForm).serialize();
@@ -246,8 +248,8 @@ JS_Handbook.prototype.delete = function (oForm) {
         confirmButtonColor: '#34bd57',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Xác nhận'
-      }).then((result) => {
-        if(result.isConfirmed == true){
+    }).then((result) => {
+        if (result.isConfirmed == true) {
             $.ajax({
                 url: url,
                 type: "POST",
@@ -265,9 +267,9 @@ JS_Handbook.prototype.delete = function (oForm) {
                                 title: 'Xóa thành công',
                                 showConfirmButton: false,
                                 timer: 3000
-                              })
-                              myClass.loadList(oForm);
-                          }
+                            })
+                            myClass.loadList(oForm);
+                        }
                     } else {
                         if (result.isConfirmed) {
                             Swal.fire({
@@ -276,13 +278,13 @@ JS_Handbook.prototype.delete = function (oForm) {
                                 title: 'Quá trình xóa đã xảy ra lỗi',
                                 showConfirmButton: false,
                                 timer: 3000
-                              })
-                          }
+                            })
+                        }
                     }
                 }
             });
         }
-      })
+    })
 }
 /**
  * Hàm hiển thị modal
@@ -307,8 +309,21 @@ JS_Handbook.prototype.seeVideo = function (id) {
     });
 }
 /**
+ * Thay đổi Danh sách
+ */
+JS_Handbook.prototype.changeCate = function (cate, _this) {
+    var myClass = this;
+    myClass.cate = cate;
+    var btns = document.querySelectorAll('.cate-btn');
+    for (i = 0; i < btns.length; i++){
+        btns[i].classList.remove('active');
+    }
+    $(_this).addClass('active');
+    JS_Handbook.loadList('#frmHandbook_index');
+}
+/**
  * Tìm kiếm
  */
-JS_Handbook.prototype.search = function(){
+JS_Handbook.prototype.search = function () {
     JS_Handbook.loadList('form#frmHandbook_index');
 }

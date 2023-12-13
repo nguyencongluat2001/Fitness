@@ -142,7 +142,7 @@ use Carbon\Carbon;
                             <div class="pb-3 d-lg-flex gx-5">
                                 <!-- display: flex;align-items: center;justify-content: center; -->
                                 <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
-                                    <a href="{{url('/client/about/reader/') . '/' . $blog->id}}">
+                                    <a href="javascript:;" onclick="reader('{{ $blog->id }}')">
                                         @if((isset($blog['type_blog']) && $blog['type_blog'] == 'VIP'))
                                         <h1 style="position: absolute;right:0">
                                             <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
@@ -154,15 +154,15 @@ use Carbon\Carbon;
                                 <div style="width:20px"></div>
                                 <div class="col-lg-7">
                                     <!-- <div class="card-body"> -->
-                                    <a href="{{url('/client/about/reader/') . '/' . $blog->id}}">
+                                    <a href="javascript:;" onclick="reader('{{ $blog->id }}')">
                                         <h5 class="card-title light-600 text-dark">{{ $blog->detailBlog->title }}</h5>
                                     </a>
                                     <i>{{$created_at->diffForHumans($now)}}</i>
                                     <p class="light-300">
                                     <div class="blogReader">{!! $blog->detailBlog->decision !!}</div>
                                     </p>
-                                    <a href="{{url('/client/about/reader/') . '/' . $blog->id}}">
-                                        <span class="text-decoration-none light-300">
+                                    <a href="javascript:;" onclick="reader('{{ $blog->id }}')">
+                                        <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">
                                             Đọc thêm <i class='bx bxs-hand-right ms-1'></i>
                                         </span>
                                     </a>
@@ -173,6 +173,7 @@ use Carbon\Carbon;
                         @endforeach
                         @endif
                     </div>
+                    <div class="reader"></div>
                 </div>
                 <div class="col-md-4">
                     <div class="container ps-0 pe-0">
@@ -182,7 +183,7 @@ use Carbon\Carbon;
                                 @foreach($datas as $key => $data)
                                 @php $id = $data['id']; @endphp
                                 <li class="active">
-                                    <a href="javascript:;" type="button" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-light mb-2" style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;" onclick="reader('{{$id}}')">
+                                    <a href="javascript:;" type="button" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-light mb-2" style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;" onclick="list('{{$id}}')">
                                         <i class="fas fa-book"></i> <span>{{ $data->name_category }}</span></a>
                                 </li>
                                 @endforeach
@@ -211,9 +212,9 @@ use Carbon\Carbon;
 
     var baseUrl = "{{url('')}}";
 
-    function reader(id) {
+    function list(id) {
         $.ajax({
-            url: baseUrl + '/client/des/reader',
+            url: baseUrl + '/client/des/list',
             type: "GET",
             data: {
                 id: id
@@ -221,7 +222,22 @@ use Carbon\Carbon;
             dataType: 'JSON',
             success: function(arrResult) {
                 $(".tab1").html(arrResult['content']);
-
+                $(".tab1").show();
+                $(".reader").hide();
+            }
+        });
+    }
+    function reader(id) {
+        $.ajax({
+            url: baseUrl + '/client/des/reader',
+            type: "GET",
+            data: {
+                id: id
+            },
+            success: function(arrResult) {
+                $(".reader").html(arrResult);
+                $(".reader").show();
+                $(".tab1").hide();
             }
         });
     }
