@@ -51,7 +51,7 @@ class DesController extends Controller
         $data['blogs'] = $blogs ?? [];
         return view('client.des.home',$data);
     }
-    public function reader(Request $request)
+    public function list(Request $request)
     {
         $id = $request->id;
         $categories = $this->CategoryService->where('id', $id)->first();
@@ -64,7 +64,7 @@ class DesController extends Controller
             $htmls .= '<div class="col-sm-6 col-lg-12 text-decoration-none ' . $blog->code_category .'">';
             $htmls .= '<div class="pb-3 d-lg-flex gx-5">';
             $htmls .= '<div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">';
-            $htmls .= '<a href="' . url('/client/about/reader/') . '/' . $blog->id .'">';
+            $htmls .= '<a href="javascript:;" onclick="reader(\'' . $blog->id .'\')">';
             if((isset($blog['type_blog']) && $blog['type_blog'] == 'VIP')){
                 $htmls .= '<h1 style="position: absolute;right:0">';
                 $htmls .= '<img src="'. url('/clients/img/vip.png') .'" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">';
@@ -74,21 +74,34 @@ class DesController extends Controller
             $htmls .= '</a></div>';
             $htmls .= '<div style="width:20px"></div>';
             $htmls .= '<div class="col-lg-7">';
-            $htmls .= '<a href="' . url('/client/about/reader/') . '/' . $blog->id . '">';
+            $htmls .= '<a href="javascript:;" onclick="reader(\'' . $blog->id .'\')">';
             $htmls .= '<h5 class="card-title light-600 text-dark">' . $blog->detailBlog->title . '</h5>';
             $htmls .= '</a>';
             $htmls .= '<i>'.$created_at->diffForHumans($now).'</i>';
             $htmls .= '<p class="light-300">';
             $htmls .= '<div class="blogReader">'. $blog->detailBlog->decision .'</div>';
             $htmls .= '</p>';
-            $htmls .= '<a href="' . url('/client/about/reader/') . '/' . $blog->id . '">';
-            $htmls .= '<span class="text-decoration-none light-300">';
+            $htmls .= '<a href="javascript:;">';
+            $htmls .= '<span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">';
             $htmls .= 'Đọc thêm <i class="bx bxs-hand-right ms-1"></i>';
             $htmls .= '</span></a></div></div></div>';
             $htmls .= '<hr style="margin-bottom: 1rem;">';
         }
         // dd($htmls);
         return response()->json(['content' => $htmls]);
+    }
+    public function reader(Request $request)
+    {
+        // dd($request->all());
+        $id = $request->id;
+        $blog = $this->BlogService->where('id', $id)->first();
+        $blogDetail = $this->BlogDetailService->where('code_blog', $blog->code_blog)->first();
+        $blogImage = $this->BlogImagesService->where('code_blog', $blog->code_blog)->first();
+        $data['datas']['blog'] = $blog;
+        $data['datas']['blogDetail'] = $blogDetail;
+        $data['datas']['blogImage'] = $blogImage;
+        $data['datas']['type'] = $blog->code_category;
+        return view("client.des.reader", $data)->render();
     }
     
 }

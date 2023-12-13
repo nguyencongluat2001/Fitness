@@ -47,7 +47,7 @@ class HandbookController extends Controller
     { 
         $arrInput = $request->input();
         if($arrInput['cate'] == null || $arrInput['cate'] == ''){
-            unset($arrInput['cate']);
+            $arrInput['cate'] = 'TU_SACH_DAU_TU';
         }
         $data = array();
         $param = $arrInput;
