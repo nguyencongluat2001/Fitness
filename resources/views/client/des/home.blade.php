@@ -130,7 +130,7 @@ use Carbon\Carbon;
     <section class="container">
         <div class="card" style="background-color: #b56c6cb5;">
             <div class="row home_index_child">
-                <div class="col-md-8">
+                <div class="col-md-9">
                     <div class="tab1" style="background: white">
                         @if(isset($blogs))
                         @foreach($blogs as $blog)
@@ -175,7 +175,7 @@ use Carbon\Carbon;
                     </div>
                     <div class="reader"></div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="container ps-0 pe-0">
                         <div class="treeview-animated w-20 border">
                             <ul class="list-unstyled components m-3">
@@ -183,8 +183,10 @@ use Carbon\Carbon;
                                 @foreach($datas as $key => $data)
                                 @php $id = $data['id']; @endphp
                                 <li class="active">
-                                    <a href="javascript:;" type="button" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-light mb-2" style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;" onclick="list('{{$id}}')">
-                                        <i class="fas fa-book"></i> <span>{{ $data->name_category }}</span></a>
+                                    <a href="javascript:;" type="button" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle btn btn-light mb-2 d-flex align-items-baseline" style="width: 100%;outline: none;box-shadow: none;white-space: unset;text-align: justify;" onclick="list('{{$id}}')">
+                                        <i class="fas fa-book"></i>
+                                        <p class="ms-2 mb-0">{{ $data->name_category }}</p>
+                                    </a>
                                 </li>
                                 @endforeach
                                 @endif

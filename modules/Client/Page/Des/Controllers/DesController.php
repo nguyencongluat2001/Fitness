@@ -81,7 +81,7 @@ class DesController extends Controller
             $htmls .= '<p class="light-300">';
             $htmls .= '<div class="blogReader">'. $blog->detailBlog->decision .'</div>';
             $htmls .= '</p>';
-            $htmls .= '<a href="javascript:;">';
+            $htmls .= '<a href="javascript:;" onclick="reader(\'' . $blog->id .'\')">';
             $htmls .= '<span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">';
             $htmls .= 'Đọc thêm <i class="bx bxs-hand-right ms-1"></i>';
             $htmls .= '</span></a></div></div></div>';
