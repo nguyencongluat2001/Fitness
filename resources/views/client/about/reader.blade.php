@@ -65,23 +65,9 @@ use Carbon\Carbon;
                                 <div class="row g-lg-5 mb-4">
                                     <div class="banner-wrapper w-100" style="background: #ffffff;">
                                     <div align="right">
-                                        @if($datas['type'] == 'BAO_CAO_TTTH')
-                                        <a href="{{url('/client/about/index')}}">
+                                        <a href="javascript:;" onclick="history.back()">
                                              <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
-                                        @elseif($datas['type'] == 'BAO_CAO_TKP')
-                                        <a href="{{url('/client/about/session')}}">
-                                             <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
-                                        </a>
-                                        @elseif($datas['type'] == 'BAO_CAO_PTDN')
-                                        <a href="{{url('/client/about/industry')}}">
-                                             <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
-                                        </a>
-                                        @elseif($datas['type'] == 'BAO_CAO_PTCP')
-                                        <a href="{{url('/client/about/stock')}}">
-                                             <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
-                                        </a>
-                                        @endif
                                     </div>
                                         <div class="card-header pb-0 p-0 pt-3">
                                             <div class="">
