@@ -4,6 +4,9 @@ use Carbon\Carbon;
 <title>{{ $datas['blogDetail']->title }}</title>
 
 <style>
+    #content-reader iframe  {
+        width: 100% !important;
+    }
     #content-reader img{
         width:100% !important;
     }
