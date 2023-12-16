@@ -172,7 +172,7 @@ JS_About.prototype.loadListPTCP = function (oFormBlog,numberPage = 1, perPage = 
     });
 }
 /**
- * Đọc thêm
+ * Xem chi tiết
  *
  * @param oForm (tên form)
  *

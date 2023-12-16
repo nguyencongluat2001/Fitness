@@ -29,7 +29,7 @@ use Carbon\Carbon;
                                         {!! $data->detailBlog->decision !!}
                                     </div>
                                     <span style="color:#e1ffed" class="text-decoration-none light-300">
-                                        Đọc thêm <i class='bx bxs-hand-right ms-1'></i>
+                                        Xem chi tiết <i class='bx bxs-hand-right ms-1'></i>
                                     </span>
                                 </div>
                             </div>
