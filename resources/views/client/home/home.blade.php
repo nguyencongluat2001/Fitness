@@ -281,7 +281,11 @@ use Carbon\Carbon;
                                                         <img src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" alt="Image" style="height: 200px;width: 250px;object-fit: cover;">
                                                     </td>
                                                     <td style="background: #ffffffeb;width:70%;vertical-align: middle;">
-                                                        <span class="title" style="font-size: 20px;font-family: -webkit-body;color: #1d3952;">{{ $data->detailBlog->title }}</span> <br>
+                                                        <!-- <span class="title" style="font-size: 20px;font-family: -webkit-body;color: #1d3952;"> -->
+                                                            <a href="{{url('client/about/reader') . '/' . $data->id}}">
+                                                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                                                            </a>
+                                                        <!-- </span> <br> -->
                                                         <p style="color: #d25d00;font-size: 13px;">{{(isset($data['cate_name']) ? $data['cate_name'] . ' - ' : '') . $created_at->diffForHumans($now)}}</p>
                                                         <span class="blogReader" style="font-size: 15px;font-family: -webkit-body;color: #1d3952;">
                                                             {!! $data->detailBlog->decision !!}
