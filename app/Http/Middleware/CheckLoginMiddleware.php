@@ -19,7 +19,7 @@ class CheckLoginMiddleware
     public function handle(Request $request, Closure $next)
     {
         if(Auth::check() && !empty($_SESSION["role"]) && ($_SESSION["role"] == 'ADMIN' || $_SESSION["role"] == 'MANAGE' || 
-        $_SESSION["role"] == 'CV_ADMIN' || $_SESSION["role"] == 'CV_PRO' || $_SESSION["role"] == 'CV_BASIC' || $_SESSION["role"] == 'SALE_ADMIN'
+        $_SESSION["role"] == 'CV_ADMIN' || $_SESSION["role"] == 'CV_PRO' || $_SESSION["role"] == 'CV_BASIC' || $_SESSION["role"] == 'SALE_ADMIN' || $_SESSION["role"] == 'SALE_BASIC'
              || $_SESSION['role'] == 'CV_ADMIN,SALE_ADMIN' || $_SESSION['role'] == 'CV_ADMIN,SALE_BASIC' 
              || $_SESSION['role'] == 'CV_PRO,SALE_ADMIN' || $_SESSION['role'] == 'CV_PRO,SALE_BASIC'
              || $_SESSION['role'] == 'CV_BASIC,SALE_ADMIN'|| $_SESSION['role'] == 'CV_BASIC,SALE_BASIC')){
