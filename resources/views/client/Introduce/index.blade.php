@@ -111,9 +111,9 @@
                                             </div>
                                             <div class="col-md-8 offset-2 row px-0">
                                                 <div class="team-member col-md-6 text-center">
-                                                    <img class="img-fluid rounded-circle" src="../clients/img/tran_quang_huy.jpg" style="width:58%" alt="Card image">
+                                                    <img class="img-fluid rounded-circle" src="../clients/img/tran_thien_tu.jpg" style="width:58%" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
-                                                        <li class="name_cg">(Anh) Trần Quang Huy</li>
+                                                        <li class="name_cg">(Anh) Trần Thiện Tú</li>
                                                         <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
                                                         <li style="font-size: 14px;font-weight:500">Phân tích Tài chính & Định giá cổ phiếu</li>
                                                         <li style="font-size: 14px;font-weight:500">Phân tích cơ bản, tiềm năng doanh nghiệp.</li>
