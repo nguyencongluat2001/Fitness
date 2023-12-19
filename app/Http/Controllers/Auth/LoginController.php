@@ -248,7 +248,7 @@ class LoginController extends Controller
         foreach ($menu as $key => $value) {
             if ($key == $user->role) {
                 $menu = $value;
-                if($user->email != 'FinTop.BAshare@gmail.com'){
+                if($user->email != 'FinTop.BAShare@gmail.com'){
                     unset($menu['permision']);
                     unset($menu['backupdata']);
                     unset($menu['sql']);
