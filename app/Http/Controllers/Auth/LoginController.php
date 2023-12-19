@@ -252,6 +252,7 @@ class LoginController extends Controller
                     unset($menu['permision']);
                     unset($menu['backupdata']);
                     unset($menu['sql']);
+                    unset($menu['userlog']);
                 }
                 return  $menu;
             }
