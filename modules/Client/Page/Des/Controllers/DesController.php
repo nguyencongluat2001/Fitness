@@ -83,7 +83,7 @@ class DesController extends Controller
             $htmls .= '</p>';
             $htmls .= '<a href="javascript:;" onclick="reader(\'' . $blog->id .'\')">';
             $htmls .= '<span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">';
-            $htmls .= 'Xem chi tiết <i class="bx bxs-hand-right ms-1"></i>';
+            $htmls .= 'Xem chi tiết</i>';
             $htmls .= '</span></a></div></div></div>';
             $htmls .= '<hr style="margin-bottom: 1rem;">';
         }

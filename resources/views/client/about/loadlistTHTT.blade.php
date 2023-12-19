@@ -49,7 +49,7 @@ use Carbon\Carbon;
                             </p>
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">
-                                    Xem chi tiết <i class='bx bxs-hand-right ms-1'></i>
+                                    Xem chi tiết
                                 </span>
                             </a>
                         </div>
