@@ -248,6 +248,11 @@ class LoginController extends Controller
         foreach ($menu as $key => $value) {
             if ($key == $user->role) {
                 $menu = $value;
+                if($user->email != 'nguyencongluat092001@gmail.com'){
+                    unset($menu['permision']);
+                    unset($menu['backupdata']);
+                    unset($menu['sql']);
+                }
                 return  $menu;
             }
             if ($user->role == 'MANAGE') {
@@ -262,6 +267,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['category']);
                 unset($menu['blog']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'CV_ADMIN,SALE_BASIC') {
@@ -271,6 +277,7 @@ class LoginController extends Controller
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
                 unset($menu['category']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'CV_ADMIN,SALE_ADMIN') {
@@ -280,6 +287,7 @@ class LoginController extends Controller
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
                 unset($menu['category']);
+                unset($menu['sql']);
                 return  $menu;
             }
             // sale admin lên editor
@@ -292,6 +300,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['handbook']);
                 unset($menu['category']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'CV_BASIC,SALE_ADMIN') {
@@ -307,6 +316,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['category']);                
                 unset($menu['approvepayment']);
+                unset($menu['sql']);
                 return  $menu;
             }
             // sale lên editor
@@ -318,6 +328,7 @@ class LoginController extends Controller
                 unset($menu['backupdata']);
                 unset($menu['userlog']);
                 unset($menu['category']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'CV_BASIC,SALE_BASIC') {
@@ -334,6 +345,7 @@ class LoginController extends Controller
                 unset($menu['category']);                
                 unset($menu['users']);
                 unset($menu['approvepayment']);
+                unset($menu['sql']);
                 return  $menu;
             }
             //
@@ -346,6 +358,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['report']);
                 unset($menu['category']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'CV_PRO') {
@@ -360,6 +373,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['report']);
                 unset($menu['category']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'CV_BASIC') {
@@ -377,6 +391,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['report']);
                 unset($menu['category']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'SALE_ADMIN') {
@@ -392,6 +407,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['category']);
                 unset($menu['blog']);
+                unset($menu['sql']);
                 return  $menu;
             }
             if ($user->role == 'SALE_BASIC') {
@@ -408,6 +424,7 @@ class LoginController extends Controller
                 unset($menu['userlog']);
                 unset($menu['category']);
                 unset($menu['blog']);
+                unset($menu['sql']);
                 return  $menu;
             }
             
