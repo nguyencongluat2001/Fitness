@@ -556,7 +556,6 @@ class UserController extends Controller
             $getUser_child = $this->userService->where('id_manage',$_SESSION['id_personnel'])->where('role','!=','USERS')->pluck('id_personnel')->toArray();
             $id_manage = array_merge($getUser_child_goc,$getUser_child);
             $param['id_manage'] = $id_manage;
-            dd($param['id_manage']);
         }elseif($_SESSION['role'] == 'MANAGE'){
             $param['role'] = ['ADMIN','USERS'];
         }
