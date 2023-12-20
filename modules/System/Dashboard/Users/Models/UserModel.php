@@ -50,7 +50,7 @@ class UserModel extends Model
                 $query->whereNotIn('role',$value);
                 return $query;
             case 'id_manage':
-                $query->whereIn('id_manage', $value);
+                $query->whereIn('id_manage', $value)->orWhereIn('id_personnel', $value);
                 return $query;
 
             default:
