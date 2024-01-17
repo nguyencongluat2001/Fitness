@@ -4,6 +4,7 @@ use Carbon\Carbon;
 @extends('client.layouts.index')
 @section('body-client')
 <title>{{ $datas['blogDetail']->title }}</title>
+<link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png">
 
 <style>
     #content-reader iframe  {
