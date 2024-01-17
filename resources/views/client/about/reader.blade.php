@@ -5,6 +5,7 @@ use Carbon\Carbon;
 @section('body-client')
 <title>{{ $datas['blogDetail']->title }}</title>
 <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png">
+<?php header('Location:yourPage?image=image_url'); ?>
 
 <style>
     #content-reader iframe  {
