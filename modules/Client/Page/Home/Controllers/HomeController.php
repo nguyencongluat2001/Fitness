@@ -46,7 +46,7 @@ class HomeController extends Controller
         }
         $datas['category'] = isset($category) ? $category : [];
         $data = array();
-        $objResult = $this->blogService->where('status',1)->get()->take(15);
+        $objResult = $this->blogService->where('status',1)->orderBy('created_at', 'DESC')->get()->take(15);
         foreach($objResult as $key => $value){
             $category = $this->categoryService->where('code_category', $value->code_category)->first();
             if(!empty($category)){
@@ -80,6 +80,7 @@ class HomeController extends Controller
     public function loadList(Request $request)
     { 
         $arrInput = $request->input();
+        $arrInput['sortType'] = 1;
         $data = $this->homeService->loadList($arrInput);
         return view("client.home.loadlist", $data);
     }

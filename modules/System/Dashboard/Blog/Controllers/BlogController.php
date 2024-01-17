@@ -158,6 +158,7 @@ class BlogController extends Controller
     { 
         $arrInput = $request->input();
         $data = array();
+        $arrInput['sortType'] = 1;
         $param = $arrInput;
         if($param['category'] == '' || $param['category'] == null){
             unset($param['category']);

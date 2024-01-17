@@ -37,6 +37,8 @@ class BlogModel extends Model
             case 'category':
                 $query->where('code_category', $value);
                 return $query;
+            case 'sortType':
+                $query->orderBy('created_at', 'DESC');
             default:
                 // return $query->where('status', 1);
                 return $query;
