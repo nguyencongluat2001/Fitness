@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('code_category')->nullable(); // Nhóm ngành
             $table->string('percent_of_assets')->nullable(); // Phần trăm tài sản
             $table->string('closing_percentage')->nullable(); // Phần trăm chốt
-            $table->string('price')->nullable(); // Giá mua
+            $table->string('price')->nullable(); // Giá mua  effectiveness
+            $table->string('pickcolor')->nullable(); // chon mau sac
             $table->dateTime('date_close')->nullable(); // Ngày chốt
             $table->string('price_close')->nullable(); // Giá chốt
             $table->string('profit_and_loss')->nullable(); // Lãi và lỗ

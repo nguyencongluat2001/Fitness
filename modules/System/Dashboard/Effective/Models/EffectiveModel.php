@@ -21,6 +21,7 @@ class EffectiveModel extends Model
         'date_close',
         'price_close',
         'profit_and_loss',
+        'pickcolor',
         'note',
         'status',
         'created_at',

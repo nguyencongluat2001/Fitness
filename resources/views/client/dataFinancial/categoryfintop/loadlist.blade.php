@@ -62,7 +62,11 @@
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
                         <span>{{ $data['price_close']}}</span>
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#b6d3ac">
+                    <td align="center"
+                    @if(isset($data['pickcolor'])) style="white-space: inherit; vertical-align: middle;background:{{$data['pickcolor']}};font-weight:bold;"
+                    @else style="white-space: inherit; vertical-align: middle;background:#218838;font-weight:bold;"
+                    @endif 
+                    style="white-space: inherit; vertical-align: middle">
                         <span>{{ $data['profit_and_loss']}}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">

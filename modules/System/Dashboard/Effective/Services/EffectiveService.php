@@ -31,6 +31,7 @@ class EffectiveService extends Service
             'profit_and_loss' => isset($input['profit_and_loss']) ? $input['profit_and_loss'] : '',
             'note' => isset($input['note']) ? $input['note'] : '',
             'status' => isset($input['status']) && !empty($input['status']) ? 1 : 0,
+            'pickcolor' => isset($input['pickcolor']) ? $input['pickcolor'] : '#218838',
         ];
         if($input['id'] != ''){
             $Recommendations = $this->repository->where('id',$input['id'])->first();

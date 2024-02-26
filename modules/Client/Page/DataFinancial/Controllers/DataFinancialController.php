@@ -327,7 +327,7 @@ class DataFinancialController extends Controller
                 "name_category" => !empty($getCate->name_category)?$getCate->name_category:'',
                 "code_category" => !empty($item['code_category'])?$item['code_category']:'',
                 "percent_of_assets" => !empty($item['percent_of_assets'])?$item['percent_of_assets']:'',
-
+                "pickcolor" => !empty($item['pickcolor'])?$item['pickcolor']:'',
                 "code_cp" => !empty($item['code_cp'])?$item['code_cp']:'',
                 "price" => !empty($item['price'])?$item['price']:'',
                 "price_close" => !empty($item['price_close'])?$item['price_close']:'',
@@ -338,6 +338,7 @@ class DataFinancialController extends Controller
                 "created_at" => !empty($item['created_at'])?$item['created_at']:'',
             ];
         }
+
         return view('client.dataFinancial.categoryfintop.loadlist',$data);
     }
     
