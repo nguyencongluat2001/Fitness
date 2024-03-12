@@ -24,7 +24,7 @@ use Carbon\Carbon;
                                 <div class="col-lg-1 "></div>
                                 <div class="col-lg-7">
                                     <h5 class="card-title light-600" style="color:#ffdd61">{{ $data->detailBlog->title }}</h5>
-                                    <p style="color: #fff;">{{(isset($data['cate_name']) ? $data['cate_name'] . ' - ' : '') . $created_at->diffForHumans($now)}}</p>
+                                    <p style="color: #fff;">{{(isset($data['cate_name']) ? $data['cate_name'] . ' - ' : '') . $created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}})</p>
                                     <div style="color:#e1ffed" class="light-300 blogReader">
                                         {!! $data->detailBlog->decision !!}
                                     </div>
