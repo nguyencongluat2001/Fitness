@@ -157,7 +157,7 @@ use Carbon\Carbon;
                                     <a href="javascript:;" onclick="reader('{{ $blog->id }}')">
                                         <h5 class="card-title light-600 text-dark">{{ $blog->detailBlog->title }}</h5>
                                     </a>
-                                    <i>{{$created_at->diffForHumans($now)}}</i>
+                                    <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}})</i>
                                     <p class="light-300">
                                     <div class="blogReader">{!! $blog->detailBlog->decision !!}</div>
                                     </p>
