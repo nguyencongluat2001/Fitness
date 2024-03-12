@@ -40,8 +40,7 @@ class BlogService extends Service
      /**
      * cập nhật bài viết
      */
-    public function store($input,$file){
-      
+    public function store($input,$file){      
         DB::beginTransaction();
         try{
             //lấy mã bài viết
@@ -64,7 +63,6 @@ class BlogService extends Service
                 'code_category' => $input['code_category'],
                 'type_blog' => $input['type_blog'],
                 'status' => isset($input['status']) ? 1 : 0,
-                'created_at' => date("Y/m/d H:i:s"),
                 'updated_at' => date("Y/m/d H:i:s")
             ];
             $arrBlogDetails = [
@@ -90,7 +88,6 @@ class BlogService extends Service
                             'name'=> $name[1],
                             'name_image'=> $imageValue,
                             'order_image'=> $i,
-                            'created_at' => date("Y/m/d H:i:s"),
                             'updated_at' => date("Y/m/d H:i:s")
                         ];
                         $createImage = $this->blogImagesService->create($arrImages);
@@ -100,6 +97,7 @@ class BlogService extends Service
             }else{
                 //Create Blog
                 $arrBlog['id']= (string)Str::uuid();
+                $arrBlog['created_at'] =  date("Y/m/d H:i:s");
                 $createBlog = $this->create($arrBlog);
                 //Create Blog details
                 $arrBlogDetails['id']= (string)Str::uuid();
