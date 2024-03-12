@@ -43,7 +43,7 @@ use Carbon\Carbon;
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </a>
-                            <i>{{$created_at->diffForHumans($now)}}</i>
+                            <i>{{$created_at->diffForHumans($now)}} ( {{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/y', strtotime($created_at)) : ''}} )</i>
                             <p class="light-300">
                             <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                             </p>

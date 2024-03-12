@@ -286,7 +286,7 @@ use Carbon\Carbon;
                                                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                                                             </a>
                                                         <!-- </span> <br> -->
-                                                        <p style="color: #d25d00;font-size: 13px;">{{(isset($data['cate_name']) ? $data['cate_name'] . ' - ' : '') . $created_at->diffForHumans($now)}}</p>
+                                                        <p style="color: #d25d00;font-size: 13px;">{{(isset($data['cate_name']) ? $data['cate_name'] . ' - ' : '') . $created_at->diffForHumans($now)}} ( {{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}}  {{!empty($data->created_at) ? date('d/m/Y', strtotime($data->created_at)) : ''}} )</p>
                                                         <span class="blogReader" style="font-size: 15px;font-family: -webkit-body;color: #1d3952;">
                                                             {!! $data->detailBlog->decision !!}
                                                         </span><br>
