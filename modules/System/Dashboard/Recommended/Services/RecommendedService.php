@@ -50,7 +50,7 @@ class RecommendedService extends Service
             $arrData['updated_at'] = date('Y-m-d H:i:s');
             $create = $Recommendations->update($arrData);
         }else{
-            $Recommendations = $this->repository->select('*')->where('code_category', $input['code_category'])->count();
+            $Recommendations = $this->repository->select('*')->where('code_cp', $input['code_cp'])->count();
             if($Recommendations > 0){
                 return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
             }

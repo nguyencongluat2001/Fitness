@@ -259,17 +259,11 @@ class LoginController extends Controller
             }
             if ($user->role == 'MANAGE') {
                 $menu = $value;
-                unset($menu['recommended']);
-                unset($menu['datafinancial']);
-                unset($menu['signal']);
-                unset($menu['handbook']);
-                unset($menu['signal']);
                 unset($menu['permision']);
                 unset($menu['backupdata']);
-                unset($menu['userlog']);
-                unset($menu['category']);
-                unset($menu['blog']);
                 unset($menu['sql']);
+                unset($menu['userlog']);
+                unset($menu['report']);
                 return  $menu;
             }
             if ($user->role == 'CV_ADMIN,SALE_BASIC') {
