@@ -41,7 +41,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Lãi/Lỗ</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Khuyến nghị hành động</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Dừng lỗ</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>% Chốt</b></td>
+                <!-- <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>% Chốt</b></td> -->
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Ghi chú</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b><span onclick="JS_Recommended.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></b></td>
             </tr>
@@ -90,9 +90,9 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                     <td class="td_stop_loss_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'stop_loss')" style="white-space: inherit; vertical-align: middle;">
                         <span id="span_stop_loss_{{$id}}" class="span_stop_loss_{{$id}}">{{ $data->stop_loss }}</span>
                     </td>
-                    <td class="td_closing_percentage_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'closing_percentage')" style="white-space: inherit; vertical-align: middle;">
+                    <!-- <td class="td_closing_percentage_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'closing_percentage')" style="white-space: inherit; vertical-align: middle;">
                         <span id="span_closing_percentage_{{$id}}" class="span_closing_percentage_{{$id}}">{{ $data->closing_percentage }}</span>
-                    </td>
+                    </td> -->
                     <td class="td_note_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'note')" style="white-space: inherit; vertical-align: middle;">
                         <span id="span_note_{{$id}}" class="span_note_{{$id}}">{{ $data->note }}</span>
                     </td>
