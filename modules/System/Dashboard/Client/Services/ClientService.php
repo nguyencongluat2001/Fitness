@@ -136,7 +136,7 @@ class ClientService extends Service
         if($input['id_personnel'] == ''){
             return array('success' => false, 'message' => 'Mã cộng tác viên không được để trống!');
         }
-        $check = $this->ClientRepository->where('id_personnel',$input['id_personnel'])->first();
+        $check = $this->ClientRepository->where('id_personnel',$input['id_personnel'])->where('id','!=',$input['id'])->first();
 
         if(!empty($check)){
             return array('success' => false, 'message' => 'Mã cộng tác viên đã tồn tại!');
