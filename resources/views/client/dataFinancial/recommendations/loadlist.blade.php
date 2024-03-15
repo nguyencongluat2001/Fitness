@@ -3,7 +3,7 @@
   overflow: auto;
   bottom: 0;
   width: 100%;
-  max-height: 600px;
+  max-height: 800px;
 }
 </style>
     <div id="">
