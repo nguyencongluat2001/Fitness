@@ -105,7 +105,7 @@
 </div>
 <div class="modal" id="reader" role="dialog"></div>
 <!-- End Recent Work -->
-<script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_About.js?version=1.0.1') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('dist\js\backend\client\JS_About.js) }}?version=1.0.1"></script>
 <script src='../assets/js/jquery.js'></script>
 <script type="text/javascript">
   var baseUrl = "{{ url('') }}";
