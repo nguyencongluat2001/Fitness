@@ -16,7 +16,7 @@
     <link href="../clients/css/boxicon.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <!-- Load Tempalte CSS -->
-    <link rel="stylesheet" href="../clients/css/templatemo.css">
+    <link rel="stylesheet" href="../clients/css/templatemo.css?version=1.0.1">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../clients/css/custom.css">
     <link rel="stylesheet" href="../assets/chosen/chosen.min.css">
