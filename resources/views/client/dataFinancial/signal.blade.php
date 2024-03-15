@@ -15,7 +15,14 @@
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-signal"></div>
                             </div>
-                            <h class="h5 py-2">- <span style="font-family: auto;">Chú giải xếp hạng TA/FA</span> : </h> <i style="color:#3ac500" class="far fa-eye"></i>
+                            <h class="h4 py-2"> Chú giải xếp hạng TA/FA</h>
+                            <div class="home_index_vnindex" > 
+                                <div class="home_index_child py-2">
+                                    <div class="col-md-12" >
+                                    <img  style="width:100%;" src="../clients/img/noteDataFintop.png" alt="Card image">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

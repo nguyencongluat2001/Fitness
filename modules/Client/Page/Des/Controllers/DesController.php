@@ -55,7 +55,7 @@ class DesController extends Controller
     {
         $id = $request->id;
         $categories = $this->CategoryService->where('id', $id)->first();
-        $blogs = $this->BlogService->where('code_category', $categories->code_category)->where('status', 1)->orderBy('created_at', 'desc')->get();
+        $blogs = $this->BlogService->where('code_category', $categories->code_category)->where('status', 1)->orderBy('created_at', 'asc')->get();
         $htmls = '';
         foreach($blogs as $blog){
             Carbon::setLocale('vi');
@@ -77,7 +77,7 @@ class DesController extends Controller
             $htmls .= '<a href="javascript:;" onclick="reader(\'' . $blog->id .'\')">';
             $htmls .= '<h5 class="card-title light-600 text-dark">' . $blog->detailBlog->title . '</h5>';
             $htmls .= '</a>';
-            $htmls .= '<i>'.$created_at->diffForHumans($now).'</i>';
+            $htmls .= '<i>'.$created_at->diffForHumans($now) .'( '. !empty($created_at) ? date('H:i', strtotime($created_at)) : '' . (!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : '') .' )</i>';
             $htmls .= '<p class="light-300">';
             $htmls .= '<div class="blogReader">'. $blog->detailBlog->decision .'</div>';
             $htmls .= '</p>';

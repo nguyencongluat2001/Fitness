@@ -124,14 +124,14 @@
                     data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Cẩm nang</button>
                 </div> -->
                 <div style="padding-left:85%">
-                <input checked  type="checkbox" id="view_chart" name="view_chart" onclick="JS_DataFinancial.view_chart()" /><span style=";color: #ff9f00;font-family: serif;"> Ẩn hiện biểu đồ</span></label>
+                <input type="checkbox" id="view_chart" name="view_chart" onclick="JS_DataFinancial.view_chart()" /><span style=";color: #ff9f00;font-family: serif;"> Ẩn hiện biểu đồ</span></label>
 
                 </div>
                 <section class="content-wrapper">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <div class="row form-group">
-                                <div id="bank" class="show">
+                                <div id="bank" class="hiddel">
                                     <div class="col-lg-12" style="padding:2px;">
                                         <!-- <h class="h4 py-2"><i class="far fa-chart-bar"></i>. <span style="font-family: auto;" > Biểu đồ</span> </h> <br> -->
                                         <!-- <p>Nguồn theo: fireant</p> -->

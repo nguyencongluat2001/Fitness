@@ -38,24 +38,13 @@
                     X
                 </button>
             </div> -->
+             <div class="modal-header" style="padding:4px">
+                <button type="button" class="btn btn-sm pt-2" data-bs-dismiss="modal" style="background: red;color:white">
+                            Đóng
+                </button>
+            </div>
+            
             <div class="card-body">
-            <section class="content-wrapper">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="row form-group">
-                                <div class="col-lg-12" style="padding:2px;">
-                                    <!-- <h class="h4 py-2"><i class="far fa-chart-bar"></i>. <span style="font-family: auto;" > Biểu đồ</span> </h> <br> -->
-                                    <!-- <p>Nguồn theo: fireant</p> -->
-                                    <iframe style="width:100%" height="500" src="https://fireant.vn/charts" 
-                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                    </iframe>
-                                    <span>Nguồn theo: fireant</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <table class="table  table-bordered table-striped table-condensed dataTable no-footer">
                     <thead>
                         <tr>
@@ -144,22 +133,36 @@
                             <input style="width:50px" id="ratings_FA" name="ratings_FA" type="text" value="{{isset($datas->ratings_FA)?$datas->ratings_FA:''}}" class="form-control">
                             </div>
                         </div>
-                        <div class="col-md-2" style="display:flex">
+                        <div class="col-md-4" style="display:flex">
                             <div style="padding: 5px;" class="required">
                             Link FA
                             </div>
                             <div>
-                                <input style="width:100px" id="url_link" name="url_link" type="text" value="{{isset($datas->url_link)?$datas->url_link:''}}" class="form-control">
+                                <input style="width:250px" id="url_link" name="url_link" type="text" value="{{isset($datas->url_link)?$datas->url_link:''}}" class="form-control">
                                 <!-- <span id="add_link"><i class="fas fa-marker" style="color:#5ba2ff"></i></span><br>
                                     <a href="" id="show_link" hidden target="_blank" style="text-decoration:underline">Xem</a>
                                 <input type="hidden" name="url_link" id="url_link">  -->
                             </div>
                         </div>
                      @endif
-                    <button type="button" class="btn btn-sm pt-2" data-bs-dismiss="modal" style="background: red;color:white">
-                        Đóng
-                    </button>
                 </div>
+                <section class="content-wrapper pt-3">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row form-group">
+                                <div class="col-lg-12" style="padding:2px;">
+                                    <!-- <h class="h4 py-2"><i class="far fa-chart-bar"></i>. <span style="font-family: auto;" > Biểu đồ</span> </h> <br> -->
+                                    <!-- <p>Nguồn theo: fireant</p> -->
+                                    <iframe style="width:100%" height="500" src="https://fireant.vn/charts" 
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        allowfullscreen>
+                                    </iframe>
+                                    <span>Nguồn theo: fireant</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
