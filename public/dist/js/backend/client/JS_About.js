@@ -81,7 +81,7 @@ JS_About.prototype.loadListTHTT = function (oFormBlog,numberPage = 1, perPage = 
  */
 JS_About.prototype.loadListTKP = function (oFormBlog,numberPage = 1, perPage = 15) {
     var myClass = this;
-    var url = myClass.urlPath + '/loadListPTN';
+    var url = myClass.urlPath + '/loadListTKP';
     // BAO_CAO_PTDTVIP
     var data = $(oFormBlog).serialize();
     data += '&offset=' + numberPage;
