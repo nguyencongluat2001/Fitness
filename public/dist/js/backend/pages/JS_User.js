@@ -163,7 +163,7 @@ JS_User.prototype.store = function (oFormCreate) {
  *
  * @return void
  */
-JS_User.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) {
+JS_User.prototype.loadList = function (oForm, numberPage = 1, perPage = 50) {
     var myClass = this;
     var url = this.urlPath + '/loadList';
     var data = 'search=' + $("#search").val();
