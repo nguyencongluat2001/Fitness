@@ -461,11 +461,11 @@ JS_Recommended.prototype.checkValidate = function(){
         $("#stop_loss").focus();
         return false;
     }
-    if($("#closing_percentage").val() == ''){
-        NclLib.alertMessageBackend('warning', 'Cảnh báo', '% chốt không được để trống!');
-        $("#closing_percentage").focus();
-        return false;
-    }
+    // if($("#closing_percentage").val() == ''){
+    //     NclLib.alertMessageBackend('warning', 'Cảnh báo', '% chốt không được để trống!');
+    //     $("#closing_percentage").focus();
+    //     return false;
+    // }
 }
 
 function clickColor(color){

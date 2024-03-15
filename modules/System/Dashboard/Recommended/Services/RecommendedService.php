@@ -41,20 +41,22 @@ class RecommendedService extends Service
             'closing_percentage' => isset($input['closing_percentage']) ? $input['closing_percentage'] : '',
             'note' => isset($input['note']) ? $input['note'] : '',
             'status' => isset($input['status']) && !empty($input['status']) ? 1 : 0,
+            'created_at' => isset($input['created_at']) ? date('Y-m-d', strtotime($input['created_at'])) : date('Y-m-d'),
         ];
+        // dd($arrData);
         if($input['id'] != ''){
             $Recommendations = $this->repository->where('id',$input['id'])->first();
             if(!empty($Recommendations) && empty($Recommendations->created_at)){
-                $arrData['created_at'] = date('Y-m-d H:i:s');
+                // $arrData['created_at'] = date('Y-m-d H:i:s');
             }
-            $arrData['updated_at'] = date('Y-m-d H:i:s');
+            $arrData['updated_at'] = date('Y-m-d');
             $create = $Recommendations->update($arrData);
         }else{
             $Recommendations = $this->repository->select('*')->where('code_cp', $input['code_cp'])->count();
             if($Recommendations > 0){
                 return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
             }
-            $arrData['created_at'] = date('Y-m-d H:i:s');
+            // $arrData['created_at'] = date('Y-m-d H:i:s');
             $arrData['id'] = (string)Str::uuid();
             $create = $this->repository->create($arrData);
         }

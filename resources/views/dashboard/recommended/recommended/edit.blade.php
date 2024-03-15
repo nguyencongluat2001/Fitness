@@ -97,7 +97,8 @@
                             </td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Khuyến nghị hành động</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Dừng lỗ</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Chốt</b></td>
+                            <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Chốt</b></td> -->
+                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Ngày mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2"><b>Ghi chú</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2"><b>#</b></td>
                         </tr>
@@ -132,7 +133,8 @@
                                 </td>
                                 <td style="vertical-align: middle;" align="center"><input id="act" name="act" type="text" value="{{isset($datas->act)?$datas->act:''}}" class="form-control"></td>
                                 <td style="vertical-align: middle;" align="center"><input id="stop_loss" name="stop_loss" type="text" value="{{isset($datas->stop_loss)?$datas->stop_loss:''}}" class="form-control"></td>
-                                <td style="vertical-align: middle;" align="center"><input id="closing_percentage" name="closing_percentage" type="text" value="{{isset($datas->closing_percentage)?$datas->closing_percentage:''}}" class="form-control"></td>
+                                <!-- <td style="vertical-align: middle;" align="center"><input id="closing_percentage" name="closing_percentage" type="text" value="{{isset($datas->closing_percentage)?$datas->closing_percentage:''}}" class="form-control"></td> -->
+                                <td style="vertical-align: middle;" align="center"><input id="created_at" name="created_at" type="date" value="{{isset($datas->created_at)? date('Y-m-d', strtotime($datas->created_at)):''}}" class="form-control"></td>
                                 <td style="vertical-align: middle;" align="center"><input id="note" name="note" type="text" value="{{isset($datas->note)?$datas->note:''}}" class="form-control"></td>
                                 <td style="vertical-align: middle;" align="center">
                                     <p></p>
