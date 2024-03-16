@@ -16,12 +16,12 @@
             <col width="6%"> <!-- gia mua -->
             <col width="8%"> <!-- gia hien tai -->
             <col width="6%"> <!-- lai/lo -->
-            <col width="15%"> <!-- khuyen nghi hanh đong -->
+            <col width="8%"> <!-- khuyen nghi hanh đong -->
             <col width="5%"> <!-- vung gia muc tieu -->
             <col width="5%"> <!-- vung gia muc tieu -->
             <col width="5%"> <!-- vung gia muc tieu -->
             <col width="7%"> <!-- dung lo -->
-            <col width="9%"> <!-- ghi chu -->
+            <col width="15%"> <!-- ghi chu -->
         </colgroup>
         <thead style="background:#3a760c;color:white">
             <tr>
@@ -33,7 +33,7 @@
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua</b></td>
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá hiện tại</b></td>
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
-                <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Khuyến nghị hành động</b></td>
+                <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Hành động</b></td>
                 <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA1)</b></td> -->
                 <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA2)</b></td> -->
                 <td colspan="3" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Vùng giá mục tiêu</b></td>

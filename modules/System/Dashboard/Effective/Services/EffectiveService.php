@@ -32,11 +32,12 @@ class EffectiveService extends Service
             'note' => isset($input['note']) ? $input['note'] : '',
             'status' => isset($input['status']) && !empty($input['status']) ? 1 : 0,
             'pickcolor' => isset($input['pickcolor']) ? $input['pickcolor'] : '#218838',
+            'created_at' => isset($input['created_at']) ? date('Y-m-d', strtotime($input['created_at'])) : date('Y-m-d'),
         ];
         if($input['id'] != ''){
             $Recommendations = $this->repository->where('id',$input['id'])->first();
             if(!empty($Recommendations) && empty($Recommendations->created_at)){
-                $arrData['created_at'] = date('Y-m-d H:i:s');
+                // $arrData['created_at'] = date('Y-m-d H:i:s');
             }
             $arrData['updated_at'] = date('Y-m-d H:i:s');
             $create = $Recommendations->update($arrData);
@@ -45,7 +46,7 @@ class EffectiveService extends Service
             if($Recommendations > 0){
                 return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
             }
-            $arrData['created_at'] = date('Y-m-d H:i:s');
+            // $arrData['created_at'] = date('Y-m-d H:i:s');
             $arrData['id'] = (string)Str::uuid();
             $create = $this->repository->create($arrData);
         }
