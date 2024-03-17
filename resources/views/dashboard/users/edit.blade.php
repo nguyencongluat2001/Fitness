@@ -2,7 +2,7 @@
 	@csrf
 	<input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
 	<input type="hidden" name="id" id="id" value="{{!empty($data['id'])?$data['id']:''}}">
-	<div class="modal-dialog modal-lg">
+	<div class="modal-dialog modal-xl">
 		<div class="modal-content card">
 			<div class="modal-header">
 				<h5 class="modal-title">Cập nhật người dùng</h5>
@@ -39,17 +39,22 @@
 					</div>
 					<div class="col-md-6">
 						<div class="form-group">
-							<p for="example-text-input" class="form-control-label required">Thứ tự</p>
+							<p for="example-text-input" class="form-control-label">Thứ tự</p>
 							<input class="form-control" type="text" value="{{!empty($data['order'])?$data['order']:''}}" name="order" id="order" placeholder="Số thứ tự..." />
 						</div>
 					</div>
-					@if(!empty($data['email']) && $_SESSION["email"] == $data['email'] || $_SESSION["role"] == 'ADMIN')
-					<span id='btn_changePass'>
-						<button class="btn btn-primary btn-sm" type="button">
-							Đổi mật khẩu
-						</button>
-					</span>
-					@endif
+					<div class="col-md-6">
+					<p for="example-text-input" class="form-control-label"> Mật khẩu</p>
+
+						@if(!empty($data['email']) && $_SESSION["email"] == $data['email'] || $_SESSION["role"] == 'ADMIN')
+						<span id='btn_changePass'>
+							<button class="btn btn-primary btn-sm" type="button">
+								Đổi mật khẩu
+							</button>
+						</span>
+						@endif
+					</div>
+					
 				</div>
 				<hr class="horizontal dark">
 				<p class="text-uppercase text-sm">Thông tin liên lạc</p>
@@ -95,11 +100,82 @@
 						</div>
 					</div>
 				</div>
+				<!-- <table class="table" id="tableData">
+					<colgroup>
+						<col width="18%">
+						<col width="17%">
+						<col width="16%">
+						<col width="16%">
+						<col width="16%">
+						<col width="17%">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td><label for="">Thời gian đầu tư <span class="request_star">*</span></label></td>
+							<td><label><input type="radio" id="investment_time" name="investment_time" value="0-3" {{!empty($data['investment_time']) && $data['investment_time'] == '0-3' ? 'checked' : ''}}> 0 - 3 tháng</label></td>
+							<td><label><input type="radio" id="investment_time" name="investment_time" value="3-6" {{!empty($data['investment_time']) && $data['investment_time'] == '3-6' ? 'checked' : ''}}> 3 - 6 tháng</label></td>
+							<td><label><input type="radio" id="investment_time" name="investment_time" value="6-12" {{!empty($data['investment_time']) && $data['investment_time'] == '6-12' ? 'checked' : ''}}> 6 - 12 tháng</label></td>
+							<td><label><input type="radio" id="investment_time" name="investment_time" value="1nam" {{!empty($data['investment_time']) && $data['investment_time'] == '1nam' ? 'checked' : ''}}> Trên 1 năm</label></td>
+						</tr>
+						<tr>
+							<td><label for="">Khẩu vị đầu tư <span class="request_star">*</span></label></td>
+							<td><label><input type="radio" id="investment_taste" name="investment_taste" value="nganhan" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'nganhan' ? 'checked' : ''}}> Lướt sóng ngắn hạn</label></td>
+							<td><label><input type="radio" id="investment_taste" name="investment_taste" value="daihan" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'daihan' ? 'checked' : ''}}> Tru{{!empty($data['investment_taste']) && $data['investment_taste'] == 'nganhan' ? 'checked' : ''}}ng và dài hạn</label></td>
+							<td><label><input type="radio" id="investment_taste" name="investment_taste" value="linhhoat" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'linhhoat' ? 'checked' : ''}}> Linh hoạt kết hợp</label></td>
+						</tr>
+						<tr>
+							<td><label for="">Công ty chứng khoán <span class="request_star">*</span></label></td>
+							<td><label><input type="radio" id="investment_company" name="investment_company" value="TKCK" {{!empty($data['investment_company']) && $data['investment_company'] == 'TKCK' ? 'checked' : ''}}> Chưa TKCK</label></td>
+							<td><label><input type="radio" id="investment_company" name="investment_company" value="vps" {{!empty($data['investment_company']) && $data['investment_company'] == 'vps' ? 'checked' : ''}}> VPS</label></td>
+							<td><label><input type="radio" id="investment_company" name="investment_company" value="ssi" {{!empty($data['investment_company']) && $data['investment_company'] == 'ssi' ? 'checked' : ''}}> SSI</label></td>
+							<td><label><input type="radio" id="investment_company" name="investment_company" value="vnd" {{!empty($data['investment_company']) && $data['investment_company'] == 'vnd' ? 'checked' : ''}}> VND</label></td>
+							<td><label><input type="radio" class="company-other" id="investment_company" name="investment_company" value="khac" {{!empty($data['investment_company']) && $data['investment_company'] == 'khac' ? 'checked' : ''}}> Khác</label>
+						</tr>
+					</tbody>
+				</table> -->
+				<div class="row">
+						<div class="form-wrapper col-md-4">
+							<label for="">Thời gian đầu tư <span class="request_star">*</span></label>
+							<select name="investment_time" id="investment_time" class="form-control chzn-select">
+								<option value="0-3"  {{!empty($data['investment_time']) && $data['investment_time'] == '0-3' ? 'selected' : ''}}>0 - 3 tháng</option>
+								<option value="3-6" {{!empty($data['investment_time']) && $data['investment_time'] == '3-6' ? 'selected' : ''}}>3 - 6 tháng</option>
+								<option value="6-12" {{!empty($data['investment_time']) && $data['investment_time'] == '6-12' ? 'selected' : ''}}>6 - 12 tháng</option>
+								<option value="1nam" {{!empty($data['investment_time']) && $data['investment_time'] == '1nam' ? 'selected' : ''}}> 1 năm</option>
+							</select>
+						</div>
+						<div class="form-wrapper col-md-4">
+						    <label for="">Khẩu vị đầu tư <span class="request_star">*</span></label>
+							<select name="investment_taste" id="investment_taste" class="form-control chzn-select">
+								<option value="nganhan" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'nganhan' ? 'selected' : ''}}>Lướt sóng ngắn hạn</option>
+								<option value="daihan" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'daihan' ? 'selected' : ''}}>Trung và dài hạn</option>
+								<option value="linhhoat" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'linhhoat' ? 'selected' : ''}}>Linh hoạt kết hợp</option>
+							</select>
+						</div>
+						<div class="form-wrapper col-md-4">
+							<label for="">Công ty chứng khoán <span class="request_star">*</span></label>
+							<select name="investment_company" id="investment_company" class="form-control chzn-select">
+								<option value="TKCK" {{!empty($data['investment_company']) && $data['investment_company'] == 'TKCK' ? 'selected' : ''}}>Chưa TKCK</option>
+								<option value="vps" {{!empty($data['investment_company']) && $data['investment_company'] == 'vps' ? 'selected' : ''}}>VPS</option>
+								<option value="ssi" {{!empty($data['investment_company']) && $data['investment_company'] == 'ssi' ? 'selected' : ''}}>SSI</option>
+								<option value="vnd" {{!empty($data['investment_company']) && $data['investment_company'] == 'vnd' ? 'selected' : ''}}>VND</option>
+								<option value="khac" {{!empty($data['investment_company']) && $data['investment_company'] == 'khac' ? 'selected' : ''}}>Công ty khác</option>
+							</select>
+						</div>
+					</div>
+				<div class="col-md-12">
+						<div class="form-group">
+						    <p for="example-text-input" class="form-control-label">Nhập số TKCK VPS (nếu có)</p>
+							<div style="position: relative;">
+								<input placeholder="Nhập số TKCK VPS (nếu có)" id="account_tkck_vps" type="text" class="form-control" name="account_tkck_vps" value="{{!empty($data['account_tkck_vps'])?$data['account_tkck_vps']:''}}">
+								<!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+							</div>
+						</div>
+					</div>
 				{{-- Quyền truy cập --}}
 				<div class="row form-group" id="div_hinhthucgiai">
 					{{--<span class="col-md-3 control-label required">Quyền truy cập</span>
 					<div class="col-md-3" style="background:#49ff99">
-					     @if ($_SESSION['role_admin'] == 'ADMIN')
+					     @if ($_SESSION['investment_time'] == 'ADMIN')
 						<input type="checkbox" value="ADMIN" name="role_admin" id="role_admin" {{!empty($data['role_admin']) && $data['role_admin'] == 'ADMIN' ? 'checked' : ''}} />
 						<label style="color:#0f0f0f" for="role_admin">Quản trị hệ thống</label> <br>
 						@endif

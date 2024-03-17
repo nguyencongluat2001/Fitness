@@ -50,8 +50,8 @@
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Mã CP</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Nhóm nghành</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>% Tài sản</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Giá mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Ngày mua</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Giá mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Ngày chốt</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Giá chốt</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Lãi/Lỗ</b>
@@ -91,8 +91,8 @@
                             </td>
                             {{--<td style="vertical-align: middle;" align="center"><input id="created_at" name="created_at" type="date" value="{{isset($datas->created_at)?date('Y-m-d', strtotime($datas->created_at)):''}}" class="form-control"></td>--}}
                             <td style="vertical-align: middle;" align="center"><input id="percent_of_assets" name="percent_of_assets" type="text" value="{{isset($datas->percent_of_assets)?$datas->percent_of_assets:''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center"><input id="price" name="price" type="text" value="{{isset($datas->price)?$datas->price:''}}" class="form-control"></td>
                             <td style="vertical-align: middle;" align="center"><input id="created_at" name="created_at" type="date" value="{{isset($datas->created_at)? date('Y-m-d', strtotime($datas->created_at)):''}}" class="form-control"></td>
+                            <td style="vertical-align: middle;" align="center"><input id="price" name="price" type="text" value="{{isset($datas->price)?$datas->price:''}}" class="form-control"></td>
                             <td style="vertical-align: middle;" align="center"><input id="date_close" name="date_close" type="date" value="{{isset($datas->date_close)?date('Y-m-d', strtotime($datas->date_close)):''}}" class="form-control"></td>
                             <td style="vertical-align: middle;" align="center"><input id="price_close" name="price_close" type="text" value="{{isset($datas->price_close)?$datas->price_close:''}}" class="form-control"></td>
                             <td style="vertical-align: middle;" align="center"><input id="profit_and_loss" name="profit_and_loss" type="text" value="{{isset($datas->profit_and_loss)?$datas->profit_and_loss:''}}" class="form-control"></td>

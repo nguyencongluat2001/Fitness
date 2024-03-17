@@ -2,6 +2,14 @@
 @section('body-client')
 <title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <!-- tra cứu cổ phiếu -->
+<style>
+    .hiddel{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+</style>
 <section class="container">
     <div class=" pb-3 d-lg-flex gx-5">
         <div class="col-lg-12">
@@ -15,8 +23,12 @@
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-signal"></div>
                             </div>
-                            <h class="h4 py-2"> Chú giải xếp hạng TA/FA</h>
-                            <div class="home_index_vnindex" > 
+                            <i class="py-2"><span style="font-family: auto;">- Xem/ẩn chú giải xếp hạng TA/FA:</span></i> 
+
+                            <!-- <h class="h4 py-2"> Chú giải xếp hạng TA/FA</h> -->
+                            <input type="checkbox" id="view_chart" name="view_chart" onclick="JS_Signal.view_chart()" /></label>
+
+                            <div id="bank" class="hiddel" class="home_index_vnindex" > 
                                 <div class="home_index_child py-2">
                                     <div class="col-md-12" >
                                     <img  style="width:100%;" src="../clients/img/noteDataFintop.png" alt="Card image">

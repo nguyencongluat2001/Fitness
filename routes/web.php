@@ -116,6 +116,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::get('/index', [ClientController::class, 'index']);
             Route::get('/loadList',[ClientController::class,'loadList']);
             Route::get('/edit', [ClientController::class,'edit']);
+            Route::post('/edit_data', [UserController::class,'edit']);
             Route::get('/edit_upgradeAcc', [ClientController::class,'edit_upgradeAcc']);
             Route::post('/createForm', [ClientController::class,'createForm']);
             Route::post('/create', [ClientController::class,'create']);

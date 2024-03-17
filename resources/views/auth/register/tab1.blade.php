@@ -23,7 +23,7 @@
         <div class="row">
             <div class="form-wrapper col-md-4">
                 <label for="">Sinh nhật <span class="request_star">*</span></label>
-                <input id="dateBirth" type="text" class="form-control datepicker" name="dateBirth" value="" placeholder="dd/mm/yyyy">
+                <input id="dateBirth" type="date" class="form-control" name="dateBirth" value="" placeholder="dd/mm/yyyy">
             </div>
             <div class="form-wrapper col-md-8">
                 <label for="">Địa chỉ <span class="request_star">*</span></label>

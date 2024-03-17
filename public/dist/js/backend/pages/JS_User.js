@@ -123,6 +123,10 @@ JS_User.prototype.store = function (oFormCreate) {
     formdata.append('position', $("#position").val());
     formdata.append('date_join', $("#date_join").val());
     formdata.append('id_personnel', $("#id_personnel").val());
+    formdata.append('investment_time', $("#investment_time").val());
+    formdata.append('investment_taste', $("#investment_taste").val());
+    formdata.append('investment_company', $("#investment_company").val());
+    formdata.append('account_tkck_vps', $("#account_tkck_vps").val());
     formdata.append('id_manage', $("#id_manage").val());
     formdata.append('role', role);
     if($("#frmAdd #status").is(':checked')){
@@ -429,12 +433,12 @@ JS_User.prototype.checkValidate = function(){
         $("#phone").focus();
         return false;
     }
-    if ($("#order").val() == '') {
-        var nameMessage = 'Số thứ tự không được để trống!';
-        NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
-        $("#order").focus();
-        return false;
-    }
+    // if ($("#order").val() == '') {
+    //     var nameMessage = 'Số thứ tự không được để trống!';
+    //     NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
+    //     $("#order").focus();
+    //     return false;
+    // }
     if ($("#id").val() == ''){
         // if ($("#password").val() == '') {
         //     var nameMessage = 'Mật khẩu không được để trống!';

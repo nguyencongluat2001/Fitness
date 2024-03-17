@@ -52,7 +52,8 @@ class UserModel extends Model
             case 'id_manage':
                 $query->whereIn('id_manage', $value)->orWhereIn('id_personnel', $value);
                 return $query;
-
+            case 'sortType':
+                $query->orderBy('created_at', 'ASC');
             default:
                 return $query;
         }

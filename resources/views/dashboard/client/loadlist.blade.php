@@ -100,7 +100,9 @@ use Modules\System\Dashboard\Users\Models\UserModel;
                         </label>
                     </td>
                     <td onclick="{select_row(this);}" align="center" style="vertical-align: middle;">
-                        <span class="text-cursor text-warning" onclick="JS_Client.edit('{{$id}}')"><i style="font-size: 30px;" class="fas fa-edit"></i></span>
+                        <!-- <span class="text-cursor text-warning" onclick="JS_Client.edit('{{$id}}')"><i style="font-size: 30px;" class="fas fa-edit"></i></span> -->
+                        <span class="btn btn-warning " onclick="JS_Client.edit_data('{{$data['id']}}')"><i class="fas fa-edit"> Sửa</i></span>
+                        <span class="btn btn-success " onclick="JS_Client.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
                         @if(!empty($_SESSION['role']) && ($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'))
                         <span class="text-cursor text-warning" onclick="JS_Client.edit_upgradeAcc('{{$id}}')"><i style="font-size: 30px;color:#00ff10" class="fas fa-users-cog"></i></span>
                         @endif

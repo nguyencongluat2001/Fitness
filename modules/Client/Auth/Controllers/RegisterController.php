@@ -54,6 +54,9 @@ class RegisterController extends Controller
             'password' => Hash::make($arrInput['repass']),
             'user_introduce' => $arrInput['name'] ?? '',
             'account_tkck_vps'=> isset($arrInput['account_tkck_vps'])?$arrInput['account_tkck_vps']:'',
+            'investment_time'=> isset($arrInput['investment_time'])?$arrInput['investment_time']:'',
+            'investment_taste'=> isset($arrInput['investment_taste'])?$arrInput['investment_taste']:'',
+            'investment_company'=> isset($arrInput['investment_company'])?$arrInput['investment_company']:'',
             // 'id_personnel' => $arrInput['code_introduce'] ?? '',
             'id_manage' => $arrInput['code_introduce'] ?? 'F889',
         ];

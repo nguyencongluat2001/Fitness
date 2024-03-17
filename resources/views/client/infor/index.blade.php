@@ -54,12 +54,6 @@
                             <div class="row">
                                 <div class="col-md-8" style="color: black;">
                                    {{-- @if(!empty($data) && $_SESSION["email"] == $data['email']) --}}
-                                    <span id='btn_changePass'>
-                                        <button class="btn rounded-pill px-4 btn-outline-warning" style="background: #165c38;color: #fff079;font-weight: 600;" type="button">
-                                            Đổi mật khẩu
-                                        </button>
-                                    </span>
-
                                     {{-- @endif --}}
                                     <div class="card-body">
                                         <div class="row">
@@ -115,6 +109,48 @@
                                             </div>
                                         </div>
                                         <br>
+                                        <div class="row">
+                                            <div class="form-wrapper col-md-4">
+                                                <!-- <label for="">Thời gian đầu tư <span class="request_star">*</span></label> -->
+                                                <p for="example-text-input" class="form-control-label">Thời gian đầu tư</p>
+                                                <select name="investment_time" id="investment_time" class="form-control chzn-select">
+                                                    <option value="0-3"  {{!empty($datas->investment_time) && $datas->investment_time == '0-3' ? 'selected' : ''}}>0 - 3 tháng</option>
+                                                    <option value="3-6" {{!empty($datas->investment_time) && $datas->investment_time == '3-6' ? 'selected' : ''}}>3 - 6 tháng</option>
+                                                    <option value="6-12" {{!empty($datas->investment_time) && $datas->investment_time == '6-12' ? 'selected' : ''}}>6 - 12 tháng</option>
+                                                    <option value="1nam" {{!empty($datas->investment_time) && $datas->investment_time == '1nam' ? 'selected' : ''}}> 1 năm</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-wrapper col-md-4">
+                                                <!-- <label for="">Khẩu vị đầu tư <span class="request_star">*</span></label> -->
+                                                <p for="example-text-input" class="form-control-label">Khẩu vị đầu tư</p>
+                                                <select name="investment_taste" id="investment_taste" class="form-control chzn-select">
+                                                    <option value="nganhan" {{!empty($datas->investment_taste) && $datas->investment_taste == 'nganhan' ? 'selected' : ''}}>Lướt sóng ngắn hạn</option>
+                                                    <option value="daihan" {{!empty($datas->investment_taste) && $datas->investment_taste == 'daihan' ? 'selected' : ''}}>Trung và dài hạn</option>
+                                                    <option value="linhhoat" {{!empty($datas->investment_taste) && $datas->investment_taste == 'linhhoat' ? 'selected' : ''}}>Linh hoạt kết hợp</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-wrapper col-md-4">
+                                                <!-- <label for="">Công ty chứng khoán <span class="request_star">*</span></label> -->
+                                                <p for="example-text-input" class="form-control-label">Công ty chứng khoán</p>
+                                                <select name="investment_company" id="investment_company" class="form-control chzn-select">
+                                                    <option value="TKCK" {{!empty($datas->investment_company) && $datas->investment_company == 'TKCK' ? 'selected' : ''}}>Chưa TKCK</option>
+                                                    <option value="vps" {{!empty($datas->investment_company) && $datas->investment_company == 'vps' ? 'selected' : ''}}>VPS</option>
+                                                    <option value="ssi" {{!empty($datas->investment_company) && $datas->investment_company == 'ssi' ? 'selected' : ''}}>SSI</option>
+                                                    <option value="vnd" {{!empty($datas->investment_company) && $datas->investment_company == 'vnd' ? 'selected' : ''}}>VND</option>
+                                                    <option value="khac" {{!empty($datas->investment_company) && $datas->investment_company == 'khac' ? 'selected' : ''}}>Công ty khác</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                       <div class="col-md-12">
+                                            <div class="form-group">
+                                                <p for="example-text-input" class="form-control-label">Nhập số TKCK VPS (nếu có)</p>
+                                                <div style="position: relative;">
+                                                    <input placeholder="Nhập số TKCK VPS (nếu có)" id="account_tkck_vps" type="text" class="form-control" name="account_tkck_vps" value="{{!empty($datas->account_tkck_vps)?$datas->account_tkck_vps:''}}">
+                                                    <!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+                                                </div>
+                                            </div>
+                                        </div> 
+                                        <br>
                                         <center>
                                             <button style="background: #165c38;color: #fff079;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.updateCustomer()" type="button">
                                                 Cập nhật
@@ -159,6 +195,12 @@
                                                     <i class="ni location_pin mr-2"></i>Ngày đăng ký: {{isset($datas->date_update_vip) ? $datas->date_update_vip : ''}}
                                                 </div>
                                                 <br>
+                                                <span id='btn_changePass'>
+                                                    <button class="btn rounded-pill px-4 btn-outline-warning" style="background: #60bfff;color: #122436;font-weight: 600;height: 38px;" type="button">
+                                                        Đổi mật khẩu
+                                                    </button>
+                                                </span>
+                                                
                                                 <a type="button" class="btn rounded-pill px-4 btn-outline-warning" style="background: #165c38;color:#fff079;font-weight: 600;" href="{{ url('client/privileges/index') }}"></i>Nâng cấp tài khoản</a>
                                             </div>
                                         </div>
@@ -212,17 +254,17 @@
                                 <td style="white-space: inherit;vertical-align: middle" >
                                     <span>
                                         <div class="m-auto py-2">
-                                            @if($convert->code == 'VIP1_3')
+                                            @if(!empty($convert->code) && $convert->code == 'VIP1_3')
                                             <img class="card-img " src="../clients/img/vip1_3.PNG" alt="Card image" style="width:100%">
-                                            @elseif($convert->code == 'VIP1_6')
+                                            @elseif(!empty($convert->code) && $convert->code == 'VIP1_6')
                                             <img class="card-img " src="../clients/img/vip1_6.PNG" alt="Card image" style="width:100%">
-                                            @elseif($convert->code == 'VIP1_12')
+                                            @elseif(!empty($convert->code) && $convert->code == 'VIP1_12')
                                             <img class="card-img " src="../clients/img/vip1_12.PNG" alt="Card image" style="width:100%">
-                                            @elseif($convert->code == 'VIP2_3')
+                                            @elseif(!empty($convert->code) && $convert->code == 'VIP2_3')
                                             <img class="card-img " src="../clients/img/vip2_3.PNG" alt="Card image" style="width:100%">
-                                            @elseif($convert->code == 'VIP2_6')
+                                            @elseif(!empty($convert->code) && $convert->code == 'VIP2_6')
                                             <img class="card-img " src="../clients/img/vip2_6.PNG" alt="Card image" style="width:100%">
-                                            @elseif($convert->code == 'VIP2_12')
+                                            @elseif(!empty($convert->code) && $convert->code == 'VIP2_12')
                                             <img class="card-img " src="../clients/img/vip2_12.PNG" alt="Card image" style="width:100%">
                                             @endif
                                         </div>

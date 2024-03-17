@@ -247,6 +247,32 @@ JS_Client.prototype.edit = function (id) {
  *
  * @return void
  */
+JS_Client.prototype.edit_data = function (id) {
+    var url = this.urlPath + '/edit_data';
+    var myClass = this;
+    var data = '_token=' + $("#_token").val();
+    data += '&id=' + id;
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: data,
+        success: function (arrResult) {
+            $('#editmodal').html(arrResult);
+            $('#editmodal').modal('show');
+            $('.chzn-select').chosen({ height: '100%', width: '100%' });
+            $('.chzn-select').trigger('chosen:updated');
+            myClass.loadevent();
+            
+        }
+    });
+}
+/**
+ * Hàm hiển thị modal edit
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
 JS_Client.prototype.edit_upgradeAcc = function (id) {
     var url = this.urlPath + '/edit_upgradeAcc';
     var myClass = this;

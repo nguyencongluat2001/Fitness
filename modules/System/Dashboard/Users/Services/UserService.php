@@ -64,9 +64,12 @@ class UserService extends Service
                 'role'=>  $input['role'],
                 'order'=> isset($input['order']) ? $input['order'] : (int)$countUser + 1,
                 'account_tkck_vps'=> isset($input['account_tkck_vps'])?$input['account_tkck_vps']:'',
+                'investment_time'=> isset($input['investment_time'])?$input['investment_time']:'',
+                'investment_taste'=> isset($input['investment_taste'])?$input['investment_taste']:'',
+                'investment_company'=> isset($input['investment_company'])?$input['investment_company']:'',
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
                 'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'F889',
-                "status" => isset($input['status']) ? 1 : 0,
+                "status" => isset($input['status']) ? 1 : 1,
             ];
              // nếu có ảnh mới thì cập nhật
              if(!empty($arrFile)){

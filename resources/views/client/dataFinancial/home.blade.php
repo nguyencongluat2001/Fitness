@@ -20,7 +20,7 @@
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-data"></div>
                             </div>
-                            <i class="py-2">- <span style="font-family: auto;">Chú giải xếp hạng TA/FA</span> : </i> <i onclick="JS_DataFinancial.noteTaFa()" style="color:#3ac500" class="far fa-eye"></i>
+                            <i class="py-2">- <span style="font-family: auto;">Xem chú giải xếp hạng TA/FA</span> : </i> <i onclick="JS_DataFinancial.noteTaFa()" style="color:#3ac500" class="far fa-eye"></i>
                         </div>
                     </div>
                     <!-- biểu đồ FireAnt -->

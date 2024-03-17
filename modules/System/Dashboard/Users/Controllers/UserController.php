@@ -151,6 +151,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    6 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                 ];
             }elseif($_SESSION['role'] == 'CV_ADMIN'){
@@ -170,6 +174,10 @@ class UserController extends Controller
                         'name_category' =>  'CV - basic',
                         'status' =>  0,
                     ],
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                     
                 ];
             }elseif($_SESSION['role'] == 'SALE_ADMIN'){
@@ -183,6 +191,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -203,6 +215,10 @@ class UserController extends Controller
                         'name_category' =>  'CV - basic',
                         'status' =>  0,
                     ],
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                     
                 ];
             }elseif($_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'){
@@ -222,6 +238,10 @@ class UserController extends Controller
                         'name_category' =>  'CV - basic',
                         'status' =>  0,
                     ],
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                     
                 ];
             }elseif($_SESSION['role'] == 'CV_PRO,SALE_ADMIN'){
@@ -235,6 +255,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -250,6 +274,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -324,6 +352,10 @@ class UserController extends Controller
                     6 => [
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
+                    ],
+                    7 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                 ];
             }elseif($_SESSION['role'] == 'CV_ADMIN'){
@@ -340,7 +372,10 @@ class UserController extends Controller
                         'code_category' => 'CV_BASIC',
                         'name_category' =>  'CV - basic',
                     ],
-                    
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                 ];
             }elseif($_SESSION['role'] == 'SALE_ADMIN'){
                 $quyen = [
@@ -351,6 +386,10 @@ class UserController extends Controller
                     1 => [
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -371,6 +410,10 @@ class UserController extends Controller
                         'name_category' =>  'CV - basic',
                         'status' =>  0,
                     ],
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                     
                 ];
             }elseif($_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'){
@@ -390,6 +433,10 @@ class UserController extends Controller
                         'name_category' =>  'CV - basic',
                         'status' =>  0,
                     ],
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                     
                 ];
             }elseif($_SESSION['role'] == 'CV_PRO,SALE_ADMIN'){
@@ -403,6 +450,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -418,6 +469,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -438,6 +493,10 @@ class UserController extends Controller
                         'name_category' =>  'CV - basic',
                         'status' =>  0,
                     ],
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                     
                 ];
             }elseif($_SESSION['role'] == 'CV_ADMIN,SALE_BASIC'){
@@ -457,8 +516,12 @@ class UserController extends Controller
                         'name_category' =>  'CV - basic',
                         'status' =>  0,
                     ],
-                    
+                    3 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
+                    ]
                 ];
+                
             }elseif($_SESSION['role'] == 'CV_PRO,SALE_ADMIN'){
                 $quyen = [
                     0 => [
@@ -470,6 +533,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -485,6 +552,10 @@ class UserController extends Controller
                         'code_category' => 'SALE_BASIC',
                         'name_category' => 'Sale',
                         'status' =>  0,
+                    ],
+                    2 => [
+                        'code_category' => 'USERS',
+                        'name_category' => 'khách hàng'
                     ]
                     
                 ];
@@ -632,7 +703,19 @@ class UserController extends Controller
     public function updatePass(Request $request)
     {
         $input = $request->all();
-        if (Auth::guard('web')->attempt(['email' => $input['email_acc'],'password' => $input['password_old']])) {
+        // dd($input);
+        if ($input['password_old'] == 'fintop123') {
+            if($input['password_new'] != $input['password_retype_change']){
+                return array('success' => false, 'message' => 'Nhập lại mật khẩu không khớp!');
+            }
+            $user = $this->userService->where('email',$input['email_acc'])->first();
+            $passNew = [
+            'password'=> Hash::make($input['password_new']),
+            ];
+            $updatePass = $this->userService->where('id',$input['user_id'])->update($passNew);
+            return array('success' => 3, 'message' => 'Mật khẩu của bạn đã được thay đổi');
+        }
+        else if (Auth::guard('web')->attempt(['email' => $input['email_acc'],'password' => $input['password_old']])) {
             if($input['password_new'] != $input['password_retype_change']){
                 return array('success' => false, 'message' => 'Nhập lại mật khẩu không khớp!');
             }

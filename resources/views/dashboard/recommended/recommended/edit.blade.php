@@ -73,6 +73,7 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Mã CP</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Nhóm nghành</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Tài sản</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Ngày mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Giá mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" colspan="3"><b>Vùng giá mục tiêu</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Giá hiện tại</b></td>
@@ -98,7 +99,6 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Khuyến nghị hành động</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Dừng lỗ</b></td>
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Chốt</b></td> -->
-                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Ngày mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2"><b>Ghi chú</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2"><b>#</b></td>
                         </tr>
@@ -124,6 +124,7 @@
                                 </select>
                             </td>
                             <td style="vertical-align: middle;" align="center"><input id="percent_of_assets" name="percent_of_assets" type="text" value="{{isset($datas->percent_of_assets)?$datas->percent_of_assets:''}}" class="form-control"></td>
+                            <td style="vertical-align: middle;" align="center"><input id="created_at" name="created_at" type="date" value="{{isset($datas->created_at)? date('Y-m-d', strtotime($datas->created_at)):''}}" class="form-control"></td>
                             <td style="vertical-align: middle;" align="center"><input id="price" name="price" type="text" value="{{isset($datas->price)?$datas->price:''}}" class="form-control"></td>
                             @for($i = 0; $i < 3; $i++) <td style="vertical-align: middle;" align="center"><input id="price_range_{{$i}}" name="price_range_{{$i}}" type="text" value="{{ isset($price_range[$i]) ? $price_range[$i] : '' }}" class="form-control"></td>
                                 @endfor
@@ -134,7 +135,6 @@
                                 <td style="vertical-align: middle;" align="center"><input id="act" name="act" type="text" value="{{isset($datas->act)?$datas->act:''}}" class="form-control"></td>
                                 <td style="vertical-align: middle;" align="center"><input id="stop_loss" name="stop_loss" type="text" value="{{isset($datas->stop_loss)?$datas->stop_loss:''}}" class="form-control"></td>
                                 <!-- <td style="vertical-align: middle;" align="center"><input id="closing_percentage" name="closing_percentage" type="text" value="{{isset($datas->closing_percentage)?$datas->closing_percentage:''}}" class="form-control"></td> -->
-                                <td style="vertical-align: middle;" align="center"><input id="created_at" name="created_at" type="date" value="{{isset($datas->created_at)? date('Y-m-d', strtotime($datas->created_at)):''}}" class="form-control"></td>
                                 <td style="vertical-align: middle;" align="center"><input id="note" name="note" type="text" value="{{isset($datas->note)?$datas->note:''}}" class="form-control"></td>
                                 <td style="vertical-align: middle;" align="center">
                                     <p></p>
