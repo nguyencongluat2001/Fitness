@@ -60,13 +60,19 @@
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Tên</p>
-                                                    <input class="form-control" type="text" name="name" value="{{isset($datas->name) ? $datas->name : ''}}">
+                                                    <input class="form-control"  type="text" name="name" value="{{isset($datas->name) ? $datas->name : ''}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 " style="display:none">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Địa chỉ Email</p>
+                                                    <input class="form-control" type="email" name="email" value="{{isset($datas->email) ? $datas->email : ''}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 ">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Địa chỉ Email</p>
-                                                    <input class="form-control" type="email" name="email" value="{{isset($datas->email) ? $datas->email : ''}}">
+                                                    <input disabled class="form-control" type="email" name="email" value="{{isset($datas->email) ? $datas->email : ''}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 pt-2">
@@ -75,10 +81,16 @@
                                                     <input class="form-control" type="date" name="dateBirth" value="{{isset($datas->dateBirth) ? $datas->dateBirth : ''}}">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 pt-2">
+                                            <div class="col-md-6 pt-2" style="display:none">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Số điện thoại</p>
                                                     <input class="form-control" type="text" name="phone" value="{{isset($datas->phone) ? $datas->phone : ''}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pt-2">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Số điện thoại</p>
+                                                    <input disabled class="form-control" type="text" name="phone" value="{{isset($datas->phone) ? $datas->phone : ''}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -141,15 +153,26 @@
                                                 </select>
                                             </div>
                                         </div>
-                                       <div class="col-md-12">
-                                            <div class="form-group">
-                                                <p for="example-text-input" class="form-control-label">Nhập số TKCK VPS (nếu có)</p>
-                                                <div style="position: relative;">
-                                                    <input placeholder="Nhập số TKCK VPS (nếu có)" id="account_tkck_vps" type="text" class="form-control" name="account_tkck_vps" value="{{!empty($datas->account_tkck_vps)?$datas->account_tkck_vps:''}}">
-                                                    <!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+                                        <div class="row">
+                                            <div class="col-md-6 pt-2">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Nhập số TKCK VPS (nếu có)</p>
+                                                    <div style="position: relative;">
+                                                        <input placeholder="Nhập số TKCK VPS (nếu có)" id="account_tkck_vps" type="text" class="form-control" name="account_tkck_vps" value="{{!empty($datas->account_tkck_vps)?$datas->account_tkck_vps:''}}">
+                                                        <!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div> 
+                                            </div> 
+                                            <div class="col-md-6 pt-2">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Email người giới thiệu</p>
+                                                    <div style="position: relative;">
+                                                        <input placeholder="Nhập Email" id="user_introduce" type="text" class="form-control" name="user_introduce" value="{{!empty($datas->user_introduce)?$datas->user_introduce:''}}">
+                                                        <!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
                                         <br>
                                         <center>
                                             <button style="background: #165c38;color: #fff079;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.updateCustomer()" type="button">

@@ -69,6 +69,7 @@ class UserService extends Service
                 'investment_company'=> isset($input['investment_company'])?$input['investment_company']:'',
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
                 'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'F889',
+                'user_introduce'=> isset($input['user_introduce'])?$input['user_introduce']:'F889',
                 "status" => isset($input['status']) ? 1 : 1,
             ];
              // nếu có ảnh mới thì cập nhật
