@@ -92,7 +92,7 @@ Route::get('/dangky/{id}', [UserController::class, 'registerIntroduce']);
 
 // Lấy mã nhân viên giới thiệu
 Route::post('register/send-otp/getUser', [UserController::class, 'getUser']);
-
+Route::post('client/infor/getUser', [UserController::class, 'getUser']);
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::middleware('checkloginAdmin')->group(function () {

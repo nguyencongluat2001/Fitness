@@ -135,7 +135,8 @@
 				</table> -->
 				<div class="row">
 						<div class="form-wrapper col-md-4">
-							<label for="">Thời gian đầu tư <span class="request_star">*</span></label>
+						    <p for="example-text-input" class="form-control-label">Thời gian đầu tư</p>
+							<!-- <label for="">Thời gian đầu tư <span class="request_star">*</span></label> -->
 							<select name="investment_time" id="investment_time" class="form-control chzn-select">
 								<option value="0-3"  {{!empty($data['investment_time']) && $data['investment_time'] == '0-3' ? 'selected' : ''}}>0 - 3 tháng</option>
 								<option value="3-6" {{!empty($data['investment_time']) && $data['investment_time'] == '3-6' ? 'selected' : ''}}>3 - 6 tháng</option>
@@ -144,7 +145,8 @@
 							</select>
 						</div>
 						<div class="form-wrapper col-md-4">
-						    <label for="">Khẩu vị đầu tư <span class="request_star">*</span></label>
+						    <p for="example-text-input" class="form-control-label">Khẩu vị đầu tư</p>
+						    <!-- <label for="">Khẩu vị đầu tư <span class="request_star">*</span></label> -->
 							<select name="investment_taste" id="investment_taste" class="form-control chzn-select">
 								<option value="nganhan" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'nganhan' ? 'selected' : ''}}>Lướt sóng ngắn hạn</option>
 								<option value="daihan" {{!empty($data['investment_taste']) && $data['investment_taste'] == 'daihan' ? 'selected' : ''}}>Trung và dài hạn</option>
@@ -152,7 +154,8 @@
 							</select>
 						</div>
 						<div class="form-wrapper col-md-4">
-							<label for="">Công ty chứng khoán <span class="request_star">*</span></label>
+						<p for="example-text-input" class="form-control-label">Công ty chứng khoán</p>
+							<!-- <label for="">Công ty chứng khoán <span class="request_star">*</span></label> -->
 							<select name="investment_company" id="investment_company" class="form-control chzn-select">
 								<option value="TKCK" {{!empty($data['investment_company']) && $data['investment_company'] == 'TKCK' ? 'selected' : ''}}>Chưa TKCK</option>
 								<option value="vps" {{!empty($data['investment_company']) && $data['investment_company'] == 'vps' ? 'selected' : ''}}>VPS</option>

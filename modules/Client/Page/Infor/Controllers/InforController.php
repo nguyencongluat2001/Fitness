@@ -43,6 +43,14 @@ class InforController extends Controller
         $users['user_infor'] = $user_infor;
         $data['datas'] = $users;
         $data['vip'] = $this->ApprovePaymentService->select()->where('user_id', $_SESSION['id'])->get()->unique('role_client');
+        $data['data']['user_introduce_name'] = '';
+        if(!empty($data['datas']->id_manage)){
+            $tt = $this->userService->where('id_personnel', $data['datas']->id_manage)->first();
+            if(!empty($tt->name)){
+                $data['data']['user_introduce_name'] = $tt->name;
+            }
+        }
+        // dd($data);
         return view('client.infor.index', $data);
     }
 

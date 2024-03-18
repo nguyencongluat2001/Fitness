@@ -212,6 +212,21 @@ JS_InforClient.prototype.updateCustomer = function(){
         data: data,
         success: function(arrResult){
             if(arrResult['success'] == true){
+                document.getElementById("name").setAttribute("disabled","disabled");
+                document.getElementById("dateBirth").setAttribute("disabled","disabled");
+                document.getElementById("address").setAttribute("disabled","disabled");
+                document.getElementById("company").setAttribute("disabled","disabled");
+                document.getElementById("position").setAttribute("disabled","disabled");
+                document.getElementById("date_join").setAttribute("disabled","disabled");
+                document.getElementById("investment_time").setAttribute("disabled","disabled");
+                document.getElementById("investment_taste").setAttribute("disabled","disabled");
+                document.getElementById("investment_company").setAttribute("disabled","disabled");
+                document.getElementById("account_tkck_vps").setAttribute("disabled","disabled");
+                document.getElementById("id_manage").setAttribute("disabled","disabled");
+                document.getElementById("phone_id").setAttribute("disabled","disabled");
+                document.getElementById("email_id").setAttribute("disabled","disabled");
+                document.getElementById("editForm").style.display = "block";
+                document.getElementById("update").style.display = "none";
                 NclLib.alerMesage(arrResult['message'], 'success', '#1bba00');
             }else{
                 NclLib.alerMesage(arrResult['message'], 'danger', '#bd2130');
@@ -221,6 +236,34 @@ JS_InforClient.prototype.updateCustomer = function(){
         }
     });
 }
+/**
+ * Cập nhật thông tin cá nhân
+ */
+JS_InforClient.prototype.formEdit = function(){
+    NclLib.loadding();
+    document.getElementById("name").removeAttribute("disabled","disabled");
+    document.getElementById("dateBirth").removeAttribute("disabled");
+    document.getElementById("address").removeAttribute("disabled");
+    document.getElementById("company").removeAttribute("disabled");
+    document.getElementById("position").removeAttribute("disabled");
+    document.getElementById("date_join").removeAttribute("disabled");
+    document.getElementById("investment_time").removeAttribute("disabled");
+    document.getElementById("investment_taste").removeAttribute("disabled");
+    document.getElementById("investment_company").removeAttribute("disabled");
+    document.getElementById("account_tkck_vps").removeAttribute("disabled");
+    document.getElementById("id_manage").removeAttribute("disabled");
+    document.getElementById("phone_id").removeAttribute("disabled");
+    document.getElementById("email_id").removeAttribute("disabled");
+    document.getElementById("editForm").style.display = "none";
+    document.getElementById("update").style.display = "block";
+}
+/**
+ * Cập nhật thông tin cá nhân
+ */
+JS_InforClient.prototype.notivalidate = function(){
+    NclLib.alerMesage('Không thể tự sửa. Anh/chị vui lòng liên hệ FinTop để được hỗ trợ.', 'warning', '#f5ae67');
+}
+
 JS_InforClient.prototype.uploadAvatar = function(){
     var myClass = this;
     var url = myClass.urlPath + '/uploadAvatar';
@@ -246,6 +289,38 @@ JS_InforClient.prototype.uploadAvatar = function(){
                 var color = '#f5ae67';
                 NclLib.alerMesage(nameMessage,icon,color);
             }
+        }
+    });
+}
+/**
+ * Thông tin người giới thiệu
+ */
+JS_InforClient.prototype.getPersonnel = function () {
+    var oForm = '#frmLoadlist_infor';
+    var myClass = this;
+    var url = myClass.urlPath + '/getUser';
+    var myClass = this;
+    var data = '_token=' + $(oForm).find("#_token").val();
+    data += '&code_introduce=' + $(oForm).find("#id_manage").val();
+    $.ajax({
+        url: url,
+        type: "POST",
+        //cache: true,
+        data: data,
+        success: function (arrResult) {
+            if (arrResult['success'] == true) {
+                $("#name_personnel").val(arrResult['data']['name']);
+                
+          } else if (arrResult['success'] == false) {
+            Swal.fire({
+                position: 'top-end',
+                icon : 'warning',
+                title: arrResult.message,
+                showConfirmButton: false,
+                timer: 3000
+              })
+          }
+
         }
     });
 }

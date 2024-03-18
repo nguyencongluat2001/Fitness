@@ -58,39 +58,39 @@
                                     <div class="card-body">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <div class="form-group">
+                                                <div class="form-group" >
                                                     <p for="example-text-input" class="form-control-label">Tên</p>
-                                                    <input class="form-control"  type="text" name="name" value="{{isset($datas->name) ? $datas->name : ''}}">
+                                                    <input disabled="disabled" class="form-control" type="text" id="name" name="name" value="{{isset($datas->name) ? $datas->name : ''}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 " style="display:none">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Địa chỉ Email</p>
-                                                    <input class="form-control" type="email" name="email" value="{{isset($datas->email) ? $datas->email : ''}}">
+                                                    <input class="form-control" id="email" type="email" name="email" value="{{isset($datas->email) ? $datas->email : ''}}">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 ">
-                                                <div class="form-group">
+                                            <div class="col-md-6 " onclick="JS_InforClient.notivalidate()">
+                                                <div class="form-group" >
                                                     <p for="example-text-input" class="form-control-label">Địa chỉ Email</p>
-                                                    <input disabled class="form-control" type="email" name="email" value="{{isset($datas->email) ? $datas->email : ''}}">
+                                                    <input disabled="disabled" id="email_id"  style="background:#e9ecef" class="form-control" value="{{isset($datas->email) ? $datas->email : ''}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 pt-2">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Ngày sinh</p>
-                                                    <input class="form-control" type="date" name="dateBirth" value="{{isset($datas->dateBirth) ? $datas->dateBirth : ''}}">
+                                                    <input disabled="disabled" class="form-control" type="date" id="dateBirth" name="dateBirth" value="{{isset($datas->dateBirth) ? $datas->dateBirth : ''}}">
                                                 </div>
                                             </div>
                                             <div class="col-md-6 pt-2" style="display:none">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Số điện thoại</p>
-                                                    <input class="form-control" type="text" name="phone" value="{{isset($datas->phone) ? $datas->phone : ''}}">
+                                                    <input class="form-control" type="text" id="phone" name="phone" value="{{isset($datas->phone) ? $datas->phone : ''}}">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 pt-2">
+                                            <div class="col-md-6 pt-2" onclick="JS_InforClient.notivalidate()">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Số điện thoại</p>
-                                                    <input disabled class="form-control" type="text" name="phone" value="{{isset($datas->phone) ? $datas->phone : ''}}">
+                                                    <input disabled="disabled" id="phone_id" style="background:#e9ecef" class="form-control" value="{{isset($datas->phone) ? $datas->phone : ''}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -98,25 +98,7 @@
                                             <div class="col-md-12 pt-2">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Địa chỉ</p>
-                                                    <input class="form-control" type="text" name="address" value="{{isset($datas->address) ? $datas->address : ''}}">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 pt-2">
-                                                <div class="form-group">
-                                                    <p for="example-text-input" class="form-control-label">Công ty</p>
-                                                    <input class="form-control" type="text" name="company" value="{{isset($datas->user_infor->company) ? $datas->user_infor->company : ''}}">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 pt-2">
-                                                <div class="form-group">
-                                                    <p for="example-text-input" class="form-control-label">Chức vụ</p>
-                                                    <input class="form-control" type="text" name="position" value="{{isset($datas->user_infor->position) ? $datas->user_infor->position : ''}}">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4 pt-2">
-                                                <div class="form-group">
-                                                    <p for="example-text-input" class="form-control-label">Gia nhập ngày</p>
-                                                    <input class="form-control" type="date" name="date_join" value="{{isset($datas->user_infor->date_join) ? $datas->user_infor->date_join : ''}}">
+                                                    <input disabled="disabled" class="form-control" type="text" id="address" name="address" value="{{isset($datas->address) ? $datas->address : ''}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -125,7 +107,7 @@
                                             <div class="form-wrapper col-md-4">
                                                 <!-- <label for="">Thời gian đầu tư <span class="request_star">*</span></label> -->
                                                 <p for="example-text-input" class="form-control-label">Thời gian đầu tư</p>
-                                                <select name="investment_time" id="investment_time" class="form-control chzn-select">
+                                                <select name="investment_time" id="investment_time" class="form-control chzn-select" disabled="disabled">
                                                     <option value="0-3"  {{!empty($datas->investment_time) && $datas->investment_time == '0-3' ? 'selected' : ''}}>0 - 3 tháng</option>
                                                     <option value="3-6" {{!empty($datas->investment_time) && $datas->investment_time == '3-6' ? 'selected' : ''}}>3 - 6 tháng</option>
                                                     <option value="6-12" {{!empty($datas->investment_time) && $datas->investment_time == '6-12' ? 'selected' : ''}}>6 - 12 tháng</option>
@@ -135,7 +117,7 @@
                                             <div class="form-wrapper col-md-4">
                                                 <!-- <label for="">Khẩu vị đầu tư <span class="request_star">*</span></label> -->
                                                 <p for="example-text-input" class="form-control-label">Khẩu vị đầu tư</p>
-                                                <select name="investment_taste" id="investment_taste" class="form-control chzn-select">
+                                                <select name="investment_taste" id="investment_taste" class="form-control chzn-select" disabled="disabled">
                                                     <option value="nganhan" {{!empty($datas->investment_taste) && $datas->investment_taste == 'nganhan' ? 'selected' : ''}}>Lướt sóng ngắn hạn</option>
                                                     <option value="daihan" {{!empty($datas->investment_taste) && $datas->investment_taste == 'daihan' ? 'selected' : ''}}>Trung và dài hạn</option>
                                                     <option value="linhhoat" {{!empty($datas->investment_taste) && $datas->investment_taste == 'linhhoat' ? 'selected' : ''}}>Linh hoạt kết hợp</option>
@@ -144,7 +126,7 @@
                                             <div class="form-wrapper col-md-4">
                                                 <!-- <label for="">Công ty chứng khoán <span class="request_star">*</span></label> -->
                                                 <p for="example-text-input" class="form-control-label">Công ty chứng khoán</p>
-                                                <select name="investment_company" id="investment_company" class="form-control chzn-select">
+                                                <select name="investment_company" id="investment_company" class="form-control chzn-select" disabled="disabled">
                                                     <option value="TKCK" {{!empty($datas->investment_company) && $datas->investment_company == 'TKCK' ? 'selected' : ''}}>Chưa TKCK</option>
                                                     <option value="vps" {{!empty($datas->investment_company) && $datas->investment_company == 'vps' ? 'selected' : ''}}>VPS</option>
                                                     <option value="ssi" {{!empty($datas->investment_company) && $datas->investment_company == 'ssi' ? 'selected' : ''}}>SSI</option>
@@ -154,30 +136,69 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-md-6 pt-2">
+                                            <div class="col-md-4 pt-2">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Nhập số TKCK VPS (nếu có)</p>
                                                     <div style="position: relative;">
-                                                        <input placeholder="Nhập số TKCK VPS (nếu có)" id="account_tkck_vps" type="text" class="form-control" name="account_tkck_vps" value="{{!empty($datas->account_tkck_vps)?$datas->account_tkck_vps:''}}">
+                                                        <input disabled="disabled" placeholder="Nhập số TKCK VPS (nếu có)" id="account_tkck_vps" type="text" class="form-control" name="account_tkck_vps" value="{{!empty($datas->account_tkck_vps)?$datas->account_tkck_vps:''}}">
                                                         <!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
                                                     </div>
                                                 </div>
                                             </div> 
-                                            <div class="col-md-6 pt-2">
+                                            <div class="col-md-4 pt-2">
                                                 <div class="form-group">
-                                                    <p for="example-text-input" class="form-control-label">Email người giới thiệu</p>
+                                                    <p for="example-text-input" class="form-control-label">ID người giới thiệu</p>
                                                     <div style="position: relative;">
-                                                        <input placeholder="Nhập Email" id="user_introduce" type="text" class="form-control" name="user_introduce" value="{{!empty($datas->user_introduce)?$datas->user_introduce:''}}">
+                                                        <input disabled="disabled" onchange="JS_InforClient.getPersonnel()" placeholder="Nhập ID" id="id_manage" type="text" class="form-control" name="id_manage" value="{{!empty($datas->id_manage)?$datas->id_manage:''}}">
                                                         <!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="col-md-4 pt-2">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Tên người giới thiệu</p>
+                                                    <div style="position: relative;">
+                                                    <input style="cursor: unset;text-align: left;" placeholder="" readonly id="name_personnel" type="button" class="form-control" name="name_personnel" value="{{isset($data['user_introduce_name']) ? $data['user_introduce_name'] : ''}}">
+
+                                                        <!-- <input disabled="disabled" id="" type="text" style="background:#e9ecef" class="form-control" name="" value="{{!empty($check_ten_nv_gioi_thieu)?$check_ten_nv_gioi_thieu:''}}"> -->
                                                     </div>
                                                 </div>
                                             </div> 
                                         </div>
+                                        <div class="row">
+                                            <div class="col-md-4 pt-2">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Công ty</p>
+                                                    <input disabled="disabled" class="form-control" type="text" id="company" name="company" value="{{isset($datas->user_infor->company) ? $datas->user_infor->company : ''}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 pt-2">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Chức vụ</p>
+                                                    <input disabled="disabled" class="form-control" type="text" id="position" name="position" value="{{isset($datas->user_infor->position) ? $datas->user_infor->position : ''}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 pt-2">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Gia nhập ngày</p>
+                                                    <input disabled="disabled" class="form-control" type="date" id="date_join" name="date_join" value="{{isset($datas->user_infor->date_join) ? $datas->user_infor->date_join : ''}}">
+                                                </div>
+                                            </div>
+                                        </div>
                                         <br>
                                         <center>
-                                            <button style="background: #165c38;color: #fff079;font-weight: 600;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.updateCustomer()" type="button">
-                                                Cập nhật
-                                            </button>
+                                            <div id="editForm">
+                                                <button style="background: #165c38;color: #fff079;font-weight: 600;font-family: system-ui;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.formEdit()" type="button">
+                                                    Chỉnh sửa
+                                                </button>
+                                            </div>
+                                        </center>
+                                        <center>
+                                            <div id="update" style="display:none">
+                                                <button style="background: #d5204f;color: #fff079;font-weight: 600;font-family: system-ui;" type="button" class="btn rounded-pill px-4 btn-outline-warning" onclick="JS_InforClient.updateCustomer()" type="button">
+                                                    Cập nhật
+                                                </button>
+                                            </div>
                                         </center>
                                     </div>
                                 </div>
@@ -307,7 +328,6 @@
 <script src="../clients/js/jquery.min.js"></script>
 <div class="modal fade" id="editmodal" role="dialog"></div>
 <div class="modal " id="editPassmodal" role="dialog" style=" width: 100%;height: 100%;background: #0000007d; background-repeat:no-repeat;background-size: cover;"></div>
-
 <div id="dialogconfirm"></div>
 <script type="text/javascript">
     var baseUrl = '{{ url('') }}';

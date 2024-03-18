@@ -806,7 +806,9 @@ class UserController extends Controller
         if(isset($selectUser)){
             return array('success' => true,'data' => $selectUser, 'message' => 'Nhân viên giới thiệu: '.$selectUser->name);
         }else{
-            return array('success' => false, 'message' => 'Mã nhân viên không chính xác , vui lòng thử lại!!!!');
+            return array('success' => true,'data' => '', 'message' => '');
+
+            // return array('success' => false, 'message' => 'Mã nhân viên không chính xác , vui lòng thử lại!!!!');
         }
     }
     /**
