@@ -31,18 +31,17 @@
     <input type="hidden" name="id" id="id" value="{{isset($datas->id)?$datas->id:''}}">
     <div class="modal-dialog modal-xl modal-dialog-centered">
         <div class="modal-content card">
-            <!-- <div class="modal-header" style="padding:0px">
-                <h5 class="modal-title">Cập nhật cổ phiếu </h5>
-                <span>Nguồn theo: fireant</span>
-                <button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="background: #f1f2f2;">
+            <div class="modal-header" style="padding:4px">
+                <h5 class="modal-title"></h5>
+                <button type="button" class="btn btn-sm" data-bs-dismiss="modal" style="margin-bottom: 0rem !important;background: red;color:white">
                     X
                 </button>
-            </div> -->
-             <div class="modal-header" style="padding:4px">
+            </div>
+             <!-- <div class="modal-header" style="padding:4px">
                 <button type="button" class="btn btn-sm pt-2" data-bs-dismiss="modal" style="background: red;color:white">
                             Đóng
                 </button>
-            </div>
+            </div> -->
             
             <div class="card-body">
                 <table class="table  table-bordered table-striped table-condensed dataTable no-footer">
