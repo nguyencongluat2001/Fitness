@@ -6,17 +6,20 @@ use Carbon\Carbon;
 <title>{{ $datas['blogDetail']->title }}</title>
 <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png">
 <meta name="twitter:image" content="https://image.vietstock.vn/2024/01/16/khanh-hoa_65722.jpg">
-123
+
 <style>
     #content-reader iframe  {
         width: 100% !important;
+        height: auto !important;
     }
     #content-reader img{
         width:100% !important;
+        height: auto !important;
     }
     @media (max-width: 768px){
         .content-reader img {
             width: 100%;
+            height: auto !important;
         }
         #carouselExampleIndicators .list-hispital-home .d-lg-flex{
             padding: 10px;

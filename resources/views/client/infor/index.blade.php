@@ -178,7 +178,13 @@
                                                     <input disabled="disabled" class="form-control" type="text" id="position" name="position" value="{{isset($datas->user_infor->position) ? $datas->user_infor->position : ''}}">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 pt-2">
+                                            <div class="col-md-4 pt-2" style="display:none">
+                                                <div class="form-group">
+                                                    <p for="example-text-input" class="form-control-label">Gia nhập ngày</p>
+                                                    <input class="form-control" type="date" id="date_join" name="date_join" value="{{isset($datas->user_infor->date_join) ? $datas->user_infor->date_join : ''}}">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 pt-2" >
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Gia nhập ngày</p>
                                                     <input disabled="disabled" class="form-control" type="date" id="date_join" name="date_join" value="{{isset($datas->user_infor->date_join) ? $datas->user_infor->date_join : ''}}">
