@@ -6,7 +6,7 @@
     <base href="{{ asset('') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="../clients/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_notbg.jpg">
     <!-- Load Require CSS -->
     {{-- @yield('css') --}}
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
