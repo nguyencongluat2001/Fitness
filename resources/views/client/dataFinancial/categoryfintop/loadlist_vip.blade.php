@@ -7,7 +7,7 @@
     }
 </style>
 <div class="table-responsive pmd-card pmd-z-depth pt-2">
-    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if(!isset($_SESSION['id']) || $_SESSION['account_type_vip'] != 'VIP1') onclick="JS_CategoryFintop.checkLogin()" @endif>
+    <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if(!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG')) onclick="JS_CategoryFintop.checkLogin()" @endif>
         <colgroup>
             <col width="10%"> <!-- ma cp -->
             <col width="9%"> <!-- nhom nganh --> 
@@ -52,14 +52,14 @@
                 <tr>
                     {{--<td align="center" >{{ $key + 1 }}</td>--}}
                     <td align="center" class="text-uppercase" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['code_cp'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['name_category'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
@@ -69,14 +69,14 @@
                         {{ !empty($data['created_at']) ? date('d/m/Y', strtotime($data['created_at'])) : '' }}
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['percent_of_assets'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
-                        {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['price'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
@@ -84,7 +84,7 @@
                         <span>{{ $data['price'] }}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
-                    {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                    {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['current_price'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
@@ -97,7 +97,7 @@
                     @if(isset($data['pickcolor'])) style="white-space: inherit; vertical-align: middle;background:{{$data['pickcolor']}};font-weight:bold;"
                     @else style="white-space: inherit; vertical-align: middle;background:#218838;font-weight:bold;"
                     @endif>
-                        {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['profit_and_loss'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
@@ -108,42 +108,42 @@
                         <span>{{ $data['act'] }}</span>
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['ta1'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['ta2'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['ta3'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td>
                     <td align="center" style="white-space: inherit; vertical-align: middle;color:red;font-weight:bold;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['stop_loss'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td>
                     <!-- <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red;font-weight:bold;">
-                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                        @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['closing_percentage'] ?? '' }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                         @endif
                     </td> -->
                     <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
-                    @if(Auth::check() && isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                    @if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                     <span>{{ $data['note'] }}</span>
                         @else
                         <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>

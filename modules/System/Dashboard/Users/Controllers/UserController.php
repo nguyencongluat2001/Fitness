@@ -108,7 +108,7 @@ class UserController extends Controller
         $input = $request->all();
         $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->orderBy('order','asc')->get();
         if($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'){
-            $data['arr_quanly'] = $this->userService->where('role','ADMIN')->orWhere('role','CV_ADMIN')->orWhere('role','SALE_ADMIN')->orWhere('role','LIKE','%SALE_ADMIN%')->orWhere('role','LIKE','%CV_ADMIN%')->orderBy('order','asc')->get()->toArray();
+            $data['arr_quanly'] = $this->userService->where('role','ADMIN')->orWhere('role','MANAGE')->orWhere('role','CV_ADMIN')->orWhere('role','SALE_ADMIN')->orWhere('role','LIKE','%SALE_ADMIN%')->orWhere('role','LIKE','%CV_ADMIN%')->orderBy('order','asc')->get()->toArray();
         }else{
             $data['arr_quanly'] = $this->userService->where('id_personnel',$_SESSION['id_personnel'])->get();
         }

@@ -9,7 +9,8 @@
     <div id="">
         <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
         <div class="chat">
-            <div  id="messages" @if(!isset($_SESSION['account_type_vip']) || $_SESSION['account_type_vip'] != 'VIP1') class="onload" @endif>
+        <!-- @if(!isset($_SESSION['account_type_vip']) || $_SESSION['account_type_vip'] != 'VIP1') class="onload" @endif -->
+            <div  id="messages">
                     <!-- @foreach ($datas as $key => $data)
                     <div class="d-flex flex-row justify-content-start mb-4 avatarMessage">
                         <img src="../clients/img/LogoFinTop_red.png"
@@ -68,13 +69,13 @@
                             <ul class="text-left list-unstyled mb-0" style="color: #596986;font-family: ui-monospace;">
                                 <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>
                                     @if($data['type'] == 'MUA')
-                                        @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                                        @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                                             MUA {{ $data['code'] }} TÀI KHOẢN (NAV)
                                         @else
                                             MUA <span style="color:#39af71;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN (NAV)
                                         @endif
                                     @else
-                                        @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1')
+                                        @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                                             BÁN {{ $data['code'] }} TỶ TRỌNG (MÃ CP)
                                         @else
                                             BÁN <span style="color:#c11a1a;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TỶ TRỌNG (MÃ CP)
@@ -89,7 +90,7 @@
                                        Giá bán: 
                                     @endif
                                 <span style="color: #2c4143;font-weight: 700;">
-                                    {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
+                                    {{-- @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG')) --}}
                                         {{ $data['price_buy'] }}
                                     {{-- @else
                                         xxx
@@ -103,7 +104,7 @@
                                       Lãi / lỗ: 
                                     @endif
                                 <span style="color: #2c4143;font-weight: 700;">
-                                    {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
+                                    {{-- @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG')) --}}
                                     {{ $data['target'] }}
                                     {{-- @else
                                         xxx
@@ -118,7 +119,7 @@
                                     @endif
                                  
                                 <span style="color: #2c4143;font-weight: 700;">
-                                    {{-- @if(isset($_SESSION['account_type_vip']) && $_SESSION['account_type_vip'] == 'VIP1') --}}
+                                    {{-- @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG')) --}}
                                     {{ $data['stop_loss'] }}
                                     {{-- @else
                                         xxx

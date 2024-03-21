@@ -5,7 +5,7 @@ use Carbon\Carbon;
 @section('body-client')
 <title>{{ $datas['blogDetail']->title }}</title>
 <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png">
-<meta name="twitter:image" content="https://image.vietstock.vn/2024/01/16/khanh-hoa_65722.jpg">
+<meta name="twitter:image" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}">
 
 <style>
     #content-reader iframe  {
@@ -41,24 +41,6 @@ use Carbon\Carbon;
     }
 </style>
 <div class="banner-wrapper">
-    <!-- tra cứu cổ phiếu -->
-    {{--<!-- <section class="container" style="background:#ffffff8a">
-        <div class="pt-3 pb-3 d-lg-flex gx-5">
-            <div class="col-lg-12" style="background: #fff">
-                <div class="card">
-                    <div class="card-header" style="background: #ffc827;">
-                        <h1>{{ $datas['blogDetail']->title }}</h1>
-                    </div>
-                    <div class="card-body">
-                        <div style="width: 100%;">
-                            {!! $datas['blogDetail']->decision !!}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->--}}
-    <!-- Start Banner Hero -->
     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($datas['blogDetail']->created_at) @endphp
 
     <div class="container banner-wrapper" style="background: white;">
