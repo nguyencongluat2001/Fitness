@@ -5,6 +5,7 @@
 <script src="{{URL::asset('assets/js/moment-with-locales.js')}}"></script>
 <!-- <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png"> -->
 <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_notbg.jpg">
+<meta property="og:image:url" content="{{url('../clients/img/LogoFinTop_notbg.jpg')}}" />
 
 <!-- tra cứu cổ phiếu -->
 <div class="banner-wrapper">

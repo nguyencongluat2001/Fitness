@@ -4,8 +4,8 @@ use Carbon\Carbon;
 @extends('client.layouts.index')
 @section('body-client')
 <title>{{ $datas['blogDetail']->title }}</title>
-<link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png">
-<meta name="twitter:image" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}">
+<!-- <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png"> -->
+<meta property="og:image:url" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" />
 
 <style>
     #content-reader iframe  {
