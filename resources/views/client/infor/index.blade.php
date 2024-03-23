@@ -69,7 +69,7 @@
                                                     <input class="form-control" id="email" type="email" name="email" value="{{isset($datas->email) ? $datas->email : ''}}">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 " onclick="JS_InforClient.notivalidate()">
+                                            <div class="col-md-6 " onclick="JS_InforClient.viewFormContact()">
                                                 <div class="form-group" >
                                                     <p for="example-text-input" class="form-control-label">Địa chỉ Email</p>
                                                     <input disabled="disabled" id="email_id"  style="background:#e9ecef" class="form-control" value="{{isset($datas->email) ? $datas->email : ''}}">
@@ -87,7 +87,7 @@
                                                     <input class="form-control" type="text" id="phone" name="phone" value="{{isset($datas->phone) ? $datas->phone : ''}}">
                                                 </div>
                                             </div>
-                                            <div class="col-md-6 pt-2" onclick="JS_InforClient.notivalidate()">
+                                            <div class="col-md-6 pt-2" onclick="JS_InforClient.viewFormContact()">
                                                 <div class="form-group">
                                                     <p for="example-text-input" class="form-control-label">Số điện thoại</p>
                                                     <input disabled="disabled" id="phone_id" style="background:#e9ecef" class="form-control" value="{{isset($datas->phone) ? $datas->phone : ''}}">
@@ -331,6 +331,8 @@
     </div>
     @endif
 </section>
+<div class="modal" id="formmodal" role="dialog"></div>
+<div class="modal" id="formmodal_res" role="dialog"></div>
 <script src="../clients/js/jquery.min.js"></script>
 <div class="modal fade" id="editmodal" role="dialog"></div>
 <div class="modal " id="editPassmodal" role="dialog" style=" width: 100%;height: 100%;background: #0000007d; background-repeat:no-repeat;background-size: cover;"></div>

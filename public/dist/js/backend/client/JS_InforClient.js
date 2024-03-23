@@ -324,3 +324,45 @@ JS_InforClient.prototype.getPersonnel = function () {
         }
     });
 }
+/**
+ * Hàm hiển thị modal
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_InforClient.prototype.viewFormContact = function () {
+    var url = this.urlPath + '/viewFormContact';
+    var myClass = this;
+    NclLib.loadding();
+    var data = '';
+    $.ajax({
+        url: url,
+        type: "GET",
+        //cache: true,
+        data: data,
+        success: function (arrResult) {
+            if(arrResult.status == 2){
+                Swal.fire({
+                    position: 'top-start',
+                    // icon: 'warning',
+                    title: arrResult.message,
+                    showConfirmButton: false,
+                    timer: 3000
+                  })
+                return false;
+            }else{
+                $('#formmodal_res').html(arrResult);
+                $('#formmodal_res').modal('show');
+                $('#formmodal').modal('hide');
+                $('.modal').css('overflow-y', 'auto');
+                $('.btn-close-res').click(function(){
+                    $('#formmodal_res').html('');
+                    $('#formmodal_res').modal('hide');
+                    $('#formmodal').modal('show');
+                    $('.modal').css('overflow-y', 'auto');
+                });
+            }
+        }
+    });
+}

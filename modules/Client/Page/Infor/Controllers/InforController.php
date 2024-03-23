@@ -122,4 +122,14 @@ class InforController extends Controller
             return array('success' => false, 'message' => 'Cập nhật thất bại!');
         }
     }
+      // 
+    /**
+     * Hiển thị màn liên hệ
+     *
+     * @return view
+     */
+    public function viewFormContact(Request $request)
+    {
+        return view('client.infor.viewFormContact');
+    } 
 }

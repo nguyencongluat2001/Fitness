@@ -321,6 +321,8 @@ Route::prefix('/client')->group(function () {
             Route::get('/changePass', [UserController::class,'changePass']);
             Route::post('/updatePass', [UserController::class,'updatePass']);
             Route::post('/uploadAvatar', [InforController::class,'uploadAvatar']);
+            Route::get('/viewFormContact', [InforController::class, 'viewFormContact']);
+
         });
             Route::prefix('datafinancial')->group(function () {
                 // Tra cứu cổ phiếu
