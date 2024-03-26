@@ -41,8 +41,8 @@
                         <col width="9%">
                         <col width="9%">
                         <col width="9%">
-                        <col width="14%">
-                        <col width="5%">
+                        <col width="7%">
+                        <col width="12%">
                     </colgroup>
                     <thead>
                         <tr>

@@ -42,10 +42,10 @@ class EffectiveService extends Service
             $arrData['updated_at'] = date('Y-m-d H:i:s');
             $create = $Recommendations->update($arrData);
         }else{
-            $Recommendations = $this->repository->select('*')->where('code_cp', $input['code_cp'])->count();
-            if($Recommendations > 0){
-                return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
-            }
+            // $Recommendations = $this->repository->select('*')->where('code_cp', $input['code_cp'])->count();
+            // if($Recommendations > 0){
+            //     return array('success' => false, 'message' => 'Mã đối tượng đã tồn tại!');
+            // }
             // $arrData['created_at'] = date('Y-m-d H:i:s');
             $arrData['id'] = (string)Str::uuid();
             $create = $this->repository->create($arrData);

@@ -50,12 +50,13 @@
                         <td class="td_type_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'type')" align="center">
                             <span id="span_type_{{$id}}" class="span_type_{{$id}}">{{ $data->type }}</span>
                         </td>
-                        <td align="center" class="td_target_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'target')">
-                            <span id="span_target_{{$id}}" class="span_target_{{$id}}">{{ $data->target }}</span>
-                        </td>
                         <td align="center" class="td_price_buy_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'price_buy')">
                             <span id="span_price_buy_{{$id}}" class="span_price_buy_{{$id}}">{{ $data->price_buy }}</span>
                         </td>
+                        <td align="center" class="td_target_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'target')">
+                            <span id="span_target_{{$id}}" class="span_target_{{$id}}">{{ $data->target }}</span>
+                        </td>
+                        
                         <td align="center" class="td_stop_loss_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'stop_loss')">
                             <span id="span_stop_loss_{{$id}}" class="span_stop_loss_{{$id}}">{{ $data->stop_loss }}</span>
                         </td>
