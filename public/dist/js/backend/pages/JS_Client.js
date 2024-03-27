@@ -367,7 +367,7 @@ JS_Client.prototype.delete = function (oForm) {
 JS_Client.prototype.changeStatus = function(id){
     var myClass = this;
     var url = myClass.urlPath + '/changeStatus';
-    var data = '_token=' + $("#frmUsers_index #_token").val();
+    var data = '_token=' + $("#frmClient_index #_token").val();
     data += '&status=' + ($("#status_" + id).is(":checked") == true ? 0 : 1);
     data += '&id=' + id;
     $.ajax({

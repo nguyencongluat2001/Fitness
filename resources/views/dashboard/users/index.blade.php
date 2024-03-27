@@ -11,6 +11,7 @@
         padding-top: 1rem;
     }
 </style>
+    <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_Client.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_User.js') }}"></script>
 
     <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
