@@ -110,6 +110,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('/changeStatus', [UserController::class,'changeStatus']);
             Route::get('/changePass', [UserController::class,'changePass']);
             Route::post('/updatePass', [UserController::class,'updatePass']);
+            Route::post('/getUser', [UserController::class, 'getUser']);
+
         });
         // quản trị người dùng
         Route::prefix('/system/client')->group(function () {

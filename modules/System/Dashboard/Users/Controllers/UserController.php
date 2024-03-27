@@ -578,6 +578,11 @@ class UserController extends Controller
             }
         }
         $data['cate_quyen'] = $arrQuyen;
+        $getuser_introduce_name = $this->userService->where('id_manage',$data['id_manage'])->first();
+        $data['user_introduce_name'] = '';
+        if(!empty($getuser_introduce_name['name'])){
+            $data['user_introduce_name'] = $getuser_introduce_name['name'];
+        }
         return view('dashboard.users.edit',compact('data'));
     }
 

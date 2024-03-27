@@ -574,3 +574,35 @@ JS_User.prototype.upNdown = function(type, id, _this){
 JS_User.prototype.search = function(){
     JS_User.loadList();
 }
+/**
+ * Thông tin người giới thiệu
+ */
+JS_User.prototype.getPersonnel = function () {
+    var oForm = '#frmAdd';
+    var myClass = this;
+    var url = myClass.urlPath + '/getUser';
+    var myClass = this;
+    var data = '_token=' + $(oForm).find("#_token").val();
+    data += '&code_introduce=' + $(oForm).find("#id_manage_gt").val();
+    $.ajax({
+        url: url,
+        type: "POST",
+        //cache: true,
+        data: data,
+        success: function (arrResult) {
+            if (arrResult['success'] == true) {
+                $("#name_personnel").val(arrResult['data']['name']);
+                
+          } else if (arrResult['success'] == false) {
+            Swal.fire({
+                position: 'top-end',
+                icon : 'warning',
+                title: arrResult.message,
+                showConfirmButton: false,
+                timer: 3000
+              })
+          }
+
+        }
+    });
+}

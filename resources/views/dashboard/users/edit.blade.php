@@ -81,6 +81,25 @@
 							</select>
 						</div>
 					</div>
+					<div class="col-md-6 pt-2">
+						<div class="form-group">
+							<p for="example-text-input" class="form-control-label">ID người giới thiệu</p>
+							<div style="position: relative;">
+								<input  onchange="JS_User.getPersonnel()" placeholder="Nhập ID" id="id_manage_gt" type="text" class="form-control" name="id_manage_gt" value="{{!empty($data['id_manage'])?$data['id_manage']:''}}">
+								<!-- <span><i class="passShowHide fas fa-eye"></i></span> -->
+							</div>
+						</div>
+					</div> 
+					<div class="col-md-6 pt-2">
+						<div class="form-group">
+							<p for="example-text-input" class="form-control-label">Tên người giới thiệu</p>
+							<div style="position: relative;">
+							<input style="cursor: unset;text-align: left;" placeholder="" readonly id="name_personnel" type="button" class="form-control" name="name_personnel" value="{{isset($data['user_introduce_name']) ? $data['user_introduce_name'] : ''}}">
+
+								<!-- <input disabled="disabled" id="" type="text" style="background:#e9ecef" class="form-control" name="" value="{{!empty($check_ten_nv_gioi_thieu)?$check_ten_nv_gioi_thieu:''}}"> -->
+							</div>
+						</div>
+					</div>
 					<div class="col-md-4">
 						<div class="form-group">
 							<p for="example-text-input" class="form-control-label">Công ty</p>
