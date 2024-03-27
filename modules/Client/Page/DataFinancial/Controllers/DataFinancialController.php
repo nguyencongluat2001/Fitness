@@ -319,7 +319,7 @@ class DataFinancialController extends Controller
     {
         $arrInput = $request->input();
         $data = [];
-        $result['datas'] = $this->effectiveService->where('status','!=','')->orderBy('created_at','DESC')->get();
+        $result['datas'] = $this->effectiveService->where('status','!=','')->orderBy('date_close','DESC')->get();
         foreach($result['datas'] as $item){
             $getCate = $this->categoryService->where('code_category',$item['code_category'])->first();
             $data['datas'][] = [
