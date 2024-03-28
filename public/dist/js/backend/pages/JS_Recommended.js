@@ -477,3 +477,54 @@ function clickColor(color){
 JS_Recommended.prototype.search = function(){
     JS_Recommended.loadList();
 }
+/**
+ * Thay đổi dòng
+ */
+JS_Recommended.prototype.upNdown = function(type, id, _this){
+    var row = $(_this).parents("tr:first");
+    var myClass = this;
+    var url = myClass.urlPath + '/upNdown';
+    var data = {
+        _token: $("#_token").val(),
+        id: id,
+        type: type
+    };
+    if(type == 'up'){
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (arrResult) {
+                if(arrResult['success'] == true){
+                    row.insertBefore(row.prev());
+                    $.each(arrResult, function(key, value) {
+                        $("#span_order_" + key).html(value);
+                    });
+                }
+            }, error: function(e){
+                console.log(e);
+                NclLib.successLoadding();
+            }
+        });
+        // row.insertBefore(row.prev());
+    }else{
+        $.ajax({
+            url: url,
+            data: data,
+            type: "POST",
+            success: function (arrResult) {
+                if(arrResult['success'] == true){
+                    row.insertAfter(row.next());
+                    $.each(arrResult, function(key, value) {
+                        $("#span_order_" + key).html(value);
+                    });
+                }
+            }, error: function(e){
+                console.log(e);
+                NclLib.successLoadding();
+            }
+        });
+        // row.insertAfter(row.next());
+    }
+    
+}

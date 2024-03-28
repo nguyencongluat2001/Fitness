@@ -26,6 +26,7 @@ class RecommendedModel extends Model
         'closing_percentage',
         'note',
         'status',
+        'order',
         'created_at',
         'updated_at',
     ];
@@ -45,6 +46,11 @@ class RecommendedModel extends Model
             // case 'role':
             //     // $query->where('role', $value);
             //     return $query;
+            case 'sortType':
+                if(!empty($value)){
+                    $query->orderBy('order', 'ASC');
+                    return $query;
+                }
             default:
                 return $query;
         }

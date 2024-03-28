@@ -43,6 +43,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Dừng lỗ</b></td>
                 <!-- <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>% Chốt</b></td> -->
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Ghi chú</b></td>
+                <td style="white-space: inherit;vertical-align: middle" rowspan="2"><b>Thứ tự</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b><span onclick="JS_Recommended.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></b></td>
             </tr>
             <tr>
@@ -96,6 +97,10 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                     <td class="td_note_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'note')" style="white-space: inherit; vertical-align: middle;">
                         <span id="span_note_{{$id}}" class="span_note_{{$id}}">{{ $data->note }}</span>
                     </td>
+                    <td class="text-center" style="vertical-align: middle;" onclick="{select_row(this);}">
+						<span class="me-3" style="cursor: pointer;" onclick="JS_Recommended.upNdown('down','{{$id}}', this)"><i class="fas fa-long-arrow-alt-down"></i></span>
+						<span style="cursor: pointer;" onclick="JS_Recommended.upNdown('up', '{{$id}}', this)"><i class="fas fa-long-arrow-alt-up"></i></span>
+					</td>
                     <td align="center"><span class="text-cursor text-warning" onclick="JS_Recommended.edit('{{$id}}')" style="white-space: inherit; vertical-align: middle;"><i class="fas fa-edit"></i></span></td>
                 </tr>
                 @endforeach

@@ -193,6 +193,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 Route::get('/loadList',[RecommendedController::class,'loadList']);
                 Route::post('/updateColumn',[RecommendedController::class,'updateColumn']);
                 Route::post('/changeStatus',[RecommendedController::class,'changeStatus']);
+                Route::post('/upNdown',[RecommendedController::class,'upNdown']);
+
             });
             Route::prefix('/effectiveness')->group(function () {
                 // Hiệu quả danh mục

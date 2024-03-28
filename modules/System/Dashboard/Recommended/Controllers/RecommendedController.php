@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Modules\System\Dashboard\Category\Services\CategoryService;
 use Modules\System\Dashboard\Recommended\Services\RecommendedService;
-
+use Modules\System\Dashboard\Recommended\Models\RecommendedModel;
 /**
  * Quản trị danh mục
  *
@@ -44,6 +44,11 @@ class RecommendedController extends Controller
         $input = $request->all();
         $getCategory = $this->categoryService->where('cate','DM_DATA_CK')->get();
         $data['category'] = $getCategory;
+        $getStt = $this->recommendedService->where('status', 0)->orWhere('status', 1)->max('order');
+        $data['order'] = 1;
+        if(!empty($getStt)){
+            $data['order'] = $getStt+1;
+        }
         return view('dashboard.recommended.recommended.edit', $data);
     }
     /**
@@ -109,6 +114,7 @@ class RecommendedController extends Controller
     {
         $arrInput = $request->input();
         $data = array();
+        $arrInput['sortType'] = 1;
         $objResult = $this->recommendedService->filter($arrInput);
         $data['datas'] = $objResult;
         return view("dashboard.recommended.recommended.loadList", $data)->render();
@@ -135,6 +141,47 @@ class RecommendedController extends Controller
             return array('success' => true, 'message' => 'Cập nhật thành công!');
         }else{
             return array('success' => false, 'message' => 'Không tìm thấy dữ liệu!');
+        }
+    }
+    /**
+     * Thay đổi dòng
+     */
+    public function upNdown(Request $request)
+    {
+        $arrInput = $request->all();
+        $dataFinacial = $this->recommendedService->where('id', $arrInput['id'])->first();
+        try{
+            if($arrInput['type'] == 'down' && (int)$dataFinacial->order > 1){
+                $downOrder = RecommendedModel::where('order', '>=', ((int)$dataFinacial->order + 1))->orderBy('order')->first();
+                $order = (int)$dataFinacial->order + 1;
+                $dataFinacial->order = (int)$dataFinacial->order + 1;
+                $dataFinacial->save();
+                if(!empty($downOrder)){
+                    if(($order - $downOrder->order) == 1){
+                        $downOrder->order = (int)$downOrder->order - 1;
+                    }else{
+                        $downOrder->order = (int)$dataFinacial->order - 1;
+                    }
+                    $downOrder->save();
+                    return array('success' => true, $dataFinacial->id => $dataFinacial->order, $downOrder->id => $downOrder->order);
+                }
+            }elseif($arrInput['type'] == 'up'){
+                $downOrder = RecommendedModel::where('order', '<=', ((int)$dataFinacial->order - 1))->orderBy('order', 'desc')->first();
+                $order = (int)$dataFinacial->order;
+                $dataFinacial->order = (int)$dataFinacial->order - 1;
+                $dataFinacial->save();
+                if(!empty($downOrder)){
+                    if(($order - $downOrder->order) == 1){
+                        $downOrder->order = (int)$downOrder->order + 1;
+                    }else{
+                        $downOrder->order = (int)$dataFinacial->order + 1;
+                    }
+                    $downOrder->save();
+                    return array('success' => true, $downOrder->id => $downOrder->order, $dataFinacial->id => $dataFinacial->order);
+                }
+            }
+        }catch(\Exception $e){
+            dd($e->getMessage());
         }
     }
 }
