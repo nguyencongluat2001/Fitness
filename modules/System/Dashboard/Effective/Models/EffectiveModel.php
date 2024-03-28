@@ -43,6 +43,11 @@ class EffectiveModel extends Model
             // case 'role':
             //     // $query->where('role', $value);
             //     return $query;
+            case 'sortType':
+                if(!empty($value)){
+                    $query->orderBy('created_at', 'DESC');
+                    return $query;
+                }
             default:
                 return $query;
         }
