@@ -138,7 +138,8 @@
                                 <td style="vertical-align: middle;" align="center"><input id="stop_loss" name="stop_loss" type="text" value="{{isset($datas->stop_loss)?$datas->stop_loss:''}}" class="form-control"></td>
                                 <!-- <td style="vertical-align: middle;" align="center"><input id="closing_percentage" name="closing_percentage" type="text" value="{{isset($datas->closing_percentage)?$datas->closing_percentage:''}}" class="form-control"></td> -->
                                 <td style="vertical-align: middle;" align="center"><input id="note" name="note" type="text" value="{{isset($datas->note)?$datas->note:''}}" class="form-control"></td>
-                                <td style="vertical-align: middle;" align="center"><input id="order" name="order" type="text" value="{{isset($datas->order)?$datas->order:$order}}" class="form-control"></td>
+                                <td style="vertical-align: middle;" align="center"><input disabled id="order" name="order" type="text" value="{{isset($datas->order)?$datas->order:$order}}" class="form-control"></td>
+                                <td style="display:none" style="vertical-align: middle;" align="center"><input id="order" name="order" type="text" value="{{isset($datas->order)?$datas->order:$order}}" class="form-control"></td>
 
                                 <td style="vertical-align: middle;" align="center">
                                     <p></p>
