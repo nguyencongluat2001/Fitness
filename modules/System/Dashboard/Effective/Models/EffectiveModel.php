@@ -45,7 +45,7 @@ class EffectiveModel extends Model
             //     return $query;
             case 'sortType':
                 if(!empty($value)){
-                    $query->orderBy('updated_at', 'DESC');
+                    $query->orderBy('date_close', 'DESC');
                     return $query;
                 }
             default:
