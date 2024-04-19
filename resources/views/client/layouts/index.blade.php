@@ -25,11 +25,11 @@
 
 </head>
 <style>
-    b,
+    /* b,
     span,
     strong {
         font-size: 14px;
-    }
+    } */
 
     body {
         background-image: url("../clients/img/bgctys.jpg");
