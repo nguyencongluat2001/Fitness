@@ -123,6 +123,7 @@ class EffectiveController extends Controller
     {
         $arrInput = $request->input();
         $data = array();
+        $arrInput['sortType'] = 1;
         $objResult = $this->effectiveService->filter($arrInput);
         $data['datas'] = $objResult;
         return view("dashboard.recommended.effectiveness.loadList", $data)->render();

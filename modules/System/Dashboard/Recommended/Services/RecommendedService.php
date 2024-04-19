@@ -41,6 +41,7 @@ class RecommendedService extends Service
             'closing_percentage' => isset($input['closing_percentage']) ? $input['closing_percentage'] : '',
             'note' => isset($input['note']) ? $input['note'] : '',
             'status' => isset($input['status']) && !empty($input['status']) ? 1 : 0,
+            'order' => isset($input['order']) && !empty($input['order']) ? $input['order'] : "",
             'created_at' => isset($input['created_at']) ? date('Y-m-d', strtotime($input['created_at'])) : date('Y-m-d'),
         ];
         // dd($arrData);

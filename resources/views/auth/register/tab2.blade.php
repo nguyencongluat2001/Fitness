@@ -65,24 +65,24 @@
             <tbody>
                 <tr>
                     <td><label for="">Thời gian đầu tư <span class="request_star">*</span></label></td>
-                    <td><label><input type="radio" name="investment_time" value="0-3"> 0 - 3 tháng</label></td>
-                    <td><label><input type="radio" name="investment_time" value="3-6"> 3 - 6 tháng</label></td>
-                    <td><label><input type="radio" name="investment_time" value="6-12"> 6 - 12 tháng</label></td>
-                    <td><label><input type="radio" name="investment_time" value="1nam"> Trên 1 năm</label></td>
+                    <td><label><input type="radio" id="investment_time" name="investment_time" value="0-3"> 0 - 3 tháng</label></td>
+                    <td><label><input type="radio" id="investment_time" name="investment_time" value="3-6"> 3 - 6 tháng</label></td>
+                    <td><label><input type="radio" id="investment_time" name="investment_time" value="6-12"> 6 - 12 tháng</label></td>
+                    <td><label><input type="radio" id="investment_time" name="investment_time" value="1nam"> Trên 1 năm</label></td>
                 </tr>
                 <tr>
                     <td><label for="">Khẩu vị đầu tư <span class="request_star">*</span></label></td>
-                    <td><label><input type="radio" name="investment_taste" value="nganhan"> Lướt sóng ngắn hạn</label></td>
-                    <td><label><input type="radio" name="investment_taste" value="daihan"> Trung và dài hạn</label></td>
-                    <td><label><input type="radio" name="investment_taste" value="linhhoat"> Linh hoạt kết hợp</label></td>
+                    <td><label><input type="radio" id="investment_taste" name="investment_taste" value="nganhan"> Lướt sóng ngắn hạn</label></td>
+                    <td><label><input type="radio" id="investment_taste" name="investment_taste" value="daihan"> Trung và dài hạn</label></td>
+                    <td><label><input type="radio" id="investment_taste" name="investment_taste" value="linhhoat"> Linh hoạt kết hợp</label></td>
                 </tr>
                 <tr>
                     <td><label for="">Công ty chứng khoán <span class="request_star">*</span></label></td>
-                    <td><label><input type="radio" name="investment_company" value="TKCK"> Chưa TKCK</label></td>
-                    <td><label><input type="radio" name="investment_company" value="vps"> VPS</label></td>
-                    <td><label><input type="radio" name="investment_company" value="ssi"> SSI</label></td>
-                    <td><label><input type="radio" name="investment_company" value="vnd"> VND</label></td>
-                    <td><label><input type="radio" class="company-other" name="investment_company" value="khac"> Công ty khác</label>
+                    <td><label><input type="radio" id="investment_company" name="investment_company" value="TKCK"> Chưa TKCK</label></td>
+                    <td><label><input type="radio" id="investment_company" name="investment_company" value="vps"> VPS</label></td>
+                    <td><label><input type="radio" id="investment_company" name="investment_company" value="ssi"> SSI</label></td>
+                    <td><label><input type="radio" id="investment_company" name="investment_company" value="vnd"> VND</label></td>
+                    <td><label><input type="radio" id="investment_company" class="company-other" name="investment_company" value="khac"> Công ty khác</label>
                         <!-- <label><input type="text" style="display: none;" id="company-other" name="company-other"></label></td> -->
                 </tr>
             </tbody>

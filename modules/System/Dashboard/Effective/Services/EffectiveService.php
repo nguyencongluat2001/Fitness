@@ -50,7 +50,6 @@ class EffectiveService extends Service
             $arrData['id'] = (string)Str::uuid();
             $create = $this->repository->create($arrData);
         }
-        
         return array('success' => true, 'message' => 'Cập nhật thành công');
     }
     /**

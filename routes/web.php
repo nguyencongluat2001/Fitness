@@ -110,6 +110,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('/changeStatus', [UserController::class,'changeStatus']);
             Route::get('/changePass', [UserController::class,'changePass']);
             Route::post('/updatePass', [UserController::class,'updatePass']);
+            Route::post('/getUser', [UserController::class, 'getUser']);
+
         });
         // quản trị người dùng
         Route::prefix('/system/client')->group(function () {
@@ -191,6 +193,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 Route::get('/loadList',[RecommendedController::class,'loadList']);
                 Route::post('/updateColumn',[RecommendedController::class,'updateColumn']);
                 Route::post('/changeStatus',[RecommendedController::class,'changeStatus']);
+                Route::post('/upNdown',[RecommendedController::class,'upNdown']);
+
             });
             Route::prefix('/effectiveness')->group(function () {
                 // Hiệu quả danh mục

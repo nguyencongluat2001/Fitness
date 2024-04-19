@@ -262,6 +262,20 @@ JS_Register.prototype.Tab2 = function(){
 JS_Register.prototype.Tab3 = function(){
     var oForm = '#frmRegister';
     var myClass = this;
+    if($("input:radio[name=investment_time]:checked").val() == '' || $("input:radio[name=investment_time]:checked").val() == undefined){
+        NclLib.alerMesage('Thời gian đầu tư không được để trống!', 'warning', '#f5ae67');
+        return false;
+    }
+    if($("input:radio[name=investment_taste]:checked").val() == '' || $("input:radio[name=investment_taste]:checked").val() == undefined){
+        NclLib.alerMesage('Khẩu vị đầu tư không được để trống!', 'warning', '#f5ae67');
+        $(oForm).find("#investment_taste").focus();
+        return false;
+    }
+    if($("input:radio[name=investment_company]:checked").val() == '' || $("input:radio[name=investment_company]:checked").val() == undefined){
+        NclLib.alerMesage('Công ty chứng khoán không được để trống!', 'warning', '#f5ae67');
+        $(oForm).find("#investment_company").focus();
+        return false;
+    }
     if($(oForm).find("#password").val() == ''){
         NclLib.alerMesage('Mật khẩu không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#password").focus();

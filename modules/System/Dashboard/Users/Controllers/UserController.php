@@ -312,7 +312,7 @@ class UserController extends Controller
         $data = $this->userService->editUser($input);
         $cate_quyen = $this->CategoryService->where('cate','DM_QUYEN')->orderBy('order','asc')->get();
         if($_SESSION['role'] == 'ADMIN' || $_SESSION['role'] == 'MANAGE'){
-            $data['arr_quanly'] = $this->userService->where('role','ADMIN')->where('role','MANAGE')->orWhere('role','CV_ADMIN')->orWhere('role','SALE_ADMIN')->orWhere('role','LIKE','%SALE_ADMIN%')->orWhere('role','LIKE','%CV_ADMIN%')->orderBy('order','asc')->get()->toArray();
+            $data['arr_quanly'] = $this->userService->where('role','ADMIN')->orwhere('role','MANAGE')->orWhere('role','CV_ADMIN')->orWhere('role','SALE_ADMIN')->orWhere('role','LIKE','%SALE_ADMIN%')->orWhere('role','LIKE','%CV_ADMIN%')->orderBy('order','asc')->get()->toArray();
         }else{
             $data['arr_quanly'] = $this->userService->where('id_personnel',$_SESSION['id_personnel'])->get();
         }
@@ -578,6 +578,11 @@ class UserController extends Controller
             }
         }
         $data['cate_quyen'] = $arrQuyen;
+        $getuser_introduce_name = $this->userService->where('id_manage',$data['id_manage'])->first();
+        $data['user_introduce_name'] = '';
+        if(!empty($getuser_introduce_name['name'])){
+            $data['user_introduce_name'] = $getuser_introduce_name['name'];
+        }
         return view('dashboard.users.edit',compact('data'));
     }
 

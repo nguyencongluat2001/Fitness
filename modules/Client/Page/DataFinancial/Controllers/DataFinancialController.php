@@ -275,7 +275,7 @@ class DataFinancialController extends Controller
     public function loadList_categoryFintop_vip (Request $request)
     {
         $arrInput = $request->input();
-        $result['datas'] = $this->recommendedService->where('status','!=','')->get()->toArray();
+        $result['datas'] = $this->recommendedService->where('status','!=','')->orderBy('order','ASC')->get()->toArray();
 
         $data['datas'] = [];
         foreach($result['datas'] as $item){

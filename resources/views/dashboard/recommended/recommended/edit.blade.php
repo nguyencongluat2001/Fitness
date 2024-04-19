@@ -67,6 +67,7 @@
                         <col width="7%">
                         <col width="7%">
                         <col width="7%">
+                        <col width="7%">
                     </colgroup>
                     <thead>
                         <tr>
@@ -100,6 +101,7 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Dừng lỗ</b></td>
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Chốt</b></td> -->
                             <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2"><b>Ghi chú</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2"><b>Thứ tự</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" rowspan="2"><b>#</b></td>
                         </tr>
                         <tr>
@@ -136,6 +138,9 @@
                                 <td style="vertical-align: middle;" align="center"><input id="stop_loss" name="stop_loss" type="text" value="{{isset($datas->stop_loss)?$datas->stop_loss:''}}" class="form-control"></td>
                                 <!-- <td style="vertical-align: middle;" align="center"><input id="closing_percentage" name="closing_percentage" type="text" value="{{isset($datas->closing_percentage)?$datas->closing_percentage:''}}" class="form-control"></td> -->
                                 <td style="vertical-align: middle;" align="center"><input id="note" name="note" type="text" value="{{isset($datas->note)?$datas->note:''}}" class="form-control"></td>
+                                <td style="vertical-align: middle;" align="center"><input disabled id="order" name="order" type="text" value="{{isset($datas->order)?$datas->order:$order}}" class="form-control"></td>
+                                <td style="display:none" style="vertical-align: middle;" align="center"><input id="order" name="order" type="text" value="{{isset($datas->order)?$datas->order:$order}}" class="form-control"></td>
+
                                 <td style="vertical-align: middle;" align="center">
                                     <p></p>
                                     <button id="btn_create" type="button" class="btn btn-success" title="Xem trực tuyến"><i class="fas fa-thumbs-up"></i></button>

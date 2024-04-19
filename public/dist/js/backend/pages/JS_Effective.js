@@ -102,7 +102,7 @@ JS_Effective.prototype.store = function (oFormCreate) {
                   var nameMessage = 'Cập nhật thành công!';
                   NclLib.alertMessageBackend('success', 'Thông báo', nameMessage);
                   $('#addfile').modal('hide');
-                  myClass.loadList(oFormCreate);
+                  myClass.loadList('form#frmRecommended_index');
             } else {
                   var nameMessage = arrResult['message'];
                   NclLib.alertMessageBackend('danger', 'Thông báo', nameMessage);
@@ -129,6 +129,7 @@ JS_Effective.prototype.loadList = function (oForm = '#frmRecommended_index', num
         // cache: true,
         data: data,
         success: function (arrResult) {
+            console.log(arrResult);
             $("#table-container-recommended").html(arrResult);
             // phan trang
             $(oForm).find('.main_paginate .pagination a').click(function () {
