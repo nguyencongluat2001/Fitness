@@ -17,8 +17,8 @@ use Carbon\Carbon;
         width:100% !important;
         height: auto !important;
     }
-    strong{
-        font-size: none !important;
+    h1{
+        font-size: 30px;
     }
     @media (max-width: 768px){
         .content-reader img {
