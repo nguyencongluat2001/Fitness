@@ -9,10 +9,10 @@
 <div class="table-responsive pmd-card pmd-z-depth pt-2">
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if(!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG')) onclick="JS_CategoryFintop.checkLogin()" @endif>
         <colgroup>
-            <col width="10%"> <!-- ma cp -->
+            <col width="8%"> <!-- ma cp -->
             <col width="9%"> <!-- nhom nganh --> 
             <col width="6%"> <!-- ngay mua -->
-            <col width="7%"> <!-- %  tai san -->
+            <col width="9%"> <!-- %  tai san -->
             <col width="6%"> <!-- gia mua -->
             <col width="8%"> <!-- gia hien tai -->
             <col width="6%"> <!-- lai/lo -->
@@ -29,7 +29,7 @@
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
-                <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>% Tài sản</b></td>
+                <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>% Tài sản <br> khuyến nghị</b></td>
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua</b></td>
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá hiện tại</b></td>
                 <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
