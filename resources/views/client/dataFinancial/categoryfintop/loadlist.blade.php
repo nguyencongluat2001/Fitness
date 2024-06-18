@@ -10,10 +10,10 @@
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer" >
         <colgroup>
             <col width="8%"> <!-- % Chot -->
-            <col width="9%"> <!-- ma cp -->
+            <col width="8%"> <!-- ma cp -->
             <col width="10%"> <!-- nhom nganh -->
             <col width="8%"> <!-- ngay mua -->
-            <col width="8%"> <!-- % tai san -->
+            <col width="9%"> <!-- % tai san -->
             <col width="8%"> <!-- gia mua -->
             <col width="8%"> <!-- ngay chot -->
             <col width="8%"> <!-- gia chot -->
@@ -27,7 +27,7 @@
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>% Tài sản</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>% Tài sản <br> khuyến nghị</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày bán</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá bán</b></td>

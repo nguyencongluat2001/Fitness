@@ -53,9 +53,9 @@
             <div class="card-body">
                 <table class="table  table-bordered table-striped table-condensed dataTable no-footer">
                     <colgroup>
+                        <col width="6%">
                         <col width="7%">
-                        <col width="7%">
-                        <col width="7%">
+                        <col width="8%">
                         <col width="7%">
                         <col width="7%">
                         <col width="7%">
@@ -73,7 +73,7 @@
                         <tr>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Mã CP</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Nhóm nghành</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Tài sản</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>% Tài sản <br> khuyến nghị</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Ngày mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required" rowspan="2"><b>Giá mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" colspan="3"><b>Vùng giá mục tiêu</b></td>

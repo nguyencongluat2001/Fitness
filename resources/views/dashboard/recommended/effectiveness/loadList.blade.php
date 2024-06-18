@@ -32,7 +32,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>% Tài sản</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>% Tài sản <br>khuyến nghị </b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày chốt</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá chốt</b></td>

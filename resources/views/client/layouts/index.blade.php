@@ -503,7 +503,7 @@
 
     <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
     <script type="text/javascript">
-        var pusher = new Pusher("{{ env('PUSHER_APP_KEY', '0141c9557203d59309b9') }}", {
+        var pusher = new Pusher("{{ env('PUSHER_APP_KEY', 'b53fd6585787820b39e9') }}", {
             encrypted: true,
             cluster: "ap1"
         });
