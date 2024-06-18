@@ -528,3 +528,21 @@ JS_Recommended.prototype.upNdown = function(type, id, _this){
     }
     
 }
+JS_Recommended.prototype.getProfit_and_loss = function(){
+    //giá bán
+    var current_price = $("#current_price").val();
+    if(current_price == ''){
+        var html = `<td id="id_current_price" style="vertical-align: middle;" align="center">
+                    <input id="profit_and_loss" name="profit_and_loss" type="text" value="" class="form-control">
+                </td>`
+            $("#id_current_price").html(html);
+    }else{
+        //giá mua
+        var price = $("#price").val();
+        var sum = Math.round(((current_price - price)/price*100) * 100) / 100;
+        var html = `<td id="id_current_price" style="vertical-align: middle;" align="center">
+                        <input id="profit_and_loss" name="profit_and_loss" type="text" value="`+sum+`%" class="form-control">
+                    </td>`
+        $("#id_current_price").html(html);
+    }
+}

@@ -129,7 +129,6 @@ JS_Effective.prototype.loadList = function (oForm = '#frmRecommended_index', num
         // cache: true,
         data: data,
         success: function (arrResult) {
-            console.log(arrResult);
             $("#table-container-recommended").html(arrResult);
             // phan trang
             $(oForm).find('.main_paginate .pagination a').click(function () {
@@ -447,4 +446,22 @@ JS_Effective.prototype.checkValidate = function(){
  */
 JS_Effective.prototype.search = function(){
     JS_Effective.loadList();
+}
+JS_Effective.prototype.getProfit_and_loss = function(){
+    //giá bán
+    var current_price = $("#price_close").val();
+    if(current_price == ''){
+        var html = `<td id="id_current_price" style="vertical-align: middle;" align="center"><input id="profit_and_loss" name="profit_and_loss" type="text" 
+                    value="" class="form-control">
+                </td>`
+            $("#id_current_price").html(html);
+    }else{
+        //giá mua
+        var price = $("#price").val();
+        var sum = Math.round(((current_price - price)/price*100) * 100) / 100;
+        var html = `<td id="id_current_price" style="vertical-align: middle;" align="center"><input id="profit_and_loss" name="profit_and_loss" type="text" 
+                        value="`+sum+`%" class="form-control">
+                    </td>`
+        $("#id_current_price").html(html);
+    }
 }

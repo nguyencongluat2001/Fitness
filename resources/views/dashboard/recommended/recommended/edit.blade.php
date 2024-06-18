@@ -127,11 +127,11 @@
                             </td>
                             <td style="vertical-align: middle;" align="center"><input id="percent_of_assets" name="percent_of_assets" type="text" value="{{isset($datas->percent_of_assets)?$datas->percent_of_assets:''}}" class="form-control"></td>
                             <td style="vertical-align: middle;" align="center"><input id="created_at" name="created_at" type="date" value="{{isset($datas->created_at)? date('Y-m-d', strtotime($datas->created_at)):''}}" class="form-control"></td>
-                            <td style="vertical-align: middle;" align="center"><input id="price" name="price" type="text" value="{{isset($datas->price)?$datas->price:''}}" class="form-control"></td>
+                            <td style="vertical-align: middle;" align="center"><input id="price" onchange="JS_Recommended.getProfit_and_loss()" name="price" type="text" value="{{isset($datas->price)?$datas->price:''}}" class="form-control"></td>
                             @for($i = 0; $i < 3; $i++) <td style="vertical-align: middle;" align="center"><input id="price_range_{{$i}}" name="price_range_{{$i}}" type="text" value="{{ isset($price_range[$i]) ? $price_range[$i] : '' }}" class="form-control"></td>
                                 @endfor
-                                <td style="vertical-align: middle;" align="center"><input id="current_price" name="current_price" type="text" value="{{isset($datas->current_price)?$datas->current_price:''}}" class="form-control"></td>
-                                <td style="vertical-align: middle;" align="center">
+                                <td style="vertical-align: middle;" align="center"><input id="current_price" onchange="JS_Recommended.getProfit_and_loss()" name="current_price" type="text" value="{{isset($datas->current_price)?$datas->current_price:''}}" class="form-control"></td>
+                                <td id="id_current_price" style="vertical-align: middle;" align="center">
                                     <input id="profit_and_loss" name="profit_and_loss" type="text" value="{{isset($datas->profit_and_loss)?$datas->profit_and_loss:''}}" class="form-control">
                                 </td>
                                 <td style="vertical-align: middle;" align="center"><input id="act" name="act" type="text" value="{{isset($datas->act)?$datas->act:''}}" class="form-control"></td>
