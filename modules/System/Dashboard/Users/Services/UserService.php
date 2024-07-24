@@ -235,7 +235,7 @@ class UserService extends Service
         // Lấy dữ liệu
         $data['date'] = 'Ngày ' . date('d') . ' tháng ' . date('m') . ' năm ' . date('Y');
         $data['mailto'] = $input['email'];
-        $data['subject'] = 'Công ty TNHH Đầu tư & Phát triển FinTop';
+        $data['subject'] = 'Trung tâm Nghiên cứu & Phân tích Dữ liệu chứng khoán FinTop';
         $data['otp'] = $codeOtp;
         // Gửi mail
         (new ForgetPassWordMailHelper($data['mailto'], $data['mailto'], $stringHtml, $data))->send_otp($data);

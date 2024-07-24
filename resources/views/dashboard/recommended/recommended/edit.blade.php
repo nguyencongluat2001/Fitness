@@ -85,12 +85,13 @@
                                         <div class="dropdown" id="dropdownColor">
                                             <span  class="btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="width: 40px; height: 20px; border: 1px solid #fff"></span>
                                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" style="background-color: #fff;">
-                                                <li style="background-color: #C82333; color: #fff;" onclick="clickColor('#c82333')"><span>Đỏ</span></li>
-                                                <li style="background-color: #E0A800; color: #000;" onclick="clickColor('#E0A800')"><span>Vàng</span></li>
-                                                <li style="background-color: #218838; color: #fff;" onclick="clickColor('#218838')"><span>Xanh lục</span></li>
-                                                <li style="background-color: #0069D9; color: #fff;" onclick="clickColor('#0069D9')"><span>Xanh dương</span></li>
-                                                <li style="background-color: #FFFFFF; color: #000;" onclick="clickColor('#FFFFFF')"><span>Trắng</span></li>
-                                                <li style="background-color: #000000; color: #fff;" onclick="clickColor('#000000')"><span>Đen</span></li>
+                                                <li style="background-color: #007709; color: #fff;" onclick="clickColor('#007709')"><span>Xanh lục</span></li>
+                                                <li style="background-color: #fbff07; color: #000;" onclick="clickColor('#fbff07')"><span>Vàng</span></li>
+                                                <li style="background-color: #fd7e14; color: #fff;" onclick="clickColor('#fd7e14')"><span>Cam</span></li>
+                                                <!-- <li style="background-color: #0069D9; color: #fff;" onclick="clickColor('#0069D9')"><span>Xanh dương</span></li> -->
+                                                <li style="background-color: #f70000; color: #fff;" onclick="clickColor('#f70000')"><span>Đỏ</span></li>
+                                                <!-- <li style="background-color: #FFFFFF; color: #000;" onclick="clickColor('#FFFFFF')"><span>Trắng</span></li>
+                                                <li style="background-color: #000000; color: #fff;" onclick="clickColor('#000000')"><span>Đen</span></li> -->
                                             </ul>
                                         </div>
                                         <input type="color" id="pickcolor" name="pickcolor" value="{{isset($datas->pickcolor)?$datas->pickcolor:'#218838'}}" style="width:40px; height: 21px;">

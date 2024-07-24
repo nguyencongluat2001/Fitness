@@ -5,7 +5,7 @@
                 <h2 class="h4 text-light light-300" style="height: 5rem;">
                     <img src="../clients/img/LogoFinTop_red.png" alt="Card image" width="10%">
                     <span style="color:#ff0000d1">
-                        <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;">Công ty TNHH Đầu tư & Phát triển FinTop</b>
+                        <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;">Trung tâm Nghiên cứu & Phân tích Dữ liệu chứng khoán FinTop</b>
                     </span>
                 </h2>
                 <table class="text-light">
@@ -129,7 +129,7 @@
             <hr class="mt-3 text-light">
             <div class="col-md-12">
                 <p class="text-lg-start text-center text-light light-300">
-                    Bản quyền @2023 , Công ty TNHH Đầu tư & Phát triển FinTop
+                    Bản quyền @2023 , Trung tâm Nghiên cứu & Phân tích Dữ liệu chứng khoán FinTop
                 </p>
             </div>
         </div>
