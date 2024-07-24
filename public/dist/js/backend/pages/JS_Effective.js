@@ -179,6 +179,9 @@ JS_Effective.prototype.edit = function (id) {
         }
     });
 }
+function clickColor(color){
+    $("#pickcolor").val(color);
+}
 // Xoa mot doi tuong
 JS_Effective.prototype.delete = function (oForm) {
     var myClass = this;

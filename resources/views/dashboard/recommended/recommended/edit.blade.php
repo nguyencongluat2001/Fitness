@@ -94,7 +94,7 @@
                                                 <li style="background-color: #000000; color: #fff;" onclick="clickColor('#000000')"><span>Đen</span></li> -->
                                             </ul>
                                         </div>
-                                        <input type="color" id="pickcolor" name="pickcolor" value="{{isset($datas->pickcolor)?$datas->pickcolor:'#218838'}}" style="width:40px; height: 21px;">
+                                        <input type="color" id="pickcolor" name="pickcolor" value="{{isset($datas->pickcolor)?$datas->pickcolor:'#007709'}}" style="width:40px; height: 21px;">
                                     </span>
                                 </div>
                             </td>
