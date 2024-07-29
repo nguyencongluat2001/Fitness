@@ -3,10 +3,17 @@
         <div class="row">
             <div class="col-md-6 mt-3">
                 <h2 class="h4 text-light light-300" style="height: 5rem;">
-                    <img src="../clients/img/LogoFinTop_red.png" alt="Card image" width="10%">
-                    <span style="color:#ff0000d1">
-                        <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;">Trung tâm Nghiên cứu & Phân tích Dữ liệu chứng khoán FinTop</b>
-                    </span>
+                    <div style="display:flex">
+                        <div style="width:10%">
+                            <img src="../clients/img/LogoFinTop_red.png" alt="Card image" width="100%">
+                        </div>
+                        <div style="width:80%;padding-left:10px">
+                            <span style="color:#ff0000d1">
+                                <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;">Trung tâm Nghiên cứu & Phân tích  <br> Dữ liệu chứng khoán FinTop</b>
+                            </span>
+                        </div>
+                    </div>
+                    
                 </h2>
                 <table class="text-light">
                     <colgroup>
