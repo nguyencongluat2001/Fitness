@@ -9,7 +9,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_notbg.jpg">
     <!-- Load Require CSS -->
     {{-- @yield('css') --}}
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> -->
+    <link href="../clients/fontawesome/css/all.min.css" rel="stylesheet">
 
     <link href="../clients/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font CSS -->
