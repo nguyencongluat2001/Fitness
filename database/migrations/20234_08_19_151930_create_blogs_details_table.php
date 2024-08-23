@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('blogs_details', function (Blueprint $table) {
+        Schema::table('blogs_details', function (Blueprint $table) {
             $table->longText('decision')->change();
         });
     }
