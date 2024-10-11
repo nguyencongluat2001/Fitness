@@ -2,10 +2,76 @@
     .title_table{
         font-size:16px !important;
     }
-    .table{
-        border-color: #670000
-    }
+    .scrollbar {
+    margin-left: 30px;
+    /* float: left; */
+    height: 1000px;
+    /* width: 65px; */
+    /* background: #F5F5F5; */
+    overflow-y: scroll;
+    margin-bottom: 25px;
+  }
+
+  .force-overflow {
+    min-height: 1000px;
+  }
+
+  #wrapper {
+    text-align: center;
+    width: 500px;
+    margin: auto;
+  }
+
+  /*
+    *  STYLE 2
+    */
+
+  #style-2::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+  }
+
+  #style-2::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
+
+  #style-2::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #D62929;
+  }
+
+  .tv-lightweight-charts {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.5rem) !important;
+    padding-left: var(--bs-gutter-x, 0.5rem) !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .table {
+    border-color: #670000;
+  }
+
+  .table-responsive.pmd-card.pmd-z-depth {
+    height: 100%;
+    max-height: 1200px;
+  }
+
+  #style-1 #table-data thead tr td {
+    position: sticky;
+    top: 0;
+    background: #529845;
+  }
+
+  #frmLoadlist_signal .blur {
+    /* opacity: 0.2; */
+    border-color: rgba(0, 0, 0, 0.2);
+  }
 </style>
+<div id="style-1" style="padding-right:10px;">
 <div class="table-responsive pmd-card pmd-z-depth pt-2">
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if(!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG')) onclick="JS_CategoryFintop.checkLogin()" @endif>
         <colgroup>
@@ -154,3 +220,5 @@
         </tbody>
     </table>
 </div>
+</div>
+
