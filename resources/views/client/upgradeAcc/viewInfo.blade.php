@@ -136,7 +136,7 @@
 							<li><i class="bx bxs-circle me-2"></i>Tài liệu, cẩm nang hướng dẫn đầu tư</li>
 							<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Tín hiệu mua FinTop</li>
 							<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Phân tích đầu tư V.I.P</li>
-							<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
+							<!-- <li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li> -->
 						</ul>
 					</div>
 				</div>
@@ -247,8 +247,8 @@
 								<li><i class="bx bxs-circle me-2"></i>Tài liệu, cẩm nang hướng dẫn đầu tư</li>
 								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Tín hiệu mua FinTop</li>
 								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Phân tích đầu tư V.I.P</li>
-								<li style="font-weight: 700;"><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
-								<li style="font-weight: 700;;color:#fff36b"><i class="bx bxs-circle me-2"></i>Khuyến nghị đầu tư V.I.P FinTop</li>
+								<li style="font-weight: 700;color:#fff36b"><i class="bx bxs-circle me-2"></i>Danh mục đầu tư V.I.P FinTop</li>
+								<li style="font-weight: 700;color:#fff36b"><i class="bx bxs-circle me-2"></i>Khuyến nghị đầu tư V.I.P FinTop</li>
 							</ul>
 						</div>
 					</div>

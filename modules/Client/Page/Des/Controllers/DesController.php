@@ -55,7 +55,10 @@ class DesController extends Controller
     {
         $id = $request->id;
         $categories = $this->CategoryService->where('id', $id)->first();
-        $blogs = $this->BlogService->where('code_category', $categories->code_category)->where('status', 1)->orderBy('created_at', 'desc')->get();
+        $blogs = $this->BlogService->where('code_category', $categories->code_category)->where('type_blog','!=','VIP')->where('status', 1)->orderBy('created_at', 'desc')->get();
+        if(!empty($_SESSION['id'])){
+           $blogs = $this->BlogService->where('code_category', $categories->code_category)->where('status', 1)->orderBy('created_at', 'desc')->get(); 
+        }
         $htmls = '';
         foreach($blogs as $blog){
             Carbon::setLocale('vi');

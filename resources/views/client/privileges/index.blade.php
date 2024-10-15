@@ -188,7 +188,8 @@
                                                 <td style=""align="center">7</td>
                                                 <td style="font-weight: 700;">Danh mục đầu tư V.I.P FinTop</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="color:red;font-weight: 700;"align="center">X</td>
+                                                <!-- <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td> -->
                                                 <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                                 <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
