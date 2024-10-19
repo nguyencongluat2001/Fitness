@@ -109,7 +109,7 @@
         </tr>
       </thead>
       <tbody id="body_data" style="background:#dbead3;" @if(!Auth::check()) class="blur" @endif>
-        @if(Auth::check() && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG' || (!empty($_SESSION['role']) && $_SESSION['role'] != 'USERS'))))
+        @if(Auth::check() && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG')))
         @foreach ($datas as $key => $data)
         @php $id = $data->id; @endphp
         <tr>
@@ -119,7 +119,7 @@
           </td>
           <td style="vertical-align: middle;" class="td_exchange_{{$id}}" align="center">
             <span id="span_exchange_{{$id}}" class="span_exchange_{{$id}}">{{$data->exchange}}</span>
-        </td>
+          </td>
           <td style="vertical-align: middle;white-space: inherit;" class="td_code_category_{{$id}}" align="center">
             <span id="span_code_category_{{$id}}" class="span_code_category_{{$id}}">{{!empty($data->category->name_category) ? $data->category->name_category : ''}}</span>
           </td>
