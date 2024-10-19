@@ -109,7 +109,7 @@
         </tr>
       </thead>
       <tbody id="body_data" style="background:#dbead3;" @if(!Auth::check()) class="blur" @endif>
-        @if(Auth::check() && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG' || (!empty($_SESSION['role'] && $_SESSION['role'] != 'USERS'))))
+        @if(Auth::check() && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG' || (!empty($_SESSION['role'] && $_SESSION['role'] != 'USERS')))))
         @foreach ($datas as $key => $data)
         @php $id = $data->id; @endphp
         <tr>
