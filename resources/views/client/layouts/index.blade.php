@@ -251,11 +251,11 @@
 </script>
 
 <body style="position: relative;" onload="loadBell()">
-    <div id="imageLoading" class="loader_bg_of">
+    <!-- <div id="imageLoading" class="loader_bg_of">
         <div class="loader_bg">
             <div class="loader"><img src="../assets/images/loading.gif" alt="#" /></div>
         </div>
-    </div>
+    </div> -->
     <div class="header-one ">
         <div class="container header-one">
             <div class="date-header">
@@ -439,9 +439,9 @@
         });
     </script>
     <script>
-        setTimeout(() => {
-            $('#imageLoading').addClass("loader_bg_of");
-        }, 2000)
+        //setTimeout(() => {
+          //  $('#imageLoading').addClass("loader_bg_of");
+        //}, 2000)
 
         function loadBell(){
             if($("#icon-bell").hasClass('animate-slow')){
