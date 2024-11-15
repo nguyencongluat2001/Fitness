@@ -62,6 +62,10 @@
         background-size: cover;
     }
 
+    .navbar-brand.header-logo {
+        width: 7%;
+    }
+
     #menuClient {
         position: -webkit-sticky;
         position: sticky;
@@ -74,7 +78,8 @@
     #navbar-toggler-success {
         text-align: center;
     }
-    #menuClient{
+
+    #menuClient {
         background-color: #700e13;
     }
 
@@ -85,7 +90,8 @@
         border-radius: 50%;
         margin: auto;
     }
-    .btn_close{
+
+    .btn_close {
         display: none;
     }
 
@@ -113,7 +119,7 @@
 
     @media (max-width: 768px) {
         .navbar-brand.header-logo {
-            width: 10% !important;
+            width: 10%;
         }
 
         .navbar-toggler-success {
@@ -140,29 +146,26 @@
         .logo-title {
             font-size: calc(1.375rem + 1.5vw);
         }
+
         .btn_close {
             display: block;
         }
 
         #menuClient #navbar-toggler-success {
-            position: fixed;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.7);
-            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
         }
-        #menuClient #navbar-toggler-success #menu-content{
+
+        #menuClient #navbar-toggler-success #menu-content {
             border-radius: unset;
             margin: 0;
             background-color: #700e13;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             bottom: 0;
             animation: menu-show .5s;
         }
+
         @keyframes menu-show {
             0% {
                 left: -200px;
@@ -172,13 +175,15 @@
                 left: 0;
             }
         }
-        #menu-content{
-            width: 70%;
+
+        #menu-content {
+            width: 80%;
         }
 
         .align-self-center.title-reponsive h1 {
             font-size: 2rem !important;
         }
+
         #navbar-toggler-success {
             text-align: left;
         }
@@ -186,7 +191,7 @@
 
     @media (max-width: 350px) {
         .align-self-center.title-reponsive h1 {
-            font-size: 1.5rem !important;
+            font-size: 1.35rem !important;
         }
     }
 
@@ -286,7 +291,7 @@
                 <!-- <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex" id="navbar-toggler-success"> -->
                 <ul class="navbar-nav">
                     <!-- Authentication Links -->
-                     @guest
+                    @guest
                     <div style="display:flex;">
                         <div>
                             @if (Route::has('login'))
@@ -329,29 +334,29 @@
                         </div>
                     </li>
                     @endguest
-                   {{-- @if (!empty($_SESSION['id']))
+                    {{-- @if (!empty($_SESSION['id']))
                         <span id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             <img src="{{url('/file-image/avatar/')}}/{{ !empty(Auth::user()->avatar)?Auth::user()->avatar:'' }}" alt="Image" style="border-radius:50%;height: 30px;width: 30px;object-fit: cover;">
-                            <span style="color:white">
-                                {{ isset($_SESSION['name'])?$_SESSION['name']:'' }}
-                            </span>
-                        </span>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="{{ URL::asset('/client/infor/index') }}">
-                                <p>
-                                    {{ __('Thông tin cá nhân') }}
-                                </p>
-                            </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <span style="color:white">
+                        {{ isset($_SESSION['name'])?$_SESSION['name']:'' }}
+                    </span>
+                    </span>
+                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ URL::asset('/client/infor/index') }}">
+                            <p>
+                                {{ __('Thông tin cá nhân') }}
+                            </p>
+                        </a>
+                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                             document.getElementById('logout-form').submit();">
-                                <p>
-                                    {{ __('Đăng xuất') }}
-                                </p>
-                            </a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                @csrf
-                            </form>
-                        </div>
+                            <p>
+                                {{ __('Đăng xuất') }}
+                            </p>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                            @csrf
+                        </form>
+                    </div>
                     @else
                     <div style="display:flex;">
                         <div>
@@ -379,16 +384,60 @@
     <div class="bgs">
         <nav id="main_nav" class="navbar navbar-expand-lg  shadow" style="padding:0px !important">
             <div class="container d-flex justify-content-between align-items-center mt-3">
-                <div class="navbar-brand h1 header-logo" style="width: 7%;" href="#">
+                <div class="navbar-brand h1 header-logo" href="#">
                     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon text-white"><i class="fa fa-bars"></i></span>
                     </button>
-                    <a @if(isset($_SESSION['role']) && !in_array($_SESSION['role'], ['USERS', 'USER' ])) href="{{ url('') . '/system/home/index' }}" @else href="" @endif>
-                        <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
-                    </a>
+                    <span id="logo">
+                        <a @if(isset($_SESSION['role']) && !in_array($_SESSION['role'], ['USERS', 'USER' ])) href="{{ url('') . '/system/home/index' }}" @else href="" @endif>
+                            <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
+                        </a>
+                        <span class="logo-title-mobile">
+                            Tài Chính & Đầu Tư
+                        </span>
+                    </span>
+                    <span id="auth-search">
+                        @if(!isset($_SESSION['id']))
+                        <a href="{{ url('login') }}"><i class="fa fa-user"></i></a>
+                        @else
+                        <span id="navbarDropdown" class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <i class="fa fa-user"></i>
+                        </span>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ URL::asset('/client/infor/index') }}">
+                                <p>
+                                    {{ __('Thông tin cá nhân') }}
+                                </p>
+                            </a>
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                                <p>
+                                    {{ __('Đăng xuất') }}
+                                </p>
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </div>
+                        @endif
+
+                        <span class="ms-1"><i class="fa fa-search"></i></span>
+                    </span>
                 </div>
                 <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);display:block">
                     <h1 class="logo-title" style="font-family: auto;font-weight: 500;color:#fff079;padding-left: 4%;">Tài Chính &amp; Đầu Tư</h1>
+                </div>
+            </div>
+            <div class="menu-mobile">
+                <div class="menu-mobile-home"><a href="{{ url('client') }}/home/index"><i class="fas fa-home"></i></a></div>
+                <div class="menu-mobile-list">
+                    <ul>
+                        @foreach($menuItems as $key => $value)
+                        @if($key != 'home')
+                        <li class="menu-link"><a href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a></li>
+                        @endif
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -440,13 +489,13 @@
     </script>
     <script>
         //setTimeout(() => {
-          //  $('#imageLoading').addClass("loader_bg_of");
+        //  $('#imageLoading').addClass("loader_bg_of");
         //}, 2000)
 
-        function loadBell(){
-            if($("#icon-bell").hasClass('animate-slow')){
-                $("#icon-bell").removeClass('animate-slow'); 
-            }else{
+        function loadBell() {
+            if ($("#icon-bell").hasClass('animate-slow')) {
+                $("#icon-bell").removeClass('animate-slow');
+            } else {
                 $("#icon-bell").addClass('animate-slow');
             }
             setTimeout(() => {
@@ -569,7 +618,7 @@
         $(".menu-close").click(function() {
             $("#navbar-toggler-success.navbar-collapse").removeClass('show');
         })
-        
+
         document.addEventListener('click', closeOnClickOutside);
 
         function closeOnClickOutside(e) {

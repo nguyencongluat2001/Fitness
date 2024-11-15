@@ -89,7 +89,7 @@
         <tr>
           <!-- <th style="white-space: inherit;vertical-align: middle;font-size: 17px;background:#fff5dc;color:#dd0000;" align="center" colspan="3"><center>NHẬP MÃ CỔ PHIẾU</center></th> -->
           <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#700e13;color:#fff49b;height: 80px;" align="center" colspan="12">
-            <center>FINTOP - DANH MỤC CỔ PHIẾU CHO TÍN HIỆU MUA</center>
+            <center>FINTOP - DANH MỤC TÍN HIỆU MUA NHÓM NGÀNH</center>
           </th>
         </tr>
         <tr style="background:#529845;color:white">
@@ -100,8 +100,8 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br>TA</b></td>
-          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhận định TA - Xu hướng cổ phiếu</b></td>
-          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
+          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xu hướng cổ phiếu</b></td>
+          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu hành động</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
           <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b style="color:#ff0000">Vùng giá <br> cắt lỗ</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br> FA</b></td>

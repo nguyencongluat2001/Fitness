@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 mt-3">
-                <h2 class="h4 text-light light-300" style="height: 5rem;">
+                <h2 class="h4 text-light light-300" style="min-height: 5rem;">
                     <div style="display:flex">
                         <div style="width:10%">
                             <img src="../clients/img/LogoFinTop_red.png" alt="Card image" width="100%">
@@ -27,7 +27,7 @@
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-envelope"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" href="mailto:FinTop.DVKH@gmail.com"> Email: FinTop.DVKH@gmail.com</a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" href="mailto:FinTop.DVKH@gmail.com"> Email: DVKH@fintopdata.vn</a></td>
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-map-marker-alt"></i></td>
@@ -37,7 +37,7 @@
                 </table>
             </div>
             <div class="col-md-3 mt-3">
-                <h2 class="h4 text-light light-300" style="height: 5rem;display: flex;align-items: center;" >
+                <h2 class="h4 text-light light-300" style="min-height: 5rem;display: flex;align-items: center;" >
                     <i class="fas fa-handshake"></i> Đồng hành
                 </h2>
                 <!-- Đồng hành -->
@@ -92,7 +92,7 @@
                 </table>
             </div>
             <div class="col-md-3 mt-3">
-                <h2 class="h4 text-light light-300" style="height: 5rem;display: flex;align-items: center;" >
+                <h2 class="h4 text-light light-300" style="min-height: 5rem;display: flex;align-items: center;" >
                     <i class="fas fa-handshake"></i> Tải APP
                 </h2>
                 <!-- Tải app -->

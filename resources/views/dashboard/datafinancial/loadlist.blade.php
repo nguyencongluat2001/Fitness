@@ -95,14 +95,14 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Người đảm nhận</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Thời gian cập nhật</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng TA</b></td>
-					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Nhận định Ta - Xu hướng CP</b></td>
-					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Hành động</b></td>
+					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xu hướng CP</b></td>
+					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu hành động</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá giao dịch</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá cắt lỗ</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Phân tích DN FA</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Thứ tự</b></td>
-					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu mua</b></td>
+					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>TOP Cổ Phiếu</b></td>
 					<td style="background:#151f38;"><span onclick="JS_DataFinancial.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></td>
 				</tr>
 			</thead>

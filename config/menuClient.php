@@ -35,7 +35,7 @@ return [
                 'role' => false,
             ],
             'recommendationsIndex' => [
-                'name' => 'Khuyến nghị VIP',
+                'name' => 'Tín Hiệu V.I.P',
                 'icon' => 'fas fa-comments-dollar',
                 'role' => false,
             ],
@@ -57,17 +57,17 @@ return [
                 'role' => false,
             ],
             'session' => [
-                'name' => 'Phân tích đầu tư VIP',
+                'name' => 'V.I.P Đầu Tư',
                 'icon' => 'fas fa-calendar-alt',
                 'role' => false,
             ],
             'industry' => [
-                'name' => 'Phân tích ngành',
+                'name' => 'BCPT Ngành',
                 'icon' => 'fas fa-industry',
                 'role' => false,
             ],
             'stock' => [
-                'name' => 'Phân tích doanh nghiệp',
+                'name' => 'BCPT Doanh nghiệp',
                 'icon' => 'fas fa-chart-line',
                 'role' => false,
             ],

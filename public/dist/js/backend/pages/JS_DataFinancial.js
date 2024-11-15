@@ -535,7 +535,7 @@ JS_DataFinancial.prototype.checkValidate = function(){
         return false;
     }
     if ($("#frmAdd #identify_trend").val() == '') {
-        var nameMessage = 'Nhận định TA - xu hướng CP không được để trống!';
+        var nameMessage = 'Xu hướng CP không được để trống!';
         NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
         $("#frmAdd #identify_trend").focus();
         return false;

@@ -70,8 +70,7 @@
                                          <iframe class="video-fintop" allowfullscreen width="916" height="403" src="https://www.youtube.com/embed/V4PdhYmfQ_8" title="ĐỘI NGŨ FINTOP - CỐ VẤN ĐẦU TƯ  &amp; QUẢN LÝ TÀI SẢN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </center>
                                      <br>
-                                    <p class="text-center"><i>“FinTop, kiến tạo danh mục đầu tư bền vững. <br>
-                                            FinTop, đầu tư mãi đỉnh.”</i>
+                                    <p class="text-center"><i>“FinTop - Kiến tạo giá trị đầu tư bền vững.”</i>
                                     </p>
                                     <br>
                                     <center>
@@ -87,7 +86,7 @@
                                                 <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                     <li class="name_cg"> (Anh) Trần Khánh Linh</li>
                                                     <li style="font-size: 14px;font-weight:500">Co-Founder FinTop, Dữ liệu FinTop.Data</li>
-                                                    <li style="font-size: 14px;font-weight:500">Cố vấn đầu tư - Chuyên gia Phân tích TTCK.</li>
+                                                    <li style="font-size: 14px;font-weight:500">Chuyên gia NC&PT Thị trường chứng khoán.</li>
                                                     <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                 </ul>
                                             </div>
@@ -114,9 +113,9 @@
                                                     <img class="img-fluid rounded-circle" src="../clients/img/tran_thien_tu.jpg" style="width:58%" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Trần Thiện Tú</li>
-                                                        <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
-                                                        <li style="font-size: 14px;font-weight:500">Phân tích Tài chính & Định giá cổ phiếu</li>
-                                                        <li style="font-size: 14px;font-weight:500">Phân tích cơ bản, tiềm năng doanh nghiệp.</li>
+                                                        <li style="font-size: 14px;font-weight:500">Chuyên gia NC&PT Cổ phiếu DN</li>
+                                                        <li style="font-size: 14px;font-weight:500">Nghiên cứu chuyển động Ngành</li>
+                                                        <li style="font-size: 14px;font-weight:500">Phân tích triển vọng tăng trưởng Doanh nghiệp</li>
                                                         <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                     </ul>
                                                 </div>
@@ -124,7 +123,7 @@
                                                     <img class="img-fluid rounded-circle" src="../clients/img/mai_tien_dung.jpg" style="width:58%" alt="Card image">
                                                     <ul class="team-member-caption list-unstyled text-center pt-4 light-300">
                                                         <li class="name_cg">(Anh) Mai Tiến Dũng</li>
-                                                        <li style="font-size: 14px;font-weight:500">Cố vấn Đầu tư & Phân tích cổ phiếu FinTop</li>
+                                                        <li style="font-size: 14px;font-weight:500">Chuyên gia NC&PT Cổ phiếu DN</li>
                                                         <li style="font-size: 14px;font-weight:500">Thạc sĩ Tài chính số - FinTech</li>
                                                         <li style="font-size: 14px;font-weight:500">(Loughborough University, London, Anh).</li>
                                                         <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>

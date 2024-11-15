@@ -16,7 +16,7 @@ return [
             'href' => '/system/approvepayment/index',
         ],
         'signal' => [
-            'name' => 'Khuyến nghị VIP',
+            'name' => 'Tín Hiệu V.I.P',
             'icon' => 'fas fa-signal',
             'a'    => 'nav-link link-signal',
             'href' => '/system/signal/index',
@@ -179,7 +179,7 @@ return [
     //         'href' => '/system/blog/index',
     //     ],
     //     'signal' => [
-    //         'name' => 'Khuyến nghị VIP',
+    //         'name' => 'Tín Hiệu V.I.P',
     //         'icon' => 'fas fa-signal',
     //         'a'    => 'nav-link link-signal',
     //         'href' => '/system/signal/index',
@@ -230,7 +230,7 @@ return [
     //         'href' => '/system/blog/index',
     //     ],
     //     'signal' => [
-    //         'name' => 'Khuyến nghị VIP',
+    //         'name' => 'Tín Hiệu V.I.P',
     //         'icon' => 'fas fa-signal',
     //         'a'    => 'nav-link link-signal',
     //         'href' => '/system/signal/index',

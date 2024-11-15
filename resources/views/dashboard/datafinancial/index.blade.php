@@ -172,7 +172,7 @@
                                     <select class="form-control input-sm chzn-select" name="type"
                                         id="type">
                                         <option value='DATA'>Dữ liệu cổ phiếu</option>
-                                        <option value='TIN_HIEU'>Tín hiệu mua</option>
+                                        <option value='TIN_HIEU'>TOP Cổ Phiếu</option>
                                     </select>
                                 </div>
                                 <div class="col-md-2" >

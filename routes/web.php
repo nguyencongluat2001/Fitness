@@ -340,7 +340,7 @@ Route::prefix('/client')->group(function () {
                 // tín hiệu mua
                 Route::get('/signalIndex', [ClientDataFinancialController::class, 'signalIndex']);
                 Route::post('/loadList_signal', [ClientDataFinancialController::class, 'loadList_signal']);
-                // khuyến nghị vip
+                // Tín Hiệu V.I.P
                 Route::get('/recommendationsIndex', [ClientDataFinancialController::class, 'recommendationsIndex']);
                 Route::post('/loadList_recommendations', [ClientDataFinancialController::class, 'loadList_recommendations']);
                 Route::post('/loadList_recommendations_tab', [ClientDataFinancialController::class, 'loadList_recommendations_tab']);

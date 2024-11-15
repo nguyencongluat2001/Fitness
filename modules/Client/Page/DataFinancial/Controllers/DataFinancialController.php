@@ -165,7 +165,7 @@ class DataFinancialController extends Controller
         return view('client.dataFinancial.loadlist-signal',$result);
     }
      /**
-     * Khuyến nghị vip
+     * Tín Hiệu V.I.P
      *
      * @param Request $request
      *
@@ -176,7 +176,7 @@ class DataFinancialController extends Controller
         return view('client.dataFinancial.recommendations.index');
     }
      /**
-     * list khuyến nghị vip
+     * list Tín Hiệu V.I.P
      *
      * @param Request $request
      *
@@ -215,7 +215,7 @@ class DataFinancialController extends Controller
         }
     }
 /**
-     * list khuyến nghị vip
+     * list Tín Hiệu V.I.P
      *
      * @param Request $request
      *
