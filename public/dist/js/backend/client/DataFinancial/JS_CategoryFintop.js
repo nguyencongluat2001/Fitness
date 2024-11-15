@@ -20,7 +20,7 @@ JS_CategoryFintop.prototype.loadIndex = function () {
     myClass.loadList_basic(oForm);
 }
 /**
- * Load màn hình danh sách danh mục khuyến nghị vip
+ * Load màn hình danh sách danh mục Tín Hiệu V.I.P
  *
  * @param oForm (tên form)
  *

@@ -11,10 +11,10 @@
                 <!-- Chú giải xếp hạng TA/FA -->
                 <div class="home_index_child" style="background:#ffffffe6 !important;display:block;">
                     <div class="col-lg-12" style="padding:10px;">
-                    <h1 class="h5 "> I. KHUYẾN NGHỊ VIP</h1>
-                        <!-- <h class="h4 py-2"> <span style="font-family: auto;">Khuyến nghị vip</span></h> -->
+                    <h1 class="h5 "> I. TÍN HIỆU V.I.P</h1>
+                        <!-- <h class="h4 py-2"> <span style="font-family: auto;">Tín Hiệu V.I.P</span></h> -->
                             @if(!isset($_SESSION['account_type_vip']) || ($_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG'))
-                                <span><i class="far fa-lightbulb"></i> Đăng ký VIP để xem danh mục khuyến nghị VIP FINTOP
+                                <span><i class="far fa-lightbulb"></i> Đăng ký VIP để xem danh mục Tín Hiệu V.I.P FINTOP
                                     <button  type="button" class="btn btn-success" href="{{ url('/client/privileges/index') }}"> <a href="{{ url('/client/privileges/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
                                 </span>
                             @endif

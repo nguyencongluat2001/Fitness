@@ -187,7 +187,7 @@ if(isset($_SESSION['id'])){
             </div>
             <div class="chat">
                 <!-- <div class="chat-title">
-                    <span style="color: #ffd2c4;font-size: 17px;letter-spacing: 1px;font-family: Trocchi, serif;">Khuyến nghị VIP</span>
+                    <span style="color: #ffd2c4;font-size: 17px;letter-spacing: 1px;font-family: Trocchi, serif;">Tín Hiệu V.I.P</span>
                 </div> -->
                 <!-- Màn hình danh sách -->
                 <div class="table-responsive">
@@ -200,7 +200,7 @@ if(isset($_SESSION['id'])){
         @if(isset($notification))
         <div id="notification" class="notification" @if(count($notification) <= 0) hidden @endif>
             <div class="bubble speech">
-                <span><strong><i>Bạn có {{count($notification)}} khuyến nghị mới</i></strong></span>
+                <span><strong><i>Bạn có {{count($notification)}} Tín Hiệu V.I.P đầu tư!</i></strong></span>
             </div>
         </div>
         @endif

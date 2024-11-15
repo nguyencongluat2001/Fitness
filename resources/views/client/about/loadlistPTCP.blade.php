@@ -56,7 +56,7 @@ use Carbon\Carbon;
         </div>
         <div class="paginate">
             @if(count($datas) > 0)
-            {{$datas->links('pagination.blog')}}
+            {{$datas->links('pagination.baocaoTTTH')}}
             @endif
         </div>
     </div>

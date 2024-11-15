@@ -10,9 +10,9 @@
                     <!-- Chú giải xếp hạng TA/FA -->
                     <div class="home_index_child" style="background:#ffffffe6 !important">
                         <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
-                            <h class=" py-2"><i class="fas fa-chart-bar"></i> <span style="font-size:16px;font-family: auto;">DANH MỤC KHUYẾN NGHỊ VIP FINTOP</span></h>
+                            <h class=" py-2"><i class="fas fa-chart-bar"></i> <span style="font-size:16px;font-family: auto;">DANH MỤC V.I.P FINTOP</span></h>
                             <br>
-                            {{--<span><i class="fas fa-hand-point-right"></i> Đăng ký VIP để xem danh mục khuyến nghị VIP FINTOP
+                            {{--<span><i class="fas fa-hand-point-right"></i> Đăng ký VIP để xem danh mục Tín Hiệu V.I.P FINTOP
                                 <button  type="button" class="btn btn-success" href="{{ url('/client/upgradeAcc/index') }}"> <a href="{{ url('/client/upgradeAcc/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
                             </span>--}}
                             <div class="table-responsive py-2">
@@ -24,7 +24,7 @@
                     <!-- biểu đồ FireAnt -->
                     <div class="home_index_child " style="background:#ffffffe6 !important">
                         <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
-                            <h class=" py-2"><i class="far fa-chart-bar"></i>. <span style="font-size:16px;font-family: auto;" > HIỆU QUẢ DANH MỤC VIP FINTOP</span> </h> <br>
+                            <h class=" py-2"><i class="far fa-chart-bar"></i>. <span style="font-size:16px;font-family: auto;" > HIỆU QUẢ DANH MỤC FINTOP</span> </h> <br>
                              <!-- Màn hình danh sách hieu qua  -->
                                 <div id="table-container-categoryFintop_basic"></div>
                         </div>

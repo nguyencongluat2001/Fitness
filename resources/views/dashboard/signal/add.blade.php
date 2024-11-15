@@ -1,7 +1,7 @@
 <div class="modal-dialog modal-lg">
     <div class="modal-content card">
         <div class="modal-header">
-            <h5 class="modal-title">Cập nhật tín hiệu mua</h5>
+            <h5 class="modal-title">Cập nhật TOP Cổ Phiếu</h5>
             <button type="button" class="btn btn-sm" data-bs-dismiss="modal">
                 X
             </button>

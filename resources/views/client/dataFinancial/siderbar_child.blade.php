@@ -8,13 +8,13 @@
                         <a class="nav-link link-search  px-3 "  style="color:black" href="{{ URL::asset('/client/dataFinancial/index') }}"><i class="fas fa-search"></i> Tra cứu cổ phiếu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-signal px-3" style="color:black" href="{{ URL::asset('/client/dataFinancial/signalIndex') }}"> <i class="fas fa-signal"></i> Tín hiệu mua</a>
+                        <a class="nav-link link-signal px-3" style="color:black" href="{{ URL::asset('/client/dataFinancial/signalIndex') }}"> <i class="fas fa-signal"></i> TOP Cổ Phiếu</a>
                     </li> 
                     <li class="nav-item">
-                        <a class="nav-link link-recommendations px-3" style="color:black" href="{{ URL::asset('/client/dataFinancial/recommendationsIndex') }}"><i class="fas fa-comments-dollar"></i> Khuyến nghị VIP</a>
+                        <a class="nav-link link-recommendations px-3" style="color:black" href="{{ URL::asset('/client/dataFinancial/recommendationsIndex') }}"><i class="fas fa-comments-dollar"></i> Tín Hiệu V.I.P</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-categoryFintop  px-3" style="color:black" href="{{ URL::asset('/client/dataFinancial/categoryFintopIndex') }}"><i class="fas fa-sitemap"></i> Danh mục FinTop</a>
+                        <a class="nav-link link-categoryFintop  px-3" style="color:black" href="{{ URL::asset('/client/dataFinancial/categoryFintopIndex') }}"><i class="fas fa-sitemap"></i> Danh Mục V.I.P</a>
                     </li>
                 </ul>
             </div>
