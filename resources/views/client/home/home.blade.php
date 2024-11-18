@@ -99,7 +99,7 @@ use Carbon\Carbon;
         background-repeat: no-repeat;
         width: 100%;
         font-size: 16px;
-        padding: 12px 20px 12px 40px;
+        padding: 12px  12px 40px;
         border: 1px solid #ddd;
         margin-bottom: 12px;
     }
@@ -165,153 +165,235 @@ use Carbon\Carbon;
     <section class="container" style="background:#b56c6cb5">
         <div>
             <div class="pt-3 pb-3 d-lg-flex gx-5">
-                <div class="col-lg-4">
-                    <form action="" method="POST" id="frmLoadlist_list">
-                        <div class="home_index_vnindex">
-                            <h2 class="h4 py-2"> <span style="padding-left:5%"></span> </h2>
-                            <!-- <div class="home_index_child py-2">
-                                <div class="col-md-6">
-                                    <select class="form-control input-sm chzn-select" name="type_code" id="type_code">
-                                        <option value="VNINDEX">VNINDEX</option>
-                                        <option value="HNX30">HNX30</option>
-                                        <option value="HNXINDEX">HNXINDEX</option>
-                                        <option value="UPINDEX">UPINDEX</option>
-                                        <option value="VN30">VN30</option>
-                                        <option value="VN100">VN100</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6" style="padding-left:10px">
-                                    <select class="form-control input-sm chzn-select" name="limit" id="limit">
-                                        <option value="10">Hiển thị 10</option>
-                                        <option value="30">Hiển thị 30</option>
-                                        <option value="50">Hiển thị 50</option>
-                                    </select>
-                                </div>
+                <div class="col-md-8">
+                    <div class="col-md-12 mb-3 row">
+                        <span><b>V.I.P ĐẦU TƯ (BCPT VIP)</b></span>
+                    </div>
+                    <div id="style-1" class="homeTTTH row vip">
+                        @if(isset($TTTH))
+                        @foreach ($TTTH as $key => $data)
+                        @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
+                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
+                            <div class="about-img">
+                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                <h1 style="position: absolute;right:0">
+                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                                </h1>
+                                @endif
+                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
                             </div>
-                            <div class="home_index_child" style="display:none">
-                                <div class="col-md-5">
-                                    <input class="form-control input-sm" type="date" id="fromDate" name="fromDate" value="<?php echo date('Y-m-d', mktime(0, 0, 0, date("m") - 1, date("d"), date("Y"))) ?>" min="2010-01-01" max="2030-12-31">
-                                </div>
-                                <i style="padding:10px 20px 0px 20px" class="fas fa-long-arrow-alt-right"></i>
-                                <div class="col-md-5">
-                                    <input class="form-control input-sm" type="date" id="toDate" name="toDate" value="<?php echo (new DateTime())->format('Y-m-d'); ?>" min="2010-01-01" max="2030-12-31">
-                                </div>
-                            </div>
-                            <div class="home_index_child" style="display:none">
-                                <button id="txt_search" name="txt_search" style="background:#2e4970;color:white" type="button" class="btn"><i class="fas fa-search"></i></button>
-                            </div>
-                            <div class="table-responsive">
-                                <div id="table-container"></div>
-
-                            </div> -->
-                             <!-- biểu đồ FireAnt -->
-                            <div class="home_index_child " style="background:#ffffffe6 !important;margin: 10px;!important">
-                                <div class="col-lg-12" style="width: 100%;">
-                                <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
-                                    <iframe style="width:100%" height="770" src="https://fireant.vn/top-symbols" 
-                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                        allowfullscreen>
-                                    </iframe>
-                                    <p>Nguồn theo: Fireant</p>
-                                </div>
+                            <div class="about-content">
+                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </div>
                         </div>
-                    </form>
-                    <!-- <div class="card mb-4 pt-3">
-                        <form action="" method="POST" id="frmLoadlist_Bank">
-                            <div class="home_index_vnindex">
-                                <h2 class="h4 py-2 "><span style="padding-left:5%">Chứng khoán ngân hàng</span> </h2>
-                                <div class="home_index_child py-2">
-                                    <div class="col-md-6">
-                                        <select class="form-control input-sm chzn-select" name="type_code" id="type_code">
-                                            @foreach($codeBank as $key => $value)
-                                            <option value="{{$key}}">{{$value}}</option>
-                                            @endforeach
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="home_index_child" style="display:none">
-                                    <div class="col-md-5">
-                                        <input class="form-control input-sm" type="date" id="fromDate" name="fromDate" value="<?php echo date('Y-m-d', mktime(0, 0, 0, date("m") - 1, date("d"), date("Y"))) ?>" min="2010-01-01" max="2030-12-31">
-                                    </div>
-                                    <i style="padding:10px 20px 0px 20px" class="fas fa-long-arrow-alt-right"></i>
-                                    <div class="col-md-5">
-                                        <input class="form-control input-sm" type="date" id="toDate" name="toDate" value="<?php echo (new DateTime())->format('Y-m-d'); ?>" min="2010-01-01" max="2030-12-31">
-                                    </div>
-                                </div>
-                                <div class="table-responsive">
-                                    <div id="table-container-bank"></div>
-                                </div>
+                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
+                            <div class="about-img">
+                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                <h1 style="position: absolute;right:0">
+                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                                </h1>
+                                @endif
+                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
                             </div>
-                        </form>
-                    </div> -->
+                            <div class="about-content">
+                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                            </div>
+                        </div>
+                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
+                            <div class="about-img">
+                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                <h1 style="position: absolute;right:0">
+                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                                </h1>
+                                @endif
+                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
+                            </div>
+                            <div class="about-content">
+                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                            </div>
+                        </div>
+                        @endforeach
+                        @endif
+                    </div>
                 </div>
-                <div class="col-lg-8" style="padding-left:10px">
-                    <!-- Start Our Work -->
-                    <form action="" method="POST" id="frmLoadlist_blog" style="background:#ffffffe3;border-radius: 0.25em;">
-
-                        <div class="col-lg-6 mx-auto " style="display:flex">
-                            <div class="input-group pt-2 box">
-                                <input id="myInput" onkeyup="myFunction()" style="background:#f8fdffbd" type="text" class="input form-control form-control-lg rounded-pill rounded" placeholder="Tìm kiếm bài viết theo từ khóa, danh mục,...">
-                            </div>
-                        </div>
-                        <div class="scrollbar_blog carousel-item active list-hispital-home">
-                            <div class=" row d-flex ">
-                                <div class="banner-content col-lg-12 col-12 m-lg-auto text-left ">
-                                    <!-- Start Our Work -->
-                                    <!-- <div class="col-lg-12" style="padding:10px;width: 100%;">
-                                        <iframe style="width:100%" height="320" src="https://fireant.vn/dashboard" 
-                                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                            allowfullscreen>
-                                        </iframe>
-                                        <p>Nguồn theo: Fireant</p>
-                                    </div> -->
-                                    <section class="">
-                                        <table id="myTable" class="table  table-bordered table-striped table-condensed dataTable no-footer">
-                                            <tbody>
-                                                @foreach ($blog as $key => $data)
-                                                @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                                                <tr>
-                                                    <td style="background: #ffffffeb;width:30%;" align="center">
-                                                        @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                                        <h1 style="position: absolute;">
-                                                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 50px;width: 32px;object-fit: cover;">
-                                                        </h1>
-                                                        @endif
-                                                        <img src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" alt="Image" style="height: 200px;width: 250px;object-fit: cover;">
-                                                    </td>
-                                                    <td style="background: #ffffffeb;width:70%;vertical-align: middle;">
-                                                        <!-- <span class="title" style="font-size: 20px;font-family: -webkit-body;color: #1d3952;"> -->
-                                                            <a href="{{url('client/about/reader') . '/' . $data->id}}">
-                                                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                                                            </a>
-                                                        <!-- </span> <br> -->
-                                                        <p style="color: #d25d00;font-size: 13px;">{{(isset($data['cate_name']) ? $data['cate_name'] . ' - ' : '') . $created_at->diffForHumans($now)}} ( {{!empty($data->created_at) ? date('H:i', strtotime($data->created_at)) : ''}}  {{!empty($data->created_at) ? date('d/m/Y', strtotime($data->created_at)) : ''}} )</p>
-                                                        <span class="blogReader" style="font-size: 15px;font-family: -webkit-body;color: #1d3952;">
-                                                            {!! $data->detailBlog->decision !!}
-                                                        </span><br>
-                                                        <a href="{{url('client/about/reader') . '/' . $data->id}}">
-                                                            <span style="background: #32870b;color: #ffffff;" class="btn btn-outline-light rounded-pill">Xem chi tiết</span>
-                                                        </a>
-                                                    </td>
-
-                                                </tr>
-                                                @endforeach
-                                            </tbody>
-                                        </table>
-                                    </section>
-                                    <!-- End Our Work -->
+                <div class="col-md-4">
+                    <div class="col-md-12 mb-3">
+                        <span style="padding-left: 15px;"><b>THỊ TRƯỜNG TỔNG HỢP</b></span>
+                    </div>
+                    <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
+                        <ul class="list-group">
+                            @if(isset($TTTH))
+                            @foreach ($TTTH as $key => $data)
+                            @php
+                            Carbon::setLocale('vi');$now = Carbon::now();
+                            $created_at = Carbon::create($data->created_at);
+                            @endphp
+                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
+                                <div class="pb-3 d-lg-flex gx-5">
+                                    <!-- display: flex;align-items: center;justify-content: center; -->
+                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                            <h1 style="position: absolute;right:0">
+                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                            </h1>
+                                            @endif
+                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-7 about-content">
+                                        <i>{{$created_at->diffForHumans($now)}}</i>
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                            <hr style="margin: 0;" class="mb-3">
+                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
+                                <div class="pb-3 d-lg-flex gx-5">
+                                    <!-- display: flex;align-items: center;justify-content: center; -->
+                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                            <h1 style="position: absolute;right:0">
+                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                            </h1>
+                                            @endif
+                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-7 about-content">
+                                        <i>{{$created_at->diffForHumans($now)}}</i>
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="margin: 0;" class="mb-3">
+                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
+                                <div class="pb-3 d-lg-flex gx-5">
+                                    <!-- display: flex;align-items: center;justify-content: center; -->
+                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                            <h1 style="position: absolute;right:0">
+                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                            </h1>
+                                            @endif
+                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-7 about-content">
+                                        <i>{{$created_at->diffForHumans($now)}}</i>
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="margin: 0;" class="mb-3">
+                            @endforeach
+                            @endif
+                        </ul>
+                    </div>
                 </div>
-                </form>
-
-                <!-- End Our Work -->
+            </div>
+            <div class="pt-3 pb-3 d-lg-flex gx-5">
+                <div class="col-md-8">
+                    <div class="col-md-12 mb-3 row">
+                        <span><b>NGÀNH ĐẦU TƯ (BCPT NGÀNH)</b></span>
+                    </div>
+                    <div id="style-1" class="homeTTTH row vip">
+                        @if(isset($BCPTN))
+                        @foreach ($BCPTN as $key => $data)
+                        @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
+                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
+                            <div class="about-img">
+                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                <h1 style="position: absolute;right:0">
+                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                                </h1>
+                                @endif
+                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
+                            </div>
+                            <div class="about-content">
+                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                            </div>
+                        </div>
+                        @endforeach
+                        @endif
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="col-md-12 mb-3">
+                        <span style="padding-left: 15px;"><b>BCPT CỔ PHIẾU DOANH NGHIỆP</b></span>
+                    </div>
+                    <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
+                        <ul class="list-group">
+                            @if(isset($BCPTDN))
+                            @foreach ($BCPTDN as $key => $data)
+                            @php
+                            Carbon::setLocale('vi');$now = Carbon::now();
+                            $created_at = Carbon::create($data->created_at);
+                            @endphp
+                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
+                                <div class="pb-3 d-lg-flex gx-5">
+                                    <!-- display: flex;align-items: center;justify-content: center; -->
+                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                            <h1 style="position: absolute;right:0">
+                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                            </h1>
+                                            @endif
+                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-7 about-content">
+                                        <i>{{$created_at->diffForHumans($now)}}</i>
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="margin: 0;" class="mb-3">
+                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
+                                <div class="pb-3 d-lg-flex gx-5">
+                                    <!-- display: flex;align-items: center;justify-content: center; -->
+                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                            <h1 style="position: absolute;right:0">
+                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                            </h1>
+                                            @endif
+                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-7 about-content">
+                                        <i>{{$created_at->diffForHumans($now)}}</i>
+                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr style="margin: 0;" class="mb-3">
+                            @endforeach
+                            @endif
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
-</div>
-</section>
+    </section>
 </div>
 <div style="clear:both"></div>
 <div class="modal" id="reader" role="dialog"></div>

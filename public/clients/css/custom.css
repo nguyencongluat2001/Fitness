@@ -4,188 +4,255 @@ Custom CSS for TemplateMo 561 Purple Buzz
 https://templatemo.com/tm-561-purple-buzz
 
 */
-#auth-search{
+#auth-search {
     display: none;
 }
-.menu-mobile{
+
+.menu-mobile {
     display: none;
 }
-.logo-title-mobile{
+
+.logo-title-mobile {
     display: none;
     font-family: auto;
     font-weight: 500;
     color: #fff079;
 }
-.about-list .about-img{
+
+.about-list .about-img {
     position: relative;
     min-height: 200px;
     border: 1px solid #bdbdbd;
     border-top-left-radius: .5rem;
     border-top-right-radius: .5rem;
+    cursor: pointer;
 }
+
 .about-list .about-content {
     padding: 10px;
     border: 1px solid #bdbdbd;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
+    border-top: none;
+    background-color: #fff;
 }
-.about-content .card-title{
+
+.ttth .about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70px;
+    padding-left: 1rem;
+    background-color: #fff;
+    border-top-right-radius: calc(.25rem - 1px);
+    border-bottom-right-radius: calc(.25rem - 1px);
+}
+
+.about-content .card-title {
     display: block;
     display: -webkit-box;
     height: calc(16px*1.3*2);
     font-size: 16px;
     line-height: 1.3;
-    -webkit-line-clamp: 2;  /* số dòng hiển thị */
+    -webkit-line-clamp: 2;
+    /* số dòng hiển thị */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+    cursor: pointer;
 }
-.scrollbarTTTH {
-    overflow-x: auto;
+
+.about-content a {
+    text-decoration: none;
 }
-.scrollbarTTTH::-webkit-scrollbar {
+.about-content i {
+    font-size: .75rem;
+}
+
+.homeTTTH::-webkit-scrollbar {
     height: 1rem;
 }
-.scrollbarTTTH::-webkit-scrollbar-thumb {
+
+.homeTTTH::-webkit-scrollbar-thumb {
     background: #700e13;
     border-radius: 0.2rem;
 }
-.scrollbarTTTH .row{
+
+.homeTTTH .row {
     --bs-gutter-x: 1.5rem;
 }
-.scrollbarTTTH .about-list{
+
+.homeTTTH .about-list {
     padding: 0 15px;
 }
+.vip .card-img-top{
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+.ttth .card-img-top{
+    border-radius: calc(.25rem - 1px);
+}
+
 @media (max-width: 992px) {
+
     .date-header,
-    .marquee-header
-    {
+    .marquee-header {
         display: none;
     }
 }
+
 @media (max-width: 768px) {
-    .title-reponsive{
+    .title-reponsive {
         width: 50%;
     }
 }
-@media (max-width: 576px) {
-    
-}
+
+@media (max-width: 576px) {}
+
 @media (max-width: 450px) {
     body::-webkit-scrollbar {
         width: 0.2rem;
     }
+
     body::-webkit-scrollbar-thumb {
         background: #700e13;
         border-radius: 0.2rem;
-    }    
-    .header-one{
+    }
+
+    .header-one {
         display: none;
     }
-    #main_nav .navbar-toggler-icon{
+
+    #main_nav .navbar-toggler-icon {
         height: unset;
     }
-    #logo{
+
+    #logo {
         display: flex;
         padding: 3px 10px;
         align-items: center;
         justify-content: center;
     }
-    #logo img{
+
+    #logo img {
         width: 100%;
     }
-    #logo span.logo-title-mobile{
+
+    #logo span.logo-title-mobile {
         font-size: 1rem;
         padding-left: 10px;
     }
-    .logo-title-mobile{
+
+    .logo-title-mobile {
         display: block;
     }
-    #myInput{
+
+    #myInput {
         padding: .5rem 1rem !important;
     }
-    #navbar-toggler-success h1{
+
+    #navbar-toggler-success h1 {
         display: none !important;
     }
-    #main_nav{
+
+    #main_nav {
         position: relative;
     }
-    .navbar-brand.header-logo{
+
+    .navbar-brand.header-logo {
         width: 100% !important;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding-bottom: unset;
     }
-    .navbar-brand.header-logo button.navbar-toggler{
+
+    .navbar-brand.header-logo button.navbar-toggler {
         margin: unset;
         padding: .25rem;
     }
-    .container.d-flex.justify-content-between.align-items-center.mt-3{
+
+    .container.d-flex.justify-content-between.align-items-center.mt-3 {
         margin-top: 0 !important;
     }
-    #auth-search{
+
+    #auth-search {
         display: block;
     }
-    #auth-search>*{
+
+    #auth-search>* {
         color: #fff;
     }
-    #auth-search i{
+
+    #auth-search i {
         font-size: 16px;
     }
-    #auth-search .dropdown-menu{
+
+    #auth-search .dropdown-menu {
         top: unset;
     }
-    .menu-mobile{
+
+    .menu-mobile {
         display: flex;
         width: 100%;
     }
-    .menu-mobile .menu-mobile-home a{
+
+    .menu-mobile .menu-mobile-home a {
         padding: 10px 10px 10px 18px;
     }
-    .menu-mobile .menu-mobile-list{
+
+    .menu-mobile .menu-mobile-list {
         overflow-x: scroll;
         width: 100%;
         display: inline;
         height: 36px;
     }
-    .menu-mobile .menu-mobile-list ul{
+
+    .menu-mobile .menu-mobile-list ul {
         display: flex;
         margin-bottom: 0;
         padding-left: 0;
         min-width: 901px;
     }
+
     .menu-mobile .menu-mobile-list::-webkit-scrollbar {
         height: 0;
     }
-    .menu-mobile ul li{
+
+    .menu-mobile ul li {
         display: inline-block;
         list-style: none;
     }
-    .menu-mobile ul li a{
+
+    .menu-mobile ul li a {
         font-family: 'BigShouldersDisplay' !important;
         padding: 10px 10px 12px 10px;
     }
-    .menu-mobile .row{
+
+    .menu-mobile .row {
         overflow-x: auto;
     }
-    .menu-mobile a{
+
+    .menu-mobile a {
         color: #fff;
         text-decoration: none;
     }
-    .scrollbarTTTH .d-flex{
+
+    .scrollbarTTTH .d-flex {
         display: block !important;
     }
-    .scrollbarTTTH .about-list{
+
+    .scrollbarTTTH .about-list {
         margin-bottom: 1rem;
     }
-    .scrollbarTTTH .about-content i{
+
+    .scrollbarTTTH .about-content i {
         font-size: .9rem;
     }
-    .about-content .card-title{
+
+    .about-content .card-title {
         height: unset;
     }
 }
-@media (max-width: 350px) {
-    
-}
+
+@media (max-width: 350px) {}

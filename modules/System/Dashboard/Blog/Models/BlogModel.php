@@ -5,6 +5,7 @@ namespace Modules\System\Dashboard\Blog\Models;
 use Illuminate\Database\Eloquent\Model;
 use Modules\System\Dashboard\Blog\Models\BlogDetailModel;
 use Modules\System\Dashboard\Blog\Models\BlogImagesModel;
+use Modules\System\Dashboard\Users\Models\UserModel;
 
 class BlogModel extends Model
 {
@@ -51,5 +52,9 @@ class BlogModel extends Model
     public function imageBlog()
     {
         return $this->hasMany(BlogImagesModel::class, 'code_blog', 'code_blog');
+    }
+    public function users()
+    {
+        return $this->belongsTo(UserModel::class, 'user_id', 'id');
     }
 }
