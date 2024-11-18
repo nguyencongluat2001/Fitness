@@ -45,15 +45,10 @@ class HomeController extends Controller
             $category = $this->categoryService->select('code_category','name_category')->where('cate',$cate->code_cate)->get()->toArray();
         }
         $datas['category'] = isset($category) ? $category : [];
-        $data = array();
-        $objResult = $this->blogService->where('status',1)->orderBy('created_at', 'DESC')->get()->take(15);
-        foreach($objResult as $key => $value){
-            $category = $this->categoryService->where('code_category', $value->code_category)->first();
-            if(!empty($category)){
-                $objResult[$key]->cate_name = $category->name_category;
-            }
-        }
-        $datas['blog'] = $objResult;
+        $datas['TTTH'] = $this->blogService->filter(['category' => 'BAO_CAO_TTTH', 'limit' => 6]);
+        $datas['VIP'] = $this->blogService->filter(['category' => 'BAO_CAO_TKP', 'limit' => 6]);
+        $datas['BCPTN'] = $this->blogService->filter(['category' => 'BAO_CAO_PTN', 'limit' => 6]);
+        $datas['BCPTDN'] = $this->blogService->filter(['category' => 'BAO_CAO_PTDN', 'limit' => 6]);
         return view('client.home.home',$datas);
     }
     
