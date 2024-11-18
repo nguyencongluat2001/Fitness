@@ -187,34 +187,6 @@ use Carbon\Carbon;
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </div>
                         </div>
-                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
-                            <div class="about-img">
-                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                <h1 style="position: absolute;right:0">
-                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
-                                </h1>
-                                @endif
-                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
-                            </div>
-                            <div class="about-content">
-                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
-                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
-                            <div class="about-img">
-                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                <h1 style="position: absolute;right:0">
-                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
-                                </h1>
-                                @endif
-                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
-                            </div>
-                            <div class="about-content">
-                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
-                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                            </div>
-                        </div>
                         @endforeach
                         @endif
                     </div>
@@ -231,50 +203,6 @@ use Carbon\Carbon;
                             Carbon::setLocale('vi');$now = Carbon::now();
                             $created_at = Carbon::create($data->created_at);
                             @endphp
-                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
-                                <div class="pb-3 d-lg-flex gx-5">
-                                    <!-- display: flex;align-items: center;justify-content: center; -->
-                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                            <h1 style="position: absolute;right:0">
-                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
-                                            </h1>
-                                            @endif
-                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 about-content">
-                                        <i>{{$created_at->diffForHumans($now)}}</i>
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr style="margin: 0;" class="mb-3">
-                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
-                                <div class="pb-3 d-lg-flex gx-5">
-                                    <!-- display: flex;align-items: center;justify-content: center; -->
-                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                            <h1 style="position: absolute;right:0">
-                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
-                                            </h1>
-                                            @endif
-                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 about-content">
-                                        <i>{{$created_at->diffForHumans($now)}}</i>
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr style="margin: 0;" class="mb-3">
                             <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
                                 <div class="pb-3 d-lg-flex gx-5">
                                     <!-- display: flex;align-items: center;justify-content: center; -->
@@ -342,28 +270,6 @@ use Carbon\Carbon;
                             Carbon::setLocale('vi');$now = Carbon::now();
                             $created_at = Carbon::create($data->created_at);
                             @endphp
-                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
-                                <div class="pb-3 d-lg-flex gx-5">
-                                    <!-- display: flex;align-items: center;justify-content: center; -->
-                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                            <h1 style="position: absolute;right:0">
-                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
-                                            </h1>
-                                            @endif
-                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 about-content">
-                                        <i>{{$created_at->diffForHumans($now)}}</i>
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <hr style="margin: 0;" class="mb-3">
                             <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
                                 <div class="pb-3 d-lg-flex gx-5">
                                     <!-- display: flex;align-items: center;justify-content: center; -->
