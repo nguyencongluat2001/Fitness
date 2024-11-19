@@ -163,159 +163,157 @@ use Carbon\Carbon;
     </section>
     <!-- tra cứu cổ phiếu -->
     <section class="container" style="background:#b56c6cb5">
-        <div>
-            <div class="pt-3 pb-3 d-lg-flex gx-5">
-                <div class="col-md-12 row">
-                    <form action="" method="POST" id="frmLoadlist_list">
-                        <div class="home_index_vnindex">
-                            <h2 class="h4 py-2"> <span style="padding-left:5%"></span> </h2>
-                            <!-- biểu đồ FireAnt -->
-                            <div class="home_index_child " style="background:#ffffffe6 !important;margin: 10px;">
-                                <div class="col-lg-12" style="width: 100%;">
-                                    <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
-                                    <iframe style="width:100%" height="770" src="https://fireant.vn/top-symbols"
-                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                        allowfullscreen>
-                                    </iframe>
-                                    <p>Nguồn theo: Fireant</p>
-                                </div>
+        <div class="pt-3 pb-3 d-lg-flex gx-5">
+            <div class="col-md-12 row">
+                <form action="" method="POST" id="frmLoadlist_list">
+                    <div class="home_index_vnindex">
+                        <h2 class="h4 py-2"> <span style="padding-left:5%"></span> </h2>
+                        <!-- biểu đồ FireAnt -->
+                        <div class="home_index_child " style="background:#ffffffe6 !important;margin: 10px;">
+                            <div class="col-lg-12" style="width: 100%;">
+                                <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
+                                <iframe style="width:100%" height="770" src="https://fireant.vn/top-symbols"
+                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                                <p>Nguồn theo: Fireant</p>
                             </div>
                         </div>
-                    </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="pt-3 pb-3 d-lg-flex gx-5">
+            <div class="col-md-8">
+                <div class="col-md-12 mb-3 row">
+                    <span><b>V.I.P ĐẦU TƯ (BCPT VIP)</b></span>
+                </div>
+                <div id="style-1" class="homeTTTH row vip">
+                    @if(isset($TTTH))
+                    @foreach ($TTTH as $key => $data)
+                    @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
+                    <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
+                        <div class="about-img">
+                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                            <h1 style="position: absolute;right:0">
+                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                            </h1>
+                            @endif
+                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
+                        </div>
+                        <div class="about-content">
+                            <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                            <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                        </div>
+                    </div>
+                    @endforeach
+                    @endif
                 </div>
             </div>
-            <div class="pt-3 pb-3 d-lg-flex gx-5">
-                <div class="col-md-8">
-                    <div class="col-md-12 mb-3 row">
-                        <span><b>V.I.P ĐẦU TƯ (BCPT VIP)</b></span>
-                    </div>
-                    <div id="style-1" class="homeTTTH row vip">
+            <div class="col-md-4">
+                <div class="col-md-12 mb-3">
+                    <span style="padding-left: 15px;"><b>THỊ TRƯỜNG TỔNG HỢP</b></span>
+                </div>
+                <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
+                    <ul class="list-group">
                         @if(isset($TTTH))
                         @foreach ($TTTH as $key => $data)
-                        @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
-                            <div class="about-img">
-                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                <h1 style="position: absolute;right:0">
-                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
-                                </h1>
-                                @endif
-                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
-                            </div>
-                            <div class="about-content">
-                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
-                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                            </div>
-                        </div>
-                        @endforeach
-                        @endif
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="col-md-12 mb-3">
-                        <span style="padding-left: 15px;"><b>THỊ TRƯỜNG TỔNG HỢP</b></span>
-                    </div>
-                    <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
-                        <ul class="list-group">
-                            @if(isset($TTTH))
-                            @foreach ($TTTH as $key => $data)
-                            @php
-                            Carbon::setLocale('vi');$now = Carbon::now();
-                            $created_at = Carbon::create($data->created_at);
-                            @endphp
-                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
-                                <div class="pb-3 d-lg-flex gx-5">
-                                    <!-- display: flex;align-items: center;justify-content: center; -->
-                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                            <h1 style="position: absolute;right:0">
-                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
-                                            </h1>
-                                            @endif
-                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 about-content">
-                                        <i>{{$created_at->diffForHumans($now)}}</i>
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
-                                        </a>
-                                    </div>
+                        @php
+                        Carbon::setLocale('vi');$now = Carbon::now();
+                        $created_at = Carbon::create($data->created_at);
+                        @endphp
+                        <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
+                            <div class="pb-3 d-lg-flex gx-5">
+                                <!-- display: flex;align-items: center;justify-content: center; -->
+                                <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                        @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                        <h1 style="position: absolute;right:0">
+                                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                        </h1>
+                                        @endif
+                                        <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col-lg-7 about-content">
+                                    <i>{{$created_at->diffForHumans($now)}}</i>
+                                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                        <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                    </a>
                                 </div>
                             </div>
-                            <hr style="margin: 0;" class="mb-3">
-                            @endforeach
-                            @endif
-                        </ul>
-                    </div>
+                        </div>
+                        <hr style="margin: 0;" class="mb-3">
+                        @endforeach
+                        @endif
+                    </ul>
                 </div>
             </div>
-            <div class="pt-3 pb-3 d-lg-flex gx-5">
-                <div class="col-md-8">
-                    <div class="col-md-12 mb-3 row">
-                        <span><b>NGÀNH ĐẦU TƯ (BCPT NGÀNH)</b></span>
-                    </div>
-                    <div id="style-1" class="homeTTTH row vip">
-                        @if(isset($BCPTN))
-                        @foreach ($BCPTN as $key => $data)
-                        @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                        <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
-                            <div class="about-img">
-                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                <h1 style="position: absolute;right:0">
-                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
-                                </h1>
-                                @endif
-                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
-                            </div>
-                            <div class="about-content">
-                                <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
-                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                            </div>
-                        </div>
-                        @endforeach
-                        @endif
-                    </div>
+        </div>
+        <div class="pt-3 pb-3 d-lg-flex gx-5">
+            <div class="col-md-8">
+                <div class="col-md-12 mb-3 row">
+                    <span><b>NGÀNH ĐẦU TƯ (BCPT NGÀNH)</b></span>
                 </div>
-                <div class="col-md-4">
-                    <div class="col-md-12 mb-3">
-                        <span style="padding-left: 15px;"><b>BCPT CỔ PHIẾU DOANH NGHIỆP</b></span>
+                <div id="style-1" class="homeTTTH row vip">
+                    @if(isset($BCPTN))
+                    @foreach ($BCPTN as $key => $data)
+                    @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
+                    <div class="col-md-4 about-list mb-3" onclick="JS_About.blogReader('{{$data->id}}')">
+                        <div class="about-img">
+                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                            <h1 style="position: absolute;right:0">
+                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                            </h1>
+                            @endif
+                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
+                        </div>
+                        <div class="about-content">
+                            <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                            <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                        </div>
                     </div>
-                    <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
-                        <ul class="list-group">
-                            @if(isset($BCPTDN))
-                            @foreach ($BCPTDN as $key => $data)
-                            @php
-                            Carbon::setLocale('vi');$now = Carbon::now();
-                            $created_at = Carbon::create($data->created_at);
-                            @endphp
-                            <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
-                                <div class="pb-3 d-lg-flex gx-5">
-                                    <!-- display: flex;align-items: center;justify-content: center; -->
-                                    <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                            <h1 style="position: absolute;right:0">
-                                                <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
-                                            </h1>
-                                            @endif
-                                            <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
-                                        </a>
-                                    </div>
-                                    <div class="col-lg-7 about-content">
-                                        <i>{{$created_at->diffForHumans($now)}}</i>
-                                        <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                            <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
-                                        </a>
-                                    </div>
+                    @endforeach
+                    @endif
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12 mb-3">
+                    <span style="padding-left: 15px;"><b>BCPT CỔ PHIẾU DOANH NGHIỆP</b></span>
+                </div>
+                <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
+                    <ul class="list-group">
+                        @if(isset($BCPTDN))
+                        @foreach ($BCPTDN as $key => $data)
+                        @php
+                        Carbon::setLocale('vi');$now = Carbon::now();
+                        $created_at = Carbon::create($data->created_at);
+                        @endphp
+                        <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
+                            <div class="pb-3 d-lg-flex gx-5">
+                                <!-- display: flex;align-items: center;justify-content: center; -->
+                                <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
+                                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                        @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                        <h1 style="position: absolute;right:0">
+                                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                        </h1>
+                                        @endif
+                                        <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
+                                    </a>
+                                </div>
+                                <div class="col-lg-7 about-content">
+                                    <i>{{$created_at->diffForHumans($now)}}</i>
+                                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                        <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                    </a>
                                 </div>
                             </div>
-                            <hr style="margin: 0;" class="mb-3">
-                            @endforeach
-                            @endif
-                        </ul>
-                    </div>
+                        </div>
+                        <hr style="margin: 0;" class="mb-3">
+                        @endforeach
+                        @endif
+                    </ul>
                 </div>
             </div>
         </div>
