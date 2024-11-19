@@ -56,7 +56,7 @@ use Carbon\Carbon;
                                 <div class="row g-lg-5 mb-4">
                                     <div class="banner-wrapper w-100" style="background: #ffffff;">
                                     <div align="right">
-                                        <a href="{{ url('') }}">
+                                        <a href="javascript:;" onclick="history.back()">
                                              <i style="font-size: 25px;padding: 10px;color:#2f2f2f" class="fas fa-reply"></i>
                                         </a>
                                     </div>

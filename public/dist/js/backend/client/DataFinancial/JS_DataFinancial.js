@@ -220,16 +220,16 @@ function click2(id, type) {
             JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
         }
     })
-    $("#" + type + "_" + id).focusout(function () {
-        var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
-        $("#" + type + "_" + id).attr('hidden', true);
-        $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
-        $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
-        $(".span_" + type + "_" + id).html(nhap);
-        if (text != $(".span_" + type + "_" + id).html()) {
-            JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
-        }
-    })
+    // $("#" + type + "_" + id).focusout(function () {
+    //     var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
+    //     $("#" + type + "_" + id).attr('hidden', true);
+    //     $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
+    //     $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
+    //     $(".span_" + type + "_" + id).html(nhap);
+    //     if (text != $(".span_" + type + "_" + id).html()) {
+    //         JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
+    //     }
+    // })
 }
 /**
  * Cập nhật khi ở màn hình hiển thị danh sách
@@ -281,6 +281,59 @@ JS_DataFinancial.prototype.updateDataFinancial = function (id, column, value = '
                 return false;
             } else {
                 JS_DataFinancial.addrow(arrResult);
+            }
+        }, error: function (e) {
+            console.log(e);
+            NclLib.successLoadding();
+        }
+    });
+}
+/**
+ * Cập nhật khi ở màn hình hiển thị danh sách
+ */
+JS_DataFinancial.prototype.updateDataFinancialMobile = function (id, column, value = '') {
+    var myClass = this;
+    var url = myClass.urlPath + '/searchDataCP';
+    var data = 'id=' + id;
+    data += '&_token=' + $('#frmSearchCP').find('#_token').val();
+    if (column == 'code_cp') { data += '&code_cp=' + (column == 'code_cp' && $("#code_cp_mobile").val() != undefined ? $("#code_cp_mobile").val() : value); }
+    NclLib.loadding();
+    $.ajax({
+        url: url,
+        data: data,
+        type: "POST",
+        success: function (arrResult) {
+            if (arrResult['status'] == 401) {
+                Swal.fire({
+                    title: arrResult['message'],
+                    showCloseButton: true,
+                    confirmButtonText: "Đăng nhập",
+                    confirmButtonColor: "rgb(31 140 64)",
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.replace('/login');
+                    }
+                })
+                $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
+                $(".swal2-modal").css('color', '#ffffff');
+                $(".swal2-modal").css('font-size', '15px');
+                $(".swal2-modal").css('font-family', 'FontAwesome');
+            }else if (arrResult['status'] == 2) {
+                var icon = 'warning';
+                var color = '#f5ae67';
+                NclLib.alerMesage(arrResult['message'],icon,color);
+                $("#code_cp").focusout();
+                return false;
+            }else{
+                $(".td_exchange_mobile").html(arrResult['exchange']);
+                $(".td_code_category_mobile").html(arrResult['code_category']);
+                $(".td_created_at_mobile").html(arrResult['created_at'] + ' ' + arrResult['created_at_day']);
+                $(".td_ratings_TA_mobile").html(arrResult['ratings_TA']);
+                $(".td_identify_trend_mobile").html(arrResult['identify_trend']);
+                $(".td_act_mobile").html(arrResult['act']);
+                $(".td_trading_price_range_mobile").html(arrResult['trading_price_range']);
+                $(".td_ratings_FA_mobile").html(arrResult['ratings_FA']);
+                $(".td_view_mobile").html('<a href="'+arrResult['url_link']+'" target="_blank">Chi tiết</a>');
             }
         }, error: function (e) {
             console.log(e);

@@ -70,7 +70,7 @@ https://templatemo.com/tm-561-purple-buzz
 }
 
 .homeTTTH::-webkit-scrollbar {
-    height: 1rem;
+    height: .4rem;
 }
 
 .homeTTTH::-webkit-scrollbar-thumb {
@@ -91,6 +91,19 @@ https://templatemo.com/tm-561-purple-buzz
 }
 .ttth .card-img-top{
     border-radius: calc(.25rem - 1px);
+}
+
+.link-datafinancial.active-menuClient.mobile{
+    display: none;
+}
+.pricing-table-heading .txt-second{
+    padding-top: 1.5rem;
+}
+.home_index_child.web{
+    display: block;
+}
+.home_index_child.mobile{
+    display: none;
 }
 
 @media (max-width: 992px) {
@@ -139,7 +152,7 @@ https://templatemo.com/tm-561-purple-buzz
     }
 
     #logo span.logo-title-mobile {
-        font-size: 1rem;
+        font-size: 1.6rem;
         padding-left: 10px;
     }
 
@@ -198,7 +211,7 @@ https://templatemo.com/tm-561-purple-buzz
     }
 
     .menu-mobile .menu-mobile-home a {
-        padding: 10px 10px 10px 18px;
+        padding: 10px;
     }
 
     .menu-mobile .menu-mobile-list {
@@ -226,7 +239,15 @@ https://templatemo.com/tm-561-purple-buzz
 
     .menu-mobile ul li a {
         font-family: 'BigShouldersDisplay' !important;
-        padding: 10px 10px 12px 10px;
+        padding: 8px;
+    }
+    
+    .menu-mobile ul li a.nav-link.dropdown-toggle{
+        display: unset;
+    }
+
+    .menu-mobile .dropdown-item{
+        color: #000;
     }
 
     .menu-mobile .row {
@@ -250,8 +271,56 @@ https://templatemo.com/tm-561-purple-buzz
         font-size: .9rem;
     }
 
-    .about-content .card-title {
-        height: unset;
+    .homeTTTH.row.vip{
+        overflow-x: scroll;
+        flex-wrap: nowrap;
+    }
+    .homeTTTH .ttth{
+        padding-right: 15px;
+    }
+    .ttth .pb-3.d-lg-flex.gx-5{
+        display: flex;
+    }
+    .ttth .about-img{
+        width: 25%;
+    }
+    .ttth .about-content{
+        width: 75%;
+    }
+    .about-title{
+        margin-top: 1rem;
+    }
+    .card-title{
+        padding-right: 1rem;
+    }
+    .link-datafinancial.active-menuClient.web{
+        display: none !important;
+    }
+    .link-datafinancial.active-menuClient.mobile{
+        display: block;
+    }
+    .form-dangky-vip{
+        padding-left: unset;
+        padding-right: unset;
+    }
+    .dangky-hoivien{
+        width: 50%;
+    }
+    .dangky-hoivien .pricing-table-heading{
+        font-size: 1rem;
+    }
+    .pricing-table-heading .txt-second{
+        padding-top: .5rem;
+    }
+    .pricing-table-body img{
+        width: 37px !important;
+        height: 37px !important;
+    }
+    .home_index_child.web{
+        display: none;
+    }
+    .home_index_child.mobile{
+        display: block;
     }
 }
 
