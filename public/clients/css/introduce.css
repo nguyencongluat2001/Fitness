@@ -376,7 +376,7 @@
     }
     #main-root .label{
         min-width: 10rem;
-        right: -3rem;
+        right: -2.6rem;
         line-height: 35px;
         top: 38%;
     }
@@ -447,7 +447,7 @@
     #main-root .label{
         line-height: 30px;
         min-width: 8rem;
-        right: -7rem;
+        right: -6rem;
         top: 40%;
     }
     .branch-inverse {
@@ -472,14 +472,14 @@
     .label-inverse {
         line-height: 30px;
         min-width: 10rem;
-        right: 100px;
+        right: 58%;
     }
     .entry-inverse:first-child:before {
         height: 5rem;
         top: 67%;
     }
     .entry-inverse:last-child:before {
-        height: 3.38rem;
+        height: 3.36rem;
     }
     .home_index_child .container{
         padding-left: 0;

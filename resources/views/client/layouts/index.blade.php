@@ -434,7 +434,23 @@
                     <ul>
                         @foreach($menuItems as $key => $value)
                         @if($key != 'home')
-                        <li class="menu-link"><a href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a></li>
+                        <li class="menu-link">
+                            @if(isset($value['child']) && !empty($value['child']))
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ $value['name'] }}
+                            </a>
+                            <ol class="dropdown-menu">
+                                @foreach($value['child'] as $keyChild => $child)
+                                <li class="nav-item">
+                                    <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
+                                </li>
+                                @endforeach
+                            </ol>
+                            @else
+                            
+                            <a href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a>
+                            @endif
+                        </li>
                         @endif
                         @endforeach
                     </ul>

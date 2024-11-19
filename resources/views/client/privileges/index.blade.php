@@ -22,24 +22,20 @@
             <div class="home_index_vnindex pt-1 pb-3" style="background:#ffffff91 !important;border-radius:0px !important">
             <!-- Start pricing -->
             <div class="home_index_child" style="background:#700e13  !important;">
-                <div class="container-lg py-5">
+                <div class="container-lg py-5 form-dangky-vip">
                     <div class="col-md-12 m-auto text-center py-2">
                         <h1 class="h5" style="color:#fff079">ĐĂNG KÝ TÀI KHOẢN HỘI VIÊN FINTOP</h1>
                         <p class="pricing-footer" style="color:#ffffff">
                         "FinTop, kiến tạo danh mục đầu tư bền vững".
                         </p>
                     </div>
-
-
                     <div class="row px-lg-3">
-
-
-                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3 dangky-hoivien">
                             <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
                                 <div class="pricing-table-body card-body text-center">
                                     <div class="bg-secondary" style="border-radius: 0.5em;">
                                         <i style="color:#7ff3ff" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> TIÊU CHUẨN</h2>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white"><div class="txt-first">HỘI VIÊN</div> <div class="txt-second">TIÊU CHUẨN</div></h2>
                                         <br>
                                     </div>
                                     <div class="pricing-table-footer pt-2">
@@ -49,12 +45,12 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3 dangky-hoivien">
                             <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
                                 <div class="pricing-table-body card-body text-center">
                                     <div class="bg-secondary" style="border-radius: 0.5em;">
                                         <i style="color:#f2f2f2 !important"  class="pricing-table-icon display-3 bx bx-package py-3"></i>
-                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> BẠC</h2>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white"><div class="txt-first">HỘI VIÊN</div><div class="txt-second">BẠC</div></h2>
                                         <br>
                                     </div>
                                     <div class="pricing-table-footer pt-2">
@@ -65,12 +61,12 @@
                         </div>
 
 
-                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3 dangky-hoivien">
                             <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
                                 <div class="pricing-table-body card-body text-center">
                                      <div class="bg-secondary" style="border-radius: 0.5em;">
                                         <i style="color:#ffbb2e !important" class="pricing-table-icon display-3 bx bx-package py-3"></i>
-                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> VÀNG</h2>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white"><div class="txt-first">HỘI VIÊN</div><div class="txt-second">VÀNG</div></h2>
                                         <br>
                                     </div>
                                     <div class="pricing-table-footer pt-2">
@@ -80,7 +76,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3">
+                        <div class="col-md-3 pt-sm-0 pt-3 px-xl-3 dangky-hoivien">
                             <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
                                 <div class="pricing-table-body card-body text-center">
                                     <!-- <i class="pricing-table-icon display-3 bx bx-package  py-3"></i> -->
@@ -89,7 +85,7 @@
                                         <img   src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 65px;width: 65px;">
 
                                         </div>
-                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white">HỘI VIÊN <br> <br> KIM CƯƠNG</h2>
+                                        <h2 class="pricing-table-heading h5 semi-bold-600" style="color:white"><div class="txt-first">HỘI VIÊN</div><div class="txt-second">KIM CƯƠNG</div></h2>
                                         <br>
                                     </div>
                                     <div class="pricing-table-footer pt-2">

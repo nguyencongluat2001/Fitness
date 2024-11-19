@@ -16,7 +16,7 @@
              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="home_index_vnindex pt-1 pb-2" style="background:#b56c6cb5 !important;border-radius:0px !important">
                     <!-- Chú giải xếp hạng TA/FA -->
-                    <div class="home_index_child" style="background:#ffffffe6 !important">
+                    <div class="home_index_child web" style="background:#ffffffe6 !important">
                         <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
                         <!-- <h1 class="h5 "> TRA CỨU CỔ PHIẾU <i class="fas fa-search"></i></h1> -->
                             <div class="table-responsive py-2">
@@ -25,6 +25,9 @@
                             </div>
                             <i class="py-2">- <span style="font-family: auto;">Xem chú giải xếp hạng TA/FA</span> : </i> <i onclick="JS_DataFinancial.noteTaFa()" style="color:#3ac500" class="far fa-eye"></i>
                         </div>
+                    </div>
+                    <div class="home_index_child mobile" style="background:#ffffffe6 !important">
+                        @include('client.dataFinancial.dataFintopMobile')
                     </div>
                     <!-- biểu đồ FireAnt -->
                     <div class="home_index_child " style="background:#ffffffe6 !important">
