@@ -99,7 +99,7 @@ use Carbon\Carbon;
         background-repeat: no-repeat;
         width: 100%;
         font-size: 16px;
-        padding: 12px  12px 40px;
+        padding: 12px 12px 40px;
         border: 1px solid #ddd;
         margin-bottom: 12px;
     }
@@ -164,6 +164,26 @@ use Carbon\Carbon;
     <!-- tra cứu cổ phiếu -->
     <section class="container" style="background:#b56c6cb5">
         <div>
+            <div class="pt-3 pb-3 d-lg-flex gx-5">
+                <div class="col-md-12 row">
+                    <form action="" method="POST" id="frmLoadlist_list">
+                        <div class="home_index_vnindex">
+                            <h2 class="h4 py-2"> <span style="padding-left:5%"></span> </h2>
+                            <!-- biểu đồ FireAnt -->
+                            <div class="home_index_child " style="background:#ffffffe6 !important;margin: 10px;">
+                                <div class="col-lg-12" style="width: 100%;">
+                                    <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
+                                    <iframe style="width:100%" height="770" src="https://fireant.vn/top-symbols"
+                                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen>
+                                    </iframe>
+                                    <p>Nguồn theo: Fireant</p>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
             <div class="pt-3 pb-3 d-lg-flex gx-5">
                 <div class="col-md-8">
                     <div class="col-md-12 mb-3 row">
