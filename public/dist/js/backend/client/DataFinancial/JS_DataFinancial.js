@@ -294,9 +294,14 @@ JS_DataFinancial.prototype.updateDataFinancial = function (id, column, value = '
 JS_DataFinancial.prototype.updateDataFinancialMobile = function (id, column, value = '') {
     var myClass = this;
     var url = myClass.urlPath + '/searchDataCP';
-    var data = 'id=' + id;
-    data += '&_token=' + $('#frmSearchCP').find('#_token').val();
-    if (column == 'code_cp') { data += '&code_cp=' + (column == 'code_cp' && $("#code_cp_mobile").val() != undefined ? $("#code_cp_mobile").val() : value); }
+    var data = {
+        _token: $('#_token').val(),
+        id: id,
+    }
+    let code_cp = '';
+    if (column == 'code_cp') { code_cp = (column == 'code_cp' && $("#code_cp_mobile").val() != undefined ? $("#code_cp_mobile").val() : value); }
+    data.code_cp = code_cp;
+
     NclLib.loadding();
     $.ajax({
         url: url,
@@ -319,12 +324,19 @@ JS_DataFinancial.prototype.updateDataFinancialMobile = function (id, column, val
                 $(".swal2-modal").css('font-size', '15px');
                 $(".swal2-modal").css('font-family', 'FontAwesome');
             }else if (arrResult['status'] == 2) {
-                var icon = 'warning';
-                var color = '#f5ae67';
-                NclLib.alerMesage(arrResult['message'],icon,color);
+                Swal.fire({
+                    title: arrResult['message'],
+                    showCloseButton: true,
+                    showConfirmButton: false,
+                    confirmButtonColor: '#f5ae67',
+                    icon: 'warning',
+                    timer: 3000
+                })
                 $("#code_cp").focusout();
                 return false;
-            }else{
+            }else if(data['code_cp'] != ''){
+                console.log('1' + data['code_cp'] + '1')
+                console.log('1' + data.code_cp + '1')
                 $(".td_exchange_mobile").html(arrResult['exchange']);
                 $(".td_code_category_mobile").html(arrResult['code_category']);
                 $(".td_created_at_mobile").html(arrResult['created_at'] + ' ' + arrResult['created_at_day']);

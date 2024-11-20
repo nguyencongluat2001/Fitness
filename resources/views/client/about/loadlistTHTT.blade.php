@@ -17,7 +17,7 @@ use Carbon\Carbon;
         </div>
     </div>
     <div class="card-body" style="padding: 10px !important;">
-        <div id="style-1" class="scrollbar" style="padding-right:10px;max-height:900px !important">
+        <div id="style-1" class="scrollbar ttth_web" style="padding-right:10px;max-height:900px !important">
             <ul class="list-group">
                 @foreach ($datas as $key => $data)
                 @php
@@ -43,7 +43,7 @@ use Carbon\Carbon;
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </a>
-                            <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}})</i>
+                            <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}} {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}})</i>
                             <p class="light-300">
                             <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                             </p>
@@ -59,10 +59,36 @@ use Carbon\Carbon;
                 @endforeach
             </ul>
         </div>
-        <div class="paginate">
+        <div class="paginate ttth_web">
             @if(count($datas) > 0)
             {{$datas->links('pagination.baocaoTTTH')}}
             @endif
+        </div>
+        <div id="style-mobile" class="ttth_mobile row" style="padding-right:10px;max-height:900px !important">
+            @foreach ($datas as $key => $data)
+            @php
+            Carbon::setLocale('vi');$now = Carbon::now();
+            $created_at = Carbon::create($data->created_at);
+            @endphp
+            <div class="col-md-4 about-list mb-3">
+                <div class="about-img">
+                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                        @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                        <h1 style="position: absolute;right:0">
+                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                        </h1>
+                        @endif
+                        <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
+                    </a>
+                </div>
+                <div class="about-content">
+                    <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                        <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                    </a>
+                </div>
+            </div>
+            @endforeach
         </div>
     </div>
 </div>
