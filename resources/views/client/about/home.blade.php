@@ -71,7 +71,8 @@
   .card {
     background: #ffffff26 !important;
   }
-  .blogReader{
+
+  .blogReader {
     width: 100%;
     max-height: 100px;
     display: -webkit-box;
@@ -79,11 +80,11 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
-  .blogReader>*{
+
+  .blogReader>* {
     font-size: 1rem;
     font-weight: unset;
   }
-  
 </style>
 
 <!-- Start Banner Hero -->
@@ -95,10 +96,10 @@
 
       </div> -->
       <div class="col-lg-12" style="background: #fff">
-      <form id="frmLoadlist_blog">
-        <input type="hidden" id="_token" value="{{csrf_token()}}">
-        <div id="table-blog-container"></div>
-      </form>
+        <form id="frmLoadlist_blog">
+          <input type="hidden" id="_token" value="{{csrf_token()}}">
+          <div id="table-blog-container"></div>
+        </form>
       </div>
     </div>
   </section>
@@ -117,11 +118,5 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script> -->
 
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_System_Security.js') }}"></script>
-<script>
-  //   var JS_System_Security = new JS_System_Security();
-  //       $(document).ready(function($) {
-  //              JS_System_Security.security();
-  //   })
-</script>
 
 @endsection
