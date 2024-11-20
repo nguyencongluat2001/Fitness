@@ -3,6 +3,7 @@
 namespace Modules\Client\Page\About\Controllers;
 
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Modules\System\Dashboard\Blog\Services\BlogDetailService;
 use Modules\System\Dashboard\Blog\Services\BlogImagesService;
@@ -159,6 +160,28 @@ class AboutController extends Controller
         $data['datas']['blogImage'] = $blogImage;
         $data['datas']['type'] = $blog->code_category;
         return view("client.about.reader", $data)->render();
+    }
+    /**
+     * load thêm dữ liệu
+     */
+    public function loadMore(Request $request)
+    {
+        $arrInput = $request->all();
+        $arrInput['sort'] = 'created_at';
+        $arrInput['limit'] = 5;
+        $objResult = $this->blogService->filter($arrInput);
+        $results = array();
+        Carbon::setLocale('vi');
+        $now = Carbon::now();
+        foreach($objResult as $key => $value){
+            $created_at = Carbon::create($value->created_at);
+            $results[$key] = $value;
+            $results[$key]['title'] = $value->detailBlog->title;
+            $results[$key]['user_name'] = $value->users->name;
+            $results[$key]['link'] = url('/file-image-client/blogs/' . ($value->imageBlog[0]->name_image ?? ''));
+            $results[$key]['created_at'] = $created_at->diffForHumans($now);
+        }
+        return \Response::json($results);
     }
     
 }

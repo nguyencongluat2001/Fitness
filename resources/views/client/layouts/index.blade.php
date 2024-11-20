@@ -436,7 +436,7 @@
                         @if($key != 'home')
                         <li class="menu-link">
                             @if(isset($value['child']) && !empty($value['child']))
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle link-{{$key}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 {{ $value['name'] }}
                             </a>
                             <ol class="dropdown-menu">

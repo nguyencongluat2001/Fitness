@@ -105,23 +105,29 @@ https://templatemo.com/tm-561-purple-buzz
 .home_index_child.mobile{
     display: none;
 }
-.ttth_web{
+.tkp_web, .ptcp_web{
     display: block;
 }
-.ttth_mobile{
+#content-mobile.tkp_mobile, #content-mobile.ptcp_mobile{
     display: none;
     overflow-x: scroll;
     flex-wrap: nowrap;
 }
-.ttth_mobile::-webkit-scrollbar {
+#content-mobile.tkp_mobile::-webkit-scrollbar, #content-mobile.ptcp_mobile::-webkit-scrollbar {
     height: .4rem;
 }
 
-.ttth_mobile::-webkit-scrollbar-thumb {
+#content-mobile.tkp_mobile::-webkit-scrollbar-thumb,#content-mobile.ptcp_mobile::-webkit-scrollbar-thumb {
     background: #700e13;
     border-radius: 0.2rem;
 }
-
+#loadMore-mobile {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    color: #000;
+}
 @media (max-width: 992px) {
 
     .date-header,
@@ -344,10 +350,10 @@ https://templatemo.com/tm-561-purple-buzz
     .swal2-popup{
         width: 24rem;
     }
-    .ttth_web{
+    .tkp_web, .ptcp_web{
         display: none;
     }
-    .ttth_mobile{
+    #content-mobile.tkp_mobile, #content-mobile.ptcp_mobile{
         display: flex;
     }
 }

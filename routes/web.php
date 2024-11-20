@@ -356,6 +356,7 @@ Route::prefix('/client')->group(function () {
             // báo cáo phân tích
             Route::get('/index', [AboutController::class, 'index']);
             Route::get('/loadListTHTT', [AboutController::class, 'loadListTHTT']);
+            Route::get('/loadMore', [AboutController::class, 'loadMore']);
             Route::prefix('/session')->group(function(){
                 Route::get('', [AboutController::class, 'session']);
                 Route::get('/loadListTKP', [AboutController::class, 'loadListTKP']);

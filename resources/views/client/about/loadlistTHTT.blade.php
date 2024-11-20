@@ -64,31 +64,6 @@ use Carbon\Carbon;
             {{$datas->links('pagination.baocaoTTTH')}}
             @endif
         </div>
-        <div id="style-mobile" class="ttth_mobile row" style="padding-right:10px;max-height:900px !important">
-            @foreach ($datas as $key => $data)
-            @php
-            Carbon::setLocale('vi');$now = Carbon::now();
-            $created_at = Carbon::create($data->created_at);
-            @endphp
-            <div class="col-md-4 about-list mb-3">
-                <div class="about-img">
-                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                        @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                        <h1 style="position: absolute;right:0">
-                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
-                        </h1>
-                        @endif
-                        <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
-                    </a>
-                </div>
-                <div class="about-content">
-                    <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
-                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                        <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                    </a>
-                </div>
-            </div>
-            @endforeach
-        </div>
+        
     </div>
 </div>
