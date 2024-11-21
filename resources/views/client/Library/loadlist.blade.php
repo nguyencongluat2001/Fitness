@@ -74,7 +74,7 @@
   }
 
 </style>
-<div id="style-1" style="padding-right:10px;">
+<div id="style-1">
   <div class="table-responsive pmd-card pmd-z-depth table-container">
         <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer" style="background-color: #fff;">
             <colgroup>
