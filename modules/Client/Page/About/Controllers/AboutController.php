@@ -56,7 +56,6 @@ class AboutController extends Controller
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'created_at';
-        $param['limit'] = 5;
         $objResult = $this->blogService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;

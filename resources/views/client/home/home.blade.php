@@ -227,7 +227,7 @@ use Carbon\Carbon;
                         $created_at = Carbon::create($data->created_at);
                         @endphp
                         <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
-                            <div class="pb-3 d-lg-flex gx-5">
+                            <div class="ttth-content d-lg-flex gx-5">
                                 <!-- display: flex;align-items: center;justify-content: center; -->
                                 <div class="col-lg-3 about-img" style="align-items: right;justify-content: right;position: relative;">
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
@@ -247,7 +247,7 @@ use Carbon\Carbon;
                                 </div>
                             </div>
                         </div>
-                        <hr style="margin: 0;" class="mb-3">
+                        <hr style="margin: 0;" class="my-3">
                         @endforeach
                         @endif
                     </ul>
@@ -298,7 +298,7 @@ use Carbon\Carbon;
                         $created_at = Carbon::create($data->created_at);
                         @endphp
                         <div class="col-sm-6 col-lg-12  ttth text-decoration-none {{ $data->code_category }}">
-                            <div class="pb-3 d-lg-flex gx-5">
+                            <div class="ttth-content d-lg-flex gx-5">
                                 <!-- display: flex;align-items: center;justify-content: center; -->
                                 <div class="col-lg-3 about-img" style="align-items: right;justify-content: right;position: relative;">
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
