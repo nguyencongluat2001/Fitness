@@ -415,12 +415,12 @@ JS_Client.prototype.checkValidate = function(){
         $("#phone").focus();
         return false;
     }
-    if ($("#order").val() == '') {
-        var nameMessage = 'Số thứ tự không được để trống!';
-        NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
-        $("#order").focus();
-        return false;
-    }
+    // if ($("#order").val() == '') {
+    //     var nameMessage = 'Số thứ tự không được để trống!';
+    //     NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
+    //     $("#order").focus();
+    //     return false;
+    // }
     if ($("#id").val() == ''){
         // if ($("#password").val() == '') {
         //     var nameMessage = 'Mật khẩu không được để trống!';

@@ -133,14 +133,14 @@ class ClientService extends Service
      */
     public function store($input){
         //check quyền chỉnh sửa
-        if($input['id_personnel'] == ''){
-            return array('success' => false, 'message' => 'Mã cộng tác viên không được để trống!');
-        }
-        $check = $this->ClientRepository->where('id_personnel',$input['id_personnel'])->where('id','!=',$input['id'])->first();
+        // if($input['id_personnel'] == ''){
+        //     return array('success' => false, 'message' => 'Mã cộng tác viên không được để trống!');
+        // }
+        // $check = $this->ClientRepository->where('id_personnel',$input['id_personnel'])->where('id','!=',$input['id'])->first();
 
-        if(!empty($check)){
-            return array('success' => false, 'message' => 'Mã cộng tác viên đã tồn tại!');
-        }
+        // if(!empty($check)){
+        //     return array('success' => false, 'message' => 'Mã cộng tác viên đã tồn tại!');
+        // }
         try{
             // array data users
             $arrData = [
