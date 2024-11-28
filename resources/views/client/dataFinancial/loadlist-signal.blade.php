@@ -101,7 +101,7 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br>TA</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xu hướng cổ phiếu</b></td>
-          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu hành động</b></td>
+          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu <br> hành động</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
           <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b style="color:#ff0000">Vùng giá <br> cắt lỗ</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br> FA</b></td>

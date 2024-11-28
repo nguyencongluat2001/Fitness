@@ -1,4 +1,4 @@
-<form id="frmSearchCP" role="form" action="" method="POST">
+<form id="frmSearchCP" action="index" method="POST" autocomplete="off">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
     <table id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" @if(!isset($_SESSION['id'])) onclick="JS_DataFinancial.checkLogin()" @endif>
@@ -7,16 +7,24 @@
             <col width="50%">
         </colgroup>
         <tbody>
-            <tr>
+            <tr class="fw-bold">
                 <td style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#700e13;color:#fff49b;height: 80px;">
                     <center>NHẬP MÃ CP</center>
                 </td>
                 <td class="td_code_cp" style="vertical-align: middle;background-color:#fff;">
-                    <span id="span_code_cp" class="span_code_cp text-success text-uppercase fw-bold">
-                        <input class="text-uppercase code_cp fw-bold" name="code_cp_mobile" id="code_cp_mobile" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;" maxlength="3" onchange="JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')">
+                    <span id="span_code_cp" class="span_code_cp text-success text-uppercase fw-bold" style="font-size: 25px;">
+                        <input class="text-uppercase code_cp fw-bold" name="code_cp_mobile" id="code_cp_mobile" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;color: #cc0000 !important;" maxlength="3" onchange="JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')"  onkeydown="if(event.key == 'Enter'){JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')}" autocomplete="off">
                     </span>
                 </td>
             </tr>
+        </tbody>
+    </table>
+    <table id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background:#ffffffe6 !important;" @if(!isset($_SESSION['id'])) onclick="JS_DataFinancial.checkLogin()" @endif>
+        <colgroup>
+            <col width="30%">
+            <col width="70%">
+        </colgroup>
+        <tbody>
             <tr>
                 <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Sàn</b></td>
                 <td class="td_exchange_mobile" align="center" style="vertical-align: middle;">-</td>

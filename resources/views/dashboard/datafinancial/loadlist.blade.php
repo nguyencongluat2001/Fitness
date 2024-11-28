@@ -96,7 +96,7 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Thời gian cập nhật</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng TA</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xu hướng CP</b></td>
-					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu hành động</b></td>
+					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu <br> hành động</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá giao dịch</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá cắt lỗ</b></td>
 					<td style="background:#151f38;white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng FA</b></td>
