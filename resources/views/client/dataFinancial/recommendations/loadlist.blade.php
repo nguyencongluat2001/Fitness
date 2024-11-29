@@ -83,7 +83,7 @@
                                     @endif
                                 <!-- {{ $data['title'] }} -->
                                 </h3></li>
-                                {{--<li><i class="fas fa-tags me-2"></i>
+                                {{--<li><i class="fas fa-tags me-2"></i>--}}
                                 @if($data['type'] == 'MUA')
                                        Giá mua: 
                                     @else
@@ -96,7 +96,7 @@
                                         xxx
                                     @endif --}}
                                 </span>    
-                                </li>--}}
+                                {{-- </li>--}}
                                 <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;
                                 @if($data['type'] == 'MUA')
                                       Mục tiêu:
