@@ -85,7 +85,7 @@
                                 </h3></li>
                                 <li><i class="fas fa-tags me-2"></i>
                                 @if($data['type'] == 'MUA')
-                                       Tỉ trọng: {{ $data['price'] }}
+                                       Tỉ trọng: {{ $data['price_buy'] }}
                                 @endif
                                  </li>
                                 <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;
