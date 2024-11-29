@@ -70,9 +70,9 @@
                                 <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>
                                     @if($data['type'] == 'MUA')
                                         @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
-                                            MUA {{ $data['code'] }} TÀI KHOẢN (NAV)
+                                            MUA {{ $data['code'] }}
                                         @else
-                                            MUA <span style="color:#39af71;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TÀI KHOẢN (NAV)
+                                            MUA <span style="color:#39af71;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span>
                                         @endif
                                     @else
                                         @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
