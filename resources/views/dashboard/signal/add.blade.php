@@ -35,8 +35,7 @@
                             <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập tỉ trọng..." />
                         </div>
                     </div>
-                <!-- @else
-                    <div class="row form-group">
+                <!-- <div class="row form-group">
                         <span class="col-md-3 control-label required">Giá bán</span>
                         <div class="col-md-8">
                             <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá bán..." />
