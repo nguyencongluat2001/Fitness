@@ -70,20 +70,20 @@
                                 <li style="color: #2a2d45;font-family: serif;font-weight: 600;"><h3>
                                     @if($data['type'] == 'MUA')
                                         @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
-                                            MUA {{ $data['code'] }}
+                                            {{ $data['title'] }}
                                         @else
-                                            MUA <span style="color:#39af71;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span>
+                                            <span style="color:#39af71;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span>
                                         @endif
                                     @else
                                         @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
-                                            BÁN {{ $data['code'] }} TỶ TRỌNG (MÃ CP)
+                                            {{ $data['title'] }}
                                         @else
-                                            BÁN <span style="color:#c11a1a;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span> TỶ TRỌNG (MÃ CP)
+                                            <span style="color:#c11a1a;font-size:28px">xxx<i class="far fa-eye-slash fa-xs"></i></span>
                                         @endif
                                     @endif
                                 <!-- {{ $data['title'] }} -->
                                 </h3></li>
-                                <li><i class="fas fa-tags me-2"></i>
+                                {{--<li><i class="fas fa-tags me-2"></i>
                                 @if($data['type'] == 'MUA')
                                        Giá mua: 
                                     @else
@@ -96,7 +96,7 @@
                                         xxx
                                     @endif --}}
                                 </span>    
-                                </li>
+                                </li>--}}
                                 <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;
                                 @if($data['type'] == 'MUA')
                                       Mục tiêu:
