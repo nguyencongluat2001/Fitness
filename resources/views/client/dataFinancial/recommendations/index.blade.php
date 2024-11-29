@@ -20,7 +20,7 @@
                             @endif
                         <div class="table-responsive py-2" >
                             <!-- Màn hình danh sách -->
-                            <div id="table-container-recommendations" @if(!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' &&  $_SESSION['account_type_vip'] != 'VIP2' &&  $_SESSION['account_type_vip'] != 'KIM_CUONG')) onclick="JS_Recommendations.checkLogin()" @endif></div>
+                            <div id="table-container-recommendations" @if((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' &&  $_SESSION['account_type_vip'] != 'VIP2' &&  $_SESSION['account_type_vip'] != 'KIM_CUONG'))) onclick="JS_Recommendations.checkLogin()" @endif></div>
                         </div>
                         <!-- <h class="h5 py-2">- <span style="font-family: auto;">Chú giải xếp hạng TA/FA</span> : </h> <i style="color:#3ac500" class="far fa-eye"></i> -->
                     </div>
