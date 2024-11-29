@@ -23,25 +23,25 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <span class="col-md-3 control-label required">Mã cổ phiếu & %</span>
+                    <span class="col-md-3 control-label required">Nhập xxx</span>
                     <div class="col-md-8">
                         <input class="form-control" type="text" value="{{isset($datas->code) ? $datas->code : ''}}" name="code" id="code" placeholder="Nhập mã cổ phiếu..." />
                     </div>
                 </div>
                 @if($datas['type'] == 'MUA')
                     <div class="row form-group">
-                        <span class="col-md-3 control-label required">Giá mua</span>
+                        <span class="col-md-3 control-label required">Tỉ trọng</span>
                         <div class="col-md-8">
-                            <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá mua..." />
+                            <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập tỉ trọng..." />
                         </div>
                     </div>
-                @else
+                <!-- @else
                     <div class="row form-group">
                         <span class="col-md-3 control-label required">Giá bán</span>
                         <div class="col-md-8">
                             <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá bán..." />
                         </div>
-                    </div>
+                    </div> -->
                 @endif
 
 
