@@ -30,7 +30,7 @@ return [
                 'role' => false,
             ],
             'signalIndex' => [
-                'name' => 'Tín hiệu mua',
+                'name' => 'TOP cổ phiếu',
                 'icon' => 'fas fa-signal',
                 'role' => false,
             ],
@@ -40,7 +40,7 @@ return [
                 'role' => false,
             ],
             'categoryFintopIndex' => [
-                'name' => 'Danh mục FinTop',
+                'name' => 'Danh mục V.I.P',
                 'icon' => 'fas fa-sitemap',
                 'role' => false,
             ]

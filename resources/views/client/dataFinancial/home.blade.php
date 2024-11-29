@@ -12,7 +12,7 @@
     <section class="container">
         <div class=" pb-3 d-lg-flex gx-5">
         <div class="col-lg-12">
-            <form action="" method="POST" id="frmLoadlist_data">
+            <form action="index" method="POST" id="frmLoadlist_data">
              <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="home_index_vnindex pt-1 pb-2" style="background:#b56c6cb5 !important;border-radius:0px !important">
                     <!-- Chú giải xếp hạng TA/FA -->
@@ -26,7 +26,7 @@
                             <i class="py-2">- <span style="font-family: auto;">Xem chú giải xếp hạng TA/FA</span> : </i> <i onclick="JS_DataFinancial.noteTaFa()" style="color:#3ac500" class="far fa-eye"></i>
                         </div>
                     </div>
-                    <div class="home_index_child mobile" style="background:#ffffffe6 !important">
+                    <div class="home_index_child mobile">
                         @include('client.dataFinancial.dataFintopMobile')
                     </div>
                     <!-- biểu đồ FireAnt -->
