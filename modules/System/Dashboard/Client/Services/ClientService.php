@@ -11,16 +11,19 @@ use Modules\System\Dashboard\Client\Repositories\ClientRepository;
 use Twilio\Rest\Client;
 use Modules\Base\Helpers\ForgetPassWordMailHelper;
 use Modules\System\Dashboard\Client\Models\UserModel;
+use Modules\System\Dashboard\Users\Services\UserInfoService;
 use Str;
 
 class ClientService extends Service
 {
     private $baseDis;
     public function __construct(
+        UserInfoService $UserInfoService,
         ClientRepository $ClientRepository
         )
     {
         parent::__construct();
+        $this->UserInfoService = $UserInfoService;
         $this->ClientRepository = $ClientRepository;
         $this->baseDis = public_path("file-image/avatar") . "/";
     }
@@ -132,6 +135,7 @@ class ClientService extends Service
      * cập nhật người dùng
      */
     public function store($input){
+        $password = 'fintop123';
         //check quyền chỉnh sửa
         // if($input['id_personnel'] == ''){
         //     return array('success' => false, 'message' => 'Mã cộng tác viên không được để trống!');
@@ -142,17 +146,72 @@ class ClientService extends Service
         //     return array('success' => false, 'message' => 'Mã cộng tác viên đã tồn tại!');
         // }
         try{
+            $countUser = $this->repository->select('id')->count();
+            $image_old = null;
+            if($input['id'] != ''){
+                $user = $this->ClientRepository->where('id',$input['id'])->first();
+                $image_old = $user->avatar;
+            }
+            if(isset($file) && $file != []){
+                $arrFile = $this->uploadFile($input,$file,$image_old);
+            }
+
             // array data users
             $arrData = [
-                'role'=>  'SALE_BASIC',
-                'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
+                'name'=> $input['name'],
+                'address'=> $input['address'],
+                'phone'=> $input['phone'],
+                'email'=> $input['email'],
+                'dateBirth'=> $input['dateBirth'],
+                'role'=>  $input['role'],
+                'order'=> isset($input['order']) ? $input['order'] : (int)$countUser + 1,
+                'account_tkck_vps'=> isset($input['account_tkck_vps'])?$input['account_tkck_vps']:'',
+                'investment_time'=> isset($input['investment_time'])?$input['investment_time']:'',
+                'investment_taste'=> isset($input['investment_taste'])?$input['investment_taste']:'',
+                'investment_company'=> isset($input['investment_company'])?$input['investment_company']:'',
                 'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'F889',
+                'user_introduce'=> isset($input['user_introduce'])?$input['user_introduce']:'F889',
+                "status" => isset($input['status']) ? 1 : 1,
             ];
+            if(!empty($input['id_personnel'])){
+                $arrData['id_personnel'] = $input['id_personnel'];
+            }
+             // nếu có ảnh mới thì cập nhật
+             if(!empty($arrFile)){
+                $arrData['avatar'] = $arrFile;
+            }
+            // array user info
+            $arrInfo = [
+                'company'=> $input['company'], 
+                'position'=> $input['position'], 
+                'date_join'=> $input['date_join'], 
+                'color_view'=> 1,
+                'created_at'=> date("Y/m/d")
+            ];
+            if(isset($input['order'])){
+                $this->updateOrder($input);
+            }
             if($input['id'] != ''){
                 $updateUser = $this->ClientRepository->where('id',$input['id'])->update($arrData);
-                return array('success' => true, 'message' => 'Nâng cấp cộng tác viên thành công');
+                $userInfo = $this->UserInfoService->where('user_id',$input['id'])->first();
+                if(!empty($userInfo)){
+                    $updateUserInfo = $this->UserInfoService->where('user_id',$input['id'])->update($arrInfo);
+                }else{
+                    $getUser = $this->ClientRepository->where('email',$input['email'])->first();
+                    $arrInfo['id']=(string)Str::uuid();
+                    $arrInfo['user_id'] = $getUser->id;
+                    $create = $this->UserInfoService->create($arrInfo);
+                }
+                return array('success' => true, 'message' => 'Cập nhật thành công');
+            }else{
+                $arrData['password'] = Hash::make($password);
+                $createUser = $this->ClientRepository->create($arrData);
+                $getUser = $this->ClientRepository->where('email',$input['email'])->first();
+                $arrInfo['id']=(string)Str::uuid();
+                $arrInfo['user_id'] = $getUser->id;
+                $create = $this->UserInfoService->create($arrInfo);
+                return array('success' => true, 'message' => 'Thêm mới thành công');
             }
-            
             return true;
         } catch (\Exception $e) {
             return array('success' => false, 'message' => (string) $e->getMessage());
