@@ -83,8 +83,8 @@
                                     @endif
                                 <!-- {{ $data['title'] }} -->
                                 </h3></li>
-                                <li><i class="fas fa-tags me-2"></i>
                                 @if($data['type'] == 'MUA')
+                                       <li><i class="fas fa-tags me-2"></i>
                                        Tỉ trọng: {{ $data['price_buy'] }}
                                 @endif
                                  </li>
