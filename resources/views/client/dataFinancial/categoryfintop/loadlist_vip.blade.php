@@ -73,7 +73,7 @@
 </style>
 <div id="style-1" style="padding-right:10px;height:700px">
     <div class="table-responsive pmd-card pmd-z-depth pt-2">
-        <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if(!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG')) onclick="JS_CategoryFintop.checkLogin()" @endif>
+        <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG'))) onclick="JS_CategoryFintop.checkLogin()" @endif>
             <colgroup>
                 <col width="8%"> <!-- ma cp -->
                 <col width="9%"> <!-- nhom nganh --> 
