@@ -83,20 +83,11 @@
                                     @endif
                                 <!-- {{ $data['title'] }} -->
                                 </h3></li>
-                                {{--<li><i class="fas fa-tags me-2"></i>--}}
+                                <li><i class="fas fa-tags me-2"></i>
                                 @if($data['type'] == 'MUA')
-                                       Giá mua: 
-                                    @else
-                                       Giá bán: 
-                                    @endif
-                                <span style="color: #2c4143;font-weight: 700;">
-                                    {{-- @if(isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG')) --}}
-                                        {{ $data['price_buy'] }}
-                                    {{-- @else
-                                        xxx
-                                    @endif --}}
-                                </span>    
-                                {{-- </li>--}}
+                                       Tỉ trọng: {{ $data['price'] }}
+                                @endif
+                                 </li>
                                 <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;
                                 @if($data['type'] == 'MUA')
                                       Mục tiêu:
