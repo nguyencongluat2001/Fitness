@@ -77,6 +77,8 @@
                                             </li>
                                         @endif
                                     </div>
+                                    <div style="width:1px;background:black;padding-left: 50px;"> 
+                                    </div>
                                     <div style="padding-left: 50px;"> 
                                         <center>
                                             <i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian <br>
