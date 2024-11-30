@@ -42,42 +42,49 @@
                                     @endif
                                 <!-- {{ $data['title'] }} -->
                                 </h3></li>
-                                @if($data['type'] == 'MUA')
-                                       <li><i class="fas fa-tags me-2"></i>
-                                       Tỉ trọng: {{ $data['price_buy'] }}
-                                       </li>
-                                       <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;
-                                       Mục tiêu:
-                                        <span style="color: #2c4143;font-weight: 700;">
-                                            {{ $data['target'] }}
-                                        </span>
-                                        </li>
-                                        <li><i class="fas fa-filter me-2"></i>&nbsp;
-                                        Dừng lỗ:
-                                        <span style="color: #2c4143;font-weight: 700;">
-                                            {{ $data['stop_loss'] }}
-                                        </span>
-                                        </li>
-                                 @else
-                                        <li><i class="fas fa-tags me-2"></i>
-                                            % Còn lại: 
-                                                    <span style="color: #2c4143;font-weight: 700;">
-                                                        {{ $data['stop_loss'] }}
-                                                    </span>
-                                        </li>
-                                        <li><i class="fas fa-tags me-2"></i>
-                                       Giá mua TB: {{ $data['price_buy'] }}
-                                       </li>
-                                       <li><i class="fas fa-tags me-2"></i>
-                                       Lãi / lỗ: {{ $data['target'] }}
-                                       </li>
-                                @endif
+                                
                                  </li>
-                                 <i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian <br>
-                                <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s', strtotime($data['created_at']))}}</span> <br>
-                                <span style="color: #2c4143;font-weight: 700;"> {{date('d-m-Y', strtotime($data['created_at']))}}</span>
+                                 <div style="display:flex">
+                                    <div>
+                                        @if($data['type'] == 'MUA')
+                                        <li><i class="fas fa-tags me-2"></i>
+                                        Tỉ trọng: {{ $data['price_buy'] }}
+                                        </li>
+                                        <li><i class="far fa-lightbulb me-2"></i>&nbsp;&nbsp;
+                                        Mục tiêu:
+                                            <span style="color: #2c4143;font-weight: 700;">
+                                                {{ $data['target'] }}
+                                            </span>
+                                            </li>
+                                            <li><i class="fas fa-filter me-2"></i>&nbsp;
+                                            Dừng lỗ:
+                                            <span style="color: #2c4143;font-weight: 700;">
+                                                {{ $data['stop_loss'] }}
+                                            </span>
+                                            </li>
+                                        @else
+                                                <li><i class="fas fa-tags me-2"></i>
+                                                    % Còn lại: 
+                                                            <span style="color: #2c4143;font-weight: 700;">
+                                                                {{ $data['stop_loss'] }}
+                                                            </span>
+                                                </li>
+                                                <li><i class="fas fa-tags me-2"></i>
+                                            Giá mua TB: {{ $data['price_buy'] }}
+                                            </li>
+                                            <li><i class="fas fa-tags me-2"></i>
+                                            Lãi / lỗ: {{ $data['target'] }}
+                                            </li>
+                                        @endif
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian <br>
+                                        <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s', strtotime($data['created_at']))}}</span> <br>
+                                        <span style="color: #2c4143;font-weight: 700;"> {{date('d-m-Y', strtotime($data['created_at']))}}</span>
+                                    </div>
+                                 </div>
+                                
                             </ul>
-                            
                         </div>
                         {{--<div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
                             <div class="w-100">
