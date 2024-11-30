@@ -45,7 +45,7 @@
                                 
                                  </li>
                                  <div style="display:flex">
-                                    <div>
+                                    <div style="width: 70%;">
                                         @if($data['type'] == 'MUA')
                                         <li><i class="fas fa-tags me-2"></i>
                                         Tỉ trọng: {{ $data['price_buy'] }}
@@ -77,10 +77,12 @@
                                             </li>
                                         @endif
                                     </div>
-                                    <div>
-                                        <i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian <br>
-                                        <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s', strtotime($data['created_at']))}}</span> <br>
-                                        <span style="color: #2c4143;font-weight: 700;"> {{date('d-m-Y', strtotime($data['created_at']))}}</span>
+                                    <div style="width: 30%;"> 
+                                        <center>
+                                            <i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian <br>
+                                            <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s', strtotime($data['created_at']))}}</span> <br>
+                                            <span style="color: #2c4143;font-weight: 700;"> {{date('d-m-Y', strtotime($data['created_at']))}}</span>
+                                        </center>
                                     </div>
                                  </div>
                                 
