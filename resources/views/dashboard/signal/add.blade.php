@@ -51,13 +51,6 @@
                             <input class="form-control" type="text" value="{{isset($datas->target) ? $datas->target : ''}}" name="target" id="target" placeholder="Nhập mục tiêu..." />
                         </div>
                     </div>
-                @else
-                    <div class="row form-group">
-                        <span class="col-md-3 control-label required">Lãi / lỗ</span>
-                        <div class="col-md-8">
-                            <input class="form-control" type="text" value="{{isset($datas->target) ? $datas->target : ''}}" name="target" id="target" placeholder="Nhập lãi / lỗ..." />
-                        </div>
-                    </div>
                 @endif
 
                 @if($datas['type'] == 'MUA')
@@ -76,7 +69,23 @@
                     </div>
                 @endif
                 
-                
+                @if($datas['type'] == 'BAN')
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">Giá mua TB</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->price_buy) ? $datas->price_buy : ''}}" name="price_buy" id="price_buy" placeholder="Nhập giá bán..." />
+                        </div>
+                    </div>
+                @endif
+
+                @if($datas['type'] == 'BAN')
+                    <div class="row form-group">
+                        <span class="col-md-3 control-label required">Lãi / lỗ</span>
+                        <div class="col-md-8">
+                            <input class="form-control" type="text" value="{{isset($datas->target) ? $datas->target : ''}}" name="target" id="target" placeholder="Nhập lãi / lỗ..." />
+                        </div>
+                    </div>
+                @endif
                 <div class="row form-group">
                     <span class="col-md-3 control-label">Trạng thái</span>
                     <div class="col-md-8">
