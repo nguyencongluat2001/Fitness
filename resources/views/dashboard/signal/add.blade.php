@@ -1,4 +1,4 @@
-<div class="modal-dialog modal-lg">
+<div class="modal-dialog modal-lg" style="padding-top: 100px;">
     <div class="modal-content card">
         <div class="modal-header">
             <h5 class="modal-title">Cập nhật TOP Cổ Phiếu</h5>
