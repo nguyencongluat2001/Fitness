@@ -74,7 +74,7 @@
                                 @endif
                                  </li>
                             </ul>
-                            <li><i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian: <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data['created_at']))}}</span></li>
+                            <i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian: <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s d-m-Y', strtotime($data['created_at']))}}</span>
                         </div>
                         {{--<div class="pricing-horizontal-tag col-md-3 text-center pt-3 d-flex align-items-center">
                             <div class="w-100">
