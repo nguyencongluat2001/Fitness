@@ -45,7 +45,7 @@
                                 
                                  </li>
                                  <div style="display:flex">
-                                    <div style="width: 70%;">
+                                    <div style="    width: 400px;">
                                         @if($data['type'] == 'MUA')
                                         <li><i class="fas fa-tags me-2"></i>
                                         Tỉ trọng: {{ $data['price_buy'] }}
