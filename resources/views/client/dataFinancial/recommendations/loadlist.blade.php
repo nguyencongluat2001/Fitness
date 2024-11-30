@@ -77,7 +77,7 @@
                                             </li>
                                         @endif
                                     </div>
-                                    <div style="width:1px;background:black;"> 
+                                    <div style="width:1px;background:#afafaf;"> 
                                     </div>
                                     <div style="padding-left: 50px;"> 
                                         <center>
