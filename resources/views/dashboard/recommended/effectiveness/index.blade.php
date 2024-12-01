@@ -10,7 +10,7 @@
                     <span>
                         <a href="{{ URL::asset('/system/recommended/index') }}">
                             <button class="btn btn-light btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
-                            data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Danh mục khuyến nghị</button>
+                            data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Danh mục V.I.P</button>
                         </a>
                     </span>
                     <span class="ms-3">

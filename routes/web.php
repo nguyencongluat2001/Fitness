@@ -182,9 +182,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 Route::post('/updateCategoryCate',[CategoryController::class,'updateCategoryCate']);
                 Route::post('/changeStatusCategoryCate',[CategoryController::class,'changeStatusCategoryCate']);
             });
-            // quản trị danh mục khuyến nghị
+            // quản trị Danh mục V.I.P
             Route::prefix('/recommended')->group(function () {
-                //Danh mục khuyến nghị
+                //Danh mục V.I.P
                 Route::get('/index', [RecommendedController::class, 'index']);
                 Route::post('/add',[RecommendedController::class,'add']);
                 Route::post('/create',[RecommendedController::class,'create']);

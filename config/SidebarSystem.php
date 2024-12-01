@@ -21,17 +21,17 @@ return [
             'a'    => 'nav-link link-signal',
             'href' => '/system/signal/index',
         ],
+        'recommended' => [
+            'name' => 'Danh mục V.I.P',
+            'icon' => 'fas fa-list-alt',
+            'a'    => 'nav-link link-recommended',
+            'href' => '/system/recommended/index',
+        ],
         'datafinancial' => [
             'name' => 'Dữ liệu chứng khoán',
             'icon' => 'fas fa-coins',
             'a'    => 'nav-link link-datafinancial',
             'href' => '/system/datafinancial/index',
-        ],
-        'recommended' => [
-            'name' => 'Danh mục khuyến nghị',
-            'icon' => 'fas fa-list-alt',
-            'a'    => 'nav-link link-recommended',
-            'href' => '/system/recommended/index',
         ],
         'datafinancial' => [
             'name' => 'Dữ liệu chứng khoán',
@@ -161,7 +161,7 @@ return [
     //         'href' => '/system/category/index',
     //     ],
     //     'recommended' => [
-    //         'name' => 'Danh mục khuyến nghị',
+    //         'name' => 'Danh mục V.I.P',
     //         'icon' => 'fas fa-list-alt',
     //         'a'    => 'nav-link link-recommended',
     //         'href' => '/system/recommended/index',
@@ -212,7 +212,7 @@ return [
     //         'href' => '/system/category/index',
     //     ],
     //     'recommended' => [
-    //         'name' => 'Danh mục khuyến nghị',
+    //         'name' => 'Danh mục V.I.P',
     //         'icon' => 'fas fa-list-alt',
     //         'a'    => 'nav-link link-recommended',
     //         'href' => '/system/recommended/index',
