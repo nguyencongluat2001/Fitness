@@ -34,8 +34,8 @@ use Modules\System\Recordtype\Helpers\WorkflowHelper;
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Mã cổ phiếu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Nhóm ngành</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Ngày mua</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Tỉ trọng</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Giá mua TB</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>% Tài sản <br> khuyến nghị</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Giá mua</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" colspan="3"><b>Vùng giá mục tiêu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Giá hiện tại</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;" rowspan="2"><b>Lãi/Lỗ</b></td>
