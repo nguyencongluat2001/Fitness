@@ -38,7 +38,7 @@ class CategoryBlog extends Seeder
                 'id' => (string)\Str::uuid(),
                 'cate' => 'DM_BLOG',
                 'name_category' => 'Tổng kết phiên',
-                'code_category' => 'BAO_CAO_TKP',
+                'code_category' => 'BAO_CAO_PTDTVIP',
                 'order' => CategoryModel::select('id')->count() + 2,
                 'status' => 1,
                 'created_at' => date('Y-m-d H:i:s'),

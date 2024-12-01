@@ -87,7 +87,7 @@ JS_About.prototype.loadListTKP = function (oFormBlog,numberPage = 1, perPage = 5
     var data = $(oFormBlog).serialize();
     data += '&offset=' + numberPage;
     data += '&limit=' + perPage;
-    data += '&category=BAO_CAO_TKP';
+    data += '&category=BAO_CAO_PTDTVIP';
     $.ajax({
         url: url,
         type: "GET",

@@ -107,7 +107,7 @@ use Carbon\Carbon;
             var url = baseUrl + '/client/about/loadMore';
             var data = 'offset=' + Math.ceil((countDiv/5) + 1);
             data += '&limit=' + itemCount;
-            data += '&category=BAO_CAO_TKP';
+            data += '&category=BAO_CAO_PTDTVIP';
             $.ajax({
                 url: url,
                 type: "GET",

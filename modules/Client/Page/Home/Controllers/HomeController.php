@@ -46,7 +46,7 @@ class HomeController extends Controller
         }
         $datas['category'] = isset($category) ? $category : [];
         $datas['TTTH'] = $this->blogService->filter(['category' => 'BAO_CAO_TTTH', 'limit' => 6]);
-        $datas['VIP'] = $this->blogService->filter(['category' => 'BAO_CAO_TKP', 'limit' => 6]);
+        $datas['VIP'] = $this->blogService->filter(['category' => 'BAO_CAO_PTDTVIP', 'limit' => 6]);
         $datas['BCPTN'] = $this->blogService->filter(['category' => 'BAO_CAO_PTN', 'limit' => 6]);
         $datas['BCPTDN'] = $this->blogService->filter(['category' => 'BAO_CAO_PTDN', 'limit' => 6]);
         return view('client.home.home',$datas);

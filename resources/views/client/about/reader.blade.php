@@ -107,7 +107,7 @@ use Carbon\Carbon;
     if(type == 'BAO_CAO_THTT'){
         NclLib.menuActive('.link-index');
         NclLib.menuActive_child('.link-index');
-    }else if(type == 'BAO_CAO_TKP'){
+    }else if(type == 'BAO_CAO_PTDTVIP'){
         NclLib.menuActive('.link-session');
         NclLib.menuActive_child('.link-session');
     }else if(type == 'BAO_CAO_PTDN'){
