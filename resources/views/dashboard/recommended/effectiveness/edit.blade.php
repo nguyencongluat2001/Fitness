@@ -32,13 +32,13 @@
             <div class="card-body">
                 <table class="table  table-bordered table-striped table-condensed dataTable no-footer">
                     <colgroup>
-                        <col width="9%">
+                        <col width="5%">
                         <col width="9%">
                         <col width="9%">
                         {{--<col width="9%">--}}
                         <col width="10%">
                         <col width="9%">
-                        <col width="9%">
+                        <col width="6%">
                         <col width="9%">
                         <col width="9%">
                         <col width="7%">
@@ -49,9 +49,9 @@
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>% Chốt</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Mã CP</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Nhóm nghành</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>% Tài sản <br> khuyến nghị</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Tỉ trọng</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Ngày mua</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Giá mua</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Giá mua TB</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Ngày chốt</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Giá chốt</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Lãi/Lỗ</b>
