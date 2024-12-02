@@ -82,7 +82,7 @@ JS_Home.prototype.loadList = function () {
         // cache: true,
         data: data,
         success: function (arrResult) {
-            $("#table-container").html(arrResult);
+            $("#loadlist-datafinancial").html(arrResult);
         }
     });
 }

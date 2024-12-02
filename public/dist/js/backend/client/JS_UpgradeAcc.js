@@ -1,8 +1,10 @@
-function JS_UpgradeAcc(baseUrl, module, controller) {
+function JS_UpgradeAcc(baseUrl, module, controller, type = '') {
     this.module = module;
     this.baseUrl = baseUrl;
     this.controller = controller;
-    NclLib.menuActive('.link-privileges');
+    if(type != 'home'){
+        NclLib.menuActive('.link-privileges');
+    }
     NclLib.loadding();
     this.urlPath = baseUrl + '/' + module + '/' + controller;
 }

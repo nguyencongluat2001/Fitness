@@ -70,23 +70,22 @@ use Carbon\Carbon;
         margin-left: auto !important;
     }
 
-    .card {
+    /* .card {
         background: #ffffff26 !important;
-    }
-
-    /* .blogReader {
-        width: 100%;
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
-        overflow: hidden;
     } */
+
     .blogReader {
         max-height: 100px;
         display: -webkit-box;
         -webkit-box-orient: vertical;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 2;
         overflow: hidden;
+        line-height: 1.5;
+    }
+    .blogReader>*{
+        font-size: 1rem;
+        font-weight: normal;
+        margin-bottom: 0;
     }
 
     /* {
@@ -162,25 +161,72 @@ use Carbon\Carbon;
         </div>
     </section>
     <!-- tra cứu cổ phiếu -->
-    <section class="container" style="background:#b56c6cb5">
+    <section class="container" style="background:#fff">
         <div class="pt-3 pb-3 d-lg-flex gx-5">
-            <div class="col-md-12 row">
-                <form action="" method="POST" id="frmLoadlist_list">
-                    <div class="home_index_vnindex">
-                        <h2 class="h4 py-2"> <span style="padding-left:5%"></span> </h2>
-                        <!-- biểu đồ FireAnt -->
-                        <div class="home_index_child " style="background:#ffffffe6 !important;margin: 10px;">
-                            <div class="col-lg-12" style="width: 100%;">
-                                <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
-                                <iframe style="width:100%" height="770" src="https://fireant.vn/top-symbols"
-                                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    allowfullscreen>
-                                </iframe>
-                                <p>Nguồn theo: Fireant</p>
+            <div class="col-md-8">
+                <div class="col-md-12 mb-3 row">
+                    <span><b class="text-uppercase">tra cứu cổ phiếu</b></span>
+                </div>
+                <div class="row">@include('client.home.loadlist')</div>
+            </div>
+            <div class="col-md-4">
+                <div class="col-md-12 mb-3 row">
+                    <span><b class="text-uppercase">Hội viên V.I.P</b></span>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien dangky-hoivien-home pb-2">
+                        <div class="pricing-table card card-rounded shadow-sm border-0" style="background:">
+                            <div class="pricing-table-body card-body text-center">
+                                <div class="bg-secondary" style="border-radius: 0.5em;">
+                                    <img src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 63px;width: 63px;" class="py-2">
+                                    <h2 class="pricing-table-heading h5 semi-bold-600 pb-3" style="color:white"><div class="txt-first">HỘI VIÊN</div> <div class="txt-second pt-3">KIM CƯƠNG</div></h2>
+                                </div>
+                                <div class="pricing-table-footer pt-2">
+                                    <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('KIM_CUONG')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </form>
+                    <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien pb-2">
+                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                            <div class="pricing-table-body card-body text-center">
+                                <div class="bg-secondary" style="border-radius: 0.5em;">
+                                    <i style="color:#ffbb2e" class="pricing-table-icon display-5 bx bx-package py-2"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600 pb-3" style="color:white"><div class="txt-first">HỘI VIÊN</div> <div class="txt-second pt-3">VÀNG</div></h2>
+                                </div>
+                                <div class="pricing-table-footer pt-2">
+                                    <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP2')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien pb-2">
+                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                            <div class="pricing-table-body card-body text-center">
+                                <div class="bg-secondary" style="border-radius: 0.5em;">
+                                    <i style="color:#f2f2f2" class="pricing-table-icon display-5 bx bx-package py-2"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600 pb-3" style="color:white"><div class="txt-first">HỘI VIÊN</div> <div class="txt-second pt-3">BẠC</div></h2>
+                                </div>
+                                <div class="pricing-table-footer pt-2">
+                                    <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('VIP1')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien pb-2">
+                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                            <div class="pricing-table-body card-body text-center">
+                                <div class="bg-secondary" style="border-radius: 0.5em;">
+                                    <i style="color:#7ff3ff" class="pricing-table-icon display-5 bx bx-package py-2"></i>
+                                    <h2 class="pricing-table-heading h5 semi-bold-600 pb-3" style="color:white"><div class="txt-first">HỘI VIÊN</div> <div class="txt-second pt-3">TIÊU CHUẨN</div></h2>
+                                </div>
+                                <div class="pricing-table-footer pt-2">
+                                    <a style="background: #165c38;color: #ffffff;font-weight: 500;" onclick="JS_UpgradeAcc.viewInfo('TIEU_CHUAN')" class="btn rounded-pill px-4 btn-outline-light light-300">Chọn</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pt-3 pb-3 d-lg-flex gx-5">
@@ -263,7 +309,7 @@ use Carbon\Carbon;
                     @if(isset($BCPTN))
                     @foreach ($BCPTN as $key => $data)
                     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                    <div class="col-md-4 about-list mb-3">
+                    {{--<div class="col-md-4 about-list mb-3">
                         <div class="about-img">
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
@@ -279,6 +325,28 @@ use Carbon\Carbon;
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </a>
+                        </div>
+                    </div>--}}
+                    <div class="col-sm-6 col-lg-12  bcptn text-decoration-none {{ $data->code_category }} mb-3">
+                        <div class="bcptn-content d-lg-flex gx-5">
+                            <!-- display: flex;align-items: center;justify-content: center; -->
+                            <div class="col-lg-3 about-img" style="align-items: right;justify-content: right;position: relative;">
+                                <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                    @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                    <h1 style="position: absolute;right:0">
+                                        <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                    </h1>
+                                    @endif
+                                    <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 140px;width: 100%;object-fit: cover;" alt="...">
+                                </a>
+                            </div>
+                            <div class="col-lg-9 about-content">
+                                <i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i>
+                                <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                    <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
+                                </a>
+                                <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
+                            </div>
                         </div>
                     </div>
                     @endforeach
@@ -329,6 +397,9 @@ use Carbon\Carbon;
 </div>
 <div style="clear:both"></div>
 <div class="modal" id="reader" role="dialog"></div>
+<div class="modal" id="formmodal" role="dialog"></div>
+<div class="modal" id="formmodal_res" role="dialog"></div>
+
 <!-- End Recent Work -->
 <script>
     function myFunction() {
@@ -352,10 +423,12 @@ use Carbon\Carbon;
 </script>
 <script type="text/javascript" src="{{ URL::asset('dist/js/backend/client/JS_About.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('dist/js/backend/client/JS_Home.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('dist/js/backend/client/JS_UpgradeAcc.js') }}"></script>
 <script src='../assets/js/jquery.js'></script>
 <script type="text/javascript">
     var baseUrl = "{{ url('') }}";
     var JS_About = new JS_About(baseUrl, 'client', 'about', 'home');
+    var JS_UpgradeAcc = new JS_UpgradeAcc(baseUrl, 'client', 'upgradeAcc', 'home');
     var JS_Home = new JS_Home(baseUrl, 'client', 'home');
     $(document).ready(function($) {
         JS_Home.loadIndex(baseUrl);

@@ -143,6 +143,11 @@
     }
 
     @media (max-width: 450px) {
+        body.no-scroll {
+            overflow: hidden;
+            /* Ngăn cuộn */
+        }
+
         .logo-title {
             font-size: calc(1.375rem + 1.5vw);
         }
@@ -177,7 +182,7 @@
         }
 
         #menu-content {
-            width: 80%;
+            width: 60%;
         }
 
         .align-self-center.title-reponsive h1 {
@@ -424,9 +429,10 @@
                         <span class="ms-1"><i class="fa fa-search"></i></span>
                     </span>
                 </div>
-                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);display:block">
+                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative;display:flex !important;justify-content:center;">
                     <h1 class="logo-title" style="font-family: auto;font-weight: 500;color:#fff079;padding-left: 4%;">Tài Chính &amp; Đầu Tư</h1>
                 </div>
+                <div class="navbar-brand h1 header-logo" href="#"></div>
             </div>
             <div class="menu-mobile">
                 <div class="menu-mobile-home"><a href="{{ url('client') }}/home/index"><i class="fas fa-home"></i></a></div>
@@ -447,7 +453,7 @@
                                 @endforeach
                             </ol>
                             @else
-                            
+
                             <a href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a>
                             @endif
                         </li>
@@ -634,12 +640,6 @@
         $(".menu-close").click(function() {
             $("#navbar-toggler-success.navbar-collapse").removeClass('show');
         })
-
-        document.addEventListener('click', closeOnClickOutside);
-
-        function closeOnClickOutside(e) {
-            $("#navbar-toggler-success.navbar-collapse").removeClass('show');
-        }
     </script>
 </body>
 

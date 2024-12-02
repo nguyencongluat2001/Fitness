@@ -13,7 +13,14 @@
                 </td>
                 <td class="td_code_cp" style="vertical-align: middle;background-color:#fff;">
                     <span id="span_code_cp" class="span_code_cp text-success text-uppercase fw-bold" style="font-size: 25px;">
-                        <input class="text-uppercase code_cp fw-bold" name="code_cp_mobile" id="code_cp_mobile" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;color: #cc0000 !important;" maxlength="3" onchange="JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')"  onkeydown="if(event.key == 'Enter'){JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')}" autocomplete="off">
+                        <input class="text-uppercase code_cp fw-bold" placeholder="Gõ CP ..." 
+                                name="code_cp_mobile" id="code_cp_mobile" rows="1" 
+                                style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;color: #cc0000 !important;"
+                                maxlength="3" autocomplete="off"
+                                onchange="JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')"
+                                oninput="if(this.value.length === 3){JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')}"
+                                onkeydown="if(event.key == 'Enter'){JS_DataFinancial.updateDataFinancialMobile(1,'code_cp')}"
+                            >
                     </span>
                 </td>
             </tr>
