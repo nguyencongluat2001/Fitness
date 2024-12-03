@@ -209,7 +209,7 @@ function click2(id, type) {
     $("#" + type + "_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
     // $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
-    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp fw-bold" name="${type}" id="${type}_${id}" rows="1" placeholder="Gõ CP ..." style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp fw-bold" name="${type}" id="${type}_${id}" rows="1" placeholder="..." style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
 
     $("#" + type + "_" + id).focus();
     $(".td_" + type + "_" + id).removeAttr('onclick');

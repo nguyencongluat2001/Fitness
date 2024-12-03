@@ -13,7 +13,7 @@
                 </td>
                 <td class="td_code_cp" style="vertical-align: middle;background-color:#fff;">
                     <span id="span_code_cp" class="span_code_cp text-success text-uppercase fw-bold" style="font-size: 25px;">
-                        <input class="text-uppercase code_cp fw-bold" placeholder="Gõ CP ..." 
+                        <input class="text-uppercase code_cp fw-bold" placeholder="..." 
                                 name="code_cp_mobile" id="code_cp_mobile" rows="1" 
                                 style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;color: #cc0000 !important;"
                                 maxlength="3" autocomplete="off"
