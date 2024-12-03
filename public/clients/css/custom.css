@@ -69,8 +69,12 @@ https://templatemo.com/tm-561-purple-buzz
     font-size: .75rem;
 }
 
+.homeBCPTCPDN, .homeTTTHScroll, .homeBCPTN{
+    overflow-y: scroll;
+    max-height: 500px;
+}
 .homeTTTH::-webkit-scrollbar {
-    height: .4rem;
+    width: .4rem;
 }
 
 .homeTTTH::-webkit-scrollbar-thumb {
@@ -96,7 +100,7 @@ https://templatemo.com/tm-561-purple-buzz
     padding-bottom: 1rem;
 }
 .bcptn .about-content{
-    margin-left: 1rem;
+    padding-left: 1rem;
 }
 .bcptn .about-content i {
     font-size: 1rem;
@@ -104,7 +108,7 @@ https://templatemo.com/tm-561-purple-buzz
 .bcptn .about-content .card-title {
     display: block;
     display: -webkit-box;
-    height: calc(16px*2*2);
+    height: calc(16px*1.6*2);
     font-size: 1.3rem;
     line-height: 1.3;
     -webkit-line-clamp: 2;
@@ -314,6 +318,9 @@ https://templatemo.com/tm-561-purple-buzz
         color: #fff;
         text-decoration: none;
     }
+    .menu-mobile .menu-link.active-menuClient a{
+        color: #00b609 !important;
+    }
 
     .scrollbarTTTH .d-flex {
         display: block !important;
@@ -333,6 +340,13 @@ https://templatemo.com/tm-561-purple-buzz
     }
     .homeTTTH .ttth{
         padding-right: 15px;
+    }
+    .homeTTTH::-webkit-scrollbar {
+        height: .4rem;
+    }
+    .homeTTTH::-webkit-scrollbar-thumb {
+        background: #700e13;
+        border-radius: 0.2rem;
     }
     .ttth .ttth-content, .ptn .ptn-content{
         display: flex;
@@ -354,6 +368,15 @@ https://templatemo.com/tm-561-purple-buzz
     }
     .link-datafinancial.active-menuClient.mobile{
         display: block;
+    }
+    .active-menuClient-mobile .navbar-nav{
+        flex-direction: unset
+    }
+    .active-menuClient-mobile .nav-item{
+        width: 50%;
+        flex: 0 0 auto;
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
     }
     .form-dangky-vip{
         padding-left: unset;
@@ -378,6 +401,16 @@ https://templatemo.com/tm-561-purple-buzz
     }
     .bcptn{
         border-bottom: none;
+        width: 70%;
+    }
+    .bcptn .about-img{
+        height: 140px;
+    }
+    .bcptn .about-content{
+        padding-left: unset;
+    }
+    .blogReader, .about-content h6{
+        text-align: justify;
     }
     .home_index_child.web{
         display: none;

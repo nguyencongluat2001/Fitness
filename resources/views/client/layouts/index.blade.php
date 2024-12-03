@@ -168,7 +168,7 @@
             left: 0;
             bottom: 0;
         }
-        
+
         #menuClient #navbar-toggler-success #nav-menu-content {
             background-color: #700e13;
             bottom: 0;
@@ -188,10 +188,12 @@
                 left: 0;
             }
         }
-        #menu-content{
+
+        #menu-content {
             width: 100%;
             background-color: #0000005c;
         }
+
         #nav-menu-content {
             width: 60%;
         }
@@ -451,27 +453,43 @@
                     <ul>
                         @foreach($menuItems as $key => $value)
                         @if($key != 'home')
-                        <li class="menu-link">
+                        <li class="menu-link link-{{$key}}">
                             @if(isset($value['child']) && !empty($value['child']))
-                            <a class="nav-link dropdown-toggle link-{{$key}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="{{ url('client') }}/{{$key}}/index">
                                 {{ $value['name'] }}
                             </a>
-                            <ol class="dropdown-menu">
+                            <div style="display: none;">
                                 @foreach($value['child'] as $keyChild => $child)
-                                <li class="nav-item">
+                                <div class="nav-item">
                                     <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
-                                </li>
+                                </div>
                                 @endforeach
-                            </ol>
+                            </div>
                             @else
-
-                            <a href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a>
+                            <a class="nav-link" href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a>
                             @endif
                         </li>
                         @endif
                         @endforeach
                     </ul>
                 </div>
+            </div>
+            @foreach($menuItems as $key => $value)
+            @php if($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '') $_SERVER['REQUEST_URI'] = 'datafinancial'; @endphp
+            @if(!empty($value['child']) && strpos($_SERVER['REQUEST_URI'], $key) !== false)
+            <div class="menu-mobile">
+
+            <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient active-menuClient-mobile">
+                <div class="navbar-nav d-flex justify-content-between text-dark" style="flex-wrap: wrap;">
+                    @foreach($value['child'] as $keyChild => $child)
+                    <div class="nav-item">
+                        <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+            @endif
+            @endforeach
             </div>
         </nav>
     </div>

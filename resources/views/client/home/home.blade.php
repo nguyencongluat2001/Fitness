@@ -235,8 +235,8 @@ use Carbon\Carbon;
                     <span><b>V.I.P ĐẦU TƯ (BCPT VIP)</b></span>
                 </div>
                 <div id="style-1" class="homeTTTH row vip">
-                    @if(isset($TTTH))
-                    @foreach ($TTTH as $key => $data)
+                    @if(isset($VIP))
+                    @foreach ($VIP as $key => $data)
                     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
                     <div class="col-md-4 about-list mb-3">
                         <div class="about-img">
@@ -264,7 +264,7 @@ use Carbon\Carbon;
                 <div class="col-md-12 mb-3 about-title">
                     <span style="padding-left: 15px;"><b>THỊ TRƯỜNG TỔNG HỢP</b></span>
                 </div>
-                <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
+                <div id="style-1" class="homeTTTH homeTTTHScroll" style="padding-left:15px;max-height:600px !important">
                     <ul class="list-group">
                         @if(isset($TTTH))
                         @foreach ($TTTH as $key => $data)
@@ -305,28 +305,10 @@ use Carbon\Carbon;
                 <div class="col-md-12 mb-3 row">
                     <span><b>NGÀNH ĐẦU TƯ (BCPT NGÀNH)</b></span>
                 </div>
-                <div id="style-1" class="homeTTTH row vip">
+                <div id="style-1" class="homeTTTH row vip homeBCPTN">
                     @if(isset($BCPTN))
                     @foreach ($BCPTN as $key => $data)
                     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                    {{--<div class="col-md-4 about-list mb-3">
-                        <div class="about-img">
-                            <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                <h1 style="position: absolute;right:0">
-                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
-                                </h1>
-                                @endif
-                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
-                            </a>
-                        </div>
-                        <div class="about-content">
-                            <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
-                            <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                            </a>
-                        </div>
-                    </div>--}}
                     <div class="col-sm-6 col-lg-12  bcptn text-decoration-none {{ $data->code_category }} mb-3">
                         <div class="bcptn-content d-lg-flex gx-5">
                             <!-- display: flex;align-items: center;justify-content: center; -->
@@ -357,7 +339,7 @@ use Carbon\Carbon;
                 <div class="col-md-12 mb-3 about-title">
                     <span style="padding-left: 15px;"><b>BCPT CỔ PHIẾU DOANH NGHIỆP</b></span>
                 </div>
-                <div id="style-1" class="homeTTTH" style="padding-left:15px;max-height:900px !important">
+                <div id="style-1" class="homeTTTH homeBCPTCPDN" style="padding-left:15px;max-height:500px !important">
                     <ul class="list-group">
                         @if(isset($BCPTDN))
                         @foreach ($BCPTDN as $key => $data)
