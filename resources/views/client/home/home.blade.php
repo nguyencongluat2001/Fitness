@@ -82,7 +82,7 @@ use Carbon\Carbon;
         overflow: hidden;
         line-height: 1.5;
     }
-    .blogReader>*{
+    .blogReader * {
         font-size: 1rem;
         font-weight: normal;
         margin-bottom: 0;
@@ -161,8 +161,8 @@ use Carbon\Carbon;
         </div>
     </section>
     <!-- tra cứu cổ phiếu -->
-    <section class="container" style="background:#fff">
-        <div class="pt-3 pb-3 d-lg-flex gx-5">
+    <section class="container" style="background:#b56c6cb5">
+        <div class="pt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
             <div class="col-md-8">
                 <div class="col-md-12 mb-3 row">
                     <span><b class="text-uppercase">tra cứu cổ phiếu</b></span>
@@ -229,7 +229,7 @@ use Carbon\Carbon;
                 </div>
             </div>
         </div>
-        <div class="pt-3 pb-3 d-lg-flex gx-5">
+        <div class="pt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
             <div class="col-md-8">
                 <div class="col-md-12 mb-3 row">
                     <span><b>V.I.P ĐẦU TƯ (BCPT VIP)</b></span>
@@ -300,7 +300,7 @@ use Carbon\Carbon;
                 </div>
             </div>
         </div>
-        <div class="pt-3 pb-3 d-lg-flex gx-5">
+        <div class="pt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
             <div class="col-md-8">
                 <div class="col-md-12 mb-3 row">
                     <span><b>NGÀNH ĐẦU TƯ (BCPT NGÀNH)</b></span>

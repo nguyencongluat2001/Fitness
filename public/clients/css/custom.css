@@ -153,6 +153,9 @@ https://templatemo.com/tm-561-purple-buzz
 .ttth_web, .ptn_web{
     display: block;
 }
+.ttth_web .blogReader *{
+    text-transform: lowercase;
+}
 .ttth_mobile, .ptn_mobile{
     display: none;
 }

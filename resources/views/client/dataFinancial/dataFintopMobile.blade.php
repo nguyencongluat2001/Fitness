@@ -33,40 +33,40 @@
         </colgroup>
         <tbody>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Sàn</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Sàn</b></td>
                 <td class="td_exchange_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Nhóm nghành HĐKD</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Nhóm nghành<br>HĐKD</b></td>
                 <td class="td_code_category_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Thời gian cập nhật</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Thời gian<br>cập nhật</b></td>
                 <td class="td_created_at_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Xếp hạng TA</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Xếp hạng TA</b></td>
                 <td class="td_ratings_TA_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Xu hướng cổ phiếu</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Xu hướng<br>cổ phiếu</b></td>
                 <td class="td_identify_trend_mobile" align="center" style="vertical-align: middle;">
                 </td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Tín hiệu hành động</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Tín hiệu<br>hành động</b></td>
                 <td class="td_act_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Vùng giá giao dịch</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Vùng giá<br>giao dịch</b></td>
                 <td class="td_trading_price_range_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Xếp hạng FA</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Xếp hạng FA</b></td>
                 <td class="td_ratings_FA_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
             <tr>
-                <td style="background:#529845;color:white;white-space: inherit;vertical-align: middle"><b>Thông tin/Phân tích</b></td>
+                <td align="center" style="background:#529845;font-size:.8rem;color:white;white-space: inherit;vertical-align: middle"><b>Thông tin/<br>Phân tích</b></td>
                 <td class="td_view_mobile" align="center" style="vertical-align: middle;">-</td>
             </tr>
         </tbody>

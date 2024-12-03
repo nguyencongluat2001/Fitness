@@ -81,7 +81,7 @@
     overflow: hidden;
   }
 
-  .blogReader>* {
+  .blogReader * {
     font-size: 1rem;
     font-weight: unset;
   }
