@@ -4,17 +4,17 @@
         color: #00b609 !important
     }
 
-    #nav-menu-content {
+    /* #nav-menu-content {
         background-color: #00000042;
         position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
-    }
+    } */
 </style>
-<div id="nav-menu-content">
-    <div id="menu-content">
+<div id="menu-content">
+    <div id="nav-menu-content">
         <div style="text-align: right; padding: .5rem; color:#fff;" class="btn_close">
             <span type="button" class="menu-close"><i class="fas fa-times" aria-hidden="true"></i></span>
         </div>

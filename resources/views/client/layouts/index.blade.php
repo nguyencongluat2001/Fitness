@@ -163,11 +163,19 @@
         #menuClient #navbar-toggler-success #menu-content {
             border-radius: unset;
             margin: 0;
-            background-color: #700e13;
             position: fixed;
             top: 0;
             left: 0;
             bottom: 0;
+        }
+        
+        #menuClient #navbar-toggler-success #nav-menu-content {
+            background-color: #700e13;
+            bottom: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
             animation: menu-show .5s;
         }
 
@@ -180,8 +188,11 @@
                 left: 0;
             }
         }
-
-        #menu-content {
+        #menu-content{
+            width: 100%;
+            background-color: #0000005c;
+        }
+        #nav-menu-content {
             width: 60%;
         }
 
