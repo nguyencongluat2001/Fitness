@@ -97,7 +97,7 @@
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tỷ trọng <br> (%NAV)</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá hiện tại</b></td>
+                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá <br> hiện tại</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Hành động</b></td>
                     <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA1)</b></td> -->
