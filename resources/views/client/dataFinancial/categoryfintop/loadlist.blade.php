@@ -90,11 +90,11 @@
             <tr style="background:#3a760c;color:white">
                 {{--<td align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
                 <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red"><b>% Bán</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã <br>cổ phiếu</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>% Tài sản <br> khuyến nghị</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Tỷ trọng <br> (%NAV)</b></td>
+                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày bán</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá bán</b></td>
                 <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
