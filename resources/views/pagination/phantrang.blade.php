@@ -4,7 +4,7 @@
     }
 </style>
 <input type="hidden" name="_currentPage" id="_currentPage" value="{{$paginator->currentPage()}}">
-<div class="row">
+<div class="d-flex">
     <div class="col-sm-3">
         <div class="dataTables_info"><span class="page-link">Có {{$paginator->count()}}/ {{$paginator->total()}} bản ghi</span></div>
     </div>

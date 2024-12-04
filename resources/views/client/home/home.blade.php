@@ -81,6 +81,7 @@ use Carbon\Carbon;
         -webkit-line-clamp: 2;
         overflow: hidden;
         line-height: 1.5;
+        height: calc(16px* 1.3* 2);
     }
     .blogReader * {
         font-size: 1rem;

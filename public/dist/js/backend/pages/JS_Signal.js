@@ -4,6 +4,7 @@ function JS_Signal(baseUrl, module, controller) {
     this.controller = controller;
     NclLib.active('.link-signal');
     this.urlPath = baseUrl + '/' + module + '/' + controller;
+    this.type;
 }
 
 /**
@@ -20,6 +21,12 @@ JS_Signal.prototype.loadIndex = function() {
 
     $(oForm).find('#btn_buy').click(function() {
         myClass.add(oForm,'MUA');
+    });
+    $(oForm).find('#nav-mua-tab').click(function() {
+        myClass.loadList(oForm);
+    });
+    $(oForm).find('#nav-ban-tab').click(function() {
+        myClass.loadListBAN(oForm);
     });
     $(oForm).find('#btn_sell').click(function() {
         myClass.add(oForm,'BAN');
@@ -52,9 +59,8 @@ JS_Signal.prototype.loadIndex = function() {
         /* ENTER PRESSED*/
         var page = $(oForm).find('#limit').val();
         var perPage = $(oForm).find('#cbo_nuber_record_page').val();
-        myClass.loadList(oForm, page, perPage);
+        myClass.search(oForm, page, perPage);
         // return false;
-
     });
     // Xoa doi tuong
     $(oForm).find('#btn_delete').click(function() {
@@ -139,6 +145,7 @@ JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
         data += '&type=' + $("#type").val();
         data += '&fromdate=' + $("#fromdate").val();
         data += '&todate=' + $("#todate").val();
+        data += '&type=MUA';
         data += '&offset=' + numberPage;
         data += '&limit=' + perPage;
         $.ajax({
@@ -147,7 +154,51 @@ JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
             // cache: true,
             data: data,
             success: function(arrResult) {
-                $("#table-container").html(arrResult);
+                myClass.type = 'MUA';
+                $("#nav-mua").html(arrResult);
+                // phan trang
+                $(oForm).find('.main_paginate .pagination a').click(function() {
+                    var page = $(this).attr('page');
+                    var perPage = $('#cbo_nuber_record_page').val();
+                    myClass.loadList(oForm, page, perPage);
+                });
+                $(oForm).find('#cbo_nuber_record_page').change(function() {
+                    var page = $(oForm).find('#_currentPage').val();
+                    var perPages = $(oForm).find('#cbo_nuber_record_page').val();
+                    myClass.loadList(oForm, page, perPages);
+                });
+                $(oForm).find('#cbo_nuber_record_page').val(perPage);
+                var loadding = NclLib.successLoadding();
+                myClass.loadevent(oForm);
+            }
+        });
+}
+/**
+ * Load màn hình danh sách
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_Signal.prototype.loadListBAN = function(oForm, numberPage = 1, perPage = 15) {
+        var myClass = this;
+        var url = this.urlPath + '/loadList';
+        var data = '_token=' + $("#_token").val();
+        data += '&search=' + $("#search").val();
+        data += '&type=' + $("#type").val();
+        data += '&fromdate=' + $("#fromdate").val();
+        data += '&todate=' + $("#todate").val();
+        data += '&type=BAN';
+        data += '&offset=' + numberPage;
+        data += '&limit=' + perPage;
+        $.ajax({
+            url: url,
+            type: "POST",
+            // cache: true,
+            data: data,
+            success: function(arrResult) {
+                myClass.type = 'BAN';
+                $("#nav-ban").html(arrResult);
                 // phan trang
                 $(oForm).find('.main_paginate .pagination a').click(function() {
                     var page = $(this).attr('page');
@@ -394,8 +445,13 @@ JS_Signal.prototype.changeStatusSignal = function(id) {
 /**
  * Tìm kiếm
  */
-JS_Signal.prototype.search = function(){
-    JS_Signal.loadList();
+JS_Signal.prototype.search = function(oForm, page, perPage){
+    var myClass = this;
+    if(myClass.type == 'BAN'){
+        JS_Signal.loadListBAN(oForm, page, perPage);
+    }else{
+        JS_Signal.loadList(oForm, page, perPage);
+    }
 }
 /**
  * Check

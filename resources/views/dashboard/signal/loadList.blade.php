@@ -1,10 +1,10 @@
 <div class="table-responsive pmd-card pmd-z-depth ">
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
-        <!-- <colgroup>
+        <colgroup>
             <col width="3%">
             <col width="5%">
             <col width="14%">
-            <col width="15%">
+            <col width="14%">
             <col width="10%">
             <col width="10%">
             <col width="10%">
@@ -12,7 +12,7 @@
             <col width="10%">
             <col width="10%">
             <col width="3%">
-        </colgroup> -->
+        </colgroup>
         <thead>
             <tr style="height: 70px;">
                 <td align="center" style="vertical-align: middle;"><input type="checkbox" name="chk_all_item_id"
@@ -57,7 +57,7 @@
                             <span id="span_target_{{$id}}" class="span_target_{{$id}}">{{ $data->target }}</span>
                         </td>
                         
-                        <td align="center" class="td_stop_loss_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'stop_loss')">
+                        <td align="center" style="text-wrap: auto;" class="td_stop_loss_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'stop_loss')">
                             <span id="span_stop_loss_{{$id}}" class="span_stop_loss_{{$id}}">{{ $data->stop_loss }}</span>
                         </td>
                         <!-- <td class="text-center td_order_{{$id}}" onclick="{select_row(this);}" ondblclick="click2('{{$id}}', 'order')">
