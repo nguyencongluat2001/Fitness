@@ -22,7 +22,7 @@ JS_Blogs.prototype.loadIndex = function () {
         myClass.add(oForm);
     });
     $('form#frmAdd').find('#btn_create').click(function () {
-        myClass.store('form#frmAdd');
+        myClass.store(oForm);
     })
     // $(oForm).find('#btn_edit').click(function () {
     //     myClass.edit(oForm);
@@ -48,7 +48,7 @@ JS_Blogs.prototype.loadIndex = function () {
 JS_Blogs.prototype.loadevent = function (oForm) {
     var myClass = this;
     $('form#frmAdd').find('#btn_create').click(function () {
-        myClass.store('form#frmAdd');
+        myClass.store('form#frmBlog_index');
     })
     $('form#frmAdd').find('#btn_changePass').click(function () {
         myClass.changePass('form#frmAdd');
@@ -91,7 +91,7 @@ JS_Blogs.prototype.add = function (oForm) {
  *
  * @return void
  */
-JS_Blogs.prototype.store = function (oFormCreate) {
+JS_Blogs.prototype.store = function (oForm) {
     var url = this.urlPath + '/create';
     var myClass = this;
     var formdata = new FormData();
@@ -129,7 +129,7 @@ JS_Blogs.prototype.store = function (oFormCreate) {
             if (arrResult['success'] == true) {
                   NclLib.alertMessageBackend('success', 'Thông báo', 'Cập nhật thành công');
                   $('#editmodal').modal('hide');
-                  myClass.loadList(oFormCreate);
+                  myClass.loadList(oForm);
 
             } else {
                 var loadding = NclLib.successLoadding();
@@ -146,6 +146,7 @@ JS_Blogs.prototype.store = function (oFormCreate) {
  * @return void
  */
 JS_Blogs.prototype.loadList = function (oForm, numberPage = 1, perPage = 15) {
+    console.log(oForm);
     var myClass = this;
     var url = this.urlPath + '/loadList';
     var data = 'search=' + $("#search").val();
