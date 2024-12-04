@@ -448,26 +448,13 @@
                 <div class="navbar-brand h1 header-logo" href="#"></div>
             </div>
             <div class="menu-mobile">
-                <div class="menu-mobile-home"><a href="{{ url('client') }}/home/index"><i class="fas fa-home"></i></a></div>
+                <div class="menu-mobile-home" style="display: flex;"><a href="{{ url('client') }}/home/index"><i class="fas fa-home"></i></a></div>
                 <div class="menu-mobile-list">
                     <ul>
                         @foreach($menuItems as $key => $value)
                         @if($key != 'home')
                         <li class="menu-link link-{{$key}}">
-                            @if(isset($value['child']) && !empty($value['child']))
-                            <a class="nav-link" href="{{ url('client') }}/{{$key}}/index">
-                                {{ $value['name'] }}
-                            </a>
-                            <div style="display: none;">
-                                @foreach($value['child'] as $keyChild => $child)
-                                <div class="nav-item">
-                                    <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
-                                </div>
-                                @endforeach
-                            </div>
-                            @else
                             <a class="nav-link" href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a>
-                            @endif
                         </li>
                         @endif
                         @endforeach
@@ -480,13 +467,13 @@
             <div class="menu-mobile">
 
             <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient active-menuClient-mobile">
-                <div class="navbar-nav d-flex justify-content-between text-dark" style="flex-wrap: wrap;">
+                <ul class="navbar-nav d-flex justify-content-between text-dark">
                     @foreach($value['child'] as $keyChild => $child)
-                    <div class="nav-item">
+                    <li class="nav-item" style="width: 100%">
                         <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
-                    </div>
+                    </li>
                     @endforeach
-                </div>
+                </ul>
             </div>
             @endif
             @endforeach

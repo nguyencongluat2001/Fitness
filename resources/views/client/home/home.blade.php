@@ -161,21 +161,21 @@ use Carbon\Carbon;
         </div>
     </section>
     <!-- tra cứu cổ phiếu -->
-    <section class="container" style="background:#b56c6cb5">
-        <div class="pt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
-            <div class="col-md-8">
+    <section class="container pt-3" style="background:#b56c6cb5">
+        <div class="mb-3 d-lg-flex gx-5" style="background-color: #fff;">
+            <div class="col-md-8 pt-3" style="border-right: 1px solid #bdbdbd;">
                 <div class="col-md-12 mb-3 row">
                     <span><b class="text-uppercase">tra cứu cổ phiếu</b></span>
                 </div>
                 <div class="row">@include('client.home.loadlist')</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pt-3">
                 <div class="col-md-12 mb-3 row">
                     <span><b class="text-uppercase">Hội viên V.I.P</b></span>
                 </div>
                 <div class="row">
                     <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien dangky-hoivien-home pb-2">
-                        <div class="pricing-table card card-rounded shadow-sm border-0" style="background:">
+                        <div class="pricing-table card card-rounded shadow-sm border-0" style="box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.3) !important">
                             <div class="pricing-table-body card-body text-center">
                                 <div class="bg-secondary" style="border-radius: 0.5em;">
                                     <img src="{{url('/clients/img/diamond.png')}}" alt="Image" style="height: 63px;width: 63px;" class="py-2">
@@ -188,7 +188,7 @@ use Carbon\Carbon;
                         </div>
                     </div>
                     <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien pb-2">
-                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.3) !important">
                             <div class="pricing-table-body card-body text-center">
                                 <div class="bg-secondary" style="border-radius: 0.5em;">
                                     <i style="color:#ffbb2e" class="pricing-table-icon display-5 bx bx-package py-2"></i>
@@ -201,7 +201,7 @@ use Carbon\Carbon;
                         </div>
                     </div>
                     <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien pb-2">
-                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.3) !important">
                             <div class="pricing-table-body card-body text-center">
                                 <div class="bg-secondary" style="border-radius: 0.5em;">
                                     <i style="color:#f2f2f2" class="pricing-table-icon display-5 bx bx-package py-2"></i>
@@ -214,7 +214,7 @@ use Carbon\Carbon;
                         </div>
                     </div>
                     <div class="col-md-6 pt-sm-0 pt-3 px-xl-3 dangky-hoivien pb-2">
-                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="background:">
+                        <div class="pricing-table card h-100 card-rounded shadow-sm border-0" style="box-shadow: 3px 3px 8px 0 rgba(0, 0, 0, 0.3) !important">
                             <div class="pricing-table-body card-body text-center">
                                 <div class="bg-secondary" style="border-radius: 0.5em;">
                                     <i style="color:#7ff3ff" class="pricing-table-icon display-5 bx bx-package py-2"></i>
@@ -229,8 +229,8 @@ use Carbon\Carbon;
                 </div>
             </div>
         </div>
-        <div class="pt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
-            <div class="col-md-8">
+        <div class="mt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
+            <div class="col-md-8 pt-3" style="border-right: 1px solid #bdbdbd;">
                 <div class="col-md-12 mb-3 row">
                     <span><b>V.I.P ĐẦU TƯ (BCPT VIP)</b></span>
                 </div>
@@ -238,7 +238,8 @@ use Carbon\Carbon;
                     @if(isset($VIP))
                     @foreach ($VIP as $key => $data)
                     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                    <div class="col-md-4 about-list mb-3">
+                    <div class="col-md-4 about-list mb-3 bcptVIP">
+                        <div style="box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4); border-radius: 7px;">
                         <div class="about-img">
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
@@ -255,12 +256,13 @@ use Carbon\Carbon;
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </a>
                         </div>
+                        </div>
                     </div>
                     @endforeach
                     @endif
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pt-3" style="background-color: #ecedee;">
                 <div class="col-md-12 mb-3 about-title">
                     <span style="padding-left: 15px;"><b>THỊ TRƯỜNG TỔNG HỢP</b></span>
                 </div>
@@ -285,7 +287,7 @@ use Carbon\Carbon;
                                         <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
                                     </a>
                                 </div>
-                                <div class="col-lg-7 about-content">
+                                <div class="col-lg-8 about-content">
                                     <i>{{$created_at->diffForHumans($now)}}</i>
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                         <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
@@ -300,8 +302,8 @@ use Carbon\Carbon;
                 </div>
             </div>
         </div>
-        <div class="pt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
-            <div class="col-md-8">
+        <div class="mt-3 mb-3 d-lg-flex gx-5" style="background-color: #fff;">
+            <div class="col-md-8 pt-3" style="border-right: 1px solid #bdbdbd;">
                 <div class="col-md-12 mb-3 row">
                     <span><b>NGÀNH ĐẦU TƯ (BCPT NGÀNH)</b></span>
                 </div>
@@ -335,7 +337,7 @@ use Carbon\Carbon;
                     @endif
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 pt-3" style="background-color: #ecedee;">
                 <div class="col-md-12 mb-3 about-title">
                     <span style="padding-left: 15px;"><b>BCPT CỔ PHIẾU DOANH NGHIỆP</b></span>
                 </div>
@@ -360,7 +362,7 @@ use Carbon\Carbon;
                                         <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
                                     </a>
                                 </div>
-                                <div class="col-lg-7 about-content">
+                                <div class="col-lg-8 about-content">
                                     <i>{{$created_at->diffForHumans($now)}}</i>
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                         <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>

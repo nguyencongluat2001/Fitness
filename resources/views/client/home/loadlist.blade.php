@@ -23,26 +23,26 @@
     tr td{
       padding: 2px;
     }
-    #table-data tr td{
+    #table-data-home tr td{
       height: 58px;
     }
 </style>
 <form id="frmSearchCP" role="form" action="" method="POST" style="width: 100%;overflow-x: scroll;">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
-    <table id="table-data" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" onclick="window.location.href='/'">
+    <table id="table-data-home" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" onclick="window.location.href='/'">
         <colgroup>
-            <col width="5%">
+            <col width="4%">
             <col width="6%"> <!-- macp -->
             <col width="6%"> <!-- san -->
             <col width="8%"> <!-- nhom nganh -->
-            <col width="8%"> <!-- thoi gian -->
+            <col width="10%"> <!-- thoi gian -->
             <col width="6%"> <!-- xep hang -->
-            <col width="20%"> <!-- nhan dinh TA -->
-            <col width="10%"> <!-- hanh dong -->
-            <col width="8%"> <!-- vung gia -->
+            <col width="18%"> <!-- nhan dinh TA -->
+            <col width="11%"> <!-- hanh dong -->
+            <col width="10%"> <!-- vung gia -->
             <col width="8%"> <!-- xep hang FA -->
-            <col width="9%"> <!-- thong tin -->
+            <col width="11%"> <!-- thong tin -->
         </colgroup>
         <thead>
             <tr>
@@ -58,7 +58,7 @@
                 <!-- <td style="white-space: inherit;vertical-align: middle;background: #00ad34;animation: lights 2s 750ms linear infinite;" align="center"><b> </i>Nhập mã cổ phiếu</b> <br> <i class="fas fa-angle-double-down"></td> -->
                 <td style="white-space: inherit;vertical-align: middle;background: #fff5a6;" align="center"><b><img width="30px" height="50px" src="../clients/img/arrow-red.gif" alt="Card image"></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
-                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành <br> HĐKD</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br>TA</b></td>
                 <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xu hướng cổ phiếu</b></td>
@@ -74,7 +74,7 @@
             <tr id="code_{{$i}}">
                 <td  style="vertical-align: middle;color:#83beff" align="center">{{$i}}</td>
                 <td class="td_code_cp_{{$i}} tdfull" style="vertical-align: middle;" align="center" onclick="click2('{{$i}}', 'code_cp',this)">
-                    <span id="span_code_cp_{{$i}}" class="span_code_cp_{{$i}} text-success text-uppercase fw-bold"></span>
+                    <span id="span_code_cp_{{$i}}" class="span_code_cp_{{$i}} text-success text-uppercase fw-bold">...</span>
                 </td>
                 <td class="td_exchange_{{$i}}" align="center" style="vertical-align: middle;">-</td>
                 <td class="td_code_category_{{$i}}" align="center" style="vertical-align: middle;">-</td>
