@@ -75,31 +75,31 @@
     <div class="table-responsive pmd-card pmd-z-depth pt-2">
         <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  @if((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG'))) onclick="JS_CategoryFintop.checkLogin()" @endif>
             <colgroup>
-                <col width="8%"> <!-- ma cp -->
+                <col width="7%"> <!-- ma cp -->
                 <col width="9%"> <!-- nhom nganh --> 
                 <col width="6%"> <!-- ngay mua -->
-                <col width="9%"> <!-- %  tai san -->
+                <col width="6%"> <!-- %  tai san -->
                 <col width="6%"> <!-- gia mua -->
-                <col width="8%"> <!-- gia hien tai -->
+                <col width="6%"> <!-- gia hien tai -->
                 <col width="6%"> <!-- lai/lo -->
-                <col width="8%"> <!-- khuyen nghi hanh đong -->
+                <col width="14%"> <!-- khuyen nghi hanh đong -->
                 <col width="5%"> <!-- vung gia muc tieu -->
                 <col width="5%"> <!-- vung gia muc tieu -->
                 <col width="5%"> <!-- vung gia muc tieu -->
                 <col width="7%"> <!-- dung lo -->
-                <col width="15%"> <!-- ghi chu -->
+                <col width="18%"> <!-- ghi chu -->
             </colgroup>
             <thead style="background:#3a760c;color:white">
                 <tr>
                     {{--<td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã cổ phiếu</b></td>
+                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã <br>cổ phiếu</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>% Tài sản <br> khuyến nghị</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá hiện tại</b></td>
+                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tỷ trọng <br> (%NAV)</b></td>
+                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
+                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá <br> hiện tại</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Hành động</b></td>
+                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Tín hiệu <br> hành động</b></td>
                     <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA1)</b></td> -->
                     <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA2)</b></td> -->
                     <td colspan="3" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Vùng giá mục tiêu</b></td>

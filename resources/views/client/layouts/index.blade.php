@@ -143,6 +143,11 @@
     }
 
     @media (max-width: 450px) {
+        body.no-scroll {
+            overflow: hidden;
+            /* Ngăn cuộn */
+        }
+
         .logo-title {
             font-size: calc(1.375rem + 1.5vw);
         }
@@ -158,11 +163,19 @@
         #menuClient #navbar-toggler-success #menu-content {
             border-radius: unset;
             margin: 0;
-            background-color: #700e13;
             position: fixed;
             top: 0;
             left: 0;
             bottom: 0;
+        }
+
+        #menuClient #navbar-toggler-success #nav-menu-content {
+            background-color: #700e13;
+            bottom: 0;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
             animation: menu-show .5s;
         }
 
@@ -177,7 +190,12 @@
         }
 
         #menu-content {
-            width: 80%;
+            width: 100%;
+            background-color: #0000005c;
+        }
+
+        #nav-menu-content {
+            width: 60%;
         }
 
         .align-self-center.title-reponsive h1 {
@@ -424,37 +442,41 @@
                         <span class="ms-1"><i class="fa fa-search"></i></span>
                     </span>
                 </div>
-                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative; left: 50%; transform: translateX(-50%);display:block">
+                <div class="align-self-center title-reponsive navbar-collapse flex-fill d-lg-flex collapse show navbar-toggler-success" id="navbar-toggler-success" style="color: white; margin: auto; position: relative;display:flex !important;justify-content:center;">
                     <h1 class="logo-title" style="font-family: auto;font-weight: 500;color:#fff079;padding-left: 4%;">Tài Chính &amp; Đầu Tư</h1>
                 </div>
+                <div class="navbar-brand h1 header-logo" href="#"></div>
             </div>
             <div class="menu-mobile">
-                <div class="menu-mobile-home"><a href="{{ url('client') }}/home/index"><i class="fas fa-home"></i></a></div>
+                <div class="menu-mobile-home" style="display: flex;"><a href="{{ url('client') }}/home/index"><i class="fas fa-home"></i></a></div>
                 <div class="menu-mobile-list">
                     <ul>
                         @foreach($menuItems as $key => $value)
                         @if($key != 'home')
-                        <li class="menu-link">
-                            @if(isset($value['child']) && !empty($value['child']))
-                            <a class="nav-link dropdown-toggle link-{{$key}}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ $value['name'] }}
-                            </a>
-                            <ol class="dropdown-menu">
-                                @foreach($value['child'] as $keyChild => $child)
-                                <li class="nav-item">
-                                    <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
-                                </li>
-                                @endforeach
-                            </ol>
-                            @else
-                            
-                            <a href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a>
-                            @endif
+                        <li class="menu-link link-{{$key}}">
+                            <a class="nav-link" href="{{ url('client') }}/{{$key}}/index">{{$value['name']}}</a>
                         </li>
                         @endif
                         @endforeach
                     </ul>
                 </div>
+            </div>
+            @foreach($menuItems as $key => $value)
+            @php if($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '') $_SERVER['REQUEST_URI'] = 'datafinancial'; @endphp
+            @if(!empty($value['child']) && strpos($_SERVER['REQUEST_URI'], $key) !== false)
+            <div class="menu-mobile">
+
+            <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient active-menuClient-mobile">
+                <ul class="navbar-nav d-flex justify-content-between text-dark">
+                    @foreach($value['child'] as $keyChild => $child)
+                    <li class="nav-item" style="width: 100%">
+                        <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
+                    </li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+            @endforeach
             </div>
         </nav>
     </div>
@@ -634,12 +656,6 @@
         $(".menu-close").click(function() {
             $("#navbar-toggler-success.navbar-collapse").removeClass('show');
         })
-
-        document.addEventListener('click', closeOnClickOutside);
-
-        function closeOnClickOutside(e) {
-            $("#navbar-toggler-success.navbar-collapse").removeClass('show');
-        }
     </script>
 </body>
 

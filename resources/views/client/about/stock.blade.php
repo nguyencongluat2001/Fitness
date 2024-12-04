@@ -79,7 +79,7 @@
     -webkit-line-clamp: 2;
     overflow: hidden;
   }
-  .blogReader>*{
+  .blogReader * {
     font-size: 1rem;
     font-weight: unset;
   }

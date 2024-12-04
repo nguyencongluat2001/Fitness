@@ -3,97 +3,93 @@
         font-size: 19px;
     }
 
-    header
-    {
-      font-family: 'Lobster', cursive;
-      text-align: center;
-      font-size: 25px ;  
+    td>p {
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
-    #info
-    {
-      font-size: 18px;
-      color: #555;
-      text-align: center;
-      margin-bottom: 25px;
+    th>p {
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 
-    a{
-      color: #074E8C;
+    .table {
+        border-color: #670000
     }
 
-    .scrollbar
-    {
-      margin-left: 30px;
-      /* float: left; */
-      height: 320px;
-      /* width: 65px; */
-      /* background: #F5F5F5; */
-      overflow-y: scroll;
-      margin-bottom: 25px;
+    .tdfull {
+        padding: 0 !important;
     }
-
-    .force-overflow
-    {
-      min-height: 320px;
+    tr td{
+      padding: 2px;
     }
-
-    #wrapper
-    {
-      text-align: center;
-      width: 500px;
-      margin: auto;
-    }
-
-    /*
-    *  STYLE 2
-    */
-
-    #style-2::-webkit-scrollbar-track
-    {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-      border-radius: 10px;
-      background-color: #F5F5F5;
-    }
-
-    #style-2::-webkit-scrollbar
-    {
-      width: 12px;
-      background-color: #F5F5F5;
-    }
-
-    #style-2::-webkit-scrollbar-thumb
-    {
-      border-radius: 10px;
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-      background-color: #D62929;
+    #table-data-home tr td{
+      height: 58px;
     }
 </style>
-
-<div class="mb-4 ">
-    <div class="pb-0">
-        <div class="scrollbar" id="style-1" style="padding-right:10px">
-          <div class="card-body p-2" >
-              <ul class="list-group">
-                  @foreach ($datas as $key => $data)
-                    <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg" style="background: #e7eefe3b;">
-                      <div class="d-flex align-items-center">
-                      <span>
-                        <i style="padding:15px;" class="fas fa-coins"></i>
-                    </span>
-                      <!-- <button class="btn btn-icon-only btn-rounded btn-outline-success mb-0 me-3 btn-sm d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></button> -->
-                          <div class="d-flex flex-column">
-                            <h6 class="mb-1 text-dark text-sm">{{ $data['symbol']}}</h6>
-                            <span class="text-xs">{{ $data['date']}}</span>
-                          </div>
-                      </div>
-                      <div class="d-flex align-items-center text-success text-gradient text-sm font-weight-bold animate-charcter-penTable">
-                          {{ $data['priceHigh']}}
-                      </div>
-                    </li>
-                  @endforeach
-              </ul>
-          </div>
-        </div>
-    </div>
-</div>
+<form id="frmSearchCP" role="form" action="" method="POST" style="width: 100%;overflow-x: scroll;">
+    <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
+    <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
+    <table id="table-data-home" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" onclick="window.location.href='/'">
+        <colgroup>
+            <col width="4%">
+            <col width="6%"> <!-- macp -->
+            <col width="6%"> <!-- san -->
+            <col width="8%"> <!-- nhom nganh -->
+            <col width="10%"> <!-- thoi gian -->
+            <col width="6%"> <!-- xep hang -->
+            <col width="18%"> <!-- nhan dinh TA -->
+            <col width="11%"> <!-- hanh dong -->
+            <col width="10%"> <!-- vung gia -->
+            <col width="8%"> <!-- xep hang FA -->
+            <col width="11%"> <!-- thong tin -->
+        </colgroup>
+        <thead>
+            <tr>
+                <th style="white-space: inherit;vertical-align: middle;font-size: 22px;background:#700e13;color:#fff49b;height: 98px;" align="center" colspan="3">
+                    <center>NHẬP MÃ CP</center>
+                </th>
+                <th style="white-space: inherit;vertical-align: middle;font-size: 22px;background:#700e13;color:#fff49b" align="center" colspan="8">
+                    <center>TRA CỨU CHỨNG KHOÁN (TA - FA)</center>
+                </th>
+            </tr>
+            <tr style="background:#529845;color:white;font-size:.83rem">
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>STT</b></td>
+                <!-- <td style="white-space: inherit;vertical-align: middle;background: #00ad34;animation: lights 2s 750ms linear infinite;" align="center"><b> </i>Nhập mã cổ phiếu</b> <br> <i class="fas fa-angle-double-down"></td> -->
+                <td style="white-space: inherit;vertical-align: middle;background: #fff5a6;" align="center"><b><img width="30px" height="50px" src="../clients/img/arrow-red.gif" alt="Card image"></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Sàn</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành <br> HĐKD</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br>TA</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xu hướng cổ phiếu</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu <br> hành động</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br> FA</b></td>
+                <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thông tin/ <br>Phân tích</b></td>
+            </tr>
+        </thead>
+        <tbody id="body_data" style="background: #ffffff;">
+            @php $id = 1; @endphp
+            @for($i = 1; $i <= 5; $i++) 
+            <tr id="code_{{$i}}">
+                <td  style="vertical-align: middle;color:#83beff" align="center">{{$i}}</td>
+                <td class="td_code_cp_{{$i}} tdfull" style="vertical-align: middle;" align="center" onclick="click2('{{$i}}', 'code_cp',this)">
+                    <span id="span_code_cp_{{$i}}" class="span_code_cp_{{$i}} text-success text-uppercase fw-bold">...</span>
+                </td>
+                <td class="td_exchange_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+                <td class="td_code_category_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+                <td class="td_created_at_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+                <td class="td_ratings_TA_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+                <td class="td_identify_trend_{{$i}}" align="center" style="vertical-align: middle;font-size: 14px !important;">
+                    <span id="span_identify_trend_{{$i}}" class="span_identify_trend_{{$i}}">-</span>
+                </td>
+                <td class="td_act_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+                <td class="td_trading_price_range_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+                <td class="td_ratings_FA_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+                <td class="td_view_{{$i}}" align="center" style="vertical-align: middle;">-</td>
+            </tr>
+            @endfor
+        </tbody>
+    </table>
+    <!-- </div> -->
+</form>

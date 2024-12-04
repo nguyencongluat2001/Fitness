@@ -209,7 +209,7 @@ function click2(id, type) {
     $("#" + type + "_" + id).removeAttr('hidden');
     // $("#span_"+type+"_" + id).html('<textarea name="'+type+'" id="'+type+'_' + id + '" rows="1" style="width: 100%;"></textarea>');
     // $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
-    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp fw-bold" name="${type}" id="${type}_${id}" rows="1" style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
+    $("#span_" + type + "_" + id).html(`<input class="text-uppercase code_cp fw-bold" name="${type}" id="${type}_${id}" rows="1" placeholder="..." style="text-align: center; width: 100%;height: 40px;border: none;outline: none; background-color: #ffffff;" maxlength="3" onkeydown="if (event.key == 'Enter'){JS_DataFinancial.updateDataFinancial('${id}', '${type}');return false;}">`);
 
     $("#" + type + "_" + id).focus();
     $(".td_" + type + "_" + id).removeAttr('onclick');
@@ -220,16 +220,16 @@ function click2(id, type) {
             JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
         }
     })
-    // $("#" + type + "_" + id).focusout(function () {
-    //     var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
-    //     $("#" + type + "_" + id).attr('hidden', true);
-    //     $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
-    //     $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
-    //     $(".span_" + type + "_" + id).html(nhap);
-    //     if (text != $(".span_" + type + "_" + id).html()) {
-    //         JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
-    //     }
-    // })
+    $("#" + type + "_" + id).focusout(function () {
+        var nhap = $("#" + type + "_" + id).val() != '' ? $("#" + type + "_" + id).val() : text;
+        $("#" + type + "_" + id).attr('hidden', true);
+        $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
+        $(".td_" + type + "_" + id).attr('onclick', "click2(" + id + ", 'code_cp',this)");
+        $(".span_" + type + "_" + id).html(nhap);
+        if (text != $(".span_" + type + "_" + id).html()) {
+            JS_DataFinancial.updateDataFinancial(id, type, $(".span_" + type + '_' + id).html());
+        }
+    })
 }
 /**
  * Cập nhật khi ở màn hình hiển thị danh sách
@@ -335,8 +335,6 @@ JS_DataFinancial.prototype.updateDataFinancialMobile = function (id, column, val
                 $("#code_cp").focusout();
                 return false;
             }else if(data['code_cp'] != ''){
-                console.log('1' + data['code_cp'] + '1')
-                console.log('1' + data.code_cp + '1')
                 $(".td_exchange_mobile").html(arrResult['exchange']);
                 $(".td_code_category_mobile").html(arrResult['code_category']);
                 $(".td_created_at_mobile").html(arrResult['created_at'] + ' ' + arrResult['created_at_day']);
