@@ -79,7 +79,7 @@
                                 </li>
                                 @else
                                 <li><i class="fas fa-tags me-2"></i>
-                                    % Còn lại:
+                                    Còn lại ( % ):
                                     <span style="color: #2c4143;font-weight: 700;">
                                         {{ $data['stop_loss'] }}
                                     </span>
@@ -91,7 +91,7 @@
                                     </span>
                                 </li>
                                 <li><i class="fas fa-tags me-2"></i>
-                                    Lãi / lỗ: 
+                                    Lãi / lỗ ( % ): 
                                     <span style="color: #2c4143;font-weight: 700;">
                                         {{ $data['target'] }}
                                     </span>
