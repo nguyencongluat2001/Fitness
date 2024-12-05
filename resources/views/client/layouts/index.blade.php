@@ -657,6 +657,19 @@
             $("#navbar-toggler-success.navbar-collapse").removeClass('show');
         })
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuContainer = document.querySelector('.menu-mobile-list');
+            const activeItem = document.querySelector('.menu-mobile-list .menu-link.active-menuClient');
+            if (activeItem) {
+                // Cuộn mục active ra giữa
+                const containerWidth = menuContainer.offsetWidth;
+                const itemLeft = activeItem.offsetLeft;
+                const itemWidth = activeItem.offsetWidth;
+                menuContainer.scrollLeft = itemLeft - (containerWidth - itemWidth) / 2;
+            }
+        });
+    </script>
 </body>
 
 </html>
