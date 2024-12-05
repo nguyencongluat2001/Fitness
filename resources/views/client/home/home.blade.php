@@ -252,8 +252,8 @@ use Carbon\Carbon;
                             </a>
                         </div>
                         <div class="about-content">
-                            <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}} <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
-                            
+                            <div><i>{{ $data->users->name ?? '' }} </i></div>
+                            <div><i>{{$created_at->diffForHumans($now)}}  | <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </a>
