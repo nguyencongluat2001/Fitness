@@ -51,7 +51,10 @@
                                 @if($data['type'] == 'MUA')
                                 <li>
                                     <div class="d-flex"><i class="fas fa-tags me-2"></i>
-                                        Tỉ trọng: {{ $data['price_buy'] }}
+                                        Tỉ trọng: 
+                                        <span style="color: #2c4143;font-weight: 700;">
+                                            {{ $data['price_buy'] }}
+                                        </span>
                                     </div>
                                 </li>
                                 <li>
@@ -82,10 +85,16 @@
                                     </span>
                                 </li>
                                 <li><i class="fas fa-tags me-2"></i>
-                                    Giá mua TB: {{ $data['price_buy'] }}
+                                    Giá mua TB: 
+                                    <span style="color: #2c4143;font-weight: 700;">
+                                        {{ $data['price_buy'] }}
+                                    </span>
                                 </li>
                                 <li><i class="fas fa-tags me-2"></i>
-                                    Lãi / lỗ: {{ $data['target'] }}
+                                    Lãi / lỗ: 
+                                    <span style="color: #2c4143;font-weight: 700;">
+                                        {{ $data['target'] }}
+                                    </span>
                                 </li>
                                 @endif
                             </div>
