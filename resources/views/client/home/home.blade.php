@@ -252,7 +252,7 @@ use Carbon\Carbon;
                             </a>
                         </div>
                         <div class="about-content">
-                            <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                            <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}} <span style="padding-left: 10px;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                             </a>
@@ -326,7 +326,7 @@ use Carbon\Carbon;
                                 </a>
                             </div>
                             <div class="col-lg-9 about-content">
-                                <i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i>
+                                <i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}} <span style="padding-left: 10px;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i>
                                 <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                     <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
                                 </a>
@@ -364,7 +364,7 @@ use Carbon\Carbon;
                                     </a>
                                 </div>
                                 <div class="col-lg-8 about-content">
-                                    <i>{{$created_at->diffForHumans($now)}}</i>
+                                    <i>{{$created_at->diffForHumans($now)}} <span style="padding-left: 10px;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i>
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                         <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
                                     </a>
