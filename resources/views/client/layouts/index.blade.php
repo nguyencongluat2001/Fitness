@@ -449,7 +449,7 @@
             </div>
             <div class="menu-mobile">
                 <div class="menu-mobile-home" style="display: flex;"><a href="{{ url('client') }}/home/index"><i class="fas fa-home"></i></a></div>
-                <div class="menu-mobile-list">
+                <div class="menu-mobile-list" id="menu-mobile-list">
                     <ul>
                         @foreach($menuItems as $key => $value)
                         @if($key != 'home')
@@ -506,6 +506,7 @@
     <script src="../clients/js/isotope.pkgd.js"></script>
     <!-- Page Script -->
     <script>
+        $('#menu-mobile-list').scrollLeft(100);
         $(window).load(function() {
             // init Isotope
             var $projects = $('.projects').isotope({
