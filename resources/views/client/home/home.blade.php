@@ -289,7 +289,7 @@ use Carbon\Carbon;
                                     </a>
                                 </div>
                                 <div class="col-lg-8 about-content">
-                                    <i>{{$created_at->diffForHumans($now)}}</i><i class="far fa-eye"></i> {{ $data->view_click }}
+                                    <i>{{$created_at->diffForHumans($now)}}</i><span><i class="far fa-eye"></i> {{ $data->view_click }}</span>
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                         <h6 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h6>
                                     </a>
