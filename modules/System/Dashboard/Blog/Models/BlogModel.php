@@ -21,6 +21,7 @@ class BlogModel extends Model
         'code_category',
         'type_blog',
         'status',
+        'view_click',
         'created_at',
         'updated_at'
     ];

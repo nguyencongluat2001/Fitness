@@ -152,6 +152,12 @@ class AboutController extends Controller
     public function reader(Request $request, $id)
     {
         $blog = $this->blogService->where('id', $id)->first();
+        if($blog->view_click == '' || $blog->view_click == null){
+            $view_click = 1;
+        }else{
+            $view_click = $blog->view_click + 1;
+        }
+        $update_view_click = $this->blogService->where('id', $id)->update(['view_click' => $view_click]);
         $blogDetail = $this->blogDetailService->where('code_blog', $blog->code_blog)->first();
         $blogImage = $this->blogImagesService->where('code_blog', $blog->code_blog)->first();
         $data['datas']['blog'] = $blog;
