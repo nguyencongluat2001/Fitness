@@ -245,7 +245,7 @@ use Carbon\Carbon;
                             <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                 @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
                                 <h1 style="position: absolute;right:0">
-                                    <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 32px;object-fit: cover;">
+                                    <img src="{{url('/clients/img/vip.png')}}" class="image-vip" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
                                 </h1>
                                 @endif
                                 <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
@@ -283,7 +283,7 @@ use Carbon\Carbon;
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                         @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
                                         <h1 style="position: absolute;right:0">
-                                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                            <img src="{{url('/clients/img/vip.png')}}" class="image-vip" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
                                         </h1>
                                         @endif
                                         <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">
@@ -320,7 +320,7 @@ use Carbon\Carbon;
                                 <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                     @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
                                     <h1 style="position: absolute;right:0">
-                                        <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                        <img src="{{url('/clients/img/vip.png')}}" class="image-vip" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
                                     </h1>
                                     @endif
                                     <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 140px;width: 100%;object-fit: cover;" alt="...">
@@ -358,7 +358,7 @@ use Carbon\Carbon;
                                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                                         @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
                                         <h1 style="position: absolute;right:0">
-                                            <img src="{{url('/clients/img/vip.png')}}" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                            <img src="{{url('/clients/img/vip.png')}}" class="image-vip" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
                                         </h1>
                                         @endif
                                         <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 70px;width: 100%;object-fit: cover;" alt="...">

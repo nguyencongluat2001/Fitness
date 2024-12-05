@@ -96,7 +96,7 @@ https://templatemo.com/tm-561-purple-buzz
 }
 
 .homeTTTH .about-list {
-    padding: 0 15px;
+    /* padding: 0 15px; */
 }
 
 .card-img,
@@ -200,8 +200,42 @@ https://templatemo.com/tm-561-purple-buzz
 }
 
 .ttth_mobile,
-.ptn_mobile {
+.ptn_mobile,
+.ptcp_mobile,
+.tkp_mobile {
     display: none;
+}
+
+.form-recommendations{
+    display: flex;
+    justify-content: space-between;
+}
+.form-recommendations-first {
+    width: 300px;
+}
+
+.form-recommendations-second {
+    width: 1px;
+    background: #afafaf;
+}
+.form-recommendations-three{
+}
+ul:has(.form-recommendations){
+    width: 100%;
+}
+.pricing-horizontal.rounded{
+    margin-top: unset !important;
+    margin-bottom: 1rem !important;
+}
+
+.clock-web{
+    display: block;
+}
+.clock-mobile, .time-mobile{
+    display: none;
+}
+.form-recommendations-three-time{
+    text-align: center;
 }
 
 @media (max-width: 992px) {
@@ -318,6 +352,26 @@ https://templatemo.com/tm-561-purple-buzz
         padding: 3px;
     }
 
+    .top-co-phieu {
+        overflow-y: unset !important;
+    }
+
+    #style-1{
+        height: unset !important;
+        padding-right: 0 !important;
+    }
+
+    #table-data tr td {
+        height: unset !important;
+        font-size: .46rem;
+        padding: 3px;
+    }
+
+    #table-data th {
+        font-size: 12px !important;
+        height: unset !important;
+    }
+
     .menu-mobile {
         display: flex;
         width: 100%;
@@ -426,6 +480,12 @@ https://templatemo.com/tm-561-purple-buzz
         width: 75%;
     }
 
+    .ttth .ttth-content .about-img .image-vip,
+    .ptn-content .about-img .image-vip {
+        width: 30px !important;
+        height: 40px !important;
+    }
+
     .about-title {
         margin-top: 1rem;
     }
@@ -491,6 +551,18 @@ https://templatemo.com/tm-561-purple-buzz
         min-height: 140px !important;
     }
 
+    .bcptVIP .about-img h1:has(.image-vip),
+    .bcptn-content .about-img h1:has(.image-vip) {
+        right: 10px !important;
+    }
+
+    .bcptVIP .about-img img.image-vip,
+    .bcptn-content .about-img img.image-vip {
+        height: 55px !important;
+        min-height: 55px !important;
+        width: 32px !important;
+    }
+
     .bcptn .about-content {
         padding-left: unset;
     }
@@ -528,9 +600,59 @@ https://templatemo.com/tm-561-purple-buzz
     }
 
     .ttth_mobile,
-    .ptn_mobile {
+    .ptn_mobile,
+    .ptcp_mobile,
+    .tkp_mobile {
+        display: block;
+    }
+    .form-recommendations{
+        display: block;
+    }
+    .form-recommendations-first{
+        width: 100%;
+    }
+    .form-recommendations-three-time{
+        display: flex;
+    }
+    .form-recommendations-three-time-text{
+        display: flex;
+    }
+    .form-recommendations-three-time-text > *{
+        padding-right: 5px;
+    }
+    .pricing-horizontal.rounded{
+        width: 95%;
+    }
+    .clock-web{
+        display: none;
+    }
+    .clock-mobile, .time-mobile{
         display: block;
     }
 }
 
-@media (max-width: 350px) {}
+@media (max-width: 300px) {
+    body{
+        font-size: .8rem;
+    }
+    #logo span.logo-title-mobile{
+        font-size: .8rem;
+    }
+    #table-container-signal #table-data th {
+        font-size: 9px !important;
+        height: unset !important;
+    }
+
+    #table-container-signal #table-data tr td {
+        height: unset !important;
+        font-size: .37rem;
+        padding: 1px;
+    }
+    #table-data tr td{
+        font-size: .37rem;
+        padding: 1px;
+    }
+    #table-data tr td a{
+        font-size: 0.3rem;
+    }
+}

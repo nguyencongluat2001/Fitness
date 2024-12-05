@@ -466,17 +466,17 @@
             @if(!empty($value['child']) && strpos($_SERVER['REQUEST_URI'], $key) !== false)
             <div class="menu-mobile">
 
-            <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient active-menuClient-mobile">
-                <ul class="navbar-nav d-flex justify-content-between text-dark">
-                    @foreach($value['child'] as $keyChild => $child)
-                    <li class="nav-item" style="width: 100%">
-                        <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
-                    </li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif
-            @endforeach
+                <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient active-menuClient-mobile">
+                    <ul class="navbar-nav d-flex justify-content-between text-dark">
+                        @foreach($value['child'] as $keyChild => $child)
+                        <li class="nav-item" style="width: 100%">
+                            <a class="nav-link ps-3 link-{{$keyChild}}" style="color:black;" href="{{ url('client') }}/{{$key}}/{{$keyChild}}"></i><i class="{{$child['icon']}}"></i> {{$child['name']}}</a>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
+                @endforeach
             </div>
         </nav>
     </div>

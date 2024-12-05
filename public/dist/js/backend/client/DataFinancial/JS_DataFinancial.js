@@ -344,6 +344,9 @@ JS_DataFinancial.prototype.updateDataFinancialMobile = function (id, column, val
                 $(".td_trading_price_range_mobile").html(arrResult['trading_price_range']);
                 $(".td_ratings_FA_mobile").html(arrResult['ratings_FA']);
                 $(".td_view_mobile").html('<a href="'+arrResult['url_link']+'" target="_blank">Chi tiết</a>');
+                $(".td_identify_trend_mobile").css('background-color', '#a3f1fe5e')
+                $(".td_act_mobile").css('background-color', '#ffb75c');
+                $(".td_ratings_FA_mobile").css('color', '#ff7c00');
             }
         }, error: function (e) {
             console.log(e);

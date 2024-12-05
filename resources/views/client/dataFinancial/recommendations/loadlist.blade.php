@@ -22,8 +22,8 @@
                     @endif
                 </div>
                 <div class="text-light col-lg-9"
-                    @if($data['type']=='BAN' ) style="background-color: rgba(113, 14, 19, 0.20);display: flex;align-items: center;"
-                    @else style="background-color: #0e5c3533;display: flex;align-items: center;"
+                    @if($data['type']=='BAN' ) style="background-color: rgba(113, 14, 19, 0.20);display:flex;align-items:center;"
+                    @else style="background-color: #0e5c3533;display:flex;align-items:center;"
                     @endif>
                     <ul class="text-left list-unstyled mb-0" style="color: #596986;font-family: ui-monospace;">
                         <li style="color: #2a2d45;font-family: serif;font-weight: 600;">
@@ -46,8 +46,8 @@
                         </li>
 
                         </li>
-                        <div style="display:flex">
-                            <div style="    width: 300px;">
+                        <div class="form-recommendations">
+                            <div class="form-recommendations-first">
                                 @if($data['type'] == 'MUA')
                                 <li>
                                     <div class="d-flex"><i class="fas fa-tags me-2"></i>
@@ -98,15 +98,20 @@
                                 </li>
                                 @endif
                             </div>
-                            <div style="width:1px;background:#afafaf;">
+                            <div class="form-recommendations-second">
                             </div>
-                            <div style="padding-left: 50px;">
-                                <center>
-                                    <i class="fas fa-stopwatch"></i>&nbsp;&nbsp; Thời gian <br>
-                                    <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s', strtotime($data['created_at']))}}</span> <br>
-                                    <span style="color: #2c4143;font-weight: 700;"> {{date('d-m-Y', strtotime($data['created_at']))}}</span>
-                                </center>
+                            <div class="form-recommendations-three">
+                                <div class="form-recommendations-three-time">
+                                    <div class="clock-mobile"><i class="fas fa-stopwatch"></i></div>
+                                    <span class="clock-web"><i class="fas fa-stopwatch"></i> &nbsp; Thời gian </span>
+                                    <div class="form-recommendations-three-time-text">
+                                        <span class="time-mobile">&nbsp; Thời gian <br></span>
+                                        <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s', strtotime($data['created_at']))}}</span> <br>
+                                        <span style="color: #2c4143;font-weight: 700;"> {{date('d-m-Y', strtotime($data['created_at']))}}</span>
+                                    </div>
+                                </div>
                             </div>
+                            <div></div>
                         </div>
 
                     </ul>

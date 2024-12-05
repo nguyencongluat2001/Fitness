@@ -55,7 +55,7 @@ use Carbon\Carbon;
         </div>
         <div class="paginate tkp_web">
             @if(count($datas) > 0)
-            {{$datas->links('pagination.blog')}}
+            {{$datas->links('pagination.baocaoTTTH')}}
             @endif
         </div>
         <div id="content-mobile" class="tkp_mobile row" style="max-height:900px !important">

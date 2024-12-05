@@ -18,7 +18,7 @@
                 <div class="home_index_vnindex pt-1 pb-3" style="background:#b56c6cb5 !important;border-radius:0px !important">
                     <!-- Chú giải xếp hạng TA/FA -->
                     <div class="home_index_child" style="background:#ffffffe0 !important;">
-                        <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
+                        <div class="col-lg-12 top-co-phieu" style="padding:10px;overflow-y: scroll;">
                             <div class="py-2">
                                 <!-- Màn hình danh sách -->
                                 <div id="table-container-signal"></div>

@@ -9,7 +9,7 @@
                 <div class="home_index_vnindex pt-1 pb-2" style="background:#b56c6cb5 !important;border-radius:0px !important">
                     <!-- Chú giải xếp hạng TA/FA -->
                     <div class="home_index_child" style="background:#ffffffe6 !important">
-                        <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
+                        <div class="col-lg-12" style="padding:10px;">
                             <h class=" py-2"><i class="fas fa-chart-bar"></i> <span style="font-size:16px;font-family: auto;">DANH MỤC V.I.P FINTOP</span></h>
                             <br>
                             {{--<span><i class="fas fa-hand-point-right"></i> Đăng ký VIP để xem danh mục Tín Hiệu V.I.P FINTOP
@@ -23,7 +23,7 @@
                     </div>
                     <!-- biểu đồ FireAnt -->
                     <div class="home_index_child " style="background:#ffffffe6 !important">
-                        <div class="col-lg-12" style="padding:10px;overflow-y: scroll;">
+                        <div class="col-lg-12" style="padding:10px;">
                             <h class=" py-2"><i class="far fa-chart-bar"></i>. <span style="font-size:16px;font-family: auto;" > HIỆU QUẢ DANH MỤC FINTOP</span> </h> <br>
                              <!-- Màn hình danh sách hieu qua  -->
                                 <div id="table-container-categoryFintop_basic"></div>
