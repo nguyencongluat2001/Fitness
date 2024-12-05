@@ -506,7 +506,7 @@
     <script src="../clients/js/isotope.pkgd.js"></script>
     <!-- Page Script -->
     <script>
-        $('#menu-mobile-list').scrollLeft(100);
+        $('#menu-mobile-list').scrollLeft(50);
         $(window).load(function() {
             // init Isotope
             var $projects = $('.projects').isotope({
