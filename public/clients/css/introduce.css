@@ -445,10 +445,11 @@
         padding: 40px 10px !important;
     }
     #main-root .label{
-        line-height: 30px;
+        line-height: 14px;
         min-width: 8rem;
         right: -6rem;
-        top: 40%;
+        top: 42%;
+        font-size: 0.5rem;
     }
     .branch-inverse {
         margin-right: 0;
@@ -456,30 +457,31 @@
     .branch-inverse:before {
         width: 41px;
         right: 6px;
-        top: 53%;
+        top: 48%;
     }
     .entry-inverse:before {
         width: 19px;
         right: 45px;
-        height: 6rem;
-        top: 13%;
+        height: 4rem;
+        top: 10%;
     }
     .entry-inverse:after {
-        width: 3rem;
+        width: 1.7rem;
         right: 3.9rem;
-        top: 70%;
+        top: 40%;
     }
     .label-inverse {
-        line-height: 30px;
+        line-height: 24px;
         min-width: 10rem;
         right: 58%;
+        font-size: 0.5rem;
     }
     .entry-inverse:first-child:before {
-        height: 5rem;
-        top: 67%;
+        height: 3rem;
+        top: 35%;
     }
     .entry-inverse:last-child:before {
-        height: 3.36rem;
+        height: 1.95rem;
     }
     .home_index_child .container{
         padding-left: 0;
@@ -488,5 +490,9 @@
     .home_index_child .my-4{
         padding-left: 0;
         padding-right: 0;
+    }
+    .entry-inverse{
+        margin: 0;
+        min-height: 40px;
     }
 }
