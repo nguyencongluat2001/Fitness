@@ -39,7 +39,7 @@ use Carbon\Carbon;
                         <div class="col-lg-7">
                             <!-- <div class="card-body"> -->
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                                <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}})</i>
+                                <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}}) <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i>
                                 <p class="light-300">
                                 <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                                 </p>
@@ -77,7 +77,7 @@ use Carbon\Carbon;
                     </a>
                 </div>
                 <div class="about-content">
-                    <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}}</i></div>
+                    <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}} <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                         <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                     </a>

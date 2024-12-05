@@ -75,7 +75,7 @@ use Carbon\Carbon;
                                                             </div>
                                                             <div class="col-lg-9">
                                                                 <h5 style="padding-top:10px;color:#000951;font-size: 30px;font-family: serif;font-weight: 600;">{{ $datas['blogDetail']->title }}</h5>
-                                                                <p style="color: #006849;">Thời gian: {{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}}) <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $datas['blogDetail']->view_click }}</span></p>
+                                                                <p style="color: #006849;">Thời gian: {{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}}) <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $datas['blog']->view_click }}</span></p>
                                                             </div>
                                                         </div>
                                                     </div>
