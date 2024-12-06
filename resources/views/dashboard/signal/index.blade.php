@@ -46,7 +46,7 @@
                             </div>
                         </div>
                         <div class="col-md-3 mt-3">
-                            <button type="button" class="btn btn-primary shadow-sm" id="btn_add"><i class="fas fa-trash-alt"></i> Thêm</button>
+                            <button type="button" class="btn btn-primary shadow-sm" id="btn_add"><i class="fas fa-plus"></i> Thêm</button>
                             <button type="button" class="btn btn-danger shadow-sm" id="btn_delete"><i class="fas fa-trash-alt"></i> Xóa</button>
                         </div>
                     </div>
