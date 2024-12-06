@@ -19,6 +19,10 @@ JS_Signal.prototype.loadIndex = function() {
     var oFormCreate = 'form#frmAdd';
     myClass.loadList(oForm);
 
+    
+    $(oForm).find('#btn_add').click(function() {
+        myClass.add(oForm,myClass.type);
+    });
     $(oForm).find('#btn_buy').click(function() {
         myClass.add(oForm,'MUA');
     });
