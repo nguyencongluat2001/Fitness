@@ -33,6 +33,7 @@ class SignalController extends Controller
 
         $objResult = $this->signalService->filter($input);
         $data['datas'] = $objResult;
+        $data['type'] = $request->type;
         return view('dashboard.signal.loadList', $data)->render();
     }
     /**
