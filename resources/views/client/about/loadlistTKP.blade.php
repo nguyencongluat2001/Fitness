@@ -19,10 +19,22 @@ use Carbon\Carbon;
     <div class="card-body" style="padding: 10px !important;">
         <div id="style-1" class="scrollbar tkp_web" style="padding-right:10px;max-height:900px !important">
             <ul class="list-group">
+                @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
+                @else
+                    <span><i class="far fa-lightbulb"></i> Đăng ký VIP để xem bài viết V.I.P FINTOP
+                        <button  type="button" class="btn btn-success" href="{{ url('/client/privileges/index') }}"> <a href="{{ url('/client/privileges/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
+                    </span>
+                @endif
+                <br>
                 @foreach ($datas as $key => $data)
                 @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                <div onclick="JS_About.blogReader('{{$data->id}}')" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
-                    <div class="pb-3 d-lg-flex gx-5">
+                @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
+                   <div onclick="JS_About.blogReader('{{$data->id}}')" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
+                   <div class="pb-3 d-lg-flex gx-5">
+                @else
+                    <div class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
+                    <div class="pb-3 d-lg-flex gx-5" style="opacity: 0.1;">
+                @endif
                     <!-- display: flex;align-items: center;justify-content: center; -->
                         <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
                         @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
@@ -35,6 +47,7 @@ use Carbon\Carbon;
                         </div>
                         <div style="width:20px">
                         </div>
+                        @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
                         <div class="col-lg-7">
                             <!-- <div class="card-body"> -->
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
@@ -47,6 +60,20 @@ use Carbon\Carbon;
                                 </span>
                             <!-- </div> -->
                         </div>
+                        @else
+                            <div class="col-lg-7">
+                                <!-- <div class="card-body"> -->
+                                    <h5 class="card-title light-600 text-dark">XXX XXX XXX XXX XXX</h5>
+                                    <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}}) <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i>
+                                    <p class="light-300">
+                                    <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
+                                    </p>
+                                    <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">
+                                        Xem chi tiết
+                                    </span>
+                                <!-- </div> -->
+                            </div>
+                        @endif
                     </div>
                 </div>
                 <hr style="margin: 0;">
@@ -76,10 +103,17 @@ use Carbon\Carbon;
                     </a>
                 </div>
                 <div class="about-content">
+                    @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
                     <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}} <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
                     <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
                         <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                     </a>
+                    @else 
+                    <div><i>{{ $data->users->name ?? '' }} | {{$created_at->diffForHumans($now)}} <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
+                    <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                        <h5 class="card-title light-600 text-dark">xxx xxx xxx xxx xxx xxx xxx</h5>
+                    </a>
+                    @endif
                 </div>
             </div>
             @endforeach

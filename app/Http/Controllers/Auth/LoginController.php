@@ -139,7 +139,8 @@ class LoginController extends Controller
                 $sideBar = $this->checkPermision($sideBarConfig , $user);
                 $_SESSION["sidebar"] = $sideBar;
                 Auth::login($user);
-                return redirect('system/home/index');
+                // return redirect('system/home/index');
+                return redirect('client/home/index');
             }elseif($user->role == 'USERS' || $user->role == 'USER'){
                 $_SESSION["role"] = $user->role;
                 $_SESSION["id_personnel"] = $getUsers->id_personnel;
@@ -150,7 +151,7 @@ class LoginController extends Controller
                 $_SESSION["color_view"] = !empty($getInfo->color_view)?$getInfo->color_view:2;
                 $checkPrLogin = $this->permission_login($email);
                 Auth::login($user);
-                return redirect('client/datafinancial/index');
+                return redirect('client/home/index');
             }
         }
         if (Auth::attempt(['email' => $email, 'password' => $password])) {

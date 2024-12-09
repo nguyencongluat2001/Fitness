@@ -236,13 +236,47 @@ use Carbon\Carbon;
                     <span><b>V.I.P ĐẦU TƯ (BCPT VIP)</b></span>
                 </div>
                 <div id="style-1" class="homeTTTH row vip">
+                @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
+                @else
+                    <span><i class="far fa-lightbulb"></i> Đăng ký VIP để xem bài viết V.I.P FINTOP
+                        <button  type="button" class="btn btn-success" href="{{ url('/client/privileges/index') }}"> <a href="{{ url('/client/privileges/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
+                    </span>
+                @endif
+                @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
+                       @if(isset($VIP))
+                        @foreach ($VIP as $key => $data)
+                        @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
+                        <div class="col-md-4 about-list mb-3 bcptVIP">
+                            <div style="box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4); border-radius: 7px;">
+                            <div class="about-img">
+                                <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                    @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
+                                    <h1 style="position: absolute;right:0">
+                                        <img src="{{url('/clients/img/vip.png')}}" class="image-vip" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
+                                    </h1>
+                                    @endif
+                                    <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
+                                </a>
+                            </div>
+                            <div class="about-content">
+                                <div><i>{{ $data->users->name ?? '' }} </i></div>
+                                <div><i>{{$created_at->diffForHumans($now)}}   <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
+                                <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                                    <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                        @endforeach
+                        @endif
+                @else
                     @if(isset($VIP))
                     @foreach ($VIP as $key => $data)
                     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                    <div class="col-md-4 about-list mb-3 bcptVIP">
+                    <div class="col-md-4 about-list mb-3 bcptVIP" style="opacity: 0.1;">
                         <div style="box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4); border-radius: 7px;">
                         <div class="about-img">
-                            <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
+                            <a >
                                 @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
                                 <h1 style="position: absolute;right:0">
                                     <img src="{{url('/clients/img/vip.png')}}" class="image-vip" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
@@ -262,6 +296,8 @@ use Carbon\Carbon;
                     </div>
                     @endforeach
                     @endif
+                @endif
+                    
                 </div>
             </div>
             <div class="col-md-4 pt-3" style="background-color: #ecedee;">
