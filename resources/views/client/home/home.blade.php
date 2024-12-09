@@ -242,6 +242,7 @@ use Carbon\Carbon;
                         <button  type="button" class="btn btn-success" href="{{ url('/client/privileges/index') }}"> <a href="{{ url('/client/privileges/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
                     </span>
                 @endif
+                <br>
                 @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
                        @if(isset($VIP))
                         @foreach ($VIP as $key => $data)
