@@ -50,25 +50,30 @@
                             <div class="form-recommendations-first">
                                 @if($data['type'] == 'MUA')
                                 <li>
-                                    <div class="d-flex"><i class="fas fa-tags me-2"></i>
-                                        Tỉ trọng: 
-                                        <span style="color: #2c4143;font-weight: 700;">
-                                            {{ $data['price_buy'] }}
-                                        </span>
+                                    <div class="d-flex">
+                                        <div><i class="fas fa-tags recommendationsIndex-icon"></i></div>
+                                        <div>
+                                            Tỉ trọng:
+                                            <span style="color: #2c4143;font-weight: 700;">
+                                                {{ $data['price_buy'] }}
+                                            </span>
+                                        </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="d-flex">
-                                        <i class="far fa-lightbulb me-2"></i>&nbsp;
-                                        Mục tiêu:
-                                        <span style="color: #2c4143;font-weight: 700;">
-                                            {{ $data['target'] }}
-                                        </span>
+                                        <div><i class="far fa-lightbulb recommendationsIndex-icon"></i></div>
+                                        <div>
+                                            Mục tiêu:
+                                            <span style="color: #2c4143;font-weight: 700;">
+                                                {{ $data['target'] }}
+                                            </span>
+                                        </div>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="d-flex">
-                                        <i class="fas fa-filter me-2"></i>&nbsp;
+                                        <div><i class="fas fa-filter recommendationsIndex-icon"></i></div>
                                         <div>
                                             Dừng lỗ:
                                             <span style="color: #2c4143;font-weight: 700;">
@@ -78,23 +83,40 @@
                                     </div>
                                 </li>
                                 @else
-                                <li><i class="fas fa-tags me-2"></i>
-                                    Còn lại ( % ):
-                                    <span style="color: #2c4143;font-weight: 700;">
-                                        {{ $data['stop_loss'] }}
-                                    </span>
+                                <li>
+                                    <div class="d-flex">
+                                        <div><i class="fas fa-tags recommendationsIndex-icon"></i></div>
+                                        <div>
+                                            Còn lại ( % ):
+                                            <span style="color: #2c4143;font-weight: 700;">
+                                                {{ $data['stop_loss'] }}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><i class="fas fa-tags me-2"></i>
-                                    Giá mua TB: 
-                                    <span style="color: #2c4143;font-weight: 700;">
-                                        {{ $data['price_buy'] }}
-                                    </span>
+                                <li>
+                                    <div class="d-flex">
+                                        <div><i class="fas fa-tags recommendationsIndex-icon"></i></div>
+                                        <div>
+                                            Giá mua TB:
+                                            <span style="color: #2c4143;font-weight: 700;">
+                                                {{ $data['price_buy'] }}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li><i class="fas fa-tags me-2"></i>
-                                    Lãi / lỗ ( % ): 
-                                    <span style="color: #2c4143;font-weight: 700;">
-                                        {{ $data['target'] }}
-                                    </span>
+                                <li>
+                                    <div class="d-flex">
+                                        <div>
+                                            <i class="fas fa-tags recommendationsIndex-icon"></i>
+                                        </div>
+                                        <div>
+                                            Lãi / lỗ ( % ):
+                                            <span style="color: #2c4143;font-weight: 700;">
+                                                {{ $data['target'] }}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </li>
                                 @endif
                             </div>
@@ -102,10 +124,10 @@
                             </div>
                             <div class="form-recommendations-three">
                                 <div class="form-recommendations-three-time">
-                                    <div class="clock-mobile"><i class="fas fa-stopwatch"></i></div>
-                                    <span class="clock-web"><i class="fas fa-stopwatch"></i> &nbsp; Thời gian </span>
+                                    <div class="clock-mobile"><i class="fas fa-stopwatch recommendationsIndex-icon"></i></div>
+                                    <span class="clock-web"><i class="fas fa-stopwatch recommendationsIndex-icon"></i> Thời gian </span>
                                     <div class="form-recommendations-three-time-text">
-                                        <span class="time-mobile">&nbsp; Thời gian <br></span>
+                                        <span class="time-mobile"> Thời gian <br></span>
                                         <span style="color: #2c4143;font-weight: 700;"> {{date('H:i:s', strtotime($data['created_at']))}}</span> <br>
                                         <span style="color: #2c4143;font-weight: 700;"> {{date('d-m-Y', strtotime($data['created_at']))}}</span>
                                     </div>

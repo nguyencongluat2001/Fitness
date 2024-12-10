@@ -237,6 +237,18 @@ ul:has(.form-recommendations){
 .form-recommendations-three-time{
     text-align: center;
 }
+.wrapper-web{
+    display: block;
+}
+.wrapper-mobile{
+    display: none;
+}
+.introduce-II{
+    padding: 20px 50px 0px 50px;
+}
+.introduce-III{
+    padding: 20px 50px 20px 50px;
+}
 
 @media (max-width: 992px) {
 
@@ -360,14 +372,18 @@ ul:has(.form-recommendations){
         height: unset !important;
         padding-right: 0 !important;
     }
-
-    #table-data tr td {
+    
+    #table-container-categoryFintop_vip #table-data tr td,
+    #table-container-categoryFintop_basic #table-data tr td,
+    .privileges-table #table-data tr td {
         height: unset !important;
         font-size: .46rem;
         padding: 3px;
     }
 
-    #table-data th {
+    #table-container-categoryFintop_vip #table-data th,
+    #table-container-categoryFintop_basic #table-data th,
+    .privileges-table #table-data th {
         font-size: 12px !important;
         height: unset !important;
     }
@@ -518,7 +534,7 @@ ul:has(.form-recommendations){
     }
 
     .dangky-hoivien .pricing-table-heading {
-        font-size: 1rem;
+        font-size: .7rem;
     }
 
     .pricing-table-heading .txt-second {
@@ -629,9 +645,42 @@ ul:has(.form-recommendations){
     .clock-mobile, .time-mobile{
         display: block;
     }
+    .wrapper-web{
+        display: none;
+    }
+    .wrapper-mobile{
+        display: block;
+        width: 100%;
+    }
+    .wrapper-mobile img{
+        width: 100%;
+    }
+    .introduce-II, .introduce-III{
+        padding: 1rem;
+    }
+    .introduce-II .objective, .objective-footer {
+        padding: unset;
+    }
+    .body-introduce .text-start{
+        padding: unset !important;
+    }
+    .introduce-III .col-md-4{
+        padding-left: 0;
+    }
+    .bieu-do-fireant iframe{
+        height: 200px !important;
+    }
+    .recommendationsIndex-icon {
+        width: 18px; /* Đặt một kích thước cố định cho icon */
+        height: 18px;
+        object-fit: contain; /* Giữ tỉ lệ icon */
+        margin-right: 5px; /* Khoảng cách giữa icon và chữ */
+        flex-shrink: 0; /* Đảm bảo icon không bị co lại */
+    }
+    
 }
 
-@media (max-width: 300px) {
+@media (max-width: 345px) {
     body{
         font-size: .8rem;
     }
@@ -645,14 +694,35 @@ ul:has(.form-recommendations){
 
     #table-container-signal #table-data tr td {
         height: unset !important;
-        font-size: .37rem;
+        font-size: .345rem;
         padding: 1px;
     }
-    #table-data tr td{
-        font-size: .37rem;
+    
+    #table-container-categoryFintop_vip #table-data tr td,
+    #table-container-categoryFintop_basic #table-data tr td,
+    .privileges-table #table-data tr td{
+        font-size: .345rem;
         padding: 1px;
     }
-    #table-data tr td a{
+    #table-container-categoryFintop_vip #table-data tr td a,
+    #table-container-categoryFintop_basic #table-data tr td a,
+    .privileges-table #table-data tr td a{
         font-size: 0.3rem;
+    }
+    .table-responsive.pmd-card.pmd-z-depth{
+        max-height: 150px !important;
+    }
+    .table-responsive.pmd-card.pmd-z-depth.pt-2{
+        padding-top: unset !important
+    }
+    .privileges-table.table-responsive.pmd-card.pmd-z-depth{
+        max-height: unset !important;
+    }
+    #table-container-library #table-data tr td,
+    #table-container-library #table-data tr td a{
+        font-size: 9px;
+    }
+    .title-footer{
+        font-size: 20px !important;
     }
 }

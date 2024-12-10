@@ -119,10 +119,10 @@ use Carbon\Carbon;
         }
 
         // Mô phỏng dữ liệu tải thêm
-        let itemCount = 5;
+        let itemCount = 10;
         const loadMore = () => {
             var url = baseUrl + '/client/about/loadMore';
-            var data = 'offset=' + Math.ceil((countDiv/5) + 1);
+            var data = 'offset=' + Math.ceil((countDiv/10) + 1);
             data += '&limit=' + itemCount;
             data += '&category=BAO_CAO_TTTH';
             $.ajax({

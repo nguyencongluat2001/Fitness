@@ -110,8 +110,8 @@
                                 <br>
                             </div>
                           
-                            <div class="table-responsive pmd-card pmd-z-depth " >
-                                <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer">
+                            <div class=" privileges-table table-responsive pmd-card pmd-z-depth " >
+                                <table id="table-data" class="table table-bordered table-striped table-condensed dataTable no-footer">
                                 <colgroup>
                                     <col width="5%">
                                     <col width="35%">

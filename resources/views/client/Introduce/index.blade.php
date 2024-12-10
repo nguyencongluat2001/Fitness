@@ -14,18 +14,24 @@
         font-weight: 600;
         font-size: 16px;
     }
-    .home_index_child .first,.home_index_child .three{
+
+    .home_index_child .first,
+    .home_index_child .three {
         margin-top: 5rem;
     }
+
     @media (max-width: 450px) {
-        .home_index_child .offset-2{
+        .home_index_child .offset-2 {
             margin-left: 0;
         }
-        .home_index_child .first,.home_index_child .three{
+
+        .home_index_child .first,
+        .home_index_child .three {
             margin-top: 0;
         }
     }
-    .light-300{
+
+    .light-300 {
         font-family: sans-serif;
     }
 </style>
@@ -43,14 +49,11 @@
                                 <div class="col-lg-12 text-start">
                                     <div style="text-align: justify;">
                                         <p class="light-300">
-                                            &nbsp;&nbsp;&nbsp;<span class="name_cg">FinTop - Đội ngũ Chuyên gia trẻ</span>  5 đến hơn 10 năm kinh nghiệm đầu tư thực chiến trên thị trường Tài chính - Chứng khoán, cố vấn đầu tư và quản lý tài sản cho hơn 5000+ khách hàng đối tác tại các công ty chứng khoán hàng đầu Việt Nam: VPS, SSI, VND, HSC, MBS,...(Video Youtube giới thiệu: <a rel="nofollow" href="https://youtu.be/V4PdhYmfQ_8 " target="_blank">https://youtu.be/V4PdhYmfQ_8 </a> )
+                                            &nbsp;&nbsp;&nbsp;<span class="name_cg">FinTop - Đội ngũ Chuyên gia trẻ</span> 5 đến hơn 10 năm kinh nghiệm đầu tư thực chiến trên thị trường Tài chính - Chứng khoán, cố vấn đầu tư và quản lý tài sản cho hơn 5000+ khách hàng đối tác tại các công ty chứng khoán hàng đầu Việt Nam: VPS, SSI, VND, HSC, MBS,...(Video Youtube giới thiệu: <a rel="nofollow" href="https://youtu.be/V4PdhYmfQ_8 " target="_blank" style="overflow-wrap: anywhere;">https://youtu.be/V4PdhYmfQ_8 </a> )
                                         </p>
                                         <p class="light-300">&nbsp;&nbsp;&nbsp;<span class="name_cg"></span> FinTop - đội ngũ khát vọng, không ngừng học hỏi vươn lên, không ngừng sáng tạo, nghiên cứu, nâng cao năng lực để tạo nên giá trị, mang đến sản phẩm chuyên môn và chia sẻ cơ hội cùng khách hàng đối tác.</p>
                                         <div class="mkkmkmkmmkmkmkmmkk"> <!-- menu  -->
-                                            <div id="wrapper" align="center">
-                                            <!-- <div class="col-lg-6">
-                                                <h1 class="h5 text-center " style="background: #700e13;height: 70px;color: #fff079;border-radius: 15px;    padding-top: 20px;">FINTOP.DATA DỮ LIỆU CHO NHÀ ĐẦU TƯ</h1>
-                                            </div> -->
+                                            <div id="wrapper" class="wrapper-web" align="center">
                                                 <div id="root-left">
                                                     <div class="branch-inverse l1">
                                                         <div class="entry-inverse"><a href="{{ url('client/datafinancial/index') }}"><span class="label-inverse text-start">TRA CỨU XU HƯỚNG CỔ PHIẾU</span></a></div>
@@ -62,22 +65,25 @@
                                                 </div>
                                                 <div id="main-root"><span class="label">FINTOP.DATA - DỮ LIỆU CHO NHÀ ĐẦU TƯ</span></div>
                                             </div>
+                                            <div id="wrapper-mobile" class="wrapper-mobile">
+                                                <img src="{{ url('clients/img/gioithieu.png') }}" alt="">
+                                            </div>
                                         </div>
                                         <br>
                                         <p class="light-300">&nbsp;&nbsp;&nbsp;Với sự hỗ trợ tư vấn tận tâm 1-1, Đội ngũ FinTop sẽ đồng hành với nhà đầu tư từng bước đi trên con đường chinh phục sự thịnh vượng về tài chính. Chúng tôi tin rằng với sự nỗ lực không ngừng nghỉ, đam mê, nhiệt huyệt, đặc biệt sự đồng hành, tin tưởng và ủng hộ của Quý KH đối tác sẽ giúp Đội ngũ tiếp tục phát triển mạnh mẽ, tạo ra nhiều giá trị hơn nữa cho cộng đồng.</p>
                                     </div>
                                     <center>
-                                         <iframe class="video-fintop" allowfullscreen width="916" height="403" src="https://www.youtube.com/embed/V4PdhYmfQ_8" title="ĐỘI NGŨ FINTOP - CỐ VẤN ĐẦU TƯ  &amp; QUẢN LÝ TÀI SẢN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                        <iframe class="video-fintop" allowfullscreen width="916" height="403" src="https://www.youtube.com/embed/V4PdhYmfQ_8" title="ĐỘI NGŨ FINTOP - CỐ VẤN ĐẦU TƯ  &amp; QUẢN LÝ TÀI SẢN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                     </center>
-                                     <br>
+                                    <br>
                                     <p class="text-center"><i>“FinTop - Kiến tạo giá trị đầu tư bền vững.”</i>
                                     </p>
                                     <br>
                                     <center>
-                                    <div class="col-lg-6">
-                                        <h1 class="h5 text-center " style="background: #740000;height: 70px;color: #fff079;border-radius: 15px;    padding-top: 20px;">ĐỘI NGŨ CHUYÊN GIA FINTOP</h1>
-                                    </div>
-                                    <br>
+                                        <div class="col-lg-6">
+                                            <h1 class="h5 text-center " style="background: #740000;height: 70px;color: #fff079;border-radius: 15px;    padding-top: 20px;">ĐỘI NGŨ CHUYÊN GIA FINTOP</h1>
+                                        </div>
+                                        <br>
                                     </center>
                                     <div class="pt-2 py-5 pb-3 d-lg-flex align-items-center gx-5" style="padding:4%;padding-left:5%">
                                         <div class="col-lg-12 row align-items-center" style="color:#c3000a;border-radius:15px">
@@ -129,19 +135,19 @@
                                                         <li style="width:90%;height:2.2px;background:#c3000a;margin-left:5%"></li>
                                                     </ul>
                                                 </div>
-                                                
+
                                             </div>
                                             <br>
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>
                     <div class="home_index_child" style="background:#ffffff  !important;">
-                        <div class="col-lg-12" style="  padding: 20px 50px 0px 50px;">
-                           <div class="col-lg-6 text-start">
+                        <div class="col-lg-12 introduce-II">
+                            <div class="col-lg-6 text-start">
                                 <h1 class="h5 text-uppercase">II. CÔNG TY TNHH ĐẦU TƯ VÀ PHÁT TRIỂN FINTOP</h1>
                             </div>
                             <div class="container my-4">
@@ -181,7 +187,7 @@
                                             </p>
                                         </div>
                                     </div>
-                                    <div class="pt-5">
+                                    <div class="pt-5 objective-footer">
                                         <p style="background:#001f39;color:white;padding:5%;border-radius:5px" class="light-300 pt-5">
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sau nhiều năm nghiên cứu và phát triển, 18 tháng 01 năm 2022, FinTop chính thức được thành lập.
                                             Đội ngũ Chuyên gia FinTop đã không
@@ -198,7 +204,7 @@
                         </div>
                     </div>
                     <div class="home_index_child" style="background:#ffffff  !important">
-                        <div class="col-lg-12" style="  padding: 20px 50px 20px 50px;">
+                        <div class="col-lg-12 introduce-III">
                             <div class="col-lg-6 text-start">
                                 <h1 class="h5 pb-3 text-uppercase">III. Khách hàng nói gì về fintop</h1>
                             </div>
@@ -206,10 +212,10 @@
                                 <div class="col-md-4" style="padding-right:0px">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div style="color:#ffffff; text-align: justify;height: 510px;"class="pt-4 pb-3 text-content">"FinTop là đơn vị uy tín chuyên cung cấp dữ liệu, kiến thức thực tế, chiến lược đầu tư và các báo cáo phân tích kịp thời, vô cùng hữu dụng cho nhà đầu tư và cả các chuyên gia về chứng khoán. Với chiến lược và cách làm chuyên nghiệp, đặc biệt Đội ngũ FinTop với nhiều năm kinh nghiệm trên thị trường sẽ giúp nhà đầu tư tối ưu hiệu quả và đạt được lợi nhuận tốt nhất trong quá trình giao dịch. Với sự hỗ trợ từ FinTop nhà đầu tư sẽ thông thái, chủ động với việc đầu tư và kỷ luật với chiến lược giao dịch đã đề ra."</div>
+                                        <div style="color:#ffffff; text-align: justify;height: 510px;" class="pt-4 pb-3 text-content">"FinTop là đơn vị uy tín chuyên cung cấp dữ liệu, kiến thức thực tế, chiến lược đầu tư và các báo cáo phân tích kịp thời, vô cùng hữu dụng cho nhà đầu tư và cả các chuyên gia về chứng khoán. Với chiến lược và cách làm chuyên nghiệp, đặc biệt Đội ngũ FinTop với nhiều năm kinh nghiệm trên thị trường sẽ giúp nhà đầu tư tối ưu hiệu quả và đạt được lợi nhuận tốt nhất trong quá trình giao dịch. Với sự hỗ trợ từ FinTop nhà đầu tư sẽ thông thái, chủ động với việc đầu tư và kỷ luật với chiến lược giao dịch đã đề ra."</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3" style="height: 80px;">
-                                             <img class="img-fluid rounded-circle" src="../clients/img/le_van_long.jpg" alt="Card image">
+                                            <img class="img-fluid rounded-circle" src="../clients/img/le_van_long.jpg" alt="Card image">
                                             <!-- <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt=""> -->
                                             <span style="color:#fff" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
@@ -224,10 +230,10 @@
                                 <div class="col-md-4" style="padding-right:0px">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div style="color:#ffffff; text-align: justify;height: 510px;"class="pt-4 pb-3 text-content">"FinTop là một đội ngũ chuyên nghiệp, không ngừng nghiên cứu, học hỏi, cầu thị và luôn luôn lắng nghe khách hàng, đối tác. Những báo cáo phân tích, đánh giá của Team mang lại nhiều hữu ích cho mình là một người công tác trong lĩnh vực Tài chính với các báo cáo phân tích ngành, dữ liệu kinh tế vĩ mô, phân tích đánh giá doanh nghiệp. Đặc biệt có phần tra cứu xu hướng cổ phiếu rất hay bên cạnh chia sẻ cẩm nang, phương pháp đầu tư để mọi ngươi cùng tìm hiểu. Chúc FinTop Team sẽ tiếp tục phát huy và luôn có những báo cáo phân tích chất lượng nhất đến khách hàng."</div>
+                                        <div style="color:#ffffff; text-align: justify;height: 510px;" class="pt-4 pb-3 text-content">"FinTop là một đội ngũ chuyên nghiệp, không ngừng nghiên cứu, học hỏi, cầu thị và luôn luôn lắng nghe khách hàng, đối tác. Những báo cáo phân tích, đánh giá của Team mang lại nhiều hữu ích cho mình là một người công tác trong lĩnh vực Tài chính với các báo cáo phân tích ngành, dữ liệu kinh tế vĩ mô, phân tích đánh giá doanh nghiệp. Đặc biệt có phần tra cứu xu hướng cổ phiếu rất hay bên cạnh chia sẻ cẩm nang, phương pháp đầu tư để mọi ngươi cùng tìm hiểu. Chúc FinTop Team sẽ tiếp tục phát huy và luôn có những báo cáo phân tích chất lượng nhất đến khách hàng."</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3" style="height: 80px;">
-                                             <img class="img-fluid rounded-circle" src="../clients/img/tran_thi_hong_lich.jpg" alt="Card image">
+                                            <img class="img-fluid rounded-circle" src="../clients/img/tran_thi_hong_lich.jpg" alt="Card image">
                                             <!-- <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt=""> -->
                                             <span style="color:#fff" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>
@@ -243,12 +249,12 @@
                                 <div class="col-md-4" style="padding-right:0px">
                                     <div class="customer_reviews px-3">
                                         <div class="icon"><i class="fas fa-quote-right"></i></div>
-                                        <div style="color:#ffffff; text-align: justify;height: 510px;"class="pt-4 pb-3 text-content">“FINTOP là nơi tập hợp tinh hoa của đội ngũ chuyên gia trẻ, năng động, có kinh nghiệm thực chiến trên thị trường chứng khoán, vừa có kiến thức chuyên sâu về phân tích cơ bản và vừa có độ nhạy bén trong phân tích kỹ thuật.
-                                                    Đây là một trang web uy tín, đáng tin cậy, giúp cung cấp các phân tích và cập nhật thị trường, chọn lọc cổ phiếu. Ngoài ra, đội ngũ chuyên gia của FINTOP cũng thường xuyên cung cấp các phân tích chiến lược đầu tư hay có các báo cáo phân tích ngành và phân tích doanh nghiệp, giúp cho nhà đầu tư có căn cứ để đưa ra các quyết định đầu tư sáng suốt.
-                                                    Nếu nhà đầu tư chưa có nhiều kiến thức, kinh nghiệm, hoặc không có nhiều thời gian để tìm hiểu và nghiên cứu về chứng khoán thì FINTOP chính là người đồng hành tuyệt vời của nhà đầu tư.”</div>
+                                        <div style="color:#ffffff; text-align: justify;height: 510px;" class="pt-4 pb-3 text-content">“FINTOP là nơi tập hợp tinh hoa của đội ngũ chuyên gia trẻ, năng động, có kinh nghiệm thực chiến trên thị trường chứng khoán, vừa có kiến thức chuyên sâu về phân tích cơ bản và vừa có độ nhạy bén trong phân tích kỹ thuật.
+                                            Đây là một trang web uy tín, đáng tin cậy, giúp cung cấp các phân tích và cập nhật thị trường, chọn lọc cổ phiếu. Ngoài ra, đội ngũ chuyên gia của FINTOP cũng thường xuyên cung cấp các phân tích chiến lược đầu tư hay có các báo cáo phân tích ngành và phân tích doanh nghiệp, giúp cho nhà đầu tư có căn cứ để đưa ra các quyết định đầu tư sáng suốt.
+                                            Nếu nhà đầu tư chưa có nhiều kiến thức, kinh nghiệm, hoặc không có nhiều thời gian để tìm hiểu và nghiên cứu về chứng khoán thì FINTOP chính là người đồng hành tuyệt vời của nhà đầu tư.”</div>
                                         <hr>
                                         <div class="d-flex align-items-center mb-3" style="height: 80px;">
-                                             <img class="img-fluid rounded-circle" src="../clients/img/hanh_dang.jpg" alt="Card image">
+                                            <img class="img-fluid rounded-circle" src="../clients/img/hanh_dang.jpg" alt="Card image">
                                             <!-- <img src="https://www.nicepng.com/png/detail/128-1280406_view-user-icon-png-user-circle-icon-png.png" alt=""> -->
                                             <span style="color:#fff" class="ms-3 d-flex align-items-center" style="min-height: 80px;">
                                                 <ul>

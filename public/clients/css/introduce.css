@@ -442,7 +442,10 @@
         height: 100%;
     }
     .body-introduce{
-        padding: 40px 10px !important;
+        padding: 20px 10px !important;
+    }
+    .body-introduce h1.h5{
+        font-size: 1.2rem;
     }
     #main-root .label{
         line-height: 14px;

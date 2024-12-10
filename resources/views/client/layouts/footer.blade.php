@@ -9,7 +9,7 @@
                         </div>
                         <div style="width:80%;padding-left:10px">
                             <span style="color:#ff0000d1">
-                                <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;">Trung tâm Nghiên cứu & Phân tích  <br> Dữ liệu chứng khoán FinTop</b>
+                                <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;" class="title-footer">Trung tâm NC&PT  <br> Dữ liệu chứng khoán FinTop</b>
                             </span>
                         </div>
                     </div>

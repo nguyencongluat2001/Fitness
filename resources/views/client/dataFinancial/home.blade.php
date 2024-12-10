@@ -31,7 +31,7 @@
                     </div>
                     <!-- biểu đồ FireAnt -->
                     <div class="home_index_child " style="background:#ffffffe6 !important">
-                        <div class="col-lg-12" style="padding:10px;width: 100%;">
+                        <div class="col-lg-12 bieu-do-fireant" style="padding:10px;width: 100%;">
                         <!-- <h1 class="h5 "> BIỂU ĐỒ <i class="far fa-chart-bar"></i></h1> -->
                             <p>Nguồn theo: Fireant</p>
                             <iframe style="width:100%" height="620" src="https://fireant.vn/charts" 

@@ -173,7 +173,7 @@ class AboutController extends Controller
     {
         $arrInput = $request->all();
         $arrInput['sort'] = 'created_at';
-        $arrInput['limit'] = 5;
+        $arrInput['limit'] = 10;
         $objResult = $this->blogService->filter($arrInput);
         $results = array();
         Carbon::setLocale('vi');

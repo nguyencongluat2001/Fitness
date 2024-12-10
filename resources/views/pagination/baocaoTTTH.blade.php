@@ -53,8 +53,7 @@
         <div class="row left_paginate text-center" style="justify-content: center;">
             <span class="col-md-6" style="padding:5px;">Hiển thị</span>
             <select id="cbo_nuber_record_page" class="col-sm-6 form-control input-sm" name="cbo_nuber_record_page" style="width: 80px">
-                <option id="5" name="5" value="5">5</option>
-                <option id="15" name="15" value="15">15</option>
+                <option id="10" name="10" value="10">10</option>
                 <option id="30" name="30" value="30">30</option>
                 <option id="50" name="50" value="50">50</option>
                 <option id="100" name="100" value="100">100</option>

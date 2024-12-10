@@ -46,7 +46,7 @@ JS_About.prototype.loadIndex = function () {
  *
  * @return void
  */
-JS_About.prototype.loadListTHTT = function (oFormBlog,numberPage = 1, perPage = 5) {
+JS_About.prototype.loadListTHTT = function (oFormBlog,numberPage = 1, perPage = 10) {
     var myClass = this;
     var url = myClass.urlPath + '/loadListTHTT';
     var data = $(oFormBlog).serialize();
@@ -80,7 +80,7 @@ JS_About.prototype.loadListTHTT = function (oFormBlog,numberPage = 1, perPage = 
  *
  * @return void
  */
-JS_About.prototype.loadListTKP = function (oFormBlog,numberPage = 1, perPage = 5) {
+JS_About.prototype.loadListTKP = function (oFormBlog,numberPage = 1, perPage = 10) {
     var myClass = this;
     var url = myClass.urlPath + '/loadListTKP';
     // BAO_CAO_PTDTVIP
@@ -115,7 +115,7 @@ JS_About.prototype.loadListTKP = function (oFormBlog,numberPage = 1, perPage = 5
  *
  * @return void
  */
-JS_About.prototype.loadListPTN = function (oFormBlog,numberPage = 1, perPage = 5) {
+JS_About.prototype.loadListPTN = function (oFormBlog,numberPage = 1, perPage = 10) {
     var myClass = this;
     var url = myClass.urlPath + '/loadListPTN';
     var data = $(oFormBlog).serialize();
@@ -149,7 +149,7 @@ JS_About.prototype.loadListPTN = function (oFormBlog,numberPage = 1, perPage = 5
  *
  * @return void
  */
-JS_About.prototype.loadListPTCP = function (oFormBlog,numberPage = 1, perPage = 5) {
+JS_About.prototype.loadListPTCP = function (oFormBlog,numberPage = 1, perPage = 10) {
     var myClass = this;
     var url = myClass.urlPath + '/loadListPTDN';
     var data = $(oFormBlog).serialize();
