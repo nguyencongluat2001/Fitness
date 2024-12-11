@@ -1,6 +1,6 @@
 <input type="hidden" name="_currentPage" id="_currentPage" value="{{$paginator->currentPage()}}">
 <div class="d-flex justify-content-between">
-    <div class="dataTables_info text-center"><span class="page-link">Có tất cả <span class="pagination-count">10</span>/{{$paginator->total()}} bài viết</span></div>
+    <div class="dataTables_info text-center"><span class="page-link">Có tất cả <span class="pagination-count">{{$paginator->count() ?? 10}}</span>/{{$paginator->total()}} bài viết</span></div>
     <div id="loadMore-mobile">Xem thêm</div>
 </div>
 <div class="col-sm-3 d-none">
