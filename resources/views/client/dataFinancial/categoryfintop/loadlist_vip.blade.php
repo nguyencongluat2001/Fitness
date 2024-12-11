@@ -68,7 +68,7 @@
 
   #frmLoadlist_signal .blur {
     /* opacity: 0.2; */
-    border-color: rgba(0, 0, 0, 0.2);
+    border-color:  rgba(0, 0, 0, 0.2);
   }
 </style>
 <div id="style-1" style="padding-right:10px;height:700px">
