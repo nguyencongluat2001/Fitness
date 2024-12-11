@@ -56,6 +56,7 @@ class AboutController extends Controller
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'created_at';
+        $param['status'] = '1';
         $objResult = $this->blogService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;
@@ -84,6 +85,7 @@ class AboutController extends Controller
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'created_at';
+        $param['status'] = '1';
         $objResult = $this->blogService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;
@@ -112,6 +114,7 @@ class AboutController extends Controller
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'created_at';
+        $param['status'] = '1';
         $objResult = $this->blogService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;
@@ -140,6 +143,7 @@ class AboutController extends Controller
         $data = array();
         $param = $arrInput;
         $param['sort'] = 'created_at';
+        $param['status'] = '1';
         $objResult = $this->blogService->filter($param);
         $data['datas'] = $objResult;
         $data['param'] = $param;
