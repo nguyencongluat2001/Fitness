@@ -206,10 +206,11 @@ https://templatemo.com/tm-561-purple-buzz
     display: none;
 }
 
-.form-recommendations{
+.form-recommendations {
     display: flex;
     justify-content: space-between;
 }
+
 .form-recommendations-first {
     width: 300px;
 }
@@ -218,43 +219,71 @@ https://templatemo.com/tm-561-purple-buzz
     width: 1px;
     background: #afafaf;
 }
-.form-recommendations-three{
-}
-ul:has(.form-recommendations){
+
+.form-recommendations-three {}
+
+ul:has(.form-recommendations) {
     width: 100%;
 }
-.pricing-horizontal.rounded{
+
+.pricing-horizontal.rounded {
     margin-top: unset !important;
     margin-bottom: 1rem !important;
 }
 
-.clock-web{
+.clock-web {
     display: block;
 }
-.clock-mobile, .time-mobile{
+
+.clock-mobile,
+.time-mobile {
     display: none;
 }
-.form-recommendations-three-time{
+
+.form-recommendations-three-time {
     text-align: center;
 }
-.wrapper-web{
+
+.wrapper-web {
     display: block;
 }
-.wrapper-mobile{
+
+.wrapper-mobile {
     display: none;
 }
-.introduce-II{
+
+.introduce-II {
     padding: 20px 50px 0px 50px;
 }
-.introduce-III{
+
+.introduce-III {
     padding: 20px 50px 20px 50px;
 }
 
+.recommendationsIndex-icon {
+    width: 20px;
+    /* Đặt một kích thước cố định cho icon */
+    height: 20px;
+    object-fit: contain;
+    /* Giữ tỉ lệ icon */
+    margin-right: 5px;
+    /* Khoảng cách giữa icon và chữ */
+    flex-shrink: 0;
+    /* Đảm bảo icon không bị co lại */
+}
 @media (max-width: 992px) {
 
     .date-header,
     .marquee-header {
         display: none;
+    }
+
+    #table-container-categoryFintop_vip #table-data tr td,
+    #table-container-categoryFintop_basic #table-data tr td,
+    .privileges-table #table-data tr td {
+        height: unset !important;
+        font-size: 1rem;
+        padding: 3px;
     }
 }
 
@@ -368,11 +397,11 @@ ul:has(.form-recommendations){
         overflow-y: unset !important;
     }
 
-    #style-1{
+    #style-1 {
         height: unset !important;
         padding-right: 0 !important;
     }
-    
+
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
     .privileges-table #table-data tr td {
@@ -621,72 +650,108 @@ ul:has(.form-recommendations){
     .tkp_mobile {
         display: block;
     }
-    .form-recommendations{
+
+    .form-recommendations {
         display: block;
     }
-    .form-recommendations-first{
+
+    .form-recommendations-first {
         width: 100%;
     }
-    .form-recommendations-three-time{
+
+    .form-recommendations-three-time {
         display: flex;
     }
-    .form-recommendations-three-time-text{
+
+    .form-recommendations-three-time-text {
         display: flex;
     }
-    .form-recommendations-three-time-text > *{
+
+    .form-recommendations-three-time-text>* {
         padding-right: 5px;
     }
-    .pricing-horizontal.rounded{
+
+    .pricing-horizontal.rounded {
         width: 95%;
     }
-    .clock-web{
+
+    .clock-web {
         display: none;
     }
-    .clock-mobile, .time-mobile{
+
+    .clock-mobile,
+    .time-mobile {
         display: block;
     }
-    .wrapper-web{
+
+    .wrapper-web {
         display: none;
     }
-    .wrapper-mobile{
+
+    .wrapper-mobile {
         display: block;
         width: 100%;
     }
-    .wrapper-mobile img{
+
+    .wrapper-mobile img {
         width: 100%;
     }
-    .introduce-II, .introduce-III{
+
+    .introduce-II,
+    .introduce-III {
         padding: 1rem;
     }
-    .introduce-II .objective, .objective-footer {
+
+    .introduce-II .objective,
+    .objective-footer {
         padding: unset;
     }
-    .body-introduce .text-start{
+
+    .body-introduce .text-start {
         padding: unset !important;
     }
-    .introduce-III .col-md-4{
+
+    .introduce-III .col-md-4 {
         padding-left: 0;
     }
-    .bieu-do-fireant iframe{
+
+    .bieu-do-fireant iframe {
         height: 200px !important;
     }
+
     .recommendationsIndex-icon {
-        width: 18px; /* Đặt một kích thước cố định cho icon */
+        width: 18px;
+        /* Đặt một kích thước cố định cho icon */
         height: 18px;
-        object-fit: contain; /* Giữ tỉ lệ icon */
-        margin-right: 5px; /* Khoảng cách giữa icon và chữ */
-        flex-shrink: 0; /* Đảm bảo icon không bị co lại */
+        object-fit: contain;
+        /* Giữ tỉ lệ icon */
+        margin-right: 5px;
+        /* Khoảng cách giữa icon và chữ */
+        flex-shrink: 0;
+        /* Đảm bảo icon không bị co lại */
     }
-    
+
+}
+
+@media (max-width: 370px) {
+    #table-container-categoryFintop_vip #table-data tr td,
+    #table-container-categoryFintop_basic #table-data tr td,
+    .privileges-table #table-data tr td {
+        height: unset !important;
+        font-size: .4rem;
+        padding: 3px;
+    }
 }
 
 @media (max-width: 345px) {
-    body{
+    body {
         font-size: .8rem;
     }
-    #logo span.logo-title-mobile{
+
+    #logo span.logo-title-mobile {
         font-size: .8rem;
     }
+
     #table-container-signal #table-data th {
         font-size: 9px !important;
         height: unset !important;
@@ -697,32 +762,38 @@ ul:has(.form-recommendations){
         font-size: .345rem;
         padding: 1px;
     }
-    
+
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
-    .privileges-table #table-data tr td{
+    .privileges-table #table-data tr td {
         font-size: .345rem;
         padding: 1px;
     }
+
     #table-container-categoryFintop_vip #table-data tr td a,
     #table-container-categoryFintop_basic #table-data tr td a,
-    .privileges-table #table-data tr td a{
+    .privileges-table #table-data tr td a {
         font-size: 0.3rem;
     }
-    .table-responsive.pmd-card.pmd-z-depth{
+
+    .table-responsive.pmd-card.pmd-z-depth {
         max-height: 150px !important;
     }
-    .table-responsive.pmd-card.pmd-z-depth.pt-2{
+
+    .table-responsive.pmd-card.pmd-z-depth.pt-2 {
         padding-top: unset !important
     }
-    .privileges-table.table-responsive.pmd-card.pmd-z-depth{
+
+    .privileges-table.table-responsive.pmd-card.pmd-z-depth {
         max-height: unset !important;
     }
+
     #table-container-library #table-data tr td,
-    #table-container-library #table-data tr td a{
+    #table-container-library #table-data tr td a {
         font-size: 9px;
     }
-    .title-footer{
+
+    .title-footer {
         font-size: 20px !important;
     }
 }
