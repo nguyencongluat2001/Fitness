@@ -489,6 +489,22 @@ JS_Signal.prototype.checkValidate = function(){
 }
 JS_Signal.prototype.checkLogin = function(){
     Swal.fire({
+        title: 'Đăng nhập để tra cứu miễn phí!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng nhập",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/login');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
+}
+JS_Signal.prototype.checkVIP = function(){
+    Swal.fire({
         title: 'Đăng nhập để xem TOP cổ phiếu!',
         showCloseButton: true,
         confirmButtonText: "Đăng nhập",

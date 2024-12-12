@@ -72,10 +72,10 @@
   <div class="table-responsive pmd-card pmd-z-depth table-container">
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer @if(!Auth::check()) onload @endif" 
     @if(!Auth::check()) 
-    onclick="JS_DataFinancial.checkLogin()" 
+    onclick="JS_Signal.checkLogin()" 
     @endif
     @if(Auth::check() && ((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG'))))
-    onclick="JS_Signal.checkLogin()" 
+    onclick="JS_Signal.checkVIP()" 
     @endif
 
     >
@@ -205,14 +205,3 @@
     </table>
   </div>
 </div>
-<script type="text/javascript">
-        var baseUrl = "{{ url('') }}";
-        var JS_DataFinancial = new JS_DataFinancial(baseUrl, 'client', 'datafinancial');
-        $(document).ready(function($) {
-            JS_DataFinancial.loadIndex(baseUrl);
-        })
-        // var JS_System_Security = new JS_System_Security();
-        //     $(document).ready(function($) {
-        //         JS_System_Security.security();
-        //     })
-    </script>
