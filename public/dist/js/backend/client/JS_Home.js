@@ -194,3 +194,35 @@ JS_Home.prototype.loadListTap1 = function (oForm, numberPage = 1, perPage = 15) 
         }
     });
 }
+JS_Home.prototype.checkLogin = function(){
+    Swal.fire({
+        title: 'Đăng nhập để xem V.I.P đầu tư!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng nhập",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/login');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
+}
+JS_Home.prototype.checkVIP = function(){
+    Swal.fire({
+        title: 'Dành cho Hội viên VIP!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng ký",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/client/privileges/index');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
+}
