@@ -61,6 +61,22 @@ JS_CategoryFintop.prototype.loadList_basic = function (oForm) {
 }
 JS_CategoryFintop.prototype.checkLogin = function(){
     Swal.fire({
+        title: 'Đăng nhập để xem danh mục FINTOP!',
+        showCloseButton: true,
+        confirmButtonText: "Đăng nhập",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/login');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
+}
+JS_CategoryFintop.prototype.checkVIP = function(){
+    Swal.fire({
         width: '620px',
         title: 'Dành cho Hội viên VIP!',
         allowOutsideClick: false,

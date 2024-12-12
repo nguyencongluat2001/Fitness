@@ -93,7 +93,7 @@ JS_Recommendations.prototype.checkLogin = function(){
 }
 JS_Recommendations.prototype.checkVIP = function(){
     Swal.fire({
-        title: 'Đăng ký để xem tín hiệu V.I.P!',
+        title: 'Dành cho Hội viên VIP!',
         showCloseButton: true,
         confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
