@@ -61,7 +61,7 @@ use Carbon\Carbon;
                         @else
                             <div class="col-lg-7">
                                 <!-- <div class="card-body"> -->
-                                    <h5 class="card-title light-600 text-dark">XXX XXX XXX XXX XXX</h5>
+                                    <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
                                     <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}}) <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i>
                                     <p class="light-300">
                                     <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
