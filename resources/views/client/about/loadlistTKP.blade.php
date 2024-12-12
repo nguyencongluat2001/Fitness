@@ -16,16 +16,14 @@ use Carbon\Carbon;
             --}}
         </div>
     </div>
-    <div class="card-body" style="padding: 10px !important;">
+    <div class="card-body" style="padding: 10px !important;" 
+        @if(!Auth::check()) 
+            onclick="JS_About.checkLogin()" 
+        @elseif((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
+            onclick="JS_About.checkVIP()" 
+        @endif>
         <div id="style-1" class="scrollbar tkp_web" style="padding-right:10px;max-height:900px !important">
             <ul class="list-group">
-                @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
-                @else
-                    <span><i class="far fa-lightbulb"></i> Đăng ký VIP để xem bài viết V.I.P FINTOP
-                        <button  type="button" class="btn btn-success" href="{{ url('/client/privileges/index') }}"> <a href="{{ url('/client/privileges/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
-                    </span>
-                @endif
-                <br>
                 @foreach ($datas as $key => $data)
                 @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
                 @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
