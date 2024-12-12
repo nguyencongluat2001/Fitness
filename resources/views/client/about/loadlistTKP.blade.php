@@ -47,7 +47,7 @@ use Carbon\Carbon;
                                 <p class="light-300">
                                 <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                                 </p>
-                                <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;" onclick="JS_About.reader('$data->id')">
+                                <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">
                                     Xem chi tiết
                                 </span>
                             <!-- </div> -->
