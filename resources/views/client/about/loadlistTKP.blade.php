@@ -45,7 +45,6 @@ use Carbon\Carbon;
                         </div>
                         <div style="width:20px">
                         </div>
-                        @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
                         <div class="col-lg-7">
                             <!-- <div class="card-body"> -->
                                 <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
@@ -58,20 +57,7 @@ use Carbon\Carbon;
                                 </span>
                             <!-- </div> -->
                         </div>
-                        @else
-                            <div class="col-lg-7">
-                                <!-- <div class="card-body"> -->
-                                    <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                                    <i>{{$created_at->diffForHumans($now)}} ({{!empty($created_at) ? date('H:i', strtotime($created_at)) : ''}}  {{!empty($created_at) ? date('d/m/Y', strtotime($created_at)) : ''}}) <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i>
-                                    <p class="light-300">
-                                    <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
-                                    </p>
-                                    <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;">
-                                        Xem chi tiết
-                                    </span>
-                                <!-- </div> -->
-                            </div>
-                        @endif
+                       
                     </div>
                 </div>
                 <hr style="margin: 0;">
