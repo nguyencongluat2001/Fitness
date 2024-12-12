@@ -505,13 +505,13 @@ JS_Signal.prototype.checkLogin = function(){
 }
 JS_Signal.prototype.checkVIP = function(){
     Swal.fire({
-        title: 'Đăng nhập để xem TOP cổ phiếu!',
+        title: 'Đăng ký để xem TOP cổ phiếu!',
         showCloseButton: true,
-        confirmButtonText: "Đăng nhập",
+        confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {
         if (result.isConfirmed) {
-            window.location.replace('/login');
+            window.location.replace('/client/privileges/index');
         }
     })
     $(".swal2-modal").css('background-color', 'rgb(112 14 14)');

@@ -77,11 +77,24 @@ JS_Recommendations.prototype.loadList_box = function () {
 }
 JS_Recommendations.prototype.checkLogin = function(){
     Swal.fire({
-        width: '620px',
-        title: 'Dành cho Hội viên VIP!',
-        allowOutsideClick: false,
+        title: 'Đăng nhập để tra cứu miễn phí!',
         showCloseButton: true,
-        allowEscapeKey: false,
+        confirmButtonText: "Đăng nhập",
+        confirmButtonColor: "rgb(31 140 64)",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.replace('/login');
+        }
+    })
+    $(".swal2-modal").css('background-color', 'rgb(112 14 14)');
+    $(".swal2-modal").css('color', '#ffffff');
+    $(".swal2-modal").css('font-size', '15px');
+    $(".swal2-modal").css('font-family', 'FontAwesome');
+}
+JS_Recommendations.prototype.checkVIP = function(){
+    Swal.fire({
+        title: 'Đăng ký để xem tín hiệu V.I.P!',
+        showCloseButton: true,
         confirmButtonText: "Đăng ký",
         confirmButtonColor: "rgb(31 140 64)",
     }).then((result) => {

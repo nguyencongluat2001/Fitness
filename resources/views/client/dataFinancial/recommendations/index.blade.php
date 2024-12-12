@@ -13,12 +13,19 @@
                     <div class="col-lg-12" style="padding:10px;">
                     <h1 class="h5 "> I. TÍN HIỆU V.I.P</h1>
                         <!-- <h class="h4 py-2"> <span style="font-family: auto;">Tín Hiệu V.I.P</span></h> -->
-                            @if((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!isset($_SESSION['account_type_vip']) || ($_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG')))
+                            <!--@if((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!isset($_SESSION['account_type_vip']) || ($_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG')))
                                 <span><i class="far fa-lightbulb"></i> Đăng ký VIP để xem danh mục Tín Hiệu V.I.P FINTOP
                                     <button  type="button" class="btn btn-success" href="{{ url('/client/privileges/index') }}"> <a href="{{ url('/client/privileges/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
                                 </span>
+                            @endif -->
+                            
+                        <div class="table-responsive py-2" 
+                            @if(!Auth::check()) 
+                                onclick="JS_Recommendations.checkLogin()" 
+                            @elseif(Auth::check() && ((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG'))))
+                                onclick="JS_Recommendations.checkVIP()" 
                             @endif
-                        <div class="table-responsive py-2" >
+                            >
                             <!-- Màn hình danh sách -->
                             <div id="table-container-recommendations" @if((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!isset($_SESSION['id']) || ($_SESSION['account_type_vip'] != 'VIP1' &&  $_SESSION['account_type_vip'] != 'VIP2' &&  $_SESSION['account_type_vip'] != 'KIM_CUONG'))) onclick="JS_Recommendations.checkLogin()" @endif></div>
                         </div>
