@@ -77,7 +77,7 @@ JS_Recommendations.prototype.loadList_box = function () {
 }
 JS_Recommendations.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Đăng nhập để tra cứu miễn phí!',
+        title: 'Đăng nhập để xem tín hiệu V.I.P!',
         showCloseButton: true,
         confirmButtonText: "Đăng nhập",
         confirmButtonColor: "rgb(31 140 64)",

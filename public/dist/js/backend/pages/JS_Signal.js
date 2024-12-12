@@ -489,7 +489,7 @@ JS_Signal.prototype.checkValidate = function(){
 }
 JS_Signal.prototype.checkLogin = function(){
     Swal.fire({
-        title: 'Đăng nhập để tra cứu miễn phí!',
+        title: 'Đăng nhập để xem TOP cổ phiếu!',
         showCloseButton: true,
         confirmButtonText: "Đăng nhập",
         confirmButtonColor: "rgb(31 140 64)",
