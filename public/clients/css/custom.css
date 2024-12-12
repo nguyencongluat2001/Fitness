@@ -120,6 +120,7 @@ https://templatemo.com/tm-561-purple-buzz
     border-radius: calc(.25rem - 1px);
 }
 
+
 .bcptn {
     border-bottom: 1px solid #ccc;
     padding-bottom: 1rem;
@@ -271,16 +272,23 @@ ul:has(.form-recommendations) {
     flex-shrink: 0;
     /* Đảm bảo icon không bị co lại */
 }
+.xh-w{
+    display: block;
+}
+.xh-mb{
+    display: none;
+}
 @media (max-width: 992px) {
 
     .date-header,
     .marquee-header {
         display: none;
     }
-
+    
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
-    .privileges-table #table-data tr td {
+    .privileges-table #table-data tr td,
+    .top-co-phieu #table-data tr td {
         height: unset !important;
         font-size: 1rem;
         padding: 3px;
@@ -404,7 +412,8 @@ ul:has(.form-recommendations) {
 
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
-    .privileges-table #table-data tr td {
+    .privileges-table #table-data tr td,
+    .top-co-phieu #table-data tr td {
         height: unset !important;
         font-size: .46rem;
         padding: 3px;
@@ -412,7 +421,8 @@ ul:has(.form-recommendations) {
 
     #table-container-categoryFintop_vip #table-data th,
     #table-container-categoryFintop_basic #table-data th,
-    .privileges-table #table-data th {
+    .privileges-table #table-data th,
+    .top-co-phieu #table-data th {
         font-size: 12px !important;
         height: unset !important;
     }
@@ -730,13 +740,20 @@ ul:has(.form-recommendations) {
         flex-shrink: 0;
         /* Đảm bảo icon không bị co lại */
     }
+    .xh-w{
+        display: none;
+    }
+    .xh-mb{
+        display: block;
+    }
 
 }
 
 @media (max-width: 370px) {
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
-    .privileges-table #table-data tr td {
+    .privileges-table #table-data tr td,
+    .top-co-phieu #table-data tr td {
         height: unset !important;
         font-size: .4rem;
         padding: 3px;
@@ -765,14 +782,16 @@ ul:has(.form-recommendations) {
 
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
-    .privileges-table #table-data tr td {
+    .privileges-table #table-data tr td,
+    .top-co-phieu #table-data tr td {
         font-size: .345rem;
         padding: 1px;
     }
 
     #table-container-categoryFintop_vip #table-data tr td a,
     #table-container-categoryFintop_basic #table-data tr td a,
-    .privileges-table #table-data tr td a {
+    .privileges-table #table-data tr td a,
+    .top-co-phieu #table-data tr td a {
         font-size: 0.3rem;
     }
 

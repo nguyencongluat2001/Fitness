@@ -78,8 +78,8 @@
         <col width="9%"> <!-- nhom nganh -->
         <col width="7%"> <!-- thoi gian -->
         <col width="7%"> <!-- xep hang -->
-        <col width="22%"> <!-- nhan dinh TA -->
-        <col width="10%"> <!-- hanh dong -->
+        <col width="20%"> <!-- nhan dinh TA -->
+        <col width="12%"> <!-- hanh dong -->
         <col width="7%"> <!-- vung gia -->
         <col width="7%"> <!-- vung gia cat lo -->
         <col width="7%"> <!-- xep hang FA -->
@@ -100,7 +100,10 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Nhóm nghành HĐKD</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br>TA</b></td>
-          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xu hướng cổ phiếu</b></td>
+          <td style="white-space: inherit;vertical-align: middle" align="center">
+            <b class="xh-w">Xu hướng cổ phiếu</b>
+            <b class="xh-mb">Xu hướng<br>cổ phiếu</b>
+          </td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu <br> hành động</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
           <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b style="color:#ff0000">Vùng giá <br> cắt lỗ</b></td>
