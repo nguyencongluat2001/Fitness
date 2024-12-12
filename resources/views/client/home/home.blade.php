@@ -237,9 +237,9 @@ use Carbon\Carbon;
                 </div>
                 <div id="style-1" class="homeTTTH row vip" 
                 @if(!Auth::check()) 
-                    onclick="JS_Signal.checkLogin()" 
+                    onclick="JS_Home.checkLogin()" 
                 @elseif((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
-                    onclick="JS_Signal.checkVIP()" 
+                    onclick="JS_Home.checkVIP()" 
                 @endif
                 >
                 <!-- @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
