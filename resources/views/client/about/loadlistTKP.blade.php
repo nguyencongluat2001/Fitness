@@ -26,13 +26,8 @@ use Carbon\Carbon;
             <ul class="list-group">
                 @foreach ($datas as $key => $data)
                 @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
                    <div onclick="JS_About.blogReader('{{$data->id}}')" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
                    <div class="pb-3 d-lg-flex gx-5">
-                @else
-                    <div class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
-                    <div class="pb-3 d-lg-flex gx-5" style="">
-                @endif
                     <!-- display: flex;align-items: center;justify-content: center; -->
                         <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
                         @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
@@ -52,7 +47,7 @@ use Carbon\Carbon;
                                 <p class="light-300">
                                 <div class="blogReader">{!! $data->detailBlog->decision !!}</div>
                                 </p>
-                                <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;" onclick="JS_About.blogReader('$data->id')">
+                                <span class="text-decoration-none light-300 btn rounded-pill" style="background: #32870b;color: #ffffff;" onclick="JS_About.reader('$data->id')">
                                     Xem chi tiết
                                 </span>
                             <!-- </div> -->
