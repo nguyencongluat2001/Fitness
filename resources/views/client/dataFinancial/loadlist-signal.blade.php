@@ -205,3 +205,14 @@
     </table>
   </div>
 </div>
+<script type="text/javascript">
+        var baseUrl = "{{ url('') }}";
+        var JS_DataFinancial = new JS_DataFinancial(baseUrl, 'client', 'datafinancial');
+        $(document).ready(function($) {
+            JS_DataFinancial.loadIndex(baseUrl);
+        })
+        // var JS_System_Security = new JS_System_Security();
+        //     $(document).ready(function($) {
+        //         JS_System_Security.security();
+        //     })
+    </script>
