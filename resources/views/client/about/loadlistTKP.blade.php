@@ -31,7 +31,7 @@ use Carbon\Carbon;
                    <div class="pb-3 d-lg-flex gx-5">
                 @else
                     <div class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer">
-                    <div class="pb-3 d-lg-flex gx-5" style="opacity: 0.1;">
+                    <div class="pb-3 d-lg-flex gx-5" style="">
                 @endif
                     <!-- display: flex;align-items: center;justify-content: center; -->
                         <div class="col-lg-3 " style="align-items: right;justify-content: right;position: relative;">
