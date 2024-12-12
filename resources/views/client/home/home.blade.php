@@ -279,7 +279,7 @@ use Carbon\Carbon;
                     @if(isset($VIP))
                     @foreach ($VIP as $key => $data)
                     @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                    <div class="col-md-4 about-list mb-3 bcptVIP" style="opacity: 0.1;">
+                    <div class="col-md-4 about-list mb-3 bcptVIP">
                         <div style="box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4); border-radius: 7px;">
                         <div class="about-img">
                             <a >
