@@ -186,8 +186,8 @@
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <td style="color:red;font-weight: 700;"align="center">X</td>
                                                 <!-- <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td> -->
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
-                                                <td style="background:#5bc74d;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#0c7600;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
+                                                <td style="background:#0c7600;color:#fffe0f;font-weight: 700;"align="center"><i class="fas fa-check"></i></td>
                                             </tr>
                                             <tr>
                                                 <td style=""align="center">8</td>
