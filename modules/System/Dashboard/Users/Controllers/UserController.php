@@ -112,6 +112,7 @@ class UserController extends Controller
         }else{
             $data['arr_quanly'] = $this->userService->where('id_personnel',$_SESSION['id_personnel'])->get();
         }
+        $quyen = [];
         foreach($cate_quyen as $value){
             
             if($_SESSION['role'] == 'ADMIN'){
@@ -316,6 +317,7 @@ class UserController extends Controller
         }else{
             $data['arr_quanly'] = $this->userService->where('id_personnel',$_SESSION['id_personnel'])->get();
         }
+        $quyen = [];
         foreach($cate_quyen as $value){
             
             if($_SESSION['role'] == 'ADMIN'){
@@ -561,6 +563,7 @@ class UserController extends Controller
                 ];
             }
         }
+        $arrQuyen = [];
         foreach($quyen as $value){
             $code = $value['code_category'];
             if(in_array($value['code_category'],$data['arrQuyen'])){

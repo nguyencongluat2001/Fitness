@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name',200)->nullable();
             $table->string('name_image',200)->nullable();
             $table->string('order_image',10)->nullable();
+            $table->integer('view_click')->nullable(); // thu tu
             $table->timestamps();
         });
     }

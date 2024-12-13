@@ -24,6 +24,9 @@ return new class extends Migration
             $table->string('password'); 
             $table->string('user_introduce')->nullable(); // người giới thiệu
             $table->string('id_personnel')->nullable(); // mã nhân viên
+            $table->string('investment_time')->nullable();
+            $table->string('investment_taste')->nullable();
+            $table->string('investment_company')->nullable();
             $table->timestamps();
         });
     }

@@ -31,7 +31,7 @@
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-map-marker-alt"></i></td>
-                            <td><span class="text-decoration-none pt-2 text-light py-1">Địa chỉ: 65 Ô Chợ Dừa, Đống Đa, Hà Nội, Việt Nam.</span></td>
+                            <td><span class="text-decoration-none pt-2 text-light py-1">Địa chỉ: 65 Ô Chợ Dừa, Đống Đa, Hà Nội.</span></td>
                         </tr>
                     </tbody>
                 </table>
@@ -49,7 +49,7 @@
                     <tbody>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fab fa-facebook"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" target="_blank" href="https://www.facebook.com/Fintopdata.vn"> Dữ liệu chứng khoán FinTop.Data</a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" target="_blank" href="https://www.facebook.com/Fintopdata.vn"> Trung tâm NC&PT Dữ liệu chứng khoán FinTop DATA</a></td>
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fab fa-youtube"></i></td>

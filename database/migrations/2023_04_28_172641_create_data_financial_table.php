@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('url_link')->nullable(); // phân tích DN FA
             $table->string('status')->nullable(); // trạng thái
             $table->string('user_take_on')->nullable(); // NGười đảm nhận
+            $table->integer('order')->nullable(); // thu tu
             $table->timestamps();
         });
     }

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('decision')->nullable();
             $table->integer('order');
             $table->tinyInteger('status')->default(1);
+            $table->string('instruct')->nullable();
             $table->timestamps();
         });
     }

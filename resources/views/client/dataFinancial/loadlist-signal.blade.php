@@ -73,7 +73,7 @@
     <table id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer @if(!Auth::check()) onload @endif" 
     @if(!Auth::check()) 
        onclick="JS_Signal.checkLogin()" 
-    @elseif(Auth::check() && ((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG'))))
+    @elseif(Auth::check() && ((isset($_SESSION['role']) && $_SESSION['role'] == 'USERS') && (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] != 'VIP2' && $_SESSION['account_type_vip'] != 'KIM_CUONG'))))
        onclick="JS_Signal.checkVIP()" 
     @endif
 
@@ -119,7 +119,7 @@
         </tr>
       </thead>
       <tbody id="body_data" style="background:#dbead3;" @if(!Auth::check()) class="blur" @endif>
-        @if(Auth::check() && ((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))))
+        @if(Auth::check() && ((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || (!empty($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))))
         @foreach ($datas as $key => $data)
         @php $id = $data->id; @endphp
         <tr>
@@ -196,8 +196,7 @@
             <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
           </td>
           <td style="vertical-align: middle;" align="center">
-            <a><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></a>
-            <!-- <a target="_blank" @if(isset($data->url_link) && !empty($data->url_link))  href="{{$data->url_link}}" @else href="javascript:;" @endif>Chi tiết</a> -->
+            <span  value="" class="span_code_cp_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
         </tr>
         @endforeach

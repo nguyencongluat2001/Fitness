@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title',1000)->nullable();
             $table->text('decision')->nullable();
             $table->string('rate',5)->nullable();
+            $table->longText('decision')->change();
             $table->timestamps();
         });
     }

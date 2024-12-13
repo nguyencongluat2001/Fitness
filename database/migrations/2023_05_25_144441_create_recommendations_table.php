@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('recommendations', function (Blueprint $table) {
             $table->uuid('id');
+            $table->string('code')->nullable();
             $table->string('code_cp')->nullable(); // Mã cổ phiếu
             $table->string('code_category')->nullable(); // Nhóm ngành
             $table->string('percent_of_assets')->nullable(); // Phần trăm tài sản
@@ -25,6 +26,7 @@ return new class extends Migration
             $table->string('closing_percentage')->nullable(); // Phần trăm chốt
             $table->text('note')->nullable(); // Ghi chú
             $table->tinyInteger('status')->nullable(); // Trạng thái
+            $table->integer('order')->nullable(); // thu tu
             $table->timestamps();
         });
     }

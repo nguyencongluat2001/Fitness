@@ -17,15 +17,23 @@ class DatabaseSeeder  extends Seeder
     public function run()
     {
         $faker = Faker\Factory::create();
+        // $item = [
+        //     'id'=> (string)\Str::uuid(),
+        //     'name' => 'Nguyễn Công Luật',
+        //     'email' => 'FinTop.BAShare@gmail.com',
+        //     'password'=> Hash::make('123'),
+        //     'status'=> 1,
+        //     'role'=> 'ADMIN',
+        //     'order' =>1
+        // ];
         $item = [
             'id'=> (string)\Str::uuid(),
             'name' => 'Nguyễn Công Luật',
             'email' => 'nguyencongluat092001@gmail.com',
             'password'=> Hash::make('123'),
             'status'=> 1,
-            'role'=> 'ADMIN',
+            'role'=> 'USERS',
             'order' =>1
-
         ];
         DB::table('users')->insert($item);
     }

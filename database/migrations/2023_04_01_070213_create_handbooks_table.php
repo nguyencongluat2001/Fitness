@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('url_link')->nullable();
             $table->string('decision')->nullable();
             $table->string('current_status')->nullable();
+            $table->integer('order');
             $table->timestamps();
         });
     }

@@ -11,18 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('effectiveness', function (Blueprint $table) {
-            $table->string('pickcolor')->nullable(); // chon mau sac
+        Schema::table('blogs', function (Blueprint $table) {
+            $table->integer('view_click')->nullable();
         });
     }
-
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::table('effectiveness', function (Blueprint $table) {
-            // $table->dropColumn('order');
+        Schema::table('blogs', function (Blueprint $table) {
+            //
         });
     }
 };

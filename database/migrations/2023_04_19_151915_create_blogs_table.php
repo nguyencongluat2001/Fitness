@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('code_category');
             $table->string('type_blog');
             $table->string('status',5);
+            $table->integer('view_click')->nullable(); // thu tu
             $table->timestamps();
         });
     }

@@ -238,21 +238,20 @@ use Carbon\Carbon;
                 <div id="style-1" class="homeTTTH row vip" 
                 @if(!Auth::check()) 
                     onclick="JS_Home.checkLogin()" 
-                @elseif((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
+                @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP2')))
                     onclick="JS_Home.checkVIP()" 
                 @endif
                 >
-                <!-- @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
-                @else
-                    <span style="padding-bottom: 10px;"><i class="far fa-lightbulb"></i> Đăng ký VIP để xem bài viết V.I.P FINTOP
-                        <button  type="button" class="btn btn-success" href="{{ url('/client/privileges/index') }}"> <a href="{{ url('/client/privileges/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
-                    </span>
-                @endif -->
-                @if((isset($_SESSION['id']) && $_SESSION['account_type_vip'] == 'VIP2'))
-                       @if(isset($VIP))
-                        @foreach ($VIP as $key => $data)
+                @if(isset($VIP))
+                    @foreach ($VIP as $key => $data)
                         @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                        <div class="col-md-4 about-list mb-3 bcptVIP">
+                        @if(!Auth::check()) 
+                            <div class="col-md-4 about-list mb-3 bcptVIP" style="pointer-events: none;">
+                        @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP2')))
+                             <div class="col-md-4 about-list mb-3 bcptVIP" style="pointer-events: none;">
+                        @else
+                             <div class="col-md-4 about-list mb-3 bcptVIP">
+                        @endif
                             <div style="box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4); border-radius: 7px;">
                             <div class="about-img">
                                 <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
@@ -273,37 +272,8 @@ use Carbon\Carbon;
                             </div>
                             </div>
                         </div>
-                        @endforeach
-                        @endif
-                @else
-                    @if(isset($VIP))
-                    @foreach ($VIP as $key => $data)
-                    @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
-                    <div class="col-md-4 about-list mb-3 bcptVIP">
-                        <div style="box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.4); border-radius: 7px;">
-                        <div class="about-img">
-                            <a >
-                                @if((isset($data['type_blog']) && $data['type_blog'] == 'VIP'))
-                                <h1 style="position: absolute;right:0">
-                                    <img src="{{url('/clients/img/vip.png')}}" class="image-vip" alt="Image" style="height: 60px;width: 50px;object-fit: cover;">
-                                </h1>
-                                @endif
-                                <img class="card-img-top" src="{{url('/file-image-client/blogs/')}}/{{ !empty($data->imageBlog[0]->name_image)?$data->imageBlog[0]->name_image:'' }}" style="height: 200px;width: 100%;object-fit: cover;" alt="...">
-                            </a>
-                        </div>
-                        <div class="about-content">
-                            <div><i>{{ $data->users->name ?? '' }} </i></div>
-                            <div><i>{{$created_at->diffForHumans($now)}}   <span style="font-size: 10px;color: #9f9292;"><i class="far fa-eye"></i> {{ $data->view_click }}</span></i></div>
-                            <a href="{{url('/client/about/reader/') . '/' . $data->id}}">
-                                <h5 class="card-title light-600 text-dark">{{ $data->detailBlog->title }}</h5>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
                     @endforeach
-                    @endif
                 @endif
-                    
                 </div>
             </div>
             <div class="col-md-4 pt-3" style="background-color: #ecedee;">

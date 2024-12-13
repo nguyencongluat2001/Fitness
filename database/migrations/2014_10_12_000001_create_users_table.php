@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('user_introduce')->nullable();
             $table->string('id_personnel')->nullable();
             $table->string('account_type_vip')->nullable();
+            $table->string('order',10)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
