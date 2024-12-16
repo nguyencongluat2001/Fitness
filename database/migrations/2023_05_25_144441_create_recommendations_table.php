@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('profit_and_loss')->nullable(); // Lãi và lỗ
             $table->text('act')->nullable(); // Khuyến nghị hành động
             $table->string('stop_loss')->nullable(); // Dừng lỗ
+            $table->string('pickcolor')->nullable(); // màu
             $table->string('closing_percentage')->nullable(); // Phần trăm chốt
             $table->text('note')->nullable(); // Ghi chú
             $table->tinyInteger('status')->nullable(); // Trạng thái

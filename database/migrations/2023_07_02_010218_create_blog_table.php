@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('blogs', function (Blueprint $table) {
-            $table->integer('view_click')->nullable();
+        Schema::table('recommendations', function (Blueprint $table) {
+            $table->string('pickcolor')->nullable(); // màu
         });
     }
     /**
@@ -20,7 +20,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('blogs', function (Blueprint $table) {
+        Schema::table('recommendations', function (Blueprint $table) {
             //
         });
     }

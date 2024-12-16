@@ -816,3 +816,9 @@ ul:has(.form-recommendations) {
         font-size: 20px !important;
     }
 }
+@media (max-width: 370px) {
+    .transform-vip {
+        transform-origin: top left;
+        transform: scale(0.8);
+    }
+}
