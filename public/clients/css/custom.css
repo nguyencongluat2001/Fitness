@@ -816,9 +816,21 @@ ul:has(.form-recommendations) {
         font-size: 20px !important;
     }
 }
+@media (max-width: 500px) {
+    .transform-vip {
+        transform-origin: top left;
+        transform: scale(0.9);
+    }
+}
 @media (max-width: 400px) {
     .transform-vip {
         transform-origin: top left;
         transform: scale(0.9);
+    }
+}
+@media (max-width: 230px) {
+    .transform-vip {
+        transform-origin: top left;
+        transform: scale(0.85);
     }
 }
