@@ -819,13 +819,13 @@ ul:has(.form-recommendations) {
 @media (max-width: 500px) {
     .transform-vip {
         transform-origin: top left;
-        transform: scale(0.9);
+        transform: scale(0.95);
     }
 }
 @media (max-width: 400px) {
     .transform-vip {
         transform-origin: top left;
-        transform: scale(0.9);
+        transform: scale(0.95);
     }
 }
 @media (max-width: 230px) {
