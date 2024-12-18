@@ -849,7 +849,7 @@ ul:has(.form-recommendations) {
 @media (max-width: 400px) {
     .transform-vip {
         transform-origin: top left;
-        transform: scale(0.7);
+        transform: scale(0.85);
     }
 }
 @media (max-width: 380px) {
