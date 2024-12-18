@@ -83,7 +83,7 @@
             <colgroup>
                 <col width="7%"> <!-- ma cp -->
                 <col width="9%"> <!-- nhom nganh --> 
-                <!-- <col width="6%"> ngay mua -->
+                <col width="6%"> <!-- ngay mua -->
                 <col width="6%"> <!-- %  tai san -->
                 <col width="6%"> <!-- gia mua -->
                 <col width="6%"> <!-- gia hien tai -->
@@ -100,7 +100,7 @@
                     {{--<td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã <br>cổ phiếu</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
-                    <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td> -->
+                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tỷ trọng <br> (%NAV)</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
                     <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá <br> hiện tại</b></td>
@@ -136,9 +136,10 @@
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td>
-                        <!-- <td align="center" style="white-space: inherit; vertical-align: middle;">
-                            {{ !empty($data['created_at']) ? date('d/m/Y', strtotime($data['created_at'])) : '' }}
-                        </td> -->
+                        <td align="center" style="white-space: inherit; vertical-align: middle;">
+                            {{ !empty($data['created_at']) ? date('d/m', strtotime($data['created_at'])) : '' }} <br>
+                            {{ !empty($data['created_at']) ? date('Y', strtotime($data['created_at'])) : '' }}
+                        </td>
                         <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['percent_of_assets'] }}</span>
