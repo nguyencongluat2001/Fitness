@@ -280,7 +280,7 @@ to {
 }
 .home_index_child{
   margin: 10px;
-  display: flex;
+  /* display: flex; */
   border-radius: 5px;
 
 }
