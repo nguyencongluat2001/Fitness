@@ -839,8 +839,11 @@ ul:has(.form-recommendations) {
         transform-origin: top left;
         transform: scale(0.58);
     }
+    .text-mobile{
+        font-size: 5px !important;
+    }
 }
-@media (max-width: 460px) {
+/* @media (max-width: 460px) {
     .transform-vip {
         transform-origin: top left;
         transform: scale(0.57);
@@ -863,4 +866,4 @@ ul:has(.form-recommendations) {
         transform-origin: top left;
         transform: scale(0.85);
     }
-}
+} */

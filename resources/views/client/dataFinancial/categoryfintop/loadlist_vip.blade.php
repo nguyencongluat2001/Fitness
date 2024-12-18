@@ -97,57 +97,57 @@
             </colgroup>
             <thead style="background:#3a760c;color:white">
                 <tr>
-                    {{--<td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã <br>cổ phiếu</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tỷ trọng <br> (%NAV)</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá <br> hiện tại</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Tín hiệu <br> hành động</b></td>
-                    <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA1)</b></td> -->
-                    <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA2)</b></td> -->
-                    <td colspan="3" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Vùng giá mục tiêu</b></td>
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Dừng lỗ</b></td>
-                    <!-- <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>% Chốt</b></td> -->
-                    <td rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ghi chú</b></td>
+                    {{--<td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã <br>cổ phiếu</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tỷ trọng <br> (%NAV)</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá <br> hiện tại</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Tín hiệu <br> hành động</b></td>
+                    <!-- <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA1)</b></td> -->
+                    <!-- <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Vùng giá mục tiêu (TA2)</b></td> -->
+                    <td class="text-mobile" colspan="3" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Vùng giá mục tiêu</b></td>
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Dừng lỗ</b></td>
+                    <!-- <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>% Chốt</b></td> -->
+                    <td class="text-mobile" rowspan="2" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ghi chú</b></td>
                 </tr>
                 <tr>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tar1</b></td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tar2</b></td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tar3</b></td>
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tar1</b></td>
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tar2</b></td>
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;background:#fbff2f;color:#f82f15"><b>Tar3</b></td>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($datas as $key => $data)
                     <tr>
-                        <td align="center" class="text-uppercase" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
+                        <td align="center" class="text-uppercase text-mobile" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['code_cp'] }}</span>
                             @else
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;">
+                        <td align="center" class="text-mobile" style="white-space: inherit; vertical-align: middle;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['name_category'] }}</span>
                             @else
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;">
                             {{ !empty($data['created_at']) ? date('d/m', strtotime($data['created_at'])) : '' }} <br>
                             {{ !empty($data['created_at']) ? date('Y', strtotime($data['created_at'])) : '' }}
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['percent_of_assets'] }}</span>
                             @else
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
                             {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['price'] }}</span>
                             @else
@@ -155,7 +155,7 @@
                             @endif--}}
                             <span>{{ $data['price'] }}</span>
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
                         {{--@if(Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['current_price'] }}</span>
                             @else
@@ -165,7 +165,7 @@
                             <span>{{ $data['current_price'] }}</span>
 
                         </td>
-                        <td align="center" 
+                        <td class="text-mobile" align="center" 
                         @if(isset($data['pickcolor'])) style="white-space: inherit; vertical-align: middle;background:{{$data['pickcolor']}};font-weight:bold;"
                         @else style="white-space: inherit; vertical-align: middle;background:#218838;font-weight:bold;"
                         @endif>
@@ -176,31 +176,31 @@
                             @endif--}}
                             <span>{{ $data['profit_and_loss'] }}</span>
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;">
                             <span>{{ $data['act'] }}</span>
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['ta1'] }}</span>
                             @else
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['ta2'] }}</span>
                             @else
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;background: #ffef6d;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['ta3'] }}</span>
                             @else
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td>
-                        <td align="center" style="white-space: inherit; vertical-align: middle;color:red;font-weight:bold;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;color:red;font-weight:bold;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['stop_loss'] }}</span>
                             @else
@@ -214,7 +214,7 @@
                             <span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span>
                             @endif
                         </td> -->
-                        <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
+                        <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
                         @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                         <span>{{ $data['note'] }}</span>
                             @else
