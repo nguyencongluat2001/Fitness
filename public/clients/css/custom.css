@@ -822,6 +822,12 @@ ul:has(.form-recommendations) {
         transform: scale(0.6);
     }
 }
+@media (max-width: 480px) {
+    .transform-vip {
+        transform-origin: top left;
+        transform: scale(0.58);
+    }
+}
 @media (max-width: 460px) {
     .transform-vip {
         transform-origin: top left;
