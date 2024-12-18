@@ -77,7 +77,7 @@
         <colgroup>
             <col width="8%"> <!-- % Chot -->
             <col width="8%"> <!-- ma cp -->
-            <col width="10%"> <!-- nhom nganh -->
+            <col width="8%"> <!-- nhom nganh -->
             <col width="8%"> <!-- ngay mua -->
             <col width="9%"> <!-- % tai san -->
             <col width="8%"> <!-- gia mua -->
