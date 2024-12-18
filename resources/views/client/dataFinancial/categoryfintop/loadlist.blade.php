@@ -89,16 +89,16 @@
         <thead>
             <tr style="background:#3a760c;color:white">
                 {{--<td align="center" style="white-space: inherit; vertical-align: middle;"><b>STT</b></td>--}}
-                <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red"><b>% Bán</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã <br>cổ phiếu</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Tỷ trọng <br> (%NAV)</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày bán</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá bán</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
-                <td align="center" style="white-space: inherit; vertical-align: middle;"><b>Ghi chú</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red"><b>% Bán</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Mã <br>cổ phiếu</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Nhóm ngành</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày mua</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Tỷ trọng <br> (%NAV)</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá mua <br> TB</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ngày bán</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Giá bán</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Lãi/Lỗ</b></td>
+                <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;"><b>Ghi chú</b></td>
             </tr>
         </thead>
         <tbody>
@@ -106,36 +106,36 @@
             @foreach ($datas as $key => $data)
                 <tr >
                     {{--<td align="center" >{{ $key + 1 }}</td>--}}
-                    <td align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red;font-weight:bold;">
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;background:#ffef6d;color:red;font-weight:bold;">
                         <span>{{ $data['closing_percentage']}}</span>
                     </td>
-                    <td align="center" class="text-uppercase" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
+                    <td class="text-mobile" align="center" class="text-uppercase" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
                         <span>{{ $data['code_cp']}}</span>
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;">
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;">
                         <span>{{ $data['name_category']}}</span>
                     </td>
                     <td>{{ !empty($data['created_at']) ? date('d/m/Y', strtotime($data['created_at'])) : '' }}</td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;">
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;">
                         <span>{{ $data['percent_of_assets']}}</span>
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;">
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;">
                         <span>{{ $data['price']}}</span>
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;">
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;">
                         {{ !empty($data['date_close']) ? date('d/m/Y', strtotime($data['date_close'])) : '' }}
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;">
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;">
                         <span>{{ $data['price_close']}}</span>
                     </td>
-                    <td align="center"
+                    <td class="text-mobile" align="center"
                     @if(isset($data['pickcolor'])) style="white-space: inherit; vertical-align: middle;background:{{$data['pickcolor']}};font-weight:bold;"
                     @else style="white-space: inherit; vertical-align: middle;background:#218838;font-weight:bold;"
                     @endif 
                     style="white-space: inherit; vertical-align: middle">
                         <span>{{ $data['profit_and_loss']}}</span>
                     </td>
-                    <td align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
+                    <td class="text-mobile" align="center" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
                         <span>{{ $data['note']}}</span>
                     </td>
                 </tr>
