@@ -8,17 +8,20 @@
                <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
                 <div class="home_index_vnindex pt-1 pb-2" style="background:#b56c6cb5 !important;border-radius:0px !important">
                     <!-- Chú giải xếp hạng TA/FA -->
-                    <div class="home_index_child" style="background:#ffffffe6 !important;">
+                    <!-- <div class="home_index_child" style="background:#ffffffe6 !important;">
                         <div class="col-lg-12" style="padding:10px;">
                             <h class=" py-2"><i class="fas fa-chart-bar"></i> <span class="transform-vip" style="font-size:16px;font-family: auto;">DANH MỤC V.I.P FINTOP</span></h>
                             <br>
-                            {{--<span><i class="fas fa-hand-point-right"></i> Đăng ký VIP để xem danh mục Tín Hiệu V.I.P FINTOP
-                                <button  type="button" class="btn btn-success" href="{{ url('/client/upgradeAcc/index') }}"> <a href="{{ url('/client/upgradeAcc/index') }}" style="animation: lights 2s 750ms linear infinite;">Đăng ký</a></button>
-                            </span>--}}
                             <div class="py-2">
-                                <!-- Màn hình danh sách -->
                                 <div class="transform-vip" id="table-container-categoryFintop_vip"></div>
                             </div>
+                        </div>
+                    </div> -->
+                    <div class="home_index_child " style="background:#ffffffe6 !important">
+                        <div class="col-lg-12" style="padding:10px;">
+                            <h class=" py-2"><i class="far fa-chart-bar"></i>. <span style="font-size:16px;font-family: auto;" > DANH MỤC V.I.P FINTOP</span> </h> <br>
+                             <!-- Màn hình danh sách hieu qua  -->
+                                <div id="table-container-categoryFintop_vip"></div>
                         </div>
                     </div>
                     <!-- biểu đồ FireAnt -->
