@@ -122,7 +122,6 @@
             <tbody>
                 @foreach ($datas as $key => $data)
                     <tr>
-                        {{--<td align="center" >{{ $key + 1 }}</td>--}}
                         <td align="center" class="text-uppercase" style="white-space: inherit; vertical-align: middle;font-weight:bold;">
                             @if((isset($_SESSION['role']) && $_SESSION['role'] != 'USERS') || Auth::check() && isset($_SESSION['account_type_vip']) && ($_SESSION['account_type_vip'] == 'VIP1' || $_SESSION['account_type_vip'] == 'VIP2' || $_SESSION['account_type_vip'] == 'KIM_CUONG'))
                             <span>{{ $data['code_cp'] }}</span>

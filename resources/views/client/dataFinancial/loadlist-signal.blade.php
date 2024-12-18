@@ -155,7 +155,7 @@
             <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
           </td>
           <td style="vertical-align: middle;" align="center">
-            <a href="{{$data->url_link}}" target="_blank"><b>Chi tiết</b></a>
+          <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}"><a href="{{$data->url_link}}" target="_blank"><b><i class="fas fa-eye"></i></b></a></span>
             <!-- <a target="_blank" @if(isset($data->url_link) && !empty($data->url_link))  href="{{$data->url_link}}" @else href="javascript:;" @endif>Chi tiết</a> -->
           </td>
         </tr>
