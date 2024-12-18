@@ -299,7 +299,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 });
 
 
-Route::get('/', [ClientDataFinancialController::class, 'index']);
+Route::get('/', [ClientHomeController::class, 'index']);
 // route phía người dùng
 Route::prefix('/client')->group(function () {
     $arrModules = config('menuClient');
