@@ -469,7 +469,6 @@
             @php if($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '') $_SERVER['REQUEST_URI'] = 'datafinancial'; @endphp
             @if(!empty($value['child']) && strpos($_SERVER['REQUEST_URI'], $key) !== false)
             <div class="menu-mobile">
-
                 <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient active-menuClient-mobile">
                     <ul class="navbar-nav d-flex justify-content-between text-dark">
                         @foreach($value['child'] as $keyChild => $child)
@@ -479,9 +478,19 @@
                         @endforeach
                     </ul>
                 </div>
-                @endif
-                @endforeach
             </div>
+            @endif
+            @endforeach
+            @if(str_contains($_SERVER['REQUEST_URI'], 'library'))
+            <div class="menu-mobile">
+                @include('client.Library.menuMobile')
+            </div>
+            @endif
+            @if(str_contains($_SERVER['REQUEST_URI'], 'des/'))
+            <div class="menu-mobile">
+                @include('client.des.menuMobile')
+            </div>
+            @endif
         </nav>
     </div>
     <nav id="menuClient" class=" navbar-expand-lg  shadow">

@@ -48,6 +48,7 @@ class DesController extends Controller
             $blogs = $this->BlogService->where('code_category', $categories[0]->code_category)->where('status', 1)->orderBy('created_at', 'desc')->get();
         }
         $data['datas'] =  $categories;
+        $data['datasMenuDes'] =  $categories;
         $data['blogs'] = $blogs ?? [];
         return view('client.des.home',$data);
     }

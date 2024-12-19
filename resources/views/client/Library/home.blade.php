@@ -37,7 +37,7 @@
                                 <div id="table-container-library"></div>
                             </div>
                         </div>
-                        <div class="col-lg-3" style="padding:10px;">
+                        <div class="col-lg-3" style="padding:10px;" id="menu-library-web">
                             <h class=" py-2"> <span style="font-size:18px;font-family: auto;">	</span></h>
                             <div class="row form-group pt-2" style="text-align: center;">
                                 <div class="col-md-12">
@@ -108,7 +108,6 @@
                                         </span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>

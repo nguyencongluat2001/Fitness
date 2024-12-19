@@ -175,7 +175,7 @@ use Carbon\Carbon;
                     </div>
                     <div class="reader"></div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-3" id="menu-des-web">
                     <div class="container ps-0 pe-0">
                         <div class="treeview-animated w-20 border">
                             <ul class="list-unstyled components m-3">
@@ -223,6 +223,8 @@ use Carbon\Carbon;
             },
             dataType: 'JSON',
             success: function(arrResult) {
+                $(".link-menu-des").removeClass('active-menuClient active-menuClient_background');
+                $(".link-menu-des-" + id).addClass('active-menuClient active-menuClient_background');
                 $(".tab1").html(arrResult['content']);
                 $(".tab1").show();
                 $(".reader").hide();

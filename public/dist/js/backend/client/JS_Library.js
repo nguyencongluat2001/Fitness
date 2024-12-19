@@ -48,6 +48,11 @@ JS_Library.prototype.loadLists = function (cate) {
         type: "GET",
         data: data,
         success: function (arrResult) {
+            if(cate == ''){
+                cate = 'TU_SACH_DAU_TU';
+            }
+            $(".link-menu-library").removeClass('active-menuClient active-menuClient_background');
+            $(".link-menu-library-" + cate).addClass('active-menuClient active-menuClient_background');
             $("#table-container-library").html(arrResult);
         }
     });

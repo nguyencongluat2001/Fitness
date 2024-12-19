@@ -272,19 +272,27 @@ ul:has(.form-recommendations) {
     flex-shrink: 0;
     /* Đảm bảo icon không bị co lại */
 }
-.xh-w{
+
+.xh-w {
     display: block;
 }
-.xh-mb{
+
+.xh-mb {
     display: none;
 }
+
+#menu-library-web,
+#menu-des-web {
+    display: block;
+}
+
 @media (max-width: 992px) {
 
     .date-header,
     .marquee-header {
         display: none;
     }
-    
+
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
     .privileges-table #table-data tr td,
@@ -740,16 +748,24 @@ ul:has(.form-recommendations) {
         flex-shrink: 0;
         /* Đảm bảo icon không bị co lại */
     }
-    .xh-w{
+
+    .xh-w {
         display: none;
     }
-    .xh-mb{
+
+    .xh-mb {
         display: block;
+    }
+
+    #menu-library-web,
+    #menu-des-web {
+        display: none;
     }
 
 }
 
 @media (max-width: 370px) {
+
     #table-container-categoryFintop_vip #table-data tr td,
     #table-container-categoryFintop_basic #table-data tr td,
     .privileges-table #table-data tr td,
@@ -816,33 +832,39 @@ ul:has(.form-recommendations) {
         font-size: 20px !important;
     }
 }
+
 @media (max-width: 700px) {
     .transform-vip {
         transform-origin: top left;
         transform: scale(0.6);
     }
 }
+
 @media (max-width: 550px) {
     .transform-vip {
         transform-origin: top left;
         transform: scale(0.6);
     }
 }
+
 @media (max-width: 500px) {
     .transform-vip {
         transform-origin: top left;
         transform: scale(0.6);
     }
 }
+
 @media (max-width: 480px) {
     .transform-vip {
         transform-origin: top left;
         transform: scale(0.58);
     }
-    .text-mobile{
+
+    .text-mobile {
         font-size: 5px !important;
     }
 }
+
 /* @media (max-width: 460px) {
     .transform-vip {
         transform-origin: top left;
