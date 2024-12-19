@@ -410,7 +410,7 @@
                     </button>
                     <span id="logo">
                         <a @if(isset($_SESSION['role']) && !in_array($_SESSION['role'], ['USERS', 'USER' ])) href="{{ url('') . '/system/home/index' }}" @else href="" @endif>
-                            <img class="card-img " src="../clients/img/LogoFinTop_red.png" alt="Card image">
+                            <img class="card-img " src="../clients/img/LogoFinTop_notbg.jpg" alt="Card image">
                         </a>
                         <span class="logo-title-mobile">
                             Tài Chính & Đầu Tư
