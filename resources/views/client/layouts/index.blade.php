@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="../clients/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_notbg.jpg">
-    <meta property="og:type" content="website">
+    <!-- <meta property="og:type" content="website">
     <meta property="og:url" content="https://fintopdata.vn/">
-    <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" />
+    <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" /> -->
 
     <!-- Load Require CSS -->
     {{-- @yield('css') --}}
@@ -469,6 +469,7 @@
             @php if($_SERVER['REQUEST_URI'] == '/' || $_SERVER['REQUEST_URI'] == '') $_SERVER['REQUEST_URI'] = 'datafinancial'; @endphp
             @if(!empty($value['child']) && strpos($_SERVER['REQUEST_URI'], $key) !== false)
             <div class="menu-mobile">
+
                 <div class="container d-flex justify-content-between align-items-center link-datafinancial active-menuClient active-menuClient-mobile">
                     <ul class="navbar-nav d-flex justify-content-between text-dark">
                         @foreach($value['child'] as $keyChild => $child)
@@ -478,19 +479,9 @@
                         @endforeach
                     </ul>
                 </div>
+                @endif
+                @endforeach
             </div>
-            @endif
-            @endforeach
-            @if(str_contains($_SERVER['REQUEST_URI'], 'library'))
-            <div class="menu-mobile">
-                @include('client.Library.menuMobile')
-            </div>
-            @endif
-            @if(str_contains($_SERVER['REQUEST_URI'], 'des/'))
-            <div class="menu-mobile">
-                @include('client.des.menuMobile')
-            </div>
-            @endif
         </nav>
     </div>
     <nav id="menuClient" class=" navbar-expand-lg  shadow">
