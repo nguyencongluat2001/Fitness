@@ -155,6 +155,16 @@ class AboutController extends Controller
      */
     public function reader(Request $request, $id)
     {
+
+        if(empty($_SESSION['id'])){
+            // $data['message'] = "Đăng nhập để xem báo cáo vip!";
+            // $data['link'] = url("/client/about/reader/").$id;
+            return view('auth.signin',compact('data'));
+        }
+        if(!empty($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP2'){
+            return redirect('client/privileges/index');
+
+        }
         $blog = $this->blogService->where('id', $id)->first();
         if($blog->view_click == '' || $blog->view_click == null){
             $view_click = 1;
