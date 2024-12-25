@@ -41,7 +41,7 @@
                             <!-- LOGO -->
                             <a target="_blank" style="text-decoration: none;" href="{{ @$data['baseURL'] }}"><img
                                     border="0" vspace="0" hspace="0"
-                                    src="https://fintopdata.vn/clients/img/LogoFinTop_notbg.png" width="120"
+                                    src="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" width="120"
                                     height="120" alt="Logo" title="Logo"
                                     style="color: #000000;font-size: 10px; margin: 0; padding: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; display: block;" /></a>
                         </td>
