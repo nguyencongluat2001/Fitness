@@ -5,7 +5,7 @@
                 <h2 class="h4 text-light light-300" style="min-height: 5rem;">
                     <div style="display:flex">
                         <div style="width:10%">
-                            <img src="../clients/img/LogoFinTop_red.png" alt="Card image" width="100%">
+                            <img src="../clients/img/LogoFinTop_notbg.png" alt="Card image" width="100%">
                         </div>
                         <div style="width:80%;padding-left:10px">
                             <span style="color:#ff0000d1">

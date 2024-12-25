@@ -74,7 +74,7 @@ $arrdData = ApprovePaymentModel::where('status',0)->get()->toArray();
         <i class="fas fa-times cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
         <!-- target="_blank" -->
         <a class="navbar-brand m-0" href="{{url('/')}}">
-            <img src="../clients\img\LogoFinTop_red.png" class="navbar-brand-imgh-120" alt="main_logo" style="width:80%;padding-left:20%">
+            <img src="../clients/img/LogoFinTop_notbg.png" class="navbar-brand-imgh-120" alt="main_logo" style="width:80%;padding-left:20%">
             <span class="ms-1 font-weight-bold"></span>
         </a>
         </div>
