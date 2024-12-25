@@ -12,10 +12,8 @@
     <?php $current_url = Request::url(); ?>
     @if($current_url == 'https://fintopdata.vn' || $current_url == 'https://fintopdata.vn/' || $current_url == 'https://fintopdata.vn/client/home/index')
         <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" />
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="630">
-        <!-- <meta property="og:image:width" content="640">
-        <meta property="og:image:height" content="400"> -->
+        <meta property="og:image:width" content="640">
+        <meta property="og:image:height" content="400">
     @endif
 
 

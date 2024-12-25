@@ -6,10 +6,8 @@ use Carbon\Carbon;
 <head>
 <title>{{ $datas['blogDetail']->title }}</title>
 <meta property="og:image" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" />
-<!-- <meta property="og:image:width" content="640">
-<meta property="og:image:height" content="400"> -->
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="400">
 </head>
 <style>
     #content-reader iframe  {
