@@ -863,6 +863,9 @@ ul:has(.form-recommendations) {
     .text-mobile {
         font-size: 5px !important;
     }
+    .text-mobile-top-cp {
+        font-size: 7px !important;
+    }
 }
 
 /* @media (max-width: 460px) {
