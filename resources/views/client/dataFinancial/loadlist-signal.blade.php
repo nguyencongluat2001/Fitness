@@ -195,12 +195,12 @@
           <td style="vertical-align: middle;" class="td_ratings_FA_{{$id}}" align="center">
             <span id="span_ratings_FA_{{$id}}" class="span_ratings_FA_{{$id}}">{{$data->ratings_FA}}</span>
           </td>
-          <!-- <td style="vertical-align: middle;" align="center">
-            <span  value="" class="span_code_cp_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
-          </td> -->
           <td style="vertical-align: middle;" align="center">
-             <span class="span_code_cp_{{$id}}"><a href="" target="_blank"><b class="text-mobile-top-cp">Chi tiết</b></a></span>
+            <span  value="" class="span_code_cp_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
           </td>
+          <!-- <td style="vertical-align: middle;" align="center">
+             <span class="span_code_cp_{{$id}}"><a href="" target="_blank"><b class="text-mobile-top-cp">Chi tiết</b></a></span>
+          </td> -->
         </tr>
         @endforeach
         @endif
