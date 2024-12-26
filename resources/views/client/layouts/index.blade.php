@@ -10,7 +10,9 @@
     <meta property="og:type" content="website">
     <!-- <meta property="og:url" content="https://fintopdata.vn/"> -->
     <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" />
-
+    <meta property="fb:app_id" content="12345678">
+    <meta property="og:title" content="Trung tâm NC&PT Dữ liệu chứng khoán FinTop">
+    <meta property="og:description" content="Dữ liệu chứng khoán FinTop">
     <?php $current_url = Request::url(); ?>
     @if($current_url == 'https://fintopdata.vn' || $current_url == 'https://fintopdata.vn/' || $current_url == 'https://fintopdata.vn/client/home/index')
         <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" />
