@@ -11,8 +11,8 @@
     <!-- <meta property="og:url" content="https://fintopdata.vn"> -->
     <meta property="fb:app_id" content="2115022521881483">
 
-    <meta property="og:image" content="@yield('og:image', 'https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg'))" />
-    <meta property="og:image:secure_url" content="@yield('og:image', 'https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg'))" />
+    <meta property="og:image" content="@yield('og:image', 'https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg')" />
+    <meta property="og:image:secure_url" content="@yield('og:image', 'https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg')" />
 
     <!-- <meta property="og:title" content="Trung tâm NC&PT Dữ liệu chứng khoán FinTop">
     <meta property="og:description" content="Dữ liệu chứng khoán FinTop"> -->
