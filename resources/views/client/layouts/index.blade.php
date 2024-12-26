@@ -14,6 +14,7 @@
         <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" />
         <meta property="og:image:width" content="640">
         <meta property="og:image:height" content="400">
+        <meta property="fb:app_id" content="12345678">
     @endif
 
 
