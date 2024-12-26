@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="../clients/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_notbg.jpg">
     <meta property="og:type" content="website">
-    <!-- <meta property="og:url" content="https://fintopdata.vn/"> -->
+    <meta property="og:url" content="https://fintopdata.vn">
     <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" />
     <meta property="fb:app_id" content="12345678">
     <meta property="og:title" content="Trung tâm NC&PT Dữ liệu chứng khoán FinTop">
