@@ -6,9 +6,14 @@ use Carbon\Carbon;
 <!-- <title>{{ $datas['blogDetail']->title }}</title> -->
 <meta property="og:title" content="{{ $datas['blogDetail']->title }}">
 <meta property="og:description" content="{{ $datas['blogDetail']->title }}">
-<meta property="og:image" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" />
+<!-- <meta property="og:image" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" /> -->
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
+@section('og:image', {{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }})
+@section('og:url', url()->current())
+
+
+
 <style>
     #content-reader iframe  {
         width: 100% !important;
