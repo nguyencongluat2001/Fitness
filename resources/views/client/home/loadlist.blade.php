@@ -30,7 +30,7 @@
 <form id="frmSearchCP" role="form" action="" method="POST" style="width: 100%;overflow-x: scroll;">
     <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
     <!-- <div class="table-responsive pmd-card pmd-z-depth "> -->
-    <table id="table-data-home" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" onclick="window.location.href='/'">
+    <table id="table-data-home" class="table  table-bordered table-condensed dataTable no-footer" style="background: #0000000d;" onclick="window.location.href='/client/datafinancial/index'">
         <colgroup>
             <col width="4%">
             <col width="6%"> <!-- macp -->
