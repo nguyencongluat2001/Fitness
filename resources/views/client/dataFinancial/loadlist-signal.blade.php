@@ -198,7 +198,7 @@
           <!-- <td style="vertical-align: middle;" align="center">
             <span  value="" class="span_code_cp_{{$id}}"><b><span style="color:#00a25f"><i class="fas fa-eye-slash"></i></span></b></span>
           </td> -->
-          </td>
+          <td>
              <span class="span_code_cp_{{$id}}"><a href="" target="_blank"><b class="text-mobile-top-cp">Chi tiết</b></a></span>
           </td>
         </tr>
