@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="../assets/chosen/chosen.min.css">
     <script src="https://unpkg.com/lightweight-charts@3.4.0/dist/lightweight-charts.standalone.production.js"></script>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-
+    <link rel="stylesheet" href="../assets/css/toast.min.css">
 </head>
 <style>
     /* b,
@@ -614,6 +614,7 @@
     <!-- Custom -->
     <script src="../clients/js/custom.js"></script>
     <script src="../assets/js/plugins/chartjs.min.js"></script>
+    <script type="text/jscript" src="../assets/js/toast.min.js"></script>
 
     <script src="https://js.pusher.com/4.4/pusher.min.js"></script>
     <script type="text/javascript">

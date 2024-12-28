@@ -3,8 +3,6 @@
 <title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <link rel="stylesheet" href="{{URL::asset('assets/datepicker/bootstrap-datepicker.min.css')}}">
 <link rel="stylesheet" href="../clients/css/style.css">
-<link rel="stylesheet" href="../assets/css/toast.min.css">
-
 <style>
     .hidden {
         display: none;
@@ -54,7 +52,6 @@
 <div class="modal" id="model_otp" style="" role="dialog"></div>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_Register.js') }}"></script>
 <script src='../assets/js/jquery.js'></script>
-<script type="text/jscript" src="../assets/js/toast.min.js"></script>
 <script type="text/javascript">
     var baseUrl = '{{ url('') }}';
     var JS_Register = new JS_Register(baseUrl, 'register', 'send-otp');
