@@ -191,7 +191,8 @@ JS_Register.prototype.Tab2 = function(){
     var regexEmail = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
     var regexPhone = /(84|0[3|5|7|8|9])+([0-9]{8})/;
     if($(oForm).find("#name").val() == ''){
-        NclLib.alerMesage('Tên không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Tên không được để trống');
+        // NclLib.alerMesage('Tên không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#name").focus();
         return false;
     }

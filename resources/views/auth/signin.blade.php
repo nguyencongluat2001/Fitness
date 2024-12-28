@@ -55,15 +55,15 @@
                         </div>
                         @if(isset($data['acp_checkbox'])) <span style="color: red">{{$data['acp_checkbox']}}</span> @endif
                         <br>
-                        <div class="row">
-                            <div class="col-md-6">
+                        <div class="" style="display:flex">
+                            <div class="col-md-6" style="width: 50%;">
                                 @if (Route::has('password.request'))
                                 <a class="btn btn-link" href="{{ route('password.request') }}" style="color: #8b9ac5;">
                                     {{ __('Quên mật khẩu?') }}
                                 </a>
                                 @endif
                             </div>
-                            <div class="col-md-6" align="right">
+                            <div class="col-md-6" style="width: 50%;" align="right">
                                 <a class="btn btn-link" href="{{route('register')}}" style="color:#8b9ac5">Đăng ký ngay</a>
                             </div>
                         </div>
