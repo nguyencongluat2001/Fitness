@@ -54,6 +54,7 @@
 <div class="modal" id="model_otp" style="" role="dialog"></div>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_Register.js') }}"></script>
 <script src='../assets/js/jquery.js'></script>
+<script type="text/jscript" src="../assets/js/toast.min.js"></script>
 <script type="text/javascript">
     var baseUrl = '{{ url('') }}';
     var JS_Register = new JS_Register(baseUrl, 'register', 'send-otp');
