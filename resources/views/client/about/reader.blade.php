@@ -1,13 +1,21 @@
 @php
 use Carbon\Carbon;
+$urlImage = !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'';
+$thumbnai = url('/file-image-client/blogs/').'/'.$urlImage;
 @endphp
 @extends('client.layouts.index')
 @section('body-client')
-<title>{{ $datas['blogDetail']->title }}</title>
-<!-- <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_red.png"> -->
-<meta property="og:image" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" />
+<!-- <title>{{ $datas['blogDetail']->title }}</title> -->
+<meta property="og:title" content="{{ $datas['blogDetail']->title }}">
+<meta property="og:description" content="{{ $datas['blogDetail']->title }}">
+<!-- <meta property="og:image" content="{{url('/file-image-client/blogs/')}}/{{ !empty($datas['blogImage']->name_image)?$datas['blogImage']->name_image:'' }}" /> -->
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="400">
+@section('og:image', $thumbnai)
+@section('og:url', url()->current())
+
+
+
 <style>
     #content-reader iframe  {
         width: 100% !important;

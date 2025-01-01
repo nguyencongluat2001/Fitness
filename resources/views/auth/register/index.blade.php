@@ -3,7 +3,6 @@
 <title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <link rel="stylesheet" href="{{URL::asset('assets/datepicker/bootstrap-datepicker.min.css')}}">
 <link rel="stylesheet" href="../clients/css/style.css">
-
 <style>
     .hidden {
         display: none;

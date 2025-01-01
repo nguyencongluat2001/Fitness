@@ -172,7 +172,7 @@ https://templatemo.com/tm-561-purple-buzz
 #content-mobile.tkp_mobile,
 #content-mobile.ptcp_mobile {
     display: none;
-    overflow-x: scroll;
+    overflow-y: scroll;
     flex-wrap: nowrap;
 }
 
@@ -569,6 +569,7 @@ ul:has(.form-recommendations) {
         flex-direction: unset;
         overflow-x: scroll;
         max-width: 100%;
+        min-height: 37px;
     }
 
     .form-dangky-vip {
@@ -654,7 +655,7 @@ ul:has(.form-recommendations) {
 
     #content-mobile.tkp_mobile,
     #content-mobile.ptcp_mobile {
-        display: flex;
+        display: block;
     }
 
     .ttth_web,
@@ -862,6 +863,9 @@ ul:has(.form-recommendations) {
 
     .text-mobile {
         font-size: 5px !important;
+    }
+    .text-mobile-top-cp {
+        font-size: 7px !important;
     }
 }
 

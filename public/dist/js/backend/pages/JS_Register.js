@@ -191,37 +191,50 @@ JS_Register.prototype.Tab2 = function(){
     var regexEmail = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/;
     var regexPhone = /(84|0[3|5|7|8|9])+([0-9]{8})/;
     if($(oForm).find("#name").val() == ''){
-        NclLib.alerMesage('Tên không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Tên không được để trống');
+        // NclLib.alerMesage('Tên không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#name").focus();
         return false;
     }
     if(email == ''){
-        NclLib.alerMesage('Email không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Email không được để trống');
+
+        // NclLib.alerMesage('Email không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#email").focus();
         return false;
     }
     if(!email.match(regexEmail)){
-        NclLib.alerMesage('Email không đúng định dạng!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Email không đúng định dạng');
+
+        // NclLib.alerMesage('Email không đúng định dạng!', 'warning', '#f5ae67');
         $(oForm).find("#email").focus();
         return false;
     }
     if($(oForm).find("#phone").val() == ''){
-        NclLib.alerMesage('Số điện thoại không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Số điện thoại không được để trống');
+
+        // NclLib.alerMesage('Số điện thoại không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#phone").focus();
         return false;
     }
     if(!$(oForm).find("#phone").val().match(regexPhone)){
-        NclLib.alerMesage('Số điện thoại không đúng định dạng!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Số điện thoại không đúng định dạng');
+
+        // NclLib.alerMesage('Số điện thoại không đúng định dạng!', 'warning', '#f5ae67');
         $(oForm).find("#phone").focus();
         return false;
     }
     if($(oForm).find("#dateBirth").val() == ''){
-        NclLib.alerMesage('Ngày sinh không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Ngày sinh không được để trống');
+
+        // NclLib.alerMesage('Ngày sinh không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#dateBirth").focus();
         return false;
     }
     if($(oForm).find("#address").val() == ''){
-        NclLib.alerMesage('Địa chỉ không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Địa chỉ không được để trống');
+
+        // NclLib.alerMesage('Địa chỉ không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#address").focus();
         return false;
     }
@@ -234,7 +247,7 @@ JS_Register.prototype.Tab2 = function(){
             data: $(oForm).serialize(),
             success: function(arrResult){
                 if(arrResult['success'] == false){
-                    NclLib.alerMesage(arrResult['message'], 'warning', '#f5ae67');
+                    NclLib.alertMessageBackend('danger', 'Lỗi', arrResult['message']);
                     return false;
                 }
                 myClass.checkEmail(email);
@@ -263,31 +276,43 @@ JS_Register.prototype.Tab3 = function(){
     var oForm = '#frmRegister';
     var myClass = this;
     if($("input:radio[name=investment_time]:checked").val() == '' || $("input:radio[name=investment_time]:checked").val() == undefined){
-        NclLib.alerMesage('Thời gian đầu tư không được để trống!', 'warning', '#f5ae67');
+        // NclLib.alerMesage('Thời gian đầu tư không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Thời gian đầu tư không được để trống');
+
         return false;
     }
     if($("input:radio[name=investment_taste]:checked").val() == '' || $("input:radio[name=investment_taste]:checked").val() == undefined){
-        NclLib.alerMesage('Khẩu vị đầu tư không được để trống!', 'warning', '#f5ae67');
+        // NclLib.alerMesage('Khẩu vị đầu tư không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Khẩu vị đầu tư không được để trống!');
+
         $(oForm).find("#investment_taste").focus();
         return false;
     }
     if($("input:radio[name=investment_company]:checked").val() == '' || $("input:radio[name=investment_company]:checked").val() == undefined){
-        NclLib.alerMesage('Công ty chứng khoán không được để trống!', 'warning', '#f5ae67');
+        // NclLib.alerMesage('Công ty chứng khoán không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Công ty chứng khoán không được để trống!');
+
         $(oForm).find("#investment_company").focus();
         return false;
     }
     if($(oForm).find("#password").val() == ''){
-        NclLib.alerMesage('Mật khẩu không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Mật khẩu không được để trống!');
+
+        // NclLib.alerMesage('Mật khẩu không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#password").focus();
         return false;
     }
     if($(oForm).find("#repass").val() == ''){
-        NclLib.alerMesage('Nhập lại mật khẩu không được để trống!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Nhập lại mật khẩu không được để trống!');
+
+        // NclLib.alerMesage('Nhập lại mật khẩu không được để trống!', 'warning', '#f5ae67');
         $(oForm).find("#repass").focus();
         return false;
     }
     if($(oForm).find("#repass").val() != $(oForm).find("#password").val()){
-        NclLib.alerMesage('Xác nhận mật khẩu không khớp!', 'warning', '#f5ae67');
+        NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Xác nhận mật khẩu không khớp!');
+
+        // NclLib.alerMesage('Xác nhận mật khẩu không khớp!', 'warning', '#f5ae67');
         $(oForm).find("#repass").focus();
         return false;
     }
@@ -323,7 +348,9 @@ JS_Register.prototype.Tab4 = function(){
         data: data,
         success: function(arrResult){
             if(arrResult['success'] == false){
-                NclLib.alerMesage(arrResult['message'], 'warning', '#f5ae67');
+                // NclLib.alerMesage(arrResult['message'], 'warning', '#f5ae67');
+                NclLib.alertMessageBackend('danger', 'Lỗi', arrResult['message']);
+
                 return false;
             }
             $(oForm).find("#tab4-register").html(arrResult);
@@ -357,13 +384,14 @@ JS_Register.prototype.getPersonnel = function () {
                 $("#name_personnel").val(arrResult['data']['name']);
                 
           } else if (arrResult['success'] == false) {
-            Swal.fire({
-                position: 'top-end',
-                icon : 'warning',
-                title: arrResult.message,
-                showConfirmButton: false,
-                timer: 3000
-              })
+            NclLib.alertMessageBackend('warning', 'Cảnh báo', arrResult.message);
+            // Swal.fire({
+            //     position: 'top-end',
+            //     icon : 'warning',
+            //     title: arrResult.message,
+            //     showConfirmButton: false,
+            //     timer: 3000
+            //   })
           }
 
         }
