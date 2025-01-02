@@ -93,7 +93,6 @@ class LoginController extends Controller
     // }
     public function checkLogin(Request $request)
     {
-        dd($request->all());
         $email = $request->email;
         $password = $request->password;
         if($email == '' || $email == null){
