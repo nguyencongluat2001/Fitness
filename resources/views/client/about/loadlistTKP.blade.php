@@ -19,7 +19,7 @@ use Carbon\Carbon;
     <div class="card-body" style="padding: 10px !important;" 
         @if(!Auth::check()) 
             onclick="JS_About.checkLogin()" 
-        @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP2')))
+        @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && ($_SESSION['account_type_vip'] != 'VIP1' || $_SESSION['account_type_vip'] != 'VIP2'))))
             onclick="JS_About.checkVIP()" 
         @endif>
         <div id="style-1" class="scrollbar tkp_web" style="padding-right:10px;max-height:900px !important">
@@ -28,7 +28,7 @@ use Carbon\Carbon;
                 @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
                     @if(!Auth::check()) 
                         <div class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer;pointer-events: none;">
-                    @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP2')))
+                    @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && ($_SESSION['account_type_vip'] != 'VIP1' || $_SESSION['account_type_vip'] != 'VIP2'))))
                         <div class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer;pointer-events: none;">
                     @else
                         <div onclick="JS_About.blogReader('{{$data->id}}')" class="col-sm-6 col-lg-12 text-decoration-none {{ $data->code_category }}" style="cursor:pointer;">
