@@ -238,7 +238,7 @@ use Carbon\Carbon;
                 <div id="style-1" class="homeTTTH row vip" 
                 @if(!Auth::check()) 
                     onclick="JS_Home.checkLogin()" 
-                @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP2')))
+                @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2')))
                     onclick="JS_Home.checkVIP()" 
                 @endif
                 >
@@ -247,7 +247,7 @@ use Carbon\Carbon;
                         @php Carbon::setLocale('vi');$now = Carbon::now(); $created_at = Carbon::create($data->created_at) @endphp
                         @if(!Auth::check()) 
                             <div class="col-md-4 about-list mb-3 bcptVIP" style="pointer-events: none;">
-                        @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP2')))
+                        @elseif(((isset($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2')))
                              <div class="col-md-4 about-list mb-3 bcptVIP" style="pointer-events: none;">
                         @else
                              <div class="col-md-4 about-list mb-3 bcptVIP">
