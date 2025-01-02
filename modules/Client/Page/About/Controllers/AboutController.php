@@ -161,7 +161,7 @@ class AboutController extends Controller
             // $data['link'] = url("/client/about/reader/").$id;
             return view('auth.signin');
         }
-        if(!empty($_SESSION['id']) && $_SESSION['role'] == 'USERS' && ($_SESSION['account_type_vip'] != 'VIP1' || $_SESSION['account_type_vip'] != 'VIP2')){
+        if(!empty($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2'){
             return redirect('client/privileges/index');
 
         }
