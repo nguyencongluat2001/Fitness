@@ -9,7 +9,7 @@
                         </div>
                         <div style="width:80%;padding-left:10px">
                             <span style="color:#ff0000d1">
-                                <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;" class="title-footer">Trung tâm NC&PT  <br> Dữ liệu chứng khoán FinTop DATA</b>
+                                <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;" class="title-footer">Trung tâm NC&PT  <br> Dữ liệu chứng khoán <br> FinTop DATA</b>
                             </span>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                     <tbody>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fab fa-facebook"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" target="_blank" href="https://www.facebook.com/Fintopdata.vn"> Trung tâm NC&PT Dữ liệu chứng khoán FinTop DATA</a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" target="_blank" href="https://www.facebook.com/Fintopdata.vn"> Trung tâm NC&PT Dữ liệu chứng khoán FinTop</a></td>
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fab fa-youtube"></i></td>
