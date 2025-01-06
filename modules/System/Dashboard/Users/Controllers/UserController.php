@@ -753,7 +753,7 @@ class UserController extends Controller
         $data['phone'] = $user->phone;
         $data['mailto'] = $input['email_acc'];
         $data['passwordNew'] = $input['password_new'];
-        $data['subject'] = 'Trung tâm Nghiên cứu & Phân tích Dữ liệu chứng khoán FinTop';
+        $data['subject'] = 'Trung tâm NC&PT Dữ liệu chứng khoán FinTop DATA';
         // Gửi mail
         (new ForgetPassWordMailHelper($data['email'], $data['email'], $stringHtml, $data))->send($data);
     }

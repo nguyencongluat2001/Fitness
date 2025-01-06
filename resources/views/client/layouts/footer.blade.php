@@ -9,7 +9,7 @@
                         </div>
                         <div style="width:80%;padding-left:10px">
                             <span style="color:#ff0000d1">
-                                <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;" class="title-footer">Trung tâm NC&PT  <br> Dữ liệu chứng khoán FinTop</b>
+                                <b style="font-family: auto;color:#ffe673;font-weight: 600;font-size: 23px;" class="title-footer">Trung tâm NC&PT  <br> Dữ liệu chứng khoán FinTop DATA</b>
                             </span>
                         </div>
                     </div>
@@ -53,13 +53,13 @@
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fab fa-youtube"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" href="https://www.youtube.com/@taichinhdautufintop"> Tài chính & Đầu tư FinTop</a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" href="https://www.youtube.com/@fintopdata.kynguyendautu"> Kỷ Nguyên Đầu Tư | FinTop DATA</a></td>
                         </tr>
                         <tr>
                             <td align="center" style="vertical-align: middle;"><i class="fas fa-hand-point-right"></i></td>
-                            <td><a class="text-decoration-none pt-2 text-light py-1" href="https://www.youtube.com/@taichinhdautufintop"> Tham gia cộng đồng FinTop </a></td>
+                            <td><a class="text-decoration-none pt-2 text-light py-1" href="https://zalo.me/g/qlbpzh027"> Tham gia Cộng đồng FinTop </a></td>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td colspan="2">
                                 <span>
                                     <a class="text-light" style="text-decoration: none;" target="_blank" href="http://facebook.com/">
@@ -87,7 +87,7 @@
                                     </a>
                                 </span>
                             </td>
-                        </tr>
+                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -136,7 +136,7 @@
             <hr class="mt-3 text-light">
             <div class="col-md-12">
                 <p class="text-lg-start text-center text-light light-300">
-                    Bản quyền @2023 , Trung tâm Nghiên cứu & Phân tích Dữ liệu chứng khoán FinTop
+                    Bản quyền @2023 , Trung tâm NC&PT Dữ liệu chứng khoán FinTop DATA
                 </p>
             </div>
         </div>
