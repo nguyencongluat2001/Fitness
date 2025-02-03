@@ -1,7 +1,7 @@
 @php
 use Carbon\Carbon;
 @endphp
-<title>FinTop DATA | Dữ Liệu Chứng Khoán</title>
+<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
 <div class="card h-100">
     <div class="card-header pb-0 px-3">
         <div class="row">
