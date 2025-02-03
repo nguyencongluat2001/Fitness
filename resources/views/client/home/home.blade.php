@@ -3,7 +3,7 @@
 @php
 use Carbon\Carbon;
 @endphp
-<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
+<title>FinTop DATA | Dữ Liệu Chứng Khoán</title>
 <style>
     header {
         font-family: 'Lobster', cursive;

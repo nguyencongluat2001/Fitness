@@ -1,6 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
-<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
+<title>FinTop DATA | Dữ Liệu Chứng Khoán</title>
 <!-- tra cứu cổ phiếu -->
 <style>
     .hiddel{

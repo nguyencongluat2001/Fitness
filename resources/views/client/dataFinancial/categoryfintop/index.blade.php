@@ -1,6 +1,6 @@
 @extends('client.layouts.index')
 @section('body-client')
-<title>TÀI CHÍNH & ĐẦU TƯ FINTOP</title>
+<title>FinTop DATA | Dữ Liệu Chứng Khoán</title>
 <section class="container">
         <div class=" pb-3 d-lg-flex gx-5">
         <div class="col-lg-12">
