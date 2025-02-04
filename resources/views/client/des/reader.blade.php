@@ -2,7 +2,6 @@
 use Carbon\Carbon;
 @endphp
 <title>{{ $datas['blogDetail']->title }}</title>
-@section('og:title', $datas['blogDetail']->title)
 
 <style>
     #content-reader iframe  {
