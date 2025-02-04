@@ -14,8 +14,8 @@
     <meta property="og:image" content="@yield('og:image', 'https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg')" />
     <meta property="og:image:secure_url" content="@yield('og:image', 'https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg')" />
 
-    <!-- <meta property="og:title" content="Trung tâm NC&PT Dữ liệu chứng khoán FinTop">
-    <meta property="og:description" content="Dữ liệu chứng khoán FinTop"> -->
+    <meta property="og:title" content="@yield('og:title','FinTop DATA | Dữ Liệu Chứng Khoán')">
+    <meta property="og:description" content="@yield('og:title','FinTop DATA | Dữ Liệu Chứng Khoán')">
     <?php $current_url = Request::url(); ?>
     @if($current_url == 'https://fintopdata.vn' || $current_url == 'https://fintopdata.vn/' || $current_url == 'https://fintopdata.vn/client/home/index')
         <!-- <meta property="og:image" content="https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg" /> -->
