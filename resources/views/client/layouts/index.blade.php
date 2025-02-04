@@ -8,7 +8,7 @@
     <link rel="apple-touch-icon" href="../clients/img/apple-icon.png">
     <link rel="shortcut icon" type="image/x-icon" href="../clients/img/LogoFinTop_notbg.jpg">
     <meta property="og:type" content="website">
-    <!-- <meta property="og:url" content="https://fintopdata.vn"> -->
+    <meta property="og:url" content="@yield('og:url','https://fintopdata.vn')">
     <meta property="fb:app_id" content="2115022521881483">
 
     <meta property="og:image" content="@yield('og:image', 'https://fintopdata.vn/clients/img/LogoFinTop_notbg.jpg')" />
