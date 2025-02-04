@@ -49,7 +49,7 @@
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>% Chốt</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Mã CP</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Nhóm nghành</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>% Tài sản <br> khuyến nghị</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Tỷ trọng</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Ngày mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Giá mua</b></td>
                             <td style="white-space: inherit;vertical-align: middle" class="required" align="center"><b>Ngày chốt</b></td>
