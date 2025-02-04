@@ -5,7 +5,7 @@ $thumbnai = url('/file-image-client/blogs/').'/'.$urlImage;
 @endphp
 @extends('client.layouts.index')
 @section('body-client')
-<!-- <title>{{ $datas['blogDetail']->title }}</title> -->
+<title>{{ $datas['blogDetail']->title }}</title>
 @section('title', $datas['blogDetail']->title )
 @section('og:title', $datas['blogDetail']->title )
 
