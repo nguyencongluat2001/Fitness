@@ -123,6 +123,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::post('/createForm', [ClientController::class,'createForm']);
             Route::post('/create', [ClientController::class,'create']);
             Route::post('/create_upgradeAcc', [ClientController::class,'create_upgradeAcc']);
+            // nnanag cấp user lên sale
+            Route::post('/store_upgrade_ctv_sale', [ClientController::class,'store_upgrade_ctv_sale']);
 
             Route::post('/delete', [ClientController::class,'delete']);
             Route::post('/updateUser', [ClientController::class,'updateUser']);

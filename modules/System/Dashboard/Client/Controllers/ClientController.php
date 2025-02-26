@@ -133,6 +133,19 @@ class ClientController extends Controller
         $create = $this->ClientService->store_upgradeAcc($input); 
         return $create;
     }
+        /**
+     * nâng cấp use lên ctv
+     *
+     * @param Request $request
+     *
+     * @return view
+     */
+    public function store_upgrade_ctv_sale (Request $request)
+    {
+        $input = $request->input();
+        $create = $this->ClientService->store_upgrade_ctv_sale($input); 
+        return $create;
+    }
     /**
      * Load màn hình chỉnh sửa thông tin người dùng
      *

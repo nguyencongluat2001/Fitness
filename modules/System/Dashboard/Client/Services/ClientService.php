@@ -217,7 +217,28 @@ class ClientService extends Service
             return array('success' => false, 'message' => (string) $e->getMessage());
         }
     }
-    
+     /**
+     * cập nhật người dùng
+     */
+    public function store_upgrade_ctv_sale($input){
+        //check quyền chỉnh sửa
+        try{
+            // array data users
+            $arrData = [
+                'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
+                'id_manage'=> isset($input['id_manage'])?$input['id_manage']:''
+
+            ];
+            if($input['id'] != ''){
+                $updateUser = $this->ClientRepository->where('id',$input['id'])->update($arrData);
+                return array('success' => true, 'message' => 'Nâng cấp cộng tác viên thành công');
+            }
+            
+            return true;
+        } catch (\Exception $e) {
+            return array('success' => false, 'message' => (string) $e->getMessage());
+        }
+    }
      /**
      * cập nhật người dùng
      */
@@ -230,7 +251,7 @@ class ClientService extends Service
             ];
             if($input['id'] != ''){
                 $updateUser = $this->ClientRepository->where('id',$input['id'])->update($arrData);
-                return array('success' => true, 'message' => 'Nâng cấp cộng tác viên thành công');
+                return array('success' => true, 'message' => 'Nâng cấp thành công');
             }
             
             return true;

@@ -167,6 +167,44 @@ JS_Client.prototype.store = function (oFormCreate) {
  *
  * @return void
  */
+JS_Client.prototype.store_upgrade_ctv_sale = function (oFormCreate) {
+    var url = this.urlPath + '/store_upgrade_ctv_sale';
+    var myClass = this;
+    var formdata = new FormData();
+    formdata.append('_token', $("#_token").val());
+    formdata.append('id', $("#id").val());
+    formdata.append('id_personnel', $("#id_personnel").val());
+    formdata.append('id_manage', $("#id_manage").val());
+    $.ajax({
+        url: url,
+        type: "POST",
+        data: formdata,
+        dataType: 'json',
+        cache: false,
+        contentType: false,
+        processData: false,
+        success: function (arrResult) {
+            if (arrResult['success'] == true) {
+                  NclLib.alertMessageBackend('success', 'Thông báo', arrResult['message']);
+                  $('#editmodal').modal('hide');
+                  myClass.loadList(oFormCreate);
+
+            } else {
+                NclLib.successLoadding();
+                NclLib.alertMessageBackend('danger', 'Thông báo', arrResult['message']);
+
+                // NclLib.alerMesage('danger', 'Lỗi', arrResult['message']);
+            }
+        }
+    });
+}
+/**
+ * Hàm hiển thêm mới
+ *
+ * @param oFormCreate (tên form)
+ *
+ * @return void
+ */
 JS_Client.prototype.upgradeAcc = function (oFormCreate) {
     var url = this.urlPath + '/create_upgradeAcc';
     var myClass = this;

@@ -33,7 +33,7 @@
 				<div class="row form-group" id="div_hinhthucgiai">
 					<div class="modal-footer">
 						<!-- <span id="btn_create"> -->
-							<button onclick="JS_Client.store()" class="btn btn-primary btn-sm" type="button">
+							<button onclick="JS_Client.store_upgrade_ctv_sale()" class="btn btn-primary btn-sm" type="button">
 								Cập nhật
 							</button>
 						<!-- </span> -->
