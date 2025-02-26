@@ -226,7 +226,8 @@ class ClientService extends Service
             // array data users
             $arrData = [
                 'id_personnel'=> isset($input['id_personnel'])?$input['id_personnel']:'',
-                'id_manage'=> isset($input['id_manage'])?$input['id_manage']:''
+                'id_manage'=> isset($input['id_manage'])?$input['id_manage']:'',
+                'role'=> 'SALE_BASIC'
 
             ];
             if($input['id'] != ''){
