@@ -156,8 +156,8 @@ class AboutController extends Controller
     public function reader(Request $request, $id)
     {
 
-        $check = $this->blogService->find($id)->first();
-        if($check->type_blog == 'VIP' && empty($_SESSION['id'])){
+        $check = $this->blogService->find($id);
+        if($check->type_blog == 'VIP' && $_SESSION == []){
             // $data['message'] = "Đăng nhập để xem báo cáo vip!";
             // $data['link'] = url("/client/about/reader/").$id;
             return view('auth.signin');
