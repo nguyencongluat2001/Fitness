@@ -160,7 +160,7 @@ class AboutController extends Controller
         if($check->type_blog == 'VIP' && $_SESSION == []){
             // $data['message'] = "Đăng nhập để xem báo cáo vip!";
             // $data['link'] = url("/client/about/reader/").$id;
-            return view('auth.signin');
+            return redirect('client/about/session');
         }
         if($check->type_blog == 'VIP' && !empty($_SESSION['id']) && $_SESSION['role'] == 'USERS' && $_SESSION['account_type_vip'] != 'VIP1' && $_SESSION['account_type_vip'] != 'VIP2'){
             return redirect('client/privileges/index');
