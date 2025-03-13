@@ -8,7 +8,7 @@
     {{--<link rel="stylesheet" href="{{ asset('emails/base.css') }}">--}}
 
     <!-- MESSAGE SUBJECT -->
-    <title>{{ @$data['subject'] }}</title>
+    <title>Trung tâm Dữ liệu chứng khoán FinTopDATA</title>
 
 </head>
 
@@ -63,7 +63,8 @@
                                 color: #fdffa9;background:#8a0000;
                                 font-family: sans-serif;"
                             class="header">
-                            {{ @$data['subject'] }}
+                            <!-- {{ @$data['subject'] }} -->
+                             Trung tâm Dữ liệu chứng khoán FinTopDATA
                         </td>
                     </tr>
                     <!-- BUTTON -->
