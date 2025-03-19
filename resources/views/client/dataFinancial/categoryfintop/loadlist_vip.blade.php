@@ -5,7 +5,7 @@
     .scrollbar {
     margin-left: 30px;
     /* float: left; */
-    height: 1000px;
+    height: auto;
     /* width: 65px; */
     /* background: #F5F5F5; */
     overflow-y: scroll;
@@ -71,7 +71,7 @@
     border-color:  rgba(0, 0, 0, 0.2);
   }
 </style>
-<div id="style-1" style="padding-right:10px;height:700px">
+<div style="padding-right:10px;height:700px">
     <div class="table-responsive pmd-card pmd-z-depth">
         <table style="" id="table-data" class="table  table-bordered table-striped table-condensed dataTable no-footer"  
             @if(!Auth::check()) 
