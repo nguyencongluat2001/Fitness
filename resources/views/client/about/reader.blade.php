@@ -122,10 +122,10 @@ $thumbnai = url('/file-image-client/blogs/').'/'.$urlImage;
     }else if(type == 'BAO_CAO_PTDTVIP'){
         NclLib.menuActive('.link-session');
         NclLib.menuActive_child('.link-session');
-    }else if(type == 'BAO_CAO_PTDN'){
+    }else if(type == 'BAO_CAO_PTCP'){
         NclLib.menuActive('.link-industry');
         NclLib.menuActive_child('.link-industry');
-    }else if(type == 'BAO_CAO_PTCP'){
+    }else if(type == 'BAO_CAO_PTN'){
         NclLib.menuActive('.link-stock');
         NclLib.menuActive_child('.link-stock');
     }
