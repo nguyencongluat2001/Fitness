@@ -13,12 +13,27 @@
         <form id="frmSignal_index">
             <input type="hidden" name="_token" id="_token" value="{{ csrf_token() }}">
             <div class="row">
-                <nav>
+                <!-- <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <button class="nav-link active" id="nav-mua-tab" data-bs-toggle="tab" data-bs-target="#nav-mua" type="button" role="tab" aria-controls="nav-mua" aria-selected="true">Mua</button>
                         <button class="nav-link" id="nav-ban-tab" data-bs-toggle="tab" data-bs-target="#nav-ban" type="button" role="tab" aria-controls="nav-ban" aria-selected="false">Bán</button>
                     </div>
-                </nav>
+                </nav> -->
+                <div class="breadcrumb-input-fix d-sm-flex align-items-center">
+                    <span>
+                        <a href="{{ URL::asset('/system/signal/index') }}">
+                            <button class="btn btn-light btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
+                            data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Mua</button>
+                        </a>
+                    </span>
+                    <span class="ms-3">
+                        <a href="{{ URL::asset('/system/signalpass/index') }}">
+                            <button class="btn btn-success btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
+                            data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Bán</button>
+                        </a>
+                    </span>
+                   
+                </div>
                 <div class="tab-content" id="nav-tabContent">
                     <div class="my-3">
                         <div class="col-md-12 row">
