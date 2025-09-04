@@ -28,7 +28,7 @@
                 <!-- <td align="center" style="vertical-align: middle;"><b>Sắp xếp</b></td> -->
                 <td align="center" style="vertical-align: middle;"><b>Ngày thêm</b></td>
                 <td align="center" style="vertical-align: middle;"><b>Trạng thái</b></td>
-                <td align="center" style="vertical-align: middle;"><b><span onclick="JS_Signal.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></b></td>
+                <td align="center" style="vertical-align: middle;"><b><span onclick="JS_SignalPass.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></b></td>
             </tr>
             @else
             <tr style="height: 70px;">
@@ -44,7 +44,7 @@
                 <!-- <td align="center" style="vertical-align: middle;"><b>Sắp xếp</b></td> -->
                 <td align="center" style="vertical-align: middle;"><b>Ngày thêm</b></td>
                 <td align="center" style="vertical-align: middle;"><b>Trạng thái</b></td>
-                <td align="center" style="vertical-align: middle;"><b><span onclick="JS_Signal.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></b></td>
+                <td align="center" style="vertical-align: middle;"><b><span onclick="JS_SignalPass.addrow()" class="text-cursor text-primary"><i class="fas fa-plus-square"></i></span></b></td>
             </tr>
             @endif
         </thead>
@@ -99,12 +99,12 @@
                         <td onclick="{select_row(this);}" align="center">
                             <label class="custom-control custom-checkbox p-0 m-0 pointer " style="cursor: pointer;">
                                 <input type="checkbox" hidden class="custom-control-input toggle-status" id="status_{{$id}}" data-id="{{$id}}" {{ $data->status == 1 ? 'checked' : '' }}>
-                                <span class="custom-control-indicator p-0 m-0" onclick="JS_Signal.changeStatusSignal('{{$id}}')"></span>
+                                <span class="custom-control-indicator p-0 m-0" onclick="JS_SignalPass.changeStatusSignal('{{$id}}')"></span>
                             </label>
                         </td>
                         <td align="center">
-                            <span class="text-cursor text-warning" onclick="JS_Signal.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
-                            <span class="text-cursor text-trash" onclick="JS_Signal.remote('{{$id}}')"><i class="fas fa-trash"></i></span>
+                            <span class="text-cursor text-warning" onclick="JS_SignalPass.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
+                            <span class="text-cursor text-trash" onclick="JS_SignalPass.remote('{{$id}}')"><i class="fas fa-trash"></i></span>
                         </td>
                     </tr>
                 @endforeach
