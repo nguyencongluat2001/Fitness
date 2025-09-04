@@ -2,7 +2,7 @@
 @section('body')
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_Blogs.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_System_Security.js') }}"></script>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {{-- <link  href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" /> --}}
     <div class="container-fluid" >
         <div class="row">

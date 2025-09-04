@@ -2,7 +2,7 @@
 @section('body')
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_BackupData.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_System_Security.js') }}"></script>
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <div class="container-fluid">
     <div class="row">
         <form action="" method="POST" id="frmBackupData_index">

@@ -2,7 +2,7 @@
 @section('body')
 <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_User_info.js') }}"></script>
 
-<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <form action="" method="POST" id="frmUsersInfo_index">
     @csrf
     <form id="frmView"  role="form" action="" method="POST">

@@ -7,7 +7,7 @@
     }
 </style>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_Home.js') }}"></script>
-    <!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
     {{-- <link  href="../assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" /> --}}
     <form action="" method="POST" id="frmHome_index">
         <main class="main-content position-relative border-radius-lg ">
