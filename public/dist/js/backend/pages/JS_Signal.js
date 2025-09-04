@@ -286,7 +286,7 @@ JS_Signal.prototype.remote = function(id) {
                             if (result.isConfirmed) {
                                 var nameMessage = 'Xóa thành công!';
                                 NclLib.alertMessageBackend('success', 'Thông báo', nameMessage);
-                                myClass.loadList(frmSignal_index);
+                                myClass.loadList('form#frmSignal_index');
                             }
                         } else {
                             if (result.isConfirmed) {
