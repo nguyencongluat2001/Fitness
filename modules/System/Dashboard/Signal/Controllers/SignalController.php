@@ -18,7 +18,7 @@ class SignalController extends Controller
      */
     public function index(Request $request)
     {
-        return view('dashboard.signal.index');
+        return view('dashboard.signal.signalbuy.index');
     }
     /**
      * Danh sách
@@ -34,7 +34,29 @@ class SignalController extends Controller
         $objResult = $this->signalService->filter($input);
         $data['datas'] = $objResult;
         $data['type'] = $request->type;
-        return view('dashboard.signal.loadList', $data)->render();
+        return view('dashboard.signal.signalbuy.loadList', $data)->render();
+    }
+
+
+        /**
+     * Danh sách
+     */
+    public function loadListPass(Request $request)
+    {
+        $input = $request->input();
+        $data = array();
+        $input['sort'] = 'order';
+        // $input['sortType'] = 1;
+        $input['type_order'] = 'created_at';
+
+        $objResult = $this->signalService->filter($input);
+        $data['datas'] = $objResult;
+        $data['type'] = $request->type;
+        return view('dashboard.signal.signalpass.loadList', $data)->render();
+    }
+     public function indexPass(Request $request)
+    {
+        return view('dashboard.signal.signalpass.index');
     }
     /**
      * Form thêm

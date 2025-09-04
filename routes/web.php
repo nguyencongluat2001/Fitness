@@ -255,6 +255,16 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
                 Route::post('updateSignal', [SignalController::class, 'updateSignal']);
                 Route::post('changeStatusSignal', [SignalController::class, 'changeStatusSignal']);
             });
+            Route::prefix('signalpass')->group(function(){
+                Route::get('index', [SignalController::class, 'indexPass']);
+                Route::post('loadList', [SignalController::class, 'loadListPass']);
+                Route::get('create', [SignalController::class, 'create']);
+                Route::get('edit', [SignalController::class, 'edit']);
+                Route::post('update', [SignalController::class, 'update']);
+                Route::post('delete', [SignalController::class, 'delete']);
+                Route::post('updateSignal', [SignalController::class, 'updateSignal']);
+                Route::post('changeStatusSignal', [SignalController::class, 'changeStatusSignal']);
+            });
             //Tín hiệu mua
             Route::prefix('approvepayment')->group(function(){
                 Route::get('index', [ApprovePaymentController::class, 'index']);
