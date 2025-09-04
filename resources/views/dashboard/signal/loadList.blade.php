@@ -102,7 +102,10 @@
                                 <span class="custom-control-indicator p-0 m-0" onclick="JS_Signal.changeStatusSignal('{{$id}}')"></span>
                             </label>
                         </td>
-                        <td align="center"><span class="text-cursor text-warning" onclick="JS_Signal.edit('{{$id}}')"><i class="fas fa-edit"></i></span></td>
+                        <td align="center">
+                            <span class="text-cursor text-warning" onclick="JS_Signal.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
+                            <span class="text-cursor text-trash" onclick="JS_Signal.remote('{{$id}}')"><i class="fas fa-trash"></i></span>
+                        </td>
                     </tr>
                 @endforeach
             @endif

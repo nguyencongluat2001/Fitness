@@ -248,6 +248,57 @@ JS_Signal.prototype.edit = function(id) {
         }
     });
 }
+/**
+ * Hàm hiển thị modal edit
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_Signal.prototype.remote = function(id) {
+        var myClass = this;
+        var listitem = '';
+        if (listitem == '') {
+            var nameMessage = 'Bạn chưa chọn danh mục để xóa!';
+            NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
+            return false;
+        }
+        var url = this.urlPath + '/delete';
+        Swal.fire({
+            title: 'Bạn có chắc chắn xóa vĩnh viễn danh mục này không?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#34bd57',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Xác nhận'
+        }).then((result) => {
+            if (result.isConfirmed == true) {
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    dataType: 'json',
+                    data: {
+                        _token: $('#_token').val(),
+                        listitem: id,
+                    },
+                    success: function(arrResult) {
+                        if (arrResult['success'] == true) {
+                            if (result.isConfirmed) {
+                                var nameMessage = 'Xóa thành công!';
+                                NclLib.alertMessageBackend('success', 'Thông báo', nameMessage);
+                                myClass.loadList(oForm);
+                            }
+                        } else {
+                            if (result.isConfirmed) {
+                                var nameMessage = 'Quá trình xóa đã xảy ra lỗi!';
+                                NclLib.alertMessageBackend('danger', 'Lỗi', nameMessage);
+                            }
+                        }
+                    }
+                });
+            }
+        })
+}
 // Xoa mot doi tuong
 JS_Signal.prototype.delete = function(oForm) {
         var myClass = this;
