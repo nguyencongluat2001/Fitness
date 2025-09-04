@@ -17,7 +17,7 @@ JS_SignalPass.prototype.loadIndex = function() {
     // $('.chzn-select').chosen({ height: '100%', width: '100%' });
     var oForm = 'form#frmSignal_index';
     var oFormCreate = 'form#frmAdd';
-    myClass.loadListBAN(oForm);
+    myClass.loadListBANBAN(oForm);
 
     
     $(oForm).find('#btn_add').click(function() {
@@ -27,10 +27,10 @@ JS_SignalPass.prototype.loadIndex = function() {
         myClass.add(oForm,'MUA');
     });
     // $(oForm).find('#nav-mua-tab').click(function() {
-    //     myClass.loadList(oForm);
+    //     myClass.loadListBAN(oForm);
     // });
     // $(oForm).find('#nav-ban-tab').click(function() {
-    //     myClass.loadListBAN(oForm);
+    //     myClass.loadListBANBAN(oForm);
     // });
     $(oForm).find('#btn_sell').click(function() {
         myClass.add(oForm,'BAN');
@@ -45,19 +45,19 @@ JS_SignalPass.prototype.loadIndex = function() {
     $(oForm).find('#type').change(function() {
         var page = $(oForm).find('#limit').val();
         var perPage = $(oForm).find('#cbo_nuber_record_page').val();
-        myClass.loadList(oForm, page, perPage);
+        myClass.loadListBAN(oForm, page, perPage);
     });
     // form load
     $(oForm).find('#fromdate').change(function() {
         var page = $(oForm).find('#limit').val();
         var perPage = $(oForm).find('#cbo_nuber_record_page').val();
-        myClass.loadList(oForm, page, perPage);
+        myClass.loadListBAN(oForm, page, perPage);
     });
     // form load
     $(oForm).find('#todate').change(function() {
         var page = $(oForm).find('#limit').val();
         var perPage = $(oForm).find('#cbo_nuber_record_page').val();
-        myClass.loadList(oForm, page, perPage);
+        myClass.loadListBAN(oForm, page, perPage);
     });
     $(oForm).find('#txt_search').click(function() {
         /* ENTER PRESSED*/
@@ -125,7 +125,7 @@ JS_SignalPass.prototype.store = function(oFormCreate) {
                     var nameMessage = 'Cập nhật thành công!';
                     NclLib.alertMessageBackend('success', 'Thông báo', nameMessage);
                     $('#addmodal').modal('hide');
-                    myClass.loadList(oFormCreate);
+                    myClass.loadListBAN(oFormCreate);
 
                 } else {
                     var nameMessage = 'Cập nhật thất bại!';
@@ -164,12 +164,12 @@ JS_SignalPass.prototype.store = function(oFormCreate) {
 //                 $(oForm).find('.main_paginate .pagination a').click(function() {
 //                     var page = $(this).attr('page');
 //                     var perPage = $('#cbo_nuber_record_page').val();
-//                     myClass.loadList(oForm, page, perPage);
+//                     myClass.loadListBAN(oForm, page, perPage);
 //                 });
 //                 $(oForm).find('#cbo_nuber_record_page').change(function() {
 //                     var page = $(oForm).find('#_currentPage').val();
 //                     var perPages = $(oForm).find('#cbo_nuber_record_page').val();
-//                     myClass.loadList(oForm, page, perPages);
+//                     myClass.loadListBAN(oForm, page, perPages);
 //                 });
 //                 $(oForm).find('#cbo_nuber_record_page').val(perPage);
 //                 var loadding = NclLib.successLoadding();
@@ -207,12 +207,12 @@ JS_SignalPass.prototype.loadListBAN = function(oForm, numberPage = 1, perPage = 
                 $(oForm).find('.main_paginate .pagination a').click(function() {
                     var page = $(this).attr('page');
                     var perPage = $('#cbo_nuber_record_page').val();
-                    myClass.loadList(oForm, page, perPage);
+                    myClass.loadListBAN(oForm, page, perPage);
                 });
                 $(oForm).find('#cbo_nuber_record_page').change(function() {
                     var page = $(oForm).find('#_currentPage').val();
                     var perPages = $(oForm).find('#cbo_nuber_record_page').val();
-                    myClass.loadList(oForm, page, perPages);
+                    myClass.loadListBAN(oForm, page, perPages);
                 });
                 $(oForm).find('#cbo_nuber_record_page').val(perPage);
                 var loadding = NclLib.successLoadding();
@@ -292,7 +292,7 @@ JS_SignalPass.prototype.delete = function(oForm) {
                             if (result.isConfirmed) {
                                 var nameMessage = 'Xóa thành công!';
                                 NclLib.alertMessageBackend('success', 'Thông báo', nameMessage);
-                                myClass.loadList(oForm);
+                                myClass.loadListBAN(oForm);
                             }
                         } else {
                             if (result.isConfirmed) {
