@@ -22,13 +22,13 @@
                 <div class="breadcrumb-input-fix d-sm-flex align-items-center">
                     <span>
                         <a href="{{ URL::asset('/system/signal/index') }}">
-                            <button class="btn btn-light btn-sm shadow-sm" id="btn_buy" type="button"data-toggle="tooltip"
+                            <button class="btn btn-light btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
                             data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Mua</button>
                         </a>
                     </span>
                     <span class="ms-3">
                         <a href="{{ URL::asset('/system/signal/indexPass') }}">
-                            <button class="btn btn-success btn-sm shadow-sm" id="btn_sell" type="button"data-toggle="tooltip"
+                            <button class="btn btn-success btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
                             data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Bán</button>
                         </a>
                     </span>
@@ -53,7 +53,7 @@
                             <br>
                             <div class="col-md-5 row">
                                 <div class="form-search form-group input-group mb-0">
-                                    <input type="text" class="form-control" name="search" id="search" style="height:40px" placeholder="Từ khóa tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_Signal.search();return false;}">
+                                    <input type="text" class="form-control" name="search" id="search" style="height:40px" placeholder="Từ khóa tìm kiếm..." onkeydown="if (event.key == 'Enter'){JS_SignalPass.search();return false;}">
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-dark mb-0" id="txt_search"><i class="fas fa-search"></i></button>
                                     </span>
@@ -79,12 +79,12 @@
         format: 'dd/mm/yyyy'
     });
 </script>
-<script src="{{URL::asset('dist/js/backend/pages/JS_Signal.js')}}"></script>
+<script src="{{URL::asset('dist/js/backend/pages/JS_SignalPass.js')}}"></script>
 <script type="text/javascript">
     var baseUrl = "{{ url('') }}";
-    var JS_Signal = new JS_Signal(baseUrl, 'system', 'signal');
+    var JS_SignalPass = new JS_SignalPass(baseUrl, 'system', 'signal');
     jQuery(document).ready(function($) {
-        JS_Signal.loadIndex(baseUrl);
+        JS_SignalPass.loadIndex(baseUrl);
     })
 </script>
 @endsection

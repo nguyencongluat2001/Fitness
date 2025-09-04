@@ -1,4 +1,4 @@
-function JS_Signal(baseUrl, module, controller) {
+function JS_SignalPass(baseUrl, module, controller) {
     this.module = module;
     this.baseUrl = baseUrl;
     this.controller = controller;
@@ -12,12 +12,12 @@ function JS_Signal(baseUrl, module, controller) {
  *
  * @return void
  */
-JS_Signal.prototype.loadIndex = function() {
+JS_SignalPass.prototype.loadIndex = function() {
     var myClass = this;
     // $('.chzn-select').chosen({ height: '100%', width: '100%' });
     var oForm = 'form#frmSignal_index';
     var oFormCreate = 'form#frmAdd';
-    myClass.loadList(oForm);
+    myClass.loadListBAN(oForm);
 
     
     $(oForm).find('#btn_add').click(function() {
@@ -71,7 +71,7 @@ JS_Signal.prototype.loadIndex = function() {
         myClass.delete(oForm)
     });
 }
-JS_Signal.prototype.loadevent = function(oForm) {
+JS_SignalPass.prototype.loadevent = function(oForm) {
         var myClass = this;
         $('form#frmAdd').find('#btn_create').click(function() {
             myClass.store('form#frmAdd');
@@ -84,7 +84,7 @@ JS_Signal.prototype.loadevent = function(oForm) {
  *
  * @return void
  */
-JS_Signal.prototype.add = function(oForm,type) {
+JS_SignalPass.prototype.add = function(oForm,type) {
         var url = this.urlPath + '/create';
         var myClass = this;
         var data = 'type=' + type;
@@ -108,7 +108,7 @@ JS_Signal.prototype.add = function(oForm,type) {
  *
  * @return void
  */
-JS_Signal.prototype.store = function(oFormCreate) {
+JS_SignalPass.prototype.store = function(oFormCreate) {
         var url = this.urlPath + '/update';
         var myClass = this;
         var data = $(oFormCreate).serialize();
@@ -141,50 +141,7 @@ JS_Signal.prototype.store = function(oFormCreate) {
  *
  * @return void
  */
-JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
-        var myClass = this;
-        var url = this.urlPath + '/loadList';
-        var data = '_token=' + $("#_token").val();
-        data += '&search=' + $("#search").val();
-        data += '&type=' + $("#type").val();
-        data += '&fromdate=' + $("#fromdate").val();
-        data += '&todate=' + $("#todate").val();
-        data += '&type=MUA';
-        data += '&offset=' + numberPage;
-        data += '&limit=' + perPage;
-        $.ajax({
-            url: url,
-            type: "POST",
-            // cache: true,
-            data: data,
-            success: function(arrResult) {
-                myClass.type = 'MUA';
-                $("#nav-mua").html(arrResult);
-                // phan trang
-                $(oForm).find('.main_paginate .pagination a').click(function() {
-                    var page = $(this).attr('page');
-                    var perPage = $('#cbo_nuber_record_page').val();
-                    myClass.loadList(oForm, page, perPage);
-                });
-                $(oForm).find('#cbo_nuber_record_page').change(function() {
-                    var page = $(oForm).find('#_currentPage').val();
-                    var perPages = $(oForm).find('#cbo_nuber_record_page').val();
-                    myClass.loadList(oForm, page, perPages);
-                });
-                $(oForm).find('#cbo_nuber_record_page').val(perPage);
-                var loadding = NclLib.successLoadding();
-                myClass.loadevent(oForm);
-            }
-        });
-}
-/**
- * Load màn hình danh sách
- *
- * @param oForm (tên form)
- *
- * @return void
- */
-// JS_Signal.prototype.loadListBAN = function(oForm, numberPage = 1, perPage = 15) {
+// JS_SignalPass.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
 //         var myClass = this;
 //         var url = this.urlPath + '/loadList';
 //         var data = '_token=' + $("#_token").val();
@@ -202,7 +159,7 @@ JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
 //             data: data,
 //             success: function(arrResult) {
 //                 myClass.type = 'BAN';
-//                 $("#nav-ban").html(arrResult);
+//                 $("#nav-mua").html(arrResult);
 //                 // phan trang
 //                 $(oForm).find('.main_paginate .pagination a').click(function() {
 //                     var page = $(this).attr('page');
@@ -221,13 +178,56 @@ JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
 //         });
 // }
 /**
+ * Load màn hình danh sách
+ *
+ * @param oForm (tên form)
+ *
+ * @return void
+ */
+JS_SignalPass.prototype.loadListBAN = function(oForm, numberPage = 1, perPage = 15) {
+        var myClass = this;
+        var url = this.urlPath + '/loadList';
+        var data = '_token=' + $("#_token").val();
+        data += '&search=' + $("#search").val();
+        data += '&type=' + $("#type").val();
+        data += '&fromdate=' + $("#fromdate").val();
+        data += '&todate=' + $("#todate").val();
+        data += '&type=BAN';
+        data += '&offset=' + numberPage;
+        data += '&limit=' + perPage;
+        $.ajax({
+            url: url,
+            type: "POST",
+            // cache: true,
+            data: data,
+            success: function(arrResult) {
+                myClass.type = 'BAN';
+                $("#nav-ban").html(arrResult);
+                // phan trang
+                $(oForm).find('.main_paginate .pagination a').click(function() {
+                    var page = $(this).attr('page');
+                    var perPage = $('#cbo_nuber_record_page').val();
+                    myClass.loadList(oForm, page, perPage);
+                });
+                $(oForm).find('#cbo_nuber_record_page').change(function() {
+                    var page = $(oForm).find('#_currentPage').val();
+                    var perPages = $(oForm).find('#cbo_nuber_record_page').val();
+                    myClass.loadList(oForm, page, perPages);
+                });
+                $(oForm).find('#cbo_nuber_record_page').val(perPage);
+                var loadding = NclLib.successLoadding();
+                myClass.loadevent(oForm);
+            }
+        });
+}
+/**
  * Hàm hiển thị modal edit
  *
  * @param oForm (tên form)
  *
  * @return void
  */
-JS_Signal.prototype.edit = function(id) {
+JS_SignalPass.prototype.edit = function(id) {
     var url = this.urlPath + '/edit';
     var myClass = this;
     var data = '_token=' + $('#frmSignal_index #_token').val();
@@ -249,7 +249,7 @@ JS_Signal.prototype.edit = function(id) {
     });
 }
 // Xoa mot doi tuong
-JS_Signal.prototype.delete = function(oForm) {
+JS_SignalPass.prototype.delete = function(oForm) {
         var myClass = this;
         var listitem = '';
         var p_chk_obj = $('#table-data').find('input[name="chk_item_id"]');
@@ -308,7 +308,7 @@ JS_Signal.prototype.delete = function(oForm) {
 /**
  * Thêm một dòng mới trên danh sách
  */
-JS_Signal.prototype.addrow = function() {
+JS_SignalPass.prototype.addrow = function() {
         var numberRow = $("#body_data tr").length;
         var id = broofa();
         var html = '';
@@ -351,10 +351,10 @@ JS_Signal.prototype.addrow = function() {
         html += '<td onclick="{select_row(this);}" align="center">';
         html += '<label class="custom-control custom-checkbox p-0 m-0 pointer " style="cursor: pointer;">';
         html += '<input type="checkbox" hidden class="custom-control-input toggle-status" name="status" id="status_' + id + '" data-id="' + id + '" checked>';
-        html += '<span class="custom-control-indicator p-0 m-0" onclick="JS_Signal.changeStatusSignal(\'' + id + '\')"></span>';
+        html += '<span class="custom-control-indicator p-0 m-0" onclick="JS_SignalPass.changeStatusSignal(\'' + id + '\')"></span>';
         html += '</label></td>';
         // edit
-        html += '<td align="center"><span class="text-cursor text-warning" onclick="JS_Signal.edit(\'' + id + '\')"><i class="fas fa-edit"></i></span></td>';
+        html += '<td align="center"><span class="text-cursor text-warning" onclick="JS_SignalPass.edit(\'' + id + '\')"><i class="fas fa-edit"></i></span></td>';
         html += '</tr>';
         $("#body_data").append(html);
 }
@@ -384,14 +384,14 @@ function click2(id, type) {
         $(".span_" + type + "_" + id).attr('id', 'span_' + type + '_' + id);
         $(".span_" + type + "_" + id).html($("#" + type + "_" + id).val());
         if (text != $(".span_" + type + '_' + id).html()) {
-            JS_Signal.updateSignal(id, type, $(".span_" + type + '_' + id).html());
+            JS_SignalPass.updateSignal(id, type, $(".span_" + type + '_' + id).html());
         }
     })
 }
 /**
  * Cập nhật khi ở màn hình hiển thị danh sách
  */
-JS_Signal.prototype.updateSignal = function(id, column, value = '') {
+JS_SignalPass.prototype.updateSignal = function(id, column, value = '') {
         var myClass = this;
         var url = myClass.urlPath + '/updateSignal';
         var data = 'id=' + id;
@@ -405,11 +405,11 @@ JS_Signal.prototype.updateSignal = function(id, column, value = '') {
                 if (arrResult['success'] == true) {
                     NclLib.alertMessageBackend('success', 'Thông báo', arrResult['message']);
                     if (column == 'order') {
-                        JS_Signal.loadList();
+                        JS_SignalPass.loadList();
                     }
                 } else {
                     NclLib.alertMessageBackend('danger', 'Lỗi', arrResult['message']);
-                    JS_Signal.loadList();
+                    JS_SignalPass.loadList();
                 }
             },
             error: function(e) {
@@ -422,7 +422,7 @@ JS_Signal.prototype.updateSignal = function(id, column, value = '') {
 /**
  * Thay đổi trạng thái
  */
-JS_Signal.prototype.changeStatusSignal = function(id) {
+JS_SignalPass.prototype.changeStatusSignal = function(id) {
     var myClass = this;
     var url = myClass.urlPath + '/changeStatusSignal';
     var data = '_token=' + $("#frmSignal_index #_token").val();
@@ -449,18 +449,18 @@ JS_Signal.prototype.changeStatusSignal = function(id) {
 /**
  * Tìm kiếm
  */
-JS_Signal.prototype.search = function(oForm, page, perPage){
+JS_SignalPass.prototype.search = function(oForm, page, perPage){
     var myClass = this;
     if(myClass.type == 'BAN'){
-        JS_Signal.loadListBAN(oForm, page, perPage);
+        JS_SignalPass.loadListBAN(oForm, page, perPage);
     }else{
-        JS_Signal.loadList(oForm, page, perPage);
+        JS_SignalPass.loadList(oForm, page, perPage);
     }
 }
 /**
  * Check
  */
-JS_Signal.prototype.checkValidate = function(){
+JS_SignalPass.prototype.checkValidate = function(){
     if($("#title").val() == ''){
         NclLib.alertMessageBackend('warning', 'Cảnh báo', 'Tiêu đề không được để trống!');
         $("#title").focus();
@@ -487,7 +487,7 @@ JS_Signal.prototype.checkValidate = function(){
         return false;
     }
 }
-JS_Signal.prototype.checkLogin = function(){
+JS_SignalPass.prototype.checkLogin = function(){
     Swal.fire({
         title: 'Đăng nhập để xem TOP cổ phiếu!',
         showCloseButton: true,
@@ -503,7 +503,7 @@ JS_Signal.prototype.checkLogin = function(){
     $(".swal2-modal").css('font-size', '15px');
     $(".swal2-modal").css('font-family', 'FontAwesome');
 }
-JS_Signal.prototype.checkVIP = function(){
+JS_SignalPass.prototype.checkVIP = function(){
     Swal.fire({
         title: 'Đăng ký để xem TOP cổ phiếu!',
         showCloseButton: true,
