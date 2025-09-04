@@ -65,8 +65,9 @@
                             <button type="button" class="btn btn-danger shadow-sm" id="btn_delete"><i class="fas fa-trash-alt"></i> Xóa</button>
                         </div>
                     </div>
-                    <div class="tab-pane fade show active" id="nav-mua" role="tabpanel" aria-labelledby="nav-mua-tab" tabindex="0"></div>
-                    <div class="tab-pane fade" id="nav-ban" role="tabpanel" aria-labelledby="nav-ban-tab" tabindex="0"></div>
+                    <!-- <div class="tab-pane fade show active" id="nav-mua" role="tabpanel" aria-labelledby="nav-mua-tab" tabindex="0"></div> -->
+                    <div class="tab-pane fade" id="nav-ban active" role="tabpanel" aria-labelledby="nav-ban-tab" tabindex="0"></div>
+                    <!-- <div class="row" id="nav-ban active" style="padding-top:10px"></div> -->
                 </div>
             </div>
         </form>

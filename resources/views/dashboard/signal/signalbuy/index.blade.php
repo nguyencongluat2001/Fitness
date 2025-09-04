@@ -66,7 +66,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade show active" id="nav-mua" role="tabpanel" aria-labelledby="nav-mua-tab" tabindex="0"></div>
-                    <div class="tab-pane fade" id="nav-ban" role="tabpanel" aria-labelledby="nav-ban-tab" tabindex="0"></div>
+                    <!-- <div class="tab-pane fade" id="nav-ban" role="tabpanel" aria-labelledby="nav-ban-tab" tabindex="0"></div> -->
                 </div>
             </div>
         </form>
