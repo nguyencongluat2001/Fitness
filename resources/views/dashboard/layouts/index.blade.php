@@ -32,7 +32,7 @@
     @yield('css')
 
     <script src="../assets/js/croppie.js"></script>
-    <script rel="stylesheet" src="../assets/css/croppie.css"></script>
+    <link rel="stylesheet" href="https://fintopdata.vn/assets/css/croppie.css">
     <script src="../assets/js/croppie.min.js"></script>
     <script type="text/jscript" src="../assets/js/CoreTable.js"></script>
     <script src="../clients/js/jquery.min.js"></script>
