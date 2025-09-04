@@ -51,7 +51,7 @@
         <tbody id="body_data">
             @if(count($datas) > 0)
                 @foreach ($datas as $key => $data)
-                @php $id = $data->id; $i = 1; @endphp
+                    @php $id = $data->id; @endphp
                     @if($data->type == 'MUA')
                         <tr style="background:#18c524" >
                     @else
