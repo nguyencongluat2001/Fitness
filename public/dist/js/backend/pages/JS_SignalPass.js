@@ -186,7 +186,7 @@ JS_SignalPass.prototype.store = function(oFormCreate) {
  */
 JS_SignalPass.prototype.loadListBAN = function(oForm, numberPage = 1, perPage = 15) {
         var myClass = this;
-        var url = this.urlPath + '/loadList';
+        var url = this.urlPath + '/loadListPass';
         var data = '_token=' + $("#_token").val();
         data += '&search=' + $("#search").val();
         data += '&type=' + $("#type").val();
