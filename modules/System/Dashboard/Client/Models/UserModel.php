@@ -52,7 +52,7 @@ class UserModel extends Model
                 $query->whereIn('id_manage', $value);
                 return $query;
             case 'sortType':
-                $query->orderBy('created_at', 'ASC');
+                $query->orderBy('created_at', 'DESC');
 
             default:
                 return $query;
