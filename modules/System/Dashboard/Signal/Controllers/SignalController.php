@@ -29,6 +29,7 @@ class SignalController extends Controller
         $data = array();
         $input['sort'] = 'order';
         // $input['sortType'] = 1;
+        $input['type'] = 'MUA';
         $input['type_order'] = 'created_at';
 
         $objResult = $this->signalService->filter($input);
@@ -47,6 +48,7 @@ class SignalController extends Controller
         $data = array();
         $input['sort'] = 'order';
         // $input['sortType'] = 1;
+        $input['type'] = 'BAN';
         $input['type_order'] = 'created_at';
 
         $objResult = $this->signalService->filter($input);
