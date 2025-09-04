@@ -26,12 +26,12 @@ JS_Signal.prototype.loadIndex = function() {
     $(oForm).find('#btn_buy').click(function() {
         myClass.add(oForm,'MUA');
     });
-    $(oForm).find('#nav-mua-tab').click(function() {
-        myClass.loadList(oForm);
-    });
-    $(oForm).find('#nav-ban-tab').click(function() {
-        myClass.loadListBAN(oForm);
-    });
+    // $(oForm).find('#nav-mua-tab').click(function() {
+    //     myClass.loadList(oForm);
+    // });
+    // $(oForm).find('#nav-ban-tab').click(function() {
+    //     myClass.loadListBAN(oForm);
+    // });
     $(oForm).find('#btn_sell').click(function() {
         myClass.add(oForm,'BAN');
     });
@@ -149,7 +149,6 @@ JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
         data += '&type=' + $("#type").val();
         data += '&fromdate=' + $("#fromdate").val();
         data += '&todate=' + $("#todate").val();
-        data += '&type=MUA';
         data += '&offset=' + numberPage;
         data += '&limit=' + perPage;
         $.ajax({
@@ -192,7 +191,7 @@ JS_Signal.prototype.loadListBAN = function(oForm, numberPage = 1, perPage = 15) 
         data += '&type=' + $("#type").val();
         data += '&fromdate=' + $("#fromdate").val();
         data += '&todate=' + $("#todate").val();
-        data += '&type=BAN';
+        // data += '&type=BAN';
         data += '&offset=' + numberPage;
         data += '&limit=' + perPage;
         $.ajax({
@@ -502,11 +501,11 @@ JS_Signal.prototype.changeStatusSignal = function(id) {
  */
 JS_Signal.prototype.search = function(oForm, page, perPage){
     var myClass = this;
-    if(myClass.type == 'BAN'){
-        JS_Signal.loadListBAN(oForm, page, perPage);
-    }else{
+    // if(myClass.type == 'BAN'){
+    //     JS_Signal.loadListBAN(oForm, page, perPage);
+    // }else{
         JS_Signal.loadList(oForm, page, perPage);
-    }
+    // }
 }
 /**
  * Check
