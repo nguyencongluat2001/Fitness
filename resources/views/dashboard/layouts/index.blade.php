@@ -35,6 +35,7 @@
     <script rel="stylesheet" src="../assets/css/croppie.css"></script>
     <script src="../assets/js/croppie.min.js"></script>
     <script type="text/jscript" src="../assets/js/CoreTable.js"></script>
+    <script src="../clients/js/jquery.min.js"></script>
     <script type="text/javascript" src="{{ URL::asset('assets\js\NclLibrary.js') }}"></script>
     <script type="text/javascript" src="{{ URL::asset('dist\js\backend\pages\JS_System_Security.js') }}"></script>
 
