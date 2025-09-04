@@ -104,7 +104,7 @@
                         </td>
                         <td align="center">
                             <span class="text-cursor text-warning" onclick="JS_Signal.edit('{{$id}}')"><i class="fas fa-edit"></i></span>
-                            <span class="text-cursor text-trash" onclick="JS_Signal.remote('{{$id}}')"><i class="fas fa-trash"></i></span>
+                            <!-- <span class="text-cursor text-trash" onclick="JS_Signal.remote('{{$id}}')"><i class="fas fa-trash"></i></span> -->
                         </td>
                     </tr>
                 @endforeach

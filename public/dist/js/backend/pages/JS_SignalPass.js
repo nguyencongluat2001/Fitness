@@ -17,7 +17,7 @@ JS_SignalPass.prototype.loadIndex = function() {
     // $('.chzn-select').chosen({ height: '100%', width: '100%' });
     var oForm = 'form#frmSignal_index';
     var oFormCreate = 'form#frmAdd';
-    myClass.loadListBANBAN(oForm);
+    myClass.loadListBAN(oForm);
 
     
     $(oForm).find('#btn_add').click(function() {
@@ -30,7 +30,7 @@ JS_SignalPass.prototype.loadIndex = function() {
     //     myClass.loadListBAN(oForm);
     // });
     // $(oForm).find('#nav-ban-tab').click(function() {
-    //     myClass.loadListBANBAN(oForm);
+    //     myClass.loadListBAN(oForm);
     // });
     $(oForm).find('#btn_sell').click(function() {
         myClass.add(oForm,'BAN');
