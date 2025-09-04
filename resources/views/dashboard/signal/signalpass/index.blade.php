@@ -22,13 +22,13 @@
                 <div class="breadcrumb-input-fix d-sm-flex align-items-center">
                     <span>
                         <a href="{{ URL::asset('/system/signal/index') }}">
-                            <button class="btn btn-light btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
+                            <button class="btn btn-light btn-sm shadow-sm" id="btn_buy" type="button"data-toggle="tooltip"
                             data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Mua</button>
                         </a>
                     </span>
                     <span class="ms-3">
-                        <a href="{{ URL::asset('/system/signalpass/index') }}">
-                            <button class="btn btn-success btn-sm shadow-sm" id="" type="button"data-toggle="tooltip"
+                        <a href="{{ URL::asset('/system/signal/indexPass') }}">
+                            <button class="btn btn-success btn-sm shadow-sm" id="btn_sell" type="button"data-toggle="tooltip"
                             data-original-title="Thêm danh mục"><i class="fas fa-book-medical"></i> Bán</button>
                         </a>
                     </span>

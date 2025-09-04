@@ -33,6 +33,10 @@ JS_Signal.prototype.loadIndex = function() {
     // $(oForm).find('#nav-ban-tab').click(function() {
     //     myClass.loadListBAN(oForm);
     // });
+   $(oForm).find('#btn_buy, #btn_sell').click(function () {
+        var type = $(this).data('type');
+        myClass.loadList(oForm, type);
+    });
     $(oForm).find('#btn_sell').click(function() {
         myClass.add(oForm,'BAN');
     });
@@ -142,15 +146,19 @@ JS_Signal.prototype.store = function(oFormCreate) {
  *
  * @return void
  */
-JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
+JS_Signal.prototype.loadList = function(oForm, type, numberPage = 1, perPage = 15) {
         var myClass = this;
-        var url = this.urlPath + '/loadList';
+        if(type == 'MUA'){
+           var url = this.urlPath + '/loadList';
+        }else{
+           var url = this.urlPath + '/loadListPass';
+        }
         var data = '_token=' + $("#_token").val();
         data += '&search=' + $("#search").val();
         data += '&type=' + $("#type").val();
         data += '&fromdate=' + $("#fromdate").val();
         data += '&todate=' + $("#todate").val();
-        // data += '&type=MUA';
+        data += '&type='+ type;
         data += '&offset=' + numberPage;
         data += '&limit=' + perPage;
         $.ajax({
@@ -159,7 +167,7 @@ JS_Signal.prototype.loadList = function(oForm, numberPage = 1, perPage = 15) {
             // cache: true,
             data: data,
             success: function(arrResult) {
-                // myClass.type = 'MUA';
+                myClass.type = type;
                 $("#nav-mua").html(arrResult);
                 // phan trang
                 $(oForm).find('.main_paginate .pagination a').click(function() {

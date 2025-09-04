@@ -248,6 +248,12 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
             Route::prefix('signal')->group(function(){
                 Route::get('index', [SignalController::class, 'index']);
                 Route::post('loadList', [SignalController::class, 'loadList']);
+
+                //pass
+                Route::get('indexPass', [SignalController::class, 'indexPass']);
+                Route::post('loadListPass', [SignalController::class, 'loadListPass']);
+
+
                 Route::get('create', [SignalController::class, 'create']);
                 Route::get('edit', [SignalController::class, 'edit']);
                 Route::post('update', [SignalController::class, 'update']);
