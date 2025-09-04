@@ -257,7 +257,7 @@ JS_Signal.prototype.edit = function(id) {
  */
 JS_Signal.prototype.remote = function(id) {
         var myClass = this;
-        var listitem = '';
+        var listitem = id;
         if (listitem == '') {
             var nameMessage = 'Bạn chưa chọn danh mục để xóa!';
             NclLib.alertMessageBackend('warning', 'Cảnh báo', nameMessage);
