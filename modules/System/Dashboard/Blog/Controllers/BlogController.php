@@ -163,6 +163,7 @@ class BlogController extends Controller
         if($param['category'] == '' || $param['category'] == null){
             unset($param['category']);
         }
+        $param['status'] = 'system';
         $objResult = $this->blogService->filter($param);
         $data['datas']= $objResult;
         return view("dashboard.blog.loadlist", $data)->render();
