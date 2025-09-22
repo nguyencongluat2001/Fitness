@@ -41,8 +41,8 @@ class BlogModel extends Model
                 return $query;
             case 'sortType':
                 $query->orderBy('created_at', 'DESC');
-            case 'status':
-                return $query->where('status', $value);
+           // case 'status':
+               // return $query->where('status', 1);
             default:
                 // return $query->where('status', 1);
                 return $query;
