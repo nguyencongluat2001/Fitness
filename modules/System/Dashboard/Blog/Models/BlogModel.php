@@ -31,25 +31,34 @@ class BlogModel extends Model
         switch ($param) {
             case 'search':
                 $this->value = $value;
-                // dd($this->value);
                 return $query->where(function ($query) {
-                    $query->whereRelation('detailBlog', 'title',$this->value )
-                          ->orWhere('code_blog', 'like', '%' . $this->value . '%');
+                    $query->whereRelation('detailBlog', 'title', $this->value)
+                        ->orWhere('code_blog', 'like', '%' . $this->value . '%');
                 });
+                break;
+
             case 'category':
                 $query->where('code_category', $value);
                 return $query;
+                break;
+
             case 'sortType':
                 $query->orderBy('created_at', 'DESC');
-           case 'status':
-            if($value != 'system'){
-               return $query->where('status', 1);
-            }
+                return $query;
+                break;
+
+            case 'status':
+                if ($value != 'system') {
+                    return $query->where('status', 1);
+                }
+                return $query;
+                break;
+
             default:
-                // return $query->where('status', 1);
                 return $query;
         }
     }
+
     public function detailBlog()
     {
         return $this->hasOne(BlogDetailModel::class, 'code_blog', 'code_blog');
