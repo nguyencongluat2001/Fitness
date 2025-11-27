@@ -74,9 +74,14 @@
 					<div class="col-md-12">
 						<div class="form-group">
 							<p for="example-text-input" class="form-control-label">Người quản lý</p>
-							<select class="form-control input-sm chzn-select" name="id_manage"id="id_manage">
+							<select class="form-control input-sm chzn-select" name="id_manage" id="id_manage">
 								@foreach($data['arr_quanly'] as $item)
-								    <option value="{{$item['id_personnel']}}">{{$item['name']}} - {{$item['id_personnel']}}</option>
+									<option 
+										value="{{ $item['id_personnel'] }}" 
+										{{ isset($data['id_manage']) && $data['id_manage'] == $item['id_personnel'] ? 'selected' : '' }}
+									>
+										{{ $item['name'] }} - {{ $item['id_personnel'] }}
+									</option>
 								@endforeach
 							</select>
 						</div>
