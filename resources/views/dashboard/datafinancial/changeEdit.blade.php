@@ -54,7 +54,7 @@
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Xu hướng CP</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Tín hiệu hành động</b></td>
                             <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Vùng giá giao dịch</b></td>
-                            <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá cắt lỗ</b></td>
+                            <td style="white-space: inherit;vertical-align: middle" align="center"><b>Điểm QTRR</b></td>
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Xếp hạng FA</b></td> -->
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center"><b>PTDN FA</b></td> -->
                             <!-- <td style="white-space: inherit;vertical-align: middle" align="center" class="required"><b>Thứ tự</b></td> -->

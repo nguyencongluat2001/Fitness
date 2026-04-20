@@ -96,7 +96,7 @@
         <tr>
           <!-- <th style="white-space: inherit;vertical-align: middle;font-size: 17px;background:#fff5dc;color:#dd0000;" align="center" colspan="3"><center>NHẬP MÃ CỔ PHIẾU</center></th> -->
           <th style="white-space: inherit;vertical-align: middle;font-size: 25px;background:#700e13;color:#fff49b;height: 80px;" align="center" colspan="12">
-            <center>FINTOP - DANH MỤC TÍN HIỆU MUA NHÓM NGÀNH</center>
+            <center>BỘ LỌC CỔ PHIẾU - TOP TRẠNG THÁI NGÀNH ĐẦU TƯ</center>
           </th>
         </tr>
         <tr style="background:#529845;color:white">
@@ -108,11 +108,11 @@
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thời gian <br>cập nhật</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br>TA</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center">
-            <b class="xh-w">Xu hướng cổ phiếu</b>
-            <b class="xh-mb">Xu hướng<br>cổ phiếu</b>
+            <b class="xh-w">Mô tả mô hình (Model)</b>
+            <b class="xh-mb">Mô tả mô hình<br>(Model)</b>
           </td>
-          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Tín hiệu <br> hành động</b></td>
-          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> giao dịch</b></td>
+          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Trạng thái Model</b></td>
+          <td style="white-space: inherit;vertical-align: middle" align="center"><b>Vùng giá <br> tham chiếu</b></td>
           <td style="white-space: inherit;vertical-align: middle; background-color: #fbff2f;" align="center"><b style="color:#ff0000">Vùng giá <br> cắt lỗ</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Xếp hạng <br> FA</b></td>
           <td style="white-space: inherit;vertical-align: middle" align="center"><b>Thông tin/ <br>Phân tích</b></td>
